@@ -339,15 +339,17 @@ class ProjectionMagnifierService : Service() {
             background = CompatUi.shape(this@ProjectionMagnifierService,CompatUi.teal,16)
         }
         val header = LinearLayout(this).also { root.addView(it,LinearLayout.LayoutParams(-1,dp(MagnifierLayout.CONTROL_DP))) }
-        fun tool(icon: LineIcon, label: String, action: () -> Unit) {
-            val button=CompatUi.icon(this,icon,label,action); toolButtons[label]=button
+        fun tool(icon: LineIcon, label: String, caption: String? = null, action: () -> Unit) {
+            val button=if(caption == null) CompatUi.icon(this,icon,label,action)
+                else CompatUi.labeledIcon(this,icon,label,caption,action)
+            toolButtons[label]=button
             header.addView(button,LinearLayout.LayoutParams(dp(MagnifierLayout.CONTROL_DP),-1))
         }
         tool(LineIcon.MENU,"打开菜单") { transition { uiState.menu() } }
         message=TextView(this).apply { textSize=14f; setTextColor(Color.WHITE); gravity=Gravity.CENTER; maxLines=2 }
             .also { header.addView(it,LinearLayout.LayoutParams(0,-1,1f)) }
-        tool(LineIcon.COLLAPSE,"收起放大镜") { transition { uiState.collapse() } }
-        tool(LineIcon.END,"结束共享") { endSession() }
+        tool(LineIcon.COLLAPSE,"收起放大镜","收起") { transition { uiState.collapse() } }
+        tool(LineIcon.END,"结束共享","关闭") { endSession() }
         imageView = ImageView(this).apply {
             setBackgroundColor(Color.WHITE); scaleType = ImageView.ScaleType.MATRIX
             contentDescription = "取景框区域的原文放大画面；可在画面内滑动查看"

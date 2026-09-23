@@ -1442,6 +1442,16 @@
     {
       "check": "menu_180_rotation_cleans_all",
       "passed": true
+    },
+    {
+      "check": "familiar_icon_toolbar_collapse_resume_close",
+      "passed": true,
+      "hitTargetDp": 48,
+      "floatingMagnifierHasPlus": false,
+      "labels": [
+        "收起",
+        "关闭"
+      ]
     }
   ],
   "limits": [
@@ -1449,5 +1459,6 @@
     "Huawei human UX check pending",
     "No API29 runtime test",
     "No system-revoke or notification-action device test in this phase"
-  ]
+  ],
+  "humanFeedback": "Initial UI: minimize/close unclear and plus-in-magnifier unsuitable; revised plain magnifier and familiar labeled controls await human recheck."
 }

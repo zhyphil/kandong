@@ -16,15 +16,14 @@ internal class IconView(context: Context, private val icon: LineIcon, private va
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = ink; style = Paint.Style.STROKE; strokeWidth = 1.8f; strokeCap = Paint.Cap.ROUND; strokeJoin = Paint.Join.ROUND }
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        val size = CompatUi.dp(context, 26).toFloat()
+        val size = minOf(CompatUi.dp(context, 26), width, height).toFloat()
         canvas.save(); canvas.translate((width - size) / 2, (height - size) / 2); canvas.scale(size / 24, size / 24)
         fun line(x: Float, y: Float, xx: Float, yy: Float) = canvas.drawLine(x,y,xx,yy,paint)
         when (icon) {
-            LineIcon.MAGNIFY -> { canvas.drawCircle(10f,10f,6.5f,paint); line(15f,15f,21f,21f); line(7f,10f,13f,10f); line(10f,7f,10f,13f) }
+            LineIcon.MAGNIFY -> { canvas.drawCircle(10f,10f,7f,paint); line(15.2f,15.2f,21f,21f) }
             LineIcon.MENU -> { line(4f,6f,20f,6f); line(4f,12f,20f,12f); line(4f,18f,20f,18f) }
-            LineIcon.COLLAPSE -> { canvas.drawRoundRect(3f,3f,21f,21f,4f,4f,paint); line(8f,12f,16f,12f) }
-            LineIcon.END -> canvas.drawRoundRect(5f,5f,19f,19f,2f,2f,paint)
-            LineIcon.CLOSE -> { line(5f,5f,19f,19f); line(19f,5f,5f,19f) }
+            LineIcon.COLLAPSE -> line(5f,16f,19f,16f)
+            LineIcon.END, LineIcon.CLOSE -> { line(5f,5f,19f,19f); line(19f,5f,5f,19f) }
             LineIcon.MOVE -> {
                 line(3f,12f,21f,12f); line(12f,3f,12f,21f)
                 line(3f,12f,6f,9f); line(3f,12f,6f,15f); line(21f,12f,18f,9f); line(21f,12f,18f,15f)
@@ -47,7 +46,7 @@ internal object CompatUi {
     val teal = Color.rgb(18,105,95)
     val soft = Color.rgb(228,240,234)
     const val disclosure = "展开时会临时读取整个屏幕，只在手机内放大选区，不保存、不联网、不上传。收起暂停画面处理；点“结束共享”才会关闭系统共享。"
-    const val help = "1. 允许悬浮窗，勾选本次同意，再按提示允许屏幕共享。\n\n2. 拖动十字手柄移动取景框；拖动箭头手柄分别调节宽和高。\n\n3. 下方滑杆单独调节1到5倍，每次新使用默认2倍。放大后可在画面内滑动查看。镜面会自动上下避让。\n\n4. 到达屏幕边缘时，看到“松手贴边”后松开。取景框内仍可操作原来的页面。\n\n5. 点收起可暂时放到屏幕边缘；轻点圆球恢复，拖动可换位置，长按打开菜单。\n\n6. 点方形结束按钮或菜单中的“结束共享”可关闭。锁屏或转动屏幕后需要重新开始。"
+    const val help = "1. 允许悬浮窗，勾选本次同意，再按提示允许屏幕共享。\n\n2. 拖动十字手柄移动取景框；拖动箭头手柄分别调节宽和高。\n\n3. 下方滑杆单独调节1到5倍，每次新使用默认2倍。放大后可在画面内滑动查看。镜面会自动上下避让。\n\n4. 到达屏幕边缘时，看到“松手贴边”后松开。取景框内仍可操作原来的页面。\n\n5. 点收起可暂时放到屏幕边缘；轻点圆球恢复，拖动可换位置，长按打开菜单。\n\n6. 点“× 关闭”按钮或菜单中的“结束共享”可关闭。锁屏或转动屏幕后需要重新开始。"
     const val privacy = "屏幕共享由您每次亲自授权。系统会提供整屏缓冲区，看懂只在手机内复制选区用于放大，不录制、不保存、不上传，也不采集页面文字。\n\n收起或打开菜单时暂停画面采集并清除已有画面，但系统屏幕共享会话仍保留。结束共享后释放本次投屏资源。\n\n查看密码、银行等私密页面前，请先结束共享。受保护的画面可能显示为空白。\n\n目前无需登录。区域翻译、账号和订阅尚未提供；屏幕共享授权不代表同意文字识别或AI处理。"
     fun dp(c: Context, n: Int) = (n * c.resources.displayMetrics.density).roundToInt().coerceAtLeast(1)
     fun shape(c: Context, color: Int, radius: Int = 20) = GradientDrawable().apply { setColor(color); cornerRadius = dp(c,radius).toFloat() }
@@ -56,6 +55,20 @@ internal object CompatUi {
     fun icon(c: Context, icon: LineIcon, label: String, action: () -> Unit) = IconView(c,icon).apply {
         contentDescription = label; tooltipText = label; isFocusable = true; background = ripple(c,teal)
         minimumWidth = dp(c,48); minimumHeight = dp(c,48); setOnClickListener { action() }
+    }
+    fun labeledIcon(c: Context, icon: LineIcon, description: String, caption: String, action: () -> Unit): View = LinearLayout(c).apply {
+        orientation=LinearLayout.VERTICAL; gravity=Gravity.CENTER
+        contentDescription=description; tooltipText=description; isFocusable=true
+        background=ripple(c,teal); minimumWidth=dp(c,48); minimumHeight=dp(c,48)
+        addView(IconView(c,icon).apply { importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_NO },
+            LinearLayout.LayoutParams(dp(c,22),dp(c,22)))
+        addView(TextView(c).apply {
+            text=caption; setTextColor(Color.WHITE); textSize=12f; gravity=Gravity.CENTER
+            includeFontPadding=false; maxLines=1
+            setAutoSizeTextTypeUniformWithConfiguration(10,12,1,android.util.TypedValue.COMPLEX_UNIT_SP)
+            importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_NO
+        },LinearLayout.LayoutParams(-1,dp(c,22)))
+        setOnClickListener { action() }
     }
     fun button(c: Context, title: String, primary: Boolean = false, action: () -> Unit) = Button(c).apply {
         text = title; textSize = 18f; isAllCaps = false; setTextColor(if(primary) Color.WHITE else ink)
