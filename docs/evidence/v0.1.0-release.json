@@ -75,5 +75,14 @@
     "Behavior source unchanged from user-accepted 0.0.4; Huawei release-signed APK not installed",
     "Release diagnostics disabled; exact pinch matrix synchronization comes from prior identical-source debug tests",
     "Android29, other OEMs, large-font/TalkBack and prolonged use remain unverified"
-  ]
+  ],
+  "publication": {
+    "url": "https://github.com/zhyphil/kandong/releases/tag/v0.1.0",
+    "publishedAt": "2026-09-23T19:19:17Z",
+    "tagCommit": "b18cb35442e0f3654f0adf8f6c84cb2ce4b25b8b",
+    "draft": false,
+    "prerelease": false,
+    "assetCount": 5,
+    "downloadSha256MatchesLocal": true
+  }
 }
