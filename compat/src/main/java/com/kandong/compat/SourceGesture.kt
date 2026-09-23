@@ -19,44 +19,22 @@ internal class SourceGesture(
         if (pointer != pointerId || count != 1 || !rawX.isFinite() || !rawY.isFinite()) { cancel(); return result }
         val dx = (rawX - downX).roundToInt(); val dy = (rawY - downY).roundToInt()
         result = if (mode == GestureMode.MOVE) {
-            val x = dx.coerceIn(-minOf(start.left, startGrip.left), layout.width - maxOf(start.right, startGrip.right))
-            val y = dy.coerceIn(-minOf(start.top, startGrip.top), layout.height - maxOf(start.bottom, startGrip.bottom))
-            fun snap(delta: Int) = when { delta > layout.snapThreshold -> 1; delta < -layout.snapThreshold -> -1; else -> 0 }
-            GestureResult(start.moved(x, y), startGrip.moved(x, y), snap(dx - x), snap(dy - y))
+            val x = dx.coerceIn(-start.left, layout.width - start.right)
+            val y = dy.coerceIn(-start.top, layout.height - start.bottom)
+            val source = start.moved(x, y)
+            GestureResult(source, source)
         } else resize(dx, dy)
         return result
     }
     private fun resize(dx: Int, dy: Int): GestureResult {
-        val cornerX = if (side.right) start.right else start.left
-        val cornerY = if (side.below) start.bottom else start.top
-        val anchorX = if (side.right) start.left else start.right
-        val anchorY = if (side.below) start.top else start.bottom
-        val offsetX = startGrip.left - cornerX; val offsetY = startGrip.top - cornerY
-        fun range(anchor: Int, positive: Boolean, minimum: Int, maximum: Int,
-                  screen: Int, offset: Int, control: Int): IntRange {
-            val lowCorner = maxOf(0, -offset)
-            val highCorner = minOf(screen, screen - offset - control)
-            return if (positive) maxOf(minimum, lowCorner - anchor)..minOf(maximum, highCorner - anchor)
-                else maxOf(minimum, anchor - highCorner)..minOf(maximum, anchor - lowCorner)
-        }
-        val widths = range(anchorX, side.right, layout.minWidth, layout.imageWidth,
-            layout.width, offsetX, startGrip.width)
-        val heights = range(anchorY, side.below, layout.minHeight, layout.maxHeight,
-            layout.height, offsetY, startGrip.height)
-        if (widths.isEmpty() || heights.isEmpty()) return result
-        val width = (start.width + if (side.right) dx else -dx).coerceIn(widths)
-        val height = (start.height + if (side.below) dy else -dy).coerceIn(heights)
-        val x = anchorX + if (side.right) width else -width
-        val y = anchorY + if (side.below) height else -height
-        val crop = Box(minOf(x, anchorX), minOf(y, anchorY), kotlin.math.abs(x - anchorX), kotlin.math.abs(y - anchorY))
-        return GestureResult(crop, startGrip.moved(x - cornerX, y - cornerY))
+        // Upper-right corner; the opposite bottom-left corner stays fixed.
+        val width = (start.width + dx).coerceIn(layout.minWidth, minOf(layout.imageWidth, layout.width - start.left))
+        val height = (start.height - dy).coerceIn(layout.minHeight, minOf(layout.maxHeight, start.bottom))
+        val source = Box(start.left, start.bottom - height, width, height)
+        return GestureResult(source, layout.idleControls(source, true)!!.resize)
     }
     fun finish(up: Boolean): Box {
         if (!up) cancel()
-        val r = result
-        if (!up || cancelled || mode != GestureMode.MOVE) return r.source
-        val x = when (r.snapX) { -1 -> 0; 1 -> layout.width - r.source.width; else -> r.source.left }
-        val y = when (r.snapY) { -1 -> 0; 1 -> layout.height - r.source.height; else -> r.source.top }
-        return r.source.copy(left = x, top = y)
+        return result.source
     }
 }

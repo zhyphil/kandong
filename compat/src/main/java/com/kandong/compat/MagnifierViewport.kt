@@ -23,14 +23,14 @@ internal class MagnifierViewport {
         viewWidth = width.coerceAtLeast(0); viewHeight = height.coerceAtLeast(0)
         clampPan()
     }
-    fun setScale(value: Float) {
-        if (!value.isFinite()) return
-        // Keep the source point under the viewport centre stable as the slider changes.
-        val centreX = (viewWidth / 2f - translateX) / scale
-        val centreY = (viewHeight / 2f - translateY) / scale
+    fun setScale(value: Float, focusX: Float = viewWidth / 2f, focusY: Float = viewHeight / 2f) {
+        if (!value.isFinite() || !focusX.isFinite() || !focusY.isFinite()) return
+        // Slider uses the centre; pinch uses the fingers' focal point. Clamp only at source edges.
+        val centreX = (focusX - translateX) / scale
+        val centreY = (focusY - translateY) / scale
         scale = value.coerceIn(1f, 5f)
-        panX = centreX * scale - viewWidth / 2f
-        panY = centreY * scale - viewHeight / 2f
+        panX = centreX * scale - focusX
+        panY = centreY * scale - focusY
         clampPan()
     }
     fun dragBy(dx: Float, dy: Float) {

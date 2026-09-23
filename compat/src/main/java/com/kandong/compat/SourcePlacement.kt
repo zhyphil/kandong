@@ -34,26 +34,12 @@ internal data class MagnifierLayout(
         }
         return if (preferred != currentBottom && otherFits) preferred else currentBottom
     }
-    fun idleControls(source: Box, currentBottom: Boolean): Controls? {
-        val candidates = listOf(currentBottom, !currentBottom).flatMap { below ->
-            listOf(true, false).mapNotNull { right ->
-                val y = if (below) source.bottom + gap else source.top - gap - grip
-                if (y < 0 || y + grip > height) null else {
-                    val total = moveWidth + gap + grip
-                    val desired = if (right) source.right - total else source.left
-                    val x = desired.coerceIn(0, width - total)
-                    val resizeX = if (right) x + moveWidth + gap else x
-                    val moveX = if (right) x else x + grip + gap
-                    Controls(GripSide(below, right), Box(moveX, y, moveWidth, grip), Box(resizeX, y, grip, grip))
-                }
-            }
-        }
-        // Prefer the corner that needs no horizontal displacement, especially for narrow edge crops.
-        val nearest = candidates.sortedBy {
-            kotlin.math.abs(it.resize.left - if (it.side.right) source.right - grip else source.left)
-        }
-        return nearest.firstOrNull { fits(currentBottom, source, listOf(it.move, it.resize)) }
-            ?: nearest.firstOrNull { fits(!currentBottom, source, listOf(it.move, it.resize)) }
+    fun idleControls(source: Box, @Suppress("UNUSED_PARAMETER") currentBottom: Boolean): Controls? {
+        if (!source.inside(width, height)) return null
+        // The crop itself is the move target. A transparent 48dp target straddles its upper-right edge.
+        val resize = Box((source.right - grip / 2).coerceIn(0, width - grip),
+            (source.top - grip / 2).coerceIn(0, height - grip), grip, grip)
+        return Controls(GripSide(false, true), source, resize)
     }
     companion object {
         const val CONTROL_DP = 48

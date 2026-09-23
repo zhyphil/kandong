@@ -1,0 +1,189 @@
+{
+  "device": "KanDong_Phase0_API36 dedicated emulator",
+  "api": 36,
+  "version": "0.0.4-gestures",
+  "scope": "direct selection dragging, upper-right resize target, pinch scale and slider synchronization",
+  "checks": [
+    {
+      "check": "direct_drag_without_move_icon",
+      "before": [
+        286,
+        537,
+        508,
+        154
+      ],
+      "after": [
+        206,
+        587,
+        508,
+        154
+      ],
+      "expandedWindows": 3
+    },
+    {
+      "check": "upper_right_resize_independent_of_zoom",
+      "crop": [
+        206,
+        547,
+        573,
+        194
+      ],
+      "resizeTarget": [
+        716,
+        484,
+        126,
+        126
+      ],
+      "scale": 2.0
+    },
+    {
+      "check": "frame_reaches_top_left",
+      "crop": [
+        0,
+        0,
+        573,
+        194
+      ],
+      "bottom": true,
+      "resize": [
+        510,
+        0,
+        126,
+        126
+      ]
+    },
+    {
+      "check": "frame_reaches_bottom_right",
+      "crop": [
+        507,
+        1726,
+        573,
+        194
+      ],
+      "bottom": false,
+      "resize": [
+        954,
+        1663,
+        126,
+        126
+      ]
+    },
+    {
+      "check": "pinch_out_syncs_matrix_label_slider",
+      "scale": 3.9298449,
+      "matrix": [
+        3.9298449,
+        3.9298449
+      ],
+      "progress": 293,
+      "cropUnchanged": true,
+      "pan": [
+        491.1458,
+        148.59903
+      ]
+    },
+    {
+      "check": "pinch_bounds",
+      "minimum": 1.0,
+      "maximum": 5,
+      "progressAtMinimum": 0
+    },
+    {
+      "check": "slider_then_pinch_and_cancel_recovery",
+      "scale": 2.9668646,
+      "progress": 197,
+      "matrix": [
+        2.9668646,
+        2.9668646
+      ]
+    },
+    {
+      "check": "source_multitouch_cancel_and_image_pan_isolate_underlying_app",
+      "pan": [
+        1371.133,
+        370.4292
+      ],
+      "fixtureUnchanged": true
+    },
+    {
+      "check": "collapse_menu_resume_and_end",
+      "retained": {
+        "crop": [
+          200,
+          550,
+          573,
+          194
+        ],
+        "scale": 5.0,
+        "pan": [
+          1371.133,
+          370.4292
+        ],
+        "bottom": true
+      },
+      "underlyingClickWorksWhenCollapsed": true,
+      "endClearedAll": true
+    },
+    {
+      "check": "on_screen_drag_top_left",
+      "fingerEndpoint": [
+        1,
+        1
+      ],
+      "crop": [
+        0,
+        0,
+        508,
+        154
+      ],
+      "panelBottom": true
+    },
+    {
+      "check": "on_screen_drag_bottom_right",
+      "fingerEndpoint": [
+        1079,
+        1919
+      ],
+      "crop": [
+        572,
+        1766,
+        508,
+        154
+      ],
+      "panelBottom": false
+    },
+    {
+      "check": "lifting_finger_without_moving_does_not_jump",
+      "beforePan": [
+        490.16345,
+        147.61658
+      ],
+      "afterPan": [
+        490.16345,
+        147.61658
+      ],
+      "beforeScale": 3.9298449,
+      "afterScale": 3.9298449
+    },
+    {
+      "check": "followup_end_clears_all",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "Source marker screenshot is synthetic; magnified content is protected and black in screenshots",
+    "Corner marker can appear in the capture at extreme upper-right screen positions",
+    "API29 runtime, large fonts and TalkBack not newly verified"
+  ],
+  "humanAcceptance": {
+    "device": "HUAWEI LIO-AN00, Android12/API31",
+    "version": "0.0.4-gestures",
+    "feedback": "三个操作都正常",
+    "scope": [
+      "direct frame dragging",
+      "upper-right independent resize",
+      "pinch zoom and slider synchronization"
+    ],
+    "source": "User confirmed after installing and testing the new version"
+  }
+}

@@ -29,15 +29,17 @@ Kotlin2.2.20、AGP8.13.0、Gradle8.13、JDK17、compile/target36、Build Tools35
 
 运行期间存在短暂整屏系统缓冲区；不建立整屏 Bitmap、不保存或发送帧。每帧最终关闭；局部 Bitmap 替换后释放。已有画面时按120ms节流；几何变化或清空后的第一帧立即刷新，避免静止页面无后续帧而持续空白。这不是拖动期间的帧率上限，也不是性能或耗电结论。停止、投屏回调、锁屏、配置变化释放投屏/缓冲区/窗口，进程不会自动恢复投屏。
 
-源框和显示窗分开。显示窗、移动柄和缩放角柄设置FLAG_SECURE；取景框与自有受保护窗口相交时清空图像，不把黑屏副本或旧区域当有效放大。边框绘制在裁剪区外，其内部仍可操作原App。默认显示窗为源区相反的上/下方位置；自动切换只改变显示窗，不重新居中或改变源框尺寸。
+源框和显示窗分开。显示窗、悬浮按钮及菜单设置FLAG_SECURE，选区与受保护显示窗重叠时清空旧帧。红框本身是透明的拖动窗口，只绘制裁剪区外的边框；内部触摸移动选区，不再穿透原App。默认显示窗为源区相反的上/下方位置，自动切换不改变源框。
 
-`SourcePlacement`中的`MagnifierLayout`使用屏幕像素进行矩形和避让计算。角柄沿固定对角锚点独立调整宽高，下限48dp/32dp，上限受屏幕、手柄及显示窗可避让空间限制。`MagnifierViewport`单独维护倍率（1～5，初始2）、镜面尺寸及滚动偏移。选区变化重置镜面内滚动位置，保留倍率；调整倍率保留镜面中心对应的源像素并约束偏移，不修改选区。
+`SourcePlacement`中的`MagnifierLayout`使用屏幕像素进行矩形与避让计算。移动目标就是源框；右上角触摸区48dp，边缘处约束到屏内，视觉角标24dp/箭头16dp。角标窗口透明且只包含固定自有图形，不含采集内容，不使用FLAG_SECURE，避免与源区重叠的透明触摸区将文字遮成黑块。普通位置角标在源区右上方外侧；屏幕角落可能拍到自有角标，这是局部遮挡限制，不通过补造像素抹除。显示内容及第三方FLAG_SECURE保护保持不变。
 
-显示使用无密度Bitmap与ImageView的MATRIX模式，实际绘制矩阵的X/Y缩放都直接等于所选倍率，不再以FIT_CENTER或选区宽高推导倍率。SeekBar的0～400对应1.00～5.00倍。超出镜面的轴可滚动至边缘，较小的轴居中留白；两种情况均保持准确倍率和字形比例。镜面上的单指滑动只改变本机图像偏移；多指或取消结束本次滚动，所有事件由镜面消费，不转发给底层App。红框内部仍触摸穿透。[ImageView MATRIX](https://developer.android.com/reference/android/widget/ImageView.ScaleType#MATRIX)、[SeekBar](https://developer.android.com/reference/android/widget/SeekBar)。
+`SourceGesture`以按下时屏幕坐标/指针ID/选区为基准。移动连续约束到屏幕四边，不再依赖独立柄和松手吸附。右上角缩放固定左下角锚点，宽高独立，下限48dp/32dp，上限受屏幕和显示窗可避让空间限制；多指或取消冻结本次选区手势，整串事件由自有窗口消费。
 
-自动放置使用中线±24dp缓冲，并检查源框和可见手柄与两处显示窗的碰撞。当前位置会遮挡时优先使用可行位置；无法安全显示时清空并说明。`SourceGesture`冻结按下时的指针ID、源框、活动手柄朝向和缩放对角锚点；显示窗移动不能修改这些数据。松手/取消后再安排空闲手柄。移动手势到边缘继续外拖超过8dp时提示“松手贴边”，正常松手可将源框贴到捕获边缘；反向拖回撤销，取消不贴边。缩放不执行平移贴边，避免破坏对角锚点。
+`MagnifierViewport`独立维护倍率（1～5，初始2）、镜面尺寸及偏移。选区变化重置平移并保留倍率；滑杆以镜面中心、双指以两指焦点保持同一源像素，边缘约束平移。显示使用无密度Bitmap与ImageView MATRIX；SeekBar的0～400对应1.00～5.00倍，由真实倍率反向更新progress，程序更新不触发用户缩放回调。
 
-这是为目标 LIO-AN00/API31 做的替代 spike。系统是否排除安全悬浮窗、画面刷新和触摸行为都需实际设备确认。它的显示方式和原生镜面不同，不声称两者UX等价。当前仅默认内置屏，旋转停止，译文尚未实现。
+镜面使用官方ScaleGestureDetector接收完整DOWN至UP/CANCEL事件流，禁用双击拖动及笔按钮缩放。单指平移与双指缩放互斥；抬起一指后以剩余指针重设位置，防止跳动。收起、菜单、结束丢弃检测器及有效手势状态；新显示窗使用新实例。镜面事件不转发原App。小于镜面的内容按准确倍率居中留白，大于镜面时允许平移至边缘。[ScaleGestureDetector](https://developer.android.com/reference/android/view/ScaleGestureDetector)、[ImageView MATRIX](https://developer.android.com/reference/android/widget/ImageView.ScaleType#MATRIX)、[SeekBar](https://developer.android.com/reference/android/widget/SeekBar)。
+
+自动放置仍使用中线±24dp缓冲，检查源框/角柄与显示窗碰撞；不安全时清空并说明。
 
 ## 兼容版收起、菜单与会话状态
 

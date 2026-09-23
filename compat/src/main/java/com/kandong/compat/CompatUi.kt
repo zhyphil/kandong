@@ -9,15 +9,22 @@ import android.view.*
 import android.widget.*
 import kotlin.math.roundToInt
 
-internal enum class LineIcon { MAGNIFY, MENU, COLLAPSE, END, MOVE, RESIZE, CLOSE, BACK }
+internal enum class LineIcon { MAGNIFY, MENU, COLLAPSE, END, RESIZE, CLOSE, BACK }
 internal class IconView(context: Context, private val icon: LineIcon, private val ink: Int = Color.WHITE) : View(context) {
     var corner = GripSide(true, true)
         set(value) { field = value; invalidate() }
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = ink; style = Paint.Style.STROKE; strokeWidth = 1.8f; strokeCap = Paint.Cap.ROUND; strokeJoin = Paint.Join.ROUND }
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        val size = minOf(CompatUi.dp(context, 26), width, height).toFloat()
-        canvas.save(); canvas.translate((width - size) / 2, (height - size) / 2); canvas.scale(size / 24, size / 24)
+        val size = minOf(CompatUi.dp(context, if(icon == LineIcon.RESIZE) 16 else 26), width, height).toFloat()
+        val cx = if(icon == LineIcon.RESIZE) width - CompatUi.dp(context,12).toFloat() else width / 2f
+        val cy = if(icon == LineIcon.RESIZE) CompatUi.dp(context,12).toFloat() else height / 2f
+        if(icon == LineIcon.RESIZE) {
+            paint.style=Paint.Style.FILL; paint.color=Color.rgb(196,57,36)
+            canvas.drawCircle(cx,cy,CompatUi.dp(context,12).toFloat(),paint)
+            paint.style=Paint.Style.STROKE; paint.color=ink
+        }
+        canvas.save(); canvas.translate(cx - size / 2, cy - size / 2); canvas.scale(size / 24, size / 24)
         fun line(x: Float, y: Float, xx: Float, yy: Float) = canvas.drawLine(x,y,xx,yy,paint)
         when (icon) {
             LineIcon.MAGNIFY -> { canvas.drawCircle(10f,10f,7f,paint); line(15.2f,15.2f,21f,21f) }
@@ -25,11 +32,6 @@ internal class IconView(context: Context, private val icon: LineIcon, private va
             LineIcon.COLLAPSE -> line(5f,16f,19f,16f)
             LineIcon.END, LineIcon.CLOSE -> { line(5f,5f,19f,19f); line(19f,5f,5f,19f) }
             LineIcon.BACK -> { line(19f,12f,5f,12f); line(5f,12f,11f,6f); line(5f,12f,11f,18f) }
-            LineIcon.MOVE -> {
-                line(3f,12f,21f,12f); line(12f,3f,12f,21f)
-                line(3f,12f,6f,9f); line(3f,12f,6f,15f); line(21f,12f,18f,9f); line(21f,12f,18f,15f)
-                line(12f,3f,9f,6f); line(12f,3f,15f,6f); line(12f,21f,9f,18f); line(12f,21f,15f,18f)
-            }
             LineIcon.RESIZE -> {
                 canvas.scale(if (corner.right) 1f else -1f, if (corner.below) 1f else -1f,12f,12f)
                 line(5f,5f,19f,19f); line(19f,11f,19f,19f); line(11f,19f,19f,19f)
@@ -47,7 +49,7 @@ internal object CompatUi {
     val teal = Color.rgb(18,105,95)
     val soft = Color.rgb(228,240,234)
     const val disclosure = "展开时会临时读取整个屏幕，只在手机内放大选区，不保存、不联网、不上传。收起暂停画面处理；点“关闭放大镜”会同时停止屏幕共享。"
-    const val help = "1. 允许悬浮窗，勾选本次同意，再按提示允许屏幕共享。\n\n2. 拖动十字手柄移动取景框；拖动箭头手柄分别调节宽和高。\n\n3. 下方滑杆单独调节1到5倍，每次新使用默认2倍。放大后可在画面内滑动查看。镜面会自动上下避让。\n\n4. 到达屏幕边缘时，看到“松手贴边”后松开。取景框内仍可操作原来的页面。\n\n5. 点收起可暂时放到屏幕边缘；轻点圆球恢复，拖动可换位置，长按打开菜单。\n\n6. 点“× 关闭”按钮或菜单中的“关闭放大镜”会停止放大和屏幕共享。锁屏或转动屏幕后需要重新开始。"
+    const val help = "1. 允许悬浮窗，勾选本次同意，再按提示允许屏幕共享。\n\n2. 直接拖动红框内部或边框来移动选区；拖右上角的小箭头调节宽和高。\n\n3. 下方滑杆单独调节1到5倍，每次新使用默认2倍。在放大画面中双指张开或捏合也可调节倍率，数字和滑杆会同步；单指滑动查看。镜面会自动上下避让。\n\n4. 红框可直接拖到屏幕边缘。操作原来的App前，先点“收起”让出屏幕。\n\n5. 点收起可暂时放到屏幕边缘；轻点圆球恢复，拖动可换位置，长按打开菜单。\n\n6. 点“× 关闭”按钮或菜单中的“关闭放大镜”会停止放大和屏幕共享。锁屏或转动屏幕后需要重新开始。"
     const val privacy = "屏幕共享由您每次亲自授权。系统会提供整屏缓冲区，看懂只在手机内复制选区用于放大，不录制、不保存、不上传，也不采集页面文字。\n\n收起或打开菜单时暂停画面采集并清除已有画面，但系统屏幕共享会话仍保留。关闭放大镜后，屏幕共享也会停止。\n\n查看密码、银行等私密页面前，请先关闭放大镜。受保护的画面可能显示为空白。\n\n目前无需登录。区域翻译、账号和订阅尚未提供；屏幕共享授权不代表同意文字识别或AI处理。"
     fun dp(c: Context, n: Int) = (n * c.resources.displayMetrics.density).roundToInt().coerceAtLeast(1)
     fun shape(c: Context, color: Int, radius: Int = 20) = GradientDrawable().apply { setColor(color); cornerRadius = dp(c,radius).toFloat() }

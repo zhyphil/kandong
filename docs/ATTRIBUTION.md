@@ -34,3 +34,7 @@ Gradle Wrapper由官方 Gradle8.13 wrapper task生成；Gradle、Kotlin及Androi
 API29安全区使用官方[WindowInsets stable insets与DisplayCutout](https://developer.android.com/reference/android/view/WindowInsets)合并系统栏和刘海边界，由本次授权Activity传入私有服务，未知时不按零处理。
 
 菜单二级页返回使用[Dialog的OnBackInvokedDispatcher](https://developer.android.com/reference/android/app/Dialog#getOnBackInvokedDispatcher())处理API33+系统返回，旧版本保留返回键处理；关闭对话框注销回调，迟到回调不重建页面。
+
+## 红框直接操作与双指缩放
+
+双指识别使用官方[ScaleGestureDetector](https://developer.android.com/reference/android/view/ScaleGestureDetector)，传入完整事件序列，以focusX/focusY作为局部缩放焦点；指针切换遵循[MotionEvent](https://developer.android.com/reference/android/view/MotionEvent)的pointerId/actionIndex。几何、焦点保持、滑杆同步和线条图标均独立实现，无新增第三方依赖。

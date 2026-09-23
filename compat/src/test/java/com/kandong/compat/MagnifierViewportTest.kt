@@ -63,4 +63,26 @@ class MagnifierViewportTest {
         v.setScale(5f); v.dragBy(-10000f, -10000f); v.setViewport(2400, 900)
         assertEquals(100f, v.panX, 0f); assertEquals(100f, v.panY, 0f)
     }
+    @Test fun pinchKeepsAnOffCentreSourcePointUnderTheFingers() {
+        val v=viewport(); v.setScale(4f); v.dragBy(-100f,-40f)
+        val x=(250-v.translateX)/v.scale; val y=(100-v.translateY)/v.scale
+        v.setScale(5f,250f,100f)
+        assertEquals(x,(250-v.translateX)/v.scale,.001f)
+        assertEquals(y,(100-v.translateY)/v.scale,.001f)
+        assertEquals(500,v.sourceWidth); assertEquals(200,v.sourceHeight)
+    }
+    @Test fun pinchLimitsAndSliderUseTheSameScaleAndClampPan() {
+        val v=viewport();v.setScale(8f,250f,100f)
+        assertEquals(5f,v.scale,0f)
+        v.setScale(.2f,250f,100f)
+        assertEquals(1f,v.scale,0f);assertEquals(0f,v.panX,0f);assertEquals(0f,v.panY,0f)
+        v.setScale(2.73f);assertEquals(2.73f,v.scale,0f)
+        v.setScale(3.14f,500f,200f);assertEquals(3.14f,v.scale,0f)
+    }
+    @Test fun invalidPinchFocusDoesNotChangeScaleOrPan() {
+        val v=viewport();v.setScale(4f)
+        val x=v.panX;val y=v.panY
+        v.setScale(5f,Float.NaN,10f);v.setScale(5f,20f,Float.POSITIVE_INFINITY)
+        assertEquals(4f,v.scale,0f);assertEquals(x,v.panX,0f);assertEquals(y,v.panY,0f)
+    }
 }
