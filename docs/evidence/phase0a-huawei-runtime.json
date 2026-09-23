@@ -118,6 +118,15 @@
       "check": "lock_unlock_releases_projection_service_and_windows",
       "passed": true,
       "evidence": "User reported lens disappeared after locking and unlocking; subsequent adb query returned null MediaProjection, no service, no KanDong windows."
+    },
+    {
+      "check": "top_reachability_fix",
+      "evidence": "Updated APK installed successfully. User confirmed source can reach top and top content is readable. A later window-only snapshot confirmed the handle sits below the crop; it was not a y=0 snapshot.",
+      "unitRegressionTests": 4,
+      "compatTotalTests": 8,
+      "failures": 0,
+      "debugAndReleaseBuild": "passed",
+      "lint": "no errors"
     }
   ],
   "userReports": [
@@ -128,6 +137,11 @@
     },
     {
       "feedback": "Magnified content corresponds to red source frame"
+    },
+    {
+      "appNameAsReported": "mobile browser (unspecified)",
+      "feedback": "2x/3x/4x, dragging and scrolling follow correctly; original layout unchanged. Separate top-edge reachability bug reported.",
+      "packageAndVersionVerified": false
     }
   ]
 }

@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | app / compat / fixture debug APK | 成功 | `./scripts/check.sh` |
 | 原生app单元测试 | 29通过，0失败/错误；16历史底层 + 13放大状态 | `app/build/test-results/testDebugUnitTest/TEST-*.xml` |
-| compat裁剪单元测试 | 4通过，0失败/错误 | `compat/build/test-results/testDebugUnitTest/TEST-*.xml` |
+| compat单元测试 | 8通过，0失败/错误；4裁剪 + 4取景位置回归 | `compat/build/test-results/testDebugUnitTest/TEST-*.xml` |
 | app / compat Lint | 无错误；保留版本提示及部分原生UI文案/RTL等警告 | 两模块 `build/reports/lint-results-debug.html` |
 | app / compat release APK | 构建成功，未分发/发布 | `:app:assembleRelease :compat:assembleRelease` |
 | 原生API36设备集成 | 3项通过，0失败，3.945秒 | `app/build/reports/device/instrumentation.txt` |
@@ -65,12 +65,21 @@ No-Go依据是实际版本/feature核验，不是假称运行过不兼容APK。�
 | 框内触摸 | 通过ADB发送一次测试触摸，合成按钮计数0→1；没有通过节点ACTION_CLICK替代，也不是产品自动操作能力 |
 | 停止 | 实际点产品“停止”，随后MediaProjection为空、服务不存在、三个看懂窗口全部移除；原页保持不变 |
 | 视觉对应 | 用户亲自在手机确认“能看到，放大内容对应红框”；画质和流畅度未做仪器测量 |
+| 浏览器 | 用户反馈“都正常，能跟随且排版不变”，回应了2/3/4倍、拖动和滚动检查；未核对浏览器具体版本 |
 | 第三方App | 用户称使用“bookings”，反馈原页面保持原样；没有读取其账号或页面内容，也未核对该App的正式包名/版本 |
 | 锁屏/解锁 | 用户反馈放大窗消失；随后独立核验MediaProjection为null、服务为nothing、三个悬浮窗不存在。解锁不自动恢复共享，符合预期 |
 
-无屏幕内容、无设备序列号的[真机运行记录](evidence/phase0a-huawei-runtime.json)已保留。下一步补浏览器的倍率/拖动/滚动反馈；第三方App全部交互细项与长辈可理解性仍需扩大验证，尚不将个别反馈视为所有App兼容。
+无屏幕内容、无设备序列号的[真机运行记录](evidence/phase0a-huawei-runtime.json)已保留。浏览器体验已收到正常反馈；随后用户指出顶部取景不可达，修复状态见下。第三方App全部交互细项与长辈可理解性仍需扩大验证，尚不将个别反馈视为所有App兼容。
 
 compat的安全显示窗设置FLAG_SECURE；ADB/投屏截图中该窗口可能是黑色。镜面内容是否正确必须由手机屏幕实际观察，不能把黑色截图算作成功。测试用文字、网格和红蓝方块均为合成信息。
+
+## 顶部取景不可达回归
+
+用户在浏览器反馈：必须抓住上方“移动取景框”，取景框因此无法继续上移。根因是兼容服务把源区顶边限定在80dp以下，并始终把48dp手柄放在源区上方；既限制了采样范围，也使手指先到达屏幕边缘。
+
+修复：源区允许到达物理屏幕边界；默认手柄在源区下方，换边后放在源区上方，单次拖动期间不自动跳边。取景边框在屏幕边缘截断，不能通过移动窗口导致采样区错位。保留框内触摸穿透及显示窗重叠保护。
+
+4个回归用例覆盖2/3/4倍顶边可达、换边后底部可达、左右边界和连续拖动。抽取旧位置算法后4项均按预期失败，修复后compat共8项单测通过，debug/release构建及Lint通过；记录在本机`/private/tmp/kandong-top-regression-red.log`及`/private/tmp/kandong-top-fix-check.log`。此次未改动官方app/fixture，复用其前次检查证据。修复版已成功更新到同一华为，用户重新开启屏幕共享后确认“已试，可以到顶部并看清内容”。独立读取窗口几何也确认手柄在源区下方；该次抽样并非拖到物理y=0的时刻，因此不将它当作物理首行的截图证据。真机可读性结论来自用户实看，物理边界数值由回归用例验证。
 
 ## 真机验收步骤与记录模板
 

@@ -140,8 +140,11 @@ class ProjectionMagnifierService : Service() {
             val paint = Paint().apply { color = Color.rgb(220, 60, 20); style = Paint.Style.STROKE; strokeWidth = dp(2).toFloat() }
             override fun onDraw(canvas: Canvas) {
                 super.onDraw(canvas)
-                val d = dp(1).toFloat()
-                canvas.drawRect(d,d,width-d,height-d,paint)
+                val location = outlineParams ?: return
+                val outside = dp(2).toFloat()
+                // At screen edges, clip the OUTSIDE border instead of shifting the crop.
+                canvas.drawRect(source.left - location.x - outside, source.top - location.y - outside,
+                    source.right - location.x + outside, source.bottom - location.y + outside, paint)
             }
         }
         outline = mark
@@ -182,20 +185,20 @@ class ProjectionMagnifierService : Service() {
         }
     }
     private fun updateSource() {
-        val width = lensWidth / scale
-        val height = lensHeight / scale
-        centerX = centerX.coerceIn(width / 2f + dp(4), screenWidth - width / 2f - dp(4))
-        centerY = centerY.coerceIn(height / 2f + dp(80), screenHeight - height / 2f - dp(32))
-        source = Rect((centerX - width / 2).toInt(), (centerY - height / 2).toInt(), (centerX - width / 2).toInt() + width, (centerY - height / 2).toInt() + height)
+        val control = handleParams ?: return
+        val placement = placeSource(screenWidth, screenHeight, lensWidth / scale, lensHeight / scale,
+            centerX, centerY, control.width, control.height, dp(6), handleBelow = panelAtBottom)
+        centerX = placement.centerX; centerY = placement.centerY
+        source = Rect(placement.left, placement.top, placement.left + placement.width, placement.top + placement.height)
         outlineParams?.apply {
-            x = source.left - dp(3); y = source.top - dp(3); this.width = source.width()+dp(6); this.height = source.height()+dp(6)
-            outline?.let { wm.updateViewLayout(it,this) }
+            x = (source.left - dp(3)).coerceAtLeast(0)
+            y = (source.top - dp(3)).coerceAtLeast(0)
+            width = (source.right + dp(3)).coerceAtMost(screenWidth) - x
+            height = (source.bottom + dp(3)).coerceAtMost(screenHeight) - y
+            outline?.let { wm.updateViewLayout(it, this); it.invalidate() }
         }
-        handleParams?.apply {
-            x = (centerX - this.width / 2f).toInt().coerceIn(0,screenWidth - this.width)
-            y = source.top - this.height - dp(6)
-            handle?.let { wm.updateViewLayout(it,this) }
-        }
+        control.x = placement.handleLeft; control.y = placement.handleTop
+        handle?.let { wm.updateViewLayout(it, control) }
     }
     private fun sourceOverlapsPanel(): Boolean {
         val p = panelParams ?: return true
