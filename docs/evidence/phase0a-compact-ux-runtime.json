@@ -1,0 +1,1453 @@
+{
+  "version": "0.0.3-compact",
+  "device": "KanDong_Phase0_API36 dedicated emulator",
+  "api": 36,
+  "screen": [
+    1080,
+    1920
+  ],
+  "unitTests": 39,
+  "checks": [
+    {
+      "check": "new_default_two",
+      "uiState": "EXPANDED",
+      "returnTo": "EXPANDED",
+      "surfaceAttached": "true",
+      "capturing": "true",
+      "menuPage": "root",
+      "terminal": "false",
+      "copyAttempts": 2,
+      "virtualDisplayCreates": 1,
+      "renderedFrames": 2,
+      "expandedWindows": 4,
+      "bubble": null,
+      "menu": null,
+      "safeArea": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "crop": [
+        286,
+        537,
+        508,
+        154
+      ],
+      "move": [
+        526,
+        707,
+        126,
+        126
+      ],
+      "resize": [
+        668,
+        707,
+        126,
+        126
+      ],
+      "bitmap": [
+        508,
+        154
+      ],
+      "viewport": [
+        1017,
+        309
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        0.0,
+        0.0
+      ],
+      "matrixScale": [
+        2.0,
+        2.0
+      ],
+      "scale": 2.0,
+      "bottom": true,
+      "available": true,
+      "tools": {
+        "打开菜单": [
+          31,
+          1270,
+          126,
+          126
+        ],
+        "收起放大镜": [
+          796,
+          1270,
+          126,
+          126
+        ],
+        "结束共享": [
+          922,
+          1270,
+          126,
+          126
+        ]
+      },
+      "slider": [
+        178,
+        1705,
+        870,
+        126
+      ],
+      "progress": 100
+    },
+    {
+      "check": "fixture_baseline",
+      "layout": "KANDONG_LAYOUT:f5d7c5e9796f57da464b2a35",
+      "clicks": 0,
+      "button": [
+        42,
+        816,
+        1038,
+        942
+      ]
+    },
+    {
+      "check": "free_width",
+      "uiState": "EXPANDED",
+      "returnTo": "EXPANDED",
+      "surfaceAttached": "true",
+      "capturing": "true",
+      "menuPage": "root",
+      "terminal": "false",
+      "copyAttempts": 65,
+      "virtualDisplayCreates": 1,
+      "renderedFrames": 65,
+      "expandedWindows": 4,
+      "bubble": null,
+      "menu": null,
+      "safeArea": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "crop": [
+        286,
+        537,
+        608,
+        154
+      ],
+      "move": [
+        626,
+        707,
+        126,
+        126
+      ],
+      "resize": [
+        768,
+        707,
+        126,
+        126
+      ],
+      "bitmap": [
+        608,
+        154
+      ],
+      "viewport": [
+        1017,
+        309
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        199.0,
+        0.0
+      ],
+      "matrixScale": [
+        2.0,
+        2.0
+      ],
+      "scale": 2.0,
+      "bottom": true,
+      "available": true,
+      "tools": {
+        "打开菜单": [
+          31,
+          1270,
+          126,
+          126
+        ],
+        "收起放大镜": [
+          796,
+          1270,
+          126,
+          126
+        ],
+        "结束共享": [
+          922,
+          1270,
+          126,
+          126
+        ]
+      },
+      "slider": [
+        178,
+        1705,
+        870,
+        126
+      ],
+      "progress": 100
+    },
+    {
+      "check": "free_height",
+      "uiState": "EXPANDED",
+      "returnTo": "EXPANDED",
+      "surfaceAttached": "true",
+      "capturing": "true",
+      "menuPage": "root",
+      "terminal": "false",
+      "copyAttempts": 76,
+      "virtualDisplayCreates": 1,
+      "renderedFrames": 76,
+      "expandedWindows": 4,
+      "bubble": null,
+      "menu": null,
+      "safeArea": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "crop": [
+        286,
+        537,
+        608,
+        214
+      ],
+      "move": [
+        626,
+        767,
+        126,
+        126
+      ],
+      "resize": [
+        768,
+        767,
+        126,
+        126
+      ],
+      "bitmap": [
+        608,
+        214
+      ],
+      "viewport": [
+        1017,
+        309
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        199.0,
+        119.0
+      ],
+      "matrixScale": [
+        2.0,
+        2.0
+      ],
+      "scale": 2.0,
+      "bottom": true,
+      "available": true,
+      "tools": {
+        "打开菜单": [
+          31,
+          1270,
+          126,
+          126
+        ],
+        "收起放大镜": [
+          796,
+          1270,
+          126,
+          126
+        ],
+        "结束共享": [
+          922,
+          1270,
+          126,
+          126
+        ]
+      },
+      "slider": [
+        178,
+        1705,
+        870,
+        126
+      ],
+      "progress": 100
+    },
+    {
+      "check": "slider_one",
+      "uiState": "EXPANDED",
+      "returnTo": "EXPANDED",
+      "surfaceAttached": "true",
+      "capturing": "true",
+      "menuPage": "root",
+      "terminal": "false",
+      "copyAttempts": 76,
+      "virtualDisplayCreates": 1,
+      "renderedFrames": 76,
+      "expandedWindows": 4,
+      "bubble": null,
+      "menu": null,
+      "safeArea": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "crop": [
+        286,
+        537,
+        608,
+        214
+      ],
+      "move": [
+        626,
+        767,
+        126,
+        126
+      ],
+      "resize": [
+        768,
+        767,
+        126,
+        126
+      ],
+      "bitmap": [
+        608,
+        214
+      ],
+      "viewport": [
+        1017,
+        309
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        0.0,
+        0.0
+      ],
+      "matrixScale": [
+        1.0,
+        1.0
+      ],
+      "scale": 1.0,
+      "bottom": true,
+      "available": true,
+      "tools": {
+        "打开菜单": [
+          31,
+          1270,
+          126,
+          126
+        ],
+        "收起放大镜": [
+          796,
+          1270,
+          126,
+          126
+        ],
+        "结束共享": [
+          922,
+          1270,
+          126,
+          126
+        ]
+      },
+      "slider": [
+        178,
+        1705,
+        870,
+        126
+      ],
+      "progress": 0
+    },
+    {
+      "check": "slider_continuous",
+      "uiState": "EXPANDED",
+      "returnTo": "EXPANDED",
+      "surfaceAttached": "true",
+      "capturing": "true",
+      "menuPage": "root",
+      "terminal": "false",
+      "copyAttempts": 77,
+      "virtualDisplayCreates": 1,
+      "renderedFrames": 77,
+      "expandedWindows": 4,
+      "bubble": null,
+      "menu": null,
+      "safeArea": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "crop": [
+        286,
+        537,
+        608,
+        214
+      ],
+      "move": [
+        626,
+        767,
+        126,
+        126
+      ],
+      "resize": [
+        768,
+        767,
+        126,
+        126
+      ],
+      "bitmap": [
+        608,
+        214
+      ],
+      "viewport": [
+        1017,
+        309
+      ],
+      "pan": [
+        297.10004,
+        129.05002
+      ],
+      "maxPan": [
+        594.2001,
+        258.10004
+      ],
+      "matrixScale": [
+        2.65,
+        2.65
+      ],
+      "scale": 2.65,
+      "bottom": true,
+      "available": true,
+      "tools": {
+        "打开菜单": [
+          31,
+          1270,
+          126,
+          126
+        ],
+        "收起放大镜": [
+          796,
+          1270,
+          126,
+          126
+        ],
+        "结束共享": [
+          922,
+          1270,
+          126,
+          126
+        ]
+      },
+      "slider": [
+        178,
+        1705,
+        870,
+        126
+      ],
+      "progress": 165
+    },
+    {
+      "check": "slider_five",
+      "uiState": "EXPANDED",
+      "returnTo": "EXPANDED",
+      "surfaceAttached": "true",
+      "capturing": "true",
+      "menuPage": "root",
+      "terminal": "false",
+      "copyAttempts": 77,
+      "virtualDisplayCreates": 1,
+      "renderedFrames": 77,
+      "expandedWindows": 4,
+      "bubble": null,
+      "menu": null,
+      "safeArea": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "crop": [
+        286,
+        537,
+        608,
+        214
+      ],
+      "move": [
+        626,
+        767,
+        126,
+        126
+      ],
+      "resize": [
+        768,
+        767,
+        126,
+        126
+      ],
+      "bitmap": [
+        608,
+        214
+      ],
+      "viewport": [
+        1017,
+        309
+      ],
+      "pan": [
+        1011.5,
+        380.5
+      ],
+      "maxPan": [
+        2023.0,
+        761.0
+      ],
+      "matrixScale": [
+        5.0,
+        5.0
+      ],
+      "scale": 5.0,
+      "bottom": true,
+      "available": true,
+      "tools": {
+        "打开菜单": [
+          31,
+          1270,
+          126,
+          126
+        ],
+        "收起放大镜": [
+          796,
+          1270,
+          126,
+          126
+        ],
+        "结束共享": [
+          922,
+          1270,
+          126,
+          126
+        ]
+      },
+      "slider": [
+        178,
+        1705,
+        870,
+        126
+      ],
+      "progress": 400
+    },
+    {
+      "check": "pan_before_collapse",
+      "crop": [
+        286,
+        537,
+        608,
+        214
+      ],
+      "scale": 5.0,
+      "pan": [
+        1407.499,
+        449.8037
+      ],
+      "bottom": true,
+      "progress": 400
+    },
+    {
+      "check": "collapsed_pauses_copy_and_underlying_click",
+      "state": {
+        "uiState": "COLLAPSED",
+        "returnTo": "EXPANDED",
+        "surfaceAttached": "false",
+        "capturing": "false",
+        "menuPage": "root",
+        "terminal": "false",
+        "copyAttempts": 87,
+        "virtualDisplayCreates": 1,
+        "renderedFrames": 87,
+        "expandedWindows": 0,
+        "bubble": [
+          922,
+          960,
+          147,
+          147
+        ],
+        "menu": null,
+        "safeArea": [
+          0,
+          63,
+          1080,
+          1794
+        ],
+        "crop": [
+          286,
+          537,
+          608,
+          214
+        ],
+        "move": [
+          626,
+          767,
+          126,
+          126
+        ],
+        "resize": [
+          768,
+          767,
+          126,
+          126
+        ],
+        "bitmap": [
+          0,
+          0
+        ],
+        "viewport": [
+          0,
+          0
+        ],
+        "pan": [
+          1407.499,
+          449.8037
+        ],
+        "maxPan": [
+          2023.0,
+          761.0
+        ],
+        "matrixScale": [
+          0.0,
+          0.0
+        ],
+        "scale": 5.0,
+        "bottom": true,
+        "available": true,
+        "tools": {}
+      },
+      "fixture": {
+        "layout": "KANDONG_LAYOUT:f5d7c5e9796f57da464b2a35",
+        "clicks": 1,
+        "button": [
+          42,
+          816,
+          1038,
+          942
+        ]
+      }
+    },
+    {
+      "check": "bubble_drag_dock_safe_edges",
+      "uiState": "COLLAPSED",
+      "returnTo": "EXPANDED",
+      "surfaceAttached": "false",
+      "capturing": "false",
+      "menuPage": "root",
+      "terminal": "false",
+      "copyAttempts": 87,
+      "virtualDisplayCreates": 1,
+      "renderedFrames": 87,
+      "expandedWindows": 0,
+      "bubble": [
+        11,
+        74,
+        147,
+        147
+      ],
+      "menu": null,
+      "safeArea": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "crop": [
+        286,
+        537,
+        608,
+        214
+      ],
+      "move": [
+        626,
+        767,
+        126,
+        126
+      ],
+      "resize": [
+        768,
+        767,
+        126,
+        126
+      ],
+      "bitmap": [
+        0,
+        0
+      ],
+      "viewport": [
+        0,
+        0
+      ],
+      "pan": [
+        1407.499,
+        449.8037
+      ],
+      "maxPan": [
+        2023.0,
+        761.0
+      ],
+      "matrixScale": [
+        0.0,
+        0.0
+      ],
+      "scale": 5.0,
+      "bottom": true,
+      "available": true,
+      "tools": {}
+    },
+    {
+      "check": "resume_preserves_crop_zoom_pan",
+      "uiState": "EXPANDED",
+      "returnTo": "EXPANDED",
+      "surfaceAttached": "true",
+      "capturing": "true",
+      "menuPage": "root",
+      "terminal": "false",
+      "copyAttempts": 88,
+      "virtualDisplayCreates": 1,
+      "renderedFrames": 88,
+      "expandedWindows": 4,
+      "bubble": null,
+      "menu": null,
+      "safeArea": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "crop": [
+        286,
+        537,
+        608,
+        214
+      ],
+      "move": [
+        626,
+        767,
+        126,
+        126
+      ],
+      "resize": [
+        768,
+        767,
+        126,
+        126
+      ],
+      "bitmap": [
+        608,
+        214
+      ],
+      "viewport": [
+        1017,
+        309
+      ],
+      "pan": [
+        1407.499,
+        449.8037
+      ],
+      "maxPan": [
+        2023.0,
+        761.0
+      ],
+      "matrixScale": [
+        5.0,
+        5.0
+      ],
+      "scale": 5.0,
+      "bottom": true,
+      "available": true,
+      "tools": {
+        "打开菜单": [
+          31,
+          1270,
+          126,
+          126
+        ],
+        "收起放大镜": [
+          796,
+          1270,
+          126,
+          126
+        ],
+        "结束共享": [
+          922,
+          1270,
+          126,
+          126
+        ]
+      },
+      "slider": [
+        178,
+        1705,
+        870,
+        126
+      ],
+      "progress": 400
+    },
+    {
+      "check": "ten_toggles_one_virtual_display_preserved_state",
+      "uiState": "EXPANDED",
+      "returnTo": "EXPANDED",
+      "surfaceAttached": "true",
+      "capturing": "true",
+      "menuPage": "root",
+      "terminal": "false",
+      "copyAttempts": 120,
+      "virtualDisplayCreates": 1,
+      "renderedFrames": 120,
+      "expandedWindows": 4,
+      "bubble": null,
+      "menu": null,
+      "safeArea": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "crop": [
+        286,
+        537,
+        608,
+        214
+      ],
+      "move": [
+        626,
+        767,
+        126,
+        126
+      ],
+      "resize": [
+        768,
+        767,
+        126,
+        126
+      ],
+      "bitmap": [
+        608,
+        214
+      ],
+      "viewport": [
+        1017,
+        309
+      ],
+      "pan": [
+        1407.499,
+        449.8037
+      ],
+      "maxPan": [
+        2023.0,
+        761.0
+      ],
+      "matrixScale": [
+        5.0,
+        5.0
+      ],
+      "scale": 5.0,
+      "bottom": true,
+      "available": true,
+      "tools": {
+        "打开菜单": [
+          31,
+          1270,
+          126,
+          126
+        ],
+        "收起放大镜": [
+          796,
+          1270,
+          126,
+          126
+        ],
+        "结束共享": [
+          922,
+          1270,
+          126,
+          126
+        ]
+      },
+      "slider": [
+        178,
+        1705,
+        870,
+        126
+      ],
+      "progress": 400
+    },
+    {
+      "check": "expanded_menu_help_privacy_disabled_entries_back",
+      "uiState": "EXPANDED",
+      "returnTo": "EXPANDED",
+      "surfaceAttached": "true",
+      "capturing": "true",
+      "menuPage": "root",
+      "terminal": "false",
+      "copyAttempts": 121,
+      "virtualDisplayCreates": 1,
+      "renderedFrames": 121,
+      "expandedWindows": 4,
+      "bubble": null,
+      "menu": null,
+      "safeArea": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "crop": [
+        286,
+        537,
+        608,
+        214
+      ],
+      "move": [
+        626,
+        767,
+        126,
+        126
+      ],
+      "resize": [
+        768,
+        767,
+        126,
+        126
+      ],
+      "bitmap": [
+        608,
+        214
+      ],
+      "viewport": [
+        1017,
+        309
+      ],
+      "pan": [
+        1407.499,
+        449.8037
+      ],
+      "maxPan": [
+        2023.0,
+        761.0
+      ],
+      "matrixScale": [
+        5.0,
+        5.0
+      ],
+      "scale": 5.0,
+      "bottom": true,
+      "available": true,
+      "tools": {
+        "打开菜单": [
+          31,
+          1270,
+          126,
+          126
+        ],
+        "收起放大镜": [
+          796,
+          1270,
+          126,
+          126
+        ],
+        "结束共享": [
+          922,
+          1270,
+          126,
+          126
+        ]
+      },
+      "slider": [
+        178,
+        1705,
+        870,
+        126
+      ],
+      "progress": 400
+    },
+    {
+      "check": "bubble_longpress_menu_returns_collapsed",
+      "uiState": "COLLAPSED",
+      "returnTo": "COLLAPSED",
+      "surfaceAttached": "false",
+      "capturing": "false",
+      "menuPage": "root",
+      "terminal": "false",
+      "copyAttempts": 121,
+      "virtualDisplayCreates": 1,
+      "renderedFrames": 121,
+      "expandedWindows": 0,
+      "bubble": [
+        11,
+        74,
+        147,
+        147
+      ],
+      "menu": null,
+      "safeArea": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "crop": [
+        286,
+        537,
+        608,
+        214
+      ],
+      "move": [
+        626,
+        767,
+        126,
+        126
+      ],
+      "resize": [
+        768,
+        767,
+        126,
+        126
+      ],
+      "bitmap": [
+        0,
+        0
+      ],
+      "viewport": [
+        0,
+        0
+      ],
+      "pan": [
+        1407.499,
+        449.8037
+      ],
+      "maxPan": [
+        2023.0,
+        761.0
+      ],
+      "matrixScale": [
+        0.0,
+        0.0
+      ],
+      "scale": 5.0,
+      "bottom": true,
+      "available": true,
+      "tools": {}
+    },
+    {
+      "check": "toolbar_end_releases_all",
+      "passed": true
+    },
+    {
+      "check": "fresh_session_resets_two",
+      "uiState": "EXPANDED",
+      "returnTo": "EXPANDED",
+      "surfaceAttached": "true",
+      "capturing": "true",
+      "menuPage": "root",
+      "terminal": "false",
+      "copyAttempts": 3,
+      "virtualDisplayCreates": 1,
+      "renderedFrames": 3,
+      "expandedWindows": 4,
+      "bubble": null,
+      "menu": null,
+      "safeArea": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "crop": [
+        286,
+        537,
+        508,
+        154
+      ],
+      "move": [
+        526,
+        707,
+        126,
+        126
+      ],
+      "resize": [
+        668,
+        707,
+        126,
+        126
+      ],
+      "bitmap": [
+        508,
+        154
+      ],
+      "viewport": [
+        1017,
+        309
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        0.0,
+        0.0
+      ],
+      "matrixScale": [
+        2.0,
+        2.0
+      ],
+      "scale": 2.0,
+      "bottom": true,
+      "available": true,
+      "tools": {
+        "打开菜单": [
+          31,
+          1270,
+          126,
+          126
+        ],
+        "收起放大镜": [
+          796,
+          1270,
+          126,
+          126
+        ],
+        "结束共享": [
+          922,
+          1270,
+          126,
+          126
+        ]
+      },
+      "slider": [
+        178,
+        1705,
+        870,
+        126
+      ],
+      "progress": 100
+    },
+    {
+      "check": "automatic_above",
+      "uiState": "EXPANDED",
+      "returnTo": "EXPANDED",
+      "surfaceAttached": "true",
+      "capturing": "true",
+      "menuPage": "root",
+      "terminal": "false",
+      "copyAttempts": 58,
+      "virtualDisplayCreates": 1,
+      "renderedFrames": 58,
+      "expandedWindows": 4,
+      "bubble": null,
+      "menu": null,
+      "safeArea": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "crop": [
+        286,
+        1437,
+        508,
+        154
+      ],
+      "move": [
+        526,
+        1295,
+        126,
+        126
+      ],
+      "resize": [
+        668,
+        1295,
+        126,
+        126
+      ],
+      "bitmap": [
+        508,
+        154
+      ],
+      "viewport": [
+        1017,
+        309
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        0.0,
+        0.0
+      ],
+      "matrixScale": [
+        2.0,
+        2.0
+      ],
+      "scale": 2.0,
+      "bottom": false,
+      "available": true,
+      "tools": {
+        "打开菜单": [
+          31,
+          89,
+          126,
+          126
+        ],
+        "收起放大镜": [
+          796,
+          89,
+          126,
+          126
+        ],
+        "结束共享": [
+          922,
+          89,
+          126,
+          126
+        ]
+      },
+      "slider": [
+        178,
+        524,
+        870,
+        126
+      ],
+      "progress": 100
+    },
+    {
+      "check": "new_chrome_top_edge",
+      "uiState": "EXPANDED",
+      "returnTo": "EXPANDED",
+      "surfaceAttached": "true",
+      "capturing": "true",
+      "menuPage": "root",
+      "terminal": "false",
+      "copyAttempts": 119,
+      "virtualDisplayCreates": 1,
+      "renderedFrames": 119,
+      "expandedWindows": 4,
+      "bubble": null,
+      "menu": null,
+      "safeArea": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "crop": [
+        286,
+        0,
+        508,
+        154
+      ],
+      "move": [
+        526,
+        170,
+        126,
+        126
+      ],
+      "resize": [
+        668,
+        170,
+        126,
+        126
+      ],
+      "bitmap": [
+        508,
+        154
+      ],
+      "viewport": [
+        1017,
+        309
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        0.0,
+        0.0
+      ],
+      "matrixScale": [
+        2.0,
+        2.0
+      ],
+      "scale": 2.0,
+      "bottom": true,
+      "available": true,
+      "tools": {
+        "打开菜单": [
+          31,
+          1270,
+          126,
+          126
+        ],
+        "收起放大镜": [
+          796,
+          1270,
+          126,
+          126
+        ],
+        "结束共享": [
+          922,
+          1270,
+          126,
+          126
+        ]
+      },
+      "slider": [
+        178,
+        1705,
+        870,
+        126
+      ],
+      "progress": 100
+    },
+    {
+      "check": "new_chrome_bottom_edge",
+      "uiState": "EXPANDED",
+      "returnTo": "EXPANDED",
+      "surfaceAttached": "true",
+      "capturing": "true",
+      "menuPage": "root",
+      "terminal": "false",
+      "copyAttempts": 180,
+      "virtualDisplayCreates": 1,
+      "renderedFrames": 180,
+      "expandedWindows": 4,
+      "bubble": null,
+      "menu": null,
+      "safeArea": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "crop": [
+        286,
+        1766,
+        508,
+        154
+      ],
+      "move": [
+        526,
+        1624,
+        126,
+        126
+      ],
+      "resize": [
+        668,
+        1624,
+        126,
+        126
+      ],
+      "bitmap": [
+        508,
+        154
+      ],
+      "viewport": [
+        1017,
+        309
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        0.0,
+        0.0
+      ],
+      "matrixScale": [
+        2.0,
+        2.0
+      ],
+      "scale": 2.0,
+      "bottom": false,
+      "available": true,
+      "tools": {
+        "打开菜单": [
+          31,
+          89,
+          126,
+          126
+        ],
+        "收起放大镜": [
+          796,
+          89,
+          126,
+          126
+        ],
+        "结束共享": [
+          922,
+          89,
+          126,
+          126
+        ]
+      },
+      "slider": [
+        178,
+        524,
+        870,
+        126
+      ],
+      "progress": 100
+    },
+    {
+      "check": "source_outline_touch_through_retained",
+      "layout": "KANDONG_LAYOUT:f5d7c5e9796f57da464b2a35",
+      "clicks": 1,
+      "button": [
+        42,
+        816,
+        1038,
+        942
+      ]
+    },
+    {
+      "check": "menu_end_releases_all",
+      "passed": true
+    },
+    {
+      "check": "active_home_controls_and_consent_reset",
+      "passed": true
+    },
+    {
+      "check": "collapsed_screen_off_cleans_all",
+      "passed": true
+    },
+    {
+      "check": "unlock_does_not_restart",
+      "passed": true
+    },
+    {
+      "check": "menu_180_rotation_cleans_all",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "No protected overlay pixel verification by screenshot",
+    "Huawei human UX check pending",
+    "No API29 runtime test",
+    "No system-revoke or notification-action device test in this phase"
+  ]
+}

@@ -56,22 +56,25 @@ internal data class MagnifierLayout(
             ?: nearest.firstOrNull { fits(!currentBottom, source, listOf(it.move, it.resize)) }
     }
     companion object {
+        const val CONTROL_DP = 48
+        const val BORDER_DP = 2
+        const val CHROME_DP = 96
         fun create(w: Int, h: Int, density: Float, safeTop: Int = 0, safeBottom: Int = 0): MagnifierLayout? {
             if (w <= 0 || h <= 0 || !density.isFinite() || density <= 0f) return null
             fun dp(n: Int) = (n * density).roundToInt().coerceAtLeast(1)
             val marginTop = maxOf(dp(32), safeTop); val marginBottom = maxOf(dp(32), safeBottom)
-            val chrome = dp(48) + 2 * dp(2); val grip = dp(48); val gap = dp(6); val hysteresis = dp(24)
+            val chrome = 2 * dp(CONTROL_DP) + 2 * dp(BORDER_DP); val grip = dp(CONTROL_DP); val gap = dp(6); val hysteresis = dp(24)
             val imageWidth = w - dp(24)
             val imageHeight = minOf(dp(144), (h - marginTop - marginBottom - 2 * chrome - grip - 3 * gap - 2 * hysteresis) / 3)
             val panelHeight = imageHeight + chrome
             val freeGap = h - marginTop - marginBottom - 2 * panelHeight
             val maxHeight = minOf(imageHeight, freeGap - grip - 3 * gap - 2 * hysteresis)
-            if (w < dp(80) + grip + gap || imageWidth < dp(48) || maxHeight < dp(32)) return null
+            if (imageWidth < 3 * dp(CONTROL_DP) + dp(56) || imageWidth < dp(48) || maxHeight < dp(32)) return null
             val panelWidth = imageWidth + 2 * dp(2)
             val x = (w - panelWidth) / 2
             return MagnifierLayout(w, h, imageWidth, imageHeight,
                 Box(x, marginTop, panelWidth, panelHeight), Box(x, h - marginBottom - panelHeight, panelWidth, panelHeight),
-                grip, dp(80), gap, hysteresis, dp(8), dp(48), dp(32), maxHeight)
+                grip, dp(CONTROL_DP), gap, hysteresis, dp(8), dp(48), dp(32), maxHeight)
         }
     }
 }

@@ -26,3 +26,9 @@ Gradle Wrapper由官方 Gradle8.13 wrapper task生成；Gradle、Kotlin及Androi
 取景框几何、手势和避让逻辑为KanDong自身实现；未复制其他项目代码。等比居中显示参考[ImageView.ScaleType.FIT_CENTER](https://developer.android.com/reference/android/widget/ImageView.ScaleType#FIT_CENTER)，原始屏幕指针坐标参考[MotionEvent](https://developer.android.com/reference/android/view/MotionEvent#getRawY(int))。实际倍率按显示像素与裁剪像素计算，须注意[Bitmap密度](https://developer.android.com/reference/android/graphics/Bitmap#setDensity(int))可能引入的绘制缩放。
 
 独立倍率滑杆与镜面滚动基于官方[SeekBar](https://developer.android.com/reference/android/widget/SeekBar)和[ImageView.ScaleType.MATRIX](https://developer.android.com/reference/android/widget/ImageView.ScaleType#MATRIX)；比例与滚动约束代码独立实现。此前FIT_CENTER引用为历史设计，当前不以填满镜面决定倍率。
+
+## 收起与日常界面
+
+收起/恢复参考官方[VirtualDisplay.setSurface](https://developer.android.com/reference/android/hardware/display/VirtualDisplay#setSurface(android.view.Surface))的null断开语义，恢复复用同一次虚拟显示；遵守[MediaProjection每次授权规则](https://developer.android.com/media/grow/media-projection#user-consent)。图标由本项目线条绘制，未复制外部图标库；点击区域及标签参考[Android无障碍Views建议](https://developer.android.com/guide/topics/ui/accessibility/views/apps-views)。
+
+API29安全区使用官方[WindowInsets stable insets与DisplayCutout](https://developer.android.com/reference/android/view/WindowInsets)合并系统栏和刘海边界，由本次授权Activity传入私有服务，未知时不按零处理。

@@ -35,3 +35,7 @@ Screen understanding → next action → semantic target → node resolver → �
 ## Phase 3 — Elder UX / TTS / Safety / Performance
 
 真实长辈可用性测试、朗读、高对比度、极简手势、敏感内容防护加强、本地优先、延迟/电池/内存测量。基础安全已从 Phase 0A 实施。Android13、不同 OEM、导航方式、折叠屏、TalkBack 共存需逐步扩展矩阵；不并行开做 iOS 或 HarmonyOS NEXT。
+
+## Phase0A日常体验完善
+
+兼容版先完善收起/恢复、可拖动贴边按钮、紧凑图标控制、精简首页和菜单。帮助/隐私本版可用；翻译、账号、订阅只明确预留，不在本阶段接入OCR、联网、登录或支付。恢复保留当前选区/倍率/镜面偏移；收起暂停处理，结束释放共享。设计与设备验收分别见[UX](UX.md)和[VALIDATION](VALIDATION.md)。

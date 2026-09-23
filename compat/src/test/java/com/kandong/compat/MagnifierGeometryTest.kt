@@ -83,7 +83,7 @@ class MagnifierGeometryTest {
     @Test fun activeMoveSideAndPointerStayFrozenAcrossBothPanelDirections() {
         for (below in listOf(true, false)) {
             val c = Box(90, if (below) 200 else 580, 150, 72)
-            val grip = Box(90, if (below) c.bottom + 6 else c.top - 54, 80, 48)
+            val grip = Box(90, if (below) c.bottom + 6 else c.top - 54, layout.moveWidth, layout.grip)
             val side = GripSide(below, true)
             val g = SourceGesture(GestureMode.MOVE, 9, side, c, grip, 130f, grip.top + 24f, layout)
             var bottom = below
@@ -99,7 +99,7 @@ class MagnifierGeometryTest {
     @Test fun screenReachableLongDragSnapsTopAndBottomOnlyOnUp() {
         for (below in listOf(true, false)) {
             val s = Box(90, if (below) 200 else 480, 150, 72)
-            val grip = Box(90, if (below) s.bottom + 6 else s.top - 54, 80, 48)
+            val grip = Box(90, if (below) s.bottom + 6 else s.top - 54, layout.moveWidth, layout.grip)
             val g = SourceGesture(GestureMode.MOVE, 1, GripSide(below, true), s, grip, 130f, grip.top + 24f, layout)
             val r = g.update(1, 1, 130f, if (below) 799f else 0f)
             assertTrue(r.grip.inside(360, 800)); assertFalse(r.grip.intersects(r.source))
@@ -111,12 +111,13 @@ class MagnifierGeometryTest {
         }
     }
     @Test fun horizontalOvershootAndCornerSnapUseScreenCoordinates() {
-        val s = Box(90, 200, 48, 72)
+        val s = Box(90, 200, layout.minWidth, 72)
         for (right in listOf(true, false)) {
-            // The wider move control can reach the screen before the narrow source.
-            val grip = Box(if (right) 90 else 58, 278, 80, 48)
+            // A displaced move control reaches the screen before the selected source.
+            val grip = Box(if (right) s.right - layout.moveWidth / 2 else s.left - layout.moveWidth / 2,
+                s.bottom + layout.gap, layout.moveWidth, layout.grip)
             val g = SourceGesture(GestureMode.MOVE, 1, GripSide(true, right), s, grip,
-                grip.left + 40f, grip.top + 24f, layout)
+                grip.left + layout.moveWidth / 2f, grip.top + 24f, layout)
             val r = g.update(1, 1, if (right) 359f else 0f, 799f)
             assertEquals(if (right) 1 else -1, r.snapX); assertEquals(1, r.snapY)
             assertTrue(r.grip.inside(360, 800))
@@ -127,7 +128,7 @@ class MagnifierGeometryTest {
     }
     @Test fun reverseCancelAndPointerLossClearPendingSnap() {
         fun moving(): SourceGesture {
-            val s = Box(90, 200, 150, 72); val grip = Box(90, 278, 80, 48)
+            val s = Box(90, 200, 150, 72); val grip = Box(90, 278, layout.moveWidth, layout.grip)
             return SourceGesture(GestureMode.MOVE, 3, GripSide(true, true), s, grip, 130f, 302f, layout)
         }
         val reverse = moving()
