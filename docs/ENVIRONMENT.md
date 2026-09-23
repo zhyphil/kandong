@@ -16,7 +16,7 @@
 | ADB | 37.0.1 | 显式调用 SDK platform-tools |
 | 设备 | 起始检查无手机或运行中的模拟器 | 新建 KanDong_Phase0_API36 |
 
-专用测试模拟器使用已有 `system-images;android-36;google_apis;arm64-v8a`，数据在 `/private/tmp/kandong-avd`，序列号 `emulator-5580`。未复用其他项目的模拟器或文件。屏幕配置为 1080×2400 / 420dpi。临时目录可能被系统清理；日后可在 Android Studio 建立自己的 KanDong AVD。
+专用测试模拟器使用已有 `system-images;android-36;google_apis;arm64-v8a`，数据在 `/private/tmp/kandong-avd`，序列号 `emulator-5580`。未复用其他项目的模拟器或文件。初始请求1080×2400，设备测试时实际查询为1080×1920 / 420dpi；以下运行证据以实际参数为准。临时目录可能被系统清理；日后可在 Android Studio 建立自己的 KanDong AVD。
 
 Gradle Wrapper 由本机官方 Gradle 8.13 的 wrapper task 生成，临时生成任务已成功。分发包 SHA-256：`20f1b1176237254a6fc204d8434196fa11a4cfb387567519c61556e8710aed78`，取自 [Gradle 官方校验文件](https://services.gradle.org/distributions/gradle-8.13-bin.zip.sha256)，写入 wrapper properties。项目实际编译及运行结果另见最终验证记录。
 

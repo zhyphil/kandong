@@ -52,11 +52,13 @@ APK：`app/build/outputs/apk/debug/app-debug.apk`。安装到自己选择的测�
 ~/Library/Android/sdk/platform-tools/adb -s DEVICE_SERIAL install -r fixture/build/outputs/apk/debug/fixture-debug.apk
 ```
 
-打开“看懂测试页”，读取后应框住“测试按钮”；计数保持0。亲自点该按钮才变为1，旧框随变化消失。再测候选切换、滚动、弹窗、键盘、移动面板、15秒过期和停止。自动设备测试要求已手动开启服务及安装 fixture：
+打开“看懂测试页”，读取后应框住“测试按钮”；计数保持0。亲自点该按钮才变为1，旧框随变化消失。再测候选切换、滚动、弹窗、键盘、移动面板、15秒过期和停止。自动设备测试使用专用模拟器，先在其系统设置中手动开启看懂服务，再运行：
 
 ```sh
-JAVA_HOME=$(/usr/libexec/java_home -v 17) ANDROID_SERIAL=DEVICE_SERIAL ./gradlew :app:connectedDebugAndroidTest
+./scripts/device-check.sh emulator-5580
 ```
+
+替换为自己的专用模拟器序列号。脚本拒绝实体手机，检查实际 JUnit 结果而不是仅看 adb 退出码。测试重启目标进程后，仅在显式测试参数下重绑已开启的服务；不会将此逻辑加入产品。`connectedDebugAndroidTest` 的安装/清理和 instrumentation 重启会影响绑定状态，优先用该脚本。真实手机按前述步骤人工验收。
 
 - [产品方向](docs/PRODUCT.md)、[架构](docs/ARCHITECTURE.md)、[安全边界](docs/SAFETY.md)
 - [MVP与下一阶段](docs/MVP.md)、[实际验证记录](docs/VALIDATION.md)、[环境检查](docs/ENVIRONMENT.md)

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">看懂</string>
+    <string name="service_name">看懂 · 只解释，不代操作</string>
+    <string name="service_description">您点击悬浮面板的“读取页面”后，看懂只读取当前应用可见的非输入、非密码节点，在内存中保留最多15秒，显示原标签和高亮边框。您自行决定并亲自点击。不会自动点击、输入、截图、联网或保存页面。静态敏感文字未必能识别；请勿在隐私或支付页面使用。可随时停止，再到系统设置关闭本服务。</string>
+</resources>

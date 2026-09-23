@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowStateChanged|typeWindowsChanged|typeWindowContentChanged|typeViewScrolled|typeViewTextChanged|typeViewTextSelectionChanged|typeViewClicked|typeViewSelected|typeViewFocused"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagRetrieveInteractiveWindows|flagReportViewIds"
+    android:canRetrieveWindowContent="true"
+    android:canPerformGestures="false"
+    android:canTakeScreenshot="false"
+    android:isAccessibilityTool="true"
+    android:notificationTimeout="0"
+    android:description="@string/service_description"
+    android:settingsActivity="com.kandong.app.MainActivity" />
