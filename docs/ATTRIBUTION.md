@@ -46,3 +46,7 @@ API29安全区使用官方[WindowInsets stable insets与DisplayCutout](https://d
 ## 启动后返回桌面
 
 成功启动后由前台Activity发出Android官方[ACTION_MAIN / CATEGORY_HOME](https://developer.android.com/reference/android/content/Intent#CATEGORY_HOME)导航，使用[ResultReceiver](https://developer.android.com/reference/android/os/ResultReceiver)接收本服务就绪结果。没有模拟点击或无障碍全局动作；LaunchHandoff的一次性/过期结果控制为本项目实现。
+
+## GPU C独立实验
+
+使用Android官方[EGL14](https://developer.android.com/reference/android/opengl/EGL14)、[GLES30](https://developer.android.com/reference/android/opengl/GLES30)和Khronos[precise规则](https://registry.khronos.org/OpenGL/extensions/EXT/EXT_gpu_shader5.txt)。着色器、CPU Float系数和测试均为项目内实现，数学公式沿用既有Mitchell归属；无第三方代码/模型/新运行时依赖，见[QUALITY_GPU](QUALITY_GPU.md)。

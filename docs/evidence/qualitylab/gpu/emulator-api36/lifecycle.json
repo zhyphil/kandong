@@ -1,0 +1,29 @@
+{
+  "api": 36,
+  "checks": [
+    {
+      "check": "background cancels active GPU suite and owner cleanup returns",
+      "passed": true
+    },
+    {
+      "check": "new Activity preview completes after old cancellation",
+      "passed": true
+    },
+    {
+      "check": "rotation during active suite: replacement report remains current",
+      "rotation": 1,
+      "passed": true
+    },
+    {
+      "check": "rotation during active suite: replacement report remains current",
+      "rotation": 0,
+      "passed": true
+    },
+    {
+      "check": "rotation during active suite: replacement report remains current",
+      "rotation": 1,
+      "passed": true
+    }
+  ],
+  "scope": "Dedicated emulator; no phone/system settings changed"
+}

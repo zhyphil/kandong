@@ -1,0 +1,35 @@
+{
+  "recordedAtUtc": "2026-09-23T20:51:12.726951+00:00",
+  "baseCommit": "3a2ac68",
+  "applicationId": "com.kandong.qualitylab",
+  "versionCode": 2,
+  "versionName": "0.0.2-gpu-experiment",
+  "apkSha256": "d53b02e8aee5f8728d4b7b609f768d8380bc7f68fe430d245c895f2533549f20",
+  "requestedPermissions": [],
+  "unitTests": 20,
+  "unitFailures": 0,
+  "lintErrors": 0,
+  "lintWarnings": 12,
+  "debugBuild": "passed",
+  "huaweiApi31": {
+    "numericalCases": 48,
+    "exactPixelMatches": 48,
+    "timingGate3and5": true,
+    "shaderPath": "precise-core-320"
+  },
+  "emulatorApi36": {
+    "numericalCases": 48,
+    "exactPixelMatches": 48,
+    "timingGate3and5": true,
+    "shaderPath": "standard-300",
+    "lifecycleChecks": 5
+  },
+  "humanFeedback": "User confirmed GPU C is equally clear and readable at3x",
+  "limits": [
+    "Synthetic opaque images and integer1/2/3/5 scales only",
+    "No compat integration yet",
+    "No real capture FPS, sustained heat/battery or all-OEM conclusion",
+    "GPU completion includes upload/driver/wait; readback+Bitmap separately included in steady-state total; setup/packing/UI/PNG excluded"
+  ],
+  "dataBoundary": "Only app-generated synthetic PNGs and numerical reports, no phone screenshots"
+}

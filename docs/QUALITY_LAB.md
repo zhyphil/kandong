@@ -88,3 +88,7 @@ adb -s <目标设备序列号> shell am start -n com.kandong.qualitylab/.Quality
 - Android官方[Paint.FILTER_BITMAP_FLAG](https://developer.android.com/reference/android/graphics/Paint#FILTER_BITMAP_FLAG)：双线性采样；它不能创造原图缺失的细节。
 - Mitchell, D. P. & Netravali, A. N. (1988), *Reconstruction Filters in Computer Graphics*, SIGGRAPH / Computer Graphics 22(4), 221–228，[原论文](https://www.cs.utexas.edu/~fussell/courses/cs384g-fall2013/lectures/mitchell/Mitchell.pdf)，公式(8)，参数B=C=1/3。只参考公开数学定义，未复制第三方实现、论文图像或模型。
 - 轻度锐化、样本文字、图标与对照界面为项目内实现。它们都是本机图像计算，不依赖外部服务；仍然存在计算与电池成本。
+
+## GPU后续验证
+
+独立[GPU C实验](QUALITY_GPU.md)已完成：目标华为/专用模拟器各48组逐像素一致，配对3/5倍短测通过；用户确认3倍同样清楚、好读。正式镜面接入为下一阶段。

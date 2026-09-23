@@ -1,0 +1,15 @@
+{
+  "recordedAtUtc": "2026-09-23T20:45:32.098354+00:00",
+  "model": "LIO-AN00",
+  "api": 31,
+  "checks": [
+    "Fresh completed GPU report from fixed self-test action",
+    "Explicit application self-test action; no screen touches or UI extraction",
+    "Only app-generated fixed synthetic images and numerical report retrieved"
+  ],
+  "limits": [
+    "No real screen contents captured",
+    "Not sustained heat/battery test",
+    "Not production magnifier frame timing"
+  ]
+}

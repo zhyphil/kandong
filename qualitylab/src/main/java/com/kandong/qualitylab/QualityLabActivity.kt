@@ -1,6 +1,7 @@
 package com.kandong.qualitylab
 
 import android.app.Activity
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Color
@@ -65,6 +66,10 @@ class QualityLabActivity : Activity() {
             setPadding(dp(16), dp(18), dp(16), dp(24))
         }
         content.addView(label("本机画质对照", 26f))
+        content.addView(Button(this).apply {
+            text = "独立 GPU C 实验（未接入放大镜）"
+            setOnClickListener { startActivity(Intent(this@QualityLabActivity, GpuLabActivity::class.java)) }
+        })
         content.addView(label("同一张小字图片，比较边缘、笔画和白边。\n全部在手机处理，不联网，也不读取你的屏幕。", 16f))
         val controls = LinearLayout(this)
         for (value in listOf(2, 3, 5)) {
