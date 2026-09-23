@@ -1,0 +1,118 @@
+{
+  "date": "2026-09-23",
+  "device": "HUAWEI LIO-AN00",
+  "androidApi": 31,
+  "scope": "Synthetic fixture and KanDong controls; ADB test input, not product automation; no screen content or device serial stored.",
+  "checks": [
+    {
+      "check": "initial",
+      "layout": "fdd10cfe1a98f70037e0a172",
+      "clicks": 0
+    },
+    {
+      "check": "initial_windows",
+      "看懂取景拖动柄": [
+        113,
+        834,
+        580,
+        994
+      ],
+      "看懂取景边框": [
+        62,
+        1004,
+        630,
+        1291
+      ],
+      "看懂放大显示窗": [
+        33,
+        1427,
+        1142,
+        2294
+      ]
+    },
+    {
+      "check": "2x",
+      "outline": [
+        62,
+        1004,
+        630,
+        1291
+      ],
+      "source_size": [
+        548,
+        267
+      ]
+    },
+    {
+      "check": "3x",
+      "outline": [
+        154,
+        1048,
+        539,
+        1246
+      ],
+      "source_size": [
+        365,
+        178
+      ]
+    },
+    {
+      "check": "4x",
+      "outline": [
+        199,
+        1071,
+        493,
+        1224
+      ],
+      "source_size": [
+        274,
+        133
+      ]
+    },
+    {
+      "check": "scales_leave_layout_and_clicks_unchanged",
+      "layout": "fdd10cfe1a98f70037e0a172",
+      "clicks": 0
+    },
+    {
+      "check": "source_after_drag",
+      "看懂取景拖动柄": [
+        113,
+        808,
+        580,
+        968
+      ],
+      "看懂取景边框": [
+        62,
+        978,
+        630,
+        1265
+      ],
+      "看懂放大显示窗": [
+        33,
+        1427,
+        1142,
+        2294
+      ]
+    },
+    {
+      "check": "drag_does_not_click",
+      "layout": "fdd10cfe1a98f70037e0a172",
+      "clicks": 0
+    },
+    {
+      "check": "touch_through_source",
+      "layout": "fdd10cfe1a98f70037e0a172",
+      "clicks": 1
+    },
+    {
+      "check": "stop_releases_projection_service_and_windows",
+      "passed": true
+    },
+    {
+      "check": "after_stop_layout",
+      "layout": "fdd10cfe1a98f70037e0a172",
+      "clicks": 1
+    }
+  ]
+}
