@@ -186,8 +186,8 @@ class ProjectionMagnifierService : Service() {
         val paused = !uiState.capturing
         val notification = Notification.Builder(this, "magnifier").setSmallIcon(R.drawable.ic_magnifier)
             .setContentTitle(if(paused) "看懂已暂停画面采集" else "看懂正在本机放大屏幕")
-            .setContentText(if(paused) "屏幕共享会话仍保留，可恢复或结束共享" else "点开看懂可收起或结束共享")
-            .setContentIntent(open).addAction(Notification.Action.Builder(null,"结束共享",stop).build()).setOngoing(true).build()
+            .setContentText(if(paused) "屏幕共享会话仍保留，可恢复或关闭放大镜" else "点开看懂可收起或关闭放大镜")
+            .setContentIntent(open).addAction(Notification.Action.Builder(null,"关闭放大镜",stop).build()).setOngoing(true).build()
         startForeground(1, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION)
     }
     private fun awaitFrame() {
@@ -248,7 +248,7 @@ class ProjectionMagnifierService : Service() {
                 override fun onInitializeAccessibilityNodeInfo(host: View, info: android.view.accessibility.AccessibilityNodeInfo) {
                     super.onInitializeAccessibilityNodeInfo(host,info)
                     info.addAction(android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction(0x01020001,"打开菜单"))
-                    info.addAction(android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction(0x01020002,"结束共享"))
+                    info.addAction(android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction(0x01020002,"关闭放大镜"))
                 }
                 override fun performAccessibilityAction(host: View, action: Int, args: Bundle?): Boolean = when(action) {
                     0x01020001 -> { transition { uiState.menu() }; true }
@@ -349,7 +349,7 @@ class ProjectionMagnifierService : Service() {
         message=TextView(this).apply { textSize=14f; setTextColor(Color.WHITE); gravity=Gravity.CENTER; maxLines=2 }
             .also { header.addView(it,LinearLayout.LayoutParams(0,-1,1f)) }
         tool(LineIcon.COLLAPSE,"收起放大镜","收起") { transition { uiState.collapse() } }
-        tool(LineIcon.END,"结束共享","关闭") { endSession() }
+        tool(LineIcon.END,"关闭放大镜","关闭") { endSession() }
         imageView = ImageView(this).apply {
             setBackgroundColor(Color.WHITE); scaleType = ImageView.ScaleType.MATRIX
             contentDescription = "取景框区域的原文放大画面；可在画面内滑动查看"

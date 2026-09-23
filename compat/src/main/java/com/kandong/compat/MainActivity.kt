@@ -65,7 +65,7 @@ class MainActivity : Activity() {
                 }
             }
         }.also { body.addView(it,LinearLayout.LayoutParams(-1,-2)) }
-        end=CompatUi.button(this,"结束共享") { command(ProjectionMagnifierService.ACTION_STOP) }
+        end=CompatUi.button(this,"关闭放大镜") { command(ProjectionMagnifierService.ACTION_STOP) }
             .also { body.addView(it,LinearLayout.LayoutParams(-1,-2).apply { topMargin=dp(12) }) }
         body.addView(CompatUi.button(this,"使用帮助") { openMenu("使用帮助") },LinearLayout.LayoutParams(-1,-2).apply { topMargin=dp(24) })
         val scroll=ScrollView(this).apply { setBackgroundColor(CompatUi.background); isFillViewport=true; addView(body) }
@@ -95,7 +95,21 @@ class MainActivity : Activity() {
         dialog?.dismiss()
         dialog=AlertDialog.Builder(this).create().apply {
             setView(CompatUi.menu(this@MainActivity,page,{dismiss()},{openMenu(it)},null))
+            setOnKeyListener { _, key, event ->
+                if(Build.VERSION.SDK_INT < 33 && page != null && key == KeyEvent.KEYCODE_BACK) {
+                    if(event.action == KeyEvent.ACTION_UP && isShowing && dialog === this) openMenu(null)
+                    true
+                } else false
+            }
             show(); window?.addFlags(WindowManager.LayoutParams.FLAG_SECURE)
+            if(Build.VERSION.SDK_INT >= 33 && page != null) {
+                val dispatcher=onBackInvokedDispatcher
+                val callback=android.window.OnBackInvokedCallback {
+                    if(isShowing && dialog === this) openMenu(null)
+                }
+                dispatcher.registerOnBackInvokedCallback(android.window.OnBackInvokedDispatcher.PRIORITY_DEFAULT,callback)
+                setOnDismissListener { dispatcher.unregisterOnBackInvokedCallback(callback) }
+            }
             window?.setLayout(minOf(dp(360),resources.displayMetrics.widthPixels-dp(32)),(resources.displayMetrics.heightPixels*.8f).toInt())
         }
     }

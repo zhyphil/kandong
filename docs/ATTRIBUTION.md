@@ -32,3 +32,5 @@ Gradle Wrapper由官方 Gradle8.13 wrapper task生成；Gradle、Kotlin及Androi
 收起/恢复参考官方[VirtualDisplay.setSurface](https://developer.android.com/reference/android/hardware/display/VirtualDisplay#setSurface(android.view.Surface))的null断开语义，恢复复用同一次虚拟显示；遵守[MediaProjection每次授权规则](https://developer.android.com/media/grow/media-projection#user-consent)。图标由本项目线条绘制，未复制外部图标库；点击区域及标签参考[Android无障碍Views建议](https://developer.android.com/guide/topics/ui/accessibility/views/apps-views)。
 
 API29安全区使用官方[WindowInsets stable insets与DisplayCutout](https://developer.android.com/reference/android/view/WindowInsets)合并系统栏和刘海边界，由本次授权Activity传入私有服务，未知时不按零处理。
+
+菜单二级页返回使用[Dialog的OnBackInvokedDispatcher](https://developer.android.com/reference/android/app/Dialog#getOnBackInvokedDispatcher())处理API33+系统返回，旧版本保留返回键处理；关闭对话框注销回调，迟到回调不重建页面。

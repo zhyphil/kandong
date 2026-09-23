@@ -1,0 +1,241 @@
+{
+  "device": "KanDong_Phase0_API36 dedicated emulator",
+  "api": 36,
+  "scope": "menu navigation and session-close labeling",
+  "checks": [
+    {
+      "check": "home_help_header_back",
+      "title": "使用帮助",
+      "back": [
+        130,
+        255,
+        256,
+        381
+      ],
+      "close": [
+        823,
+        255,
+        949,
+        381
+      ],
+      "footerActions": []
+    },
+    {
+      "check": "home_privacy_system_back",
+      "title": "隐私说明",
+      "back": [
+        130,
+        255,
+        256,
+        381
+      ],
+      "close": [
+        823,
+        255,
+        949,
+        381
+      ],
+      "footerActions": []
+    },
+    {
+      "check": "overlay_help_scroll_keeps_header_and_pauses",
+      "title": "使用帮助",
+      "back": [
+        141,
+        246,
+        267,
+        372
+      ],
+      "close": [
+        813,
+        246,
+        939,
+        372
+      ],
+      "footerActions": []
+    },
+    {
+      "check": "subpage_close_restores_expanded",
+      "state": {
+        "uiState": "EXPANDED",
+        "returnTo": "EXPANDED",
+        "surfaceAttached": "true",
+        "capturing": "true",
+        "menuPage": "隐私说明",
+        "terminal": "false",
+        "copyAttempts": 3,
+        "virtualDisplayCreates": 1,
+        "renderedFrames": 3,
+        "expandedWindows": 4,
+        "bubble": null,
+        "menu": null,
+        "safeArea": [
+          0,
+          63,
+          1080,
+          1794
+        ],
+        "crop": [
+          286,
+          537,
+          508,
+          154
+        ],
+        "move": [
+          526,
+          707,
+          126,
+          126
+        ],
+        "resize": [
+          668,
+          707,
+          126,
+          126
+        ],
+        "bitmap": [
+          508,
+          154
+        ],
+        "viewport": [
+          1017,
+          309
+        ],
+        "pan": [
+          0.0,
+          0.0
+        ],
+        "maxPan": [
+          0.0,
+          0.0
+        ],
+        "matrixScale": [
+          2.0,
+          2.0
+        ],
+        "scale": 2.0,
+        "bottom": true,
+        "available": true,
+        "tools": {
+          "打开菜单": [
+            31,
+            1270,
+            126,
+            126
+          ],
+          "收起放大镜": [
+            796,
+            1270,
+            126,
+            126
+          ],
+          "关闭放大镜": [
+            922,
+            1270,
+            126,
+            126
+          ]
+        },
+        "slider": [
+          178,
+          1705,
+          870,
+          126
+        ],
+        "progress": 100
+      },
+      "header": {
+        "title": "隐私说明",
+        "back": [
+          141,
+          246,
+          267,
+          372
+        ],
+        "close": [
+          813,
+          246,
+          939,
+          372
+        ],
+        "footerActions": []
+      }
+    },
+    {
+      "check": "subpage_back_and_close_preserve_collapsed",
+      "uiState": "COLLAPSED",
+      "returnTo": "COLLAPSED",
+      "surfaceAttached": "false",
+      "capturing": "false",
+      "menuPage": "root",
+      "terminal": "false",
+      "copyAttempts": 3,
+      "virtualDisplayCreates": 1,
+      "renderedFrames": 3,
+      "expandedWindows": 0,
+      "bubble": [
+        922,
+        960,
+        147,
+        147
+      ],
+      "menu": null,
+      "safeArea": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "crop": [
+        286,
+        537,
+        508,
+        154
+      ],
+      "move": [
+        526,
+        707,
+        126,
+        126
+      ],
+      "resize": [
+        668,
+        707,
+        126,
+        126
+      ],
+      "bitmap": [
+        0,
+        0
+      ],
+      "viewport": [
+        0,
+        0
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        0.0,
+        0.0
+      ],
+      "matrixScale": [
+        0.0,
+        0.0
+      ],
+      "scale": 2.0,
+      "bottom": true,
+      "available": true,
+      "tools": {}
+    },
+    {
+      "check": "main_menu_close_magnifier_stops_projection_and_windows",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "Protected overlay visual quality requires human device check",
+    "API31 hardware Back branch not retested by automation"
+  ]
+}
