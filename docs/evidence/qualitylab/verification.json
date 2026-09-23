@@ -1,0 +1,251 @@
+{
+  "device": "KanDong_Phase0_API36",
+  "api": 36,
+  "displayPixels": [
+    1080,
+    1920
+  ],
+  "densityDpi": 420,
+  "source": "Fixed synthetic Chinese text only",
+  "checks": [
+    "launch without permissions",
+    "nonzero image views with visible text",
+    "2x/3x/5x outputs and 9-round CPU benchmark",
+    "latest generation wins",
+    "confirmed STOPPED then return/regenerate",
+    "all comparison cards reachable",
+    "5x horizontal pan with before/after screenshots"
+  ],
+  "reports": [
+    {
+      "model": "sdk_gphone64_arm64",
+      "api": 36,
+      "scale": 2,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "warmupsPerVariant": 2,
+      "rounds": 9,
+      "variants": [
+        {
+          "variant": 0,
+          "name": "A · 当前平滑",
+          "samplesMs": [
+            0.597334,
+            0.6315,
+            0.585875,
+            0.863583,
+            0.616458,
+            0.821834,
+            0.583375,
+            0.66975,
+            0.871708
+          ],
+          "medianMs": 0.6315,
+          "p95Ms": 0.871708
+        },
+        {
+          "variant": 1,
+          "name": "B · 精细平滑",
+          "samplesMs": [
+            20.807834,
+            20.648042,
+            20.72225,
+            20.190583,
+            21.394916,
+            21.640542,
+            19.98825,
+            19.620791,
+            20.745
+          ],
+          "medianMs": 20.72225,
+          "p95Ms": 21.640542
+        },
+        {
+          "variant": 2,
+          "name": "C · 平滑 + 轻度锐化",
+          "samplesMs": [
+            29.96075,
+            30.270916,
+            30.54775,
+            31.181625,
+            30.058208,
+            31.82575,
+            31.526041,
+            30.471084,
+            30.207166
+          ],
+          "medianMs": 30.471084,
+          "p95Ms": 31.82575
+        }
+      ],
+      "scope": "CPU render + output bitmap allocation only. Excludes capture, UI, PNG export. Not overlay FPS or battery."
+    },
+    {
+      "model": "sdk_gphone64_arm64",
+      "api": 36,
+      "scale": 3,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "warmupsPerVariant": 2,
+      "rounds": 9,
+      "variants": [
+        {
+          "variant": 0,
+          "name": "A · 当前平滑",
+          "samplesMs": [
+            1.261792,
+            1.220333,
+            1.256833,
+            1.321333,
+            1.247875,
+            1.366375,
+            1.201958,
+            1.501917,
+            1.1605
+          ],
+          "medianMs": 1.256833,
+          "p95Ms": 1.501917
+        },
+        {
+          "variant": 1,
+          "name": "B · 精细平滑",
+          "samplesMs": [
+            43.487875,
+            42.046583,
+            41.738834,
+            41.199501,
+            44.06575,
+            41.576625,
+            39.702,
+            39.961666,
+            42.773709
+          ],
+          "medianMs": 41.738834,
+          "p95Ms": 44.06575
+        },
+        {
+          "variant": 2,
+          "name": "C · 平滑 + 轻度锐化",
+          "samplesMs": [
+            53.587416,
+            50.815334,
+            50.602792,
+            52.554209,
+            51.038459,
+            53.696875,
+            50.03975,
+            49.228625,
+            51.287041
+          ],
+          "medianMs": 51.038459,
+          "p95Ms": 53.696875
+        }
+      ],
+      "scope": "CPU render + output bitmap allocation only. Excludes capture, UI, PNG export. Not overlay FPS or battery."
+    },
+    {
+      "model": "sdk_gphone64_arm64",
+      "api": 36,
+      "scale": 5,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "warmupsPerVariant": 2,
+      "rounds": 9,
+      "variants": [
+        {
+          "variant": 0,
+          "name": "A · 当前平滑",
+          "samplesMs": [
+            3.764958,
+            3.63875,
+            3.642875,
+            3.615708,
+            3.675959,
+            3.936542,
+            3.71375,
+            3.352583,
+            3.362292
+          ],
+          "medianMs": 3.642875,
+          "p95Ms": 3.936542
+        },
+        {
+          "variant": 1,
+          "name": "B · 精细平滑",
+          "samplesMs": [
+            106.986458,
+            105.735417,
+            103.293208,
+            104.24975,
+            106.003291,
+            105.864625,
+            107.78575,
+            104.191291,
+            102.154625
+          ],
+          "medianMs": 105.735417,
+          "p95Ms": 107.78575
+        },
+        {
+          "variant": 2,
+          "name": "C · 平滑 + 轻度锐化",
+          "samplesMs": [
+            116.528667,
+            116.614917,
+            114.962417,
+            111.353667,
+            113.607083,
+            114.212833,
+            115.685333,
+            113.436542,
+            114.039959
+          ],
+          "medianMs": 114.212833,
+          "p95Ms": 116.614917
+        }
+      ],
+      "scope": "CPU render + output bitmap allocation only. Excludes capture, UI, PNG export. Not overlay FPS or battery."
+    }
+  ],
+  "testCorrections": [
+    "Use dumpsys window (not window windows) to find mCurrentFocus on this emulator",
+    "Initial Home->immediate return happened during system animation; confirmed actual STOPPED before checking pause"
+  ],
+  "limits": [
+    "emulator only",
+    "CPU render+bitmap allocation; not GPU overlay FPS",
+    "no Huawei readability/heat/battery result",
+    "short measurements; P95 is largest of nine samples"
+  ],
+  "recordedAtUtc": "2026-09-23T19:35:24.786271+00:00",
+  "validation": {
+    "command": "./scripts/check.sh --offline",
+    "success": true,
+    "unitTests": {
+      "qualitylab": 7,
+      "compat": 41,
+      "app": 29
+    },
+    "qualitylabLint": {
+      "errors": 0,
+      "warnings": [
+        "OldTargetApi",
+        "DataExtractionRules",
+        "SetTextI18n",
+        "SetTextI18n"
+      ]
+    },
+    "requestedPermissions": []
+  },
+  "apkSha256": "108cef68c1656e0e3a9c3b6d29ee675c3c9df9a9f3f48ff3221ae8d8f50ebb0b",
+  "imagesSha256": {
+    "comparison-2x.png": "b7cd8ebd16ed35e041c04ad33491b3d85b796d17d9120287f4b47012d69a7fcf",
+    "comparison-3x.png": "2175394157488cda0db070d08fcc4dfb2fd3994dfe68a1b820f53935c2affe3e",
+    "comparison-5x.png": "d60ac0198f1b55a5e67f8c739f89e15c9b3f37e2d9661b2147878258f7e95192",
+    "lab-home.png": "6ddda2ef579daa50f836b037444919483f5c9b370943a5773b3241c48c07ca1c",
+    "lab-last-card.png": "cff4ac1c37082777c931f69d5d30a4a97744b41bcdc726f2a0fdd88527251735",
+    "lab-pan-after.png": "c8d6f7e8c185265eae6fed89d760092dde3f36def1bc948158cb745eb4ac7246",
+    "lab-pan-before.png": "b4e4ceb7781ee38e77a59f7f47de7c9df4667ec76d6db5bf645c11d969facfe2",
+    "synthetic-source.png": "b804df05deb7670d8356eb056c01180a2fba6ac09f579096d1234f28e17a491c"
+  }
+}

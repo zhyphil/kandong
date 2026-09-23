@@ -12,6 +12,7 @@
 | --- | --- | --- | --- |
 | `app` | 官方 Window Magnification + MagnificationController | Android13/API33+，设备支持窗口放大；用户开启无障碍服务 | 专用 API36 模拟器；真机兼容性逐机验证 |
 | `compat` | 当前发布产品；屏幕共享 → 本机局部裁剪 → 放大显示 | Android10/API29+；悬浮窗 + 每次屏幕共享授权；无需无障碍 | 当前目标华为 LIO-AN00，Android12/API31 |
+| `qualitylab` | 独立本机画质对照：固定中文样本，平滑/锐化与处理耗时 | API29+，无权限、无联网，不进入正式放大镜 | [实验说明与证据](docs/QUALITY_LAB.md)，真机待测 |
 | `fixture` | 独立合成页，网格/小字/点击计数/自身布局指纹 | 本地测试应用，无真实个人资料 | 验证倍率、原布局与手动点击 |
 
 此前验证的两台华为分别为 HMA-L29（Android10/API29）和 LIO-AN00（Android12/API31）；都不支持当前官方窗口控制路线。**目标机已切换为 LIO-AN00**。不能把 EMUI 版本当 Android API 版本，不能只降低 minSdk 就声称官方路线可运行。

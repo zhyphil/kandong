@@ -38,3 +38,7 @@ API29安全区使用官方[WindowInsets stable insets与DisplayCutout](https://d
 ## 红框直接操作与双指缩放
 
 双指识别使用官方[ScaleGestureDetector](https://developer.android.com/reference/android/view/ScaleGestureDetector)，传入完整事件序列，以focusX/focusY作为局部缩放焦点；指针切换遵循[MotionEvent](https://developer.android.com/reference/android/view/MotionEvent)的pointerId/actionIndex。几何、焦点保持、滑杆同步和线条图标均独立实现，无新增第三方依赖。
+
+## 本机画质对照实验
+
+独立qualitylab使用Android官方[Paint位图过滤](https://developer.android.com/reference/android/graphics/Paint#FILTER_BITMAP_FLAG)作基准。精细插值独立实现自Mitchell与Netravali的[1988年原论文](https://www.cs.utexas.edu/~fussell/courses/cs384g-fall2013/lectures/mitchell/Mitchell.pdf)公式(8)，B=C=1/3；未复制论文图像或第三方源码。轻度锐化、合成输入、图标和实验界面在本项目编写，无新运行时依赖。范围、数据与限制见[QUALITY_LAB](QUALITY_LAB.md)。
