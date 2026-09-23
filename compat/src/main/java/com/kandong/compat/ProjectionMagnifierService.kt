@@ -294,18 +294,18 @@ class ProjectionMagnifierService : Service() {
                 if(event.keyCode == KeyEvent.KEYCODE_BACK) { if(event.action == KeyEvent.ACTION_UP) menuBack(); return true }
                 return super.dispatchKeyEvent(event)
             }
-            override fun onTouchEvent(event: MotionEvent): Boolean {
-                if(event.action == MotionEvent.ACTION_OUTSIDE) { menuBack(); return true }
-                return super.onTouchEvent(event)
-            }
+        }.apply {
+            setBackgroundColor(CompatUi.background)
+            setPadding(safeArea.left,safeArea.top,screenWidth-safeArea.right,screenHeight-safeArea.bottom)
+            isClickable=true // The full-screen menu owns its blank areas too.
         }
         wrapper.addView(CompatUi.menu(this,menuPage,{ transition { uiState.closeMenu() } },{ page ->
             if (canHandleMenu()) { menuPage=page; try { showMenu() } catch(_:RuntimeException) { endSession() } }
-        },{endSession()}))
-        val width=minOf(dp(320),safeArea.width-dp(32))
-        val p=params(width,minOf(dp(560),safeArea.height-dp(32)),true).apply {
-            flags=flags and WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE.inv() or WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH
-            x=safeArea.left+(safeArea.width-width)/2; y=safeArea.top+(safeArea.height-height)/2; title="看懂菜单"
+        },{endSession()}),FrameLayout.LayoutParams(-1,-1))
+        val p=params(screenWidth,screenHeight,true).apply {
+            flags=flags and WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE.inv() and
+                WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL.inv()
+            x=0; y=0; title="看懂菜单"
         }
         wrapper.addOnAttachStateChangeListener(object : View.OnAttachStateChangeListener {
             override fun onViewAttachedToWindow(view: View) {

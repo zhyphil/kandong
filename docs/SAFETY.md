@@ -34,3 +34,5 @@
 基础隐私、授权、停止和保守失败现在实施；Phase3加强识别、长辈UX、TTS及性能。商店发布仍需真实用途声明和审查。`isAccessibilityTool=true` 仅适用于帮助残障用户，不能当审核保证。[Google Play政策](https://support.google.com/googleplay/android-developer/answer/10964491?hl=en)、[MediaProjection官方授权规则](https://developer.android.com/media/grow/media-projection)
 
 兼容版取景边框虽然内部透明，Android12按整个窗口alpha判断跨UID触摸。已将边框window alpha设为不高于系统`maximumObscuringOpacityForTouch`的值，未关闭系统触摸保护；模拟器实际穿透回归通过。手机及拒绝遮挡触摸的App仍需逐项验证。[Android12官方触摸规则](https://developer.android.com/about/versions/12/behavior-changes-all#untrusted-touch-events)
+
+全屏菜单仅在用户主动打开时接管其覆盖区域的触摸，暂停画面处理。关闭菜单移除整个窗口并恢复原状态；结束本次放大则释放全部共享与窗口，不留透明触摸遮挡。

@@ -111,7 +111,7 @@ internal object CompatUi {
         } else body.addView(text(c,if(page=="使用帮助") help else privacy))
 
         return LinearLayout(c).apply {
-            orientation=LinearLayout.VERTICAL; background=shape(c,CompatUi.background)
+            orientation=LinearLayout.VERTICAL; setBackgroundColor(CompatUi.background)
             addView(header,LinearLayout.LayoutParams(-1,-2))
             addView(ScrollView(c).apply { addView(body) },LinearLayout.LayoutParams(-1,0,1f))
             // Session actions belong to the main menu, never to informational subpages.

@@ -16,7 +16,7 @@ class MainActivity : Activity() {
     private lateinit var primary: Button
     private lateinit var end: Button
     private var snapshot = SessionSnapshot()
-    private var dialog: AlertDialog? = null
+    private var dialog: Dialog? = null
     private var requesting = false
     private val listener: (SessionSnapshot) -> Unit = { next ->
         val ended = snapshot.id != null && next.id == null
@@ -93,15 +93,50 @@ class MainActivity : Activity() {
     private fun openMenu(page: String?) {
         if(snapshot.id!=null) { command(ProjectionMagnifierService.ACTION_MENU); return }
         dialog?.dismiss()
-        dialog=AlertDialog.Builder(this).create().apply {
-            setView(CompatUi.menu(this@MainActivity,page,{dismiss()},{openMenu(it)},null))
+        dialog=Dialog(this,android.R.style.Theme_Material_Light_NoActionBar).apply {
+            val content=FrameLayout(this@MainActivity).apply {
+                setBackgroundColor(CompatUi.background)
+                addView(CompatUi.menu(this@MainActivity,page,{dismiss()},{openMenu(it)},null),
+                    FrameLayout.LayoutParams(-1,-1))
+                setOnApplyWindowInsetsListener { view,insets ->
+                    if(Build.VERSION.SDK_INT >= 30) {
+                        val safe=insets.getInsetsIgnoringVisibility(WindowInsets.Type.systemBars() or WindowInsets.Type.displayCutout())
+                        view.setPadding(safe.left,safe.top,safe.right,safe.bottom)
+                    } else {
+                        @Suppress("DEPRECATION") val bars=insets.stableInsets
+                        val cutout=insets.displayCutout
+                        view.setPadding(maxOf(bars.left,cutout?.safeInsetLeft ?: 0),maxOf(bars.top,cutout?.safeInsetTop ?: 0),
+                            maxOf(bars.right,cutout?.safeInsetRight ?: 0),maxOf(bars.bottom,cutout?.safeInsetBottom ?: 0))
+                    }
+                    insets
+                }
+            }
+            setContentView(content)
+            setCanceledOnTouchOutside(false)
+            window?.apply {
+                addFlags(WindowManager.LayoutParams.FLAG_SECURE)
+                clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
+                setBackgroundDrawable(android.graphics.drawable.ColorDrawable(CompatUi.background))
+                attributes=attributes.apply {
+                    title="看懂全屏菜单"
+                    layoutInDisplayCutoutMode=WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
+                }
+                if(Build.VERSION.SDK_INT >= 30) setDecorFitsSystemWindows(false)
+                @Suppress("DEPRECATION")
+                decorView.systemUiVisibility=View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
+                    View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
+                @Suppress("DEPRECATION")
+                statusBarColor=CompatUi.background
+                @Suppress("DEPRECATION")
+                navigationBarColor=CompatUi.background
+            }
             setOnKeyListener { _, key, event ->
                 if(Build.VERSION.SDK_INT < 33 && page != null && key == KeyEvent.KEYCODE_BACK) {
                     if(event.action == KeyEvent.ACTION_UP && isShowing && dialog === this) openMenu(null)
                     true
                 } else false
             }
-            show(); window?.addFlags(WindowManager.LayoutParams.FLAG_SECURE)
+            show(); content.requestApplyInsets()
             if(Build.VERSION.SDK_INT >= 33 && page != null) {
                 val dispatcher=onBackInvokedDispatcher
                 val callback=android.window.OnBackInvokedCallback {
@@ -110,7 +145,7 @@ class MainActivity : Activity() {
                 dispatcher.registerOnBackInvokedCallback(android.window.OnBackInvokedDispatcher.PRIORITY_DEFAULT,callback)
                 setOnDismissListener { dispatcher.unregisterOnBackInvokedCallback(callback) }
             }
-            window?.setLayout(minOf(dp(360),resources.displayMetrics.widthPixels-dp(32)),(resources.displayMetrics.heightPixels*.8f).toInt())
+            window?.setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.MATCH_PARENT)
         }
     }
     override fun onStart() { super.onStart(); SessionBridge.add(listener) }

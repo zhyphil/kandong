@@ -1,0 +1,94 @@
+{
+  "device": "KanDong_Phase0_API36 dedicated emulator",
+  "api": 36,
+  "scope": "full-screen menu layout and navigation",
+  "displayPx": [
+    1080,
+    1920
+  ],
+  "safeAreaXYWH": [
+    0,
+    63,
+    1080,
+    1794
+  ],
+  "checks": [
+    {
+      "check": "home_root_and_subpages_fill_display",
+      "frame": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "safeHeader": {
+        "back": [
+          21,
+          84,
+          147,
+          210
+        ],
+        "close": [
+          933,
+          84,
+          1059,
+          210
+        ]
+      },
+      "systemBackAndClose": true
+    },
+    {
+      "check": "expanded_fullscreen_menu_pauses_blocks_underlying_and_restores",
+      "menuFrame": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "safeHeader": {
+        "back": [
+          21,
+          84,
+          147,
+          210
+        ],
+        "close": [
+          933,
+          84,
+          1059,
+          210
+        ]
+      },
+      "retained": {
+        "crop": [
+          286,
+          537,
+          508,
+          154
+        ],
+        "scale": 2.6399999,
+        "pan": [
+          162.05994,
+          48.779984
+        ],
+        "bottom": true,
+        "progress": 164
+      },
+      "underlyingFixtureUnchanged": true
+    },
+    {
+      "check": "fullscreen_menu_returns_to_bubble",
+      "passed": true,
+      "retainedScale": 2.6399999
+    },
+    {
+      "check": "fullscreen_menu_end_clears_all",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "Secure menu visual quality requires human device inspection",
+    "API31 target installation succeeded; full-screen visual acceptance pending",
+    "No new API29 runtime or large-font/TalkBack validation"
+  ]
+}
