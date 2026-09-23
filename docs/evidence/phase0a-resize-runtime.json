@@ -1,0 +1,720 @@
+{
+  "date": "2026-09-23",
+  "emulator": "KanDong_Phase0_API36",
+  "scope": "Synthetic fixture only; no screen content, account details or device serial stored. Debug-only geometry/frame-count diagnostics.",
+  "interactionChecks": [
+    {
+      "check": "initial_fixture",
+      "layout": "KANDONG_LAYOUT:f5d7c5e9796f57da464b2a35",
+      "clicks": 0,
+      "button": [
+        42,
+        816,
+        1038,
+        942
+      ]
+    },
+    {
+      "check": "initial_runtime",
+      "crop": [
+        286,
+        520,
+        508,
+        189
+      ],
+      "move": [
+        442,
+        725,
+        210,
+        126
+      ],
+      "resize": [
+        668,
+        725,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 152,
+      "bitmap": [
+        508,
+        189
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 2.0
+    },
+    {
+      "check": "width_only_nonpreset",
+      "crop": [
+        286,
+        520,
+        645,
+        189
+      ],
+      "move": [
+        579,
+        725,
+        210,
+        126
+      ],
+      "resize": [
+        805,
+        725,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 158,
+      "bitmap": [
+        645,
+        189
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 1.5767442
+    },
+    {
+      "check": "height_only_nonpreset",
+      "crop": [
+        286,
+        520,
+        645,
+        272
+      ],
+      "move": [
+        579,
+        808,
+        210,
+        126
+      ],
+      "resize": [
+        805,
+        808,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 164,
+      "bitmap": [
+        645,
+        272
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 1.3897059
+    },
+    {
+      "check": "shrink_free_rectangle",
+      "crop": [
+        286,
+        520,
+        370,
+        160
+      ],
+      "move": [
+        304,
+        696,
+        210,
+        126
+      ],
+      "resize": [
+        530,
+        696,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 170,
+      "bitmap": [
+        370,
+        160
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 2.3625
+    },
+    {
+      "check": "cross_midline_display_automatically_above",
+      "crop": [
+        286,
+        1420,
+        370,
+        160
+      ],
+      "move": [
+        304,
+        1278,
+        210,
+        126
+      ],
+      "resize": [
+        530,
+        1278,
+        126,
+        126
+      ],
+      "bottom": false,
+      "available": true,
+      "frames": 176,
+      "bitmap": [
+        370,
+        160
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 2.3625
+    },
+    {
+      "check": "one_long_drag_to_top_then_release",
+      "crop": [
+        286,
+        0,
+        370,
+        160
+      ],
+      "move": [
+        304,
+        176,
+        210,
+        126
+      ],
+      "resize": [
+        530,
+        176,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 185,
+      "bitmap": [
+        370,
+        160
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 2.3625
+    },
+    {
+      "check": "one_long_drag_to_bottom_then_release",
+      "crop": [
+        286,
+        1760,
+        370,
+        160
+      ],
+      "move": [
+        304,
+        1618,
+        210,
+        126
+      ],
+      "resize": [
+        530,
+        1618,
+        126,
+        126
+      ],
+      "bottom": false,
+      "available": true,
+      "frames": 194,
+      "bitmap": [
+        370,
+        160
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 2.3625
+    },
+    {
+      "check": "all_gestures_preserve_fixture",
+      "layout": "KANDONG_LAYOUT:f5d7c5e9796f57da464b2a35",
+      "clicks": 0,
+      "button": [
+        42,
+        816,
+        1038,
+        942
+      ]
+    },
+    {
+      "check": "interior_touch_through",
+      "layout": "KANDONG_LAYOUT:f5d7c5e9796f57da464b2a35",
+      "clicks": 1,
+      "button": [
+        42,
+        816,
+        1038,
+        942
+      ]
+    },
+    {
+      "check": "stop_releases_projection_service_all_windows",
+      "passed": true
+    }
+  ],
+  "staticRefreshBeforeFix": [
+    {
+      "frames": 38,
+      "bitmap": [
+        508,
+        189
+      ],
+      "move": [
+        442,
+        725,
+        210,
+        126
+      ]
+    },
+    {
+      "frames": 39,
+      "bitmap": [
+        0,
+        0
+      ],
+      "move": [
+        442,
+        725,
+        210,
+        126
+      ]
+    }
+  ],
+  "staticRefreshAfterFix": [
+    {
+      "frames": 6,
+      "bitmap": [
+        508,
+        189
+      ],
+      "move": [
+        442,
+        725,
+        210,
+        126
+      ]
+    },
+    {
+      "frames": 8,
+      "bitmap": [
+        508,
+        189
+      ],
+      "move": [
+        442,
+        725,
+        210,
+        126
+      ]
+    },
+    {
+      "frames": 12,
+      "bitmap": [
+        508,
+        189
+      ],
+      "move": [
+        442,
+        725,
+        210,
+        126
+      ]
+    },
+    {
+      "frames": 14,
+      "bitmap": [
+        508,
+        189
+      ],
+      "move": [
+        442,
+        725,
+        210,
+        126
+      ]
+    },
+    {
+      "frames": 16,
+      "bitmap": [
+        508,
+        189
+      ],
+      "move": [
+        442,
+        725,
+        210,
+        126
+      ]
+    },
+    {
+      "frames": 18,
+      "bitmap": [
+        508,
+        189
+      ],
+      "move": [
+        442,
+        725,
+        210,
+        126
+      ]
+    }
+  ],
+  "physicalDeviceStatus": "Proportional update installed and sharing resumed. A stopped frame has matching calculated and actual draw-matrix scale. User-reported visual discrepancy still awaits a specific number/visual comparison; not marked resolved.",
+  "proportionalInteractionChecks": [
+    {
+      "check": "initial_fixture",
+      "layout": "KANDONG_LAYOUT:f5d7c5e9796f57da464b2a35",
+      "clicks": 0,
+      "button": [
+        42,
+        816,
+        1038,
+        942
+      ]
+    },
+    {
+      "check": "initial",
+      "crop": [
+        285,
+        520,
+        509,
+        189
+      ],
+      "move": [
+        442,
+        725,
+        210,
+        126
+      ],
+      "resize": [
+        668,
+        725,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 48,
+      "bitmap": [
+        509,
+        189
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 1.9980353,
+      "matrix": [
+        1.9980353,
+        1.9980353
+      ]
+    },
+    {
+      "check": "horizontal_inward",
+      "crop": [
+        285,
+        520,
+        368,
+        137
+      ],
+      "move": [
+        301,
+        673,
+        210,
+        126
+      ],
+      "resize": [
+        527,
+        673,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 86,
+      "bitmap": [
+        368,
+        137
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 2.759124,
+      "matrix": [
+        2.759124,
+        2.759124
+      ]
+    },
+    {
+      "check": "vertical_inward",
+      "crop": [
+        285,
+        520,
+        352,
+        131
+      ],
+      "move": [
+        285,
+        667,
+        210,
+        126
+      ],
+      "resize": [
+        511,
+        667,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 124,
+      "bitmap": [
+        352,
+        131
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 2.8854961,
+      "matrix": [
+        2.8854961,
+        2.8854961
+      ]
+    },
+    {
+      "check": "outward",
+      "crop": [
+        285,
+        520,
+        437,
+        162
+      ],
+      "move": [
+        370,
+        698,
+        210,
+        126
+      ],
+      "resize": [
+        596,
+        698,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 163,
+      "bitmap": [
+        437,
+        162
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 2.3272312,
+      "matrix": [
+        2.3272312,
+        2.3272312
+      ]
+    },
+    {
+      "check": "automatic_above",
+      "crop": [
+        285,
+        1420,
+        437,
+        162
+      ],
+      "move": [
+        370,
+        1278,
+        210,
+        126
+      ],
+      "resize": [
+        596,
+        1278,
+        126,
+        126
+      ],
+      "bottom": false,
+      "available": true,
+      "frames": 202,
+      "bitmap": [
+        437,
+        162
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 2.3272312,
+      "matrix": [
+        2.3272312,
+        2.3272312
+      ]
+    },
+    {
+      "check": "top_edge_auto_below",
+      "crop": [
+        285,
+        0,
+        437,
+        162
+      ],
+      "move": [
+        370,
+        178,
+        210,
+        126
+      ],
+      "resize": [
+        596,
+        178,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 261,
+      "bitmap": [
+        437,
+        162
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 2.3272312,
+      "matrix": [
+        2.3272312,
+        2.3272312
+      ]
+    },
+    {
+      "check": "bottom_edge_auto_above",
+      "crop": [
+        285,
+        1758,
+        437,
+        162
+      ],
+      "move": [
+        370,
+        1616,
+        210,
+        126
+      ],
+      "resize": [
+        596,
+        1616,
+        126,
+        126
+      ],
+      "bottom": false,
+      "available": true,
+      "frames": 322,
+      "bitmap": [
+        437,
+        162
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 2.3272312,
+      "matrix": [
+        2.3272312,
+        2.3272312
+      ]
+    },
+    {
+      "check": "gestures_preserve_underlying_layout_and_no_clicks",
+      "layout": "KANDONG_LAYOUT:f5d7c5e9796f57da464b2a35",
+      "clicks": 0,
+      "button": [
+        42,
+        816,
+        1038,
+        942
+      ]
+    },
+    {
+      "check": "interior_touch_through",
+      "layout": "KANDONG_LAYOUT:f5d7c5e9796f57da464b2a35",
+      "clicks": 1,
+      "button": [
+        42,
+        816,
+        1038,
+        942
+      ]
+    },
+    {
+      "check": "stop_releases_projection_service_windows",
+      "passed": true
+    }
+  ],
+  "physicalDiagnosticBeforeProportional": {
+    "cropSize": [
+      467,
+      351
+    ],
+    "viewport": [
+      1096,
+      481
+    ],
+    "calculatedScale": 1.3703704,
+    "actualRenderMatrix": "not available in first build",
+    "pageContentRead": false
+  },
+  "physicalDiagnosticAfterProportional": {
+    "cropSize": [
+      866,
+      380
+    ],
+    "bitmapSize": [
+      866,
+      380
+    ],
+    "drawableSize": [
+      866,
+      380
+    ],
+    "viewport": [
+      1096,
+      481
+    ],
+    "calculatedScale": 1.2655889,
+    "drawMatrixScale": [
+      1.2655889,
+      1.2655889
+    ],
+    "gesture": "none",
+    "pageContentRead": false
+  }
+}

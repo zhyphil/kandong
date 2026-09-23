@@ -13,6 +13,7 @@ import android.media.projection.MediaProjectionManager
 import android.os.*
 import android.view.*
 import android.widget.*
+import kotlin.math.roundToInt
 
 /** Opt-in, local-only screen stream. No frame is saved or sent to any service. */
 class ProjectionMagnifierService : Service() {
@@ -26,19 +27,23 @@ class ProjectionMagnifierService : Service() {
     private var message: TextView? = null
     private var panel: LinearLayout? = null
     private var handle: TextView? = null
+    private var resizeHandle: TextView? = null
     private var outline: View? = null
     private var panelParams: WindowManager.LayoutParams? = null
     private var handleParams: WindowManager.LayoutParams? = null
+    private var resizeParams: WindowManager.LayoutParams? = null
     private var outlineParams: WindowManager.LayoutParams? = null
     private var latest: Bitmap? = null
     private var source = Rect()
     private var screenWidth = 0
     private var screenHeight = 0
-    private var lensWidth = 0
-    private var lensHeight = 0
-    private var centerX = 0f
-    private var centerY = 0f
-    private var scale = 2
+    private lateinit var geometry: MagnifierLayout
+    private var crop = Box(0, 0, 1, 1)
+    private var controls: Controls? = null
+    private var gesture: SourceGesture? = null
+    private var streamCancelled = false
+    private var placementAvailable = false
+    private var renderedFrames = 0L
     private var panelAtBottom = true
     private var closing = false
     private var receiverRegistered = false
@@ -68,9 +73,18 @@ class ProjectionMagnifierService : Service() {
             @Suppress("DEPRECATION")
             wm.defaultDisplay.getRealMetrics(metrics)
             screenWidth = metrics.widthPixels; screenHeight = metrics.heightPixels
-            lensWidth = screenWidth - dp(24)
-            lensHeight = minOf(dp(160), screenHeight / 4)
-            centerX = screenWidth / 2f; centerY = screenHeight * .32f
+            val safeInsets = if (Build.VERSION.SDK_INT >= 30) wm.maximumWindowMetrics.windowInsets
+                .getInsetsIgnoringVisibility(WindowInsets.Type.systemBars() or WindowInsets.Type.displayCutout()) else null
+            val layout = MagnifierLayout.create(screenWidth, screenHeight, resources.displayMetrics.density,
+                safeInsets?.top ?: 0, safeInsets?.bottom ?: 0)
+            if (layout == null) {
+                Toast.makeText(this, "屏幕空间不足，请停止后在较大的屏幕上重试。", Toast.LENGTH_LONG).show()
+                stopSelf(); return START_NOT_STICKY
+            }
+            geometry = layout
+            val (width, height) = proportionalSize(layout.imageWidth, layout.imageHeight, layout.imageWidth / 2f,
+                layout.minWidth..layout.imageWidth, layout.minHeight..layout.maxHeight) ?: error("No initial crop")
+            crop = Box((screenWidth - width) / 2, (screenHeight * .32f).toInt() - height / 2, width, height)
             projection = getSystemService(MediaProjectionManager::class.java)
                 .getMediaProjection(intent.getIntExtra("resultCode", Activity.RESULT_CANCELED), consent)
             projection!!.registerCallback(projectionCallback, main)
@@ -114,27 +128,24 @@ class ProjectionMagnifierService : Service() {
             setPadding(dp(2), dp(2), dp(2), dp(2)); setBackgroundColor(Color.rgb(7, 94, 84))
         }
         imageView = ImageView(this).apply {
-            setBackgroundColor(Color.WHITE); scaleType = ImageView.ScaleType.FIT_XY
+            setBackgroundColor(Color.WHITE); scaleType = ImageView.ScaleType.FIT_CENTER
             contentDescription = "取景框区域的原文放大画面"
-        }.also { root.addView(it, LinearLayout.LayoutParams(lensWidth, lensHeight)) }
-        message = TextView(this).apply { text = "拖动取景框，看清原文"; textSize = 16f; setTextColor(Color.WHITE); maxLines = 2 }
-            .also { root.addView(it, LinearLayout.LayoutParams(-1, dp(44))) }
-        val row = LinearLayout(this).also(root::addView)
-        fun button(label: String, action: () -> Unit) = Button(this).apply {
-            text = label; textSize = 17f; minWidth = 0; minimumWidth = 0; setPadding(0,0,0,0)
-            setOnClickListener { action() }
-        }.also { row.addView(it, LinearLayout.LayoutParams(0, dp(52), 1f)) }
-        for (n in listOf(2, 3, 4)) button("$n×") { scale = n; updateSource(); clearFrame(); message?.text = "${scale}倍 · 拖动取景框移动" }
-        button("换边") {
-            panelAtBottom = !panelAtBottom
-            positionPanel()
-            centerY = screenHeight * if (panelAtBottom) .32f else .72f
-            updateSource(); clearFrame()
+        }.also {
+            root.addView(it, LinearLayout.LayoutParams(geometry.imageWidth, geometry.imageHeight))
+            it.addOnLayoutChangeListener { _, _, _, _, _, _, _, _, _ -> updateStatus() }
         }
-        button("停止") { stopSelf() }
+        val row = LinearLayout(this).also { root.addView(it, LinearLayout.LayoutParams(-1, dp(48))) }
+        message = TextView(this).apply {
+            textSize = 14f; setTextColor(Color.WHITE); maxLines = 2; gravity = Gravity.CENTER_VERTICAL
+        }.also { row.addView(it, LinearLayout.LayoutParams(0, -1, 1f)) }
+        row.addView(Button(this).apply {
+            text = "停止"; textSize = 17f; minWidth = 0; minimumWidth = 0; setPadding(0, 0, 0, 0)
+            setOnClickListener { stopSelf() }
+        }, LinearLayout.LayoutParams(dp(64), -1))
         panel = root
-        panelParams = params(lensWidth + dp(4), lensHeight + dp(100), true).apply { title = "看懂放大显示窗" }
-        positionPanel(false)
+        panelParams = params(geometry.bottomPanel.width, geometry.bottomPanel.height, true).apply {
+            title = "看懂放大显示窗"; x = geometry.bottomPanel.left; y = geometry.bottomPanel.top
+        }
         wm.addView(root, panelParams)
         val mark = object : View(this) {
             val paint = Paint().apply { color = Color.rgb(220, 60, 20); style = Paint.Style.STROKE; strokeWidth = dp(2).toFloat() }
@@ -157,52 +168,117 @@ class ProjectionMagnifierService : Service() {
             title = "看懂取景边框"
         }
         wm.addView(mark, outlineParams)
-        handle = TextView(this).apply {
-            text = "移动取景框"; textSize = 18f; gravity = Gravity.CENTER; setTextColor(Color.WHITE); setBackgroundColor(Color.rgb(130, 45, 10))
-            contentDescription = "拖动此处移动取景框"
+        fun grip(label: String, description: String) = TextView(this).apply {
+            text = label; textSize = 16f; gravity = Gravity.CENTER; setTextColor(Color.WHITE)
+            setBackgroundColor(Color.rgb(130, 45, 10)); contentDescription = description
         }
-        handleParams = params(dp(140),dp(48),true).apply { title = "看懂取景拖动柄" }
-        var downX = 0f; var downY = 0f; var oldX = 0f; var oldY = 0f
-        handle!!.setOnTouchListener { _, event ->
-            when (event.actionMasked) {
-                MotionEvent.ACTION_DOWN -> { downX = event.rawX; downY = event.rawY; oldX = centerX; oldY = centerY; true }
-                MotionEvent.ACTION_MOVE -> {
-                    centerX = oldX + event.rawX - downX; centerY = oldY + event.rawY - downY
-                    updateSource(); clearFrame(); true
+        handle = grip("移动", "拖动此处移动取景框；提示松手贴边时松开可看屏幕边缘")
+        resizeHandle = grip("↘", "向内拖动角柄放大，向外拖动看更多内容")
+        handleParams = params(geometry.moveWidth, geometry.grip, true).apply { title = "看懂取景拖动柄" }
+        resizeParams = params(geometry.grip, geometry.grip, true).apply { title = "看懂取景缩放角柄" }
+        handle!!.setOnTouchListener { _, event -> onGripTouch(GestureMode.MOVE, event) }
+        resizeHandle!!.setOnTouchListener { _, event -> onGripTouch(GestureMode.RESIZE, event) }
+        wm.addView(handle, handleParams)
+        wm.addView(resizeHandle, resizeParams)
+        renderGeometry()
+    }
+    private fun onGripTouch(mode: GestureMode, event: MotionEvent): Boolean {
+        when (event.actionMasked) {
+            MotionEvent.ACTION_DOWN -> {
+                val idle = controls ?: return true
+                if (gesture != null || event.pointerCount != 1) return true
+                streamCancelled = false
+                gesture = SourceGesture(mode, event.getPointerId(0), idle.side, crop,
+                    if (mode == GestureMode.MOVE) idle.move else idle.resize, event.rawX, event.rawY, geometry)
+                renderGeometry()
+            }
+            MotionEvent.ACTION_POINTER_DOWN, MotionEvent.ACTION_POINTER_UP -> cancelStream()
+            MotionEvent.ACTION_MOVE -> {
+                val active = gesture ?: return true
+                if (!streamCancelled) {
+                    if (event.pointerCount != 1 || event.getPointerId(0) != active.pointerId) cancelStream()
+                    else { crop = active.update(event.getPointerId(0), event.pointerCount, event.rawX, event.rawY).source; renderGeometry() }
                 }
-                MotionEvent.ACTION_UP -> { handle?.performClick(); true }
-                else -> true
+            }
+            MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
+                val active = gesture ?: return true
+                val up = event.actionMasked == MotionEvent.ACTION_UP && !streamCancelled &&
+                    event.pointerCount == 1 && event.getPointerId(0) == active.pointerId
+                if (up) active.update(event.getPointerId(0), 1, event.rawX, event.rawY)
+                crop = active.finish(up)
+                gesture = null; streamCancelled = false
+                renderGeometry()
             }
         }
-        wm.addView(handle, handleParams)
-        updateSource()
+        return true // Consume the entire stream, including all remaining events after cancellation.
     }
-    private fun positionPanel(update: Boolean = true) {
+    private fun cancelStream() {
+        streamCancelled = true; gesture?.cancel(); updateStatus()
+    }
+    private fun visibleControls(): List<Box> {
+        val active = gesture
+        return if (active != null) listOf(active.result.grip)
+            else controls?.let { listOf(it.move, it.resize) } ?: emptyList()
+    }
+    private fun placeGrip(view: View?, p: WindowManager.LayoutParams?, box: Box?, visible: Boolean) {
+        if (view == null || p == null) return
+        view.visibility = if (visible) View.VISIBLE else View.INVISIBLE
+        p.flags = if (visible) p.flags and WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE.inv()
+            else p.flags or WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE
+        if (box != null) { p.x = box.left; p.y = box.top }
+        wm.updateViewLayout(view, p)
+    }
+    private fun renderGeometry() {
+        clearFrame()
+        source = Rect(crop.left, crop.top, crop.right, crop.bottom)
+        val active = gesture
+        if (active == null) controls = geometry.idleControls(crop, panelAtBottom)
+        val visible = visibleControls()
+        val selected = geometry.selectPanel(panelAtBottom, crop, visible)
+        placementAvailable = selected != null && (active != null || controls != null)
+        if (selected != null) panelAtBottom = selected
         panelParams?.apply {
-            x = dp(10)
-            y = if (panelAtBottom) screenHeight - height - dp(32) else dp(32)
-            if (update) panel?.let { wm.updateViewLayout(it, this) }
+            val box = geometry.panel(panelAtBottom); x = box.left; y = box.top
+            panel?.let { wm.updateViewLayout(it, this) }
         }
-    }
-    private fun updateSource() {
-        val control = handleParams ?: return
-        val placement = placeSource(screenWidth, screenHeight, lensWidth / scale, lensHeight / scale,
-            centerX, centerY, control.width, control.height, dp(6), handleBelow = panelAtBottom)
-        centerX = placement.centerX; centerY = placement.centerY
-        source = Rect(placement.left, placement.top, placement.left + placement.width, placement.top + placement.height)
+        val move = if (active?.mode == GestureMode.MOVE) active.result.grip else controls?.move
+        val resize = if (active?.mode == GestureMode.RESIZE) active.result.grip else controls?.resize
+        placeGrip(handle, handleParams, move, move != null && (active == null || active.mode == GestureMode.MOVE))
+        placeGrip(resizeHandle, resizeParams, resize, resize != null && (active == null || active.mode == GestureMode.RESIZE))
+        val side = active?.side ?: controls?.side
+        resizeHandle?.text = when {
+            side == null -> "↘"
+            side.below && side.right -> "↘"
+            side.below -> "↙"
+            side.right -> "↗"
+            else -> "↖"
+        }
         outlineParams?.apply {
-            x = (source.left - dp(3)).coerceAtLeast(0)
-            y = (source.top - dp(3)).coerceAtLeast(0)
+            x = (source.left - dp(3)).coerceAtLeast(0); y = (source.top - dp(3)).coerceAtLeast(0)
             width = (source.right + dp(3)).coerceAtMost(screenWidth) - x
             height = (source.bottom + dp(3)).coerceAtMost(screenHeight) - y
             outline?.let { wm.updateViewLayout(it, this); it.invalidate() }
         }
-        control.x = placement.handleLeft; control.y = placement.handleTop
-        handle?.let { wm.updateViewLayout(it, control) }
+        // Discard queued old-layout images. Image timestamps have producer-specific timebases;
+        // comparing them with System.nanoTime can permanently blank an OEM's capture stream.
+        // The next compositor image is cropped using the current screen-pixel geometry.
+        try { reader?.acquireLatestImage()?.close() } catch (_: IllegalStateException) { }
+        updateStatus()
     }
-    private fun sourceOverlapsPanel(): Boolean {
-        val p = panelParams ?: return true
-        return Rect.intersects(source, Rect(p.x,p.y,p.x+p.width,p.y+p.height))
+    private fun sourceOverlapsProtectedControls(): Boolean = !placementAvailable ||
+        !crop.inside(screenWidth, screenHeight) || !geometry.fits(panelAtBottom, crop, visibleControls()) ||
+        visibleControls().any { crop.expanded(dp(3)).intersects(it) }
+    private fun updateStatus() {
+        val active = gesture?.result
+        val view = imageView
+        val scale = actualScale((view?.width ?: 0) - (view?.paddingLeft ?: 0) - (view?.paddingRight ?: 0),
+            (view?.height ?: 0) - (view?.paddingTop ?: 0) - (view?.paddingBottom ?: 0), crop)
+        message?.text = when {
+            !placementAvailable -> "空间不足，请移动取景框"
+            active != null && (active.snapX != 0 || active.snapY != 0) -> "松手贴边"
+            scale > 0 -> String.format(java.util.Locale.ROOT, "%.2f× · 本机", scale)
+            else -> "拖动取景框，看清原文"
+        }
     }
     private fun clearFrame() { imageView?.setImageDrawable(null); latest?.recycle(); latest = null }
     private fun capture(reader: ImageReader) {
@@ -211,23 +287,43 @@ class ProjectionMagnifierService : Service() {
             if (closing || !running) return
             frameSeen = true
             val now = SystemClock.elapsedRealtime()
-            if (now-lastFrameAt < 120) return // bounded ~8 fps spike, not a performance promise
+            // After clearing a crop, the next compositor frame may be the last on a static page.
+            // Always show that first refresh; throttle only while an image is already visible.
+            if (latest != null && now-lastFrameAt < 120) return
             lastFrameAt = now
-            if (sourceOverlapsPanel()) {
-                clearFrame(); message?.text = "取景框与放大窗重叠，请移开或点换边。"; return
+            if (sourceOverlapsProtectedControls()) {
+                clearFrame(); message?.text = "空间不足，请移动取景框"; return
             }
             val plane = image.planes[0]
             // Copy ONLY crop rows out of the full-screen system buffer; never make a full-screen bitmap.
             val bytes = CropPixels.copy(plane.buffer, image.width, image.height, plane.rowStride, plane.pixelStride,
                 source.left, source.top, source.width(), source.height())
             val bitmap = Bitmap.createBitmap(source.width(),source.height(),Bitmap.Config.ARGB_8888)
+            bitmap.density = Bitmap.DENSITY_NONE // Crop dimensions and viewport are physical pixels.
             bitmap.copyPixelsFromBuffer(java.nio.ByteBuffer.wrap(bytes))
             val previous = latest
             latest = bitmap; imageView?.setImageBitmap(bitmap); previous?.recycle()
-            message?.text = "${scale}倍 · 仅本机显示 · 停止可结束共享"
+            renderedFrames++
+            updateStatus()
         } catch (_: RuntimeException) {
             clearFrame(); message?.text = "画面暂不可用，请移开遮挡或停止后重试。"
         } finally { image.close() }
+    }
+    override fun dump(fd: java.io.FileDescriptor, writer: java.io.PrintWriter, args: Array<out String>?) {
+        // Android's existing adb/service diagnostics, debug builds only. No text or image content.
+        if (applicationInfo.flags and android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE == 0) return
+        if (!::geometry.isInitialized) { writer.println("geometry=unavailable"); return }
+        fun box(value: Box?) = value?.let { "${it.left},${it.top},${it.width},${it.height}" } ?: "none"
+        val view = imageView
+        writer.println("crop=${box(crop)} panelBottom=$panelAtBottom available=$placementAvailable")
+        writer.println("move=${box(controls?.move)} resize=${box(controls?.resize)}")
+        writer.println("gesture=${gesture?.mode ?: "none"} renderedFrames=$renderedFrames bitmap=${latest?.width ?: 0},${latest?.height ?: 0}")
+        writer.println("viewport=${view?.width ?: 0},${view?.height ?: 0} scale=${actualScale(view?.width ?: 0, view?.height ?: 0, crop)}")
+        val matrix = FloatArray(9)
+        view?.imageMatrix?.getValues(matrix)
+        val drawable = view?.drawable
+        writer.println("drawable=${drawable?.intrinsicWidth ?: 0},${drawable?.intrinsicHeight ?: 0} " +
+            "matrixScale=${matrix[Matrix.MSCALE_X]},${matrix[Matrix.MSCALE_Y]}")
     }
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
@@ -241,11 +337,12 @@ class ProjectionMagnifierService : Service() {
         reader?.close(); reader = null
         projection?.unregisterCallback(projectionCallback); projection?.stop(); projection = null
         clearFrame()
-        for (view in listOfNotNull(panel,handle,outline)) if (view.isAttachedToWindow) wm.removeViewImmediate(view)
-        panel = null; handle = null; outline = null; imageView = null; message = null
+        for (view in listOfNotNull(panel,handle,resizeHandle,outline)) if (view.isAttachedToWindow) wm.removeViewImmediate(view)
+        gesture?.cancel(); gesture = null
+        panel = null; handle = null; resizeHandle = null; outline = null; imageView = null; message = null
         if (receiverRegistered) { unregisterReceiver(screenOff); receiverRegistered = false }
         stopForeground(STOP_FOREGROUND_REMOVE)
         super.onDestroy()
     }
-    private fun dp(n: Int) = (n*resources.displayMetrics.density).toInt()
+    private fun dp(n: Int) = (n*resources.displayMetrics.density).roundToInt().coerceAtLeast(1)
 }

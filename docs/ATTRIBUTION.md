@@ -20,3 +20,7 @@ Gradle Wrapper由官方 Gradle8.13 wrapper task生成；Gradle、Kotlin及Androi
 若将来实际复用具体 MIT 文件，必须先核实该文件对应提交/许可证，并在分发中保留相应版权与许可声明。上游状态不能当作 KanDong 的实测证据。
 
 放大镜能力的官方API比较见 [MAGNIFICATION](MAGNIFICATION.md)。新增原生/兼容放大实现独立编写，未复制ScreenSaathi或AOSP源码。
+
+## 自由取景与自动避让
+
+取景框几何、手势和避让逻辑为KanDong自身实现；未复制其他项目代码。等比居中显示参考[ImageView.ScaleType.FIT_CENTER](https://developer.android.com/reference/android/widget/ImageView.ScaleType#FIT_CENTER)，原始屏幕指针坐标参考[MotionEvent](https://developer.android.com/reference/android/view/MotionEvent#getRawY(int))。实际倍率按显示像素与裁剪像素计算，须注意[Bitmap密度](https://developer.android.com/reference/android/graphics/Bitmap#setDensity(int))可能引入的绘制缩放。

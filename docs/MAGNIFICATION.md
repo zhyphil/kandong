@@ -58,4 +58,4 @@ Google Play 的 `isAccessibilityTool` 仅适用于帮助残障用户的核心用
 
 实际读取：HMA-L29 Android10/API29；随后用户换成目标 LIO-AN00 Android12/API31。两者 `pm has-feature android.software.window_magnification` 未声明能力，且均低于公开WINDOW控制API33。官方路线在这两台机上的可运行性为 No-Go；这不是已安装后的视觉测试结论。
 
-用户明确要求支持华为后，新增独立 `compat`：MediaProjection每次由人授权，TYPE_APPLICATION_OVERLAY显示区域副本；取景框与镜面分开、FLAG_SECURE防止把镜面再次采入、重叠时清空提示。运行时是显式授权的持续屏幕帧，约8fps采样上限；不是默认后台截图，也不能宣称系统只采局部。它是对D1的兼容性实验，是否足够流畅/易用以真机结果为准，最终产品体验尚未定型。
+用户明确要求支持华为后，新增独立 `compat`：MediaProjection每次由人授权，TYPE_APPLICATION_OVERLAY显示区域副本；取景框与镜面分开、FLAG_SECURE防止把镜面再次采入、重叠时清空提示。运行时是显式授权的持续屏幕帧，稳定画面按120ms节流，清空后的首帧立即刷新，拖动时可能更频繁；不是默认后台截图，也不能宣称系统只采局部。它是对D1的兼容性实验，是否足够流畅/易用以真机结果为准，最终产品体验尚未定型。
