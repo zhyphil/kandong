@@ -1,0 +1,45 @@
+{
+  "device": "KanDong_Phase0_API36",
+  "api": 36,
+  "variant": "release signed local 0.1.1-dev/code6",
+  "checks": [
+    "cancel consent: remains in introduction, no projection",
+    "successful start: launcher resumed, projection and three overlay windows remain",
+    "reopen active session: introduction stays visible, collapse still works",
+    "stop from introduction: releases projection and remains in app",
+    "overlay permission revoked during consent: no home navigation or projection",
+    "fresh retry succeeds and returns home"
+  ],
+  "limits": [
+    "Huawei manual confirmation pending",
+    "unit tests cover service failure and stale callbacks; revoked-permission case is a preflight runtime rejection"
+  ],
+  "build": {
+    "versionCode": 6,
+    "versionName": "0.1.1-dev",
+    "debugUnitTests": 45,
+    "lintErrors": 0,
+    "lintWarnings": 8,
+    "debugBuild": true,
+    "releaseBuild": true
+  },
+  "apkSha256": {
+    "debug": "4d76c56c21921485d42b126d14d84f3b71c6f3c5d25c615a7bcc538dc4445fcb",
+    "release": "6194a5de2c1fbaa4697e87182b988de18e8adae4dbb6554724b16eb2bd019cdc"
+  },
+  "testNotes": [
+    "The device script was adjusted for the API36 ResumedActivity field, async consent-window readiness, and null focus from the virtual display",
+    "Main buttons were tapped on their uncovered side because the red selection intentionally consumes touches",
+    "After temporary appops changes, the test left and re-entered the Activity to refresh its existing permission UI"
+  ],
+  "huawei": {
+    "status": "installed; active projection observed; waiting for user confirmation of automatic navigation",
+    "target": "HUAWEI LIO-AN00 / API31",
+    "versionCode": 6,
+    "versionName": "0.1.1-dev",
+    "projectionActive": true,
+    "homeResumedAtObservation": false,
+    "expandedAtObservation": true,
+    "scope": "Read-only app/window state; no desktop screenshot or injected touches. Automatic transition still needs user confirmation."
+  }
+}

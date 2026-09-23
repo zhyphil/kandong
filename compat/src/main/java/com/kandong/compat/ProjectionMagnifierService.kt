@@ -25,6 +25,8 @@ class ProjectionMagnifierService : Service() {
         const val ACTION_MENU = "com.kandong.compat.MENU"
         const val ACTION_STOP = "com.kandong.compat.STOP"
         const val SESSION = "session"
+        const val START_REPLY = "startReply"
+        const val START_READY = 1
     }
     private val uiState = SessionUiState()
     private val sessionId = java.util.UUID.randomUUID().toString()
@@ -117,9 +119,12 @@ class ProjectionMagnifierService : Service() {
             } else if (!running) endSession()
             return START_NOT_STICKY
         }
-        if (running || closing) return START_NOT_STICKY
         val startIntent = intent ?: return START_NOT_STICKY
+        @Suppress("DEPRECATION")
+        val startReply = startIntent.getParcelableExtra<ResultReceiver>(START_REPLY)
+        if (running || closing) { startReply?.send(0,null); return START_NOT_STICKY }
         if (!android.provider.Settings.canDrawOverlays(this) || getSystemService(KeyguardManager::class.java).isKeyguardLocked) {
+            startReply?.send(0,null)
             endSession(); return START_NOT_STICKY
         }
         try {
@@ -174,6 +179,9 @@ class ProjectionMagnifierService : Service() {
         } catch (_: RuntimeException) {
             Toast.makeText(this, "无法开启屏幕放大，请检查授权后重试。", Toast.LENGTH_LONG).show()
             endSession()
+        } finally {
+            // Windows and virtual display must exist before the introduction leaves the screen.
+            startReply?.send(if (running && !closing) START_READY else 0,null)
         }
         return START_NOT_STICKY
     }

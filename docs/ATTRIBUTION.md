@@ -42,3 +42,7 @@ API29安全区使用官方[WindowInsets stable insets与DisplayCutout](https://d
 ## 本机画质对照实验
 
 独立qualitylab使用Android官方[Paint位图过滤](https://developer.android.com/reference/android/graphics/Paint#FILTER_BITMAP_FLAG)作基准。精细插值独立实现自Mitchell与Netravali的[1988年原论文](https://www.cs.utexas.edu/~fussell/courses/cs384g-fall2013/lectures/mitchell/Mitchell.pdf)公式(8)，B=C=1/3；未复制论文图像或第三方源码。轻度锐化、合成输入、图标和实验界面在本项目编写，无新运行时依赖。范围、数据与限制见[QUALITY_LAB](QUALITY_LAB.md)。
+
+## 启动后返回桌面
+
+成功启动后由前台Activity发出Android官方[ACTION_MAIN / CATEGORY_HOME](https://developer.android.com/reference/android/content/Intent#CATEGORY_HOME)导航，使用[ResultReceiver](https://developer.android.com/reference/android/os/ResultReceiver)接收本服务就绪结果。没有模拟点击或无障碍全局动作；LaunchHandoff的一次性/过期结果控制为本项目实现。

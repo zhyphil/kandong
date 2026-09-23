@@ -18,10 +18,12 @@ class MainActivity : Activity() {
     private var snapshot = SessionSnapshot()
     private var dialog: Dialog? = null
     private var requesting = false
+    private var resumed = false
+    private val launchHandoff = LaunchHandoff()
     private val listener: (SessionSnapshot) -> Unit = { next ->
         val ended = snapshot.id != null && next.id == null
         snapshot=next
-        if(ended) consent.isChecked=false
+        if(ended) { launchHandoff.cancel(); consent.isChecked=false }
         refresh()
     }
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -149,8 +151,9 @@ class MainActivity : Activity() {
         }
     }
     override fun onStart() { super.onStart(); SessionBridge.add(listener) }
-    override fun onResume() { super.onResume(); refresh() }
-    override fun onStop() { SessionBridge.remove(listener); dialog?.dismiss(); dialog=null; super.onStop() }
+    override fun onResume() { super.onResume(); resumed=true; refresh(); returnHomeIfReady() }
+    override fun onPause() { resumed=false; super.onPause() }
+    override fun onStop() { launchHandoff.cancel(); SessionBridge.remove(listener); dialog?.dismiss(); dialog=null; super.onStop() }
     @Deprecated("Dependency-free platform consent result")
     override fun onActivityResult(requestCode: Int,resultCode: Int,data: Intent?) {
         super.onActivityResult(requestCode,resultCode,data)
@@ -173,7 +176,39 @@ class MainActivity : Activity() {
             @Suppress("DEPRECATION") val rotation = windowManager.defaultDisplay.rotation
             service.putExtra("legacyRotation", rotation)
         }
-        startForegroundService(service)
+        val attempt = launchHandoff.begin()
+        service.putExtra(ProjectionMagnifierService.START_REPLY, object : ResultReceiver(Handler(Looper.getMainLooper())) {
+            override fun onReceiveResult(resultCode: Int, resultData: Bundle?) {
+                val success = resultCode == ProjectionMagnifierService.START_READY
+                if (!launchHandoff.complete(attempt, success)) return
+                if (success) returnHomeIfReady()
+                else status.text="没有成功开启放大镜，请重新尝试。"
+            }
+        })
+        try {
+            startForegroundService(service)
+        } catch (_: RuntimeException) {
+            launchHandoff.cancel()
+            status.text="无法开启放大镜，请返回看懂后重试。"
+        }
+    }
+    private fun returnHomeIfReady() {
+        val current = SessionBridge.snapshot
+        if (!launchHandoff.consume(resumed && !isFinishing && !isDestroyed,
+                current.id != null && current.mode == SessionMode.EXPANDED)) return
+        // Normal Activity navigation, only after this foreground user's start has succeeded.
+        // Keep this task available so reopening 看懂 can still show its controls/menu.
+        try {
+            startActivity(Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_HOME)
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+        } catch (_: android.content.ActivityNotFoundException) {
+            showHomeFallback()
+        } catch (_: SecurityException) {
+            showHomeFallback()
+        }
+    }
+    private fun showHomeFallback() {
+        Toast.makeText(this,"放大镜已开启，请按手机主页键返回桌面。",Toast.LENGTH_LONG).show()
     }
     private fun dp(value: Int)=CompatUi.dp(this,value)
 }

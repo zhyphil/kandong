@@ -27,6 +27,8 @@ Kotlin2.2.20、AGP8.13.0、Gradle8.13、JDK17、compile/target36、Build Tools35
 
 独立 package `com.kandong.compat`，最低API29。`MainActivity` 展示实际屏幕共享披露 → 用户允许 `SYSTEM_ALERT_WINDOW` → 每次由 `MediaProjectionManager` 取得系统同意 → 不导出的前台 `ProjectionMagnifierService` → VirtualDisplay / ImageReader → 仅复制取景框像素 → ImageView 放大。
 
+0.1.1-dev：Activity在本次有效授权后附带同进程ResultReceiver，服务仅在VirtualDisplay、悬浮窗和监听器建立后回复ready。LaunchHandoff按启动编号过滤过期结果；只有Activity处于resumed且本会话仍展开时，一次性发出ACTION_MAIN + CATEGORY_HOME。onStop/会话结束取消待执行跳转；失败或重复打开首页不离开。返回桌面是正常Activity导航，不使用无障碍全局动作或注入Home键；设备拒绝Home Intent时保留会话并提示手动返回。
+
 运行期间存在短暂整屏系统缓冲区；不建立整屏 Bitmap、不保存或发送帧。每帧最终关闭；局部 Bitmap 替换后释放。已有画面时按120ms节流；几何变化或清空后的第一帧立即刷新，避免静止页面无后续帧而持续空白。这不是拖动期间的帧率上限，也不是性能或耗电结论。停止、投屏回调、锁屏、配置变化释放投屏/缓冲区/窗口，进程不会自动恢复投屏。
 
 源框和显示窗分开。显示窗、悬浮按钮及菜单设置FLAG_SECURE，选区与受保护显示窗重叠时清空旧帧。红框本身是透明的拖动窗口，只绘制裁剪区外的边框；内部触摸移动选区，不再穿透原App。默认显示窗为源区相反的上/下方位置，自动切换不改变源框。
