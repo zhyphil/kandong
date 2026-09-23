@@ -113,6 +113,21 @@
       "check": "after_stop_layout",
       "layout": "fdd10cfe1a98f70037e0a172",
       "clicks": 1
+    },
+    {
+      "check": "lock_unlock_releases_projection_service_and_windows",
+      "passed": true,
+      "evidence": "User reported lens disappeared after locking and unlocking; subsequent adb query returned null MediaProjection, no service, no KanDong windows."
+    }
+  ],
+  "userReports": [
+    {
+      "appNameAsReported": "bookings",
+      "feedback": "Original page layout stayed unchanged",
+      "packageAndVersionVerified": false
+    },
+    {
+      "feedback": "Magnified content corresponds to red source frame"
     }
   ]
 }
