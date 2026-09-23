@@ -9,4 +9,4 @@ elif [ "$(uname -s)" = Darwin ]; then
 else
   kandong_jdk="${JAVA_HOME:?Set JAVA_HOME or KANDONG_JAVA_HOME to JDK 17}"
 fi
-exec env JAVA_HOME="$kandong_jdk" ./gradlew :app:assembleDebug :app:testDebugUnitTest :app:lintDebug :fixture:assembleDebug --console=plain "$@"
+exec env JAVA_HOME="$kandong_jdk" ./gradlew :app:assembleDebug :app:testDebugUnitTest :app:lintDebug :fixture:assembleDebug :compat:assembleDebug :compat:lintDebug :compat:testDebugUnitTest --console=plain "$@"

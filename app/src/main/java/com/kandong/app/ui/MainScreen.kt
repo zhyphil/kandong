@@ -26,7 +26,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.kandong.app.BuildConfig
 import com.kandong.app.service.ServiceBridge
 
 @Composable
@@ -37,49 +36,37 @@ internal fun MainScreen(openSettings: () -> Unit) {
             .safeDrawingPadding().verticalScroll(rememberScrollState()).padding(24.dp),
             verticalArrangement = Arrangement.spacedBy(18.dp)) {
             Text("看懂", fontSize = 36.sp, color = MaterialTheme.colorScheme.primary)
-            Text("看清标签，再自己点击", fontSize = 25.sp)
-            Text("不改变原来的页面。您选择要解释的内容，看懂用边框指出位置。最后由您亲自操作。", fontSize = 20.sp, lineHeight = 30.sp)
+            Text("看不清，打开放大镜", fontSize = 28.sp, lineHeight = 38.sp)
+            Text("放大一小块，原来的页面布局不变。", fontSize = 22.sp, lineHeight = 32.sp)
             Card(Modifier.fillMaxWidth()) {
                 Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                     Text("使用前，请先了解", fontSize = 24.sp)
-                    Text("• 只有您点“读取页面”时，才读取一次当前应用的可见标签。\n• 页面文字只留在内存中，最多15秒；变化或停止就清除。\n• 不自动点击、不输入、不截图、不联网、不保存页面。\n• 输入框、密码和已标记的敏感区域会跳过；静态隐私文字未必能识别，请勿在隐私或支付页面使用。", fontSize = 19.sp, lineHeight = 29.sp)
-                    Row(Modifier.fillMaxWidth().heightIn(min = 56.dp).toggleable(
+                    Text("由手机系统放大屏幕内容。看懂不采集屏幕像素、不读取文字、不保存、不上传，也不替您点击或输入。", fontSize = 20.sp, lineHeight = 30.sp)
+                    Row(Modifier.fillMaxWidth().heightIn(min = 60.dp).toggleable(
                         value = ServiceBridge.consent, role = Role.Checkbox,
-                        onValueChange = {
-                            ServiceBridge.consent = it
-                            if (!it) ServiceBridge.service?.stopSession("已撤回同意，辅助已停止。")
-                        }), verticalAlignment = Alignment.CenterVertically) {
+                        onValueChange = { ServiceBridge.consent = it }), verticalAlignment = Alignment.CenterVertically) {
                         Checkbox(checked = ServiceBridge.consent, onCheckedChange = null)
-                        Text("我已了解，并同意本次使用", fontSize = 20.sp)
+                        Text("我同意本次使用", fontSize = 22.sp)
                     }
                 }
             }
-            OutlinedButton(openSettings, Modifier.fillMaxWidth().heightIn(min = 60.dp)) {
-                Text("打开系统无障碍设置", fontSize = 21.sp)
+            OutlinedButton(openSettings, Modifier.fillMaxWidth().heightIn(min = 64.dp)) {
+                Text("打开系统无障碍设置", fontSize = 22.sp)
             }
-            Text("系统开关需要您手动开启。返回此页后，再点击“开始辅助”。", fontSize = 18.sp, lineHeight = 27.sp)
-            Text(if (state.connected) "服务已连接" else "服务未连接", fontSize = 24.sp)
-            Text(state.message, fontSize = 20.sp, lineHeight = 30.sp)
+            Text("首次使用，请在系统中开启“看懂”，再回到这里。", fontSize = 20.sp, lineHeight = 30.sp)
+            Text(state.message, fontSize = 22.sp, lineHeight = 32.sp)
             Button(onClick = { ServiceBridge.service?.startSession() },
-                enabled = state.connected && ServiceBridge.consent && !state.running,
-                modifier = Modifier.fillMaxWidth().heightIn(min = 60.dp)) {
-                Text("开始辅助", fontSize = 23.sp)
+                enabled = state.connected && state.supported && ServiceBridge.consent && !state.running,
+                modifier = Modifier.fillMaxWidth().heightIn(min = 64.dp)) {
+                Text("打开放大镜", fontSize = 24.sp)
             }
-            OutlinedButton(onClick = { ServiceBridge.service?.stopSession() }, enabled = state.running,
-                modifier = Modifier.fillMaxWidth().heightIn(min = 60.dp)) {
-                Text("停止辅助并清除", fontSize = 23.sp)
+            OutlinedButton(onClick = { ServiceBridge.service?.stopSession() }, enabled = state.connected && state.running,
+                modifier = Modifier.fillMaxWidth().heightIn(min = 64.dp)) {
+                Text("关闭放大镜", fontSize = 24.sp)
             }
-            Text("开始后：切换到其他应用 → 点悬浮面板“读取页面” → 用上一项/下一项选择 → 核对边框后自己点击。面板挡住内容时，可移动到另一侧后重读。", fontSize = 19.sp, lineHeight = 29.sp)
-            Text("Phase 0：目前按原标签进行固定说明，不使用 AI，也不判断点击后的结果。", fontSize = 17.sp, lineHeight = 25.sp)
-            if (BuildConfig.DEBUG) {
-                Card(Modifier.fillMaxWidth()) {
-                    Column(Modifier.padding(16.dp)) {
-                        Text("开发验收信息", fontSize = 18.sp)
-                        Text("本区仅用于 Phase 0 验证，不是未来长辈界面。", fontSize = 16.sp)
-                        Text("会话：${if (state.running) "运行" else "停止"}；读取：${if (state.capturing) "进行中" else "空闲"}\n候选数：${state.candidateCount}；标签截短：${state.truncated}", fontSize = 16.sp)
-                    }
-                }
-            }
+            Text("打开后可切换到其他应用。拖动系统镜框上的手柄查看别处；在小面板上选择2倍、3倍或4倍。面板挡住内容时，点“收起”或“移位”。", fontSize = 20.sp, lineHeight = 31.sp)
+            Text("镜框大小由手机系统提供调整方式，不同手机可能不同。已有系统放大时，请先自行关闭。", fontSize = 19.sp, lineHeight = 29.sp)
+            Text("下一阶段：把放大区域的文字翻译成中文。", fontSize = 20.sp, lineHeight = 30.sp)
         }
     }
 }

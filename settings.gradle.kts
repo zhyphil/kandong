@@ -7,3 +7,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "KanDong"
 include(":app", ":fixture")
+
+include(":compat")

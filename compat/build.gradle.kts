@@ -3,15 +3,15 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 android {
-    namespace = "com.kandong.fixture"
+    namespace = "com.kandong.compat"
     compileSdk = 36
     buildToolsVersion = "35.0.0"
     defaultConfig {
-        applicationId = "com.kandong.fixture"
+        applicationId = "com.kandong.compat"
         minSdk = 29
         targetSdk = 36
         versionCode = 1
-        versionName = "0.0.1-test-only"
+        versionName = "0.0.1-spike"
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -19,3 +19,5 @@ android {
     }
     kotlinOptions { jvmTarget = "17" }
 }
+
+dependencies { testImplementation("junit:junit:4.13.2") }

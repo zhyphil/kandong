@@ -1,64 +1,95 @@
 package com.kandong.fixture
 
 import android.app.Activity
-import android.app.AlertDialog
-import android.os.Build
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
 import android.os.Bundle
-import android.text.InputType
 import android.view.View
 import android.view.WindowInsets
 import android.widget.Button
-import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
+import java.security.MessageDigest
 
-/** Synthetic local fixture. Never a dependency of the production application. */
+/** Own-process layout evidence. No personal information, network or product dependency. */
 class FixtureActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setSoftInputMode(android.view.WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
-        val scroll = ScrollView(this)
-        val content = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; isFocusableInTouchMode = true; setPadding(24, 0, 24, 40) }
-        scroll.addView(content)
+        val column = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(dp(16), 0, dp(16), dp(24))
+        }
+        val scroll = ScrollView(this).apply { addView(column) }
         scroll.setOnApplyWindowInsetsListener { view, insets ->
-            val bars = insets.getInsets(WindowInsets.Type.systemBars())
-            view.setPadding(bars.left, bars.top, bars.right, bars.bottom)
+            if (android.os.Build.VERSION.SDK_INT >= 30) {
+                val bars = insets.getInsets(WindowInsets.Type.systemBars())
+                view.setPadding(bars.left, bars.top, bars.right, bars.bottom)
+            } else {
+                @Suppress("DEPRECATION")
+                view.setPadding(insets.systemWindowInsetLeft, insets.systemWindowInsetTop, insets.systemWindowInsetRight, insets.systemWindowInsetBottom)
+            }
             insets
         }
-        fun text(label: String): TextView = TextView(this).apply { text = label; textSize = 22f }.also(content::addView)
-        fun button(label: String, action: () -> Unit): Button = Button(this).apply {
-            text = label; textSize = 22f; minHeight = dp(56); setOnClickListener { action() }
-        }.also(content::addView)
-        text("本地合成测试页，不含真实个人信息")
-        intent.getStringExtra("testSession")?.let { text(it) }
-        // Leave room for the control overlay, keeping the primary target visible below it.
-        content.addView(View(this), LinearLayout.LayoutParams(1, dp(240)))
+        fun label(value: String, size: Float) = TextView(this).apply {
+            text = value; textSize = size; setTextColor(Color.BLACK)
+        }.also(column::addView)
+        label("看懂 · 放大镜合成测试页", 20f)
+        intent.getStringExtra("testSession")?.let { label(it, 10f) }
+        val diagnostic = label("布局指纹待生成", 10f).apply {
+            maxLines = 1
+            layoutParams.height = dp(20)
+        }
+        val paragraph = label("Correspondance à Bordeaux\n12 minutes\nNon échangeable et non remboursable\nFlight information • Cabin bag included", 14f)
+        val grid = object : View(this) {
+            val paint = Paint(Paint.ANTI_ALIAS_FLAG)
+            override fun onDraw(canvas: Canvas) {
+                super.onDraw(canvas)
+                canvas.drawColor(Color.WHITE)
+                val cell = dp(24).toFloat()
+                paint.strokeWidth = dp(1).toFloat()
+                paint.color = Color.rgb(160, 160, 160)
+                var x = 0f
+                while (x < width) { canvas.drawLine(x, 0f, x, height.toFloat(), paint); x += cell }
+                var y = 0f
+                while (y < height) { canvas.drawLine(0f, y, width.toFloat(), y, paint); y += cell }
+                paint.color = Color.rgb(220, 30, 30)
+                canvas.drawRect(cell, cell, cell * 2, cell * 2, paint)
+                paint.color = Color.rgb(20, 80, 220)
+                canvas.drawRect(cell * 4, cell * 2, cell * 5, cell * 3, paint)
+                paint.color = Color.BLACK
+                paint.textSize = dp(12).toFloat()
+                canvas.drawText("A 24dp   B 24dp", cell, cell * 5, paint)
+            }
+        }.also { column.addView(it, LinearLayout.LayoutParams(-1, dp(144))) }
         var count = 0
-        val counter = text("点击次数：0")
-        val primary = button("测试按钮") { count++; counter.text = "点击次数：$count" }
-        primary.id = android.view.View.generateViewId()
-        var moved = false
-        button("移动测试按钮") { moved = !moved; primary.translationX = if (moved) dp(28).toFloat() else 0f }
-        button("打开弹窗") {
-            AlertDialog.Builder(this).setTitle("测试弹窗").setMessage("旧高亮应该立即清除。")
-                .setPositiveButton("关闭", null).show()
-        }
-        text("以下输入区域应被看懂跳过")
-        content.addView(EditText(this).apply {
-            hint = "合成输入框"; setText("EDITABLE_SECRET_TEST"); inputType = InputType.TYPE_CLASS_TEXT
-        })
-        content.addView(EditText(this).apply {
-            hint = "合成密码框"
-            inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-            setText("PASSWORD_SECRET_TEST")
-        })
-        text("SENSITIVE_STATIC_TEST").apply {
-            if (Build.VERSION.SDK_INT >= 34) setAccessibilityDataSensitive(View.ACCESSIBILITY_DATA_SENSITIVE_YES)
-        }
-        repeat(18) { text("滚动测试标签 ${it + 1}").setPadding(0, dp(16), 0, dp(16)) }
+        val counter = label("点击次数：0", 18f)
+        val button = Button(this).apply {
+            text = "测试按钮"; textSize = 18f
+            setOnClickListener { count++; counter.text = "点击次数：$count" }
+        }.also(column::addView)
+        label("放大不应改变原文换行、网格间距或按钮位置。计数只在亲自点击时增加。", 14f)
+        repeat(12) { label("Ligne ${it + 1} — Small original text / 原始小字", 14f).setPadding(0, dp(12), 0, dp(12)) }
         setContentView(scroll)
-        content.requestFocus()
+        // Compute from actual local View layout; accessibility screen bounds may be magnified.
+        column.viewTreeObserver.addOnGlobalLayoutListener {
+            val raw = buildString {
+                append(resources.configuration.fontScale).append('|').append(resources.displayMetrics.densityDpi)
+                append('|').append(column.width).append('|').append(column.height)
+                for (view in listOf(paragraph, grid, button)) {
+                    append('|').append(view.left).append(',').append(view.top).append(',').append(view.width).append(',').append(view.height)
+                }
+                paragraph.layout?.let { layout ->
+                    append('|').append(layout.lineCount)
+                    repeat(layout.lineCount) { append(',').append(layout.getLineEnd(it)) }
+                }
+            }
+            val digest = MessageDigest.getInstance("SHA-256").digest(raw.toByteArray())
+                .take(12).joinToString("") { "%02x".format(it) }
+            val value = "KANDONG_LAYOUT:$digest"
+            if (diagnostic.text.toString() != value) diagnostic.text = value
+        }
     }
-    private fun dp(value: Int): Int = (value * resources.displayMetrics.density).toInt()
+    private fun dp(n: Int) = (n * resources.displayMetrics.density).toInt()
 }

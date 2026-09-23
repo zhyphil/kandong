@@ -4,18 +4,26 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 
-/** Same-process UI state only. No IPC, node labels, history, or saved state. */
+/** Same-process, per-session state. No page content, persistence or exported test endpoints. */
 internal object ServiceBridge {
     var service: KanDongAccessibilityService? = null
-    var consent by mutableStateOf(false)
+    private var consentState by mutableStateOf(false)
+    var consent: Boolean
+        get() = consentState
+        set(value) {
+            if (consentState == value) return
+            consentState = value
+            if (!value) service?.stopSession()
+        }
+    fun clearConsent() { consentState = false }
     var status by mutableStateOf(ServiceStatus())
 }
 
 internal data class ServiceStatus(
     val connected: Boolean = false,
+    val supported: Boolean = false,
     val running: Boolean = false,
-    val capturing: Boolean = false,
-    val message: String = "服务未连接，请在系统设置中手动开启。",
-    val candidateCount: Int = 0,
-    val truncated: Boolean = false,
+    val active: Boolean = false,
+    val scale: Float = 2f,
+    val message: String = "请在系统设置中手动开启看懂服务。",
 )
