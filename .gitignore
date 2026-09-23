@@ -14,3 +14,7 @@ captures/
 *.log
 .cxx/
 .externalNativeBuild/
+
+# Local release identity and generated distributables; never commit credentials.
+/.signing/
+/dist/

@@ -1,0 +1,79 @@
+{
+  "version": "0.1.0",
+  "versionCode": 5,
+  "behaviorBaseline": "6b36652",
+  "module": "compat",
+  "package": "com.kandong.compat",
+  "minSdk": 29,
+  "targetSdk": 36,
+  "apkSha256": "2175e652620972eceb7d0322babb890d99f56cad165831e0b6f2278b3d3f489a",
+  "certificateSha256": "01864234d2337b172bbe1c4c97abe59bf010d70caba30041e1ea043e7126d167",
+  "apkBytes": 2263672,
+  "build": {
+    "releaseUnitTests": 41,
+    "failures": 0,
+    "lintErrors": 0,
+    "lintWarnings": 8,
+    "signatureVerified": true,
+    "alignmentVerified": true,
+    "debuggable": false,
+    "internetPermission": false
+  },
+  "releaseDevice": "KanDong_Phase0_API36 dedicated emulator",
+  "checks": [
+    {
+      "check": "signed_release_launch_consent_and_three_windows",
+      "panel": [
+        26,
+        1265,
+        1053,
+        1836
+      ],
+      "selection": [
+        278,
+        529,
+        802,
+        699
+      ],
+      "corner": [
+        731,
+        474,
+        857,
+        600
+      ],
+      "debugDumpDisabled": true
+    },
+    {
+      "check": "actual_release_direct_drag",
+      "before": [
+        278,
+        529,
+        802,
+        699
+      ],
+      "after": [
+        328,
+        569,
+        852,
+        739
+      ]
+    },
+    {
+      "check": "actual_release_pinch_keeps_selection",
+      "selectionUnchanged": true,
+      "serviceRunning": true,
+      "limit": "Release disables matrix diagnostics; exact numeric synchronization uses previous debug/runtime evidence for identical behavior source."
+    },
+    {
+      "check": "actual_release_collapse_restore_menu_and_stop",
+      "retainedSelection": true,
+      "menuFullScreen": true,
+      "allResourcesReleased": true
+    }
+  ],
+  "limits": [
+    "Behavior source unchanged from user-accepted 0.0.4; Huawei release-signed APK not installed",
+    "Release diagnostics disabled; exact pinch matrix synchronization comes from prior identical-source debug tests",
+    "Android29, other OEMs, large-font/TalkBack and prolonged use remain unverified"
+  ]
+}

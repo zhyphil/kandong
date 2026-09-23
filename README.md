@@ -1,22 +1,24 @@
 # KanDong · 看懂
 
+当前固定版本：**v0.1.0 核心放大镜**。下载入口：[GitHub Release](https://github.com/zhyphil/kandong/releases/tag/v0.1.0)。正式签名APK与之前调试版不能覆盖安装，迁移方法见[发布说明](docs/releases/v0.1.0.md)。[核心基线](docs/CORE_BASELINE.md) · [后续发布方法](docs/RELEASING.md)
+
 **跨 App 局部屏幕放大镜 + 放大区域翻译。** 面向老年人及视觉、语言或数字使用困难人群。产品顺序固定为：**看清 → 看懂 → 理解 → 会操作**。
 
-当前先做 **Phase 0A 放大镜技术验证**。不改变原 App 布局、字号或按钮位置。目标华为兼容版可自由调整取景框宽高，用独立滑杆选择1～5倍（默认2倍），显示窗随取景位置自动避让。翻译是下一阶段，AI 解释和下一步高亮随后推进；没有自动点击、输入、确认、提交、购买或支付。
+当前固定 **v0.1.0核心放大镜**，继续扩展Phase0A机型与长辈体验验证。不改变原 App 布局、字号或按钮位置。目标华为兼容版可自由调整取景框宽高，用独立滑杆选择1～5倍（默认2倍），显示窗随取景位置自动避让。翻译是下一阶段，AI 解释和下一步高亮随后推进；没有自动点击、输入、确认、提交、购买或支付。
 
 ## 两条明确区分的验证路线
 
 | 模块 | 用途 | 系统要求/权限 | 当前目标 |
 | --- | --- | --- | --- |
 | `app` | 官方 Window Magnification + MagnificationController | Android13/API33+，设备支持窗口放大；用户开启无障碍服务 | 专用 API36 模拟器；真机兼容性逐机验证 |
-| `compat` | 用户明确要求的旧华为兼容 spike；屏幕共享 → 局部裁剪 → 放大显示 | Android10/API29+；悬浮窗 + 每次屏幕共享授权；无需无障碍 | 当前目标华为 LIO-AN00，Android12/API31 |
+| `compat` | 当前发布产品；屏幕共享 → 本机局部裁剪 → 放大显示 | Android10/API29+；悬浮窗 + 每次屏幕共享授权；无需无障碍 | 当前目标华为 LIO-AN00，Android12/API31 |
 | `fixture` | 独立合成页，网格/小字/点击计数/自身布局指纹 | 本地测试应用，无真实个人资料 | 验证倍率、原布局与手动点击 |
 
-已连接的两台华为分别为 HMA-L29（Android10/API29）和 LIO-AN00（Android12/API31）；都不支持当前官方窗口控制路线。**目标机已切换为 LIO-AN00**。不能把 EMUI 版本当 Android API 版本，不能只降低 minSdk 就声称官方路线可运行。
+此前验证的两台华为分别为 HMA-L29（Android10/API29）和 LIO-AN00（Android12/API31）；都不支持当前官方窗口控制路线。**目标机已切换为 LIO-AN00**。不能把 EMUI 版本当 Android API 版本，不能只降低 minSdk 就声称官方路线可运行。
 
-兼容版的取景框与放大显示窗分开，避免屏幕共享把自身窗口再次采入。它是一个明确标识的技术实验，尚不是最终“原地镜面”体验。新增收起为贴边悬浮按钮及精简菜单，交互规则见 [UX设计](docs/UX.md)。当前实际构建和设备证据以 [VALIDATION](docs/VALIDATION.md) 为准。
+兼容版的取景框与放大显示窗分开，采用自动上下避让、双指缩放及滑杆同步。可收起为贴边悬浮按钮，菜单全屏显示；这些交互已固定为v0.1.0基线，交互规则见 [UX设计](docs/UX.md)。当前实际构建和设备证据以 [VALIDATION](docs/VALIDATION.md) 为准。
 
-唯一根目录 `/Users/haoyuzuo/Projects/KanDong`，origin `git@github.com:zhyphil/kandong.git`。独立项目，本轮只做本地提交，不推送/发布。
+唯一根目录 `/Users/haoyuzuo/Projects/KanDong`，origin `git@github.com:zhyphil/kandong.git`。独立项目。首个核心版本v0.1.0按用户授权发布到GitHub；后续推送/发布仍需对应授权。
 
 ## 构建
 
