@@ -380,7 +380,7 @@
       ]
     }
   ],
-  "physicalDeviceStatus": "Proportional update installed and sharing resumed. A stopped frame has matching calculated and actual draw-matrix scale. User-reported visual discrepancy still awaits a specific number/visual comparison; not marked resolved.",
+  "physicalDeviceStatus": "Proportional version installed; calculated scale matches actual draw matrix. User confirms text enlarges and wide side blank space is gone. This accepts the reported resizing/visual issue only, not every Phase 0A scenario.",
   "proportionalInteractionChecks": [
     {
       "check": "initial_fixture",
@@ -716,5 +716,41 @@
     ],
     "gesture": "none",
     "pageContentRead": false
+  },
+  "photoFollowup": {
+    "evidence": "User-supplied phone photograph, reviewed without copying the image or page text into the repository.",
+    "photoClockMinute": "19:38",
+    "proportionalBuildPackageLastUpdateTime": "2026-09-23 19:43:23",
+    "photoObservation": "Display label 1.06x; source aspect ratio is taller than the display; wide side blank space and little visible enlargement. Photo precedes installation of proportional version.",
+    "currentPhysicalRuntime": {
+      "cropSize": [
+        282,
+        124
+      ],
+      "bitmapSize": [
+        282,
+        124
+      ],
+      "drawableSize": [
+        282,
+        124
+      ],
+      "viewport": [
+        1096,
+        481
+      ],
+      "calculatedScale": 3.8790324,
+      "drawMatrixScale": [
+        3.8790324,
+        3.8790324
+      ],
+      "expectedRoundedLabel": "3.88x",
+      "gesture": "none"
+    },
+    "visualAcceptance": {
+      "result": "passed_by_user_observation",
+      "feedback": "正常了，文字变大且没有大片留白",
+      "scope": "Resizing, visible magnification and side blank space on target Huawei; no claim of all-app compatibility."
+    }
   }
 }
