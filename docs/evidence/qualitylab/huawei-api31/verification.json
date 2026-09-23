@@ -1,0 +1,225 @@
+{
+  "recordedAtUtc": "2026-09-23T19:57:03.920714+00:00",
+  "device": "LIO-AN00",
+  "api": 31,
+  "androidRelease": "12",
+  "reports": [
+    {
+      "model": "LIO-AN00",
+      "api": 31,
+      "scale": 2,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "warmupsPerVariant": 2,
+      "rounds": 9,
+      "variants": [
+        {
+          "variant": 0,
+          "name": "A · 当前平滑",
+          "samplesMs": [
+            1.9625,
+            2.139063,
+            2.173959,
+            2.116146,
+            2.073959,
+            1.961458,
+            2,
+            2.101042,
+            2.415104
+          ],
+          "medianMs": 2.101042,
+          "p95Ms": 2.415104
+        },
+        {
+          "variant": 1,
+          "name": "B · 精细平滑",
+          "samplesMs": [
+            40.097396,
+            40.775,
+            40.777604,
+            43.643229,
+            44.747917,
+            42.992188,
+            40.63125,
+            41.266667,
+            41.202083
+          ],
+          "medianMs": 41.202083,
+          "p95Ms": 44.747917
+        },
+        {
+          "variant": 2,
+          "name": "C · 平滑 + 轻度锐化",
+          "samplesMs": [
+            66.727084,
+            62.9125,
+            59.886458,
+            60.215104,
+            60.291667,
+            59.410938,
+            62.357813,
+            60.264583,
+            63.998958
+          ],
+          "medianMs": 60.291667,
+          "p95Ms": 66.727084
+        }
+      ],
+      "scope": "CPU render + output bitmap allocation only. Excludes capture, UI, PNG export. Not overlay FPS or battery."
+    },
+    {
+      "model": "LIO-AN00",
+      "api": 31,
+      "scale": 3,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "warmupsPerVariant": 2,
+      "rounds": 9,
+      "variants": [
+        {
+          "variant": 0,
+          "name": "A · 当前平滑",
+          "samplesMs": [
+            4.58125,
+            4.406771,
+            4.754688,
+            4.44375,
+            4.651042,
+            4.667188,
+            4.403125,
+            4.963541,
+            4.473438
+          ],
+          "medianMs": 4.58125,
+          "p95Ms": 4.963541
+        },
+        {
+          "variant": 1,
+          "name": "B · 精细平滑",
+          "samplesMs": [
+            84.653125,
+            81.35,
+            82.801562,
+            86.471875,
+            80.820833,
+            82.733854,
+            85.571875,
+            81.952604,
+            82.698438
+          ],
+          "medianMs": 82.733854,
+          "p95Ms": 86.471875
+        },
+        {
+          "variant": 2,
+          "name": "C · 平滑 + 轻度锐化",
+          "samplesMs": [
+            106.809896,
+            103.017188,
+            104.38698,
+            107.976042,
+            104.978125,
+            104.602604,
+            106.722396,
+            112.35052,
+            106.750521
+          ],
+          "medianMs": 106.722396,
+          "p95Ms": 112.35052
+        }
+      ],
+      "scope": "CPU render + output bitmap allocation only. Excludes capture, UI, PNG export. Not overlay FPS or battery."
+    },
+    {
+      "model": "LIO-AN00",
+      "api": 31,
+      "scale": 5,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "warmupsPerVariant": 2,
+      "rounds": 9,
+      "variants": [
+        {
+          "variant": 0,
+          "name": "A · 当前平滑",
+          "samplesMs": [
+            12.390625,
+            15.531771,
+            12.54375,
+            14.291146,
+            12.977605,
+            13.408854,
+            13.463542,
+            13.455208,
+            11.270833
+          ],
+          "medianMs": 13.408854,
+          "p95Ms": 15.531771
+        },
+        {
+          "variant": 1,
+          "name": "B · 精细平滑",
+          "samplesMs": [
+            206.117709,
+            207.360416,
+            208.431771,
+            202.772917,
+            209.115104,
+            205.839062,
+            208.952083,
+            212.885937,
+            203.815104
+          ],
+          "medianMs": 207.360416,
+          "p95Ms": 212.885937
+        },
+        {
+          "variant": 2,
+          "name": "C · 平滑 + 轻度锐化",
+          "samplesMs": [
+            230.223438,
+            226.948438,
+            226.909375,
+            230.993229,
+            225.422917,
+            226.001563,
+            224.805729,
+            226.991666,
+            233.724479
+          ],
+          "medianMs": 226.948438,
+          "p95Ms": 233.724479
+        }
+      ],
+      "scope": "CPU render + output bitmap allocation only. Excludes capture, UI, PNG export. Not overlay FPS or battery."
+    }
+  ],
+  "checks": [
+    "Installed separately from compat",
+    "Launched with no runtime permission prompt",
+    "2x/3x/5x fixed synthetic comparison generated",
+    "Nine timing samples per variant per scale",
+    "Returned to 3x for human readability review"
+  ],
+  "limits": [
+    "Short CPU rendering + bitmap allocation only",
+    "Not real-time capture/overlay FPS",
+    "No sustained battery or temperature test",
+    "Human preference collected at 3x only; not a quantitative readability study"
+  ],
+  "requestedPermissions": [],
+  "apkSha256": "108cef68c1656e0e3a9c3b6d29ee675c3c9df9a9f3f48ff3221ae8d8f50ebb0b",
+  "labVersion": "0.0.1-quality-experiment / code1",
+  "preservedCompatVersion": "0.0.4-gestures / code4",
+  "imagesSha256": {
+    "comparison-3x.png": "7600f8ca5d36cdb6f8050c50738ab34fe28ac56e26565088c4b0c6474474af24",
+    "synthetic-source.png": "32bb84a651bd1294001d75709782bc4bf1dad9ee4e95c0b01def59c38d4e9670"
+  },
+  "humanFeedback": {
+    "scale": 3,
+    "preferredVariant": "C",
+    "response": "C",
+    "context": "User chose C after comparing A/B/C on the target phone",
+    "scope": "Qualitative preference at 3x; no separate 2x/5x preference, reading-error count, or sustained-use acceptance"
+  }
+}
