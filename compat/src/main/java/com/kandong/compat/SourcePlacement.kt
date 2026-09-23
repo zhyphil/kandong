@@ -1,6 +1,5 @@
 package com.kandong.compat
 
-import kotlin.math.min
 import kotlin.math.roundToInt
 
 /** All values are capture-screen pixels; no Android state or view-local coordinates. */
@@ -75,18 +74,4 @@ internal data class MagnifierLayout(
                 grip, dp(80), gap, hysteresis, dp(8), dp(48), dp(32), maxHeight)
         }
     }
-}
-internal fun actualScale(viewportWidth: Int, viewportHeight: Int, crop: Box): Float =
-    if (viewportWidth <= 0 || viewportHeight <= 0 || crop.width <= 0 || crop.height <= 0) 0f
-    else min(viewportWidth.toFloat() / crop.width, viewportHeight.toFloat() / crop.height)
-
-/** Fit a source rectangle to the display aspect ratio, within screen and grip limits. */
-internal fun proportionalSize(viewportWidth: Int, viewportHeight: Int, requestedWidth: Float,
-    widthRange: IntRange, heightRange: IntRange): Pair<Int, Int>? {
-    val ratio = viewportWidth.toDouble() / viewportHeight
-    val low = maxOf(widthRange.first, kotlin.math.ceil(heightRange.first * ratio).toInt())
-    val high = minOf(widthRange.last, kotlin.math.floor(heightRange.last * ratio).toInt())
-    if (low > high) return null
-    val width = requestedWidth.roundToInt().coerceIn(low, high)
-    return width to (width / ratio).roundToInt().coerceIn(heightRange)
 }

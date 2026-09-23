@@ -43,16 +43,11 @@ internal class SourceGesture(
             layout.width, offsetX, startGrip.width)
         val heights = range(anchorY, side.below, layout.minHeight, layout.maxHeight,
             layout.height, offsetY, startGrip.height)
-        val ratio = layout.imageWidth.toFloat() / layout.imageHeight
-        val targetWidth = start.width + if (side.right) dx else -dx
-        val targetHeight = start.height + if (side.below) dy else -dy
-        // Project the finger's position onto the proportional resize diagonal. Either axis
-        // changes both dimensions, so shrinking a corner always increases magnification.
-        val desiredWidth = (ratio * targetWidth + targetHeight) / (ratio * ratio + 1f) * ratio
-        val size = proportionalSize(layout.imageWidth, layout.imageHeight, desiredWidth, widths, heights)
-            ?: return result
-        val x = anchorX + if (side.right) size.first else -size.first
-        val y = anchorY + if (side.below) size.second else -size.second
+        if (widths.isEmpty() || heights.isEmpty()) return result
+        val width = (start.width + if (side.right) dx else -dx).coerceIn(widths)
+        val height = (start.height + if (side.below) dy else -dy).coerceIn(heights)
+        val x = anchorX + if (side.right) width else -width
+        val y = anchorY + if (side.below) height else -height
         val crop = Box(minOf(x, anchorX), minOf(y, anchorY), kotlin.math.abs(x - anchorX), kotlin.math.abs(y - anchorY))
         return GestureResult(crop, startGrip.moved(x - cornerX, y - cornerY))
     }

@@ -14,36 +14,20 @@ class MagnifierGeometryTest {
     private fun change(g: SourceGesture, dx: Float, dy: Float) =
         g.update(7, 1, g.startGrip.left + 24f + dx, g.startGrip.top + 24f + dy)
 
-    @Test fun actualUniformScaleUsesLimitingViewportAxisAndNonPresetRatios() {
-        assertEquals(1096f / 730, actualScale(1096, 480, Box(0, 0, 730, 200)), .0001f)
-        assertEquals(480f / 180, actualScale(1096, 480, Box(0, 0, 400, 180)), .0001f)
-        assertEquals(2f, actualScale(1096, 480, Box(0, 0, 548, 240)), 0f)
-        assertEquals(0f, actualScale(0, 480, initial), 0f)
+    @Test fun widthAndHeightCanBeChangedIndependently() {
+        val g = resize(GripSide(true, true))
+        assertEquals(initial.copy(width = 187), change(g, 37f, 0f).source)
+        assertEquals(initial.copy(height = 95), change(g, 0f, 23f).source)
+        assertEquals(initial.copy(width = 187, height = 95), change(g, 37f, 23f).source)
     }
-    @Test fun shrinkingEitherAxisIncreasesMagnificationWithoutChangingTextProportions() {
-        val source = Box(90, 260, 168, 72)
-        for ((dx, dy) in listOf(-37f to 0f, 0f to -23f, -37f to -23f)) {
-            val resized = change(resize(GripSide(true, true), source), dx, dy).source
-            assertTrue(resized.width < source.width)
-            assertTrue(resized.height < source.height)
-            assertTrue(actualScale(layout.imageWidth, layout.imageHeight, resized) >
-                actualScale(layout.imageWidth, layout.imageHeight, source))
-            assertEquals(layout.imageWidth.toFloat() / layout.imageHeight,
-                resized.width.toFloat() / resized.height, .04f)
-            assertEquals(source.left, resized.left); assertEquals(source.top, resized.top)
-        }
-    }
-    @Test fun growingEitherAxisDecreasesMagnificationAndKeepsWholeCropVisible() {
-        val source = Box(90, 260, 168, 72)
-        for ((dx, dy) in listOf(37f to 0f, 0f to 23f, 37f to 23f)) {
-            val resized = change(resize(GripSide(true, true), source), dx, dy).source
-            assertTrue(resized.width > source.width); assertTrue(resized.height > source.height)
-            val factor = actualScale(layout.imageWidth, layout.imageHeight, resized)
-            assertTrue(factor < actualScale(layout.imageWidth, layout.imageHeight, source))
-            assertTrue(resized.width * factor <= layout.imageWidth + .01f)
-            assertTrue(resized.height * factor <= layout.imageHeight + .01f)
-            assertTrue(layout.imageWidth - resized.width * factor < factor + .1f)
-            assertTrue(layout.imageHeight - resized.height * factor < factor + .1f)
+    @Test fun everyCornerAllowsAnIndependentAxisAndKeepsTheOppositeAnchor() {
+        for (below in listOf(true, false)) for (right in listOf(true, false)) {
+            val width = change(resize(GripSide(below, right)), if (right) 23f else -23f, 0f).source
+            assertEquals(initial.width + 23, width.width); assertEquals(initial.height, width.height)
+            assertEquals(if (right) initial.left else initial.right, if (right) width.left else width.right)
+            val height = change(resize(GripSide(below, right)), 0f, if (below) 13f else -13f).source
+            assertEquals(initial.width, height.width); assertEquals(initial.height + 13, height.height)
+            assertEquals(if (below) initial.top else initial.bottom, if (below) height.top else height.bottom)
         }
     }
     @Test fun allCornersKeepOppositeAnchorAndClampWithoutFlipping() {
@@ -165,30 +149,15 @@ class MagnifierGeometryTest {
             assertFalse(source.intersects(controls.resize))
         }
     }
-    @Test fun proportionalResizeReachesMinMaxAndScreenLimits() {
+    @Test fun independentResizeReachesMinMaxAndScreenLimits() {
         val source = Box(12, 260, 150, 72)
         val g = resize(GripSide(true, true), source)
-        assertEquals(source.copy(width = 75, height = layout.minHeight), change(g, -1000f, -1000f).source)
+        assertEquals(source.copy(width = layout.minWidth, height = layout.minHeight), change(g, -1000f, -1000f).source)
         assertEquals(source.copy(width = layout.imageWidth, height = layout.maxHeight), change(g, 1000f, 1000f).source)
         val top = resize(GripSide(false, true), Box(90, 80, 150, 72))
         val r = change(top, 1000f, -1000f)
         assertTrue(r.grip.inside(360, 800)); assertEquals(0, r.grip.top)
         assertEquals(152, r.source.bottom)
-    }
-    @Test fun allCornersShrinkTowardAnchorAndNeverAccumulateAspectDrift() {
-        for (below in listOf(true, false)) for (right in listOf(true, false)) {
-            var source = Box(90, 260, 168, 72)
-            val inwardX = if (right) -1f else 1f
-            val inwardY = if (below) -1f else 1f
-            for (step in 0..19) {
-                val previous = source
-                source = change(resize(GripSide(below, right), source), inwardX * 2, inwardY * 2).source
-                assertTrue(source.width <= previous.width); assertTrue(source.height <= previous.height)
-                assertEquals(if (right) previous.left else previous.right, if (right) source.left else source.right)
-                assertEquals(if (below) previous.top else previous.bottom, if (below) source.top else source.bottom)
-                assertTrue(kotlin.math.abs(source.height - source.width.toFloat() * layout.imageHeight / layout.imageWidth) <= .5f)
-            }
-        }
     }
     @Test fun unsupportedTinyDisplaysAreRejectedWithoutInvalidClamp() {
         for (w in listOf(0, 1, 30, 100)) for (h in listOf(0, 1, 30, 200))

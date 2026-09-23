@@ -25,6 +25,11 @@ class ProjectionMagnifierService : Service() {
     private var reader: ImageReader? = null
     private var imageView: ImageView? = null
     private var message: TextView? = null
+    private var zoomSlider: SeekBar? = null
+    private val viewport = MagnifierViewport()
+    private var panPointer = -1
+    private var panLastX = 0f
+    private var panLastY = 0f
     private var panel: LinearLayout? = null
     private var handle: TextView? = null
     private var resizeHandle: TextView? = null
@@ -82,8 +87,8 @@ class ProjectionMagnifierService : Service() {
                 stopSelf(); return START_NOT_STICKY
             }
             geometry = layout
-            val (width, height) = proportionalSize(layout.imageWidth, layout.imageHeight, layout.imageWidth / 2f,
-                layout.minWidth..layout.imageWidth, layout.minHeight..layout.maxHeight) ?: error("No initial crop")
+            val width = (layout.imageWidth / 2).coerceAtLeast(layout.minWidth)
+            val height = (layout.imageHeight / 2).coerceIn(layout.minHeight, layout.maxHeight)
             crop = Box((screenWidth - width) / 2, (screenHeight * .32f).toInt() - height / 2, width, height)
             projection = getSystemService(MediaProjectionManager::class.java)
                 .getMediaProjection(intent.getIntExtra("resultCode", Activity.RESULT_CANCELED), consent)
@@ -128,15 +133,31 @@ class ProjectionMagnifierService : Service() {
             setPadding(dp(2), dp(2), dp(2), dp(2)); setBackgroundColor(Color.rgb(7, 94, 84))
         }
         imageView = ImageView(this).apply {
-            setBackgroundColor(Color.WHITE); scaleType = ImageView.ScaleType.FIT_CENTER
-            contentDescription = "取景框区域的原文放大画面"
+            setBackgroundColor(Color.WHITE); scaleType = ImageView.ScaleType.MATRIX
+            contentDescription = "取景框区域的原文放大画面；可在画面内滑动查看"
+            setOnTouchListener { _, event -> onImageTouch(event) }
         }.also {
             root.addView(it, LinearLayout.LayoutParams(geometry.imageWidth, geometry.imageHeight))
-            it.addOnLayoutChangeListener { _, _, _, _, _, _, _, _, _ -> updateStatus() }
+            it.addOnLayoutChangeListener { _, _, _, _, _, _, _, _, _ -> applyViewportTransform() }
         }
         val row = LinearLayout(this).also { root.addView(it, LinearLayout.LayoutParams(-1, dp(48))) }
         message = TextView(this).apply {
             textSize = 14f; setTextColor(Color.WHITE); maxLines = 2; gravity = Gravity.CENTER_VERTICAL
+        }.also { row.addView(it, LinearLayout.LayoutParams(dp(72), -1)) }
+        zoomSlider = SeekBar(this).apply {
+            max = 400; progress = 100; keyProgressIncrement = 10
+            contentDescription = "放大倍数，范围1到5倍，当前2倍"
+            progressTintList = android.content.res.ColorStateList.valueOf(Color.WHITE)
+            progressBackgroundTintList = android.content.res.ColorStateList.valueOf(Color.rgb(110, 165, 155))
+            thumbTintList = android.content.res.ColorStateList.valueOf(Color.rgb(255, 224, 138))
+            setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+                override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                    viewport.setScale(1f + progress / 100f)
+                    applyViewportTransform()
+                }
+                override fun onStartTrackingTouch(seekBar: SeekBar?) { panPointer = -1 }
+                override fun onStopTrackingTouch(seekBar: SeekBar?) { }
+            })
         }.also { row.addView(it, LinearLayout.LayoutParams(0, -1, 1f)) }
         row.addView(Button(this).apply {
             text = "停止"; textSize = 17f; minWidth = 0; minimumWidth = 0; setPadding(0, 0, 0, 0)
@@ -173,7 +194,7 @@ class ProjectionMagnifierService : Service() {
             setBackgroundColor(Color.rgb(130, 45, 10)); contentDescription = description
         }
         handle = grip("移动", "拖动此处移动取景框；提示松手贴边时松开可看屏幕边缘")
-        resizeHandle = grip("↘", "向内拖动角柄放大，向外拖动看更多内容")
+        resizeHandle = grip("↘", "拖动角柄，自由调整取景框宽度和高度")
         handleParams = params(geometry.moveWidth, geometry.grip, true).apply { title = "看懂取景拖动柄" }
         resizeParams = params(geometry.grip, geometry.grip, true).apply { title = "看懂取景缩放角柄" }
         handle!!.setOnTouchListener { _, event -> onGripTouch(GestureMode.MOVE, event) }
@@ -188,6 +209,7 @@ class ProjectionMagnifierService : Service() {
                 val idle = controls ?: return true
                 if (gesture != null || event.pointerCount != 1) return true
                 streamCancelled = false
+                panPointer = -1
                 gesture = SourceGesture(mode, event.getPointerId(0), idle.side, crop,
                     if (mode == GestureMode.MOVE) idle.move else idle.resize, event.rawX, event.rawY, geometry)
                 renderGeometry()
@@ -230,7 +252,9 @@ class ProjectionMagnifierService : Service() {
     }
     private fun renderGeometry() {
         clearFrame()
-        source = Rect(crop.left, crop.top, crop.right, crop.bottom)
+        val nextSource = Rect(crop.left, crop.top, crop.right, crop.bottom)
+        if (source != nextSource) viewport.selectSource(crop.width, crop.height)
+        source = nextSource
         val active = gesture
         if (active == null) controls = geometry.idleControls(crop, panelAtBottom)
         val visible = visibleControls()
@@ -268,17 +292,45 @@ class ProjectionMagnifierService : Service() {
     private fun sourceOverlapsProtectedControls(): Boolean = !placementAvailable ||
         !crop.inside(screenWidth, screenHeight) || !geometry.fits(panelAtBottom, crop, visibleControls()) ||
         visibleControls().any { crop.expanded(dp(3)).intersects(it) }
+    private fun onImageTouch(event: MotionEvent): Boolean {
+        when (event.actionMasked) {
+            MotionEvent.ACTION_DOWN -> {
+                panPointer = if (gesture == null && latest != null && event.pointerCount == 1)
+                    event.getPointerId(0) else -1
+                panLastX = event.rawX; panLastY = event.rawY
+            }
+            MotionEvent.ACTION_POINTER_DOWN, MotionEvent.ACTION_POINTER_UP, MotionEvent.ACTION_CANCEL -> panPointer = -1
+            MotionEvent.ACTION_MOVE -> {
+                if (panPointer != -1 && event.pointerCount == 1 && event.getPointerId(0) == panPointer) {
+                    viewport.dragBy(event.rawX - panLastX, event.rawY - panLastY)
+                    panLastX = event.rawX; panLastY = event.rawY
+                    applyViewportTransform()
+                } else panPointer = -1
+            }
+            MotionEvent.ACTION_UP -> { panPointer = -1; imageView?.performClick() }
+        }
+        return true // Only scroll the local image; never forward a gesture to the underlying app.
+    }
+    private fun applyViewportTransform() {
+        val view = imageView ?: return
+        viewport.setViewport(view.width - view.paddingLeft - view.paddingRight,
+            view.height - view.paddingTop - view.paddingBottom)
+        view.imageMatrix = Matrix().apply {
+            setScale(viewport.scale, viewport.scale)
+            postTranslate(viewport.translateX, viewport.translateY)
+        }
+        updateStatus()
+    }
     private fun updateStatus() {
         val active = gesture?.result
-        val view = imageView
-        val scale = actualScale((view?.width ?: 0) - (view?.paddingLeft ?: 0) - (view?.paddingRight ?: 0),
-            (view?.height ?: 0) - (view?.paddingTop ?: 0) - (view?.paddingBottom ?: 0), crop)
+        val label = String.format(java.util.Locale.ROOT, "%.2f×", viewport.scale)
         message?.text = when {
             !placementAvailable -> "空间不足，请移动取景框"
             active != null && (active.snapX != 0 || active.snapY != 0) -> "松手贴边"
-            scale > 0 -> String.format(java.util.Locale.ROOT, "%.2f× · 本机", scale)
-            else -> "拖动取景框，看清原文"
+            else -> label + if (viewport.canPan) "\n滑动画面" else "\n1–5倍"
         }
+        zoomSlider?.contentDescription = "放大倍数，范围1到5倍，当前${label}"
+        if (Build.VERSION.SDK_INT >= 30) zoomSlider?.stateDescription = label
     }
     private fun clearFrame() { imageView?.setImageDrawable(null); latest?.recycle(); latest = null }
     private fun capture(reader: ImageReader) {
@@ -304,7 +356,7 @@ class ProjectionMagnifierService : Service() {
             val previous = latest
             latest = bitmap; imageView?.setImageBitmap(bitmap); previous?.recycle()
             renderedFrames++
-            updateStatus()
+            applyViewportTransform()
         } catch (_: RuntimeException) {
             clearFrame(); message?.text = "画面暂不可用，请移开遮挡或停止后重试。"
         } finally { image.close() }
@@ -318,12 +370,18 @@ class ProjectionMagnifierService : Service() {
         writer.println("crop=${box(crop)} panelBottom=$panelAtBottom available=$placementAvailable")
         writer.println("move=${box(controls?.move)} resize=${box(controls?.resize)}")
         writer.println("gesture=${gesture?.mode ?: "none"} renderedFrames=$renderedFrames bitmap=${latest?.width ?: 0},${latest?.height ?: 0}")
-        writer.println("viewport=${view?.width ?: 0},${view?.height ?: 0} scale=${actualScale(view?.width ?: 0, view?.height ?: 0, crop)}")
+        writer.println("viewport=${view?.width ?: 0},${view?.height ?: 0} scale=${viewport.scale}")
         val matrix = FloatArray(9)
         view?.imageMatrix?.getValues(matrix)
         val drawable = view?.drawable
         writer.println("drawable=${drawable?.intrinsicWidth ?: 0},${drawable?.intrinsicHeight ?: 0} " +
             "matrixScale=${matrix[Matrix.MSCALE_X]},${matrix[Matrix.MSCALE_Y]}")
+        writer.println("pan=${viewport.panX},${viewport.panY} maxPan=${viewport.maxPanX},${viewport.maxPanY} " +
+            "translation=${matrix[Matrix.MTRANS_X]},${matrix[Matrix.MTRANS_Y]} panPointer=$panPointer")
+        zoomSlider?.let {
+            val location = IntArray(2); it.getLocationOnScreen(location)
+            writer.println("slider=${location[0]},${location[1]},${it.width},${it.height} progress=${it.progress}")
+        }
     }
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
@@ -338,7 +396,7 @@ class ProjectionMagnifierService : Service() {
         projection?.unregisterCallback(projectionCallback); projection?.stop(); projection = null
         clearFrame()
         for (view in listOfNotNull(panel,handle,resizeHandle,outline)) if (view.isAttachedToWindow) wm.removeViewImmediate(view)
-        gesture?.cancel(); gesture = null
+        gesture?.cancel(); gesture = null; panPointer = -1; zoomSlider = null
         panel = null; handle = null; resizeHandle = null; outline = null; imageView = null; message = null
         if (receiverRegistered) { unregisterReceiver(screenOff); receiverRegistered = false }
         stopForeground(STOP_FOREGROUND_REMOVE)

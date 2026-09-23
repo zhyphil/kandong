@@ -31,7 +31,9 @@ Kotlin2.2.20、AGP8.13.0、Gradle8.13、JDK17、compile/target36、Build Tools35
 
 源框和显示窗分开。显示窗、移动柄和缩放角柄设置FLAG_SECURE；取景框与自有受保护窗口相交时清空图像，不把黑屏副本或旧区域当有效放大。边框绘制在裁剪区外，其内部仍可操作原App。默认显示窗为源区相反的上/下方位置；自动切换只改变显示窗，不重新居中或改变源框尺寸。
 
-`SourcePlacement`中的`MagnifierLayout`使用屏幕像素进行矩形、布局与倍率计算。角柄沿固定对角锚点按镜面宽高比连续缩放，宽高下限48dp/32dp再受比例约束，最大值受显示区域及可避让空间约束。图片按FIT_CENTER完整、等比放入已测量的ImageView内容区域：`倍率=min(显示宽/源区宽, 显示高/源区高)`，这表示字形的线性倍率，不是面积比。取景框与镜面保持同一宽高比，整数像素四舍五入最多带来约一个源像素的边缘留白。此前独立宽高的实现会出现单轴缩小却不增倍，已改为等比例缩放。保持内容完整，不能通过拉伸字形或裁去部分源区凑满镜面。[Android ImageView官方说明](https://developer.android.com/reference/android/widget/ImageView.ScaleType#FIT_CENTER)
+`SourcePlacement`中的`MagnifierLayout`使用屏幕像素进行矩形和避让计算。角柄沿固定对角锚点独立调整宽高，下限48dp/32dp，上限受屏幕、手柄及显示窗可避让空间限制。`MagnifierViewport`单独维护倍率（1～5，初始2）、镜面尺寸及滚动偏移。选区变化重置镜面内滚动位置，保留倍率；调整倍率保留镜面中心对应的源像素并约束偏移，不修改选区。
+
+显示使用无密度Bitmap与ImageView的MATRIX模式，实际绘制矩阵的X/Y缩放都直接等于所选倍率，不再以FIT_CENTER或选区宽高推导倍率。SeekBar的0～400对应1.00～5.00倍。超出镜面的轴可滚动至边缘，较小的轴居中留白；两种情况均保持准确倍率和字形比例。镜面上的单指滑动只改变本机图像偏移；多指或取消结束本次滚动，所有事件由镜面消费，不转发给底层App。红框内部仍触摸穿透。[ImageView MATRIX](https://developer.android.com/reference/android/widget/ImageView.ScaleType#MATRIX)、[SeekBar](https://developer.android.com/reference/android/widget/SeekBar)。
 
 自动放置使用中线±24dp缓冲，并检查源框和可见手柄与两处显示窗的碰撞。当前位置会遮挡时优先使用可行位置；无法安全显示时清空并说明。`SourceGesture`冻结按下时的指针ID、源框、活动手柄朝向和缩放对角锚点；显示窗移动不能修改这些数据。松手/取消后再安排空闲手柄。移动手势到边缘继续外拖超过8dp时提示“松手贴边”，正常松手可将源框贴到捕获边缘；反向拖回撤销，取消不贴边。缩放不执行平移贴边，避免破坏对角锚点。
 

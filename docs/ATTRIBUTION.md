@@ -24,3 +24,5 @@ Gradle Wrapper由官方 Gradle8.13 wrapper task生成；Gradle、Kotlin及Androi
 ## 自由取景与自动避让
 
 取景框几何、手势和避让逻辑为KanDong自身实现；未复制其他项目代码。等比居中显示参考[ImageView.ScaleType.FIT_CENTER](https://developer.android.com/reference/android/widget/ImageView.ScaleType#FIT_CENTER)，原始屏幕指针坐标参考[MotionEvent](https://developer.android.com/reference/android/view/MotionEvent#getRawY(int))。实际倍率按显示像素与裁剪像素计算，须注意[Bitmap密度](https://developer.android.com/reference/android/graphics/Bitmap#setDensity(int))可能引入的绘制缩放。
+
+独立倍率滑杆与镜面滚动基于官方[SeekBar](https://developer.android.com/reference/android/widget/SeekBar)和[ImageView.ScaleType.MATRIX](https://developer.android.com/reference/android/widget/ImageView.ScaleType#MATRIX)；比例与滚动约束代码独立实现。此前FIT_CENTER引用为历史设计，当前不以填满镜面决定倍率。

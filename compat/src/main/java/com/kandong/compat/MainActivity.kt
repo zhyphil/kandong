@@ -54,7 +54,7 @@ class MainActivity : Activity() {
             status.text = "已请求停止放大和屏幕共享。"
         }
         status = text("请先允许悬浮窗，然后开始。系统授权需要您亲自确认。", 18f)
-        text("开启后：切换到其他 App，拖动“移动”选择要看的地方。拖动红框外的箭头角柄，向内拉字变大，向外拉看更多；红框和画面保持比例。放大窗会自动换到另一边。移到屏幕边缘出现“松手贴边”时松开，可看最边上的内容。红框里面仍可操作原来的 App。想结束时点“停止”。", 18f)
+        text("开启后：切换到其他 App，拖动“移动”选择要看的地方。拖动红框外的箭头角柄，可以分别调宽、调高。下方拉杆单独调节1到5倍，默认2倍；超出放大窗的内容可在放大画面内滑动查看。放大窗会自动换到另一边。移到屏幕边缘出现“松手贴边”时松开，可看最边上的内容。红框里面仍可操作原来的 App。想结束时点“停止”。", 18f)
         setContentView(ScrollView(this).apply { addView(body) })
     }
     @Deprecated("Platform activity result kept dependency-free for this spike")
@@ -65,6 +65,6 @@ class MainActivity : Activity() {
         if (!consent.isChecked || !Settings.canDrawOverlays(this)) return
         startForegroundService(Intent(this, ProjectionMagnifierService::class.java)
             .putExtra("resultCode", resultCode).putExtra("projectionConsent", data))
-        status.text = "请切换到要查看的页面。拖动“移动”选择区域，箭头角柄向内拉，字变大；向外拉，看更多。"
+        status.text = "请切换到要查看的页面。拖动“移动”选择区域，拖箭头角柄调区域，拉杆调1到5倍；放大画面内可滑动查看。"
     }
 }

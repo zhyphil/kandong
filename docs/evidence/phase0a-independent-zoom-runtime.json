@@ -1,0 +1,705 @@
+{
+  "date": "2026-09-23",
+  "version": "0.0.2-freezoom (2)",
+  "scope": "Dedicated API36 emulator and synthetic fixture only; geometry/matrix/control metadata; no captured pixels or real page text stored.",
+  "unitTests": 28,
+  "builds": "compat debug/release and lintDebug passed",
+  "interactionChecks": [
+    {
+      "check": "initial_fixture",
+      "layout": "KANDONG_LAYOUT:f5d7c5e9796f57da464b2a35",
+      "clicks": 0,
+      "button": [
+        42,
+        816,
+        1038,
+        942
+      ]
+    },
+    {
+      "check": "default_two",
+      "slider": [
+        220,
+        1705,
+        660,
+        126
+      ],
+      "crop": [
+        286,
+        520,
+        508,
+        189
+      ],
+      "move": [
+        442,
+        725,
+        210,
+        126
+      ],
+      "resize": [
+        668,
+        725,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 64,
+      "bitmap": [
+        508,
+        189
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 2.0,
+      "matrix": [
+        2.0,
+        2.0
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        0.0,
+        0.0
+      ],
+      "progress": 100
+    },
+    {
+      "check": "width_only_keeps_two",
+      "slider": [
+        220,
+        1705,
+        660,
+        126
+      ],
+      "crop": [
+        286,
+        520,
+        645,
+        189
+      ],
+      "move": [
+        579,
+        725,
+        210,
+        126
+      ],
+      "resize": [
+        805,
+        725,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 100,
+      "bitmap": [
+        645,
+        189
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 2.0,
+      "matrix": [
+        2.0,
+        2.0
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        273.0,
+        0.0
+      ],
+      "progress": 100
+    },
+    {
+      "check": "height_only_keeps_two",
+      "slider": [
+        220,
+        1705,
+        660,
+        126
+      ],
+      "crop": [
+        286,
+        520,
+        645,
+        272
+      ],
+      "move": [
+        579,
+        808,
+        210,
+        126
+      ],
+      "resize": [
+        805,
+        808,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 139,
+      "bitmap": [
+        645,
+        272
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 2.0,
+      "matrix": [
+        2.0,
+        2.0
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        273.0,
+        166.0
+      ],
+      "progress": 100
+    },
+    {
+      "check": "slider_min",
+      "slider": [
+        220,
+        1705,
+        660,
+        126
+      ],
+      "crop": [
+        286,
+        520,
+        645,
+        272
+      ],
+      "move": [
+        579,
+        808,
+        210,
+        126
+      ],
+      "resize": [
+        805,
+        808,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 139,
+      "bitmap": [
+        645,
+        272
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 1.0,
+      "matrix": [
+        1.0,
+        1.0
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        0.0,
+        0.0
+      ],
+      "progress": 0
+    },
+    {
+      "check": "slider_continuous",
+      "slider": [
+        220,
+        1705,
+        660,
+        126
+      ],
+      "crop": [
+        286,
+        520,
+        645,
+        272
+      ],
+      "move": [
+        579,
+        808,
+        210,
+        126
+      ],
+      "resize": [
+        805,
+        808,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 140,
+      "bitmap": [
+        645,
+        272
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 2.63,
+      "matrix": [
+        2.63,
+        2.63
+      ],
+      "pan": [
+        339.67505,
+        168.68002
+      ],
+      "maxPan": [
+        679.3501,
+        337.36005
+      ],
+      "progress": 163
+    },
+    {
+      "check": "slider_max",
+      "slider": [
+        220,
+        1705,
+        660,
+        126
+      ],
+      "crop": [
+        286,
+        520,
+        645,
+        272
+      ],
+      "move": [
+        579,
+        808,
+        210,
+        126
+      ],
+      "resize": [
+        805,
+        808,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 140,
+      "bitmap": [
+        645,
+        272
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 5.0,
+      "matrix": [
+        5.0,
+        5.0
+      ],
+      "pan": [
+        1104.0,
+        491.0
+      ],
+      "maxPan": [
+        2208.0,
+        982.0
+      ],
+      "progress": 400
+    },
+    {
+      "check": "pan_to_end",
+      "slider": [
+        220,
+        1705,
+        660,
+        126
+      ],
+      "crop": [
+        286,
+        520,
+        645,
+        272
+      ],
+      "move": [
+        579,
+        808,
+        210,
+        126
+      ],
+      "resize": [
+        805,
+        808,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 152,
+      "bitmap": [
+        645,
+        272
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 5.0,
+      "matrix": [
+        5.0,
+        5.0
+      ],
+      "pan": [
+        2208.0,
+        982.0
+      ],
+      "maxPan": [
+        2208.0,
+        982.0
+      ],
+      "progress": 400
+    },
+    {
+      "check": "pan_to_start",
+      "slider": [
+        220,
+        1705,
+        660,
+        126
+      ],
+      "crop": [
+        286,
+        520,
+        645,
+        272
+      ],
+      "move": [
+        579,
+        808,
+        210,
+        126
+      ],
+      "resize": [
+        805,
+        808,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 163,
+      "bitmap": [
+        645,
+        272
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 5.0,
+      "matrix": [
+        5.0,
+        5.0
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        2208.0,
+        982.0
+      ],
+      "progress": 400
+    },
+    {
+      "check": "slider_pan_resize_do_not_operate_underlying_page",
+      "layout": "KANDONG_LAYOUT:f5d7c5e9796f57da464b2a35",
+      "clicks": 0,
+      "button": [
+        42,
+        816,
+        1038,
+        942
+      ]
+    },
+    {
+      "check": "automatic_above_at_five",
+      "slider": [
+        220,
+        467,
+        660,
+        126
+      ],
+      "crop": [
+        286,
+        1420,
+        645,
+        272
+      ],
+      "move": [
+        579,
+        1278,
+        210,
+        126
+      ],
+      "resize": [
+        805,
+        1278,
+        126,
+        126
+      ],
+      "bottom": false,
+      "available": true,
+      "frames": 206,
+      "bitmap": [
+        645,
+        272
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 5.0,
+      "matrix": [
+        5.0,
+        5.0
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        2208.0,
+        982.0
+      ],
+      "progress": 400
+    },
+    {
+      "check": "top_edge",
+      "slider": [
+        220,
+        1705,
+        660,
+        126
+      ],
+      "crop": [
+        286,
+        0,
+        645,
+        272
+      ],
+      "move": [
+        579,
+        288,
+        210,
+        126
+      ],
+      "resize": [
+        805,
+        288,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 265,
+      "bitmap": [
+        645,
+        272
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 5.0,
+      "matrix": [
+        5.0,
+        5.0
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        2208.0,
+        982.0
+      ],
+      "progress": 400
+    },
+    {
+      "check": "bottom_edge",
+      "slider": [
+        220,
+        467,
+        660,
+        126
+      ],
+      "crop": [
+        286,
+        1648,
+        645,
+        272
+      ],
+      "move": [
+        579,
+        1506,
+        210,
+        126
+      ],
+      "resize": [
+        805,
+        1506,
+        126,
+        126
+      ],
+      "bottom": false,
+      "available": true,
+      "frames": 325,
+      "bitmap": [
+        645,
+        272
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 5.0,
+      "matrix": [
+        5.0,
+        5.0
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        2208.0,
+        982.0
+      ],
+      "progress": 400
+    },
+    {
+      "check": "source_interior_touch_through",
+      "layout": "KANDONG_LAYOUT:f5d7c5e9796f57da464b2a35",
+      "clicks": 1,
+      "button": [
+        42,
+        816,
+        1038,
+        942
+      ]
+    },
+    {
+      "check": "stop_releases_projection_service_windows",
+      "passed": true
+    },
+    {
+      "check": "new_session_resets_to_two",
+      "slider": [
+        220,
+        1705,
+        660,
+        126
+      ],
+      "crop": [
+        286,
+        520,
+        508,
+        189
+      ],
+      "move": [
+        442,
+        725,
+        210,
+        126
+      ],
+      "resize": [
+        668,
+        725,
+        126,
+        126
+      ],
+      "bottom": true,
+      "available": true,
+      "frames": 33,
+      "bitmap": [
+        508,
+        189
+      ],
+      "viewport": [
+        1017,
+        378
+      ],
+      "scale": 2.0,
+      "matrix": [
+        2.0,
+        2.0
+      ],
+      "pan": [
+        0.0,
+        0.0
+      ],
+      "maxPan": [
+        0.0,
+        0.0
+      ],
+      "progress": 100
+    },
+    {
+      "check": "new_session_stopped",
+      "passed": true
+    }
+  ],
+  "physicalDeviceStatus": "Installed successfully on target Huawei LIO-AN00/API31. User confirms the three new interactions behave as requested.",
+  "physicalUserFeedback": "符合预期，三个操作都正常",
+  "physicalReadOnlySample": {
+    "crop": [
+      133,
+      1081,
+      661,
+      244
+    ],
+    "viewport": [
+      1096,
+      481
+    ],
+    "scale": 2.44,
+    "drawMatrixScale": [
+      2.44,
+      2.44
+    ],
+    "sliderProgress": 144,
+    "pan": [
+      0,
+      30
+    ],
+    "maxPan": [
+      516.8401,
+      114.359985
+    ],
+    "panelBottom": false,
+    "gesture": "none",
+    "pageContentRead": false
+  }
+}

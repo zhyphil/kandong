@@ -10,8 +10,8 @@ android {
         applicationId = "com.kandong.compat"
         minSdk = 29
         targetSdk = 36
-        versionCode = 1
-        versionName = "0.0.1-spike"
+        versionCode = 2
+        versionName = "0.0.2-freezoom"
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
