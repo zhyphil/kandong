@@ -33,13 +33,15 @@
     "After temporary appops changes, the test left and re-entered the Activity to refresh its existing permission UI"
   ],
   "huawei": {
-    "status": "installed; active projection observed; waiting for user confirmation of automatic navigation",
+    "status": "installed; active projection observed; user subsequently gave positive overall feedback",
     "target": "HUAWEI LIO-AN00 / API31",
     "versionCode": 6,
     "versionName": "0.1.1-dev",
     "projectionActive": true,
     "homeResumedAtObservation": false,
     "expandedAtObservation": true,
-    "scope": "Read-only app/window state; no desktop screenshot or injected touches. Automatic transition still needs user confirmation."
+    "scope": "Read-only app/window state; no desktop screenshot or injected touches. The prior state sample alone did not establish the automatic transition.",
+    "userFeedback": "很好，接下来做什么",
+    "feedbackScope": "Overall acceptance of the startup experience in context; no additional itemized device test"
   }
 }
