@@ -14,6 +14,7 @@ import android.os.*
 import android.view.*
 import android.widget.*
 import kotlin.math.roundToInt
+import com.kandong.graphics.GpuViewport
 
 /** Opt-in, local-only screen stream. No frame is saved or sent to any service. */
 class ProjectionMagnifierService : Service() {
@@ -78,6 +79,40 @@ class ProjectionMagnifierService : Service() {
     private var resizeParams: WindowManager.LayoutParams? = null
     private var outlineParams: WindowManager.LayoutParams? = null
     private var latest: Bitmap? = null
+    private var latestBytes: ByteArray? = null
+    private var enhanced: Bitmap? = null
+    private var clarity: ClarityRenderer? = null
+    private var clarityEnabled = false
+    private var requestedViewport: GpuViewport? = null
+    private var enhancedFrames = 0L
+    private var clarityFailures = 0L
+    private val preferencesListener = android.content.SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+        if (key == ClaritySettings.KEY && !closing) {
+            clarityEnabled = ClaritySettings.enabled(this)
+            if (!clarityEnabled) latestBytes = null
+            clarity?.invalidate(true); requestedViewport = null
+            imageView?.setImageBitmap(latest); enhanced?.recycle(); enhanced = null
+            applyViewportTransform()
+        }
+    }
+    override fun onCreate() {
+        super.onCreate()
+        clarityEnabled = ClaritySettings.enabled(this)
+        ClaritySettings.preferences(this).registerOnSharedPreferenceChangeListener(preferencesListener)
+        clarity = ClarityRenderer({ frame, bitmap ->
+            if (closing || !uiState.capturing || !clarityEnabled || frame.viewport != requestedViewport || latest == null) bitmap.recycle()
+            else {
+                val old = enhanced; enhanced = bitmap
+                imageView?.setImageBitmap(bitmap); imageView?.imageMatrix = Matrix()
+                old?.recycle(); enhancedFrames++
+            }
+        }, {
+            if (!closing && clarityEnabled) {
+                clarityFailures++; ClaritySettings.setEnabled(this, false)
+                Toast.makeText(this,"清晰增强暂不可用，已恢复普通画面。",Toast.LENGTH_LONG).show()
+            }
+        })
+    }
     private var source = Rect()
     private var screenWidth = 0
     private var screenHeight = 0
@@ -557,9 +592,24 @@ class ProjectionMagnifierService : Service() {
         if (closing || !uiState.capturing || view.width <= 0 || view.height <= 0) return
         viewport.setViewport(view.width - view.paddingLeft - view.paddingRight,
             view.height - view.paddingTop - view.paddingBottom)
-        view.imageMatrix = Matrix().apply {
+        val target = ClarityTarget.create(clarityEnabled, viewport.viewWidth, viewport.viewHeight,
+            viewport.scale, viewport.translateX, viewport.translateY)
+        if (clarityEnabled && target == null) {
+            // A renderer allocation limit is not a failure of the original magnifier.
+            clarityFailures++; ClaritySettings.setEnabled(this, false)
+            Toast.makeText(this,"此显示尺寸暂不支持增强，已恢复普通画面。",Toast.LENGTH_LONG).show()
+        }
+        if (target != requestedViewport) {
+            clarity?.invalidate(); requestedViewport = target
+            // Keep gestures immediately responsive while the newest enhanced viewport is computed.
+            view.setImageBitmap(latest); enhanced?.recycle(); enhanced = null
+        }
+        if (enhanced == null) view.imageMatrix = Matrix().apply {
             setScale(viewport.scale, viewport.scale)
             postTranslate(viewport.translateX, viewport.translateY)
+        }
+        if (clarityEnabled && target != null) latestBytes?.let { bytes ->
+            clarity?.submit(ClarityRenderer.Frame(bytes, source.width(), source.height(), target))
         }
         updateStatus()
     }
@@ -577,7 +627,12 @@ class ProjectionMagnifierService : Service() {
         zoomSlider?.contentDescription = "放大倍数，范围1到5倍，当前${label}"
         if (Build.VERSION.SDK_INT >= 30) zoomSlider?.stateDescription = label
     }
-    private fun clearFrame() { imageView?.setImageDrawable(null); latest?.recycle(); latest = null }
+    private fun clearFrame() {
+        clarity?.invalidate(release = !uiState.capturing || closing); requestedViewport = null
+        imageView?.setImageDrawable(null)
+        latest?.recycle(); latest = null; latestBytes = null
+        enhanced?.recycle(); enhanced = null
+    }
     private fun capture(reader: ImageReader) {
         val image = try { reader.acquireLatestImage() } catch (_: IllegalStateException) { null } ?: return
         try {
@@ -600,7 +655,10 @@ class ProjectionMagnifierService : Service() {
             bitmap.density = Bitmap.DENSITY_NONE // Crop dimensions and viewport are physical pixels.
             bitmap.copyPixelsFromBuffer(java.nio.ByteBuffer.wrap(bytes))
             val previous = latest
-            latest = bitmap; imageView?.setImageBitmap(bitmap); previous?.recycle()
+            latest = bitmap; latestBytes = if (clarityEnabled) bytes else null
+            // During enhancement the previous completed frame stays until its replacement is ready.
+            if (enhanced == null) imageView?.setImageBitmap(bitmap)
+            previous?.recycle()
             renderedFrames++
             applyViewportTransform()
         } catch (_: RuntimeException) {
@@ -621,6 +679,10 @@ class ProjectionMagnifierService : Service() {
             writer.println("tool[$label]=${location[0]},${location[1]},${button.width},${button.height}")
         }
         fun menuActions(view: View) {
+            if(view is Switch) {
+                val location=IntArray(2); view.getLocationOnScreen(location)
+                writer.println("claritySwitch=${location[0]},${location[1]},${view.width},${view.height} checked=${view.isChecked}")
+            }
             if(view is Button) {
                 val location=IntArray(2); view.getLocationOnScreen(location)
                 writer.println("menuAction[${view.text}]=${location[0]},${location[1]},${view.width},${view.height} enabled=${view.isEnabled}")
@@ -633,6 +695,7 @@ class ProjectionMagnifierService : Service() {
         writer.println("move=${box(controls?.move)} resize=${box(controls?.resize)}")
         writer.println("pinching=${scaleDetector?.isInProgress == true} gesture=${gesture?.mode ?: "none"} renderedFrames=$renderedFrames bitmap=${latest?.width ?: 0},${latest?.height ?: 0}")
         writer.println("viewport=${view?.width ?: 0},${view?.height ?: 0} scale=${viewport.scale}")
+        writer.println("clarityEnabled=$clarityEnabled enhancedFrames=$enhancedFrames clarityFailures=$clarityFailures gpuOpen=${clarity?.resourcesOpen == true} gpuCleanupFailures=${clarity?.cleanupFailures ?: 0} enhancedBitmap=${enhanced?.width ?: 0},${enhanced?.height ?: 0}")
         val matrix = FloatArray(9)
         view?.imageMatrix?.getValues(matrix)
         val drawable = view?.drawable
@@ -662,6 +725,8 @@ class ProjectionMagnifierService : Service() {
         safely { projection?.unregisterCallback(projectionCallback) }; safely { projection?.stop() }; projection=null
         if(receiverRegistered) { safely { unregisterReceiver(screenOff) }; receiverRegistered=false }
         if(displayListenerRegistered) { safely { displayManager.unregisterDisplayListener(displayListener) }; displayListenerRegistered=false }
+        clarity?.close(); clarity=null
+        ClaritySettings.preferences(this).unregisterOnSharedPreferenceChangeListener(preferencesListener)
         safely { stopForeground(STOP_FOREGROUND_REMOVE) }; stopSelf()
     }
     override fun onDestroy() { endSession(); super.onDestroy() }

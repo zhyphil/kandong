@@ -104,6 +104,14 @@ internal object CompatUi {
             body.addView(button(c,title,action=action),LinearLayout.LayoutParams(-1,-2).apply { topMargin=dp(c,8) })
         }
         if(page == null) {
+            body.addView(Switch(c).apply {
+                text="清晰增强"; textSize=20f; setTextColor(ink)
+                minimumHeight=dp(c,56); isChecked=ClaritySettings.enabled(c)
+                setPadding(dp(c,8),dp(c,8),dp(c,8),dp(c,8))
+                contentDescription="清晰增强，本机处理，可随时关闭"
+                setOnCheckedChangeListener { _, enabled -> ClaritySettings.setEnabled(c,enabled) }
+            },LinearLayout.LayoutParams(-1,-2))
+            body.addView(text(c,"让文字边缘更清楚 · 试用功能\n只在本机处理；若感觉卡顿或手机变热，可关闭。",16f,muted))
             row("使用帮助") { navigate("使用帮助") }
             row("隐私说明") { navigate("隐私说明") }
             for(title in listOf("区域翻译设置","账号与订阅")) {

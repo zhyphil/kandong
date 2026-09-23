@@ -81,3 +81,5 @@ adb -s <目标设备> shell am start --activity-clear-top -a com.kandong.quality
 ## 官方依据
 
 [Android EGL14](https://developer.android.com/reference/android/opengl/EGL14)、[GLES30](https://developer.android.com/reference/android/opengl/GLES30)；[Khronos EXT_gpu_shader5](https://registry.khronos.org/OpenGL/extensions/EXT/EXT_gpu_shader5.txt)说明precise限制运算重排/合并，不能单凭该限定符声称与CPU完全一致。Mitchell公式归属沿用[QUALITY_LAB](QUALITY_LAB.md#来源与归属)。实现独立编写，没有第三方源码、模型或新运行时依赖。
+
+后续进度：已将共享后端接入兼容放大镜的可选开关，连续视窗与设备回归见 [CLARITY_ENHANCEMENT](CLARITY_ENHANCEMENT.md)。本页上述原独立实验记录保持历史范围。

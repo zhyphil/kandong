@@ -12,3 +12,5 @@ include(":compat")
 
 // Independent synthetic-image experiment; not included in the production APK.
 include(":qualitylab")
+
+include(":graphics")

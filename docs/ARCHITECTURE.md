@@ -74,3 +74,7 @@ Kotlin2.2.20、AGP8.13.0、Gradle8.13、JDK17、compile/target36、Build Tools35
 云模型若以后需要，另做数据最小化、单次发送同意、供应商/留存披露。保持无输入执行器；后续 Explain → Highlight → Human taps 是附加层。
 
 几何变化后清空旧显示图并丢弃ImageReader已排队帧，再用新矩形裁剪后续帧；不比较图片生产者时间戳与系统时钟。窗口事务与屏幕采集不是原子操作，快速移动仍可能出现短暂空白/帧延迟，需实际设备观察；不把这条异步显示链路直接当作未来翻译的同步快照。调试APK的标准Service dump只输出区域/窗口几何、倍率与帧计数，不含页面文字、像素或包名；发布版不输出这些诊断。
+
+## 可选本机清晰增强
+
+compat 通过 graphics 共享已在独立实验验证的 C 算法。固定镜面大小渲染、连续倍率/平移仍来自 MagnifierViewport；普通画面用缩放矩阵，增强输出用单位矩阵。主线程持有普通Bitmap，工作线程只接收独立选区字节；LatestRenderWorker 只保留一个待处理请求，并用失效代数丢弃迟到结果。收起/菜单/结束请求 owner 线程释放GL资源；系统共享会话规则不变。详细限制与验证见 [CLARITY_ENHANCEMENT](CLARITY_ENHANCEMENT.md)。

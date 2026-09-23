@@ -17,8 +17,8 @@ android {
         applicationId = "com.kandong.compat"
         minSdk = 29
         targetSdk = 36
-        versionCode = 6
-        versionName = "0.1.1-dev"
+        versionCode = 7
+        versionName = "0.1.1-clarity-dev"
     }
     signingConfigs {
         if (releaseCredentialsFile.isFile) {
@@ -46,4 +46,4 @@ android {
     kotlinOptions { jvmTarget = "17" }
 }
 
-dependencies { testImplementation("junit:junit:4.13.2") }
+dependencies { implementation(project(":graphics")); testImplementation("junit:junit:4.13.2") }

@@ -1,0 +1,109 @@
+[
+  {
+    "check": "off_by_default_preserves_baseline",
+    "scale": 2.0,
+    "matrix": [
+      2.0,
+      2.0
+    ]
+  },
+  {
+    "check": "menu_switch_enables_fixed_viewport_output",
+    "enabled": true,
+    "gpu": true,
+    "frames": 3,
+    "failures": 0,
+    "cleanup": 0,
+    "bitmap": [
+      1017,
+      309
+    ]
+  },
+  {
+    "check": "drag_resize_pinch_slider_pan_preserved",
+    "scale": 3.89,
+    "crop": [
+      236,
+      537,
+      548,
+      179
+    ],
+    "pan": [
+      979.04065,
+      233.81418
+    ],
+    "matrix": [
+      1.0,
+      1.0
+    ],
+    "enhancement": {
+      "enabled": true,
+      "gpu": true,
+      "frames": 167,
+      "failures": 0,
+      "cleanup": 0,
+      "bitmap": [
+        1017,
+        309
+      ]
+    }
+  },
+  {
+    "check": "collapse_stops_copy_and_gpu_clears_bitmap",
+    "enabled": true,
+    "gpu": false,
+    "frames": 167,
+    "failures": 0,
+    "cleanup": 0,
+    "bitmap": [
+      0,
+      0
+    ]
+  },
+  {
+    "check": "collapse_menu_resume_retain_geometry",
+    "retained": {
+      "crop": [
+        236,
+        537,
+        548,
+        179
+      ],
+      "scale": 3.89,
+      "pan": [
+        979.04065,
+        233.81418
+      ],
+      "bottom": true
+    }
+  },
+  {
+    "check": "off_restores_original_matrix",
+    "scale": 3.89,
+    "matrix": [
+      3.89,
+      3.89
+    ],
+    "gpuClosed": true
+  },
+  {
+    "check": "stop_removes_projection_and_windows",
+    "passed": true
+  },
+  {
+    "check": "next_session_remembers_setting_and_defaults_to_two",
+    "enabled": true,
+    "gpu": true,
+    "frames": 6,
+    "failures": 0,
+    "cleanup": 0,
+    "bitmap": [
+      1017,
+      309
+    ]
+  },
+  {
+    "check": "lock_ends_enhanced_session",
+    "passed": true
+  }
+]

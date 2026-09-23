@@ -1,4 +1,4 @@
-package com.kandong.qualitylab
+package com.kandong.graphics
 
 import android.graphics.Bitmap
 import android.opengl.EGL14 as EGL
@@ -14,18 +14,29 @@ import java.nio.ByteBuffer
  * No capture, fallback, shared contexts or floating-point render targets. Errors close on that
  * same thread, including partial construction. The caller must also use finally/use for cancellation.
  */
-internal class GpuC : AutoCloseable {
+class GpuC : AutoCloseable {
     class Input private constructor(val width: Int, val height: Int, val count: Int,
-        internal val rgba: ByteBuffer, val packingMs: Double) {
+        private val rgba: ByteBuffer, val packingMs: Double) {
+        internal fun uploadBytes(): ByteBuffer = rgba.duplicate().apply { rewind() }
         companion object {
+            /** Copies tightly packed, top-row-first RGBA from a selected ROI; alpha is ignored. */
+            fun fromRgba(bytes: ByteArray, width: Int, height: Int): Input {
+                val count = GpuChecks.input(width, height)
+                require(bytes.size.toLong() == count.toLong() * 4L) { "RGBA byte count mismatch" }
+                GpuChecks.cancellation()
+                val start = System.nanoTime()
+                val owned = ByteBuffer.allocateDirect(bytes.size).apply { put(bytes); flip() }
+                GpuChecks.cancellation()
+                return Input(width, height, count, owned.asReadOnlyBuffer(), elapsed(start))
+            }
             /** Snapshot ARGB integers explicitly into RGBA bytes, independent of native byte order. */
             fun pack(pixels: IntArray, width: Int, height: Int): Input {
-                GpuLabChecks.shape(width, height, pixels.size, 1)
-                GpuLabChecks.opaque(pixels)
+                GpuChecks.integerShape(width, height, pixels.size, 1)
+                GpuChecks.opaque(pixels)
                 val start = System.nanoTime()
                 val bytes = ByteBuffer.allocateDirect((pixels.size.toLong() * 4L).toInt())
                 pixels.forEachIndexed { index, pixel ->
-                    if (index % 4096 == 0) GpuLabChecks.cancellation()
+                    if (index % 4096 == 0) GpuChecks.cancellation()
                     bytes.put((pixel ushr 16).toByte()).put((pixel ushr 8).toByte())
                         .put(pixel.toByte()).put(255.toByte())
                 }
@@ -48,6 +59,12 @@ internal class GpuC : AutoCloseable {
     private var closed = false
     private var sharpenProgram = 0
     private var interpolateProgram = 0
+    private var viewportProgram = 0
+    private var integerScale: Int? = null
+    private var preparedViewport: GpuViewport? = null
+    private val coefficientWidths = IntArray(2)
+    private val coefficientRows = IntArray(2)
+    private val coefficientBuffers = arrayOfNulls<ByteBuffer>(2)
     private val textures = IntArray(5)
     private val framebuffer = IntArray(1)
     private val vertexArray = IntArray(1)
@@ -68,7 +85,7 @@ internal class GpuC : AutoCloseable {
     init {
         val start = System.nanoTime()
         try {
-            GpuLabChecks.cancellation()
+            GpuChecks.cancellation()
             display = EGL.eglGetDisplay(EGL.EGL_DEFAULT_DISPLAY)
             check(display != EGL.EGL_NO_DISPLAY) { eglMessage("eglGetDisplay") }
             val major = IntArray(1)
@@ -122,6 +139,7 @@ internal class GpuC : AutoCloseable {
             GL.glPixelStorei(GL.GL_UNPACK_ALIGNMENT, 1)
             sharpenProgram = program(SHARPEN)
             interpolateProgram = program(MITCHELL)
+            viewportProgram = program(VIEWPORT)
             GL.glGenTextures(textures.size, textures, 0)
             GL.glGenFramebuffers(1, framebuffer, 0)
             GL.glGenVertexArrays(1, vertexArray, 0)
@@ -130,7 +148,7 @@ internal class GpuC : AutoCloseable {
             gl("initialize")
             GL.glFinish()
             gl("initialize completion")
-            GpuLabChecks.cancellation()
+            GpuChecks.cancellation()
             initializationMs = elapsed(start)
         } catch (failure: Throwable) {
             try { close() } catch (cleanup: Throwable) { failure.addSuppressed(cleanup) }
@@ -138,40 +156,52 @@ internal class GpuC : AutoCloseable {
         }
     }
 
-    /** Allocate outside measured samples. Subsequent renders of the same shape reuse all textures. */
+    /** Allocate outside measured samples. Integer laboratory math/limits remain unchanged. */
     fun prepare(input: Input, scale: Int): Double = guarded {
-        val shape = GpuLabChecks.shape(input.width, input.height, input.count, scale)
-        GpuLabChecks.deviceLimits(input.width, input.height, shape, maxTextureSize, maxViewportDims)
-        GpuLabChecks.cancellation()
-        if (sourceWidth == input.width && sourceHeight == input.height &&
-            outputWidth == shape.width && outputHeight == shape.height) return@guarded 0.0
+        val shape = GpuChecks.integerShape(input.width, input.height, input.count, scale)
+        prepareTargets(input, shape, scale, null)
+    }
+
+    private fun prepareTargets(input: Input, shape: GpuChecks.Shape, scale: Int?, viewport: GpuViewport?): Double {
+        GpuChecks.deviceLimits(input.width, input.height, shape, maxTextureSize, maxViewportDims)
+        GpuChecks.cancellation()
+        val sourceChanged = sourceWidth != input.width || sourceHeight != input.height
+        val outputChanged = outputWidth != shape.width || outputHeight != shape.height
+        if (!sourceChanged && !outputChanged && integerScale == scale && preparedViewport == viewport) return 0.0
         GL.glFinish()
         gl("before allocation")
         val start = System.nanoTime()
         for (index in 0..2) {
+            if (!(if (index == 2) outputChanged else sourceChanged)) continue
             val width = if (index == 2) shape.width else input.width
             val height = if (index == 2) shape.height else input.height
             GL.glBindTexture(GL.GL_TEXTURE_2D, textures[index])
-            GL.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MIN_FILTER, GL.GL_NEAREST)
-            GL.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MAG_FILTER, GL.GL_NEAREST)
-            GL.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_WRAP_S, GL.GL_CLAMP_TO_EDGE)
-            GL.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_WRAP_T, GL.GL_CLAMP_TO_EDGE)
+            textureParameters()
             GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_RGBA8, width, height, 0,
                 GL.GL_RGBA, GL.GL_UNSIGNED_BYTE, null)
             gl("allocate RGBA8 texture $index")
         }
-        // Float textures are sampled only, never used as framebuffer attachments.
-        // Precompute coefficients once with the same Float operations as the CPU reference.
-        for ((index, size) in listOf(3 to shape.width, 4 to shape.height)) {
-            val weights = GpuSamplingWeights.create(size, scale)
-            GL.glBindTexture(GL.GL_TEXTURE_2D, textures[index])
-            GL.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MIN_FILTER, GL.GL_NEAREST)
-            GL.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MAG_FILTER, GL.GL_NEAREST)
-            GL.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_WRAP_S, GL.GL_CLAMP_TO_EDGE)
-            GL.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_WRAP_T, GL.GL_CLAMP_TO_EDGE)
-            val buffer = ByteBuffer.allocateDirect(weights.size * 4)
-                .order(java.nio.ByteOrder.nativeOrder()).asFloatBuffer().apply { put(weights); flip() }
-            GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_RGBA32F, size, 1, 0, GL.GL_RGBA, GL.GL_FLOAT, buffer)
+        // Sampled Float textures, never framebuffer attachments. CPU Float rounding is intentional.
+        for (axis in 0..1) {
+            val size = if (axis == 0) shape.width else shape.height
+            val rows = if (viewport == null) 1 else 2
+            val weights = if (viewport == null) GpuSamplingWeights.create(size, checkNotNull(scale))
+                else GpuSamplingWeights.viewport(if (axis == 0) input.width else input.height,
+                    size, viewport.scale, if (axis == 0) viewport.translateX else viewport.translateY)
+            val bytes = weights.size * 4
+            if ((coefficientBuffers[axis]?.capacity() ?: 0) < bytes)
+                coefficientBuffers[axis] = ByteBuffer.allocateDirect(bytes).order(java.nio.ByteOrder.nativeOrder())
+            val buffer = checkNotNull(coefficientBuffers[axis]).apply { clear() }.asFloatBuffer()
+                .apply { put(weights); flip() }
+            GL.glBindTexture(GL.GL_TEXTURE_2D, textures[axis + 3])
+            textureParameters()
+            if (coefficientWidths[axis] != size || coefficientRows[axis] != rows) {
+                GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_RGBA32F, size, rows, 0, GL.GL_RGBA, GL.GL_FLOAT, buffer)
+            } else {
+                GL.glTexSubImage2D(GL.GL_TEXTURE_2D, 0, 0, 0, size, rows, GL.GL_RGBA, GL.GL_FLOAT, buffer)
+            }
+            coefficientWidths[axis] = size
+            coefficientRows[axis] = rows
             gl("upload Float sampling coefficients")
         }
         val bytes = (shape.count.toLong() * 4L).toInt()
@@ -184,8 +214,41 @@ internal class GpuC : AutoCloseable {
         sourceHeight = input.height
         outputWidth = shape.width
         outputHeight = shape.height
-        GpuLabChecks.cancellation()
-        elapsed(start)
+        integerScale = scale
+        preparedViewport = viewport
+        GpuChecks.cancellation()
+        return elapsed(start)
+    }
+
+    private fun textureParameters() {
+        GL.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MIN_FILTER, GL.GL_NEAREST)
+        GL.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MAG_FILTER, GL.GL_NEAREST)
+        GL.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_WRAP_S, GL.GL_CLAMP_TO_EDGE)
+        GL.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_WRAP_T, GL.GL_CLAMP_TO_EDGE)
+    }
+
+    /** Fixed-size output; never allocates source * zoom dimensions. Caller owns/recycles the bitmap. */
+    fun renderViewport(input: Input, viewport: GpuViewport): Output = guarded {
+        val allocationMs = prepareTargets(input, GpuChecks.output(viewport.width, viewport.height), null, viewport)
+        GL.glFinish()
+        gl("before viewport sample")
+        GpuChecks.cancellation()
+        val start = System.nanoTime()
+        upload(input)
+        val source = if (viewport.scale == 1f) textures[0] else {
+            draw(sharpenProgram, textures[0], textures[1], input.width, input.height, 2)
+            textures[1]
+        }
+        draw(viewportProgram, source, textures[2], outputWidth, outputHeight, 1)
+        finishOutput(start, allocationMs)
+    }
+
+    private fun upload(input: Input) {
+        GL.glActiveTexture(GL.GL_TEXTURE0)
+        GL.glBindTexture(GL.GL_TEXTURE_2D, textures[0])
+        GL.glTexSubImage2D(GL.GL_TEXTURE_2D, 0, 0, 0, input.width, input.height,
+            GL.GL_RGBA, GL.GL_UNSIGNED_BYTE, input.uploadBytes())
+        gl("upload RGBA")
     }
 
     fun render(input: Input, scale: Int): Output = guarded {
@@ -193,15 +256,10 @@ internal class GpuC : AutoCloseable {
         // Finish earlier work OUTSIDE this sample. Include this sample's glFinish INSIDE timing.
         GL.glFinish()
         gl("before sample")
-        GpuLabChecks.cancellation()
-        val bytes = input.rgba.duplicate().apply { rewind() }
+        GpuChecks.cancellation()
         val start = System.nanoTime()
-        GL.glActiveTexture(GL.GL_TEXTURE0)
-        GL.glBindTexture(GL.GL_TEXTURE_2D, textures[0])
         // A fresh upload occurs even if the source bytes did not change between samples.
-        GL.glTexSubImage2D(GL.GL_TEXTURE_2D, 0, 0, 0, input.width, input.height,
-            GL.GL_RGBA, GL.GL_UNSIGNED_BYTE, bytes)
-        gl("upload RGBA")
+        upload(input)
         if (scale == 1) {
             // A real GPU draw/readback bypasses BOTH filters; never a CPU clone.
             draw(sharpenProgram, textures[0], textures[2], input.width, input.height, scale)
@@ -209,10 +267,14 @@ internal class GpuC : AutoCloseable {
             draw(sharpenProgram, textures[0], textures[1], input.width, input.height, scale)
             draw(interpolateProgram, textures[1], textures[2], outputWidth, outputHeight, scale)
         }
+        finishOutput(start, allocationMs)
+    }
+
+    private fun finishOutput(start: Long, allocationMs: Double): Output {
         GL.glFinish()
         gl("upload + draws completion")
         val completed = System.nanoTime()
-        GpuLabChecks.cancellation()
+        GpuChecks.cancellation()
         val buffer = checkNotNull(readback).apply { clear(); limit(outputWidth * outputHeight * 4) }
         GL.glReadPixels(0, 0, outputWidth, outputHeight, GL.GL_RGBA, GL.GL_UNSIGNED_BYTE, buffer)
         gl("glReadPixels RGBA8")
@@ -221,7 +283,7 @@ internal class GpuC : AutoCloseable {
         // Logical top row is uploaded to GL y=0, sampled as y=0, and read back first.
         // No screen surface is presented; a flip at ANY of these boundaries would be a bug.
         for (index in pixels.indices) {
-            if (index % 4096 == 0) GpuLabChecks.cancellation()
+            if (index % 4096 == 0) GpuChecks.cancellation()
             val r = buffer.get().toInt() and 255
             val g = buffer.get().toInt() and 255
             val b = buffer.get().toInt() and 255
@@ -232,8 +294,8 @@ internal class GpuC : AutoCloseable {
         try {
             bitmap.density = Bitmap.DENSITY_NONE
             val end = System.nanoTime()
-            GpuLabChecks.cancellation()
-            Output(bitmap, Timing((completed - start) / 1e6, (end - completed) / 1e6, (end - start) / 1e6, allocationMs))
+            GpuChecks.cancellation()
+            return Output(bitmap, Timing((completed - start) / 1e6, (end - completed) / 1e6, (end - start) / 1e6, allocationMs))
         } catch (failure: Throwable) {
             bitmap.recycle()
             throw failure
@@ -247,8 +309,8 @@ internal class GpuC : AutoCloseable {
         GL.glBindTexture(GL.GL_TEXTURE_2D, source)
         GL.glUniform1i(uniform(program, "uSource"), 0)
         GL.glUniform2i(uniform(program, "uSize"), sourceWidth, sourceHeight)
-        GL.glUniform1i(uniform(program, "uScale"), scale)
-        if (program == interpolateProgram) {
+        if (program != viewportProgram) GL.glUniform1i(uniform(program, "uScale"), scale)
+        if (program == interpolateProgram || program == viewportProgram) {
             for ((unit, name) in listOf(1 to "uWeightsX", 2 to "uWeightsY")) {
                 GL.glActiveTexture(GL.GL_TEXTURE0 + unit)
                 GL.glBindTexture(GL.GL_TEXTURE_2D, textures[unit + 2])
@@ -349,6 +411,7 @@ internal class GpuC : AutoCloseable {
                 GL.glDeleteVertexArrays(1, vertexArray, 0)
                 if (sharpenProgram != 0) GL.glDeleteProgram(sharpenProgram)
                 if (interpolateProgram != 0) GL.glDeleteProgram(interpolateProgram)
+                if (viewportProgram != 0) GL.glDeleteProgram(viewportProgram)
                 gl("delete GL resources")
             }
             release { egl(EGL.eglMakeCurrent(display, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT), "unbind EGL") }
@@ -358,6 +421,8 @@ internal class GpuC : AutoCloseable {
         if (initialized) release { egl(EGL.eglTerminate(display), "terminate EGL") }
         release { egl(EGL.eglReleaseThread(), "release EGL thread") }
         readback = null
+        coefficientBuffers.fill(null)
+        preparedViewport = null
         current = false
         failure?.let { throw it }
     }
@@ -453,5 +518,36 @@ internal class GpuC : AutoCloseable {
                 color = vec4(floor(clamp(value, 0.0, 255.0) + 0.5) / 255.0, 1.0);
             }
         """.trimIndent()
+        private val VIEWPORT = """
+            #version 300 es
+            precision highp float;
+            precision highp int;
+            uniform highp sampler2D uSource;
+            uniform ivec2 uSize;
+            uniform highp sampler2D uWeightsX;
+            uniform highp sampler2D uWeightsY;
+            layout(location = 0) PRECISE out vec4 color;
+            void main() {
+                ivec2 pixel = ivec2(gl_FragCoord.xy);
+                vec4 mx = texelFetch(uWeightsX, ivec2(pixel.x, 1), 0);
+                vec4 my = texelFetch(uWeightsY, ivec2(pixel.y, 1), 0);
+                if (mx.y == 0.0 || my.y == 0.0) { color = vec4(1.0); return; }
+                ivec2 first = ivec2(int(mx.x), int(my.x));
+                vec4 wx = texelFetch(uWeightsX, ivec2(pixel.x, 0), 0);
+                vec4 wy = texelFetch(uWeightsY, ivec2(pixel.y, 0), 0);
+                vec3 value = vec3(0.0);
+                for (int y = 0; y < 4; ++y) {
+                    vec3 row = vec3(0.0);
+                    for (int x = 0; x < 4; ++x) {
+                        ivec2 p = clamp(first + ivec2(x, y), ivec2(0), uSize - 1);
+                        vec3 sampleValue = floor(texelFetch(uSource, p, 0).rgb * 255.0 + 0.5);
+                        row += sampleValue * wx[x];
+                    }
+                    value += row * wy[y];
+                }
+                color = vec4(floor(clamp(value, 0.0, 255.0) + 0.5) / 255.0, 1.0);
+            }
+        """.trimIndent()
+
     }
 }

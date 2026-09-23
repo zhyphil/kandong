@@ -1,0 +1,54 @@
+{
+  "recordedAtUtc": "2026-09-23T21:06:41.664248+00:00",
+  "baseCommit": "fbe6484",
+  "compatVersion": "0.1.1-clarity-dev/code7",
+  "compatApkSha256": "bd8f8e29949102ebea448711edf950f0d002f6b6e29d84d7e9b524aef2a7b8c2",
+  "unitTests": {
+    "compat": 53,
+    "graphics": 12,
+    "qualitylab": 20
+  },
+  "failures": 0,
+  "lintErrors": 0,
+  "lintWarnings": {
+    "compat": 8,
+    "graphics": 0,
+    "qualitylab": 12
+  },
+  "builds": [
+    "compat debug",
+    "compat release signed",
+    "qualitylab debug"
+  ],
+  "permissions": "compat unchanged overlay/foreground service/media projection; qualitylab none; neither INTERNET",
+  "numerical": {
+    "huawei": {
+      "viewport": 144,
+      "integer": 48,
+      "passed": true
+    },
+    "emulator": {
+      "viewport": 144,
+      "integer": 48,
+      "passed": true
+    }
+  },
+  "emulatorInteractionGroups": 9,
+  "emulatorRotation": true,
+  "emulatorRepeatedPauseCycles": 5,
+  "finalCompatEnableDisableSmoke": true,
+  "review": {
+    "readonlyCompleted": true,
+    "findings": [
+      "P2 GPU size limit affected disabled baseline; fixed with optional target guard and3 regression tests",
+      "P3 lab report version literal; fixed BuildConfig metadata, verified final emulator report"
+    ]
+  },
+  "huaweiLiveMirror": "Finalcode7 installed and manually enabled/shared; observed188 enhanced frames, viewport-sized output, scale/slider match and0 fallback/cleanup errors. User confirms text clear and operation smooth.",
+  "limits": [
+    "Not allOEM or longduration thermal/energy",
+    "Synthetic timing is not capture-to-display FPS",
+    "Huawei lab numerical run predates report-label-only fix; raw version correction preserved"
+  ],
+  "humanAcceptance": "文字清楚，操作顺畅"
+}

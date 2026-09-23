@@ -70,3 +70,5 @@ Phase0A 放大 → Phase0B 区域法语/英语译中文 → Phase1 帮我看懂 
 - [官方方案比较](docs/MAGNIFICATION.md)、[安全与数据](docs/SAFETY.md)、[实际验证记录](docs/VALIDATION.md)
 - [环境](docs/ENVIRONMENT.md)、[来源](docs/ATTRIBUTION.md)、[任务板](TASKS.md)、[工作记录](WORKLOG.md)
 - [历史引导实验](experiments/guidance/README.md)：旧代码保留，已退出当前产品入口；旧高亮图不是放大镜证据。
+
+兼容版试用「清晰增强」：在菜单中手动开启，改善文字边缘。首次默认关闭，遇到卡顿或手机变热可随时关闭；只在本机处理，不保存/上传画面。构建与当前验证范围见 [画质接入记录](docs/CLARITY_ENHANCEMENT.md)。

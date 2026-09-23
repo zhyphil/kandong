@@ -1,0 +1,1819 @@
+{
+  "state": "completed",
+  "ready": true,
+  "passed": true,
+  "cases": [
+    {
+      "source": "31x17",
+      "scale": 1,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 1,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 1,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 1,
+      "translation": [
+        8,
+        6
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 1.01,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 1.01,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 1.01,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 1.01,
+      "translation": [
+        7.8450003,
+        5.915
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 1.37,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 1.37,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 1.37,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 1.37,
+      "translation": [
+        2.2649994,
+        2.8549995
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 1.99,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 1,
+      "maxMean": 0.0007336757153338225
+    },
+    {
+      "source": "31x17",
+      "scale": 1.99,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 1.99,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 1,
+      "maxMean": 0.0007336757153338225
+    },
+    {
+      "source": "31x17",
+      "scale": 1.99,
+      "translation": [
+        -7.3449993,
+        -2.415001
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 1,
+      "maxMean": 0.0007336757153338225
+    },
+    {
+      "source": "31x17",
+      "scale": 2,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 1,
+      "maxMean": 0.06456346294937637
+    },
+    {
+      "source": "31x17",
+      "scale": 2,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 2,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 1,
+      "maxMean": 0.00293470286133529
+    },
+    {
+      "source": "31x17",
+      "scale": 2,
+      "translation": [
+        -7.5,
+        -2.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 1,
+      "maxMean": 0.05575935436537051
+    },
+    {
+      "source": "31x17",
+      "scale": 2.64,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 1,
+      "maxMean": 0.0022010271460014674
+    },
+    {
+      "source": "31x17",
+      "scale": 2.64,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 2.64,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 2.64,
+      "translation": [
+        -17.420002,
+        -7.9400005
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 1,
+      "maxMean": 0.0007336757153338225
+    },
+    {
+      "source": "31x17",
+      "scale": 3,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 1,
+      "maxMean": 0.004402054292002935
+    },
+    {
+      "source": "31x17",
+      "scale": 3,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 3,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 1,
+      "maxMean": 0.02714600146735143
+    },
+    {
+      "source": "31x17",
+      "scale": 3,
+      "translation": [
+        -23,
+        -11
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 1,
+      "maxMean": 0.001467351430667645
+    },
+    {
+      "source": "31x17",
+      "scale": 4.99,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 4.99,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 4.99,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 4.99,
+      "translation": [
+        -53.844994,
+        -27.914997
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 5,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "31x17",
+      "scale": 5,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 1,
+      "maxMean": 0.0007336757153338225
+    },
+    {
+      "source": "31x17",
+      "scale": 5,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 1,
+      "maxMean": 0.007336757153338224
+    },
+    {
+      "source": "31x17",
+      "scale": 5,
+      "translation": [
+        -54,
+        -28
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 1,
+      "maxMean": 0.0007336757153338225
+    },
+    {
+      "source": "1x19",
+      "scale": 1,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 1,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 1,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 1,
+      "translation": [
+        23,
+        5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 1.01,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 1.01,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 1.01,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 1.01,
+      "translation": [
+        22.995,
+        4.9049997
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 1.37,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 1.37,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 1.37,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 1.37,
+      "translation": [
+        22.815,
+        1.4849997
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 1.99,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 1.99,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 1.99,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 1.99,
+      "translation": [
+        22.505,
+        -4.4050007
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 2,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 2,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 2,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 2,
+      "translation": [
+        22.5,
+        -4.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 1,
+      "maxMean": 0.00586940572267058
+    },
+    {
+      "source": "1x19",
+      "scale": 2.64,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 2.64,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 2.64,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 2.64,
+      "translation": [
+        22.18,
+        -10.580002
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 3,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 3,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 3,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 3,
+      "translation": [
+        22,
+        -14
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 4.99,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 4.99,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 4.99,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 4.99,
+      "translation": [
+        21.005001,
+        -32.905
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 5,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 5,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 5,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x19",
+      "scale": 5,
+      "translation": [
+        21,
+        -33
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 1,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 1,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 1,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 1,
+      "translation": [
+        14,
+        14
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 1.01,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 1.01,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 1.01,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 1.01,
+      "translation": [
+        13.905,
+        13.995
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 1.37,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 1.37,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 1.37,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 1.37,
+      "translation": [
+        10.485,
+        13.815
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 1.99,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 1.99,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 1.99,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 1.99,
+      "translation": [
+        4.5949993,
+        13.505
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 2,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 2,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 2,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 2,
+      "translation": [
+        4.5,
+        13.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 1,
+      "maxMean": 0.003668378576669112
+    },
+    {
+      "source": "19x1",
+      "scale": 2.64,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 2.64,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 2.64,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 2.64,
+      "translation": [
+        -1.5800018,
+        13.18
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 3,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 3,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 3,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 3,
+      "translation": [
+        -5,
+        13
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 4.99,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 4.99,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 4.99,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 4.99,
+      "translation": [
+        -23.904999,
+        12.005
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 5,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 5,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 5,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "19x1",
+      "scale": 5,
+      "translation": [
+        -24,
+        12
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 1,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 1,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 1,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 1,
+      "translation": [
+        23,
+        14
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 1.01,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 1.01,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 1.01,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 1.01,
+      "translation": [
+        22.995,
+        13.995
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 1.37,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 1.37,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 1.37,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 1.37,
+      "translation": [
+        22.815,
+        13.815
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 1.99,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 1.99,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 1.99,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 1.99,
+      "translation": [
+        22.505,
+        13.505
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 2,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 2,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 2,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 2,
+      "translation": [
+        22.5,
+        13.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 2.64,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 2.64,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 2.64,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 2.64,
+      "translation": [
+        22.18,
+        13.18
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 3,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 3,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 3,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 3,
+      "translation": [
+        22,
+        13
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 4.99,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 4.99,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 4.99,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 4.99,
+      "translation": [
+        21.005001,
+        12.005
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 5,
+      "translation": [
+        0,
+        0
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 5,
+      "translation": [
+        -7.25,
+        -3.5
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 5,
+      "translation": [
+        9.25,
+        8.75
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    },
+    {
+      "source": "1x1",
+      "scale": 5,
+      "translation": [
+        21,
+        12
+      ],
+      "passed": true,
+      "alpha255": true,
+      "maxError": 0,
+      "maxMean": 0
+    }
+  ],
+  "timings": [
+    {
+      "source": "505x209",
+      "scale": 2,
+      "viewport": "1096x384",
+      "medianMs": 31.077604,
+      "p95Ms": 33.761979,
+      "samplesMs": [
+        30.523438,
+        29.444271,
+        31.527083,
+        29.172395,
+        33.433334,
+        33.761979,
+        30.628125,
+        31.569792,
+        30.535417,
+        33.478125
+      ]
+    },
+    {
+      "source": "505x209",
+      "scale": 5,
+      "viewport": "1096x384",
+      "medianMs": 29.4591145,
+      "p95Ms": 31.7875,
+      "samplesMs": [
+        31.7875,
+        29.471354,
+        30.264062,
+        28.514583,
+        27.407292,
+        29.446875,
+        29.202604,
+        31.584896,
+        28.554687,
+        31.216667
+      ]
+    },
+    {
+      "source": "1096x384",
+      "scale": 2,
+      "viewport": "1096x384",
+      "medianMs": 33.767448,
+      "p95Ms": 35.457292,
+      "samplesMs": [
+        30.976042,
+        35.18177,
+        31.619792,
+        35.457292,
+        35.069792,
+        34.394271,
+        31.01875,
+        33.080208,
+        33.223958,
+        34.310938
+      ]
+    },
+    {
+      "source": "1096x384",
+      "scale": 5,
+      "viewport": "1096x384",
+      "medianMs": 32.604427,
+      "p95Ms": 35.566146,
+      "samplesMs": [
+        32.256771,
+        32.43125,
+        35.007812,
+        32.126562,
+        35.566146,
+        34.920313,
+        32.777604,
+        29.273958,
+        35.173438,
+        32.109896
+      ]
+    }
+  ],
+  "device": {
+    "renderer": "Mali-G76",
+    "shaderPath": "precise-core-320"
+  },
+  "scope": "Synthetic viewport math and target-size render only; not actual capture FPS or energy",
+  "runId": "12baa45c-4dc0-463a-bc21-1de6cade0fd1"
+}

@@ -1,0 +1,38 @@
+{
+  "model": "LIO-AN00",
+  "api": 31,
+  "version": "0.1.1-clarity-dev/code7",
+  "source": "Observed own service dump during user-confirmed screen sharing",
+  "observedSnapshot": {
+    "uiState": "EXPANDED",
+    "surfaceAttached": true,
+    "capturing": true,
+    "copyAttempts": 752,
+    "viewport": [
+      1096,
+      379
+    ],
+    "scale": 3.35,
+    "clarityEnabled": true,
+    "enhancedFrames": 188,
+    "clarityFailures": 0,
+    "gpuOpen": true,
+    "gpuCleanupFailures": 0,
+    "enhancedBitmap": [
+      1096,
+      379
+    ],
+    "matrixScale": [
+      1.0,
+      1.0
+    ],
+    "sliderProgress": 235
+  },
+  "humanFeedback": "文字清楚，操作顺畅",
+  "humanScope": "User tested common page, crop drag, pinch, collapse/restore as prompted; short subjective session only",
+  "limits": [
+    "No sustained heat/energy test",
+    "No screen screenshots/text saved",
+    "Later two-snapshot probe incomplete because a diagnostic field was absent during interactive use; no frame-rate conclusion from that probe"
+  ]
+}

@@ -1,5 +1,6 @@
 package com.kandong.qualitylab
 
+import com.kandong.graphics.GpuC
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Color
@@ -23,7 +24,7 @@ internal class GpuLabRun(private val folder: File, val fullSuite: Boolean,
         .put("schemaVersion", 1).put("runId", runId).put("startedAtEpochMs", System.currentTimeMillis())
         .put("state", "running").put("fullSuite", fullSuite).put("model", Build.MODEL)
         .put("manufacturer", Build.MANUFACTURER).put("api", Build.VERSION.SDK_INT)
-        .put("appVersion", "0.0.2-gpu-experiment").put("source", "fixed synthetic fixtures only")
+        .put("appVersion", BuildConfig.VERSION_NAME).put("source", "fixed synthetic fixtures only")
         .put("gpu", JSONObject.NULL).put("initializationMs", JSONObject.NULL)
         .put("expectedTestCount", if (fullSuite) 48 else 0).put("completedTestCount", 0)
         .put("activeWork", "initialization")
@@ -119,14 +120,19 @@ internal class GpuLabRun(private val folder: File, val fullSuite: Boolean,
         }
     }
 
-    private fun pack(fixture: GpuLabFixtures.Fixture): GpuC.Input =
-        GpuC.Input.pack(fixture.pixels, fixture.width, fixture.height).also {
+    private fun pack(fixture: GpuLabFixtures.Fixture): GpuC.Input {
+        GpuLabChecks.shape(fixture.width, fixture.height, fixture.pixels.size, 1)
+        GpuLabChecks.opaque(fixture.pixels)
+        return GpuC.Input.pack(fixture.pixels, fixture.width, fixture.height).also {
             packing.put(JSONObject().put("fixture", fixture.name).put("width", fixture.width)
                 .put("height", fixture.height).put("packingMs", it.packingMs)
                 .put("scope", "Direct RGBA buffer allocation and explicit ARGB-to-RGBA packing, excluded from sample timing"))
         }
+    }
 
     private fun allocate(gpu: GpuC, input: GpuC.Input, scale: Int, phase: String, fixture: String) {
+        val shape = GpuLabChecks.shape(input.width, input.height, input.count, scale)
+        GpuLabChecks.deviceLimits(input.width, input.height, shape, gpu.maxTextureSize, gpu.maxViewportDims)
         allocations.put(JSONObject().put("phase", phase).put("fixture", fixture).put("scale", scale)
             .put("allocationMs", gpu.prepare(input, scale)).put("sourceWidth", input.width)
             .put("sourceHeight", input.height).put("outputWidth", input.width * scale)

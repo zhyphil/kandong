@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application android:label="看懂画质对照" android:allowBackup="false"
         android:icon="@drawable/ic_quality_lab" android:supportsRtl="true" android:theme="@style/QualityLabTheme">
+        <activity android:name=".ViewportLabActivity" android:exported="true" />
         <activity android:name=".GpuLabActivity" android:exported="true" />
         <activity android:name=".QualityLabActivity" android:exported="true">
             <intent-filter>

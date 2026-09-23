@@ -1,0 +1,22 @@
+[
+  {
+    "cycle": 1,
+    "passed": true
+  },
+  {
+    "cycle": 2,
+    "passed": true
+  },
+  {
+    "cycle": 3,
+    "passed": true
+  },
+  {
+    "cycle": 4,
+    "passed": true
+  },
+  {
+    "cycle": 5,
+    "passed": true
+  }
+]

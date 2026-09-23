@@ -5,13 +5,14 @@ plugins {
 android {
     namespace = "com.kandong.qualitylab"
     compileSdk = 36
+    buildFeatures { buildConfig = true }
     buildToolsVersion = "35.0.0"
     defaultConfig {
         applicationId = "com.kandong.qualitylab"
         minSdk = 29
         targetSdk = 36
-        versionCode = 2
-        versionName = "0.0.2-gpu-experiment"
+        versionCode = 3
+        versionName = "0.0.3-viewport-experiment"
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -19,4 +20,7 @@ android {
     }
     kotlinOptions { jvmTarget = "17" }
 }
-dependencies { testImplementation("junit:junit:4.13.2") }
+dependencies {
+    implementation(project(":graphics"))
+    testImplementation("junit:junit:4.13.2")
+}
