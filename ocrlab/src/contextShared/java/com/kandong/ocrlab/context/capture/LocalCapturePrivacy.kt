@@ -7,7 +7,7 @@ enum class CaptureEvidence { YES, NO, UNKNOWN, UNAVAILABLE }
 enum class CaptureWindowOwner { TARGET_APP, OWN_OVERLAY, OTHER_APP, SYSTEM, KEYBOARD, UNKNOWN }
 enum class CaptureRole { TEXT, BUTTON, IMAGE, CONTAINER, UNKNOWN }
 enum class CaptureLabelScope { SELF_ONLY, DESCENDANTS, UNKNOWN }
-enum class CaptureOrigin { SYNTHETIC_METADATA }
+enum class CaptureOrigin { SYNTHETIC_METADATA, OWNED_ANDROID_FIXTURE }
 enum class CaptureLabelSource { TEXT, DESCRIPTION, MATCHING_TEXT_AND_DESCRIPTION }
 enum class CaptureCoverage { UNVERIFIED }
 enum class CaptureRejection { INVALID_METADATA, TARGET_UNCONFIRMED, CANCELLED_OR_STALE }
@@ -19,7 +19,7 @@ enum class CaptureGapReason {
     READ_FAILED, EMPTY_LABEL, CONFLICTING_LABEL, INVALID_LABEL, TEXT_BUDGET,
 }
 
-/** Integer units belong to this synthetic snapshot; no Android coordinate conversion is implied. */
+/** Snapshot-local integer units; Android-backed fixtures verify their coordinate conversion separately. */
 data class CaptureRect(val left: Int, val top: Int, val right: Int, val bottom: Int) {
     internal fun valid() = listOf(left, top, right, bottom).all { it in -100_000..100_000 } && left < right && top < bottom
     internal fun contains(other: CaptureRect) = left <= other.left && top <= other.top && right >= other.right && bottom >= other.bottom
@@ -51,6 +51,7 @@ data class CaptureMetadata(
     val capturedAtMillis: Long, val ttlMillis: Long,
     val windowsComplete: CaptureEvidence, val nodesComplete: CaptureEvidence,
     val windows: List<CaptureWindow>, val nodes: List<CaptureNode>,
+    val origin: CaptureOrigin = CaptureOrigin.SYNTHETIC_METADATA,
 )
 
 /** Supplied by the owner of the explicit-click ticket, using elapsed realtime, not wall time.
@@ -79,10 +80,10 @@ class LocalCaptureInspection internal constructor(
     val rejection: CaptureRejection?,
     blocks: List<LocalCaptureBlock>, gaps: List<CaptureGap>,
     val enumeration: CaptureEvidence,
+    val origin: CaptureOrigin = CaptureOrigin.SYNTHETIC_METADATA,
 ) {
     val blocks: List<LocalCaptureBlock> = Collections.unmodifiableList(ArrayList(blocks))
     val gaps: List<CaptureGap> = Collections.unmodifiableList(ArrayList(gaps))
-    val origin = CaptureOrigin.SYNTHETIC_METADATA
     val coverage = CaptureCoverage.UNVERIFIED
     override fun toString() = "LocalCaptureInspection(rejection=$rejection, blocks=${blocks.size}, gaps=${gaps.size}, coverage=$coverage)"
 }
@@ -102,7 +103,7 @@ object LocalCapturePrivacy {
         readLabel: (Int) -> CaptureLabel,
     ): LocalCaptureInspection {
         fun rejected(reason: CaptureRejection) = LocalCaptureInspection(metadata.version, reason,
-            emptyList(), emptyList(), metadata.nodesComplete)
+            emptyList(), emptyList(), metadata.nodesComplete, metadata.origin)
         // Freeze bounded collections BEFORE invoking caller callbacks. Nodes/windows contain no labels.
         if (metadata.nodes.size > MAX_NODES || metadata.windows.size !in 1..16) return rejected(CaptureRejection.INVALID_METADATA)
         val input = metadata.copy(nodes = metadata.nodes.toList(), windows = metadata.windows.toList())
@@ -173,7 +174,7 @@ object LocalCapturePrivacy {
             totalChars += value.length
         }
         if (!current()) return rejected(CaptureRejection.CANCELLED_OR_STALE)
-        return LocalCaptureInspection(input.version, null, blocks, gaps, input.nodesComplete)
+        return LocalCaptureInspection(input.version, null, blocks, gaps, input.nodesComplete, input.origin)
     }
 
     private fun validMetadata(p: CaptureMetadata): Boolean {
