@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "scope": "Synthetic project-authored examples only; no real screen/user data; no model has run these cases",
+  "status": "not_run",
+  "cases": [
+    {
+      "id": "fr-cancel",
+      "language": "fr",
+      "source": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "expectedMeaning": "截至10月15日18点可免费取消；保留免费取消的截止条件。",
+      "criticalValues": [
+        "15",
+        "18"
+      ],
+      "reviewRule": "截止时间不能丢失或变成全年免费取消"
+    },
+    {
+      "id": "fr-nonrefundable",
+      "language": "fr",
+      "source": "Ce billet n'est ni échangeable ni remboursable.",
+      "expectedMeaning": "此票不可改签，也不可退款。",
+      "criticalValues": [],
+      "reviewRule": "两个否定都必须保留"
+    },
+    {
+      "id": "en-breakfast",
+      "language": "en",
+      "source": "Breakfast is not included.",
+      "expectedMeaning": "不包含早餐。",
+      "criticalValues": [],
+      "reviewRule": "不能漏掉not"
+    },
+    {
+      "id": "en-payment",
+      "language": "en",
+      "source": "You will not be charged today.",
+      "expectedMeaning": "今天不会扣款。",
+      "criticalValues": [],
+      "reviewRule": "不能扩写为永远免费或无需支付"
+    },
+    {
+      "id": "fr-total",
+      "language": "fr",
+      "source": "Total : 1 234,50 €",
+      "expectedMeaning": "总计1,234.50欧元。",
+      "criticalValues": [
+        "1234.50",
+        "EUR"
+      ],
+      "reviewRule": "识别窄空格与逗号小数，数值和币种必须相同"
+    },
+    {
+      "id": "en-time-condition",
+      "language": "en",
+      "source": "A fee applies only if you cancel after 18:00.",
+      "expectedMeaning": "只有在18:00之后取消才收费。",
+      "criticalValues": [
+        "18:00"
+      ],
+      "reviewRule": "only if与after不能反转"
+    },
+    {
+      "id": "en-at-property",
+      "language": "en",
+      "source": "Pay at the property.",
+      "expectedMeaning": "到店付款。",
+      "criticalValues": [],
+      "reviewRule": "不得暗示现在已扣款或免费"
+    },
+    {
+      "id": "fr-access",
+      "language": "fr",
+      "source": "Accès sans marche, ascenseur indisponible.",
+      "expectedMeaning": "入口无台阶，电梯不可用。",
+      "criticalValues": [],
+      "reviewRule": "sans与indisponible含义均需保留"
+    },
+    {
+      "id": "en-numbers",
+      "language": "en",
+      "source": "Platform 0, carriage 1, seat 10.",
+      "expectedMeaning": "站台0、车厢1、座位10。",
+      "criticalValues": [
+        "0",
+        "1",
+        "10"
+      ],
+      "reviewRule": "区分数字0/1与字母O/I"
+    },
+    {
+      "id": "fr-luggage",
+      "language": "fr",
+      "source": "Un bagage de 8 kg maximum est inclus.",
+      "expectedMeaning": "包含一件最多8公斤的行李。",
+      "criticalValues": [
+        "1",
+        "8",
+        "kg"
+      ],
+      "reviewRule": "一件与最大重量条件必须保留"
+    },
+    {
+      "id": "en-currency",
+      "language": "en",
+      "source": "$39.90 per night, taxes not included.",
+      "expectedMeaning": "每晚$39.90，不含税。",
+      "criticalValues": [
+        "39.90",
+        "$"
+      ],
+      "reviewRule": "不把未说明的$武断改成美元等具体币种；不能漏掉不含税"
+    },
+    {
+      "id": "en-ambiguous-date",
+      "language": "en",
+      "source": "Check-in: 07/08/2026.",
+      "expectedMeaning": "入住日期：07/08/2026。",
+      "criticalValues": [
+        "07/08/2026"
+      ],
+      "reviewRule": "缺少地区上下文时保留原格式，不猜测7月8日或8月7日"
+    }
+  ]
+}
