@@ -1,0 +1,10 @@
+{
+  "model": "LIO-AN00",
+  "api": 31,
+  "release": "12",
+  "pageSize": 4096,
+  "tests": 12,
+  "mainApkSha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+  "testApkSha256": "29732e48ec12b72ec04aef362e1a7d8990107aa957e3b941fda14973d4d2d8c7",
+  "scope": "synthetic single-language context transport and on-demand lifecycle; no OCR, translation model or screen capture"
+}

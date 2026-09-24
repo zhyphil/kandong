@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.CtcDecoderTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-24T17:36:03.037Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.003">
+  <properties/>
+  <testcase name="tiesChooseFirstIncludingBlank" classname="com.kandong.modelprobe.CtcDecoderTest" time="0.001"/>
+  <testcase name="allValuesMustBeFiniteEvenNonWinning" classname="com.kandong.modelprobe.CtcDecoderTest" time="0.001"/>
+  <testcase name="blankDuplicatesAfterBlankUnicodeAndSpace" classname="com.kandong.modelprobe.CtcDecoderTest" time="0.0"/>
+  <testcase name="rejectsShapeVocabularyLengthAndCap" classname="com.kandong.modelprobe.CtcDecoderTest" time="0.001"/>
+  <testcase name="noUnicodeNormalization" classname="com.kandong.modelprobe.CtcDecoderTest" time="0.0"/>
+  <testcase name="batchesResetDuplicateState" classname="com.kandong.modelprobe.CtcDecoderTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

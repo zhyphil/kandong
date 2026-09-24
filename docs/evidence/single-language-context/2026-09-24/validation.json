@@ -1,0 +1,55 @@
+{
+  "baseline": "03138c5",
+  "scope": "single-language full-page context transport, not translation quality",
+  "jvm": {
+    "ocrlab": {
+      "tests": 49,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "modelprobe": {
+      "tests": 101,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "emulator": {
+    "avd": "KanDong_OCR_API37_16K",
+    "serial": "emulator-5582",
+    "api": 37,
+    "pageSize": 16384,
+    "tests": 12,
+    "mainApkSha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+    "testApkSha256": "29732e48ec12b72ec04aef362e1a7d8990107aa957e3b941fda14973d4d2d8c7",
+    "scope": "single-language page context and existing on-demand state contracts; no model inference or OCR"
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 18
+  },
+  "buildPassed": true,
+  "incrementalCompilerIssue": "One definition found; unchanged source passes with -Pkotlin.incremental=false and subsequent default build also passes; internal compiler cause not established",
+  "sourceSha256": {
+    "AGENTS.md": "9c18b7cdf2e811051c09b11b7f9d7d786ee45ba51c7906fe968b650d47302fb2",
+    "README.md": "9413f043981e8b0c58f69606526070c2a627f22c4096410584a43c1dc67bf0d2",
+    "TASKS.md": "2389c2b2914665eb10e005181a88a103cb1e41383d4b203be1a48abcaa61b3d3",
+    "WORKLOG.md": "94d5fa1a18189bbcb82fc87e5c3681088960064d78d0999bd865b81e7af4e1c1",
+    "docs/SINGLE_LANGUAGE_TRANSLATION.md": "1b5ff59a5c2bdc7f684ef0cdd6fe5c4d5d0b5d5d9f81ea03d1549404a13afb52",
+    "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt": "e7c70a16c89438251ec4602fa0963356ce64167bf37119b3fb1bae255db70db2",
+    "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextEngine.kt": "8cb6f1f3bd95ba17c73a05992ae8c537284a3ebf85b2558fe5cdedc2016f54ba",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/FullPageTranslationContextTest.kt": "448f23566c47fa659c261acc8f49da418e8463b93758fa9773fd5030242d33b7"
+  },
+  "phone": {
+    "model": "LIO-AN00",
+    "api": 31,
+    "release": "12",
+    "pageSize": 4096,
+    "tests": 12,
+    "mainApkSha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+    "testApkSha256": "29732e48ec12b72ec04aef362e1a7d8990107aa957e3b941fda14973d4d2d8c7",
+    "scope": "synthetic single-language context transport and on-demand lifecycle; no OCR, translation model or screen capture"
+  },
+  "defaultBuildRecheckPassed": true
+}

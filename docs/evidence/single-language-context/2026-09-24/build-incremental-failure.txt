@@ -1,0 +1,158 @@
+> Task :ocrlab:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :ocrlab:preBuild UP-TO-DATE
+> Task :ocrlab:preDebugBuild UP-TO-DATE
+> Task :ocrlab:checkDebugAarMetadata UP-TO-DATE
+> Task :ocrlab:processDebugNavigationResources UP-TO-DATE
+> Task :ocrlab:compileDebugNavigationResources UP-TO-DATE
+> Task :ocrlab:generateDebugResValues UP-TO-DATE
+> Task :ocrlab:mapDebugSourceSetPaths UP-TO-DATE
+> Task :ocrlab:generateDebugResources UP-TO-DATE
+> Task :ocrlab:mergeDebugResources UP-TO-DATE
+> Task :ocrlab:packageDebugResources UP-TO-DATE
+> Task :ocrlab:parseDebugLocalResources UP-TO-DATE
+> Task :ocrlab:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :ocrlab:extractDeepLinksDebug UP-TO-DATE
+> Task :ocrlab:processDebugMainManifest UP-TO-DATE
+> Task :ocrlab:processDebugManifest UP-TO-DATE
+> Task :ocrlab:processDebugManifestForPackage UP-TO-DATE
+> Task :ocrlab:processDebugResources UP-TO-DATE
+> Task :ocrlab:javaPreCompileDebug UP-TO-DATE
+> Task :ocrlab:preDebugUnitTestBuild UP-TO-DATE
+> Task :ocrlab:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :modelprobe:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :modelprobe:validateProbeAssets
+> Task :modelprobe:preBuild
+> Task :modelprobe:preDebugBuild
+> Task :modelprobe:checkDebugAarMetadata UP-TO-DATE
+> Task :modelprobe:processDebugNavigationResources UP-TO-DATE
+> Task :modelprobe:compileDebugNavigationResources UP-TO-DATE
+> Task :modelprobe:generateDebugResValues UP-TO-DATE
+> Task :modelprobe:mapDebugSourceSetPaths UP-TO-DATE
+> Task :modelprobe:generateDebugResources UP-TO-DATE
+> Task :modelprobe:mergeDebugResources UP-TO-DATE
+> Task :modelprobe:packageDebugResources UP-TO-DATE
+> Task :modelprobe:parseDebugLocalResources UP-TO-DATE
+> Task :modelprobe:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :modelprobe:extractDeepLinksDebug UP-TO-DATE
+> Task :modelprobe:processDebugMainManifest UP-TO-DATE
+> Task :modelprobe:processDebugManifest UP-TO-DATE
+> Task :modelprobe:processDebugManifestForPackage UP-TO-DATE
+> Task :modelprobe:processDebugResources UP-TO-DATE
+> Task :modelprobe:compileDebugKotlin UP-TO-DATE
+> Task :modelprobe:javaPreCompileDebug UP-TO-DATE
+> Task :modelprobe:compileDebugJavaWithJavac NO-SOURCE
+> Task :modelprobe:bundleDebugClassesToRuntimeJar UP-TO-DATE
+> Task :modelprobe:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :modelprobe:verifyPolygonProbeVendor
+> Task :modelprobe:preDebugUnitTestBuild
+> Task :modelprobe:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :modelprobe:processDebugJavaRes UP-TO-DATE
+> Task :ocrlab:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :ocrlab:mergeDebugShaders UP-TO-DATE
+> Task :ocrlab:compileDebugShaders NO-SOURCE
+> Task :ocrlab:generateDebugAssets UP-TO-DATE
+> Task :ocrlab:mergeDebugAssets UP-TO-DATE
+> Task :ocrlab:compressDebugAssets UP-TO-DATE
+> Task :ocrlab:desugarDebugFileDependencies UP-TO-DATE
+> Task :ocrlab:checkDebugDuplicateClasses UP-TO-DATE
+> Task :ocrlab:mergeExtDexDebug UP-TO-DATE
+> Task :ocrlab:mergeLibDexDebug UP-TO-DATE
+> Task :ocrlab:mergeDebugJniLibFolders UP-TO-DATE
+> Task :ocrlab:mergeDebugNativeLibs UP-TO-DATE
+> Task :ocrlab:stripDebugDebugSymbols UP-TO-DATE
+> Task :ocrlab:validateSigningDebug UP-TO-DATE
+> Task :ocrlab:writeDebugAppMetadata UP-TO-DATE
+> Task :ocrlab:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :ocrlab:preDebugAndroidTestBuild SKIPPED
+> Task :ocrlab:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :ocrlab:extractProguardFiles UP-TO-DATE
+
+> Task :ocrlab:compileDebugKotlin FAILED
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:69:10 Conflicting overloads:
+fun <T> frozen(values: Collection<T>): List<T>
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:70:10 Conflicting overloads:
+fun ContextBlock.freeze(): ContextBlock
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:70:56 Overload resolution ambiguity between candidates:
+fun <T> frozen(values: Collection<T>): List<T>
+fun <T> frozen(values: Collection<T>): List<T>
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:71:12 Overload resolution ambiguity between candidates:
+fun <T> frozen(values: Collection<T>): List<T>
+fun <T> frozen(values: Collection<T>): List<T>
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:71:43 Overload resolution ambiguity between candidates:
+fun <T> frozen(values: Collection<T>): List<T>
+fun <T> frozen(values: Collection<T>): List<T>
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:71:86 Overload resolution ambiguity between candidates:
+fun <T> frozen(values: Collection<T>): List<T>
+fun <T> frozen(values: Collection<T>): List<T>
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:75:10 Conflicting overloads:
+fun ContextBlock.validOcr(snapshotId: String): Boolean
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:98:10 Conflicting overloads:
+fun TargetBinding.freeze(): TargetBinding
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:98:69 Cannot infer type for type parameter 'R'. Specify it explicitly.
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:98:78 Overload resolution ambiguity between candidates:
+fun ContextBlock.freeze(): ContextBlock
+fun ContextBlock.freeze(): ContextBlock
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:98:116 Cannot infer type for type parameter 'R'. Specify it explicitly.
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:98:125 Overload resolution ambiguity between candidates:
+fun ContextBlock.freeze(): ContextBlock
+fun ContextBlock.freeze(): ContextBlock
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:99:10 Conflicting overloads:
+fun ScreenSnapshot.freeze(): ScreenSnapshot
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:100:28 Cannot infer type for type parameter 'R'. Specify it explicitly.
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:100:37 Overload resolution ambiguity between candidates:
+fun ContextBlock.freeze(): ContextBlock
+fun ContextBlock.freeze(): ContextBlock
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:101:14 Overload resolution ambiguity between candidates:
+fun <T> frozen(values: Collection<T>): List<T>
+fun <T> frozen(values: Collection<T>): List<T>
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:101:54 Overload resolution ambiguity between candidates:
+fun <T> frozen(values: Collection<T>): List<T>
+fun <T> frozen(values: Collection<T>): List<T>
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt:102:23 Overload resolution ambiguity between candidates:
+fun <T> frozen(values: Collection<T>): List<T>
+fun <T> frozen(values: Collection<T>): List<T>
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextEngine.kt:46:26 Overload resolution ambiguity between candidates:
+fun ScreenSnapshot.freeze(): ScreenSnapshot
+fun ScreenSnapshot.freeze(): ScreenSnapshot
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextEngine.kt:62:17 Unresolved reference 'not' for operator '!'.
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextEngine.kt:62:20 Overload resolution ambiguity between candidates:
+fun ContextBlock.validOcr(snapshotId: String): Boolean
+fun ContextBlock.validOcr(snapshotId: String): Boolean
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextEngine.kt:106:129 Overload resolution ambiguity between candidates:
+fun TargetBinding.freeze(): TargetBinding
+fun TargetBinding.freeze(): TargetBinding
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextEngine.kt:108:66 Overload resolution ambiguity between candidates:
+fun <T> frozen(values: Collection<T>): List<T>
+fun <T> frozen(values: Collection<T>): List<T>
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextEngine.kt:125:83 Cannot infer type for type parameter 'R'. Specify it explicitly.
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextEngine.kt:125:92 Overload resolution ambiguity between candidates:
+fun TargetBinding.freeze(): TargetBinding
+fun TargetBinding.freeze(): TargetBinding
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextEngine.kt:138:88 Overload resolution ambiguity between candidates:
+fun TargetBinding.freeze(): TargetBinding
+fun TargetBinding.freeze(): TargetBinding
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextEngine.kt:153:66 Overload resolution ambiguity between candidates:
+fun <T> frozen(values: Collection<T>): List<T>
+fun <T> frozen(values: Collection<T>): List<T>
+e: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextEngine.kt:153:83 Overload resolution ambiguity between candidates:
+fun <T> frozen(values: Collection<T>): List<T>
+fun <T> frozen(values: Collection<T>): List<T>
+
+> Task :modelprobe:verifyOpenCvTestArtifact
+> Task :modelprobe:compileDebugUnitTestKotlin
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':ocrlab:compileDebugKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1s
+58 actionable tasks: 5 executed, 53 up-to-date

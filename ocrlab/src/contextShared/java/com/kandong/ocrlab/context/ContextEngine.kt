@@ -121,7 +121,8 @@ class ContextEngine {
         val alreadyPending = pending.values.flatMap { it.targets }.map { it.id }.toSet()
         val targets = selection?.targets?.filter { it.reason == null && it.id !in cache && it.id !in alreadyPending }.orEmpty()
         if (targets.isEmpty()) return null
-        val request = FixtureRequest(++nextRequest, snapshot!!.identity, frozen(targets.map { it.freeze() }))
+        val page = snapshot!!
+        val request = FixtureRequest(++nextRequest, page.identity, frozen(targets.map { it.freeze() }), page)
         pending[request.id] = request
         return request
     }

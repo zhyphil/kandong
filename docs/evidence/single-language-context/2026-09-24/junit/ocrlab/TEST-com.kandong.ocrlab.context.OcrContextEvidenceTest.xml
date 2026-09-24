@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.ocrlab.context.OcrContextEvidenceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-09-24T17:36:02.685Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.007">
+  <properties/>
+  <testcase name="conflictingConditionOutsideRoiIsRetainedAndBlocksOnlyItsCard" classname="com.kandong.ocrlab.context.OcrContextEvidenceTest" time="0.003"/>
+  <testcase name="chosenTextMustBeExactCandidateAndAgreementMustBeReal" classname="com.kandong.ocrlab.context.OcrContextEvidenceTest" time="0.001"/>
+  <testcase name="pageAndLifecycleChangesRevokeEvidenceAndLateAnswers" classname="com.kandong.ocrlab.context.OcrContextEvidenceTest" time="0.001"/>
+  <testcase name="snapshotOwnsNestedCandidateAndGeometryLists" classname="com.kandong.ocrlab.context.OcrContextEvidenceTest" time="0.001"/>
+  <testcase name="evidenceCannotBeRelabelledKnownCorrectOrMovedToAnotherPage" classname="com.kandong.ocrlab.context.OcrContextEvidenceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

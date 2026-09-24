@@ -51,6 +51,8 @@ data class TargetBinding(
 data class ContextSelection(val generation: Long, val roi: ContextRect, val targets: List<TargetBinding>)
 data class FixtureRequest(
     val id: Long, val page: ScreenIdentity, val targets: List<TargetBinding>,
+    /** Validated immutable whole visible page, including blocks outside targets and their local context. */
+    val screenContext: ScreenSnapshot,
     val targetLanguage: String = "zh-CN", val model: String = "HANDCRAFTED_NO_MODEL",
     val version: String = "prewritten-fixture-v1",
 )
