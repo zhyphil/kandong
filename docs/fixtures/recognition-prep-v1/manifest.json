@@ -1,0 +1,434 @@
+{
+  "schema": 1,
+  "scope": "synthetic_crop_to_recognition_tensor_contract_not_Android_OCR",
+  "probeManifestSha256": "126d8d3860d5a4ea098f0875838dbed51a55d8a321f50d409805d394a460061c",
+  "caseCount": 6,
+  "cases": [
+    {
+      "id": "en-quality-16",
+      "source": {
+        "type": "actual_pinned_detector_crops",
+        "inputId": "en-quality-16",
+        "sourcePixelSha256": "337f10d89ab199d2c681c42446c3a9cc2b9be1f106bfd60c75cb1dfa50bce998"
+      },
+      "shape": [
+        1,
+        3,
+        48,
+        687
+      ],
+      "tensorSha256": "c38e4acf235db1c1d58188313602f0f68de5378e392e1b6a9f1c90e87c2410ba",
+      "expectedTensor": "reference-en-quality-16.f32z",
+      "rows": [
+        {
+          "originalIndex": 0,
+          "tensorRow": 0,
+          "crop": "en-quality-16-crop-0.png",
+          "resized": "en-quality-16-resized-0.png",
+          "resizedArgb": "en-quality-16-resized-0.argbz"
+        }
+      ]
+    },
+    {
+      "id": "fr-nonrefundable-16",
+      "source": {
+        "type": "actual_pinned_detector_crops",
+        "inputId": "fr-nonrefundable-16",
+        "sourcePixelSha256": "9985a578b4188dffd534ec3ab308a787f3500a06bb3143e8ec3a8ad63f8b1c98"
+      },
+      "shape": [
+        1,
+        3,
+        48,
+        848
+      ],
+      "tensorSha256": "7beea7cc2ee27e74b3c4f409586d8aafdcedfed6da6634119d1808f27af6eecf",
+      "expectedTensor": "reference-fr-nonrefundable-16.f32z",
+      "rows": [
+        {
+          "originalIndex": 0,
+          "tensorRow": 0,
+          "crop": "fr-nonrefundable-16-crop-0.png",
+          "resized": "fr-nonrefundable-16-resized-0.png",
+          "resizedArgb": "fr-nonrefundable-16-resized-0.argbz"
+        }
+      ]
+    },
+    {
+      "id": "zh-hans-quality-16",
+      "source": {
+        "type": "actual_pinned_detector_crops",
+        "inputId": "zh-hans-quality-16",
+        "sourcePixelSha256": "5f6e960dc9f1b165969695ba5efc0cd91166123b0d9eaf6516fcd150080d9d50"
+      },
+      "shape": [
+        2,
+        3,
+        48,
+        438
+      ],
+      "tensorSha256": "61b20c3a683cd10bf1c51a11e8c580645e7833db23aa25bd7c4a42c3250c8dca",
+      "expectedTensor": "reference-zh-hans-quality-16.f32z",
+      "rows": [
+        {
+          "originalIndex": 1,
+          "tensorRow": 0,
+          "crop": "zh-hans-quality-16-crop-1.png",
+          "resized": "zh-hans-quality-16-resized-1.png",
+          "resizedArgb": "zh-hans-quality-16-resized-1.argbz"
+        },
+        {
+          "originalIndex": 0,
+          "tensorRow": 1,
+          "crop": "zh-hans-quality-16-crop-0.png",
+          "resized": "zh-hans-quality-16-resized-0.png",
+          "resizedArgb": "zh-hans-quality-16-resized-0.argbz"
+        }
+      ]
+    },
+    {
+      "id": "zh-hant-quality-16",
+      "source": {
+        "type": "actual_pinned_detector_crops",
+        "inputId": "zh-hant-quality-16",
+        "sourcePixelSha256": "c5ecf16dc2a911db6dcc736e108cd87b2a97f468bbe3f938e4002a18613de6b6"
+      },
+      "shape": [
+        2,
+        3,
+        48,
+        455
+      ],
+      "tensorSha256": "d7a70d977447790855d9a876a02d0748b63756ab0fa946b59b661923f46f0644",
+      "expectedTensor": "reference-zh-hant-quality-16.f32z",
+      "rows": [
+        {
+          "originalIndex": 0,
+          "tensorRow": 0,
+          "crop": "zh-hant-quality-16-crop-0.png",
+          "resized": "zh-hant-quality-16-resized-0.png",
+          "resizedArgb": "zh-hant-quality-16-resized-0.argbz"
+        },
+        {
+          "originalIndex": 1,
+          "tensorRow": 1,
+          "crop": "zh-hant-quality-16-crop-1.png",
+          "resized": "zh-hant-quality-16-resized-1.png",
+          "resizedArgb": "zh-hant-quality-16-resized-1.argbz"
+        }
+      ]
+    },
+    {
+      "id": "mixed-quality-16",
+      "source": {
+        "type": "actual_pinned_detector_crops",
+        "inputId": "mixed-quality-16",
+        "sourcePixelSha256": "180bde248bb429d8ef4a5490f547cb495bc6231c6d1dc91b9d44840d2d61c2a8"
+      },
+      "shape": [
+        3,
+        3,
+        48,
+        461
+      ],
+      "tensorSha256": "6263116acb788ad713f70f6eb8cdcc5e6d941ea59f24ab7cfb9ba769e1e1869c",
+      "expectedTensor": "reference-mixed-quality-16.f32z",
+      "rows": [
+        {
+          "originalIndex": 2,
+          "tensorRow": 0,
+          "crop": "mixed-quality-16-crop-2.png",
+          "resized": "mixed-quality-16-resized-2.png",
+          "resizedArgb": "mixed-quality-16-resized-2.argbz"
+        },
+        {
+          "originalIndex": 0,
+          "tensorRow": 1,
+          "crop": "mixed-quality-16-crop-0.png",
+          "resized": "mixed-quality-16-resized-0.png",
+          "resizedArgb": "mixed-quality-16-resized-0.argbz"
+        },
+        {
+          "originalIndex": 1,
+          "tensorRow": 2,
+          "crop": "mixed-quality-16-crop-1.png",
+          "resized": "mixed-quality-16-resized-1.png",
+          "resizedArgb": "mixed-quality-16-resized-1.argbz"
+        }
+      ]
+    },
+    {
+      "id": "color-controls",
+      "source": {
+        "type": "project_authored_no_text_calibration",
+        "notOcrQualityEvidence": true
+      },
+      "shape": [
+        3,
+        3,
+        48,
+        320
+      ],
+      "tensorSha256": "d2c8291a1d44549b9a0006ad4b58a5f2e0c411a4540b027ff29f38758741643a",
+      "expectedTensor": "color-controls.f32z",
+      "rows": [
+        {
+          "originalIndex": 1,
+          "tensorRow": 0,
+          "crop": "color-controls-crop-1.png",
+          "resized": "color-controls-resized-1.png",
+          "resizedArgb": "color-controls-resized-1.argbz"
+        },
+        {
+          "originalIndex": 2,
+          "tensorRow": 1,
+          "crop": "color-controls-crop-2.png",
+          "resized": "color-controls-resized-2.png",
+          "resizedArgb": "color-controls-resized-2.argbz"
+        },
+        {
+          "originalIndex": 0,
+          "tensorRow": 2,
+          "crop": "color-controls-crop-0.png",
+          "resized": "color-controls-resized-0.png",
+          "resizedArgb": "color-controls-resized-0.argbz"
+        }
+      ]
+    }
+  ],
+  "libraries": {
+    "rapidocr": "3.9.2",
+    "onnxruntime": "1.30.0",
+    "numpy": "2.5.3",
+    "Pillow": "12.3.0",
+    "opencv-python": "5.0.0.93"
+  },
+  "files": {
+    "reference-en-quality-16.f32z": {
+      "sha256": "477e72886ae2c88a7809c60581c23e6b7d89f8a4b4f85a2630a707566ac094c5",
+      "originalProbeAsset": "probes/ch-en-quality-16.f32z"
+    },
+    "en-quality-16-crop-0.png": {
+      "sha256": "4ac8913ea0f29140ae3a674f19aef6b225200a2c53ff05924e887f81db79bf27",
+      "width": 530,
+      "height": 37,
+      "rawBgrSha256": "14a566a95d1611a5c3ca3f4e0cc3c5f7b9b3ac378f5619d7cdbfc6b4b339060f"
+    },
+    "en-quality-16-resized-0.png": {
+      "sha256": "0f07dd54acecfafa7370b61cdc3bd0e07ef167849ee59a386d671600a99b2e13",
+      "width": 687,
+      "height": 48,
+      "rawBgrSha256": "831f5deb35874b6653b3cf32de3200bf642958b5f7e9534832058f03efdb4efc"
+    },
+    "en-quality-16-resized-0.argbz": {
+      "sha256": "b9d05e73246fa93e3e0230c0b6ce7c9b56b61f56b873360e5c667bc4fe9ee7cd",
+      "argb32LeSha256": "bfa17ce81c00852ef5e6265653f5dc9fb725070aec2aa07b46db485f0a03ef37"
+    },
+    "reference-fr-nonrefundable-16.f32z": {
+      "sha256": "b31282cfb6b8773089fd68b076a7d2fce7e80096d90f5419751706682d9dfe56",
+      "originalProbeAsset": "probes/ch-fr-nonrefundable-16.f32z"
+    },
+    "fr-nonrefundable-16-crop-0.png": {
+      "sha256": "fa6a4afee40ad70b9a596f8f2103cfbf3cc1a0a53be35e1cd08e7c3748d729e9",
+      "width": 672,
+      "height": 38,
+      "rawBgrSha256": "50c61a04a9c00deb503c495b322a9c9d17eba7b67ab2116598297dcd341ba774"
+    },
+    "fr-nonrefundable-16-resized-0.png": {
+      "sha256": "dc329ec8abb1d2a0e84e2feb0fe35f2cb441d427eaa4ba88701acb1608e1d647",
+      "width": 848,
+      "height": 48,
+      "rawBgrSha256": "e0d22ee6f8ad0bb7a467706bdc19f973e3731bc1b55ca79dd2f0af2b13a5f34d"
+    },
+    "fr-nonrefundable-16-resized-0.argbz": {
+      "sha256": "4d6b1434bed3444de7f6346aeddb0da22a4907e801014a1b9b5e49bb279ebf3e",
+      "argb32LeSha256": "34dae3339fb7c7c43645555228f04525c8f15b65634a5486783681572014ae3f"
+    },
+    "reference-zh-hans-quality-16.f32z": {
+      "sha256": "4c57f6be9e4d52b8f8de17a42f375a782c15d07be1ed1578aa05d418f47eb441",
+      "originalProbeAsset": "probes/ch-zh-hans-quality-16.f32z"
+    },
+    "zh-hans-quality-16-crop-1.png": {
+      "sha256": "5649de8032b481ca06be5bbc0042c5a90768fe149cb2ac9238adada921699783",
+      "width": 389,
+      "height": 43,
+      "rawBgrSha256": "ff647e709e0d30586fb0fdc7914d8de85ef37cd8bc6091faae394eba8bb970ac"
+    },
+    "zh-hans-quality-16-resized-1.png": {
+      "sha256": "34e6642a7f50d9ba93f30ef100cc5ea23bce9ceaa0bf17b8733124f3abe3b271",
+      "width": 435,
+      "height": 48,
+      "rawBgrSha256": "6ef0d7264473af0c08442f94c0dad0628a21aba7bb0df0c331210e459b95b375"
+    },
+    "zh-hans-quality-16-resized-1.argbz": {
+      "sha256": "779d9f3e9d69963d58e5d15e7adff6b8729263b8007f313b1c4bf88ba2246277",
+      "argb32LeSha256": "51257127a580717596e68b049d226d8ad796ef8fb9a468fee9712cde769c6de3"
+    },
+    "zh-hans-quality-16-crop-0.png": {
+      "sha256": "679630b90632c393dbb283b23c6f77e0d713b6098aca08bd9a1c1ef30e039ed4",
+      "width": 356,
+      "height": 39,
+      "rawBgrSha256": "01b9748351b3510a798eb2d7d8da0485ede7fe9c061311139eede699a2cc2996"
+    },
+    "zh-hans-quality-16-resized-0.png": {
+      "sha256": "34b03c63134c70f7967ef5fd6ad2a0a66361eb81ebfca3ec71e67a5ec7efcca4",
+      "width": 438,
+      "height": 48,
+      "rawBgrSha256": "ac6f0a9f36102068f7c377029ed4c7268e49328dda74ae2cbfffd8e6703b1539"
+    },
+    "zh-hans-quality-16-resized-0.argbz": {
+      "sha256": "73e6779c4f180d2179331db8de8906f9f69b8cbcc0e408a66b20ac8abddc1bce",
+      "argb32LeSha256": "394f960e65518dde3afc1294b79a46ec15a67b1117175031832c2d74b6282397"
+    },
+    "reference-zh-hant-quality-16.f32z": {
+      "sha256": "15f8a03b81f77b1644cca2a94002ff58ee5d8bf4809f7983ed598a7cd91b1ab7",
+      "originalProbeAsset": "probes/ch-zh-hant-quality-16.f32z"
+    },
+    "zh-hant-quality-16-crop-0.png": {
+      "sha256": "0e82aef505f24affe0cfafcbea783ee4131cba8d53e6af2ea48e3800dbd9b70c",
+      "width": 357,
+      "height": 39,
+      "rawBgrSha256": "ad5f34d243397ff30345f5b7405f44547834a45e18168a074b839780a5e97997"
+    },
+    "zh-hant-quality-16-resized-0.png": {
+      "sha256": "41fb3878a777be1f93ec9242b336f3d5d1f70287a6e9e2d21f3fba6555de31cf",
+      "width": 440,
+      "height": 48,
+      "rawBgrSha256": "6374ec34e9172afd0d30002d268a98806e50cfc93e693290b9d0f79fa31fee56"
+    },
+    "zh-hant-quality-16-resized-0.argbz": {
+      "sha256": "a117c35503aa1cbb2e51625c9bc0cf3672f9d8aafd890905facc68a954cc6554",
+      "argb32LeSha256": "c6929c259ad799231f48b50aa7ed1ecf73847145b7610ff732e9fe2df887b8aa"
+    },
+    "zh-hant-quality-16-crop-1.png": {
+      "sha256": "7976ed6b94ed9ee0689a8b0e771f83a7d4ae2724a46cab9ec7afeb0ebcede642",
+      "width": 389,
+      "height": 41,
+      "rawBgrSha256": "b101f000c2f764263f5e3615be490e775c7e2906f0b6b979ebb69bfabb543765"
+    },
+    "zh-hant-quality-16-resized-1.png": {
+      "sha256": "3157b934115ed75879cb677ab8c9dc2075af8bbc2bd980cc5bba213c70180ae2",
+      "width": 455,
+      "height": 48,
+      "rawBgrSha256": "adf4984528ab05b58dd2284962187d182deb8a15d64b2581dcebb0177612c042"
+    },
+    "zh-hant-quality-16-resized-1.argbz": {
+      "sha256": "1903f33044c4c3c6afe5c60a179370c0ee18aa6f9d543236c0996b4aa4e7db6c",
+      "argb32LeSha256": "0c61f72d4b698219fcb77db8e15a1c665dbe197fcb2fb2ef19e7ce4d100f230b"
+    },
+    "reference-mixed-quality-16.f32z": {
+      "sha256": "50dc7b1aa6d62843c7c29a26cc86ba9f8167b1988d1a5fc63c32d5804c3be711",
+      "originalProbeAsset": "probes/ch-mixed-quality-16.f32z"
+    },
+    "mixed-quality-16-crop-2.png": {
+      "sha256": "fa0ad379a3c1f90ca75a0d6fb6d45da93bc98f3a2ca6248b914dc377e02f6180",
+      "width": 227,
+      "height": 43,
+      "rawBgrSha256": "6b244d279343248774de132f3cbd928a59980e41a87ce8c0aebc8c680258ff79"
+    },
+    "mixed-quality-16-resized-2.png": {
+      "sha256": "8d2be761803d9738b562664fba7dea60e9bb6765dd7e6989faa04244c1c8ed2d",
+      "width": 254,
+      "height": 48,
+      "rawBgrSha256": "2bc3f5a90a8d368784c1ef856ceff257ec72b7a519641241b444561f9315280f"
+    },
+    "mixed-quality-16-resized-2.argbz": {
+      "sha256": "cfc210e2ada617dbee88a44dc99a00d37efcd8710b56c4c4ff861ef915d10171",
+      "argb32LeSha256": "ab9cd1cef3445adc7c838318aac3f365c6a1e9562883b934ef8c46961c5812e7"
+    },
+    "mixed-quality-16-crop-0.png": {
+      "sha256": "5c9de2042c1dec52ff4793ceb6c253a13f9006cb00fb71648c27f3d7c089d137",
+      "width": 235,
+      "height": 38,
+      "rawBgrSha256": "12a6e244e9780b335d7aa6b295ad860bd81ab44845a9e7dbf4fada7da040f981"
+    },
+    "mixed-quality-16-resized-0.png": {
+      "sha256": "392c7fa98821debf1a6436902aa4eb4cc5f96d184ebaf78d39eeddd468a81eae",
+      "width": 297,
+      "height": 48,
+      "rawBgrSha256": "9e97c6836a8decf4f249065c694ee6e7eb262d15360d370976a0de8676a51c74"
+    },
+    "mixed-quality-16-resized-0.argbz": {
+      "sha256": "c572c737855acdfe3beb90a983a822dc695ca1c43c238dd62d9ac1f4f9bd1eea",
+      "argb32LeSha256": "93a1af7b40f91f0357d568758c14d65fe34165f18da7111afc607bc06c7c3617"
+    },
+    "mixed-quality-16-crop-1.png": {
+      "sha256": "cd4df790e101cd0457aa7c8c752defdbad48e630520eac85f36f825cbe3d1649",
+      "width": 375,
+      "height": 39,
+      "rawBgrSha256": "793addc3425fb93c1dd957ce0b15e1ce7d943631fe9a08f8e5d8ca34b4dfb83f"
+    },
+    "mixed-quality-16-resized-1.png": {
+      "sha256": "4fb765d4ff66ad145b8c7a1d9da5cd5fd7babbd856a6f5e3bbc1faf0bc16f087",
+      "width": 461,
+      "height": 48,
+      "rawBgrSha256": "2b2b66dda2a28cb4ae699e649e6881d60000e38d649408efdc3df0e7fef68ccf"
+    },
+    "mixed-quality-16-resized-1.argbz": {
+      "sha256": "102a7712243a9fb58ee65856b35c90b3eb49b3c1883248293bc2a3d73c16621d",
+      "argb32LeSha256": "b3b61530397b7a54181800c6b88a8d50835bb8abb598fc333b6c0ae6a353fbd9"
+    },
+    "color-controls.f32z": {
+      "sha256": "ac61c580f82eef835373e5896c701000cf485f16674a8763c867c7e5816c6aae"
+    },
+    "color-controls-crop-1.png": {
+      "sha256": "d79f355b2386401a8da0bcb198d1799b262c510cefbfc9ed3dafcbcaa8ab602e",
+      "width": 17,
+      "height": 7,
+      "rawBgrSha256": "e0c3c7090d1b9bc161bfba87f6d476fcc097de402f56be925facffff3f13c000"
+    },
+    "color-controls-resized-1.png": {
+      "sha256": "5e5a92b12f03d87462380dccd963c9f3a6d9834074f1417b0d6a6ec508ae6a04",
+      "width": 117,
+      "height": 48,
+      "rawBgrSha256": "c14649ac83ca4b33d3191e095513544fd92979c2090832d612506dae4160b5b2"
+    },
+    "color-controls-resized-1.argbz": {
+      "sha256": "828d03388c24177f086f907789b25b4921611b3960056cc3e3f79945ef6a4fb3",
+      "argb32LeSha256": "b6dfc093fadd9776a15f5d30d14bac3eafdd7868958f8f2978f8aae89d98d7ca"
+    },
+    "color-controls-crop-2.png": {
+      "sha256": "c89ba2532e51cadefa6e5f0dec147a7af81628a388a656be6c3c1c80bf45a494",
+      "width": 34,
+      "height": 14,
+      "rawBgrSha256": "3dd916d064318c3f91d1bf714777204ba8ac9e8ed3e24600e921b01a61e29eb2"
+    },
+    "color-controls-resized-2.png": {
+      "sha256": "a741f73a5464d2e44f07221216803c1bce92c230183c380414ee1a48f2d1fe41",
+      "width": 117,
+      "height": 48,
+      "rawBgrSha256": "5d12273651dc4bcee08285d80461b9f0f333ddca4592c24ac6d039accb342629"
+    },
+    "color-controls-resized-2.argbz": {
+      "sha256": "739bda9d3c760b8847c6a9020fa8b462fefcc0216fe2341f5cd3cfa6ada036fe",
+      "argb32LeSha256": "4ff909d224ebaf63f8a459852691df4eeac4af4c608230d7db87c8dc936b7d79"
+    },
+    "color-controls-crop-0.png": {
+      "sha256": "bc0353ff4d16e7d8e0cfadc1b5a18a8070b075a3d32fd2468c0ad54ad7406377",
+      "width": 41,
+      "height": 11,
+      "rawBgrSha256": "8589404387b4af0cae151acac03c33245a5eab0ccb3ce04941add3add8bcefed"
+    },
+    "color-controls-resized-0.png": {
+      "sha256": "f50220a2767b79145f54a965967f617d99b16df013f3fb0868c45625dae0c9f2",
+      "width": 179,
+      "height": 48,
+      "rawBgrSha256": "36a8e0f787b63b0ce829220c716768d2b47e955823731478b6472d50bb359bd1"
+    },
+    "color-controls-resized-0.argbz": {
+      "sha256": "ffa02974549007ec63f9fbc4db478e1705a6cc7e17a283a870fee88eaaeec5cc",
+      "argb32LeSha256": "fdad1d189f192301fee94fc323093b1c0f3c40b4a5e3e6b8e69a3c239d556656"
+    }
+  },
+  "contract": {
+    "channels": "BGR",
+    "layout": "NCHW",
+    "height": 48,
+    "width": "floor(48 * max(320/48, max crop aspect ratio))",
+    "resizedWidth": "min(batch width, ceil(48 * crop aspect ratio))",
+    "normalization": "float32(value)/255; minus 0.5; divide by 0.5",
+    "padding": "float32 positive zero on the right after normalization",
+    "rowOrder": "actual ascending crop ratio; tied controls observed as input order; no universal numpy tie-order guarantee",
+    "resize": "upstream OpenCV INTER_LINEAR, port not yet validated"
+  }
+}

@@ -21,6 +21,9 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions { jvmTarget = "17" }
+    sourceSets.getByName("test").resources {
+        srcDir(rootProject.file("docs/fixtures/recognition-prep-v1"))
+    }
 }
 dependencies {
     implementation("com.microsoft.onnxruntime:onnxruntime-android:1.30.0")

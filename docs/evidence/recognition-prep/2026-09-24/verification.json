@@ -1,0 +1,135 @@
+{
+  "scope": "synthetic_same_tensor_model_feasibility_not_full_Android_OCR",
+  "sourceAggregateSha256": "db4ca7737445db31cd9983441202c62d7e9d255478476ecc7a189eac2294f675",
+  "sourceFiles": {
+    "modelprobe/build.gradle.kts": "7962fbaabe673e5eb74857cf2114769ac62235af5fc49c6515463c988c3b42a5",
+    "modelprobe/src/main/AndroidManifest.xml": "b5d1d0c7fbffdc70700385b7d7327da01aa83ad8c5b91d056ef5ef882539cc1b",
+    "modelprobe/src/main/assets/legal/ModelScope-README.md.txt": "3dc91bb3cb667df783178917d69b38bfabb8c935596f34243a1c9f0d36916b6e",
+    "modelprobe/src/main/assets/legal/NOTICE.txt": "fe060f4eafb3837acb25061e7e9ee1b5d9aceec19192ea1f7b83fdfe80cee3ad",
+    "modelprobe/src/main/assets/legal/ORT-LICENSE.txt": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+    "modelprobe/src/main/assets/legal/ORT-ThirdPartyNotices.txt": "143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3",
+    "modelprobe/src/main/assets/legal/PaddleOCR-LICENSE.txt": "3840c5c0c61c294264d2dd77b8777be6ddd90121ef4e0e64abcd22edea581d6e",
+    "modelprobe/src/main/assets/legal/RapidOCR-LICENSE.txt": "3e0af25fdd06aa9586ae97adb00ea927ebe5a3805ac77d2d3a81ce5f55693333",
+    "modelprobe/src/main/assets/legal/provenance.json": "36d0c1fbf6f045f35bd0472b452dd8270ffa84ccd3ee322b6cf2ace6028d0f07",
+    "modelprobe/src/main/assets/probes/ch-dictionary.json": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+    "modelprobe/src/main/assets/probes/ch-en-quality-16.f32z": "477e72886ae2c88a7809c60581c23e6b7d89f8a4b4f85a2630a707566ac094c5",
+    "modelprobe/src/main/assets/probes/ch-fr-nonrefundable-16.f32z": "b31282cfb6b8773089fd68b076a7d2fce7e80096d90f5419751706682d9dfe56",
+    "modelprobe/src/main/assets/probes/ch-mixed-quality-16.f32z": "50dc7b1aa6d62843c7c29a26cc86ba9f8167b1988d1a5fc63c32d5804c3be711",
+    "modelprobe/src/main/assets/probes/ch-zh-hans-quality-16.f32z": "4c57f6be9e4d52b8f8de17a42f375a782c15d07be1ed1578aa05d418f47eb441",
+    "modelprobe/src/main/assets/probes/ch-zh-hant-quality-16.f32z": "15f8a03b81f77b1644cca2a94002ff58ee5d8bf4809f7983ed598a7cd91b1ab7",
+    "modelprobe/src/main/assets/probes/latin-dictionary.json": "d80d308e9759b3ea3aaf6e57fa51b39ef0a2eeb3145a9b23df819f0f0279af44",
+    "modelprobe/src/main/assets/probes/latin-en-quality-16.f32z": "477e72886ae2c88a7809c60581c23e6b7d89f8a4b4f85a2630a707566ac094c5",
+    "modelprobe/src/main/assets/probes/latin-fr-nonrefundable-16.f32z": "b31282cfb6b8773089fd68b076a7d2fce7e80096d90f5419751706682d9dfe56",
+    "modelprobe/src/main/assets/probes/latin-mixed-quality-16.f32z": "50dc7b1aa6d62843c7c29a26cc86ba9f8167b1988d1a5fc63c32d5804c3be711",
+    "modelprobe/src/main/assets/probes/latin-zh-hans-quality-16.f32z": "4c57f6be9e4d52b8f8de17a42f375a782c15d07be1ed1578aa05d418f47eb441",
+    "modelprobe/src/main/assets/probes/latin-zh-hant-quality-16.f32z": "15f8a03b81f77b1644cca2a94002ff58ee5d8bf4809f7983ed598a7cd91b1ab7",
+    "modelprobe/src/main/assets/probes/manifest.json": "126d8d3860d5a4ea098f0875838dbed51a55d8a321f50d409805d394a460061c",
+    "modelprobe/src/main/java/com/kandong/modelprobe/CtcDecoder.kt": "3590527cf8e9533ad76489423262d8a37c9611290827d141cf0cceab33f7e83a",
+    "modelprobe/src/main/java/com/kandong/modelprobe/ModelProbeActivity.kt": "8490b221012c3d7b992a9bc7ae8f304f5203733497cfb694e23c14e606624fe6",
+    "modelprobe/src/main/java/com/kandong/modelprobe/OrtProbeEngine.kt": "69288cdf6590b27a1c07b978709150b41dcaf541bc5a703d186b639fdf1a31c1",
+    "modelprobe/src/main/java/com/kandong/modelprobe/ProbeGate.kt": "a2d20c8f80cdcfa0d3b9ad2c231fb806ec73542a75a3b19626d58a63f21b8b57",
+    "modelprobe/src/main/java/com/kandong/modelprobe/ProbeInputs.kt": "ac9e80da04ddf2b7b6692892fe6a04522236dc31667b9a87d06f929c95a6716c",
+    "modelprobe/src/main/java/com/kandong/modelprobe/ProbeReport.kt": "001c8b26885481ac94765e9549db31b7654c5c0ca44a76bc39c297e00832c846",
+    "modelprobe/src/main/java/com/kandong/modelprobe/ProbeRunner.kt": "1bcb2a3cd7deb4ad3decd22b50216b1d4711cf1fc91680626a21f95003f2dbf5",
+    "modelprobe/src/main/java/com/kandong/modelprobe/RecognitionPacking.kt": "efc68866d677a3579d2a41488d89fd9678a9109c59648647bacfcce8e8ded5bd",
+    "modelprobe/src/test/java/com/kandong/modelprobe/CtcDecoderTest.kt": "4bb537cf21c905e4b316c1342f719f14d91678e79e7ffc32752e229636a01931",
+    "modelprobe/src/test/java/com/kandong/modelprobe/ProbeGateTest.kt": "23757a4b98d162d67022ba30250dd2cae4495b9013b6b527a939d8ba6218bc75",
+    "modelprobe/src/test/java/com/kandong/modelprobe/ProbeInputsTest.kt": "49d27a1cc233babb2752e925d887e3188f0567ffe95e11bbec387969ce101554",
+    "modelprobe/src/test/java/com/kandong/modelprobe/RecognitionPackingTest.kt": "dcf1fb39b11de0a9873ff61a969e7bd8401a62f61745761de4415d48b2852354",
+    "scripts/export-modelprobe-tensors.py": "083f48577e77b87733ee61ea90df04ca8a3c1d08e0a67418c7dbaa6db0a2b3b1",
+    "scripts/prepare-modelprobe-models.py": "c267e9d647f4f898a8eb6cdc9cbb9c0a695c1a3f49697f702da829af92076f16",
+    "settings.gradle.kts": "0e72f7b83ff2fb158bd2faeda9df0f1b2c4d0780f5de2a2fd43e7e9ae672dc96"
+  },
+  "protectedOriginalFileCount": 129,
+  "protectedOriginalFilesUnchanged": true,
+  "apkSha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+  "apkBytes": 160758072,
+  "permissions": [],
+  "components": [
+    {
+      "type": "activity",
+      "name": "com.kandong.modelprobe.ModelProbeActivity",
+      "exported": "true"
+    }
+  ],
+  "testSuites": [
+    {
+      "name": "com.kandong.modelprobe.CtcDecoderTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.019"
+    },
+    {
+      "name": "com.kandong.modelprobe.ProbeGateTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.002"
+    },
+    {
+      "name": "com.kandong.modelprobe.ProbeInputsTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.033"
+    },
+    {
+      "name": "com.kandong.modelprobe.RecognitionPackingTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.042"
+    }
+  ],
+  "tests": 22,
+  "lint": [
+    {
+      "id": "OldTargetApi",
+      "severity": "Warning"
+    },
+    {
+      "id": "DataExtractionRules",
+      "severity": "Warning"
+    },
+    {
+      "id": "MissingApplicationIcon",
+      "severity": "Warning"
+    },
+    {
+      "id": "SetTextI18n",
+      "severity": "Warning"
+    }
+  ],
+  "signatureVerified": true,
+  "alignmentVerified": true,
+  "runtime": "com.microsoft.onnxruntime:onnxruntime-android:1.30.0",
+  "modelAssets": {
+    "assets/models/ch_PP-OCRv5_rec_mobile.onnx": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+    "assets/models/latin_PP-OCRv5_rec_mobile.onnx": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a"
+  },
+  "nativeLibraries": {
+    "lib/arm64-v8a/libonnxruntime.so": "df5d25c72a868dca773597c71e2000756d43fe4d70ade516d3693c54e12e0ada",
+    "lib/arm64-v8a/libonnxruntime4j_jni.so": "0695257178815f8c58c1719ba07d6d5d91a2b339634328cca2a0a98aa7ff2952",
+    "lib/armeabi-v7a/libonnxruntime.so": "d8c6e57af1848c4b9b2571a8864ac53592e57105dc67fb1e7b9e49828e555279",
+    "lib/armeabi-v7a/libonnxruntime4j_jni.so": "05c34d683a148da634af1997ee31aa4383307cf1daba0c890f15f2cfff2c3171",
+    "lib/x86/libonnxruntime.so": "2c140256e58dd8b2a8b93020ee973f8c67500f945053da671239d7ae7425ef7f",
+    "lib/x86/libonnxruntime4j_jni.so": "21576db11fec50c1698bd6f14c9eaac894c5e1024ee3d162c15aa61a4885d501",
+    "lib/x86_64/libonnxruntime.so": "f59d4d59d4c71532028d56ab6ca1dae62c3838c7982adfdad7f2560048b89ed9",
+    "lib/x86_64/libonnxruntime4j_jni.so": "fba30194109597cca36512e86c8f30d18951a0bdaa177ea680b562f9d8ea77a2"
+  },
+  "licenceAssets": [
+    "assets/legal/ModelScope-README.md.txt",
+    "assets/legal/NOTICE.txt",
+    "assets/legal/ORT-LICENSE.txt",
+    "assets/legal/ORT-ThirdPartyNotices.txt",
+    "assets/legal/PaddleOCR-LICENSE.txt",
+    "assets/legal/RapidOCR-LICENSE.txt",
+    "assets/legal/provenance.json"
+  ],
+  "packagedProbeBytesIdentical": true
+}
