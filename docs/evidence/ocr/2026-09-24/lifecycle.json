@@ -1,0 +1,43 @@
+{
+  "checks": [
+    {
+      "check": "cancel",
+      "status": "cancelled",
+      "processedCount": 0,
+      "cleanupPendingAtPublication": true,
+      "reportFrozen": true,
+      "noAutomaticRestart": true
+    },
+    {
+      "check": "background",
+      "status": "cancelled",
+      "processedCount": 18,
+      "cleanupPendingAtPublication": true,
+      "reportFrozen": true,
+      "noAutomaticRestart": true
+    },
+    {
+      "check": "rotation",
+      "status": "cancelled",
+      "processedCount": 0,
+      "cleanupPendingAtPublication": true,
+      "reportFrozen": true,
+      "noAutomaticRestart": true
+    },
+    {
+      "check": "rotationSettingsRestored",
+      "passed": true
+    },
+    {
+      "check": "externalIntentIgnored",
+      "reportUnchanged": true,
+      "noAutomaticRun": true
+    },
+    {
+      "check": "manualRestartAfterCleanup",
+      "completed": 37,
+      "newRunId": true
+    }
+  ],
+  "physicalDeviceOperated": false
+}

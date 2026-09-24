@@ -1,0 +1,19 @@
+{
+  "original": {
+    "wifi_on": "1",
+    "mobile_data": "1",
+    "gmsEnabled": "0"
+  },
+  "restored": true,
+  "wifiDuring": "0",
+  "mobileDataDuring": "0",
+  "gmsDisabledDuring": true,
+  "activeDefaultNetwork": "none",
+  "freshAppData": true,
+  "completedCases": 37,
+  "afterRestore": {
+    "wifi_on": "1",
+    "mobile_data": "1",
+    "gmsEnabled": "0"
+  }
+}

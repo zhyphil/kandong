@@ -1,0 +1,61 @@
+{
+  "permissions": [
+    "com.kandong.ocrlab.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "components": [
+    {
+      "name": "com.kandong.ocrlab.OcrLabActivity",
+      "exported": "true",
+      "permission": null,
+      "type": "activity"
+    },
+    {
+      "name": "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+      "exported": "false",
+      "permission": null,
+      "type": "service"
+    },
+    {
+      "name": "com.google.mlkit.common.internal.MlKitInitProvider",
+      "exported": "false",
+      "permission": null,
+      "type": "provider"
+    },
+    {
+      "name": "com.google.android.gms.common.api.GoogleApiActivity",
+      "exported": "false",
+      "permission": null,
+      "type": "activity"
+    },
+    {
+      "name": "androidx.startup.InitializationProvider",
+      "exported": "false",
+      "permission": null,
+      "type": "provider"
+    },
+    {
+      "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+      "exported": "false",
+      "permission": null,
+      "type": "service"
+    },
+    {
+      "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+      "exported": "false",
+      "permission": "android.permission.BIND_JOB_SERVICE",
+      "type": "service"
+    },
+    {
+      "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+      "exported": "false",
+      "permission": null,
+      "type": "receiver"
+    }
+  ],
+  "metadata": [
+    {
+      "{http://schemas.android.com/apk/res/android}name": "com.google.android.gms.version",
+      "{http://schemas.android.com/apk/res/android}value": "@integer/google_play_services_version"
+    }
+  ]
+}

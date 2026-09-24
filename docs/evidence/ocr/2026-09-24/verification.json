@@ -1,0 +1,145 @@
+{
+  "baseCommit": "79a4163",
+  "sourceFiles": [
+    "ocrlab/build.gradle.kts",
+    "ocrlab/src/main/AndroidManifest.xml",
+    "ocrlab/src/main/assets/translation-cases.json",
+    "ocrlab/src/main/java/com/kandong/ocrlab/OcrComparison.kt",
+    "ocrlab/src/main/java/com/kandong/ocrlab/OcrLabActivity.kt",
+    "ocrlab/src/main/java/com/kandong/ocrlab/OcrReport.kt",
+    "ocrlab/src/main/java/com/kandong/ocrlab/OcrRunner.kt",
+    "ocrlab/src/main/java/com/kandong/ocrlab/RunGate.kt",
+    "ocrlab/src/main/java/com/kandong/ocrlab/SyntheticFixtures.kt",
+    "ocrlab/src/main/res/values/styles.xml",
+    "ocrlab/src/test/java/com/kandong/ocrlab/OcrComparisonTest.kt",
+    "ocrlab/src/test/java/com/kandong/ocrlab/RunGateTest.kt",
+    "settings.gradle.kts"
+  ],
+  "reviewedAndBuiltSourceSha256": "408dab4eb99f09ab5f264734f2125ca08a8328ccc60ea8bd75b9c27f6a1ad089",
+  "unitTests": {
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "Warning": 6
+  },
+  "build": "ocrlab assembleDebug/testDebugUnitTest/lintDebug successful",
+  "initialLintError": "WrongConstant Layout.BREAK_STRATEGY_SIMPLE; fixed to API29+ LineBreaker.BREAK_STRATEGY_SIMPLE with same numeric value; rebuild/lint passed",
+  "apk": {
+    "sha256": "13dc1af19c0eb99fa1ea077cece1a01deadf54f24fb60f76c8b3da0d2edeba47",
+    "bytes": 52223693,
+    "permissionsDump": "package: com.kandong.ocrlab\npermission: com.kandong.ocrlab.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION\nuses-permission: name='com.kandong.ocrlab.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'\n",
+    "modelAssetCount": 21,
+    "signatureVerified": true,
+    "alignmentVerified": true
+  },
+  "runs": [
+    {
+      "file": "online-emulator-report.json",
+      "processed": 37,
+      "textImages": 36,
+      "exactTextMatches": 33,
+      "blankNegativeMatched": true,
+      "mismatches": [
+        {
+          "caseId": "fr-total",
+          "fontPx": 16,
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total :1 234,50 €"
+        },
+        {
+          "caseId": "fr-total",
+          "fontPx": 24,
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50 €"
+        },
+        {
+          "caseId": "fr-total",
+          "fontPx": 32,
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50 €"
+        }
+      ]
+    },
+    {
+      "file": "offline-gms-disabled-report.json",
+      "processed": 37,
+      "textImages": 36,
+      "exactTextMatches": 33,
+      "blankNegativeMatched": true,
+      "mismatches": [
+        {
+          "caseId": "fr-total",
+          "fontPx": 16,
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total :1 234,50 €"
+        },
+        {
+          "caseId": "fr-total",
+          "fontPx": 24,
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50 €"
+        },
+        {
+          "caseId": "fr-total",
+          "fontPx": 32,
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50 €"
+        }
+      ]
+    },
+    {
+      "file": "repeat-report.json",
+      "processed": 37,
+      "textImages": 36,
+      "exactTextMatches": 33,
+      "blankNegativeMatched": true,
+      "mismatches": [
+        {
+          "caseId": "fr-total",
+          "fontPx": 16,
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total :1 234,50 €"
+        },
+        {
+          "caseId": "fr-total",
+          "fontPx": 24,
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50 €"
+        },
+        {
+          "caseId": "fr-total",
+          "fontPx": 32,
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50 €"
+        }
+      ]
+    }
+  ],
+  "newLabInstalledOnPhysicalPhone": false,
+  "productionSourceChanged": false,
+  "published": false,
+  "limits": [
+    "Synthetic OCR only; no translation SDK/model or production region integration.",
+    "Three whitespace mismatches retained, no loosened comparator or claimed general accuracy.",
+    "Offline/GMS-disabled test on dedicated emulator after clearing lab data, not proof of Huawei compatibility.",
+    "SDK retains telemetry/transport dependencies; removed networking permission is not a claim that SDK has no local metric code.",
+    "First emulator exited137 before installation; reason unverified, restarted with1536MB/2cores, tests completed."
+  ],
+  "rawSha256": {
+    "offline-gms-disabled-report.json": "ec3da1211cca6a65da0b7b94314496b33d3a58255e9955769a7f81b2a9f44be6",
+    "offline-environment.json": "144ab64194ad0c0e8c5deb312b841db1a8d17e63072ddc5b2a5355039a733621",
+    "lifecycle.json": "66a37402490babe8d76cec9ff6eb207c44c7b1e57a2965fe1d1ebee79bf7b7f3",
+    "repeat-report.json": "804e6d819db14fc1c00f7750870934bd3cad6235d9cd68022831c27b810bc6e1",
+    "cleanup.json": "2a9efdb44c5eaaafd7a9ecc02dc422aa206dc8c68edd6481a7cf3003184e0d5c",
+    "background-report.json": "9965a6dfe16f8bf7871ad8c1df58e4e0d5fc6fcf67ff447959c8f1f26a0eb3a0",
+    "online-emulator-report.json": "1ced0f9e28a3d2a9043f81eb7113d98fee17d01e897d7761949f7022b4b294a3",
+    "bundled-models.json": "48620be02a40c3d0b3abf30525cac887907ba2492ee5a7b307147f26191a08d5",
+    "rotation-report.json": "2ca6378d6643843cb7947d9a2ef5b38b4fb1b6ed772a19775824eeac0898e2e3",
+    "components.json": "05caf37a9cab0bc846f6e5c67e58d3c349173078d644d058b5c7cf8110b8ae1b",
+    "apk.json": "089f08ff5e19805e50571353f55cb08364465c822bda3b29b5edc5eb24218b0e",
+    "cancel-report.json": "3f939193af260f05ed0a3e0537c37aadc1beeeff38d5cd2ac17437a46c0183e7"
+  }
+}

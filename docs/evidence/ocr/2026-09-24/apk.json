@@ -1,0 +1,8 @@
+{
+  "sha256": "13dc1af19c0eb99fa1ea077cece1a01deadf54f24fb60f76c8b3da0d2edeba47",
+  "bytes": 52223693,
+  "permissionsDump": "package: com.kandong.ocrlab\npermission: com.kandong.ocrlab.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION\nuses-permission: name='com.kandong.ocrlab.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'\n",
+  "modelAssetCount": 21,
+  "signatureVerified": true,
+  "alignmentVerified": true
+}

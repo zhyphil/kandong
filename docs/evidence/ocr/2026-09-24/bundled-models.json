@@ -1,0 +1,142 @@
+[
+  {
+    "artifact": "com.google.mlkit:text-recognition:16.0.1",
+    "source": "https://dl.google.com/dl/android/maven2/com/google/mlkit/text-recognition/16.0.1/text-recognition-16.0.1.aar",
+    "bytes": 1383148,
+    "sha256": "da753265d02479a8cfe4dbf891ba7d189248e7c8430b6f72bd4d532c757a69b3",
+    "permissions": [],
+    "components": [],
+    "bundledAssets": [
+      {
+        "name": "assets/mlkit-google-ocr-models/aksara/aksara_page_layout_analysis_rpn_gcn.binarypb",
+        "bytes": 276
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/aksara/aksara_page_layout_analysis_ti_rpn_gcn.binarypb",
+        "bytes": 278
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/gocr/gocr_models/line_recognition_legacy_mobile/Latn_ctc/optical/assets.extra/LabelMap.pb",
+        "bytes": 3809
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/gocr/gocr_models/line_recognition_legacy_mobile/Latn_ctc/optical/conv_model.fb",
+        "bytes": 40848
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/gocr/gocr_models/line_recognition_legacy_mobile/Latn_ctc/optical/lstm_model.fb",
+        "bytes": 309568
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/gocr/gocr_models/line_recognition_legacy_mobile/Latn_ctc_cpu.binarypb",
+        "bytes": 333
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/gocr/gocr_models/line_recognition_legacy_mobile/tflite_langid.tflite",
+        "bytes": 315520
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/gocr/layout/line_clustering_custom_ops/model.tflite",
+        "bytes": 129612
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/gocr/layout/line_splitting_custom_ops/model.tflite",
+        "bytes": 114384
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/taser/detector/region_proposal_text_detector_tflite_vertical_mbv2_v1.bincfg",
+        "bytes": 452
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/taser/detector/rpn_text_detector_mobile_space_to_depth_quantized_mbv2_v1.tflite",
+        "bytes": 340760
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/taser/rpn_text_detection_tflite_mobile_mbv2.binarypb",
+        "bytes": 194
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/taser/segmenter/tflite_script_detector_0.3.bincfg",
+        "bytes": 1118
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/taser/segmenter/tflite_script_detector_0.3.conv_model",
+        "bytes": 40808
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/taser/segmenter/tflite_script_detector_0.3.lstm_model",
+        "bytes": 161448
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/taser/taser_script_identification_tflite_mobile.binarypb",
+        "bytes": 136
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/taser_tflite_gocrlatin_mbv2_scriptid_aksara_layout_gcn_mobile_engine.binarypb",
+        "bytes": 13178
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/taser_tflite_gocrlatin_mbv2_scriptid_aksara_layout_gcn_mobile_engine_ti.binarypb",
+        "bytes": 13183
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/taser_tflite_gocrlatin_mbv2_scriptid_aksara_layout_gcn_mobile_recognizer.binarypb",
+        "bytes": 233
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/taser_tflite_gocrlatin_mbv2_scriptid_aksara_layout_gcn_mobile_runner.binarypb",
+        "bytes": 331
+      },
+      {
+        "name": "assets/mlkit-google-ocr-models/taser_tflite_gocrlatin_mbv2_scriptid_aksara_layout_gcn_mobile_runner_ti.binarypb",
+        "bytes": 334
+      }
+    ]
+  },
+  {
+    "artifact": "com.google.mlkit:text-recognition-bundled-common:17.0.0",
+    "source": "https://dl.google.com/dl/android/maven2/com/google/mlkit/text-recognition-bundled-common/17.0.0/text-recognition-bundled-common-17.0.0.aar",
+    "bytes": 17960748,
+    "sha256": "fb1d4e26d69125659b6f5a94f03cce145544b0116807d04333335a9775636e05",
+    "permissions": [],
+    "components": [],
+    "bundledAssets": [
+      {
+        "name": "jni/arm64-v8a/libmlkit_google_ocr_pipeline.so",
+        "bytes": 11064544
+      },
+      {
+        "name": "jni/armeabi-v7a/libmlkit_google_ocr_pipeline.so",
+        "bytes": 6781940
+      },
+      {
+        "name": "jni/x86/libmlkit_google_ocr_pipeline.so",
+        "bytes": 11561048
+      },
+      {
+        "name": "jni/x86_64/libmlkit_google_ocr_pipeline.so",
+        "bytes": 11626128
+      }
+    ]
+  },
+  {
+    "artifact": "com.google.mlkit:common:18.11.0",
+    "source": "https://dl.google.com/dl/android/maven2/com/google/mlkit/common/18.11.0/common-18.11.0.aar",
+    "bytes": 434066,
+    "sha256": "66408a08dbb2465687ff5dd0c8f6410b56549ce3ecf449d9096f3712282131d0",
+    "permissions": [],
+    "components": [
+      {
+        "tag": "provider",
+        "name": "com.google.mlkit.common.internal.MlKitInitProvider",
+        "exported": "false"
+      },
+      {
+        "tag": "service",
+        "name": "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+        "exported": "false"
+      }
+    ],
+    "bundledAssets": []
+  }
+]

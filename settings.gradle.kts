@@ -14,3 +14,6 @@ include(":compat")
 include(":qualitylab")
 
 include(":graphics")
+
+// Fixed synthetic OCR inputs only; independent from the product applications.
+include(":ocrlab")

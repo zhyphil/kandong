@@ -50,3 +50,8 @@ API29安全区使用官方[WindowInsets stable insets与DisplayCutout](https://d
 ## GPU C独立实验
 
 使用Android官方[EGL14](https://developer.android.com/reference/android/opengl/EGL14)、[GLES30](https://developer.android.com/reference/android/opengl/GLES30)和Khronos[precise规则](https://registry.khronos.org/OpenGL/extensions/EXT/EXT_gpu_shader5.txt)。着色器、CPU Float系数和测试均为项目内实现，数学公式沿用既有Mitchell归属；无第三方代码/模型/新运行时依赖，见[QUALITY_GPU](QUALITY_GPU.md)。
+
+
+## 独立OCR实验依赖
+
+ocrlab使用Google ML Kit随包Latin OCR 16.0.1及其传递依赖，模型和原生引擎通过Google官方Maven依赖构建，不把SDK/模型重新标成MIT或Apache开源项目。适用[ML Kit条款与隐私](https://developers.google.com/ml-kit/terms)；具体依赖清单和模型文件校验见[OCR实验记录](OCR_LAB.md)。实验输入是本项目自行编写的英法合成句，UI/运行器独立编写，API用法参考官方文档，未复制完整上游项目。正式选择、分发或新增模型前仍需逐项核对对应条款和归属。
