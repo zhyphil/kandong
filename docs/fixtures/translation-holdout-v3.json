@@ -1,0 +1,621 @@
+{
+  "schema": 1,
+  "synthetic": true,
+  "cases": [
+    {
+      "id": "p201",
+      "sourceLanguage": "en",
+      "viewport": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "blocks": [
+        {
+          "id": "b001",
+          "text": "Returns and refunds",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            60,
+            1040,
+            160
+          ],
+          "readingOrder": 1
+        },
+        {
+          "id": "b002",
+          "text": "Unopened products only",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            195,
+            1040,
+            295
+          ],
+          "readingOrder": 2
+        },
+        {
+          "id": "b003",
+          "text": "Select an item from your order",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        {
+          "id": "b004",
+          "text": "Return",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        }
+      ],
+      "groups": [
+        {
+          "id": "g001",
+          "blockIds": [
+            "b001",
+            "b002",
+            "b003",
+            "b004"
+          ]
+        }
+      ],
+      "targetIds": [
+        "b004"
+      ],
+      "roi": [
+        40,
+        465,
+        1040,
+        565
+      ]
+    },
+    {
+      "id": "p202",
+      "sourceLanguage": "en",
+      "viewport": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "blocks": [
+        {
+          "id": "b001",
+          "text": "Account settings",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            60,
+            1040,
+            160
+          ],
+          "readingOrder": 1
+        },
+        {
+          "id": "b002",
+          "text": "Return to the previous screen",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            195,
+            1040,
+            295
+          ],
+          "readingOrder": 2
+        },
+        {
+          "id": "b003",
+          "text": "Return",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        }
+      ],
+      "groups": [
+        {
+          "id": "g001",
+          "blockIds": [
+            "b001",
+            "b002",
+            "b003"
+          ]
+        }
+      ],
+      "targetIds": [
+        "b003"
+      ],
+      "roi": [
+        40,
+        330,
+        1040,
+        430
+      ]
+    },
+    {
+      "id": "p203",
+      "sourceLanguage": "fr",
+      "viewport": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "blocks": [
+        {
+          "id": "b001",
+          "text": "Au restaurant",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            60,
+            1040,
+            160
+          ],
+          "readingOrder": 1
+        },
+        {
+          "id": "b002",
+          "text": "Détail des consommations",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            195,
+            1040,
+            295
+          ],
+          "readingOrder": 2
+        },
+        {
+          "id": "b003",
+          "text": "Note",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        {
+          "id": "b004",
+          "text": "Payer à la caisse",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        }
+      ],
+      "groups": [
+        {
+          "id": "g001",
+          "blockIds": [
+            "b001",
+            "b002",
+            "b003",
+            "b004"
+          ]
+        }
+      ],
+      "targetIds": [
+        "b003"
+      ],
+      "roi": [
+        40,
+        330,
+        1040,
+        430
+      ]
+    },
+    {
+      "id": "p204",
+      "sourceLanguage": "fr",
+      "viewport": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "blocks": [
+        {
+          "id": "b001",
+          "text": "Avis des clients",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            60,
+            1040,
+            160
+          ],
+          "readingOrder": 1
+        },
+        {
+          "id": "b002",
+          "text": "Évaluation sur 5 étoiles",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            195,
+            1040,
+            295
+          ],
+          "readingOrder": 2
+        },
+        {
+          "id": "b003",
+          "text": "Note",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        {
+          "id": "b004",
+          "text": "Donner votre avis",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        }
+      ],
+      "groups": [
+        {
+          "id": "g001",
+          "blockIds": [
+            "b001",
+            "b002",
+            "b003",
+            "b004"
+          ]
+        }
+      ],
+      "targetIds": [
+        "b003"
+      ],
+      "roi": [
+        40,
+        330,
+        1040,
+        430
+      ]
+    },
+    {
+      "id": "p205",
+      "sourceLanguage": "en",
+      "viewport": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "blocks": [
+        {
+          "id": "b001",
+          "text": "Train tickets",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            60,
+            1040,
+            160
+          ],
+          "readingOrder": 1
+        },
+        {
+          "id": "b002",
+          "text": "Standard fare",
+          "role": "heading",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            195,
+            1040,
+            295
+          ],
+          "readingOrder": 2
+        },
+        {
+          "id": "b003",
+          "text": "$48.90 total for 2 people",
+          "role": "value",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        {
+          "id": "b004",
+          "text": "Only valid on 21 November 2026.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        {
+          "id": "b005",
+          "text": "No changes or refunds after departure.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        {
+          "id": "b006",
+          "text": "Child fare",
+          "role": "heading",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            735,
+            1040,
+            835
+          ],
+          "readingOrder": 6
+        },
+        {
+          "id": "b007",
+          "text": "$12.45 per child",
+          "role": "value",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            870,
+            1040,
+            970
+          ],
+          "readingOrder": 7
+        },
+        {
+          "id": "b008",
+          "text": "Free cancellation until 07:05 on 20 November 2026.",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            1005,
+            1040,
+            1105
+          ],
+          "readingOrder": 8
+        }
+      ],
+      "groups": [
+        {
+          "id": "g001",
+          "blockIds": [
+            "b001"
+          ]
+        },
+        {
+          "id": "g002",
+          "blockIds": [
+            "b002",
+            "b003",
+            "b004",
+            "b005"
+          ]
+        },
+        {
+          "id": "g003",
+          "blockIds": [
+            "b006",
+            "b007",
+            "b008"
+          ]
+        }
+      ],
+      "targetIds": [
+        "b003",
+        "b004",
+        "b005",
+        "b007",
+        "b008"
+      ],
+      "roi": [
+        40,
+        330,
+        1040,
+        430
+      ]
+    },
+    {
+      "id": "p206",
+      "sourceLanguage": "fr",
+      "viewport": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "blocks": [
+        {
+          "id": "b001",
+          "text": "Transport des bagages",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            60,
+            1040,
+            160
+          ],
+          "readingOrder": 1
+        },
+        {
+          "id": "b002",
+          "text": "Tarif léger",
+          "role": "heading",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            195,
+            1040,
+            295
+          ],
+          "readingOrder": 2
+        },
+        {
+          "id": "b003",
+          "text": "1 bagage, 7 kg au maximum.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        {
+          "id": "b004",
+          "text": "Tarif cargo",
+          "role": "heading",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        {
+          "id": "b005",
+          "text": "Poids minimum : 9 kg.",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        {
+          "id": "b006",
+          "text": "Heure limite : 06:40",
+          "role": "value",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            735,
+            1040,
+            835
+          ],
+          "readingOrder": 6
+        },
+        {
+          "id": "b007",
+          "text": "Valable jusqu'au 3 janvier 2027 inclus.",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            870,
+            1040,
+            970
+          ],
+          "readingOrder": 7
+        }
+      ],
+      "groups": [
+        {
+          "id": "g001",
+          "blockIds": [
+            "b001"
+          ]
+        },
+        {
+          "id": "g002",
+          "blockIds": [
+            "b002",
+            "b003"
+          ]
+        },
+        {
+          "id": "g003",
+          "blockIds": [
+            "b004",
+            "b005",
+            "b006",
+            "b007"
+          ]
+        }
+      ],
+      "targetIds": [
+        "b003",
+        "b005",
+        "b006",
+        "b007"
+      ],
+      "roi": [
+        40,
+        330,
+        1040,
+        430
+      ]
+    }
+  ]
+}
