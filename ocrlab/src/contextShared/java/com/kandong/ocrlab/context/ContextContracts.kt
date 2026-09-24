@@ -9,7 +9,15 @@ data class ContextRect(val left: Double, val top: Double, val right: Double, val
     fun valid() = listOf(left, top, right, bottom).all { it.isFinite() && kotlin.math.abs(it) <= 1_000_000 } && width > 0 && height > 0
     fun contains(other: ContextRect) = left <= other.left && top <= other.top && right >= other.right && bottom >= other.bottom
 }
-enum class SourceKind { SYNTHETIC_FIXTURE }
+enum class SourceKind { SYNTHETIC_FIXTURE, PACKAGED_SYNTHETIC_OCR }
+data class ContextPoint(val x: Double, val y: Double)
+data class OcrCandidate(val modelId: String, val raw: String)
+enum class OcrReviewReason { EMPTY_TEXT, CANDIDATE_CONFLICT }
+/** Recognition evidence only: no inferred language, semantic group or correctness confidence. */
+data class OcrEvidence(
+    val pageId: String, val quad: List<ContextPoint>, val candidates: List<OcrCandidate>,
+    val selectedModelIds: List<String>, val reviewReason: OcrReviewReason? = null,
+)
 enum class BlockState { KNOWN, UNKNOWN, ICON_ONLY, OCCLUDED, AMBIGUOUS, TRUNCATED, CONFLICT }
 enum class GroupKind { CARD, PHRASE }
 enum class ClearReason { PAGE_CHANGE, PAUSE, MENU, STOP, EXPIRED, INVALID_SNAPSHOT, CLOCK_INVALID }
@@ -20,6 +28,7 @@ data class ContextBlock(
     val state: BlockState = BlockState.KNOWN, val clipped: Boolean = false,
     val source: SourceKind = SourceKind.SYNTHETIC_FIXTURE,
     val confidence: Double? = null,
+    val ocr: OcrEvidence? = null,
 )
 data class SemanticGroup(
     val id: String, val kind: GroupKind, val memberIds: List<String>,
@@ -56,7 +65,34 @@ data class TranslationCard(val targetId: String, val sourceText: String, val chi
 data class ContextRender(val selectionGeneration: Long, val viewGeneration: Long, val anchors: List<SourceAnchor>, val cards: List<TranslationCard>)
 
 internal fun <T> frozen(values: Collection<T>): List<T> = Collections.unmodifiableList(ArrayList(values))
-internal fun ContextBlock.freeze() = copy(contextIds = frozen(contextIds))
+internal fun ContextBlock.freeze() = copy(contextIds = frozen(contextIds), ocr = ocr?.copy(
+    quad = frozen(ocr.quad), candidates = frozen(ocr.candidates), selectedModelIds = frozen(ocr.selectedModelIds),
+))
+
+/** Structural provenance validation; selecting a model is not proof of OCR correctness. */
+internal fun ContextBlock.validOcr(snapshotId: String): Boolean {
+    if (source != SourceKind.PACKAGED_SYNTHETIC_OCR) return ocr == null
+    val e = ocr ?: return false
+    if (e.pageId != snapshotId || !e.pageId.matches(Regex("[0-9a-f]{64}"))) return false
+    if (e.quad.size != 4 || e.quad.any { !it.x.isFinite() || !it.y.isFinite() }) return false
+    val bounds = ContextRect(e.quad.minOf { it.x }, e.quad.minOf { it.y }, e.quad.maxOf { it.x }, e.quad.maxOf { it.y })
+    if (bounds != original || !bounds.valid()) return false
+    if (e.candidates.size != 2 || e.candidates.map { it.modelId }.toSet() != setOf("ch", "latin") ||
+        e.candidates.any { it.raw.length > 4096 }) return false
+    if (e.selectedModelIds.size > 2 || e.selectedModelIds.toSet().size != e.selectedModelIds.size) return false
+    val byModel = e.candidates.associateBy { it.modelId }
+    if (e.selectedModelIds.any { it !in byModel }) return false
+    if (e.reviewReason != null) {
+        if (e.selectedModelIds.isNotEmpty() || text.isNotEmpty()) return false
+        return when (e.reviewReason) {
+            OcrReviewReason.EMPTY_TEXT -> state == BlockState.UNKNOWN && e.candidates.all { it.raw.isBlank() }
+            OcrReviewReason.CANDIDATE_CONFLICT -> state == BlockState.CONFLICT &&
+                e.candidates.map { it.raw }.distinct().size == 2 && e.candidates.any { it.raw.isNotBlank() }
+        }
+    }
+    return state == BlockState.KNOWN && e.selectedModelIds.isNotEmpty() && text.isNotBlank() &&
+        e.selectedModelIds.all { byModel.getValue(it).raw == text }
+}
 internal fun TargetBinding.freeze() = copy(sources = frozen(sources.map { it.freeze() }), context = frozen(context.map { it.freeze() }))
 internal fun ScreenSnapshot.freeze() = copy(
     blocks = frozen(blocks.map { it.freeze() }),

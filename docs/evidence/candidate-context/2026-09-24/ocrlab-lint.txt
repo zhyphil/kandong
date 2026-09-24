@@ -1,0 +1,195 @@
+/Users/haoyuzuo/Projects/KanDong/ocrlab/build.gradle.kts:12: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk = 36
+        ~~~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application or sdk runs on a version of Android that is more
+   recent than your targetSdkVersion specifies that it has been tested with,
+   various compatibility modes kick in. This ensures that your application
+   continues to work, but it may look out of place. For example, if the
+   targetSdkVersion is less than 14, your app may get an option button in the
+   UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+/Users/haoyuzuo/Projects/KanDong/ocrlab/src/main/AndroidManifest.xml:5: Warning: The attribute android:allowBackup is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute android:dataExtractionRules specifying an @xml resource which configures cloud backups and device transfers on Android 12 and higher. [DataExtractionRules]
+    <application android:label="看懂文字实验" android:allowBackup="false"
+                                                             ~~~~~
+
+   Explanation for issues of type "DataExtractionRules":
+   Before Android 12, the attributes android:allowBackup and
+   android:fullBackupContent were used to configure all forms of backup,
+   including cloud backups, device-to-device transfers and adb backup.
+
+   In Android 12 and higher, these attributes have been deprecated and will
+   only apply to cloud backups. You should instead use the attribute
+   android:dataExtractionRules, specifying an @xml resource that configures
+   which files to back up, for cloud backups and for device-to-device
+   transfers, separately. If your minSdkVersion supports older versions,
+   you'll still want to specify an android:fullBackupContent resource if the
+   default behavior is not right for your app.
+
+   https://developer.android.com/about/versions/12/backup-restore#xml-changes
+   https://goo.gle/DataExtractionRules
+
+/Users/haoyuzuo/Projects/KanDong/ocrlab/src/main/java/com/kandong/ocrlab/context/ContextLabActivity.kt:135: Warning: Avoid object allocations during draw/layout operations (preallocate and reuse instead) [DrawAllocation]
+                rect(ContextRect(0.0, 0.0, 400.0, 600.0), Color.GRAY)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/haoyuzuo/Projects/KanDong/ocrlab/src/main/java/com/kandong/ocrlab/context/ContextLabActivity.kt:145: Warning: Avoid object allocations during draw/layout operations (preallocate and reuse instead) [DrawAllocation]
+                engine.transform?.let { t -> rect(ContextRect(0.0, 0.0, t.width, t.height), Color.GRAY) }
+                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "DrawAllocation":
+   You should avoid allocating objects during a drawing or layout operation.
+   These are called frequently, so a smooth UI can be interrupted by garbage
+   collection pauses caused by the object allocations.
+
+   The way this is generally handled is to allocate the needed objects up
+   front and to reuse them for each drawing operation.
+
+   Some methods allocate memory on your behalf (such as Bitmap.create), and
+   these should be handled in the same way.
+
+/Users/haoyuzuo/Projects/KanDong/ocrlab/src/main/java/com/kandong/ocrlab/multilingual/ComparisonRunner.kt:26: Warning: Do not place Android context classes in static fields (static reference to Run which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
+    private var current: Run? = null
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "StaticFieldLeak":
+   A static field will leak contexts.
+
+   Non-static inner classes have an implicit reference to their outer class.
+   If that outer class is for example a Fragment or Activity, then this
+   reference means that the long-running handler/loader/task will hold a
+   reference to the activity which prevents it from getting garbage
+   collected.
+
+   Similarly, direct field references to activities and fragments from these
+   longer running instances can cause leaks.
+
+   ViewModel classes should never point to Views or non-application Contexts.
+
+/Users/haoyuzuo/Projects/KanDong/ocrlab/src/main/AndroidManifest.xml:5: Warning: Should explicitly set android:icon, there is no default [MissingApplicationIcon]
+    <application android:label="看懂文字实验" android:allowBackup="false"
+     ~~~~~~~~~~~
+
+   Explanation for issues of type "MissingApplicationIcon":
+   You should set an icon for the application as whole because there is no
+   default. This attribute must be set as a reference to a drawable resource
+   containing the image (for example @drawable/icon).
+
+   https://developer.android.com/studio/publish/preparing#publishing-configure
+
+/Users/haoyuzuo/Projects/KanDong/ocrlab/src/main/java/com/kandong/ocrlab/context/ContextLabActivity.kt:130: Warning: Use the KTX extension function Canvas.withScale instead? [UseKtx]
+                canvas.save(); canvas.scale(factor, factor); canvas.translate(10f, 10f)
+                ~~~~~~~~~~~~~
+/Users/haoyuzuo/Projects/KanDong/ocrlab/src/main/java/com/kandong/ocrlab/SyntheticFixtures.kt:57: Warning: Use the KTX function createBitmap instead? [UseKtx]
+        val bitmap = Bitmap.createBitmap(WIDTH, layout.height + 2 * PADDING, Bitmap.Config.ARGB_8888)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/haoyuzuo/Projects/KanDong/ocrlab/src/main/java/com/kandong/ocrlab/SyntheticFixtures.kt:62: Warning: Use the KTX extension function Canvas.withSave instead? [UseKtx]
+                save()
+                ~~~~~~
+
+   Explanation for issues of type "UseKtx":
+   The Android KTX libraries decorates the Android platform SDK as well as
+   various libraries with more convenient extension functions available from
+   Kotlin, allowing you to use default parameters, named parameters, and
+   more.
+
+   Available options:
+
+   **remove-defaults** (default is true):
+   Whether to skip arguments that match the defaults provided by the extension.
+
+   Extensions often provide default values for some of the parameters. For example:
+   ```kotlin
+   fun Path.readLines(charset: Charset = Charsets.UTF_8): List<String> { return Files.readAllLines(this, charset) }
+   ```
+   This lint check will by default automatically omit parameters that match the default, so if your code was calling
+
+   ```kotlin
+   Files.readAllLines(file, Charset.UTF_8)
+   ```
+   lint would replace this with
+   ```kotlin
+   file.readLines()
+   ```
+   rather than
+
+   ```kotlin
+   file.readLines(Charset.UTF_8
+   ```
+   You can turn this behavior off using this option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="remove-defaults" value="true" />
+       </issue>
+   </lint>
+   ```
+
+   **require-present** (default is true):
+   Whether to only offer extensions already available.
+
+   This option lets you only have lint suggest extension replacements if those extensions are already available on the class path (in other words, you're already depending on the library containing the extension method.)
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="require-present" value="true" />
+       </issue>
+   </lint>
+   ```
+
+/Users/haoyuzuo/Projects/KanDong/ocrlab/src/main/java/com/kandong/ocrlab/multilingual/ComparisonLabActivity.kt:47: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            text = "开始 144 项三语对照"; minHeight = dp(48); minWidth = dp(48)
+                    ~~~~~~~~~~~~
+/Users/haoyuzuo/Projects/KanDong/ocrlab/src/main/java/com/kandong/ocrlab/multilingual/ComparisonLabActivity.kt:51: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            text = "开始 144 项平滑对照"; minHeight = dp(48); minWidth = dp(48)
+                    ~~~~~~~~~~~~
+/Users/haoyuzuo/Projects/KanDong/ocrlab/src/main/java/com/kandong/ocrlab/multilingual/ComparisonLabActivity.kt:78: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            status.text = "本轮：" + (if (profile == ComparisonProfile.BASELINE) "原图/像素复制" else "平滑 2/3 倍") + "\n" + message
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/haoyuzuo/Projects/KanDong/ocrlab/src/main/java/com/kandong/ocrlab/multilingual/ComparisonLabActivity.kt:78: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            status.text = "本轮：" + (if (profile == ComparisonProfile.BASELINE) "原图/像素复制" else "平滑 2/3 倍") + "\n" + message
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/haoyuzuo/Projects/KanDong/ocrlab/src/main/java/com/kandong/ocrlab/multilingual/ComparisonLabActivity.kt:78: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            status.text = "本轮：" + (if (profile == ComparisonProfile.BASELINE) "原图/像素复制" else "平滑 2/3 倍") + "\n" + message
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/haoyuzuo/Projects/KanDong/ocrlab/src/main/java/com/kandong/ocrlab/context/ContextLabActivity.kt:171: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        status.text = "$message\n场景：${ContextFixtures.scenes[scene]} · 状态：${engine.lastClear ?: if (engine.snapshot == null) "尚未载入" else "合成上下文有效"}\n倍率：${engine.transform?.scale ?: "—"} · 在途：${engine.pendingCount} · 缓存：${engine.cacheCount}"
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/haoyuzuo/Projects/KanDong/ocrlab/src/main/java/com/kandong/ocrlab/OcrLabActivity.kt:51: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            text = "开始 37 项合成文字实验"
+                    ~~~~~~~~~~~~~
+/Users/haoyuzuo/Projects/KanDong/ocrlab/src/main/java/com/kandong/ocrlab/OcrLabActivity.kt:81: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            text = "三语 OCR 对照实验"
+                    ~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+0 errors, 17 warnings

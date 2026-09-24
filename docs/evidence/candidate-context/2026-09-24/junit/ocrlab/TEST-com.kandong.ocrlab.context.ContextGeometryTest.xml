@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.ocrlab.context.ContextGeometryTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-09-24T15:59:51.299Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.001">
+  <properties/>
+  <testcase name="handCalculatedMappingAndMirrorClipping" classname="com.kandong.ocrlab.context.ContextGeometryTest" time="0.0"/>
+  <testcase name="invalidGeometryRejectedWithoutNonfiniteOutput" classname="com.kandong.ocrlab.context.ContextGeometryTest" time="0.0"/>
+  <testcase name="scaleLimitsAndPanAreClampedInSourceUnits" classname="com.kandong.ocrlab.context.ContextGeometryTest" time="0.0"/>
+  <testcase name="partialIntersectionAndTouchOnly" classname="com.kandong.ocrlab.context.ContextGeometryTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

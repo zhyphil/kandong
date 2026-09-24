@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.PolygonOffsetGuardTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-09-24T16:01:12.923Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.013">
+  <properties/>
+  <testcase name="exactComparisonPreservesCollinearVerticesAndDuplicatePaths" classname="com.kandong.modelprobe.PolygonOffsetGuardTest" time="0.003"/>
+  <testcase name="derivedDistanceUsesFloat32CoordinatesAndDoubleGeometry" classname="com.kandong.modelprobe.PolygonOffsetGuardTest" time="0.0"/>
+  <testcase name="negativeHalfTiesMatchFrozenPyclipperVertices" classname="com.kandong.modelprobe.PolygonOffsetGuardTest" time="0.007"/>
+  <testcase name="invalidOriginalFloatAndIntegerPolygonsNeverReachLibrary" classname="com.kandong.modelprobe.PolygonOffsetGuardTest" time="0.001"/>
+  <testcase name="resultsAreDeepImmutableAndDetachedFromLibraryLists" classname="com.kandong.modelprobe.PolygonOffsetGuardTest" time="0.001"/>
+  <testcase name="distanceAndGeneratedWorkAreCheckedBeforeLibrary" classname="com.kandong.modelprobe.PolygonOffsetGuardTest" time="0.0"/>
+  <testcase name="outputCapsPrecedeAnyCoordinateCopies" classname="com.kandong.modelprobe.PolygonOffsetGuardTest" time="0.0"/>
+  <testcase name="libraryFailureAndEmptyOutputCannotMasqueradeAsComplete" classname="com.kandong.modelprobe.PolygonOffsetGuardTest" time="0.001"/>
+  <testcase name="duplicatePathsAndRelativeWindingSurviveInputConversion" classname="com.kandong.modelprobe.PolygonOffsetGuardTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

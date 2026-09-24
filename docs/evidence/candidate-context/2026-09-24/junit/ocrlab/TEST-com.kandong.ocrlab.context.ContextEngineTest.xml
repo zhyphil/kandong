@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.ocrlab.context.ContextEngineTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-09-24T15:59:51.288Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.01">
+  <properties/>
+  <testcase name="snapshotReusedAndLateResultRendersOnlyLatestSelectionAndTransform" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.001"/>
+  <testcase name="expiryBoundaryMonotonicityAndTtlBoundsWithoutSleep" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.0"/>
+  <testcase name="explicitCancelRevokesPublishAndAllowsNewRequest" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.0"/>
+  <testcase name="clippedOriginalAllowedOnlyWhenDisclosedAndNotTreatedAsComplete" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.001"/>
+  <testcase name="unsupportedPresetResponseIsNotInvented" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.0"/>
+  <testcase name="callerCollectionMutationCannotChangeSnapshotRequestOrCache" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.001"/>
+  <testcase name="sameTextAndCoordinatesOrAmountChangeOnNewGenerationRejectOldRequest" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.002"/>
+  <testcase name="hotelSelectionKeepsExactOutsideRoiContextWithoutOtherCard" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.0"/>
+  <testcase name="malformedSourceIdsGeometryRelationsAndBoundsAreRejected" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.001"/>
+  <testcase name="invalidSnapshotAlwaysClearsOldCacheAndPendingFirst" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.0"/>
+  <testcase name="repeatedContinueIdsAndReorderedResponseKeepGroups" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.0"/>
+  <testcase name="headingRelationIsNotTraversedIntoOtherCard" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.0"/>
+  <testcase name="bookContextsAreProvidedAndChineseIsHandcrafted" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.001"/>
+  <testcase name="incompleteEvidenceRemainsReasonsAndDoesNotBlockUnrelatedCard" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.001"/>
+  <testcase name="completeNegationIncludesBothFragmentsWhileMissingDoesNotInventText" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.001"/>
+  <testcase name="everyLifecycleClearAndReopenRevokesOldResponses" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.001"/>
+  <testcase name="responseAfterZoomUsesNewGeometryWithoutNewRequest" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.0"/>
+  <testcase name="responseCorruptionRejectsWholeBatchThenValidBatchCanPublishOnce" classname="com.kandong.ocrlab.context.ContextEngineTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

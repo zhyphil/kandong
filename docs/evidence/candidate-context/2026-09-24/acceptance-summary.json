@@ -1,0 +1,121 @@
+{
+  "status": "accepted-synthetic-candidate-context-contract",
+  "baselineCommit": "8fc9ec3",
+  "unitTests": {
+    "ocrlab": 49,
+    "modelprobe": 74
+  },
+  "totalUnitTests": 123,
+  "rounds": 2,
+  "targetedJUnitPerRound": 8,
+  "fullSuiteRerun": false,
+  "freshPagesPerRound": 5,
+  "freshBlocksPerRound": 9,
+  "api": 37,
+  "pageSize": 16384,
+  "unchangedReports": [
+    "e2e",
+    "selection"
+  ],
+  "originalGeometrySourceUnchanged": true,
+  "threeReportsRepeat": true,
+  "allRawInputDigestsIndependentlyVerified": true,
+  "runIds": [
+    "59f153e9-d3a8-446c-91d8-16e2ee0261f4",
+    "796f9ea3-6176-4e03-89db-21eb8853e76e",
+    "998d9330-b09e-47c8-8ef6-3e7f4ef8409a",
+    "b5d17754-e614-47c1-b559-71c9ffc41cd4",
+    "7add5be8-e3f9-4452-9b49-c1e70b7be4b0",
+    "188ac1d5-b06a-496f-ac2b-b234b24861f9"
+  ],
+  "excludedFields": [
+    "elapsedMs",
+    "elapsedNanos",
+    "elapsedNanosObservational",
+    "freshE2eReportSha256",
+    "freshE2eRunId",
+    "resizeNs",
+    "runId"
+  ],
+  "apk": {
+    "mainApkSha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+    "testApkSha256": "0e13aff24543f2dbdb63699864a0c1dffe3acd6b3974b56702cc571f0fd4edb9",
+    "testApkBytes": 247885169,
+    "assetsAndNativeUnchanged": 292
+  },
+  "packageChecks": [
+    {
+      "tool": "zipalign",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "tool": "apksigner",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "WARNING: A restricted method in java.lang.System has been called\nWARNING: java.lang.System::loadLibrary has been called by org.conscrypt.NativeLibraryUtil in an unnamed module (file:/Users/haoyuzuo/Library/Android/sdk/build-tools/35.0.0/lib/apksigner.jar)\nWARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module\nWARNING: Restricted methods will be blocked in a future release unless native access is enabled\n\n"
+    }
+  ],
+  "sourceSha256": {
+    "modelprobe/build.gradle.kts": "12aaae8b06e1914dccfa82accaffbb295d177bb53c785326c44ecdded4a5f0e8",
+    "ocrlab/build.gradle.kts": "57b0458c18d458764d7180eaf2d1a4c22fe7162fbd0d410005536b28df572023",
+    "scripts/run-candidate-emulator.py": "8d558f1fcd1f82fbf5981bc8c3b212d8a4672148668488bfbb94e828b3180f99",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/CandidateContext.kt": "0256a7c7dff8ee467ffd7f0d5ad7de7d608c9620e182190a7025e17f1dbc248e",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/SharedCandidates.kt": "5c3125f92436fc252f9a3aaebff3e322e614a932c2ca98031e66d3c1f3c27579",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/CandidateContextTest.kt": "e35a42c685c87f43619ef8c1241d6a58af0c7cb89cca63d9bf391472f530d489",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/CandidateContextProbeTest.kt": "ca98a2db40e4f548dfd1af2fa131ffbfd95e76c9cb63910d9b04640756051fc7",
+    "ocrlab/src/test/java/com/kandong/ocrlab/context/OcrContextEvidenceTest.kt": "20efa3228b8b02cb8db5a47b203806ff66cc35c37e927cb28068441f58968a31",
+    "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt": "dcd92c02d6b9eb597f7a6b69eb9c635e01bb5e6b7b778a9b3897eadd95d2e291",
+    "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextEngine.kt": "b544e4732b244c5e80b14d0e30aec6b06e87fa73338b79280d6d9a0d579be125",
+    "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextGeometry.kt": "70dcc6ad5d1b8656616f001031439c81f61502d4e7084a0f9394cc3cb3f1a3b9"
+  },
+  "rawReports": {
+    "context-2-report.json": {
+      "file": "context-2-report.json.gz",
+      "sha256": "e85bec052f76a67d39872898b5ac9d2a16d1cb8106a6c8e8b359f2f1a3e5bb2d"
+    },
+    "e2e-1-report.json": {
+      "file": "e2e-1-report.json.gz",
+      "sha256": "399a78cc48fc1535f5f77fafa466fc97ea26674ff30a3f4d04f2a631190b4192"
+    },
+    "e2e-2-report.json": {
+      "file": "e2e-2-report.json.gz",
+      "sha256": "4c7ae52b6edfbac36d9d53067c91b2c4b15acbd3eec3fd7cc99b439559847cdc"
+    },
+    "context-1-report.json": {
+      "file": "context-1-report.json.gz",
+      "sha256": "b1664bb4b6f31c0b7467565664131ba1982e44a5a43c199cef962d4db6b20ebc"
+    },
+    "e2e-1-device-raw.json": {
+      "file": "e2e-1-device-raw.json.gz",
+      "sha256": "fd299ca6171a6a3924bc32d5b2f6b72f95e578ffc21c938d3dc4ee5fc7a89b88"
+    },
+    "installed.json": {
+      "file": "installed.json.gz",
+      "sha256": "3380dc96d6b422272c4d9f2880c54d54b2ec351c75d38505bb949beb9a0a7bdf"
+    },
+    "selection-2-report.json": {
+      "file": "selection-2-report.json.gz",
+      "sha256": "793bb4ddf2601a0b884c57387089f3a5e3ca5378af9dedd801ee126100e8b0bf"
+    },
+    "selection-1-report.json": {
+      "file": "selection-1-report.json.gz",
+      "sha256": "0652e39d2f12b27f0c7c830b16559d35d3a26d513391921dece9311bd42ebcbd"
+    },
+    "e2e-2-device-raw.json": {
+      "file": "e2e-2-device-raw.json.gz",
+      "sha256": "397e2fb9c7383a03ffd18955145a056b8c08fe48aabef72105dcd26a7c285717"
+    }
+  },
+  "qualityAccepted": false,
+  "limits": [
+    "All inputs are synthetic, no real screens or phone actions",
+    "Phrase/card ownership is explicitly hand declared; no automatic semantic grouping",
+    "OCR block language is undetermined; no language identification or translation model",
+    "Human placeholder response tests delivery only, not translation quality",
+    "Fresh five pages contain no REVIEW blocks; conflict gating is separately exercised in shared JVM/Android synthetic cases",
+    "Original quad is retained; ROI selection uses its axis-aligned bounding rectangle",
+    "No product integration, ocrlab UI acceptance, push, release or publication"
+  ]
+}

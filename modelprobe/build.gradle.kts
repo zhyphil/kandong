@@ -23,6 +23,11 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions { jvmTarget = "17" }
+    sourceSets.getByName("test").java.srcDir("src/contextTest/java")
+    sourceSets.getByName("androidTest").java.srcDir("src/contextTest/java")
+    // Reuse the pure synthetic context contract in tests only; no OCR/product dependency.
+    sourceSets.getByName("test").java.srcDir(rootProject.file("ocrlab/src/contextShared/java"))
+    sourceSets.getByName("androidTest").java.srcDir(rootProject.file("ocrlab/src/contextShared/java"))
     sourceSets.getByName("test").java.srcDir("src/testShared/java")
     sourceSets.getByName("androidTest").java.srcDir("src/testShared/java")
     sourceSets.getByName("androidTest").assets.srcDir(rootProject.file("docs/fixtures/recognition-prep-v1"))

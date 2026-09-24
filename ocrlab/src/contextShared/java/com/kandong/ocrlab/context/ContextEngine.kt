@@ -59,6 +59,7 @@ class ContextEngine {
         val blocks = p.blocks.associateBy { it.id }; val groups = p.groups.associateBy { it.id }
         val screen = ContextRect(0.0, 0.0, p.width, p.height)
         for (b in p.blocks) {
+            if (!b.validOcr(key.snapshotId)) return false
             if (!listOf(b.id, b.language, b.role).all(::token) || b.text.length > 2000 || b.order < 0 ||
                 (b.state == BlockState.KNOWN && b.text.isBlank())) return false
             if (!b.original.valid() || !b.visible.valid() || !screen.contains(b.visible) || !b.original.contains(b.visible)) return false
