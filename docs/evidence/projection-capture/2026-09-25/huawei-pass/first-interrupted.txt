@@ -1,0 +1,3 @@
+--------- beginning of main
+I/KDCaptureLab( 3582): {"event":"PHASE","session":1,"phase":"BASELINE","verdict":"CANCELLED","frames":0,"nonceFrames":0,"blackFrames":0,"baseFrames":0,"coverFrames":0,"mismatchFrames":0,"staleFrames":0,"nonMonotonicFrames":0,"streak":0,"elapsedMs":7}
+I/KDCaptureLab( 3582): {"event":"END","session":1,"reason":"BACKGROUND","api":31,"width":1176,"height":2400,"rotation":0,"acquired":0,"closed":0,"drained":0,"displays":1,"phaseCount":1,"coverControls":"INSUFFICIENT","activityControls":"INSUFFICIENT"}

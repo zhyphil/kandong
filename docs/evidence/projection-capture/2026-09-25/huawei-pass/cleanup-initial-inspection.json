@@ -1,0 +1,8 @@
+{
+  "services": "ACTIVITY MANAGER SERVICES (dumpsys activity services)\n  (nothing)",
+  "projection": "MEDIA PROJECTION MANAGER (dumpsys media_projection)\nMedia Projection: \nnull",
+  "owned_overlay_present": true,
+  "owned_window_lines": [
+    "mLastDisplayFreezeDuration=+7ms due to Window{e307296 u0 KanDong fixed synthetic overlay}"
+  ]
+}

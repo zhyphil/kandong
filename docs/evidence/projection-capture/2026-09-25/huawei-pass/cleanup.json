@@ -1,0 +1,10 @@
+{
+  "services": "ACTIVITY MANAGER SERVICES (dumpsys activity services)\n  (nothing)",
+  "projection": "MEDIA PROJECTION MANAGER (dumpsys media_projection)\nMedia Projection: \nnull",
+  "active_window_header_count": 29,
+  "active_owned_overlay_headers": [],
+  "historical_overlay_references": [
+    "mLastDisplayFreezeDuration=+7ms due to Window{e307296 u0 KanDong fixed synthetic overlay}"
+  ],
+  "cleanup_verified": true
+}

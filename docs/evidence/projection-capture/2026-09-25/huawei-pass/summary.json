@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-25",
+  "source_commit": "d94ecf0",
+  "device": "Huawei LIO-AN00 / HWLIO / API31",
+  "same_apk_as_emulator": true,
+  "dimensions": [
+    1176,
+    2400
+  ],
+  "pid": 3582,
+  "session": 2,
+  "all_seven_phases_passed": true,
+  "acquired": 41,
+  "closed": 41,
+  "virtual_displays": 1,
+  "cover_controls": "CONTROLLED_OBSERVATION",
+  "activity_controls": "CONTROLLED_OBSERVATION",
+  "cleanup_verified": true,
+  "first_session": "OEM notification permission Activity interrupted first session; BACKGROUND, 0 frames, one VD, immediate cleanup. User then explicitly confirmed a new session. No relaxation of lifecycle rules.",
+  "scope": "Fixed owned color fixture, one successful phone session. Not arbitrary application privacy, OCR quality, endurance or complete product acceptance.",
+  "observability": "Log read from all buffers with fixed KDCaptureLab filter. Live --pid watcher missed this run; complete raw phase log was independently retrieved. Historical mLastDisplayFreezeDuration window name is not an active window.",
+  "no_source_changes": true
+}

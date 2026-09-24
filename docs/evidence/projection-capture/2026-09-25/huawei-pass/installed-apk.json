@@ -1,0 +1,10 @@
+{
+  "local": "2a5d6f248f334c5abef9ea88910504436225fcab72802f84d2ebbf3e740a1e99",
+  "installed": "2a5d6f248f334c5abef9ea88910504436225fcab72802f84d2ebbf3e740a1e99",
+  "same_apk": true,
+  "device": {
+    "ro.product.model": "LIO-AN00",
+    "ro.product.device": "HWLIO",
+    "ro.build.version.sdk": "31"
+  }
+}

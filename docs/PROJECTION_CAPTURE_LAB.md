@@ -4,7 +4,7 @@
 
 ## 人工运行
 
-1. 已核对并安装到 `KanDong_OCR_API37_16K`（`emulator-5582`），七阶段实测通过。随后核对华为 `LIO-AN00/HWLIO`、API31/Android12，发出同一APK安装请求，用户已确认；随后USB调试读写持续失败（e00002ed），尚未核对实际安装与指纹，华为实测仍未通过。Mac识别手机及ADB接口；主机服务刷新和libusb对照均未恢复，已还原默认NATIVE后端，未改持久环境变量。诊断见[连接记录](evidence/projection-capture/2026-09-25/opacity-projection-pass/huawei-usb-diagnosis.json)。新设备必须先核对身份。
+1. 相同 APK 已在 `KanDong_OCR_API37_16K`（API37/16KiB）及目标华为 `LIO-AN00/HWLIO`（API31/Android12）完成七阶段实测。安装指纹均匹配，结果只覆盖固定自有色块页，不推广到第三方页面。新设备仍必须先核对身份。
 2. 打开实验，阅读整屏缓冲区披露。点「授权悬浮窗」，在系统设置中手动授权并返回。
 3. 点「开始采集验证」，手动确认本次系统屏幕共享。API 34+ 请求默认整屏，API 31–33 使用平台标准授权入口。平台若仍允许改选单应用，本实验会在尺寸或标记不符时停止／超时，不假定已获得整屏证据。
 4. 保持实验页在前台并有焦点，序列最多 40 秒。停止按钮在色块外；前台服务通知也提供停止操作。API 33+ 若通知权限未获准，系统可能不在通知抽屉显示它；本实验不自动申请额外通知权限，页面停止和系统前台服务管理仍可用。
@@ -75,3 +75,11 @@ JVM 测试覆盖同帧匹配、来源时间基、版本、重复时间戳、取�
 构件／原始失败／测试／只读审查记录见 [证据](evidence/projection-capture/2026-09-25/summary.json)。
 
 依据：[MediaProjection](https://developer.android.com/media/grow/media-projection)、[FLAG_SECURE](https://developer.android.com/reference/android/view/WindowManager.LayoutParams#FLAG_SECURE)、[Image 时间戳来源](https://developer.android.com/reference/android/media/Image#getTimestamp())（本轮已核实）。
+
+## 2026-09-25 目标华为实测
+
+- 重连后已确认先前安装实际成功，APK SHA256为`2a5d6f248f334c5abef9ea88910504436225fcab72802f84d2ebbf3e740a1e99`，与模拟器同包。没有重复安装或修改代码。
+- 首次共享在创建VD后被华为自动出现的通知权限Activity打断：BASELINE取消、BACKGROUND、0/0帧。事件日志包含GrantPermissionsActivity及该包POST_NOTIFICATIONS记录；应用立即结束并未后台继续采集。权限对话结束后由用户主动重新确认共享。
+- PID3582/session2、1176×2400，五个公开对照CURRENT_CONFIRMED、两个保护阶段BLACK_OBSERVED、每阶段连续3帧；保护前后对照均CONTROLLED_OBSERVATION。图像取得／关闭41/41、显示1次。
+- 服务为空、MediaProjection null、活动窗口列表无固定overlay。华为保留的mLastDisplayFreezeDuration历史窗口名字不代表窗口仍存在；先前全字符串查找的误判与实际列表核对均保留。
+- [原始结果与审计](evidence/projection-capture/2026-09-25/huawei-pass/summary.json)。没有真实第三方图像／文字、OCR、翻译或上传；单轮通过不等于长时间稳定性或通用安全检测。现有版本首次通知弹窗仍可能中断，需要用户重新开始；未用忽略后台事件来绕过。
