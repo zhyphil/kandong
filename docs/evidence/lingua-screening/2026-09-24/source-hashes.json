@@ -1,0 +1,11 @@
+{
+  "docs/LINGUA_SCREENING.md": "4bfa836b0ef1b7b0fdae0d7ef1698dfbd94da7b8b706fbfab832b4da729238bd",
+  "docs/LINGUA_SCREENING_PLAN.md": "466b557157956baa723cae9e1c54a0344f720966fbc9150b2a262ea472bb384f",
+  "docs/fixtures/language-context-v2.json": "fbc29c9fd6fa34680ad1ece4f86b74e4f57b6316548046f45b63b7efaac20d76",
+  "docs/fixtures/language-lingua-v3.json": "e2319026a3d8370c205e0c516aedfcb5e41d66f87f1c259c2f68b6c2dbddd59d",
+  "docs/fixtures/language-routing-v1.json": "733f883e4e974f110b201ceb9307d648f53bc14b2e6b46719a5a097eb33d6e7c",
+  "scripts/audit-lingua-screening.py": "933b9af194864233ef2b6f6dc95ebb65bf8b4744d9da0a8550ff35e12787e707",
+  "scripts/lingua_candidate.py": "97da418eb98f8e6242f68f68c6766dcf484b57651bf362edb5d3c4677bc2a5d4",
+  "scripts/screen-lingua-fixtures.py": "8090d1abd4621c15af4b714100323703b5e5365423ff0ada0f5eeb05c10c1ac6",
+  "scripts/test_lingua_candidate.py": "33e8634f270389ae9147f39f81b1b421a15e0ecebc94661c66451ca5bd86c326"
+}

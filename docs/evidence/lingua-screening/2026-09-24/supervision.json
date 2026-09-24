@@ -1,0 +1,110 @@
+{
+  "pollSeconds": 0.25,
+  "profile": "(version 1)(allow default)(deny network*)",
+  "runs": [
+    {
+      "elapsedSeconds": 2.5627735419548117,
+      "exitCode": 0,
+      "externalSampledPeakRssBytes": 290013184,
+      "hardStop": null,
+      "processLifetimePeakRssBytes": 321650688,
+      "round": "1",
+      "samples": [
+        {
+          "elapsedSeconds": 0.0023629170027561486,
+          "rssBytes": 4112384
+        },
+        {
+          "elapsedSeconds": 0.2556922079529613,
+          "rssBytes": 32227328
+        },
+        {
+          "elapsedSeconds": 0.5135168329579756,
+          "rssBytes": 33521664
+        },
+        {
+          "elapsedSeconds": 0.7701465419959277,
+          "rssBytes": 160235520
+        },
+        {
+          "elapsedSeconds": 1.0249309169594198,
+          "rssBytes": 212025344
+        },
+        {
+          "elapsedSeconds": 1.2828777499962598,
+          "rssBytes": 236355584
+        },
+        {
+          "elapsedSeconds": 1.5389202499645762,
+          "rssBytes": 258031616
+        },
+        {
+          "elapsedSeconds": 1.793638207949698,
+          "rssBytes": 284573696
+        },
+        {
+          "elapsedSeconds": 2.0503956669708714,
+          "rssBytes": 287588352
+        },
+        {
+          "elapsedSeconds": 2.307577332947403,
+          "rssBytes": 290013184
+        }
+      ],
+      "systemCpuSeconds": 0.07900599999999999,
+      "userCpuSeconds": 2.412526
+    },
+    {
+      "elapsedSeconds": 2.5566825839923695,
+      "exitCode": 0,
+      "externalSampledPeakRssBytes": 292503552,
+      "hardStop": null,
+      "processLifetimePeakRssBytes": 328597504,
+      "round": "2",
+      "samples": [
+        {
+          "elapsedSeconds": 0.00234337494475767,
+          "rssBytes": 4112384
+        },
+        {
+          "elapsedSeconds": 0.2595156249590218,
+          "rssBytes": 32309248
+        },
+        {
+          "elapsedSeconds": 0.5134202499757521,
+          "rssBytes": 33619968
+        },
+        {
+          "elapsedSeconds": 0.7686519589624368,
+          "rssBytes": 160841728
+        },
+        {
+          "elapsedSeconds": 1.0258542499504983,
+          "rssBytes": 215597056
+        },
+        {
+          "elapsedSeconds": 1.2837212499580346,
+          "rssBytes": 239190016
+        },
+        {
+          "elapsedSeconds": 1.5417487499653362,
+          "rssBytes": 261505024
+        },
+        {
+          "elapsedSeconds": 1.7946979999542236,
+          "rssBytes": 287178752
+        },
+        {
+          "elapsedSeconds": 2.052294124965556,
+          "rssBytes": 290111488
+        },
+        {
+          "elapsedSeconds": 2.3053076249780133,
+          "rssBytes": 292503552
+        }
+      ],
+      "systemCpuSeconds": 0.078191,
+      "userCpuSeconds": 2.401167
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+completed 10 pages
+completed 20 pages
+completed 30 pages
+completed 40 pages
+completed 50 pages
+completed 60 pages
+completed 70 pages
+completed 80 pages
+completed 90 pages
+completed 100 pages
+completed 110 pages
+{"status": "complete", "executionPassed": true, "resourceEligible": false, "summary": {"v1": {"total": 38, "matching": 27, "wrongAutomatic": 1, "correctReview": 15, "correctReady": 8, "correctLiteral": 4, "missedReady": 10}, "v2": {"total": 44, "matching": 29, "wrongAutomatic": 1, "correctReview": 17, "correctReady": 10, "correctLiteral": 2, "missedReady": 14}, "v3": {"total": 32, "matching": 24, "wrongAutomatic": 1, "correctReview": 11, "correctReady": 11, "correctLiteral": 2, "missedReady": 7}}, "errors": []}

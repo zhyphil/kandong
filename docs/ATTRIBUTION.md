@@ -86,3 +86,7 @@ modelprobe使用Microsoft ONNX Runtime Android1.30.0（MIT及其ThirdPartyNotice
 ## 随包语言识别独立实验
 
 modelprobe仅androidTest使用Google `com.google.mlkit:language-id:17.0.6`（包含随包TFLite语言模型/原生引擎及传递依赖），适用[ML Kit条款](https://developers.google.com/ml-kit/terms)，不是按文档代码示例的Apache许可重新分发模型。API使用参考[官方接入](https://developers.google.com/ml-kit/language/identification/android)及[公开初始化](https://developers.google.com/android/reference/com/google/mlkit/common/MlKit)，无复制上游项目代码。38条文字、路由、测试及运行器由本项目编写；指纹/POM/依赖及质量失败保留于[语言实验记录](LANGUAGE_ROUTING.md)。尚未选为正式产品方案；SDK运行指标与文字本机处理分开披露，本轮不宣称全设备无遥测。
+
+## Lingua 独立宿主筛选
+
+仅临时宿主虚拟环境使用[lingua-language-detector 2.2.0](https://pypi.org/project/lingua-language-detector/2.2.0/)，作者Peter M. Stahl，Apache-2.0；[Python上游](https://github.com/pemistahl/lingua-py)、[包内指向的Rust v1.8.0](https://github.com/pemistahl/lingua-rs/tree/77e94d1a2a8e49bed873a7c502bcb51ba803ef0f)。发布wheel所带[许可](evidence/lingua-screening/2026-09-24/LINGUA-LICENSE.txt)、[SBOM](evidence/lingua-screening/2026-09-24/sbom.json)和[实际元数据](evidence/lingua-screening/2026-09-24/wheel-METADATA.txt.gz)保留；模型crates版本1.3.0。未复制/fork上游项目，语料、规则、探针与审计由本项目编写；二进制未加入项目或Android包。元数据声明不替代完整依赖/训练数据审核，未验证可复现构建。[本轮筛选失败](LINGUA_SCREENING.md)，不作为正式依赖。

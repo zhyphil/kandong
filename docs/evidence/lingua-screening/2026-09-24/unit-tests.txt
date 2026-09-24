@@ -1,0 +1,17 @@
+test_budget_and_duplicate_blocks (test_lingua_candidate.PolicyTests.test_budget_and_duplicate_blocks) ... ok
+test_codepoint_offsets_with_accents_cjk_and_emoji (test_lingua_candidate.PolicyTests.test_codepoint_offsets_with_accents_cjk_and_emoji) ... ok
+test_conflict_only_blocks_own_card (test_lingua_candidate.PolicyTests.test_conflict_only_blocks_own_card) ... ok
+test_context_anchor_disagreement_and_insufficient_support (test_lingua_candidate.PolicyTests.test_context_anchor_disagreement_and_insufficient_support) ... ok
+test_different_card_cannot_supply_short_anchor (test_lingua_candidate.PolicyTests.test_different_card_cannot_supply_short_anchor) ... ok
+test_direct_keeps_raw_and_chinese (test_lingua_candidate.PolicyTests.test_direct_keeps_raw_and_chinese) ... ok
+test_identity_and_missing_evidence_rejected (test_lingua_candidate.PolicyTests.test_identity_and_missing_evidence_rejected) ... ok
+test_invalid_scores_do_not_route (test_lingua_candidate.PolicyTests.test_invalid_scores_do_not_route) ... ok
+test_literal_and_unsupported (test_lingua_candidate.PolicyTests.test_literal_and_unsupported) ... ok
+test_mixed_or_missing_letter_segments_never_accepted (test_lingua_candidate.PolicyTests.test_mixed_or_missing_letter_segments_never_accepted) ... ok
+test_same_card_short_anchor_and_own_evidence (test_lingua_candidate.PolicyTests.test_same_card_short_anchor_and_own_evidence) ... ok
+test_session_cleanup_cache_identity_and_no_reuse (test_lingua_candidate.PolicyTests.test_session_cleanup_cache_identity_and_no_reuse) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.001s
+
+OK

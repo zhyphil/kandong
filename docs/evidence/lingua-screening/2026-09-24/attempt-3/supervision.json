@@ -1,0 +1,108 @@
+{
+  "pollSeconds": 0.25,
+  "profile": "(version 1)(allow default)(deny network*)",
+  "runs": [
+    {
+      "elapsedSeconds": 2.5615697499597445,
+      "exitCode": 0,
+      "externalSampledPeakRssBytes": 289947648,
+      "hardStop": null,
+      "round": "1",
+      "samples": [
+        {
+          "elapsedSeconds": 0.002257874992210418,
+          "rssBytes": 4112384
+        },
+        {
+          "elapsedSeconds": 0.2596041249926202,
+          "rssBytes": 32260096
+        },
+        {
+          "elapsedSeconds": 0.5169721669517457,
+          "rssBytes": 33423360
+        },
+        {
+          "elapsedSeconds": 0.7747932919883169,
+          "rssBytes": 163086336
+        },
+        {
+          "elapsedSeconds": 1.029687333968468,
+          "rssBytes": 213778432
+        },
+        {
+          "elapsedSeconds": 1.2845122919534333,
+          "rssBytes": 236683264
+        },
+        {
+          "elapsedSeconds": 1.5423671249882318,
+          "rssBytes": 258867200
+        },
+        {
+          "elapsedSeconds": 1.8002557089785114,
+          "rssBytes": 284852224
+        },
+        {
+          "elapsedSeconds": 2.053018999984488,
+          "rssBytes": 287506432
+        },
+        {
+          "elapsedSeconds": 2.311002333997749,
+          "rssBytes": 289947648
+        }
+      ]
+    },
+    {
+      "elapsedSeconds": 2.8140473749954253,
+      "exitCode": 0,
+      "externalSampledPeakRssBytes": 323158016,
+      "hardStop": null,
+      "round": "2",
+      "samples": [
+        {
+          "elapsedSeconds": 0.0027584159979596734,
+          "rssBytes": 4112384
+        },
+        {
+          "elapsedSeconds": 0.2605688750045374,
+          "rssBytes": 32227328
+        },
+        {
+          "elapsedSeconds": 0.5138368330080993,
+          "rssBytes": 32243712
+        },
+        {
+          "elapsedSeconds": 0.7716252909740433,
+          "rssBytes": 156090368
+        },
+        {
+          "elapsedSeconds": 1.024629040970467,
+          "rssBytes": 210468864
+        },
+        {
+          "elapsedSeconds": 1.2808121249545366,
+          "rssBytes": 235110400
+        },
+        {
+          "elapsedSeconds": 1.53701099997852,
+          "rssBytes": 256442368
+        },
+        {
+          "elapsedSeconds": 1.7952337079914287,
+          "rssBytes": 283492352
+        },
+        {
+          "elapsedSeconds": 2.0496037079719827,
+          "rssBytes": 285966336
+        },
+        {
+          "elapsedSeconds": 2.3038580829743296,
+          "rssBytes": 287850496
+        },
+        {
+          "elapsedSeconds": 2.560877540963702,
+          "rssBytes": 323158016
+        }
+      ]
+    }
+  ]
+}

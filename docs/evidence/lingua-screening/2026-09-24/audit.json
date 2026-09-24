@@ -1,0 +1,361 @@
+{
+  "auditPassed": true,
+  "eligibleForAndroid": false,
+  "executionPassed": true,
+  "metrics": {
+    "new32": {
+      "contextualShort": {
+        "correctLiteral": 0,
+        "correctReady": 4,
+        "correctReview": 0,
+        "missedReady": 2,
+        "total": 6,
+        "wrongAutomatic": 0,
+        "wrongCases": []
+      },
+      "overall": {
+        "correctLiteral": 2,
+        "correctReady": 11,
+        "correctReview": 11,
+        "missedReady": 7,
+        "total": 32,
+        "wrongAutomatic": 1,
+        "wrongCases": [
+          {
+            "corpus": "v3",
+            "decision": {
+              "action": "keep",
+              "language": "zh",
+              "raw": "请在 boarding 前准备好证件。",
+              "reason": "direct"
+            },
+            "expected": {
+              "action": "review"
+            },
+            "id": "mixed-7"
+          }
+        ]
+      },
+      "pure": {
+        "en": {
+          "correctLiteral": 0,
+          "correctReady": 0,
+          "correctReview": 0,
+          "missedReady": 4,
+          "total": 4,
+          "wrongAutomatic": 0,
+          "wrongCases": []
+        },
+        "fr": {
+          "correctLiteral": 0,
+          "correctReady": 3,
+          "correctReview": 0,
+          "missedReady": 1,
+          "total": 4,
+          "wrongAutomatic": 0,
+          "wrongCases": []
+        },
+        "zh": {
+          "correctLiteral": 0,
+          "correctReady": 4,
+          "correctReview": 0,
+          "missedReady": 0,
+          "total": 4,
+          "wrongAutomatic": 0,
+          "wrongCases": []
+        }
+      },
+      "pureRawTop1Correct": 12,
+      "pureRawTop1Total": 12
+    },
+    "old82": {
+      "contextualShort": {
+        "correctLiteral": 0,
+        "correctReady": 5,
+        "correctReview": 0,
+        "missedReady": 7,
+        "total": 12,
+        "wrongAutomatic": 0,
+        "wrongCases": []
+      },
+      "overall": {
+        "correctLiteral": 6,
+        "correctReady": 18,
+        "correctReview": 32,
+        "missedReady": 24,
+        "total": 82,
+        "wrongAutomatic": 2,
+        "wrongCases": [
+          {
+            "corpus": "v1",
+            "decision": {
+              "action": "keep",
+              "language": "zh",
+              "raw": "请点击 Continue 完成预订。",
+              "reason": "direct"
+            },
+            "expected": {
+              "action": "review"
+            },
+            "id": "mixed-2"
+          },
+          {
+            "corpus": "v2",
+            "decision": {
+              "action": "keep",
+              "language": "zh",
+              "raw": "请在 departure 前十分钟到达。",
+              "reason": "direct"
+            },
+            "expected": {
+              "action": "review"
+            },
+            "id": "mixed-7"
+          }
+        ]
+      },
+      "pure": {
+        "en": {
+          "correctLiteral": 0,
+          "correctReady": 0,
+          "correctReview": 0,
+          "missedReady": 10,
+          "total": 10,
+          "wrongAutomatic": 0,
+          "wrongCases": []
+        },
+        "fr": {
+          "correctLiteral": 0,
+          "correctReady": 3,
+          "correctReview": 0,
+          "missedReady": 7,
+          "total": 10,
+          "wrongAutomatic": 0,
+          "wrongCases": []
+        },
+        "zh": {
+          "correctLiteral": 0,
+          "correctReady": 10,
+          "correctReview": 0,
+          "missedReady": 0,
+          "total": 10,
+          "wrongAutomatic": 0,
+          "wrongCases": []
+        }
+      },
+      "pureRawTop1Correct": 30,
+      "pureRawTop1Total": 30
+    }
+  },
+  "mlKitBComparison": {
+    "baseline": {
+      "correctLiteral": 6,
+      "correctReady": 36,
+      "correctReview": 32,
+      "missedReady": 6,
+      "total": 82,
+      "wrongAutomatic": 2,
+      "wrongCases": [
+        {
+          "corpus": "v2",
+          "decision": {
+            "action": "translate",
+            "language": "fr",
+            "raw": "Refund available uniquement avant midi.",
+            "reason": "MODEL_EVIDENCE"
+          },
+          "expected": {
+            "action": "review"
+          },
+          "id": "mixed-3"
+        },
+        {
+          "corpus": "v2",
+          "decision": {
+            "action": "translate",
+            "language": "en",
+            "raw": "Breakfast compris for two adults.",
+            "reason": "MODEL_EVIDENCE"
+          },
+          "expected": {
+            "action": "review"
+          },
+          "id": "mixed-5"
+        }
+      ]
+    },
+    "candidate": {
+      "correctLiteral": 6,
+      "correctReady": 18,
+      "correctReview": 32,
+      "missedReady": 24,
+      "total": 82,
+      "wrongAutomatic": 2,
+      "wrongCases": [
+        {
+          "corpus": "v1",
+          "decision": {
+            "action": "keep",
+            "language": "zh",
+            "raw": "请点击 Continue 完成预订。",
+            "reason": "direct"
+          },
+          "expected": {
+            "action": "review"
+          },
+          "id": "mixed-2"
+        },
+        {
+          "corpus": "v2",
+          "decision": {
+            "action": "keep",
+            "language": "zh",
+            "raw": "请在 departure 前十分钟到达。",
+            "reason": "direct"
+          },
+          "expected": {
+            "action": "review"
+          },
+          "id": "mixed-7"
+        }
+      ]
+    },
+    "readyGains": [],
+    "readyRegressions": [
+      {
+        "corpus": "v1",
+        "id": "en-1",
+        "raw": "The reservation cannot be cancelled after payment."
+      },
+      {
+        "corpus": "v1",
+        "id": "en-2",
+        "raw": "Breakfast is included for two guests only."
+      },
+      {
+        "corpus": "v1",
+        "id": "en-3",
+        "raw": "Please bring the original passport to reception."
+      },
+      {
+        "corpus": "v1",
+        "id": "en-4",
+        "raw": "The last train leaves at 21:45 from platform six."
+      },
+      {
+        "corpus": "v1",
+        "id": "en-5",
+        "raw": "Your total is 47.80 euros, excluding the city tax."
+      },
+      {
+        "corpus": "v1",
+        "id": "en-6",
+        "raw": "Cabin baggage must not weigh more than eight kilograms."
+      },
+      {
+        "corpus": "v1",
+        "id": "fr-6",
+        "raw": "Le bagage à main ne doit pas dépasser huit kilogrammes."
+      },
+      {
+        "corpus": "v2",
+        "id": "short-3",
+        "raw": "Confirm"
+      },
+      {
+        "corpus": "v2",
+        "id": "short-4",
+        "raw": "Modifier"
+      },
+      {
+        "corpus": "v2",
+        "id": "short-5",
+        "raw": "Back"
+      },
+      {
+        "corpus": "v2",
+        "id": "short-7",
+        "raw": "Total"
+      },
+      {
+        "corpus": "v2",
+        "id": "short-9",
+        "raw": "Non"
+      },
+      {
+        "corpus": "v2",
+        "id": "pure-1",
+        "raw": "Your ticket remains valid until midnight on Saturday."
+      },
+      {
+        "corpus": "v2",
+        "id": "pure-2",
+        "raw": "A deposit of 63.25 euros is required at check-in."
+      },
+      {
+        "corpus": "v2",
+        "id": "pure-3",
+        "raw": "The shuttle to Lyon does not operate on public holidays."
+      },
+      {
+        "corpus": "v2",
+        "id": "pure-4",
+        "raw": "Children under twelve may travel without a separate booking."
+      },
+      {
+        "corpus": "v2",
+        "id": "pure-6",
+        "raw": "Une caution de 63,25 euros est demandée à votre arrivée."
+      },
+      {
+        "corpus": "v2",
+        "id": "pure-7",
+        "raw": "La navette pour Nantes ne circule pas les jours fériés."
+      }
+    ]
+  },
+  "qualityGates": {
+    "newPure": false,
+    "newShort": true,
+    "oldPure": false,
+    "oldShort": false,
+    "zeroWrongNew": false,
+    "zeroWrongOld": false
+  },
+  "qualityPassed": false,
+  "repeatability": {
+    "crossCandidateOrderExact": false,
+    "crossExact": 111,
+    "crossMaxAbsoluteScoreDelta": 3.1086244689504383e-15,
+    "crossObservationCount": 496,
+    "crossSegmentsExact": true,
+    "decisionsExact": true,
+    "exactNonMeasurementReports": false,
+    "warmExact": 149,
+    "warmMaxAbsoluteScoreDelta": 2.4424906541753444e-15,
+    "warmObservationCount": 484
+  },
+  "resourcePassed": false,
+  "resources": [
+    {
+      "afterInitialPeakMiB": 271.96875,
+      "beforeDetectorPeakMiB": 32.5625,
+      "processPeakMiB": 306.75,
+      "processSeconds": 2.5627735419548117,
+      "systemCpuSeconds": 0.07900599999999999,
+      "userCpuSeconds": 2.412526,
+      "warmP95Ms": 5.847707972861826
+    },
+    {
+      "afterInitialPeakMiB": 274.234375,
+      "beforeDetectorPeakMiB": 32.765625,
+      "processPeakMiB": 313.375,
+      "processSeconds": 2.5566825839923695,
+      "systemCpuSeconds": 0.078191,
+      "userCpuSeconds": 2.401167,
+      "warmP95Ms": 5.939541035331786
+    }
+  ],
+  "schema": 1,
+  "scope": "synthetic fixed Mac host screening; not OCR, Android or translation acceptance"
+}

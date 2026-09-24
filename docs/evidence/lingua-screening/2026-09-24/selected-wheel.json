@@ -1,0 +1,24 @@
+{
+  "comment_text": null,
+  "core-metadata": {
+    "sha256": "4b8a2befef725edc840643676d65925a4c8fdbba1624485f968255fc07b03d6b"
+  },
+  "digests": {
+    "blake2b_256": "280b3dd8a1eba4ac0da9987542849bae25344bb107e5b4a153ebe09e0c8feba3",
+    "md5": "a218ec1eedc178e98e739ea758cbf13a",
+    "sha256": "066b56ca4e3bd324b4c76a861ab2b747d2d8d4e6eda0a4cf06291c6c039b90f4"
+  },
+  "downloads": -1,
+  "filename": "lingua_language_detector-2.2.0-cp314-cp314-macosx_11_0_arm64.whl",
+  "has_sig": false,
+  "md5_digest": "a218ec1eedc178e98e739ea758cbf13a",
+  "packagetype": "bdist_wheel",
+  "python_version": "cp314",
+  "requires_python": ">=3.12",
+  "size": 172494828,
+  "upload_time": "2026-03-09T14:27:27",
+  "upload_time_iso_8601": "2026-03-09T14:27:27.087463Z",
+  "url": "https://files.pythonhosted.org/packages/28/0b/3dd8a1eba4ac0da9987542849bae25344bb107e5b4a153ebe09e0c8feba3/lingua_language_detector-2.2.0-cp314-cp314-macosx_11_0_arm64.whl",
+  "yanked": false,
+  "yanked_reason": null
+}

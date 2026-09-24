@@ -1,0 +1,20 @@
+{
+  "pollSeconds": 0.25,
+  "profile": "(version 1)(allow default)(deny network*)",
+  "runs": [
+    {
+      "elapsedSeconds": 4.914144500042312,
+      "exitCode": 1,
+      "externalSampledPeakRssBytes": 33603584,
+      "hardStop": null,
+      "round": "1"
+    },
+    {
+      "elapsedSeconds": 0.7678532080026343,
+      "exitCode": 1,
+      "externalSampledPeakRssBytes": 32210944,
+      "hardStop": null,
+      "round": "2"
+    }
+  ]
+}
