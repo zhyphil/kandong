@@ -20,3 +20,6 @@ include(":ocrlab")
 
 // Independent, packaged synthetic same-tensor feasibility probe.
 include(":modelprobe")
+
+// Manual-consent, owned synthetic MediaProjection experiment only.
+include(":capturelab")
