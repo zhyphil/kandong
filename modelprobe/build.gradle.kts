@@ -22,9 +22,13 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions { jvmTarget = "17" }
+    sourceSets.getByName("test").java.srcDir("src/testShared/java")
+    sourceSets.getByName("androidTest").java.srcDir("src/testShared/java")
     sourceSets.getByName("androidTest").assets.srcDir(rootProject.file("docs/fixtures/recognition-prep-v1"))
+    sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("detector-assets"))
     sourceSets.getByName("test").resources {
         srcDir(rootProject.file("docs/fixtures/recognition-prep-v1"))
+        srcDir("src/androidTest/assets")
     }
 }
 dependencies {
@@ -96,6 +100,102 @@ tasks.matching { it.name == "assembleDebug" }.configureEach {
             expected.forEach { (name, original) ->
                 val packaged = apk.getInputStream(apk.getEntry(name)).use { it.readBytes() }
                 check(packaged.contentEquals(original.readBytes())) { "Packaged probe bytes changed: $name" }
+            }
+        }
+    }
+}
+
+// Detector fixtures/models belong ONLY to the instrumentation APK. Never attach this
+// validation to preBuild, main debug, JVM tests, or another module's task graph.
+// .f32z/.u8z/.argbz are intentional: AAPT rewrites .gz assets.
+data class DetectorAssetSpec(val file: java.io.File, val bytes: Int, val sha: String, val cap: Int)
+val detectorManifestSha = "74aa1e39c8d3187ee2388ad07bb228e3c876c0486ccd02c47208942d26f2c80a"
+val detectorModelSha = "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae"
+val detectorCaseIds = listOf("en-quality-16", "fr-nonrefundable-16", "zh-hans-quality-16", "zh-hant-quality-16",
+    "mixed-quality-16", "blank-negative-24", "color-control", "wide-959", "wide-1499", "wide-2001")
+
+fun detectorDigest(raw: ByteArray) = MessageDigest.getInstance("SHA-256").digest(raw).joinToString("") { "%02x".format(it) }
+fun detectorRead(spec: DetectorAssetSpec): ByteArray {
+    check(spec.bytes in 1..spec.cap && spec.file.isFile && spec.file.length() == spec.bytes.toLong()) {
+        "Missing/invalid detector test asset: ${spec.file}. Prepare explicitly: python3 scripts/prepare-detector-probe.py --model <localpath>"
+    }
+    val raw = spec.file.inputStream().use { it.readNBytes(spec.bytes + 1) }
+    check(raw.size == spec.bytes && detectorDigest(raw) == spec.sha) { "Detector test asset identity mismatch: ${spec.file}" }
+    return raw
+}
+fun detectorAssetSpecs(): Map<String, DetectorAssetSpec> {
+    val fixtures = file("src/androidTest/assets/detector-v1")
+    val stage = layout.buildDirectory.dir("detector-assets/detector-model").get().asFile
+    val expected = linkedMapOf<String, DetectorAssetSpec>()
+    val manifestSpec = DetectorAssetSpec(fixtures.resolve("manifest.json"), 28958, detectorManifestSha, 128 * 1024)
+    val manifest = groovy.json.JsonSlurper().parseText(String(detectorRead(manifestSpec), Charsets.UTF_8)) as Map<*, *>
+    expected["assets/detector-v1/manifest.json"] = manifestSpec
+    val files = manifest["files"] as Map<*, *>
+    val names = detectorCaseIds.flatMap { id -> listOf("$id-source.png", "$id-resized.png", "$id-resized.argbz",
+        "$id-input.f32z", "$id-output.f32z", "$id-mask.u8z") }.toSet() + "manifest.properties"
+    check(files.keys == names && (manifest["schema"] as Number).toInt() == 1)
+    val cases = manifest["cases"] as List<*>
+    check(cases.map { (it as Map<*, *>)["id"] } == detectorCaseIds)
+    cases.forEach { entry ->
+        val c = entry as Map<*, *>
+        val sw = (c["sourceWidth"] as Number).toLong(); val sh = (c["sourceHeight"] as Number).toLong()
+        val w = (c["width"] as Number).toLong(); val h = (c["height"] as Number).toLong()
+        check(sw in 1..4096 && sh in 1..4096 && w in 1..2048 && h in 1..2048 && w % 32 == 0L && h % 32 == 0L)
+        val pixels = w * h; check(pixels in 1..1_048_576)
+        check((c["inputShape"] as List<*>).map { (it as Number).toLong() } == listOf(1L, 3L, h, w))
+        check((c["outputShape"] as List<*>).map { (it as Number).toLong() } == listOf(1L, 1L, h, w))
+        mapOf("resizedArgb" to pixels * 4, "input" to pixels * 12, "output" to pixels * 4, "mask" to pixels).forEach { (key, size) ->
+            val meta = files[c[key]] as Map<*, *>
+            check((meta["decodedBytes"] as Number).toLong() == size)
+            check((meta["decodedSha256"] as String).matches(Regex("[0-9a-f]{64}")))
+        }
+    }
+    files.forEach { (name, entry) ->
+        val meta = entry as Map<*, *>; val bytes = (meta["bytes"] as Number).toLong()
+        check(bytes in 1..2L * 1024 * 1024)
+        expected["assets/detector-v1/$name"] = DetectorAssetSpec(fixtures.resolve(name as String), bytes.toInt(), meta["sha256"] as String, 2 * 1024 * 1024)
+    }
+    val model = manifest["model"] as Map<*, *>
+    check(model["asset"] == "detector-model/ch_PP-OCRv5_det_mobile.onnx" && model["sha256"] == detectorModelSha &&
+        (model["bytes"] as Number).toInt() == 4_819_576)
+    expected["assets/detector-model/ch_PP-OCRv5_det_mobile.onnx"] =
+        DetectorAssetSpec(stage.resolve("ch_PP-OCRv5_det_mobile.onnx"), 4_819_576, detectorModelSha, 6 * 1024 * 1024)
+    val legal = mapOf(
+        "ModelScope-README.md.txt" to (1140 to "3dc91bb3cb667df783178917d69b38bfabb8c935596f34243a1c9f0d36916b6e"),
+        "ORT-LICENSE.txt" to (1073 to "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c"),
+        "ORT-ThirdPartyNotices.txt" to (338088 to "143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3"),
+        "PaddleOCR-LICENSE.txt" to (11376 to "3840c5c0c61c294264d2dd77b8777be6ddd90121ef4e0e64abcd22edea581d6e"),
+        "RapidOCR-LICENSE.txt" to (11422 to "3e0af25fdd06aa9586ae97adb00ea927ebe5a3805ac77d2d3a81ce5f55693333"),
+        "NOTICE.txt" to (823 to "99d897a42f7740b564ed67ee38ae40dcbef17c3c4196fef28f6083ad76b3a3b5"),
+        "provenance.json" to (1508 to "f67c1bf49934917d35826599f994b8565dacdd694682ac4dbfeaf02b167185a6"))
+    legal.forEach { (name, identity) ->
+        expected["assets/detector-model/legal/$name"] = DetectorAssetSpec(stage.resolve("legal/$name"), identity.first, identity.second, 512 * 1024)
+    }
+    val fixturePaths = fixtures.walkTopDown().filter { it.isFile }.map { "assets/detector-v1/${it.relativeTo(fixtures).invariantSeparatorsPath}" }.toSet()
+    val stagePaths = stage.walkTopDown().filter { it.isFile }.map { "assets/detector-model/${it.relativeTo(stage).invariantSeparatorsPath}" }.toSet()
+    check(fixturePaths + stagePaths == expected.keys) { "Detector test asset path set changed or local model is not prepared; run prepare-detector-probe.py --model <localpath>" }
+    return expected
+}
+val validateDetectorProbeAssets by tasks.registering {
+    doLast { detectorAssetSpecs().values.forEach { detectorRead(it) } }
+}
+tasks.matching { it.name == "mergeDebugAndroidTestAssets" || it.name == "packageDebugAndroidTest" }.configureEach {
+    dependsOn(validateDetectorProbeAssets)
+}
+tasks.matching { it.name == "assembleDebugAndroidTest" }.configureEach {
+    doLast {
+        val expected = detectorAssetSpecs()
+        val artifact = layout.buildDirectory.file("outputs/apk/androidTest/debug/modelprobe-debug-androidTest.apk").get().asFile
+        ZipFile(artifact).use { apk ->
+            val actual = apk.entries().asSequence().filter { !it.isDirectory &&
+                (it.name.startsWith("assets/detector-v1/") || it.name.startsWith("assets/detector-model/")) }.toList()
+            check(actual.size == expected.size && actual.map { it.name }.toSet() == expected.keys) { "Packaged detector paths/duplicates changed" }
+            expected.forEach { (name, spec) ->
+                val original = detectorRead(spec)
+                val entry = apk.getEntry(name)
+                check(entry.size == spec.bytes.toLong()) { "Packaged detector byte length changed: $name" }
+                val packaged = apk.getInputStream(entry).use { it.readNBytes(spec.bytes + 1) }
+                check(packaged.contentEquals(original)) { "Packaged detector bytes changed: $name" }
             }
         }
     }

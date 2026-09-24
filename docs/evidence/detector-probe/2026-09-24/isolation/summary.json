@@ -1,0 +1,7 @@
+{
+  "mainAndJvmSucceedWithoutDetector": true,
+  "compatTaskGraphExcludesDetectorValidation": true,
+  "missingDetectorFailsExplicitValidation": true,
+  "restoredDetectorValidates": true,
+  "badLocalModelRejectedBeforeStageChanges": true
+}

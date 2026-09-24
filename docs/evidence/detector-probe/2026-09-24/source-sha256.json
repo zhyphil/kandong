@@ -1,0 +1,9 @@
+{
+  "modelprobe/build.gradle.kts": "e4538ecead93f27110d815624ee349fc62628395491b8bae2685e888077da2d4",
+  "modelprobe/src/testShared/java/com/kandong/modelprobe/DetectorPacking.kt": "b7500fc0250adf88e2e2b3330882b8f9bcc40948c0f7ad7ecb05561cfc470df7",
+  "modelprobe/src/test/java/com/kandong/modelprobe/DetectorPackingTest.kt": "65418dd4a2ce0df9b8445154e5a98e091cdcf418bdc9dac5989a8ba226cd51da",
+  "modelprobe/src/androidTest/java/com/kandong/modelprobe/DetectorProbeInputs.kt": "c96b4cce39f6562e859ba29ec916017ce8be7d82024d612b11bb475d9cee287e",
+  "modelprobe/src/androidTest/java/com/kandong/modelprobe/AndroidDetectorProbeTest.kt": "751479cd9eef31321b67a6054f1c503dc95cacd8d3711361dd6072cbc1571251",
+  "scripts/prepare-detector-probe.py": "7e694d5548a65a37a36c1b8b99c03b5a52af6ff6d713fc6f733bab6b8acebb18",
+  "scripts/export-detector-probe-fixtures.py": "7d5426bc5b68774698e287c2d1ed88b5ae65e0c857d17e47d29918f5c1f05c52"
+}

@@ -1,0 +1,57 @@
+> Task :modelprobe:validateProbeAssets
+> Task :modelprobe:preBuild
+> Task :modelprobe:preDebugBuild
+> Task :modelprobe:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :modelprobe:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :modelprobe:checkDebugAarMetadata UP-TO-DATE
+> Task :modelprobe:processDebugNavigationResources UP-TO-DATE
+> Task :modelprobe:compileDebugNavigationResources UP-TO-DATE
+> Task :modelprobe:generateDebugResValues UP-TO-DATE
+> Task :modelprobe:mapDebugSourceSetPaths UP-TO-DATE
+> Task :modelprobe:generateDebugResources UP-TO-DATE
+> Task :modelprobe:mergeDebugResources UP-TO-DATE
+> Task :modelprobe:packageDebugResources UP-TO-DATE
+> Task :modelprobe:parseDebugLocalResources UP-TO-DATE
+> Task :modelprobe:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :modelprobe:extractDeepLinksDebug UP-TO-DATE
+> Task :modelprobe:processDebugMainManifest UP-TO-DATE
+> Task :modelprobe:processDebugManifest UP-TO-DATE
+> Task :modelprobe:processDebugManifestForPackage UP-TO-DATE
+> Task :modelprobe:processDebugResources UP-TO-DATE
+> Task :modelprobe:compileDebugKotlin UP-TO-DATE
+> Task :modelprobe:javaPreCompileDebug UP-TO-DATE
+> Task :modelprobe:compileDebugJavaWithJavac NO-SOURCE
+> Task :modelprobe:mergeDebugShaders UP-TO-DATE
+> Task :modelprobe:compileDebugShaders NO-SOURCE
+> Task :modelprobe:generateDebugAssets UP-TO-DATE
+> Task :modelprobe:mergeDebugAssets UP-TO-DATE
+> Task :modelprobe:compressDebugAssets UP-TO-DATE
+> Task :modelprobe:desugarDebugFileDependencies UP-TO-DATE
+> Task :modelprobe:dexBuilderDebug UP-TO-DATE
+> Task :modelprobe:mergeDebugGlobalSynthetics UP-TO-DATE
+> Task :modelprobe:processDebugJavaRes UP-TO-DATE
+> Task :modelprobe:mergeDebugJavaResource UP-TO-DATE
+> Task :modelprobe:checkDebugDuplicateClasses UP-TO-DATE
+> Task :modelprobe:mergeExtDexDebug UP-TO-DATE
+> Task :modelprobe:mergeLibDexDebug UP-TO-DATE
+> Task :modelprobe:mergeProjectDexDebug UP-TO-DATE
+> Task :modelprobe:mergeDebugJniLibFolders UP-TO-DATE
+> Task :modelprobe:mergeDebugNativeLibs UP-TO-DATE
+> Task :modelprobe:stripDebugDebugSymbols UP-TO-DATE
+> Task :modelprobe:validateSigningDebug UP-TO-DATE
+> Task :modelprobe:writeDebugAppMetadata UP-TO-DATE
+> Task :modelprobe:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :modelprobe:packageDebug UP-TO-DATE
+> Task :modelprobe:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :modelprobe:assembleDebug
+> Task :modelprobe:bundleDebugClassesToRuntimeJar UP-TO-DATE
+> Task :modelprobe:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :modelprobe:compileDebugUnitTestKotlin UP-TO-DATE
+> Task :modelprobe:preDebugUnitTestBuild
+> Task :modelprobe:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :modelprobe:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :modelprobe:processDebugUnitTestJavaRes UP-TO-DATE
+> Task :modelprobe:testDebugUnitTest UP-TO-DATE
+
+BUILD SUCCESSFUL in 582ms
+45 actionable tasks: 2 executed, 43 up-to-date

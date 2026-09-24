@@ -1,0 +1,25 @@
+{
+  "scope": "synthetic_detector_golden_generation_not_device_acceptance",
+  "manifestSha256": "74aa1e39c8d3187ee2388ad07bb228e3c876c0486ccd02c47208942d26f2c80a",
+  "fixtureFiles": 62,
+  "allFilesReproducedIdentically": true,
+  "caseCount": 10,
+  "totalInputFloats": 2644992,
+  "totalOutputFloats": 881664,
+  "hostEachOutputRepeatedBitwiseEqual": true,
+  "modelSha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+  "exporterSha256": "7d5426bc5b68774698e287c2d1ed88b5ae65e0c857d17e47d29918f5c1f05c52",
+  "frozenAcceptance": {
+    "inputFloatBits": "exact",
+    "outputAtol": 1e-05,
+    "outputRtol": 0.0001,
+    "outputMeanAbsMax": 1e-06,
+    "threshold": 0.3,
+    "thresholdOperator": "> float32(0.3)",
+    "maxThresholdFlips": 0,
+    "outputRangeMin": 0.0,
+    "outputRangeMax": 1.0,
+    "nearThresholdBand": 0.0001,
+    "note": "Frozen before device execution; do not widen to fit results; numeric parity only"
+  }
+}

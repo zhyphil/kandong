@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/prepare-detector-probe.py", line 103, in <module>
+    main()
+    ~~~~^^
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/prepare-detector-probe.py", line 87, in main
+    payloads = {MODEL_NAME: authenticated(args.model.expanduser(), MODEL_BYTES, MODEL_SHA, 6 * 1024 * 1024)}
+                            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/prepare-detector-probe.py", line 51, in authenticated
+    raise ValueError("Missing file or invalid byte length: " + str(path))
+ValueError: Missing file or invalid byte length: /private/tmp/kandong-detector-isolation-20260924/wrong-local-model.onnx

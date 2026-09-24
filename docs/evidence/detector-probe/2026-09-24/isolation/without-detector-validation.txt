@@ -1,0 +1,16 @@
+> Task :modelprobe:validateDetectorProbeAssets FAILED
+1 actionable task: 1 executed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':modelprobe:validateDetectorProbeAssets'.
+> Detector test asset path set changed or local model is not prepared; run prepare-detector-probe.py --model <localpath>
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 484ms

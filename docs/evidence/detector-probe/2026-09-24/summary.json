@@ -1,0 +1,48 @@
+{
+  "scope": "same_resized_pixels_packing_and_detector_numeric_parity_only_not_Android_resize_boxes_crops_or_OCR_quality",
+  "phaseStatus": "awaiting_Huawei_test_package_update_and_two_runs",
+  "fixtureManifestSha256": "74aa1e39c8d3187ee2388ad07bb228e3c876c0486ccd02c47208942d26f2c80a",
+  "modelSha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+  "mainApkUnchanged": true,
+  "testApkSha256": "51cdd6755370ce12261891b05cae826f5e3cc2f37c80e6966cbd284cb4ccf164",
+  "unitTestsPassed": 28,
+  "lintErrors": 0,
+  "lintWarnings": 6,
+  "api36": {
+    "runs": 2,
+    "instrumentedTestsPerRun": 4,
+    "caseCount": 10,
+    "inputFloatsBitExact": 2644992,
+    "probabilityValuesCompared": 881664,
+    "inputBitDifferences": 0,
+    "thresholdMaskFlips": 0,
+    "numericToleranceViolations": 0,
+    "maximumAbsoluteProbabilityError": 1.4662742614746094e-05,
+    "largestCaseMeanAbsoluteError": 2.4318190601964793e-08,
+    "sameCasesAcrossRuns": true,
+    "elapsedMs": [
+      1520,
+      1470
+    ],
+    "nativeOpenedAndClosedPerRun": 22,
+    "failureAfterResultCleanupTestPassed": true,
+    "malformedInputTestsPassed": true
+  },
+  "huawei": {
+    "target": "LIO-AN00/API31",
+    "status": "pending_system_install_completion",
+    "installCommandTimedOutSeconds": 90,
+    "installedTestSha256AfterWait": "299344075cb6348f6a717ca56ca80410c2b2131a2d7a48d8ae63696651ed018a",
+    "currentReportsExist": false,
+    "userConfirmationRequested": true
+  },
+  "acceptanceUnchangedDuringDeviceTesting": true,
+  "limitations": [
+    "Not probability bit equality",
+    "Uses upstream already-resized pixels, not original-image Android detector preprocessing",
+    "No contours, polygon expansion, scores, perspective crops or OCR quality acceptance",
+    "No real screen, translation or sustained memory/power evidence",
+    "Target Huawei stage still pending"
+  ],
+  "protectedFilesUnchanged": 219
+}
