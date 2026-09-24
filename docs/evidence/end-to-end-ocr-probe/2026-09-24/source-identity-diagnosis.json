@@ -1,0 +1,105 @@
+{
+  "cause": "six originals are opaque RGBA PNG; geometry export re-encodes RGB PNG; all ten have identical BGR pixels",
+  "cases": [
+    {
+      "id": "en-quality-16",
+      "originalPngSha256": "7dcc8eea74aa255202c8e1d2e126236de81202048253a501646c5cc0dcd9070f",
+      "geometryPngSha256": "14d4b31b4259779e6a4ae8d83fbd88eccea5e525c12deac03f233ba43a8d16b3",
+      "originalColorType": 6,
+      "geometryColorType": 2,
+      "samePngBytes": false,
+      "sameBgrPixels": true,
+      "bgrSha256": "e042c3241f4642b12bd4a8076ebf695e8902cdcb5b4a2ab5f9314c2d189c67e1"
+    },
+    {
+      "id": "fr-nonrefundable-16",
+      "originalPngSha256": "dfffb230fa0bbc886a1695aef47550aec41a13a9961ef29e43b5b29ad2f5a8d1",
+      "geometryPngSha256": "a231182351d997a48580efe8582ce162869339671e9e22e2e87bef44bc6892f5",
+      "originalColorType": 6,
+      "geometryColorType": 2,
+      "samePngBytes": false,
+      "sameBgrPixels": true,
+      "bgrSha256": "1291a8592d4f17cfda4e2d0a668e9c25306f12e491239dec9f0795c022f10c43"
+    },
+    {
+      "id": "zh-hans-quality-16",
+      "originalPngSha256": "a5cd006a679246fe50c1bb4d6cb9e2b616c3a69168cd99f8c2d230a448957184",
+      "geometryPngSha256": "d793159a661552487a142738f032fc2cc54e9a47d6e91b794441ab7e1ac0b9ed",
+      "originalColorType": 6,
+      "geometryColorType": 2,
+      "samePngBytes": false,
+      "sameBgrPixels": true,
+      "bgrSha256": "66eef5fb3d7c0138b91860a9abd7d64d00f7887fd1964f52abbc2c029aaf0687"
+    },
+    {
+      "id": "zh-hant-quality-16",
+      "originalPngSha256": "9453b4a14282aa818b9446475b001e6ec2ea81ab2affa22b551d3939484683cc",
+      "geometryPngSha256": "551938fa81d5fb439620c1f47c7db42d7ff8de3e06b2eeff41c59cba024e92dc",
+      "originalColorType": 6,
+      "geometryColorType": 2,
+      "samePngBytes": false,
+      "sameBgrPixels": true,
+      "bgrSha256": "ecdd63a178b3d1abbfe74f37bef28fb81de8ae9dd6fc082086f82339f8510c3d"
+    },
+    {
+      "id": "mixed-quality-16",
+      "originalPngSha256": "1afec2c7e0a618edd371fb015697a9c477d7945bae83ee756f98c64676dd0b2b",
+      "geometryPngSha256": "16e61d8b4a086cb547380ed3d82f3f5642e351ab2c4f8d3dcebc489738c7098e",
+      "originalColorType": 6,
+      "geometryColorType": 2,
+      "samePngBytes": false,
+      "sameBgrPixels": true,
+      "bgrSha256": "5a6a5d9c8fafe8b8637a573481983a14b16f200256d34b0dabd6b70d2847ee21"
+    },
+    {
+      "id": "blank-negative-24",
+      "originalPngSha256": "ae57633560626ae3902356aa31cf7afd1e67ee1c9aa289e12e177412f834e19f",
+      "geometryPngSha256": "98bdec534b06f7211e1fcb8a286606d54b10be0ddc28a77d41429d4ea1f76529",
+      "originalColorType": 6,
+      "geometryColorType": 2,
+      "samePngBytes": false,
+      "sameBgrPixels": true,
+      "bgrSha256": "c27113404b82277ff377ad614d0c4bcef5fb456f57c90341fe04bc99116692c5"
+    },
+    {
+      "id": "color-control",
+      "originalPngSha256": "9dd718e24688d8ded5505526238bdd398985ffa117891731edb06a684bc3dc5e",
+      "geometryPngSha256": "9dd718e24688d8ded5505526238bdd398985ffa117891731edb06a684bc3dc5e",
+      "originalColorType": 2,
+      "geometryColorType": 2,
+      "samePngBytes": true,
+      "sameBgrPixels": true,
+      "bgrSha256": "14dac98b86eafdb8aeb9c0ec933bc6ab21f48817801f8a42ce5aeecf71576844"
+    },
+    {
+      "id": "wide-959",
+      "originalPngSha256": "ddc561a0569ef22af5751cd0a8799ab235d2963d83bcdd7c798ca667d03ebb50",
+      "geometryPngSha256": "ddc561a0569ef22af5751cd0a8799ab235d2963d83bcdd7c798ca667d03ebb50",
+      "originalColorType": 2,
+      "geometryColorType": 2,
+      "samePngBytes": true,
+      "sameBgrPixels": true,
+      "bgrSha256": "da51bb7c816de84d478f0c8aad6a8f1592cf90024903f78cbd7ed89057e107e4"
+    },
+    {
+      "id": "wide-1499",
+      "originalPngSha256": "340a8fc0ddbbd634bbe8c6db1ba54ed2823fbb5c578c91da8e43182c0aa30649",
+      "geometryPngSha256": "340a8fc0ddbbd634bbe8c6db1ba54ed2823fbb5c578c91da8e43182c0aa30649",
+      "originalColorType": 2,
+      "geometryColorType": 2,
+      "samePngBytes": true,
+      "sameBgrPixels": true,
+      "bgrSha256": "e4dec6d638d65b0c5cb7e26dc4038f90e82f09de4a7724222d5bd9f451c1009d"
+    },
+    {
+      "id": "wide-2001",
+      "originalPngSha256": "2230ae21bdc0b153ce1d7dce132f386b9454eb5b13f2dcbfc2af505a9f841b02",
+      "geometryPngSha256": "2230ae21bdc0b153ce1d7dce132f386b9454eb5b13f2dcbfc2af505a9f841b02",
+      "originalColorType": 2,
+      "geometryColorType": 2,
+      "samePngBytes": true,
+      "sameBgrPixels": true,
+      "bgrSha256": "7fb17ed1439db926b8027d90697e99b9fb1cf68b369d30df4fc14911ce8a72fa"
+    }
+  ]
+}

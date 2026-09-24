@@ -1,0 +1,280 @@
+{
+  "allTenProbabilityHashesEqualExistingOriginalProbe": true,
+  "allNineQuadsExact": true,
+  "allTenRecognitionResultsMatch": true,
+  "explanation": "A masked score is a mean. For an unchanged mask, absolute difference of the means is bounded by the maximum absolute input-probability difference. Preserve the original same-input 1e-7 arithmetic budget and add the independently gated measured input bound only for fresh detector inference.",
+  "rows": [
+    {
+      "id": "en-quality-16.box-0",
+      "actual": 0.7848805534224662,
+      "reference": 0.7848805975701127,
+      "absoluteError": 4.41476465384838e-08,
+      "originalSameInputTolerance": 1e-07,
+      "detectorMaxAbsoluteError": 6.854534149169922e-06,
+      "propagatedBound": 6.954534149169922e-06,
+      "originalGateExceeded": false,
+      "propagatedBoundSatisfied": true
+    },
+    {
+      "id": "fr-nonrefundable-16.box-0",
+      "actual": 0.7906219916214047,
+      "reference": 0.7906220418996359,
+      "absoluteError": 5.027823124503783e-08,
+      "originalSameInputTolerance": 1e-07,
+      "detectorMaxAbsoluteError": 1.2814998626708984e-05,
+      "propagatedBound": 1.2914998626708985e-05,
+      "originalGateExceeded": false,
+      "propagatedBoundSatisfied": true
+    },
+    {
+      "id": "zh-hans-quality-16.box-1",
+      "actual": 0.7844004850001896,
+      "reference": 0.7844004929065703,
+      "absoluteError": 7.906380772304544e-09,
+      "originalSameInputTolerance": 1e-07,
+      "detectorMaxAbsoluteError": 1.4662742614746094e-05,
+      "propagatedBound": 1.4762742614746094e-05,
+      "originalGateExceeded": false,
+      "propagatedBoundSatisfied": true
+    },
+    {
+      "id": "zh-hans-quality-16.box-0",
+      "actual": 0.7958951793812417,
+      "reference": 0.7958953108336475,
+      "absoluteError": 1.314524058493305e-07,
+      "originalSameInputTolerance": 1e-07,
+      "detectorMaxAbsoluteError": 1.4662742614746094e-05,
+      "propagatedBound": 1.4762742614746094e-05,
+      "originalGateExceeded": true,
+      "propagatedBoundSatisfied": true
+    },
+    {
+      "id": "zh-hant-quality-16.box-1",
+      "actual": 0.7939277095022337,
+      "reference": 0.7939277429647849,
+      "absoluteError": 3.346255117442354e-08,
+      "originalSameInputTolerance": 1e-07,
+      "detectorMaxAbsoluteError": 7.927417755126953e-06,
+      "propagatedBound": 8.027417755126954e-06,
+      "originalGateExceeded": false,
+      "propagatedBoundSatisfied": true
+    },
+    {
+      "id": "zh-hant-quality-16.box-0",
+      "actual": 0.8001764733726914,
+      "reference": 0.8001764074048481,
+      "absoluteError": 6.596784329904182e-08,
+      "originalSameInputTolerance": 1e-07,
+      "detectorMaxAbsoluteError": 7.927417755126953e-06,
+      "propagatedBound": 8.027417755126954e-06,
+      "originalGateExceeded": false,
+      "propagatedBoundSatisfied": true
+    },
+    {
+      "id": "mixed-quality-16.box-2",
+      "actual": 0.8009910665176533,
+      "reference": 0.8009911834917687,
+      "absoluteError": 1.1697411539390856e-07,
+      "originalSameInputTolerance": 1e-07,
+      "detectorMaxAbsoluteError": 5.602836608886719e-06,
+      "propagatedBound": 5.702836608886719e-06,
+      "originalGateExceeded": true,
+      "propagatedBoundSatisfied": true
+    },
+    {
+      "id": "mixed-quality-16.box-1",
+      "actual": 0.7865341494649144,
+      "reference": 0.7865341892181817,
+      "absoluteError": 3.9753267344622145e-08,
+      "originalSameInputTolerance": 1e-07,
+      "detectorMaxAbsoluteError": 5.602836608886719e-06,
+      "propagatedBound": 5.702836608886719e-06,
+      "originalGateExceeded": false,
+      "propagatedBoundSatisfied": true
+    },
+    {
+      "id": "mixed-quality-16.box-0",
+      "actual": 0.7981728654936785,
+      "reference": 0.7981728689920976,
+      "absoluteError": 3.4984191099596273e-09,
+      "originalSameInputTolerance": 1e-07,
+      "detectorMaxAbsoluteError": 5.602836608886719e-06,
+      "propagatedBound": 5.702836608886719e-06,
+      "originalGateExceeded": false,
+      "propagatedBoundSatisfied": true
+    }
+  ],
+  "scoreMaskFootprints": [
+    {
+      "case": "en-quality-16",
+      "contour": 0,
+      "scoreMaskFootprint": [
+        37,
+        288,
+        35,
+        44,
+        0,
+        0,
+        251,
+        0,
+        251,
+        9,
+        0,
+        9
+      ],
+      "exact": true
+    },
+    {
+      "case": "fr-nonrefundable-16",
+      "contour": 0,
+      "scoreMaskFootprint": [
+        38,
+        358,
+        36,
+        46,
+        0,
+        0,
+        320,
+        0,
+        320,
+        10,
+        0,
+        10
+      ],
+      "exact": true
+    },
+    {
+      "case": "zh-hans-quality-16",
+      "contour": 0,
+      "scoreMaskFootprint": [
+        37,
+        221,
+        68,
+        77,
+        0,
+        0,
+        184,
+        0,
+        184,
+        9,
+        0,
+        9
+      ],
+      "exact": true
+    },
+    {
+      "case": "zh-hans-quality-16",
+      "contour": 1,
+      "scoreMaskFootprint": [
+        36,
+        205,
+        39,
+        48,
+        0,
+        0,
+        169,
+        0,
+        169,
+        9,
+        0,
+        9
+      ],
+      "exact": true
+    },
+    {
+      "case": "zh-hant-quality-16",
+      "contour": 0,
+      "scoreMaskFootprint": [
+        37,
+        221,
+        68,
+        77,
+        0,
+        0,
+        184,
+        0,
+        184,
+        9,
+        0,
+        9
+      ],
+      "exact": true
+    },
+    {
+      "case": "zh-hant-quality-16",
+      "contour": 1,
+      "scoreMaskFootprint": [
+        36,
+        206,
+        37,
+        49,
+        1,
+        0,
+        169,
+        1,
+        168,
+        11,
+        0,
+        9
+      ],
+      "exact": true
+    },
+    {
+      "case": "mixed-quality-16",
+      "contour": 0,
+      "scoreMaskFootprint": [
+        36,
+        138,
+        99,
+        109,
+        0,
+        0,
+        102,
+        0,
+        102,
+        10,
+        0,
+        10
+      ],
+      "exact": true
+    },
+    {
+      "case": "mixed-quality-16",
+      "contour": 1,
+      "scoreMaskFootprint": [
+        36,
+        212,
+        67,
+        76,
+        0,
+        0,
+        176,
+        0,
+        176,
+        9,
+        0,
+        9
+      ],
+      "exact": true
+    },
+    {
+      "case": "mixed-quality-16",
+      "contour": 2,
+      "scoreMaskFootprint": [
+        36,
+        143,
+        39,
+        48,
+        0,
+        0,
+        107,
+        0,
+        107,
+        9,
+        0,
+        9
+      ],
+      "exact": true
+    }
+  ]
+}

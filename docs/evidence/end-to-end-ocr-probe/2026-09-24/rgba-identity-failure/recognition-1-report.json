@@ -1,0 +1,3395 @@
+{
+  "schema": 1,
+  "runId": "68514b9d-6fa8-410a-9352-8efa7099bcb3",
+  "status": "passed",
+  "api": 31,
+  "device": "LIO-AN00",
+  "manufacturer": "HUAWEI",
+  "fixtureSha256": "bbbfd058777e51e4fb7769764d2b49dac7618c784b8e0ef652af84d973f64f6a",
+  "parentFixtureSha256": "1aa14f2efb50e62c5a2d95b45b7d5b5044d4ec90afa47a976e8dea50bbe466a6",
+  "probeManifestSha256": "126d8d3860d5a4ea098f0875838dbed51a55d8a321f50d409805d394a460061c",
+  "codeConfiguration": "actual-DB-crop;BGR8-INTER_LINEAR;48-NCHW;stable-ratio;raw-CTC;page-order-after-infer-v1",
+  "boxConfiguration": "DB-v1:threshold>float32(.3);dilate2x2-default;LIST/SIMPLE;side3;score.5;ROUND1.6;side5;f32-div-mul-rint;inclusive-then-W-1;norm-int>3;paired-adjacent-dy10",
+  "opencvArtifact": "org.opencv:opencv:5.0.0.1",
+  "expectedCaseIds": [
+    "en-quality-16",
+    "fr-nonrefundable-16",
+    "zh-hans-quality-16",
+    "zh-hant-quality-16",
+    "mixed-quality-16",
+    "blank-negative-24",
+    "color-control",
+    "wide-959",
+    "wide-1499",
+    "wide-2001",
+    "threshold-equal",
+    "below-box-score",
+    "tiny-negative",
+    "two-blocks",
+    "edge-touching",
+    "vertical"
+  ],
+  "expectedGuardIds": [
+    "missing-asset",
+    "extra-asset",
+    "corrupt-manifest",
+    "corrupt-payload",
+    "truncated-payload",
+    "decoded-size-cap",
+    "decoded-hash",
+    "reauthentication",
+    "duplicate-id-mapping",
+    "strict-schema-path-types",
+    "empty-no-inference",
+    "incomplete-no-inference",
+    "invalid-crop-before-native",
+    "resize-failure-cleanup",
+    "model-callback-failure-cleanup"
+  ],
+  "expectedCounts": {
+    "cases": 16,
+    "complete": 16,
+    "empty": 8,
+    "crops": 13,
+    "cropChannels": 139875,
+    "resizes": 13,
+    "resizedChannels": 631008,
+    "tensors": 8,
+    "floats": 816048,
+    "inferences": 16,
+    "rawRows": 26,
+    "bindings": 26
+  },
+  "cases": [
+    {
+      "id": "en-quality-16",
+      "status": "completed",
+      "passed": true,
+      "boxStatus": "COMPLETE",
+      "mask": {
+        "actualBytes": 61440,
+        "expectedBytes": 61440,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "7ecf721f92afe360eef2300e190d54a6f8b9f14796c61e553cd12a90fe2361f1",
+        "expectedSha256": "7ecf721f92afe360eef2300e190d54a6f8b9f14796c61e553cd12a90fe2361f1",
+        "passed": true
+      },
+      "dilated": {
+        "actualBytes": 61440,
+        "expectedBytes": 61440,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "f6966ad397e50b13ef47cf30a7af1ae82f42e6088418f021a8cce9872a672440",
+        "expectedSha256": "f6966ad397e50b13ef47cf30a7af1ae82f42e6088418f021a8cce9872a672440",
+        "passed": true
+      },
+      "crops": [
+        {
+          "boxId": "en-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "detectorScore": 0.7848805975701127,
+          "quad": [
+            [
+              30,
+              27
+            ],
+            [
+              295,
+              27
+            ],
+            [
+              295,
+              48
+            ],
+            [
+              30,
+              48
+            ]
+          ],
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 0,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 3.552713678800501e-15,
+              "forward.y": 3.552713678800501e-15,
+              "inverse.x": 3.552713678800501e-15,
+              "inverse.y": 3.552713678800501e-15,
+              "sourceRoundtrip.x": 0,
+              "sourceRoundtrip.y": 0,
+              "rotatedForward.x": 3.552713678800501e-15,
+              "rotatedForward.y": 3.552713678800501e-15,
+              "rotatedInverse.x": 0,
+              "rotatedInverse.y": 0,
+              "pixelRoundtrip.x": 0,
+              "pixelRoundtrip.y": 3.552713678800501e-15,
+              "pixelRotation.x": 0,
+              "pixelRotation.y": 3.552713678800501e-15,
+              "pixelRotationInverse.x": 0,
+              "pixelRotationInverse.y": 0
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 16695,
+              "actualChannels": 16695,
+              "expectedChannels": 16695,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "en-quality-16.box-0"
+          },
+          "resizePixels": {
+            "actualBytes": 87120,
+            "expectedBytes": 87120,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "9c2e468f3244a6dfcb923ddc08f8534f1f43956d19b0c796951a870c113ae165",
+            "expectedSha256": "9c2e468f3244a6dfcb923ddc08f8534f1f43956d19b0c796951a870c113ae165",
+            "passed": true
+          },
+          "resizeArgb": {
+            "actualBytes": 116160,
+            "expectedBytes": 116160,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "7a14d987c0e5d915685caecdb5117a8161f4fa937f1fbd2399b0cab454eaff44",
+            "expectedSha256": "7a14d987c0e5d915685caecdb5117a8161f4fa937f1fbd2399b0cab454eaff44",
+            "passed": true
+          },
+          "dimensionsMatch": true
+        }
+      ],
+      "tensor": {
+        "actualBytes": 348480,
+        "expectedBytes": 348480,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "b80c3599a60269f6a7bc74e9d33e6f3bd44dc043e55f07401ec4dc1350cc67da",
+        "expectedSha256": "b80c3599a60269f6a7bc74e9d33e6f3bd44dc043e55f07401ec4dc1350cc67da",
+        "passed": true,
+        "differentFloatBits": 0,
+        "actualShape": [
+          1,
+          3,
+          48,
+          605
+        ],
+        "mapping": [
+          0
+        ],
+        "mappingMatches": true
+      }
+    },
+    {
+      "id": "fr-nonrefundable-16",
+      "status": "completed",
+      "passed": true,
+      "boxStatus": "COMPLETE",
+      "mask": {
+        "actualBytes": 61440,
+        "expectedBytes": 61440,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "3cb602f30b18fcd199f164e0eac0a6c2868ddfe6a6a0dfd392eb944916a08cc1",
+        "expectedSha256": "3cb602f30b18fcd199f164e0eac0a6c2868ddfe6a6a0dfd392eb944916a08cc1",
+        "passed": true
+      },
+      "dilated": {
+        "actualBytes": 61440,
+        "expectedBytes": 61440,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "405ddb15b4e5b47c917db2a6e30544d780e1e4585f7e96f7c63d4d2379182acb",
+        "expectedSha256": "405ddb15b4e5b47c917db2a6e30544d780e1e4585f7e96f7c63d4d2379182acb",
+        "passed": true
+      },
+      "crops": [
+        {
+          "boxId": "fr-nonrefundable-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "detectorScore": 0.7906220418996359,
+          "quad": [
+            [
+              30,
+              27
+            ],
+            [
+              366,
+              27
+            ],
+            [
+              366,
+              51
+            ],
+            [
+              30,
+              51
+            ]
+          ],
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 0,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 1.1368683772161603e-13,
+              "forward.y": 7.105427357601002e-15,
+              "inverse.x": 5.684341886080802e-14,
+              "inverse.y": 7.105427357601002e-15,
+              "sourceRoundtrip.x": 5.684341886080802e-14,
+              "sourceRoundtrip.y": 3.552713678800501e-15,
+              "rotatedForward.x": 1.1368683772161603e-13,
+              "rotatedForward.y": 7.105427357601002e-15,
+              "rotatedInverse.x": 5.684341886080802e-14,
+              "rotatedInverse.y": 3.552713678800501e-15,
+              "pixelRoundtrip.x": 5.684341886080802e-14,
+              "pixelRoundtrip.y": 7.105427357601002e-15,
+              "pixelRotation.x": 5.684341886080802e-14,
+              "pixelRotation.y": 7.105427357601002e-15,
+              "pixelRotationInverse.x": 5.684341886080802e-14,
+              "pixelRotationInverse.y": 3.552713678800501e-15
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 24192,
+              "actualChannels": 24192,
+              "expectedChannels": 24192,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "fr-nonrefundable-16.box-0"
+          },
+          "resizePixels": {
+            "actualBytes": 96768,
+            "expectedBytes": 96768,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "44f79105e372559ec33d4e98dfa0330206aa65cbaf64de61e98bab71f154f020",
+            "expectedSha256": "44f79105e372559ec33d4e98dfa0330206aa65cbaf64de61e98bab71f154f020",
+            "passed": true
+          },
+          "resizeArgb": {
+            "actualBytes": 129024,
+            "expectedBytes": 129024,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "ede1c5432762e1b8339131fe2cde485b2808bfc4fe792f5591a0e1d445ede646",
+            "expectedSha256": "ede1c5432762e1b8339131fe2cde485b2808bfc4fe792f5591a0e1d445ede646",
+            "passed": true
+          },
+          "dimensionsMatch": true
+        }
+      ],
+      "tensor": {
+        "actualBytes": 387072,
+        "expectedBytes": 387072,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "449b53db1a3dc20f458b90d6e0ec4856583cc5a235701d2c73fe416ffd1f4260",
+        "expectedSha256": "449b53db1a3dc20f458b90d6e0ec4856583cc5a235701d2c73fe416ffd1f4260",
+        "passed": true,
+        "differentFloatBits": 0,
+        "actualShape": [
+          1,
+          3,
+          48,
+          672
+        ],
+        "mapping": [
+          0
+        ],
+        "mappingMatches": true
+      }
+    },
+    {
+      "id": "zh-hans-quality-16",
+      "status": "completed",
+      "passed": true,
+      "boxStatus": "COMPLETE",
+      "mask": {
+        "actualBytes": 81920,
+        "expectedBytes": 81920,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "15f0143f9cef69d1287765b352f84b2f0608797d8e75d6019a87f8b36ccf29d2",
+        "expectedSha256": "15f0143f9cef69d1287765b352f84b2f0608797d8e75d6019a87f8b36ccf29d2",
+        "passed": true
+      },
+      "dilated": {
+        "actualBytes": 81920,
+        "expectedBytes": 81920,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "9bde74e12335ffc1d7be7f16b9c3323cf8839e86091e8ea83c597007e089a534",
+        "expectedSha256": "9bde74e12335ffc1d7be7f16b9c3323cf8839e86091e8ea83c597007e089a534",
+        "passed": true
+      },
+      "crops": [
+        {
+          "boxId": "zh-hans-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "detectorScore": 0.7844004929065703,
+          "quad": [
+            [
+              29,
+              30
+            ],
+            [
+              212,
+              30
+            ],
+            [
+              212,
+              51
+            ],
+            [
+              29,
+              51
+            ]
+          ],
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 0,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 3.552713678800501e-15,
+              "forward.y": 0,
+              "inverse.x": 3.552713678800501e-15,
+              "inverse.y": 0,
+              "sourceRoundtrip.x": 0,
+              "sourceRoundtrip.y": 0,
+              "rotatedForward.x": 3.552713678800501e-15,
+              "rotatedForward.y": 0,
+              "rotatedInverse.x": 0,
+              "rotatedInverse.y": 0,
+              "pixelRoundtrip.x": 0,
+              "pixelRoundtrip.y": 0,
+              "pixelRotation.x": 0,
+              "pixelRotation.y": 0,
+              "pixelRotationInverse.x": 0,
+              "pixelRotationInverse.y": 0
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 11529,
+              "actualChannels": 11529,
+              "expectedChannels": 11529,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "zh-hans-quality-16.box-1"
+          },
+          "resizePixels": {
+            "actualBytes": 60336,
+            "expectedBytes": 60336,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "cef74e33663e6bf57465a20d34bfe3b38d222a0e1331cc0a60716634b273c6ce",
+            "expectedSha256": "cef74e33663e6bf57465a20d34bfe3b38d222a0e1331cc0a60716634b273c6ce",
+            "passed": true
+          },
+          "resizeArgb": {
+            "actualBytes": 80448,
+            "expectedBytes": 80448,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "a009b4cf888a099cbd87fde85fd562bf77a236a1c9a67881c30add242c256c7b",
+            "expectedSha256": "a009b4cf888a099cbd87fde85fd562bf77a236a1c9a67881c30add242c256c7b",
+            "passed": true
+          },
+          "dimensionsMatch": true
+        },
+        {
+          "boxId": "zh-hans-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "detectorScore": 0.7958953108336475,
+          "quad": [
+            [
+              30,
+              56
+            ],
+            [
+              228,
+              56
+            ],
+            [
+              228,
+              77
+            ],
+            [
+              30,
+              77
+            ]
+          ],
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 0,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 3.552713678800501e-15,
+              "forward.y": 3.552713678800501e-15,
+              "inverse.x": 2.842170943040401e-14,
+              "inverse.y": 0,
+              "sourceRoundtrip.x": 2.842170943040401e-14,
+              "sourceRoundtrip.y": 0,
+              "rotatedForward.x": 3.552713678800501e-15,
+              "rotatedForward.y": 3.552713678800501e-15,
+              "rotatedInverse.x": 2.842170943040401e-14,
+              "rotatedInverse.y": 0,
+              "pixelRoundtrip.x": 2.842170943040401e-14,
+              "pixelRoundtrip.y": 3.552713678800501e-15,
+              "pixelRotation.x": 2.842170943040401e-14,
+              "pixelRotation.y": 3.552713678800501e-15,
+              "pixelRotationInverse.x": 2.842170943040401e-14,
+              "pixelRotationInverse.y": 0
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 12474,
+              "actualChannels": 12474,
+              "expectedChannels": 12474,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "zh-hans-quality-16.box-0"
+          },
+          "resizePixels": {
+            "actualBytes": 65088,
+            "expectedBytes": 65088,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "80632dd38a601138c2630f485eff1e8278e93a152f9f5e91b8b90a698740673f",
+            "expectedSha256": "80632dd38a601138c2630f485eff1e8278e93a152f9f5e91b8b90a698740673f",
+            "passed": true
+          },
+          "resizeArgb": {
+            "actualBytes": 86784,
+            "expectedBytes": 86784,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "103cff95803c4ec828aeb1ab835e3ae848c5616543b2a1f3f8fa1beca6920396",
+            "expectedSha256": "103cff95803c4ec828aeb1ab835e3ae848c5616543b2a1f3f8fa1beca6920396",
+            "passed": true
+          },
+          "dimensionsMatch": true
+        }
+      ],
+      "tensor": {
+        "actualBytes": 520704,
+        "expectedBytes": 520704,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "657b6584c3d9aa1177525c66f429467db7914e455e21bf33c6d038713f61e21a",
+        "expectedSha256": "657b6584c3d9aa1177525c66f429467db7914e455e21bf33c6d038713f61e21a",
+        "passed": true,
+        "differentFloatBits": 0,
+        "actualShape": [
+          2,
+          3,
+          48,
+          452
+        ],
+        "mapping": [
+          0,
+          1
+        ],
+        "mappingMatches": true
+      }
+    },
+    {
+      "id": "zh-hant-quality-16",
+      "status": "completed",
+      "passed": true,
+      "boxStatus": "COMPLETE",
+      "mask": {
+        "actualBytes": 81920,
+        "expectedBytes": 81920,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "0ca36ef906dad588d9144cfd13d43c93e74dac8e9e3ab3e08277a257afe2e70b",
+        "expectedSha256": "0ca36ef906dad588d9144cfd13d43c93e74dac8e9e3ab3e08277a257afe2e70b",
+        "passed": true
+      },
+      "dilated": {
+        "actualBytes": 81920,
+        "expectedBytes": 81920,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "f8d50cc7ea2945422465aedef41794c15a2ddc9ab6f30d7ef872577a63be41fe",
+        "expectedSha256": "f8d50cc7ea2945422465aedef41794c15a2ddc9ab6f30d7ef872577a63be41fe",
+        "passed": true
+      },
+      "crops": [
+        {
+          "boxId": "zh-hant-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "detectorScore": 0.7939277429647849,
+          "quad": [
+            [
+              29,
+              27
+            ],
+            [
+              212,
+              29
+            ],
+            [
+              212,
+              51
+            ],
+            [
+              29,
+              49
+            ]
+          ],
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 0,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 2.842170943040401e-14,
+              "forward.y": 7.105427357601002e-15,
+              "inverse.x": 2.842170943040401e-14,
+              "inverse.y": 3.552713678800501e-15,
+              "sourceRoundtrip.x": 0,
+              "sourceRoundtrip.y": 7.105427357601002e-15,
+              "rotatedForward.x": 2.842170943040401e-14,
+              "rotatedForward.y": 7.105427357601002e-15,
+              "rotatedInverse.x": 0,
+              "rotatedInverse.y": 7.105427357601002e-15,
+              "pixelRoundtrip.x": 2.842170943040401e-14,
+              "pixelRoundtrip.y": 7.105427357601002e-15,
+              "pixelRotation.x": 2.842170943040401e-14,
+              "pixelRotation.y": 7.105427357601002e-15,
+              "pixelRotationInverse.x": 2.842170943040401e-14,
+              "pixelRotationInverse.y": 7.105427357601002e-15
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 12078,
+              "actualChannels": 12078,
+              "expectedChannels": 12078,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "zh-hant-quality-16.box-1"
+          },
+          "resizePixels": {
+            "actualBytes": 57600,
+            "expectedBytes": 57600,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "59f3c753776da0f9f64669a184650a612bd0c1ce41265060693182152f7f0de5",
+            "expectedSha256": "59f3c753776da0f9f64669a184650a612bd0c1ce41265060693182152f7f0de5",
+            "passed": true
+          },
+          "resizeArgb": {
+            "actualBytes": 76800,
+            "expectedBytes": 76800,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "1ab5e1bb651dd3cc2547b8d2cf702cab6a8c2cf3ce2dd593c82589412e376f0c",
+            "expectedSha256": "1ab5e1bb651dd3cc2547b8d2cf702cab6a8c2cf3ce2dd593c82589412e376f0c",
+            "passed": true
+          },
+          "dimensionsMatch": true
+        },
+        {
+          "boxId": "zh-hant-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "detectorScore": 0.8001764074048481,
+          "quad": [
+            [
+              30,
+              56
+            ],
+            [
+              228,
+              56
+            ],
+            [
+              228,
+              77
+            ],
+            [
+              30,
+              77
+            ]
+          ],
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 0,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 3.552713678800501e-15,
+              "forward.y": 3.552713678800501e-15,
+              "inverse.x": 2.842170943040401e-14,
+              "inverse.y": 0,
+              "sourceRoundtrip.x": 2.842170943040401e-14,
+              "sourceRoundtrip.y": 0,
+              "rotatedForward.x": 3.552713678800501e-15,
+              "rotatedForward.y": 3.552713678800501e-15,
+              "rotatedInverse.x": 2.842170943040401e-14,
+              "rotatedInverse.y": 0,
+              "pixelRoundtrip.x": 2.842170943040401e-14,
+              "pixelRoundtrip.y": 3.552713678800501e-15,
+              "pixelRotation.x": 2.842170943040401e-14,
+              "pixelRotation.y": 3.552713678800501e-15,
+              "pixelRotationInverse.x": 2.842170943040401e-14,
+              "pixelRotationInverse.y": 0
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 12474,
+              "actualChannels": 12474,
+              "expectedChannels": 12474,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "zh-hant-quality-16.box-0"
+          },
+          "resizePixels": {
+            "actualBytes": 65088,
+            "expectedBytes": 65088,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "80632dd38a601138c2630f485eff1e8278e93a152f9f5e91b8b90a698740673f",
+            "expectedSha256": "80632dd38a601138c2630f485eff1e8278e93a152f9f5e91b8b90a698740673f",
+            "passed": true
+          },
+          "resizeArgb": {
+            "actualBytes": 86784,
+            "expectedBytes": 86784,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "103cff95803c4ec828aeb1ab835e3ae848c5616543b2a1f3f8fa1beca6920396",
+            "expectedSha256": "103cff95803c4ec828aeb1ab835e3ae848c5616543b2a1f3f8fa1beca6920396",
+            "passed": true
+          },
+          "dimensionsMatch": true
+        }
+      ],
+      "tensor": {
+        "actualBytes": 520704,
+        "expectedBytes": 520704,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "b887890f7bae543e4aa10ba97845786531549f602067c5a92c198ee132f037c4",
+        "expectedSha256": "b887890f7bae543e4aa10ba97845786531549f602067c5a92c198ee132f037c4",
+        "passed": true,
+        "differentFloatBits": 0,
+        "actualShape": [
+          2,
+          3,
+          48,
+          452
+        ],
+        "mapping": [
+          0,
+          1
+        ],
+        "mappingMatches": true
+      }
+    },
+    {
+      "id": "mixed-quality-16",
+      "status": "completed",
+      "passed": true,
+      "boxStatus": "COMPLETE",
+      "mask": {
+        "actualBytes": 102400,
+        "expectedBytes": 102400,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "b20d10b8fe514f399386cee2082ad4b61072b2d7b9c4a65fde254927d0aef1d6",
+        "expectedSha256": "b20d10b8fe514f399386cee2082ad4b61072b2d7b9c4a65fde254927d0aef1d6",
+        "passed": true
+      },
+      "dilated": {
+        "actualBytes": 102400,
+        "expectedBytes": 102400,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "f1aac0790ea4aa47d82397674d44c5a3cc349de84866f46c8864d98c31532298",
+        "expectedSha256": "f1aac0790ea4aa47d82397674d44c5a3cc349de84866f46c8864d98c31532298",
+        "passed": true
+      },
+      "crops": [
+        {
+          "boxId": "mixed-quality-16.box-2",
+          "originalIndex": 2,
+          "readingOrder": 0,
+          "detectorScore": 0.8009911834917687,
+          "quad": [
+            [
+              29,
+              29
+            ],
+            [
+              150,
+              29
+            ],
+            [
+              150,
+              50
+            ],
+            [
+              29,
+              50
+            ]
+          ],
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 0,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 1.4210854715202004e-14,
+              "forward.y": 7.105427357601002e-15,
+              "inverse.x": 7.105427357601002e-15,
+              "inverse.y": 0,
+              "sourceRoundtrip.x": 0,
+              "sourceRoundtrip.y": 7.105427357601002e-15,
+              "rotatedForward.x": 1.4210854715202004e-14,
+              "rotatedForward.y": 7.105427357601002e-15,
+              "rotatedInverse.x": 0,
+              "rotatedInverse.y": 7.105427357601002e-15,
+              "pixelRoundtrip.x": 1.4210854715202004e-14,
+              "pixelRoundtrip.y": 7.105427357601002e-15,
+              "pixelRotation.x": 1.4210854715202004e-14,
+              "pixelRotation.y": 7.105427357601002e-15,
+              "pixelRotationInverse.x": 0,
+              "pixelRotationInverse.y": 7.105427357601002e-15
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 7623,
+              "actualChannels": 7623,
+              "expectedChannels": 7623,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "mixed-quality-16.box-2"
+          },
+          "resizePixels": {
+            "actualBytes": 39888,
+            "expectedBytes": 39888,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "7dc3c3c35ccf193c302f9b809631ded28984412fcb9235382006109580011d37",
+            "expectedSha256": "7dc3c3c35ccf193c302f9b809631ded28984412fcb9235382006109580011d37",
+            "passed": true
+          },
+          "resizeArgb": {
+            "actualBytes": 53184,
+            "expectedBytes": 53184,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "8ce333d2180657b78fa3c33e4cccc878cb10a162ae67ef203ef3d42a9dc9cae2",
+            "expectedSha256": "8ce333d2180657b78fa3c33e4cccc878cb10a162ae67ef203ef3d42a9dc9cae2",
+            "passed": true
+          },
+          "dimensionsMatch": true
+        },
+        {
+          "boxId": "mixed-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 1,
+          "detectorScore": 0.7865341892181817,
+          "quad": [
+            [
+              29,
+              54
+            ],
+            [
+              219,
+              54
+            ],
+            [
+              219,
+              75
+            ],
+            [
+              29,
+              75
+            ]
+          ],
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 0,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 3.552713678800501e-15,
+              "forward.y": 1.4210854715202004e-14,
+              "inverse.x": 0,
+              "inverse.y": 7.105427357601002e-15,
+              "sourceRoundtrip.x": 3.552713678800501e-15,
+              "sourceRoundtrip.y": 1.4210854715202004e-14,
+              "rotatedForward.x": 3.552713678800501e-15,
+              "rotatedForward.y": 1.4210854715202004e-14,
+              "rotatedInverse.x": 3.552713678800501e-15,
+              "rotatedInverse.y": 1.4210854715202004e-14,
+              "pixelRoundtrip.x": 3.552713678800501e-15,
+              "pixelRoundtrip.y": 1.0658141036401503e-14,
+              "pixelRotation.x": 3.552713678800501e-15,
+              "pixelRotation.y": 1.0658141036401503e-14,
+              "pixelRotationInverse.x": 3.552713678800501e-15,
+              "pixelRotationInverse.y": 1.4210854715202004e-14
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 11970,
+              "actualChannels": 11970,
+              "expectedChannels": 11970,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "mixed-quality-16.box-1"
+          },
+          "resizePixels": {
+            "actualBytes": 62496,
+            "expectedBytes": 62496,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "1744a6d57a33083a9cadc277b1d88dac51a3d154dd4360619b6fd7b523e48809",
+            "expectedSha256": "1744a6d57a33083a9cadc277b1d88dac51a3d154dd4360619b6fd7b523e48809",
+            "passed": true
+          },
+          "resizeArgb": {
+            "actualBytes": 83328,
+            "expectedBytes": 83328,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "485821910e7692aa978b73a87592d9018e63f11088922fa8b11c36125804fbd9",
+            "expectedSha256": "485821910e7692aa978b73a87592d9018e63f11088922fa8b11c36125804fbd9",
+            "passed": true
+          },
+          "dimensionsMatch": true
+        },
+        {
+          "boxId": "mixed-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 2,
+          "detectorScore": 0.7981728689920976,
+          "quad": [
+            [
+              29,
+              83
+            ],
+            [
+              145,
+              83
+            ],
+            [
+              145,
+              105
+            ],
+            [
+              29,
+              105
+            ]
+          ],
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 0,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 3.552713678800501e-15,
+              "forward.y": 0,
+              "inverse.x": 3.552713678800501e-15,
+              "inverse.y": 0,
+              "sourceRoundtrip.x": 0,
+              "sourceRoundtrip.y": 0,
+              "rotatedForward.x": 3.552713678800501e-15,
+              "rotatedForward.y": 0,
+              "rotatedInverse.x": 0,
+              "rotatedInverse.y": 0,
+              "pixelRoundtrip.x": 0,
+              "pixelRoundtrip.y": 0,
+              "pixelRotation.x": 0,
+              "pixelRotation.y": 0,
+              "pixelRotationInverse.x": 0,
+              "pixelRotationInverse.y": 0
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 7656,
+              "actualChannels": 7656,
+              "expectedChannels": 7656,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "mixed-quality-16.box-0"
+          },
+          "resizePixels": {
+            "actualBytes": 36576,
+            "expectedBytes": 36576,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "42208987f96e9eb93321a034dd6385090d8ba7dee9b0c1abed11665f26c32a4f",
+            "expectedSha256": "42208987f96e9eb93321a034dd6385090d8ba7dee9b0c1abed11665f26c32a4f",
+            "passed": true
+          },
+          "resizeArgb": {
+            "actualBytes": 48768,
+            "expectedBytes": 48768,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "971349a929f07e2529a44baee86e8e3f7257a8724d90bf8d03c43ed911da5788",
+            "expectedSha256": "971349a929f07e2529a44baee86e8e3f7257a8724d90bf8d03c43ed911da5788",
+            "passed": true
+          },
+          "dimensionsMatch": true
+        }
+      ],
+      "tensor": {
+        "actualBytes": 749952,
+        "expectedBytes": 749952,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "b840f28b1ef433060e5e8ae31656c3089d3ed913b5ec1111e5869a3483fe18b1",
+        "expectedSha256": "b840f28b1ef433060e5e8ae31656c3089d3ed913b5ec1111e5869a3483fe18b1",
+        "passed": true,
+        "differentFloatBits": 0,
+        "actualShape": [
+          3,
+          3,
+          48,
+          434
+        ],
+        "mapping": [
+          2,
+          0,
+          1
+        ],
+        "mappingMatches": true
+      }
+    },
+    {
+      "id": "blank-negative-24",
+      "status": "completed",
+      "passed": true,
+      "boxStatus": "COMPLETE",
+      "mask": {
+        "actualBytes": 61440,
+        "expectedBytes": 61440,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "0693f6bfa2117a9b14f9ceca13d3a5611de5dca226bf999f20a7f615fbd08dff",
+        "expectedSha256": "0693f6bfa2117a9b14f9ceca13d3a5611de5dca226bf999f20a7f615fbd08dff",
+        "passed": true
+      },
+      "dilated": {
+        "actualBytes": 61440,
+        "expectedBytes": 61440,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "0693f6bfa2117a9b14f9ceca13d3a5611de5dca226bf999f20a7f615fbd08dff",
+        "expectedSha256": "0693f6bfa2117a9b14f9ceca13d3a5611de5dca226bf999f20a7f615fbd08dff",
+        "passed": true
+      },
+      "crops": [],
+      "noInference": true
+    },
+    {
+      "id": "color-control",
+      "status": "completed",
+      "passed": true,
+      "boxStatus": "COMPLETE",
+      "mask": {
+        "actualBytes": 4096,
+        "expectedBytes": 4096,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+        "expectedSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+        "passed": true
+      },
+      "dilated": {
+        "actualBytes": 4096,
+        "expectedBytes": 4096,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+        "expectedSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+        "passed": true
+      },
+      "crops": [],
+      "noInference": true
+    },
+    {
+      "id": "wide-959",
+      "status": "completed",
+      "passed": true,
+      "boxStatus": "COMPLETE",
+      "mask": {
+        "actualBytes": 92160,
+        "expectedBytes": 92160,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "ba61c36dd3703f9a8cce36675bb7391e9a6b1ab917ea00c4a3ebf2d7c50c4fcb",
+        "expectedSha256": "ba61c36dd3703f9a8cce36675bb7391e9a6b1ab917ea00c4a3ebf2d7c50c4fcb",
+        "passed": true
+      },
+      "dilated": {
+        "actualBytes": 92160,
+        "expectedBytes": 92160,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "ba61c36dd3703f9a8cce36675bb7391e9a6b1ab917ea00c4a3ebf2d7c50c4fcb",
+        "expectedSha256": "ba61c36dd3703f9a8cce36675bb7391e9a6b1ab917ea00c4a3ebf2d7c50c4fcb",
+        "passed": true
+      },
+      "crops": [],
+      "noInference": true
+    },
+    {
+      "id": "wide-1499",
+      "status": "completed",
+      "passed": true,
+      "boxStatus": "COMPLETE",
+      "mask": {
+        "actualBytes": 144384,
+        "expectedBytes": 144384,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "47a97af2f30070956ecb7afe6690d223f5d82fb27d66b740b80f34649fdf60c8",
+        "expectedSha256": "47a97af2f30070956ecb7afe6690d223f5d82fb27d66b740b80f34649fdf60c8",
+        "passed": true
+      },
+      "dilated": {
+        "actualBytes": 144384,
+        "expectedBytes": 144384,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "47a97af2f30070956ecb7afe6690d223f5d82fb27d66b740b80f34649fdf60c8",
+        "expectedSha256": "47a97af2f30070956ecb7afe6690d223f5d82fb27d66b740b80f34649fdf60c8",
+        "passed": true
+      },
+      "crops": [],
+      "noInference": true
+    },
+    {
+      "id": "wide-2001",
+      "status": "completed",
+      "passed": true,
+      "boxStatus": "COMPLETE",
+      "mask": {
+        "actualBytes": 190464,
+        "expectedBytes": 190464,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "9cba013cd0738a8219356e57e9499421b886f146778464e438a32022c43f8da7",
+        "expectedSha256": "9cba013cd0738a8219356e57e9499421b886f146778464e438a32022c43f8da7",
+        "passed": true
+      },
+      "dilated": {
+        "actualBytes": 190464,
+        "expectedBytes": 190464,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "9cba013cd0738a8219356e57e9499421b886f146778464e438a32022c43f8da7",
+        "expectedSha256": "9cba013cd0738a8219356e57e9499421b886f146778464e438a32022c43f8da7",
+        "passed": true
+      },
+      "crops": [],
+      "noInference": true
+    },
+    {
+      "id": "threshold-equal",
+      "status": "completed",
+      "passed": true,
+      "boxStatus": "COMPLETE",
+      "mask": {
+        "actualBytes": 16384,
+        "expectedBytes": 16384,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+        "expectedSha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+        "passed": true
+      },
+      "dilated": {
+        "actualBytes": 16384,
+        "expectedBytes": 16384,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+        "expectedSha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+        "passed": true
+      },
+      "crops": [],
+      "noInference": true
+    },
+    {
+      "id": "below-box-score",
+      "status": "completed",
+      "passed": true,
+      "boxStatus": "COMPLETE",
+      "mask": {
+        "actualBytes": 16384,
+        "expectedBytes": 16384,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "4715afba8ac7f519a22cc86fd1710e25d3f70b8ef59dd808f8713107ad75c910",
+        "expectedSha256": "4715afba8ac7f519a22cc86fd1710e25d3f70b8ef59dd808f8713107ad75c910",
+        "passed": true
+      },
+      "dilated": {
+        "actualBytes": 16384,
+        "expectedBytes": 16384,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "0994627f4815f1ecb49e095971907d040132491772f48a180117e0810b4928b2",
+        "expectedSha256": "0994627f4815f1ecb49e095971907d040132491772f48a180117e0810b4928b2",
+        "passed": true
+      },
+      "crops": [],
+      "noInference": true
+    },
+    {
+      "id": "tiny-negative",
+      "status": "completed",
+      "passed": true,
+      "boxStatus": "COMPLETE",
+      "mask": {
+        "actualBytes": 16384,
+        "expectedBytes": 16384,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "bee7d1f4fc8197607759524d13be2c37a629226153209ea63821818353509357",
+        "expectedSha256": "bee7d1f4fc8197607759524d13be2c37a629226153209ea63821818353509357",
+        "passed": true
+      },
+      "dilated": {
+        "actualBytes": 16384,
+        "expectedBytes": 16384,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "d12b8754249957b69ec2805f406f586154faad9184b0a3d6bb610014fea158da",
+        "expectedSha256": "d12b8754249957b69ec2805f406f586154faad9184b0a3d6bb610014fea158da",
+        "passed": true
+      },
+      "crops": [],
+      "noInference": true
+    },
+    {
+      "id": "two-blocks",
+      "status": "completed",
+      "passed": true,
+      "boxStatus": "COMPLETE",
+      "mask": {
+        "actualBytes": 16384,
+        "expectedBytes": 16384,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "aba78757cc0a6c0a5d66c2fded94b942c6c957e06ee756abe0c5bc17a9e35198",
+        "expectedSha256": "aba78757cc0a6c0a5d66c2fded94b942c6c957e06ee756abe0c5bc17a9e35198",
+        "passed": true
+      },
+      "dilated": {
+        "actualBytes": 16384,
+        "expectedBytes": 16384,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "a757bd531939ad2da57a0ed51c7b738b9631f22a000ebfe055c8a9e723859ee6",
+        "expectedSha256": "a757bd531939ad2da57a0ed51c7b738b9631f22a000ebfe055c8a9e723859ee6",
+        "passed": true
+      },
+      "crops": [
+        {
+          "boxId": "two-blocks.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "detectorScore": 0.7711693764694275,
+          "quad": [
+            [
+              4,
+              12
+            ],
+            [
+              50,
+              12
+            ],
+            [
+              50,
+              43
+            ],
+            [
+              4,
+              43
+            ]
+          ],
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 0,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 7.105427357601002e-15,
+              "forward.y": 7.105427357601002e-15,
+              "inverse.x": 0,
+              "inverse.y": 7.105427357601002e-15,
+              "sourceRoundtrip.x": 7.105427357601002e-15,
+              "sourceRoundtrip.y": 0,
+              "rotatedForward.x": 7.105427357601002e-15,
+              "rotatedForward.y": 7.105427357601002e-15,
+              "rotatedInverse.x": 7.105427357601002e-15,
+              "rotatedInverse.y": 0,
+              "pixelRoundtrip.x": 7.105427357601002e-15,
+              "pixelRoundtrip.y": 0,
+              "pixelRotation.x": 7.105427357601002e-15,
+              "pixelRotation.y": 0,
+              "pixelRotationInverse.x": 7.105427357601002e-15,
+              "pixelRotationInverse.y": 0
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 4278,
+              "actualChannels": 4278,
+              "expectedChannels": 4278,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "two-blocks.box-1"
+          },
+          "resizePixels": {
+            "actualBytes": 10368,
+            "expectedBytes": 10368,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "e42d4ce919b9c406f766ec076d2ef13d51fa41546627ac8c8f2b0694998c02ac",
+            "expectedSha256": "e42d4ce919b9c406f766ec076d2ef13d51fa41546627ac8c8f2b0694998c02ac",
+            "passed": true
+          },
+          "resizeArgb": {
+            "actualBytes": 13824,
+            "expectedBytes": 13824,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "e846c54b78364647deae5dff9c8a117afd922e4a9539a5421fdd77682378b381",
+            "expectedSha256": "e846c54b78364647deae5dff9c8a117afd922e4a9539a5421fdd77682378b381",
+            "passed": true
+          },
+          "dimensionsMatch": true
+        },
+        {
+          "boxId": "two-blocks.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "detectorScore": 0.8618951504749637,
+          "quad": [
+            [
+              72,
+              12
+            ],
+            [
+              118,
+              12
+            ],
+            [
+              118,
+              43
+            ],
+            [
+              72,
+              43
+            ]
+          ],
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 0,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 2.1316282072803006e-14,
+              "forward.y": 1.4210854715202004e-14,
+              "inverse.x": 1.4210854715202004e-14,
+              "inverse.y": 7.105427357601002e-15,
+              "sourceRoundtrip.x": 2.842170943040401e-14,
+              "sourceRoundtrip.y": 7.105427357601002e-15,
+              "rotatedForward.x": 2.1316282072803006e-14,
+              "rotatedForward.y": 1.4210854715202004e-14,
+              "rotatedInverse.x": 2.842170943040401e-14,
+              "rotatedInverse.y": 7.105427357601002e-15,
+              "pixelRoundtrip.x": 1.4210854715202e-14,
+              "pixelRoundtrip.y": 7.105427357601002e-15,
+              "pixelRotation.x": 1.4210854715202e-14,
+              "pixelRotation.y": 7.105427357601002e-15,
+              "pixelRotationInverse.x": 1.4210854715202004e-14,
+              "pixelRotationInverse.y": 7.105427357601002e-15
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 4278,
+              "actualChannels": 4278,
+              "expectedChannels": 4278,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "two-blocks.box-0"
+          },
+          "resizePixels": {
+            "actualBytes": 10368,
+            "expectedBytes": 10368,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "bb4db182432c0f0233e74e2a7c3f0835a64101b0085c35a74ffd880af3bbf999",
+            "expectedSha256": "bb4db182432c0f0233e74e2a7c3f0835a64101b0085c35a74ffd880af3bbf999",
+            "passed": true
+          },
+          "resizeArgb": {
+            "actualBytes": 13824,
+            "expectedBytes": 13824,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "58c1aed3b07fe3394b1293668411ed80abf07af603803a9d99b644389f9b87b9",
+            "expectedSha256": "58c1aed3b07fe3394b1293668411ed80abf07af603803a9d99b644389f9b87b9",
+            "passed": true
+          },
+          "dimensionsMatch": true
+        }
+      ],
+      "tensor": {
+        "actualBytes": 368640,
+        "expectedBytes": 368640,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "0ab2e9a3c0626ad872e2402cbbbd3be61d72db819a6e73f9a05a9a4f4ad80667",
+        "expectedSha256": "0ab2e9a3c0626ad872e2402cbbbd3be61d72db819a6e73f9a05a9a4f4ad80667",
+        "passed": true,
+        "differentFloatBits": 0,
+        "actualShape": [
+          2,
+          3,
+          48,
+          320
+        ],
+        "mapping": [
+          0,
+          1
+        ],
+        "mappingMatches": true
+      }
+    },
+    {
+      "id": "edge-touching",
+      "status": "completed",
+      "passed": true,
+      "boxStatus": "COMPLETE",
+      "mask": {
+        "actualBytes": 16384,
+        "expectedBytes": 16384,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "9975c38496040007129f95ea52c549fcaaa1dbd60336459e84e45f49dfcbbb12",
+        "expectedSha256": "9975c38496040007129f95ea52c549fcaaa1dbd60336459e84e45f49dfcbbb12",
+        "passed": true
+      },
+      "dilated": {
+        "actualBytes": 16384,
+        "expectedBytes": 16384,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "99102cd55f6304c1d0e48aa7cebcbd427ade00040655283ba5ca2186f3938b4e",
+        "expectedSha256": "99102cd55f6304c1d0e48aa7cebcbd427ade00040655283ba5ca2186f3938b4e",
+        "passed": true
+      },
+      "crops": [
+        {
+          "boxId": "edge-touching.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "detectorScore": 0.8328029155147556,
+          "quad": [
+            [
+              0,
+              0
+            ],
+            [
+              52,
+              0
+            ],
+            [
+              52,
+              28
+            ],
+            [
+              0,
+              28
+            ]
+          ],
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 0,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 0,
+              "forward.y": 0,
+              "inverse.x": 0,
+              "inverse.y": 0,
+              "sourceRoundtrip.x": 0,
+              "sourceRoundtrip.y": 0,
+              "rotatedForward.x": 0,
+              "rotatedForward.y": 0,
+              "rotatedInverse.x": 0,
+              "rotatedInverse.y": 0,
+              "pixelRoundtrip.x": 0,
+              "pixelRoundtrip.y": 0,
+              "pixelRotation.x": 0,
+              "pixelRotation.y": 0,
+              "pixelRotationInverse.x": 0,
+              "pixelRotationInverse.y": 0
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 4368,
+              "actualChannels": 4368,
+              "expectedChannels": 4368,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "edge-touching.box-0"
+          },
+          "resizePixels": {
+            "actualBytes": 12960,
+            "expectedBytes": 12960,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "914c31af131e83d82511eb38b02a116ff1e33e536eb35387a87e70d87dc9a18f",
+            "expectedSha256": "914c31af131e83d82511eb38b02a116ff1e33e536eb35387a87e70d87dc9a18f",
+            "passed": true
+          },
+          "resizeArgb": {
+            "actualBytes": 17280,
+            "expectedBytes": 17280,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "7e1e9786fb14898a6459430e235acdd3cce0ca1d6523d482f5adcb6a10400ed1",
+            "expectedSha256": "7e1e9786fb14898a6459430e235acdd3cce0ca1d6523d482f5adcb6a10400ed1",
+            "passed": true
+          },
+          "dimensionsMatch": true
+        }
+      ],
+      "tensor": {
+        "actualBytes": 184320,
+        "expectedBytes": 184320,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "08024740b176e69de9263d1e0385512945f45ada21944fd76ccda7f7194c3a76",
+        "expectedSha256": "08024740b176e69de9263d1e0385512945f45ada21944fd76ccda7f7194c3a76",
+        "passed": true,
+        "differentFloatBits": 0,
+        "actualShape": [
+          1,
+          3,
+          48,
+          320
+        ],
+        "mapping": [
+          0
+        ],
+        "mappingMatches": true
+      }
+    },
+    {
+      "id": "vertical",
+      "status": "completed",
+      "passed": true,
+      "boxStatus": "COMPLETE",
+      "mask": {
+        "actualBytes": 16384,
+        "expectedBytes": 16384,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "00de84fda7c5853c71fc8b2a321eff9b306645444213f609975c6714c139d3d7",
+        "expectedSha256": "00de84fda7c5853c71fc8b2a321eff9b306645444213f609975c6714c139d3d7",
+        "passed": true
+      },
+      "dilated": {
+        "actualBytes": 16384,
+        "expectedBytes": 16384,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "8475ed030bfcfb4275af9088cadcd281c5b5d7eac3977218c39fd26534d0f884",
+        "expectedSha256": "8475ed030bfcfb4275af9088cadcd281c5b5d7eac3977218c39fd26534d0f884",
+        "passed": true
+      },
+      "crops": [
+        {
+          "boxId": "vertical.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "detectorScore": 0.830769208761362,
+          "quad": [
+            [
+              45,
+              6
+            ],
+            [
+              75,
+              6
+            ],
+            [
+              75,
+              120
+            ],
+            [
+              45,
+              120
+            ]
+          ],
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 0,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 7.105427357601003e-15,
+              "forward.y": 1.4210854715202004e-14,
+              "inverse.x": 7.105427357601002e-15,
+              "inverse.y": 2.842170943040401e-14,
+              "sourceRoundtrip.x": 0,
+              "sourceRoundtrip.y": 1.4210854715202004e-14,
+              "rotatedForward.x": 1.4210854715202004e-14,
+              "rotatedForward.y": 7.105427357601002e-15,
+              "rotatedInverse.x": 0,
+              "rotatedInverse.y": 1.4210854715202004e-14,
+              "pixelRoundtrip.x": 0,
+              "pixelRoundtrip.y": 1.4210854715202004e-14,
+              "pixelRotation.x": 1.4210854715202004e-14,
+              "pixelRotation.y": 0,
+              "pixelRotationInverse.x": 0,
+              "pixelRotationInverse.y": 1.4210854715202004e-14
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 10260,
+              "actualChannels": 10260,
+              "expectedChannels": 10260,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "vertical.box-0"
+          },
+          "resizePixels": {
+            "actualBytes": 26352,
+            "expectedBytes": 26352,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "aa335077a9d6612ba777aac901fd243df8edb3f810fe866cb8cc1719eb3d0bca",
+            "expectedSha256": "aa335077a9d6612ba777aac901fd243df8edb3f810fe866cb8cc1719eb3d0bca",
+            "passed": true
+          },
+          "resizeArgb": {
+            "actualBytes": 35136,
+            "expectedBytes": 35136,
+            "differentBytes": 0,
+            "maximumChannelError": 0,
+            "actualSha256": "87876ca043441f34132f5847af943c3206425a2a9ec6edbf5f6f5e977e5cc1b0",
+            "expectedSha256": "87876ca043441f34132f5847af943c3206425a2a9ec6edbf5f6f5e977e5cc1b0",
+            "passed": true
+          },
+          "dimensionsMatch": true
+        }
+      ],
+      "tensor": {
+        "actualBytes": 184320,
+        "expectedBytes": 184320,
+        "differentBytes": 0,
+        "maximumChannelError": 0,
+        "actualSha256": "3a30369a8dd2f9de64f03ae8f6519f8cf8b9ef8c7df6243060cd2bcd684e0af7",
+        "expectedSha256": "3a30369a8dd2f9de64f03ae8f6519f8cf8b9ef8c7df6243060cd2bcd684e0af7",
+        "passed": true,
+        "differentFloatBits": 0,
+        "actualShape": [
+          1,
+          3,
+          48,
+          320
+        ],
+        "mapping": [
+          0
+        ],
+        "mappingMatches": true
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "ch/en-quality-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "expectedRaw": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "textMatches": true,
+      "argmaxSha256": "5b24faeb43620677a972f0b697da674fb88082c198bedb8782fd43f230c453f1",
+      "expectedArgmaxSha256": "5b24faeb43620677a972f0b697da674fb88082c198bedb8782fd43f230c453f1",
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "en-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "detectorScore": 0.7848805975701127,
+          "quad": [
+            [
+              30,
+              27
+            ],
+            [
+              295,
+              27
+            ],
+            [
+              295,
+              48
+            ],
+            [
+              30,
+              48
+            ]
+          ],
+          "tensorRow": 0,
+          "raw": "The total is 39.90 €, tax not included.",
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true,
+      "shape": [
+        1,
+        76,
+        18385
+      ]
+    },
+    {
+      "id": "ch/fr-nonrefundable-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "Ce bilet n'est ni éechangeable ni remboursable."
+      ],
+      "expectedRaw": [
+        "Ce bilet n'est ni éechangeable ni remboursable."
+      ],
+      "textMatches": true,
+      "argmaxSha256": "0426f0ad457fbdc1d2a31148c4fc76af3c4e9f5889b3e92f778bf7b51e63c751",
+      "expectedArgmaxSha256": "0426f0ad457fbdc1d2a31148c4fc76af3c4e9f5889b3e92f778bf7b51e63c751",
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "fr-nonrefundable-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "detectorScore": 0.7906220418996359,
+          "quad": [
+            [
+              30,
+              27
+            ],
+            [
+              366,
+              27
+            ],
+            [
+              366,
+              51
+            ],
+            [
+              30,
+              51
+            ]
+          ],
+          "tensorRow": 0,
+          "raw": "Ce bilet n'est ni éechangeable ni remboursable.",
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true,
+      "shape": [
+        1,
+        84,
+        18385
+      ]
+    },
+    {
+      "id": "ch/zh-hans-quality-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "总计1234.50元，不含税。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "expectedRaw": [
+        "总计1234.50元，不含税。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "textMatches": true,
+      "argmaxSha256": "188310d3aab7a29fb6d9e4f99267e9eebfe847b3299a30670cca15ac7542fa9b",
+      "expectedArgmaxSha256": "188310d3aab7a29fb6d9e4f99267e9eebfe847b3299a30670cca15ac7542fa9b",
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "zh-hans-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "detectorScore": 0.7844004929065703,
+          "quad": [
+            [
+              29,
+              30
+            ],
+            [
+              212,
+              30
+            ],
+            [
+              212,
+              51
+            ],
+            [
+              29,
+              51
+            ]
+          ],
+          "tensorRow": 0,
+          "raw": "总计1234.50元，不含税。",
+          "passed": true
+        },
+        {
+          "boxId": "zh-hans-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "detectorScore": 0.7958953108336475,
+          "quad": [
+            [
+              30,
+              56
+            ],
+            [
+              228,
+              56
+            ],
+            [
+              228,
+              77
+            ],
+            [
+              30,
+              77
+            ]
+          ],
+          "tensorRow": 1,
+          "raw": "行李最多8公斤，不可退款。",
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true,
+      "shape": [
+        2,
+        56,
+        18385
+      ]
+    },
+    {
+      "id": "ch/zh-hant-quality-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "總計1234.50元，不含稅。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "expectedRaw": [
+        "總計1234.50元，不含稅。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "textMatches": true,
+      "argmaxSha256": "858932dd431bea90e4cf8bcf0652bcc2d2eaaa8e99b11f564099ed51a9ee6bb8",
+      "expectedArgmaxSha256": "858932dd431bea90e4cf8bcf0652bcc2d2eaaa8e99b11f564099ed51a9ee6bb8",
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "zh-hant-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "detectorScore": 0.7939277429647849,
+          "quad": [
+            [
+              29,
+              27
+            ],
+            [
+              212,
+              29
+            ],
+            [
+              212,
+              51
+            ],
+            [
+              29,
+              49
+            ]
+          ],
+          "tensorRow": 0,
+          "raw": "總計1234.50元，不含稅。",
+          "passed": true
+        },
+        {
+          "boxId": "zh-hant-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "detectorScore": 0.8001764074048481,
+          "quad": [
+            [
+              30,
+              56
+            ],
+            [
+              228,
+              56
+            ],
+            [
+              228,
+              77
+            ],
+            [
+              30,
+              77
+            ]
+          ],
+          "tensorRow": 1,
+          "raw": "行李最多8公斤，不可退款。",
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true,
+      "shape": [
+        2,
+        56,
+        18385
+      ]
+    },
+    {
+      "id": "ch/mixed-quality-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "不含税/不含税",
+        "房间A/Room A",
+        "Chambre A : 120 € / night"
+      ],
+      "expectedRaw": [
+        "不含税/不含税",
+        "房间A/Room A",
+        "Chambre A : 120 € / night"
+      ],
+      "textMatches": true,
+      "argmaxSha256": "b64d12ae52ee3d8b06cccc1e59dc498ff345e9633853e994e035d5c90abfd71c",
+      "expectedArgmaxSha256": "b64d12ae52ee3d8b06cccc1e59dc498ff345e9633853e994e035d5c90abfd71c",
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "mixed-quality-16.box-2",
+          "originalIndex": 2,
+          "readingOrder": 0,
+          "detectorScore": 0.8009911834917687,
+          "quad": [
+            [
+              29,
+              29
+            ],
+            [
+              150,
+              29
+            ],
+            [
+              150,
+              50
+            ],
+            [
+              29,
+              50
+            ]
+          ],
+          "tensorRow": 1,
+          "raw": "房间A/Room A",
+          "passed": true
+        },
+        {
+          "boxId": "mixed-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 1,
+          "detectorScore": 0.7865341892181817,
+          "quad": [
+            [
+              29,
+              54
+            ],
+            [
+              219,
+              54
+            ],
+            [
+              219,
+              75
+            ],
+            [
+              29,
+              75
+            ]
+          ],
+          "tensorRow": 2,
+          "raw": "Chambre A : 120 € / night",
+          "passed": true
+        },
+        {
+          "boxId": "mixed-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 2,
+          "detectorScore": 0.7981728689920976,
+          "quad": [
+            [
+              29,
+              83
+            ],
+            [
+              145,
+              83
+            ],
+            [
+              145,
+              105
+            ],
+            [
+              29,
+              105
+            ]
+          ],
+          "tensorRow": 0,
+          "raw": "不含税/不含税",
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true,
+      "shape": [
+        3,
+        54,
+        18385
+      ]
+    },
+    {
+      "id": "ch/two-blocks",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "7",
+        "7"
+      ],
+      "expectedRaw": [
+        "7",
+        "7"
+      ],
+      "textMatches": true,
+      "argmaxSha256": "fab383b8b1e2dc2d37adb13a7950f8cc8e8ecd0f5051b9e9a9ff077a6a2a1442",
+      "expectedArgmaxSha256": "fab383b8b1e2dc2d37adb13a7950f8cc8e8ecd0f5051b9e9a9ff077a6a2a1442",
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "two-blocks.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "detectorScore": 0.7711693764694275,
+          "quad": [
+            [
+              4,
+              12
+            ],
+            [
+              50,
+              12
+            ],
+            [
+              50,
+              43
+            ],
+            [
+              4,
+              43
+            ]
+          ],
+          "tensorRow": 0,
+          "raw": "7",
+          "passed": true
+        },
+        {
+          "boxId": "two-blocks.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "detectorScore": 0.8618951504749637,
+          "quad": [
+            [
+              72,
+              12
+            ],
+            [
+              118,
+              12
+            ],
+            [
+              118,
+              43
+            ],
+            [
+              72,
+              43
+            ]
+          ],
+          "tensorRow": 1,
+          "raw": "7",
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true,
+      "shape": [
+        2,
+        40,
+        18385
+      ]
+    },
+    {
+      "id": "ch/edge-touching",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        ""
+      ],
+      "expectedRaw": [
+        ""
+      ],
+      "textMatches": true,
+      "argmaxSha256": "b393978842a0fa3d3e1470196f098f473f9678e72463cb65ec4ab5581856c2e4",
+      "expectedArgmaxSha256": "b393978842a0fa3d3e1470196f098f473f9678e72463cb65ec4ab5581856c2e4",
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "edge-touching.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "detectorScore": 0.8328029155147556,
+          "quad": [
+            [
+              0,
+              0
+            ],
+            [
+              52,
+              0
+            ],
+            [
+              52,
+              28
+            ],
+            [
+              0,
+              28
+            ]
+          ],
+          "tensorRow": 0,
+          "raw": "",
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true,
+      "shape": [
+        1,
+        40,
+        18385
+      ]
+    },
+    {
+      "id": "ch/vertical",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "1"
+      ],
+      "expectedRaw": [
+        "1"
+      ],
+      "textMatches": true,
+      "argmaxSha256": "eada17874706a8f4fff9787f5ca00d704cbcb1becd6febc5770f1809a1716257",
+      "expectedArgmaxSha256": "eada17874706a8f4fff9787f5ca00d704cbcb1becd6febc5770f1809a1716257",
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "vertical.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "detectorScore": 0.830769208761362,
+          "quad": [
+            [
+              45,
+              6
+            ],
+            [
+              75,
+              6
+            ],
+            [
+              75,
+              120
+            ],
+            [
+              45,
+              120
+            ]
+          ],
+          "tensorRow": 0,
+          "raw": "1",
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true,
+      "shape": [
+        1,
+        40,
+        18385
+      ]
+    },
+    {
+      "id": "latin/en-quality-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "expectedRaw": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "textMatches": true,
+      "argmaxSha256": "ae7215b4defefee5dc66547ea89a10533902aad35ab213d0896954c19a6331bb",
+      "expectedArgmaxSha256": "ae7215b4defefee5dc66547ea89a10533902aad35ab213d0896954c19a6331bb",
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "en-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "detectorScore": 0.7848805975701127,
+          "quad": [
+            [
+              30,
+              27
+            ],
+            [
+              295,
+              27
+            ],
+            [
+              295,
+              48
+            ],
+            [
+              30,
+              48
+            ]
+          ],
+          "tensorRow": 0,
+          "raw": "The total is 39.90 €, tax not included.",
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true,
+      "shape": [
+        1,
+        76,
+        504
+      ]
+    },
+    {
+      "id": "latin/fr-nonrefundable-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "expectedRaw": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "textMatches": true,
+      "argmaxSha256": "84382aa745ed8194284afe5ec0b540f448dcebf51ea6771f3844fe9079785c2b",
+      "expectedArgmaxSha256": "84382aa745ed8194284afe5ec0b540f448dcebf51ea6771f3844fe9079785c2b",
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "fr-nonrefundable-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "detectorScore": 0.7906220418996359,
+          "quad": [
+            [
+              30,
+              27
+            ],
+            [
+              366,
+              27
+            ],
+            [
+              366,
+              51
+            ],
+            [
+              30,
+              51
+            ]
+          ],
+          "tensorRow": 0,
+          "raw": "Ce billet n'est ni échangeable ni remboursable.",
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true,
+      "shape": [
+        1,
+        84,
+        504
+      ]
+    },
+    {
+      "id": "latin/zh-hans-quality-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "1234.50",
+        "8"
+      ],
+      "expectedRaw": [
+        "1234.50",
+        "8"
+      ],
+      "textMatches": true,
+      "argmaxSha256": "26144ade0665737b4beba4bfb97667c1022ec6bb25070790ccbb8f063a42b145",
+      "expectedArgmaxSha256": "26144ade0665737b4beba4bfb97667c1022ec6bb25070790ccbb8f063a42b145",
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "zh-hans-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "detectorScore": 0.7844004929065703,
+          "quad": [
+            [
+              29,
+              30
+            ],
+            [
+              212,
+              30
+            ],
+            [
+              212,
+              51
+            ],
+            [
+              29,
+              51
+            ]
+          ],
+          "tensorRow": 0,
+          "raw": "1234.50",
+          "passed": true
+        },
+        {
+          "boxId": "zh-hans-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "detectorScore": 0.7958953108336475,
+          "quad": [
+            [
+              30,
+              56
+            ],
+            [
+              228,
+              56
+            ],
+            [
+              228,
+              77
+            ],
+            [
+              30,
+              77
+            ]
+          ],
+          "tensorRow": 1,
+          "raw": "8",
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true,
+      "shape": [
+        2,
+        56,
+        504
+      ]
+    },
+    {
+      "id": "latin/zh-hant-quality-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "1234.50",
+        "8"
+      ],
+      "expectedRaw": [
+        "1234.50",
+        "8"
+      ],
+      "textMatches": true,
+      "argmaxSha256": "85cc2dbae6273265ef9ded3596ac11b6dfe6895c3c352c99fc64dcdf8a6a4505",
+      "expectedArgmaxSha256": "85cc2dbae6273265ef9ded3596ac11b6dfe6895c3c352c99fc64dcdf8a6a4505",
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "zh-hant-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "detectorScore": 0.7939277429647849,
+          "quad": [
+            [
+              29,
+              27
+            ],
+            [
+              212,
+              29
+            ],
+            [
+              212,
+              51
+            ],
+            [
+              29,
+              49
+            ]
+          ],
+          "tensorRow": 0,
+          "raw": "1234.50",
+          "passed": true
+        },
+        {
+          "boxId": "zh-hant-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "detectorScore": 0.8001764074048481,
+          "quad": [
+            [
+              30,
+              56
+            ],
+            [
+              228,
+              56
+            ],
+            [
+              228,
+              77
+            ],
+            [
+              30,
+              77
+            ]
+          ],
+          "tensorRow": 1,
+          "raw": "8",
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true,
+      "shape": [
+        2,
+        56,
+        504
+      ]
+    },
+    {
+      "id": "latin/mixed-quality-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "/",
+        "A / Room A",
+        "Chambre A : 120 € / night"
+      ],
+      "expectedRaw": [
+        "/",
+        "A / Room A",
+        "Chambre A : 120 € / night"
+      ],
+      "textMatches": true,
+      "argmaxSha256": "0d1d4f2b78aaf6ad854b3dbd1b8d409c242afc9826cc0c82f8d0e7b1a305e731",
+      "expectedArgmaxSha256": "0d1d4f2b78aaf6ad854b3dbd1b8d409c242afc9826cc0c82f8d0e7b1a305e731",
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "mixed-quality-16.box-2",
+          "originalIndex": 2,
+          "readingOrder": 0,
+          "detectorScore": 0.8009911834917687,
+          "quad": [
+            [
+              29,
+              29
+            ],
+            [
+              150,
+              29
+            ],
+            [
+              150,
+              50
+            ],
+            [
+              29,
+              50
+            ]
+          ],
+          "tensorRow": 1,
+          "raw": "A / Room A",
+          "passed": true
+        },
+        {
+          "boxId": "mixed-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 1,
+          "detectorScore": 0.7865341892181817,
+          "quad": [
+            [
+              29,
+              54
+            ],
+            [
+              219,
+              54
+            ],
+            [
+              219,
+              75
+            ],
+            [
+              29,
+              75
+            ]
+          ],
+          "tensorRow": 2,
+          "raw": "Chambre A : 120 € / night",
+          "passed": true
+        },
+        {
+          "boxId": "mixed-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 2,
+          "detectorScore": 0.7981728689920976,
+          "quad": [
+            [
+              29,
+              83
+            ],
+            [
+              145,
+              83
+            ],
+            [
+              145,
+              105
+            ],
+            [
+              29,
+              105
+            ]
+          ],
+          "tensorRow": 0,
+          "raw": "/",
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true,
+      "shape": [
+        3,
+        54,
+        504
+      ]
+    },
+    {
+      "id": "latin/two-blocks",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "A7",
+        "%2"
+      ],
+      "expectedRaw": [
+        "A7",
+        "%2"
+      ],
+      "textMatches": true,
+      "argmaxSha256": "177a29ab3a2a7a2bc12c93bebc20ae144dbfacfab0da369b7c62a2f7e3f84f6d",
+      "expectedArgmaxSha256": "177a29ab3a2a7a2bc12c93bebc20ae144dbfacfab0da369b7c62a2f7e3f84f6d",
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "two-blocks.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "detectorScore": 0.7711693764694275,
+          "quad": [
+            [
+              4,
+              12
+            ],
+            [
+              50,
+              12
+            ],
+            [
+              50,
+              43
+            ],
+            [
+              4,
+              43
+            ]
+          ],
+          "tensorRow": 0,
+          "raw": "A7",
+          "passed": true
+        },
+        {
+          "boxId": "two-blocks.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "detectorScore": 0.8618951504749637,
+          "quad": [
+            [
+              72,
+              12
+            ],
+            [
+              118,
+              12
+            ],
+            [
+              118,
+              43
+            ],
+            [
+              72,
+              43
+            ]
+          ],
+          "tensorRow": 1,
+          "raw": "%2",
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true,
+      "shape": [
+        2,
+        40,
+        504
+      ]
+    },
+    {
+      "id": "latin/edge-touching",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "A"
+      ],
+      "expectedRaw": [
+        "A"
+      ],
+      "textMatches": true,
+      "argmaxSha256": "cd2c6da6074d9b0f99499bb650e3a06ff999b8bbc009d93d398aaafcc25e0f47",
+      "expectedArgmaxSha256": "cd2c6da6074d9b0f99499bb650e3a06ff999b8bbc009d93d398aaafcc25e0f47",
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "edge-touching.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "detectorScore": 0.8328029155147556,
+          "quad": [
+            [
+              0,
+              0
+            ],
+            [
+              52,
+              0
+            ],
+            [
+              52,
+              28
+            ],
+            [
+              0,
+              28
+            ]
+          ],
+          "tensorRow": 0,
+          "raw": "A",
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true,
+      "shape": [
+        1,
+        40,
+        504
+      ]
+    },
+    {
+      "id": "latin/vertical",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "MNNN"
+      ],
+      "expectedRaw": [
+        "MNNN"
+      ],
+      "textMatches": true,
+      "argmaxSha256": "12ea92148361b8c794c06b9fbc7f54cd2bb8469017c8ff3ad37f0e92c7232049",
+      "expectedArgmaxSha256": "12ea92148361b8c794c06b9fbc7f54cd2bb8469017c8ff3ad37f0e92c7232049",
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "vertical.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "detectorScore": 0.830769208761362,
+          "quad": [
+            [
+              45,
+              6
+            ],
+            [
+              75,
+              6
+            ],
+            [
+              75,
+              120
+            ],
+            [
+              45,
+              120
+            ]
+          ],
+          "tensorRow": 0,
+          "raw": "MNNN",
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true,
+      "shape": [
+        1,
+        40,
+        504
+      ]
+    }
+  ],
+  "guards": [
+    {
+      "id": "missing-asset",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "id": "extra-asset",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "id": "corrupt-manifest",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "id": "corrupt-payload",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "id": "truncated-payload",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "id": "decoded-size-cap",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "id": "decoded-hash",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "id": "reauthentication",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "id": "duplicate-id-mapping",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "id": "strict-schema-path-types",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "id": "empty-no-inference",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "id": "incomplete-no-inference",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "id": "invalid-crop-before-native",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "id": "resize-failure-cleanup",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "id": "model-callback-failure-cleanup",
+      "status": "completed",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "scope": "Frozen synthetic probabilities/source images; actual boxes/crops/recognition. No fresh detector inference, real screens, translation or quality claim.",
+  "bufferBudget": "At most 8 prepared direct tensors, 816048 float32/3264192 bytes cumulative; transient one-case crops/resizes/packing/expected bytes; one model/session at a time. Mat release counts buffers, not native header destruction.",
+  "counts": {
+    "cases": 16,
+    "complete": 16,
+    "empty": 8,
+    "crops": 13,
+    "cropChannels": 139875,
+    "resizes": 13,
+    "resizedChannels": 631008,
+    "tensors": 8,
+    "floats": 816048,
+    "inferences": 16,
+    "rawRows": 26,
+    "bindings": 26
+  },
+  "geometryCleanup": {
+    "matAcquired": {
+      "boxMask": 18,
+      "boxKernel": 18,
+      "boxDilated": 18,
+      "boxContourSource": 18,
+      "boxHierarchy": 18,
+      "boxContour": 17,
+      "boxProbability": 17,
+      "boxRectInput": 28,
+      "boxRectPoints": 28,
+      "boxScoreMask": 14,
+      "boxScorePolygon": 14,
+      "boxScoreRoi": 14,
+      "sourceQuad": 13,
+      "targetQuad": 13,
+      "homography": 13,
+      "cropSource": 13,
+      "warpDestination": 13,
+      "recognitionResizeSource": 14,
+      "recognitionResizeDestination": 14,
+      "rotationDestination": 1
+    },
+    "matReleaseAttempts": {
+      "boxScoreRoi": 14,
+      "boxScorePolygon": 14,
+      "boxScoreMask": 14,
+      "boxRectPoints": 28,
+      "boxRectInput": 28,
+      "boxProbability": 17,
+      "boxContour": 17,
+      "boxHierarchy": 18,
+      "boxContourSource": 18,
+      "boxDilated": 18,
+      "boxKernel": 18,
+      "boxMask": 18,
+      "warpDestination": 13,
+      "cropSource": 13,
+      "homography": 13,
+      "targetQuad": 13,
+      "sourceQuad": 13,
+      "recognitionResizeDestination": 14,
+      "recognitionResizeSource": 14,
+      "rotationDestination": 1
+    },
+    "matReleased": {
+      "boxScoreRoi": 14,
+      "boxScorePolygon": 14,
+      "boxScoreMask": 14,
+      "boxRectPoints": 28,
+      "boxRectInput": 28,
+      "boxProbability": 17,
+      "boxContour": 17,
+      "boxHierarchy": 18,
+      "boxContourSource": 18,
+      "boxDilated": 18,
+      "boxKernel": 18,
+      "boxMask": 18,
+      "warpDestination": 13,
+      "cropSource": 13,
+      "homography": 13,
+      "targetQuad": 13,
+      "sourceQuad": 13,
+      "recognitionResizeDestination": 14,
+      "recognitionResizeSource": 14,
+      "rotationDestination": 1
+    },
+    "matOpened": 316,
+    "findContoursCalls": 18,
+    "bitmapOpened": 62,
+    "bitmapRecycleAttempts": 62,
+    "bitmapRecycled": 62,
+    "balanced": true,
+    "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+  },
+  "ortCleanup": {
+    "opened": 38,
+    "closeAttempts": 38,
+    "closed": 38,
+    "uncertain": false
+  },
+  "opencvRuntime": "5.0.0",
+  "opencvThreads": 1,
+  "thread": "Instr: androidx.test.runner.AndroidJUnitRunner",
+  "opencvBuildSha256": "decbb1fb99d7b99b096023e5a843eb1d5a44a17ec1f43ae7f70cd53d115274b9",
+  "opencvOptimized": true,
+  "ortRuntime": "1.30.0",
+  "modelIdentities": [
+    {
+      "id": "ch",
+      "sha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af"
+    },
+    {
+      "id": "latin",
+      "sha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+      "dictionarySha256": "d80d308e9759b3ea3aaf6e57fa51b39ef0a2eeb3145a9b23df819f0f0279af44"
+    }
+  ],
+  "restoredOpenCvThreads": 8,
+  "expectedModelIds": [
+    "ch/en-quality-16",
+    "ch/fr-nonrefundable-16",
+    "ch/zh-hans-quality-16",
+    "ch/zh-hant-quality-16",
+    "ch/mixed-quality-16",
+    "ch/two-blocks",
+    "ch/edge-touching",
+    "ch/vertical",
+    "latin/en-quality-16",
+    "latin/fr-nonrefundable-16",
+    "latin/zh-hans-quality-16",
+    "latin/zh-hant-quality-16",
+    "latin/mixed-quality-16",
+    "latin/two-blocks",
+    "latin/edge-touching",
+    "latin/vertical"
+  ],
+  "passed": true,
+  "elapsedNanos": 5663648958
+}

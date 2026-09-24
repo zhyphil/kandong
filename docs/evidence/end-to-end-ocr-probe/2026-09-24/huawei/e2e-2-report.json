@@ -1,0 +1,5201 @@
+{
+  "schema": 1,
+  "runId": "15aa312d-3923-4c2c-b53c-ca79acfa621f",
+  "status": "passed",
+  "api": 31,
+  "device": "LIO-AN00",
+  "cases": [
+    {
+      "id": "en-quality-16",
+      "status": "completed",
+      "passed": true,
+      "sourcePngSha256": "7dcc8eea74aa255202c8e1d2e126236de81202048253a501646c5cc0dcd9070f",
+      "geometrySourcePngSha256": "14d4b31b4259779e6a4ae8d83fbd88eccea5e525c12deac03f233ba43a8d16b3",
+      "sourceBgrSha256": "e042c3241f4642b12bd4a8076ebf695e8902cdcb5b4a2ab5f9314c2d189c67e1",
+      "scoreBudget": {
+        "sameInputAbsoluteTolerance": 1e-07,
+        "measuredInputMaxAbsoluteError": 6.854534149169922e-06,
+        "totalAbsoluteTolerance": 6.954534149169922e-06,
+        "basis": "For equal score masks, abs(mean(actual)-mean(reference)) <= max(abs(actual-reference)); detector numeric gate and every mask/geometry/disposition check remain mandatory."
+      },
+      "detectorPixelsExact": true,
+      "detectorInputExact": true,
+      "actualProbabilitySha256": "9e7daecf482e332bcb86996f0282028d91f66f2a9745447c96bd669c0cb6431c",
+      "detector": {
+        "comparedProbabilities": 61440,
+        "changedProbabilityBits": 2951,
+        "maxAbsoluteError": 6.854534149169922e-06,
+        "meanAbsoluteError": 6.734626367688179e-09,
+        "maxRelativeError": "Infinity",
+        "relativeErrorDefinition": "abs(actual-reference)/abs(reference); nonzero/0=Infinity",
+        "toleranceViolations": 0,
+        "nonFinite": 0,
+        "outOfRange": 0,
+        "maskSha256": "7ecf721f92afe360eef2300e190d54a6f8b9f14796c61e553cd12a90fe2361f1",
+        "positivePixels": 2011,
+        "maskFlips": 0,
+        "nearThresholdActual": 0,
+        "nearThresholdReference": 0,
+        "numericParityPassed": true
+      },
+      "trace": {
+        "passed": true,
+        "comparisons": {
+          "status": 1,
+          "processedCandidates": 1,
+          "contourCount": 1,
+          "dilatedRuns": 1,
+          "rows": 1,
+          "row.0": 1,
+          "rawBoxes": 1,
+          "topRawBox.length": 1,
+          "topRawBox.x": 4,
+          "topRawBox.y": 4,
+          "topRawScore": 1,
+          "usableBoxes": 1,
+          "readingOrder": 1,
+          "pairedBox.length": 1,
+          "pairedBox.x": 4,
+          "pairedBox.y": 4,
+          "pairedScore": 1
+        },
+        "maxFiniteAbs": {
+          "topRawBox.x": 0,
+          "topRawBox.y": 0,
+          "topRawScore": 4.41476465384838e-08,
+          "pairedBox.x": 0,
+          "pairedBox.y": 0,
+          "pairedScore": 4.41476465384838e-08
+        },
+        "mismatches": [],
+        "id": "en-quality-16",
+        "status": "COMPLETE",
+        "reason": "",
+        "rowChecks": [
+          {
+            "passed": true,
+            "comparisons": {
+              "contourIndex": 1,
+              "contourVertices": 1,
+              "contourCycleAndWinding": 1,
+              "preQuad.length": 1,
+              "preQuad.x": 4,
+              "preQuad.y": 4,
+              "minimumSide": 1,
+              "disposition": 1,
+              "scoreMaskFootprint": 1,
+              "score": 1,
+              "distance": 1,
+              "integerInput": 1,
+              "expandedPathsExactCanonical": 1,
+              "expandedVertices": 1,
+              "postQuad.length": 1,
+              "postQuad.x": 4,
+              "postQuad.y": 4,
+              "expandedMinimumSide": 1,
+              "rawBoxIndex": 1,
+              "rawBox.length": 1,
+              "rawBox.x": 4,
+              "rawBox.y": 4,
+              "finalBoxIndex": 1,
+              "finalBox.length": 1,
+              "finalBox.x": 4,
+              "finalBox.y": 4,
+              "finalScore": 1
+            },
+            "maxFiniteAbs": {
+              "preQuad.x": 0,
+              "preQuad.y": 0,
+              "minimumSide": 0,
+              "score": 4.41476465384838e-08,
+              "distance": 0,
+              "postQuad.x": 0,
+              "postQuad.y": 0,
+              "expandedMinimumSide": 0,
+              "rawBox.x": 0,
+              "rawBox.y": 0,
+              "finalBox.x": 0,
+              "finalBox.y": 0,
+              "finalScore": 4.41476465384838e-08
+            },
+            "mismatches": [],
+            "actual": {
+              "contourIndex": 0,
+              "contour": [
+                [
+                  39,
+                  35
+                ],
+                [
+                  38,
+                  36
+                ],
+                [
+                  38,
+                  37
+                ],
+                [
+                  37,
+                  38
+                ],
+                [
+                  37,
+                  41
+                ],
+                [
+                  38,
+                  42
+                ],
+                [
+                  38,
+                  43
+                ],
+                [
+                  251,
+                  43
+                ],
+                [
+                  252,
+                  44
+                ],
+                [
+                  284,
+                  44
+                ],
+                [
+                  285,
+                  43
+                ],
+                [
+                  287,
+                  43
+                ],
+                [
+                  288,
+                  42
+                ],
+                [
+                  288,
+                  38
+                ],
+                [
+                  287,
+                  37
+                ],
+                [
+                  287,
+                  36
+                ],
+                [
+                  277,
+                  36
+                ],
+                [
+                  276,
+                  35
+                ],
+                [
+                  64,
+                  35
+                ],
+                [
+                  63,
+                  36
+                ],
+                [
+                  62,
+                  35
+                ]
+              ],
+              "preUnclipQuad": [
+                [
+                  37,
+                  35
+                ],
+                [
+                  288,
+                  35
+                ],
+                [
+                  288,
+                  44
+                ],
+                [
+                  37,
+                  44
+                ]
+              ],
+              "minimumSide": 9,
+              "disposition": "accepted",
+              "score": 0.7848805534224662,
+              "distance": 6.950769230769231,
+              "integerInput": [
+                [
+                  37,
+                  35
+                ],
+                [
+                  288,
+                  35
+                ],
+                [
+                  288,
+                  44
+                ],
+                [
+                  37,
+                  44
+                ]
+              ],
+              "expandedPaths": [
+                [
+                  [
+                    37,
+                    28
+                  ],
+                  [
+                    34,
+                    29
+                  ],
+                  [
+                    31,
+                    31
+                  ],
+                  [
+                    30,
+                    35
+                  ],
+                  [
+                    30,
+                    44
+                  ],
+                  [
+                    31,
+                    47
+                  ],
+                  [
+                    33,
+                    50
+                  ],
+                  [
+                    37,
+                    51
+                  ],
+                  [
+                    288,
+                    51
+                  ],
+                  [
+                    291,
+                    50
+                  ],
+                  [
+                    294,
+                    48
+                  ],
+                  [
+                    295,
+                    44
+                  ],
+                  [
+                    295,
+                    35
+                  ],
+                  [
+                    294,
+                    32
+                  ],
+                  [
+                    292,
+                    29
+                  ],
+                  [
+                    288,
+                    28
+                  ]
+                ]
+              ],
+              "expandedQuad": [
+                [
+                  30,
+                  28
+                ],
+                [
+                  295,
+                  28
+                ],
+                [
+                  295,
+                  51
+                ],
+                [
+                  30,
+                  51
+                ]
+              ],
+              "expandedMinimumSide": 23,
+              "rawBox": [
+                [
+                  30,
+                  27
+                ],
+                [
+                  295,
+                  27
+                ],
+                [
+                  295,
+                  48
+                ],
+                [
+                  30,
+                  48
+                ]
+              ],
+              "rawBoxIndex": 0,
+              "finalBox": [
+                [
+                  30,
+                  27
+                ],
+                [
+                  295,
+                  27
+                ],
+                [
+                  295,
+                  48
+                ],
+                [
+                  30,
+                  48
+                ]
+              ],
+              "finalBoxIndex": 0
+            }
+          }
+        ],
+        "sourceRuns": 126,
+        "dilatedRuns": 118,
+        "contourCount": 1,
+        "processedCandidates": 1,
+        "usableBoxes": 1,
+        "upstreamProcessedReference": 1,
+        "upstreamDilatedRunsReference": 118,
+        "stages": {
+          "dilation": "EXECUTED",
+          "findContours": "EXECUTED",
+          "scores": 1,
+          "unclip": 1
+        }
+      },
+      "mask": {
+        "comparedChannels": 61440,
+        "actualChannels": 61440,
+        "expectedChannels": 61440,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "dilated": {
+        "comparedChannels": 61440,
+        "actualChannels": 61440,
+        "expectedChannels": 61440,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "crops": [
+        {
+          "id": "en-quality-16.box-0",
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 4.41476465384838e-08,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 3.552713678800501e-15,
+              "forward.y": 3.552713678800501e-15,
+              "inverse.x": 3.552713678800501e-15,
+              "inverse.y": 3.552713678800501e-15,
+              "sourceRoundtrip.x": 0,
+              "sourceRoundtrip.y": 0,
+              "rotatedForward.x": 3.552713678800501e-15,
+              "rotatedForward.y": 3.552713678800501e-15,
+              "rotatedInverse.x": 0,
+              "rotatedInverse.y": 0,
+              "pixelRoundtrip.x": 0,
+              "pixelRoundtrip.y": 3.552713678800501e-15,
+              "pixelRotation.x": 0,
+              "pixelRotation.y": 3.552713678800501e-15,
+              "pixelRotationInverse.x": 0,
+              "pixelRotationInverse.y": 0
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 16695,
+              "actualChannels": 16695,
+              "expectedChannels": 16695,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "en-quality-16.box-0"
+          },
+          "resize": {
+            "comparedChannels": 87120,
+            "actualChannels": 87120,
+            "expectedChannels": 87120,
+            "changedChannels": 0,
+            "maxAbs": 0,
+            "passed": true
+          },
+          "dimensionsMatch": true
+        }
+      ],
+      "tensorExact": true,
+      "tensorShapeExact": true,
+      "tensorRowToReadingOrder": [
+        0
+      ],
+      "mappingExact": true
+    },
+    {
+      "id": "fr-nonrefundable-16",
+      "status": "completed",
+      "passed": true,
+      "sourcePngSha256": "dfffb230fa0bbc886a1695aef47550aec41a13a9961ef29e43b5b29ad2f5a8d1",
+      "geometrySourcePngSha256": "a231182351d997a48580efe8582ce162869339671e9e22e2e87bef44bc6892f5",
+      "sourceBgrSha256": "1291a8592d4f17cfda4e2d0a668e9c25306f12e491239dec9f0795c022f10c43",
+      "scoreBudget": {
+        "sameInputAbsoluteTolerance": 1e-07,
+        "measuredInputMaxAbsoluteError": 1.2814998626708984e-05,
+        "totalAbsoluteTolerance": 1.2914998626708985e-05,
+        "basis": "For equal score masks, abs(mean(actual)-mean(reference)) <= max(abs(actual-reference)); detector numeric gate and every mask/geometry/disposition check remain mandatory."
+      },
+      "detectorPixelsExact": true,
+      "detectorInputExact": true,
+      "actualProbabilitySha256": "aaca61476ec59f41fb3a9db4963cfe0be76b1e804d27c6bf6e081a1065d1a1e8",
+      "detector": {
+        "comparedProbabilities": 61440,
+        "changedProbabilityBits": 2704,
+        "maxAbsoluteError": 1.2814998626708984e-05,
+        "meanAbsoluteError": 1.5656890658040842e-08,
+        "maxRelativeError": "Infinity",
+        "relativeErrorDefinition": "abs(actual-reference)/abs(reference); nonzero/0=Infinity",
+        "toleranceViolations": 0,
+        "nonFinite": 0,
+        "outOfRange": 0,
+        "maskSha256": "3cb602f30b18fcd199f164e0eac0a6c2868ddfe6a6a0dfd392eb944916a08cc1",
+        "positivePixels": 2831,
+        "maskFlips": 0,
+        "nearThresholdActual": 0,
+        "nearThresholdReference": 0,
+        "numericParityPassed": true
+      },
+      "trace": {
+        "passed": true,
+        "comparisons": {
+          "status": 1,
+          "processedCandidates": 1,
+          "contourCount": 1,
+          "dilatedRuns": 1,
+          "rows": 1,
+          "row.0": 1,
+          "rawBoxes": 1,
+          "topRawBox.length": 1,
+          "topRawBox.x": 4,
+          "topRawBox.y": 4,
+          "topRawScore": 1,
+          "usableBoxes": 1,
+          "readingOrder": 1,
+          "pairedBox.length": 1,
+          "pairedBox.x": 4,
+          "pairedBox.y": 4,
+          "pairedScore": 1
+        },
+        "maxFiniteAbs": {
+          "topRawBox.x": 0,
+          "topRawBox.y": 0,
+          "topRawScore": 5.027823124503783e-08,
+          "pairedBox.x": 0,
+          "pairedBox.y": 0,
+          "pairedScore": 5.027823124503783e-08
+        },
+        "mismatches": [],
+        "id": "fr-nonrefundable-16",
+        "status": "COMPLETE",
+        "reason": "",
+        "rowChecks": [
+          {
+            "passed": true,
+            "comparisons": {
+              "contourIndex": 1,
+              "contourVertices": 1,
+              "contourCycleAndWinding": 1,
+              "preQuad.length": 1,
+              "preQuad.x": 4,
+              "preQuad.y": 4,
+              "minimumSide": 1,
+              "disposition": 1,
+              "scoreMaskFootprint": 1,
+              "score": 1,
+              "distance": 1,
+              "integerInput": 1,
+              "expandedPathsExactCanonical": 1,
+              "expandedVertices": 1,
+              "postQuad.length": 1,
+              "postQuad.x": 4,
+              "postQuad.y": 4,
+              "expandedMinimumSide": 1,
+              "rawBoxIndex": 1,
+              "rawBox.length": 1,
+              "rawBox.x": 4,
+              "rawBox.y": 4,
+              "finalBoxIndex": 1,
+              "finalBox.length": 1,
+              "finalBox.x": 4,
+              "finalBox.y": 4,
+              "finalScore": 1
+            },
+            "maxFiniteAbs": {
+              "preQuad.x": 0,
+              "preQuad.y": 0,
+              "minimumSide": 0,
+              "score": 5.027823124503783e-08,
+              "distance": 0,
+              "postQuad.x": 0,
+              "postQuad.y": 0,
+              "expandedMinimumSide": 0,
+              "rawBox.x": 0,
+              "rawBox.y": 0,
+              "finalBox.x": 0,
+              "finalBox.y": 0,
+              "finalScore": 5.027823124503783e-08
+            },
+            "mismatches": [],
+            "actual": {
+              "contourIndex": 0,
+              "contour": [
+                [
+                  45,
+                  36
+                ],
+                [
+                  44,
+                  37
+                ],
+                [
+                  39,
+                  37
+                ],
+                [
+                  38,
+                  38
+                ],
+                [
+                  38,
+                  45
+                ],
+                [
+                  196,
+                  45
+                ],
+                [
+                  197,
+                  44
+                ],
+                [
+                  207,
+                  44
+                ],
+                [
+                  208,
+                  45
+                ],
+                [
+                  209,
+                  45
+                ],
+                [
+                  210,
+                  44
+                ],
+                [
+                  211,
+                  44
+                ],
+                [
+                  212,
+                  45
+                ],
+                [
+                  331,
+                  45
+                ],
+                [
+                  332,
+                  46
+                ],
+                [
+                  333,
+                  46
+                ],
+                [
+                  334,
+                  45
+                ],
+                [
+                  335,
+                  45
+                ],
+                [
+                  336,
+                  46
+                ],
+                [
+                  355,
+                  46
+                ],
+                [
+                  356,
+                  45
+                ],
+                [
+                  358,
+                  45
+                ],
+                [
+                  358,
+                  39
+                ],
+                [
+                  357,
+                  38
+                ],
+                [
+                  357,
+                  37
+                ],
+                [
+                  343,
+                  37
+                ],
+                [
+                  342,
+                  36
+                ],
+                [
+                  341,
+                  36
+                ],
+                [
+                  340,
+                  37
+                ],
+                [
+                  327,
+                  37
+                ],
+                [
+                  326,
+                  36
+                ],
+                [
+                  62,
+                  36
+                ],
+                [
+                  61,
+                  37
+                ],
+                [
+                  59,
+                  37
+                ],
+                [
+                  58,
+                  36
+                ],
+                [
+                  57,
+                  36
+                ],
+                [
+                  56,
+                  37
+                ],
+                [
+                  55,
+                  37
+                ],
+                [
+                  54,
+                  36
+                ]
+              ],
+              "preUnclipQuad": [
+                [
+                  38,
+                  36
+                ],
+                [
+                  358,
+                  36
+                ],
+                [
+                  358,
+                  46
+                ],
+                [
+                  38,
+                  46
+                ]
+              ],
+              "minimumSide": 10,
+              "disposition": "accepted",
+              "score": 0.7906219916214047,
+              "distance": 7.757575757575758,
+              "integerInput": [
+                [
+                  38,
+                  36
+                ],
+                [
+                  358,
+                  36
+                ],
+                [
+                  358,
+                  46
+                ],
+                [
+                  38,
+                  46
+                ]
+              ],
+              "expandedPaths": [
+                [
+                  [
+                    38,
+                    28
+                  ],
+                  [
+                    34,
+                    29
+                  ],
+                  [
+                    31,
+                    32
+                  ],
+                  [
+                    30,
+                    36
+                  ],
+                  [
+                    30,
+                    46
+                  ],
+                  [
+                    31,
+                    50
+                  ],
+                  [
+                    34,
+                    53
+                  ],
+                  [
+                    38,
+                    54
+                  ],
+                  [
+                    358,
+                    54
+                  ],
+                  [
+                    362,
+                    53
+                  ],
+                  [
+                    365,
+                    50
+                  ],
+                  [
+                    366,
+                    46
+                  ],
+                  [
+                    366,
+                    36
+                  ],
+                  [
+                    365,
+                    32
+                  ],
+                  [
+                    362,
+                    29
+                  ],
+                  [
+                    358,
+                    28
+                  ]
+                ]
+              ],
+              "expandedQuad": [
+                [
+                  30,
+                  28
+                ],
+                [
+                  366,
+                  28
+                ],
+                [
+                  366,
+                  54
+                ],
+                [
+                  30,
+                  54
+                ]
+              ],
+              "expandedMinimumSide": 26,
+              "rawBox": [
+                [
+                  30,
+                  27
+                ],
+                [
+                  366,
+                  27
+                ],
+                [
+                  366,
+                  51
+                ],
+                [
+                  30,
+                  51
+                ]
+              ],
+              "rawBoxIndex": 0,
+              "finalBox": [
+                [
+                  30,
+                  27
+                ],
+                [
+                  366,
+                  27
+                ],
+                [
+                  366,
+                  51
+                ],
+                [
+                  30,
+                  51
+                ]
+              ],
+              "finalBoxIndex": 0
+            }
+          }
+        ],
+        "sourceRuns": 138,
+        "dilatedRuns": 130,
+        "contourCount": 1,
+        "processedCandidates": 1,
+        "usableBoxes": 1,
+        "upstreamProcessedReference": 1,
+        "upstreamDilatedRunsReference": 130,
+        "stages": {
+          "dilation": "EXECUTED",
+          "findContours": "EXECUTED",
+          "scores": 1,
+          "unclip": 1
+        }
+      },
+      "mask": {
+        "comparedChannels": 61440,
+        "actualChannels": 61440,
+        "expectedChannels": 61440,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "dilated": {
+        "comparedChannels": 61440,
+        "actualChannels": 61440,
+        "expectedChannels": 61440,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "crops": [
+        {
+          "id": "fr-nonrefundable-16.box-0",
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 5.027823124503783e-08,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 1.1368683772161603e-13,
+              "forward.y": 7.105427357601002e-15,
+              "inverse.x": 5.684341886080802e-14,
+              "inverse.y": 7.105427357601002e-15,
+              "sourceRoundtrip.x": 5.684341886080802e-14,
+              "sourceRoundtrip.y": 3.552713678800501e-15,
+              "rotatedForward.x": 1.1368683772161603e-13,
+              "rotatedForward.y": 7.105427357601002e-15,
+              "rotatedInverse.x": 5.684341886080802e-14,
+              "rotatedInverse.y": 3.552713678800501e-15,
+              "pixelRoundtrip.x": 5.684341886080802e-14,
+              "pixelRoundtrip.y": 7.105427357601002e-15,
+              "pixelRotation.x": 5.684341886080802e-14,
+              "pixelRotation.y": 7.105427357601002e-15,
+              "pixelRotationInverse.x": 5.684341886080802e-14,
+              "pixelRotationInverse.y": 3.552713678800501e-15
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 24192,
+              "actualChannels": 24192,
+              "expectedChannels": 24192,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "fr-nonrefundable-16.box-0"
+          },
+          "resize": {
+            "comparedChannels": 96768,
+            "actualChannels": 96768,
+            "expectedChannels": 96768,
+            "changedChannels": 0,
+            "maxAbs": 0,
+            "passed": true
+          },
+          "dimensionsMatch": true
+        }
+      ],
+      "tensorExact": true,
+      "tensorShapeExact": true,
+      "tensorRowToReadingOrder": [
+        0
+      ],
+      "mappingExact": true
+    },
+    {
+      "id": "zh-hans-quality-16",
+      "status": "completed",
+      "passed": true,
+      "sourcePngSha256": "a5cd006a679246fe50c1bb4d6cb9e2b616c3a69168cd99f8c2d230a448957184",
+      "geometrySourcePngSha256": "d793159a661552487a142738f032fc2cc54e9a47d6e91b794441ab7e1ac0b9ed",
+      "sourceBgrSha256": "66eef5fb3d7c0138b91860a9abd7d64d00f7887fd1964f52abbc2c029aaf0687",
+      "scoreBudget": {
+        "sameInputAbsoluteTolerance": 1e-07,
+        "measuredInputMaxAbsoluteError": 1.4662742614746094e-05,
+        "totalAbsoluteTolerance": 1.4762742614746094e-05,
+        "basis": "For equal score masks, abs(mean(actual)-mean(reference)) <= max(abs(actual-reference)); detector numeric gate and every mask/geometry/disposition check remain mandatory."
+      },
+      "detectorPixelsExact": true,
+      "detectorInputExact": true,
+      "actualProbabilitySha256": "fbe454e2e425afdacb9337c3c3294f880e3e9a824d21be30708b402dd281bf52",
+      "detector": {
+        "comparedProbabilities": 81920,
+        "changedProbabilityBits": 5019,
+        "maxAbsoluteError": 1.4662742614746094e-05,
+        "meanAbsoluteError": 8.189454092644155e-09,
+        "maxRelativeError": "Infinity",
+        "relativeErrorDefinition": "abs(actual-reference)/abs(reference); nonzero/0=Infinity",
+        "toleranceViolations": 0,
+        "nonFinite": 0,
+        "outOfRange": 0,
+        "maskSha256": "15f0143f9cef69d1287765b352f84b2f0608797d8e75d6019a87f8b36ccf29d2",
+        "positivePixels": 2823,
+        "maskFlips": 0,
+        "nearThresholdActual": 0,
+        "nearThresholdReference": 0,
+        "numericParityPassed": true
+      },
+      "trace": {
+        "passed": true,
+        "comparisons": {
+          "status": 1,
+          "processedCandidates": 1,
+          "contourCount": 1,
+          "dilatedRuns": 1,
+          "rows": 1,
+          "row.0": 1,
+          "row.1": 1,
+          "rawBoxes": 1,
+          "topRawBox.length": 2,
+          "topRawBox.x": 8,
+          "topRawBox.y": 8,
+          "topRawScore": 2,
+          "usableBoxes": 1,
+          "readingOrder": 1,
+          "pairedBox.length": 2,
+          "pairedBox.x": 8,
+          "pairedBox.y": 8,
+          "pairedScore": 2
+        },
+        "maxFiniteAbs": {
+          "topRawBox.x": 0,
+          "topRawBox.y": 0,
+          "topRawScore": 1.314524058493305e-07,
+          "pairedBox.x": 0,
+          "pairedBox.y": 0,
+          "pairedScore": 1.314524058493305e-07
+        },
+        "mismatches": [],
+        "id": "zh-hans-quality-16",
+        "status": "COMPLETE",
+        "reason": "",
+        "rowChecks": [
+          {
+            "passed": true,
+            "comparisons": {
+              "contourIndex": 1,
+              "contourVertices": 1,
+              "contourCycleAndWinding": 1,
+              "preQuad.length": 1,
+              "preQuad.x": 4,
+              "preQuad.y": 4,
+              "minimumSide": 1,
+              "disposition": 1,
+              "scoreMaskFootprint": 1,
+              "score": 1,
+              "distance": 1,
+              "integerInput": 1,
+              "expandedPathsExactCanonical": 1,
+              "expandedVertices": 1,
+              "postQuad.length": 1,
+              "postQuad.x": 4,
+              "postQuad.y": 4,
+              "expandedMinimumSide": 1,
+              "rawBoxIndex": 1,
+              "rawBox.length": 1,
+              "rawBox.x": 4,
+              "rawBox.y": 4,
+              "finalBoxIndex": 1,
+              "finalBox.length": 1,
+              "finalBox.x": 4,
+              "finalBox.y": 4,
+              "finalScore": 1
+            },
+            "maxFiniteAbs": {
+              "preQuad.x": 0,
+              "preQuad.y": 0,
+              "minimumSide": 0,
+              "score": 1.314524058493305e-07,
+              "distance": 0,
+              "postQuad.x": 0,
+              "postQuad.y": 0,
+              "expandedMinimumSide": 0,
+              "rawBox.x": 0,
+              "rawBox.y": 0,
+              "finalBox.x": 0,
+              "finalBox.y": 0,
+              "finalScore": 1.314524058493305e-07
+            },
+            "mismatches": [],
+            "actual": {
+              "contourIndex": 0,
+              "contour": [
+                [
+                  39,
+                  68
+                ],
+                [
+                  37,
+                  70
+                ],
+                [
+                  37,
+                  76
+                ],
+                [
+                  39,
+                  76
+                ],
+                [
+                  40,
+                  77
+                ],
+                [
+                  42,
+                  77
+                ],
+                [
+                  43,
+                  76
+                ],
+                [
+                  168,
+                  76
+                ],
+                [
+                  169,
+                  77
+                ],
+                [
+                  218,
+                  77
+                ],
+                [
+                  219,
+                  76
+                ],
+                [
+                  220,
+                  76
+                ],
+                [
+                  221,
+                  75
+                ],
+                [
+                  221,
+                  70
+                ],
+                [
+                  220,
+                  70
+                ],
+                [
+                  219,
+                  69
+                ],
+                [
+                  212,
+                  69
+                ],
+                [
+                  211,
+                  68
+                ],
+                [
+                  193,
+                  68
+                ],
+                [
+                  192,
+                  69
+                ],
+                [
+                  177,
+                  69
+                ],
+                [
+                  176,
+                  68
+                ]
+              ],
+              "preUnclipQuad": [
+                [
+                  37,
+                  68
+                ],
+                [
+                  221,
+                  68
+                ],
+                [
+                  221,
+                  77
+                ],
+                [
+                  37,
+                  77
+                ]
+              ],
+              "minimumSide": 9,
+              "disposition": "accepted",
+              "score": 0.7958951793812417,
+              "distance": 6.864248704663213,
+              "integerInput": [
+                [
+                  37,
+                  68
+                ],
+                [
+                  221,
+                  68
+                ],
+                [
+                  221,
+                  77
+                ],
+                [
+                  37,
+                  77
+                ]
+              ],
+              "expandedPaths": [
+                [
+                  [
+                    37,
+                    61
+                  ],
+                  [
+                    34,
+                    62
+                  ],
+                  [
+                    31,
+                    64
+                  ],
+                  [
+                    30,
+                    68
+                  ],
+                  [
+                    30,
+                    77
+                  ],
+                  [
+                    31,
+                    80
+                  ],
+                  [
+                    33,
+                    83
+                  ],
+                  [
+                    37,
+                    84
+                  ],
+                  [
+                    221,
+                    84
+                  ],
+                  [
+                    224,
+                    83
+                  ],
+                  [
+                    227,
+                    81
+                  ],
+                  [
+                    228,
+                    77
+                  ],
+                  [
+                    228,
+                    68
+                  ],
+                  [
+                    227,
+                    65
+                  ],
+                  [
+                    225,
+                    62
+                  ],
+                  [
+                    221,
+                    61
+                  ]
+                ]
+              ],
+              "expandedQuad": [
+                [
+                  30,
+                  61
+                ],
+                [
+                  228,
+                  61
+                ],
+                [
+                  228,
+                  84
+                ],
+                [
+                  30,
+                  84
+                ]
+              ],
+              "expandedMinimumSide": 23,
+              "rawBox": [
+                [
+                  30,
+                  56
+                ],
+                [
+                  228,
+                  56
+                ],
+                [
+                  228,
+                  77
+                ],
+                [
+                  30,
+                  77
+                ]
+              ],
+              "rawBoxIndex": 0,
+              "finalBox": [
+                [
+                  30,
+                  56
+                ],
+                [
+                  228,
+                  56
+                ],
+                [
+                  228,
+                  77
+                ],
+                [
+                  30,
+                  77
+                ]
+              ],
+              "finalBoxIndex": 0
+            }
+          },
+          {
+            "passed": true,
+            "comparisons": {
+              "contourIndex": 1,
+              "contourVertices": 1,
+              "contourCycleAndWinding": 1,
+              "preQuad.length": 1,
+              "preQuad.x": 4,
+              "preQuad.y": 4,
+              "minimumSide": 1,
+              "disposition": 1,
+              "scoreMaskFootprint": 1,
+              "score": 1,
+              "distance": 1,
+              "integerInput": 1,
+              "expandedPathsExactCanonical": 1,
+              "expandedVertices": 1,
+              "postQuad.length": 1,
+              "postQuad.x": 4,
+              "postQuad.y": 4,
+              "expandedMinimumSide": 1,
+              "rawBoxIndex": 1,
+              "rawBox.length": 1,
+              "rawBox.x": 4,
+              "rawBox.y": 4,
+              "finalBoxIndex": 1,
+              "finalBox.length": 1,
+              "finalBox.x": 4,
+              "finalBox.y": 4,
+              "finalScore": 1
+            },
+            "maxFiniteAbs": {
+              "preQuad.x": 0,
+              "preQuad.y": 0,
+              "minimumSide": 0,
+              "score": 7.906380772304544e-09,
+              "distance": 0,
+              "postQuad.x": 0,
+              "postQuad.y": 0,
+              "expandedMinimumSide": 0,
+              "rawBox.x": 0,
+              "rawBox.y": 0,
+              "finalBox.x": 0,
+              "finalBox.y": 0,
+              "finalScore": 7.906380772304544e-09
+            },
+            "mismatches": [],
+            "actual": {
+              "contourIndex": 1,
+              "contour": [
+                [
+                  38,
+                  39
+                ],
+                [
+                  37,
+                  40
+                ],
+                [
+                  37,
+                  43
+                ],
+                [
+                  36,
+                  44
+                ],
+                [
+                  36,
+                  45
+                ],
+                [
+                  37,
+                  46
+                ],
+                [
+                  37,
+                  47
+                ],
+                [
+                  196,
+                  47
+                ],
+                [
+                  197,
+                  48
+                ],
+                [
+                  200,
+                  48
+                ],
+                [
+                  201,
+                  47
+                ],
+                [
+                  204,
+                  47
+                ],
+                [
+                  204,
+                  45
+                ],
+                [
+                  205,
+                  44
+                ],
+                [
+                  205,
+                  43
+                ],
+                [
+                  204,
+                  42
+                ],
+                [
+                  204,
+                  41
+                ],
+                [
+                  202,
+                  39
+                ]
+              ],
+              "preUnclipQuad": [
+                [
+                  36,
+                  39
+                ],
+                [
+                  205,
+                  39
+                ],
+                [
+                  205,
+                  48
+                ],
+                [
+                  36,
+                  48
+                ]
+              ],
+              "minimumSide": 9,
+              "disposition": "accepted",
+              "score": 0.7844004850001896,
+              "distance": 6.835955056179775,
+              "integerInput": [
+                [
+                  36,
+                  39
+                ],
+                [
+                  205,
+                  39
+                ],
+                [
+                  205,
+                  48
+                ],
+                [
+                  36,
+                  48
+                ]
+              ],
+              "expandedPaths": [
+                [
+                  [
+                    36,
+                    32
+                  ],
+                  [
+                    33,
+                    33
+                  ],
+                  [
+                    30,
+                    35
+                  ],
+                  [
+                    29,
+                    39
+                  ],
+                  [
+                    29,
+                    48
+                  ],
+                  [
+                    30,
+                    51
+                  ],
+                  [
+                    32,
+                    54
+                  ],
+                  [
+                    36,
+                    55
+                  ],
+                  [
+                    205,
+                    55
+                  ],
+                  [
+                    208,
+                    54
+                  ],
+                  [
+                    211,
+                    52
+                  ],
+                  [
+                    212,
+                    48
+                  ],
+                  [
+                    212,
+                    39
+                  ],
+                  [
+                    211,
+                    36
+                  ],
+                  [
+                    209,
+                    33
+                  ],
+                  [
+                    205,
+                    32
+                  ]
+                ]
+              ],
+              "expandedQuad": [
+                [
+                  29,
+                  32
+                ],
+                [
+                  212,
+                  32
+                ],
+                [
+                  212,
+                  55
+                ],
+                [
+                  29,
+                  55
+                ]
+              ],
+              "expandedMinimumSide": 23,
+              "rawBox": [
+                [
+                  29,
+                  30
+                ],
+                [
+                  212,
+                  30
+                ],
+                [
+                  212,
+                  51
+                ],
+                [
+                  29,
+                  51
+                ]
+              ],
+              "rawBoxIndex": 1,
+              "finalBox": [
+                [
+                  29,
+                  30
+                ],
+                [
+                  212,
+                  30
+                ],
+                [
+                  212,
+                  51
+                ],
+                [
+                  29,
+                  51
+                ]
+              ],
+              "finalBoxIndex": 1
+            }
+          }
+        ],
+        "sourceRuns": 174,
+        "dilatedRuns": 172,
+        "contourCount": 2,
+        "processedCandidates": 2,
+        "usableBoxes": 2,
+        "upstreamProcessedReference": 2,
+        "upstreamDilatedRunsReference": 172,
+        "stages": {
+          "dilation": "EXECUTED",
+          "findContours": "EXECUTED",
+          "scores": 2,
+          "unclip": 2
+        }
+      },
+      "mask": {
+        "comparedChannels": 81920,
+        "actualChannels": 81920,
+        "expectedChannels": 81920,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "dilated": {
+        "comparedChannels": 81920,
+        "actualChannels": 81920,
+        "expectedChannels": 81920,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "crops": [
+        {
+          "id": "zh-hans-quality-16.box-1",
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 7.906380772304544e-09,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 3.552713678800501e-15,
+              "forward.y": 0,
+              "inverse.x": 3.552713678800501e-15,
+              "inverse.y": 0,
+              "sourceRoundtrip.x": 0,
+              "sourceRoundtrip.y": 0,
+              "rotatedForward.x": 3.552713678800501e-15,
+              "rotatedForward.y": 0,
+              "rotatedInverse.x": 0,
+              "rotatedInverse.y": 0,
+              "pixelRoundtrip.x": 0,
+              "pixelRoundtrip.y": 0,
+              "pixelRotation.x": 0,
+              "pixelRotation.y": 0,
+              "pixelRotationInverse.x": 0,
+              "pixelRotationInverse.y": 0
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 11529,
+              "actualChannels": 11529,
+              "expectedChannels": 11529,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "zh-hans-quality-16.box-1"
+          },
+          "resize": {
+            "comparedChannels": 60336,
+            "actualChannels": 60336,
+            "expectedChannels": 60336,
+            "changedChannels": 0,
+            "maxAbs": 0,
+            "passed": true
+          },
+          "dimensionsMatch": true
+        },
+        {
+          "id": "zh-hans-quality-16.box-0",
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 1.314524058493305e-07,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 3.552713678800501e-15,
+              "forward.y": 3.552713678800501e-15,
+              "inverse.x": 2.842170943040401e-14,
+              "inverse.y": 0,
+              "sourceRoundtrip.x": 2.842170943040401e-14,
+              "sourceRoundtrip.y": 0,
+              "rotatedForward.x": 3.552713678800501e-15,
+              "rotatedForward.y": 3.552713678800501e-15,
+              "rotatedInverse.x": 2.842170943040401e-14,
+              "rotatedInverse.y": 0,
+              "pixelRoundtrip.x": 2.842170943040401e-14,
+              "pixelRoundtrip.y": 3.552713678800501e-15,
+              "pixelRotation.x": 2.842170943040401e-14,
+              "pixelRotation.y": 3.552713678800501e-15,
+              "pixelRotationInverse.x": 2.842170943040401e-14,
+              "pixelRotationInverse.y": 0
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 12474,
+              "actualChannels": 12474,
+              "expectedChannels": 12474,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "zh-hans-quality-16.box-0"
+          },
+          "resize": {
+            "comparedChannels": 65088,
+            "actualChannels": 65088,
+            "expectedChannels": 65088,
+            "changedChannels": 0,
+            "maxAbs": 0,
+            "passed": true
+          },
+          "dimensionsMatch": true
+        }
+      ],
+      "tensorExact": true,
+      "tensorShapeExact": true,
+      "tensorRowToReadingOrder": [
+        0,
+        1
+      ],
+      "mappingExact": true
+    },
+    {
+      "id": "zh-hant-quality-16",
+      "status": "completed",
+      "passed": true,
+      "sourcePngSha256": "9453b4a14282aa818b9446475b001e6ec2ea81ab2affa22b551d3939484683cc",
+      "geometrySourcePngSha256": "551938fa81d5fb439620c1f47c7db42d7ff8de3e06b2eeff41c59cba024e92dc",
+      "sourceBgrSha256": "ecdd63a178b3d1abbfe74f37bef28fb81de8ae9dd6fc082086f82339f8510c3d",
+      "scoreBudget": {
+        "sameInputAbsoluteTolerance": 1e-07,
+        "measuredInputMaxAbsoluteError": 7.927417755126953e-06,
+        "totalAbsoluteTolerance": 8.027417755126954e-06,
+        "basis": "For equal score masks, abs(mean(actual)-mean(reference)) <= max(abs(actual-reference)); detector numeric gate and every mask/geometry/disposition check remain mandatory."
+      },
+      "detectorPixelsExact": true,
+      "detectorInputExact": true,
+      "actualProbabilitySha256": "aecbcfd172674327c6da4172c5352d89114580b361c6683057327418fa5b1ba5",
+      "detector": {
+        "comparedProbabilities": 81920,
+        "changedProbabilityBits": 4865,
+        "maxAbsoluteError": 7.927417755126953e-06,
+        "meanAbsoluteError": 8.339702617377043e-09,
+        "maxRelativeError": "Infinity",
+        "relativeErrorDefinition": "abs(actual-reference)/abs(reference); nonzero/0=Infinity",
+        "toleranceViolations": 0,
+        "nonFinite": 0,
+        "outOfRange": 0,
+        "maskSha256": "0ca36ef906dad588d9144cfd13d43c93e74dac8e9e3ab3e08277a257afe2e70b",
+        "positivePixels": 2930,
+        "maskFlips": 0,
+        "nearThresholdActual": 0,
+        "nearThresholdReference": 0,
+        "numericParityPassed": true
+      },
+      "trace": {
+        "passed": true,
+        "comparisons": {
+          "status": 1,
+          "processedCandidates": 1,
+          "contourCount": 1,
+          "dilatedRuns": 1,
+          "rows": 1,
+          "row.0": 1,
+          "row.1": 1,
+          "rawBoxes": 1,
+          "topRawBox.length": 2,
+          "topRawBox.x": 8,
+          "topRawBox.y": 8,
+          "topRawScore": 2,
+          "usableBoxes": 1,
+          "readingOrder": 1,
+          "pairedBox.length": 2,
+          "pairedBox.x": 8,
+          "pairedBox.y": 8,
+          "pairedScore": 2
+        },
+        "maxFiniteAbs": {
+          "topRawBox.x": 0,
+          "topRawBox.y": 0,
+          "topRawScore": 6.596784329904182e-08,
+          "pairedBox.x": 0,
+          "pairedBox.y": 0,
+          "pairedScore": 6.596784329904182e-08
+        },
+        "mismatches": [],
+        "id": "zh-hant-quality-16",
+        "status": "COMPLETE",
+        "reason": "",
+        "rowChecks": [
+          {
+            "passed": true,
+            "comparisons": {
+              "contourIndex": 1,
+              "contourVertices": 1,
+              "contourCycleAndWinding": 1,
+              "preQuad.length": 1,
+              "preQuad.x": 4,
+              "preQuad.y": 4,
+              "minimumSide": 1,
+              "disposition": 1,
+              "scoreMaskFootprint": 1,
+              "score": 1,
+              "distance": 1,
+              "integerInput": 1,
+              "expandedPathsExactCanonical": 1,
+              "expandedVertices": 1,
+              "postQuad.length": 1,
+              "postQuad.x": 4,
+              "postQuad.y": 4,
+              "expandedMinimumSide": 1,
+              "rawBoxIndex": 1,
+              "rawBox.length": 1,
+              "rawBox.x": 4,
+              "rawBox.y": 4,
+              "finalBoxIndex": 1,
+              "finalBox.length": 1,
+              "finalBox.x": 4,
+              "finalBox.y": 4,
+              "finalScore": 1
+            },
+            "maxFiniteAbs": {
+              "preQuad.x": 0,
+              "preQuad.y": 0,
+              "minimumSide": 0,
+              "score": 6.596784329904182e-08,
+              "distance": 0,
+              "postQuad.x": 0,
+              "postQuad.y": 0,
+              "expandedMinimumSide": 0,
+              "rawBox.x": 0,
+              "rawBox.y": 0,
+              "finalBox.x": 0,
+              "finalBox.y": 0,
+              "finalScore": 6.596784329904182e-08
+            },
+            "mismatches": [],
+            "actual": {
+              "contourIndex": 0,
+              "contour": [
+                [
+                  39,
+                  68
+                ],
+                [
+                  37,
+                  70
+                ],
+                [
+                  37,
+                  76
+                ],
+                [
+                  39,
+                  76
+                ],
+                [
+                  40,
+                  77
+                ],
+                [
+                  44,
+                  77
+                ],
+                [
+                  45,
+                  76
+                ],
+                [
+                  168,
+                  76
+                ],
+                [
+                  169,
+                  77
+                ],
+                [
+                  218,
+                  77
+                ],
+                [
+                  219,
+                  76
+                ],
+                [
+                  220,
+                  76
+                ],
+                [
+                  221,
+                  75
+                ],
+                [
+                  221,
+                  70
+                ],
+                [
+                  220,
+                  70
+                ],
+                [
+                  219,
+                  69
+                ],
+                [
+                  212,
+                  69
+                ],
+                [
+                  211,
+                  68
+                ],
+                [
+                  188,
+                  68
+                ],
+                [
+                  187,
+                  69
+                ],
+                [
+                  180,
+                  69
+                ],
+                [
+                  179,
+                  68
+                ]
+              ],
+              "preUnclipQuad": [
+                [
+                  37,
+                  68
+                ],
+                [
+                  221,
+                  68
+                ],
+                [
+                  221,
+                  77
+                ],
+                [
+                  37,
+                  77
+                ]
+              ],
+              "minimumSide": 9,
+              "disposition": "accepted",
+              "score": 0.8001764733726914,
+              "distance": 6.864248704663213,
+              "integerInput": [
+                [
+                  37,
+                  68
+                ],
+                [
+                  221,
+                  68
+                ],
+                [
+                  221,
+                  77
+                ],
+                [
+                  37,
+                  77
+                ]
+              ],
+              "expandedPaths": [
+                [
+                  [
+                    37,
+                    61
+                  ],
+                  [
+                    34,
+                    62
+                  ],
+                  [
+                    31,
+                    64
+                  ],
+                  [
+                    30,
+                    68
+                  ],
+                  [
+                    30,
+                    77
+                  ],
+                  [
+                    31,
+                    80
+                  ],
+                  [
+                    33,
+                    83
+                  ],
+                  [
+                    37,
+                    84
+                  ],
+                  [
+                    221,
+                    84
+                  ],
+                  [
+                    224,
+                    83
+                  ],
+                  [
+                    227,
+                    81
+                  ],
+                  [
+                    228,
+                    77
+                  ],
+                  [
+                    228,
+                    68
+                  ],
+                  [
+                    227,
+                    65
+                  ],
+                  [
+                    225,
+                    62
+                  ],
+                  [
+                    221,
+                    61
+                  ]
+                ]
+              ],
+              "expandedQuad": [
+                [
+                  30,
+                  61
+                ],
+                [
+                  228,
+                  61
+                ],
+                [
+                  228,
+                  84
+                ],
+                [
+                  30,
+                  84
+                ]
+              ],
+              "expandedMinimumSide": 23,
+              "rawBox": [
+                [
+                  30,
+                  56
+                ],
+                [
+                  228,
+                  56
+                ],
+                [
+                  228,
+                  77
+                ],
+                [
+                  30,
+                  77
+                ]
+              ],
+              "rawBoxIndex": 0,
+              "finalBox": [
+                [
+                  30,
+                  56
+                ],
+                [
+                  228,
+                  56
+                ],
+                [
+                  228,
+                  77
+                ],
+                [
+                  30,
+                  77
+                ]
+              ],
+              "finalBoxIndex": 0
+            }
+          },
+          {
+            "passed": true,
+            "comparisons": {
+              "contourIndex": 1,
+              "contourVertices": 1,
+              "contourCycleAndWinding": 1,
+              "preQuad.length": 1,
+              "preQuad.x": 4,
+              "preQuad.y": 4,
+              "minimumSide": 1,
+              "disposition": 1,
+              "scoreMaskFootprint": 1,
+              "score": 1,
+              "distance": 1,
+              "integerInput": 1,
+              "expandedPathsExactCanonical": 1,
+              "expandedVertices": 1,
+              "postQuad.length": 1,
+              "postQuad.x": 4,
+              "postQuad.y": 4,
+              "expandedMinimumSide": 1,
+              "rawBoxIndex": 1,
+              "rawBox.length": 1,
+              "rawBox.x": 4,
+              "rawBox.y": 4,
+              "finalBoxIndex": 1,
+              "finalBox.length": 1,
+              "finalBox.x": 4,
+              "finalBox.y": 4,
+              "finalScore": 1
+            },
+            "maxFiniteAbs": {
+              "preQuad.x": 0,
+              "preQuad.y": 0,
+              "minimumSide": 0,
+              "score": 3.346255117442354e-08,
+              "distance": 0,
+              "postQuad.x": 0,
+              "postQuad.y": 0,
+              "expandedMinimumSide": 0,
+              "rawBox.x": 0,
+              "rawBox.y": 0,
+              "finalBox.x": 0,
+              "finalBox.y": 0,
+              "finalScore": 3.346255117442354e-08
+            },
+            "mismatches": [],
+            "actual": {
+              "contourIndex": 1,
+              "contour": [
+                [
+                  65,
+                  38
+                ],
+                [
+                  64,
+                  39
+                ],
+                [
+                  38,
+                  39
+                ],
+                [
+                  37,
+                  40
+                ],
+                [
+                  37,
+                  46
+                ],
+                [
+                  38,
+                  47
+                ],
+                [
+                  197,
+                  47
+                ],
+                [
+                  198,
+                  48
+                ],
+                [
+                  200,
+                  48
+                ],
+                [
+                  201,
+                  47
+                ],
+                [
+                  203,
+                  47
+                ],
+                [
+                  204,
+                  46
+                ],
+                [
+                  204,
+                  45
+                ],
+                [
+                  205,
+                  44
+                ],
+                [
+                  205,
+                  43
+                ],
+                [
+                  204,
+                  42
+                ],
+                [
+                  204,
+                  41
+                ],
+                [
+                  202,
+                  39
+                ],
+                [
+                  173,
+                  39
+                ],
+                [
+                  172,
+                  38
+                ],
+                [
+                  149,
+                  38
+                ],
+                [
+                  148,
+                  39
+                ],
+                [
+                  145,
+                  39
+                ],
+                [
+                  144,
+                  38
+                ]
+              ],
+              "preUnclipQuad": [
+                [
+                  37.01778030395508,
+                  37.15636444091797
+                ],
+                [
+                  205.03623962402344,
+                  38.20647430419922
+                ],
+                [
+                  204.97474670410156,
+                  48.04358673095703
+                ],
+                [
+                  36.956295013427734,
+                  46.99347686767578
+                ]
+              ],
+              "minimumSide": 9.837307929992676,
+              "disposition": "accepted",
+              "score": 0.7939277095022337,
+              "distance": 7.434566121831113,
+              "integerInput": [
+                [
+                  37,
+                  37
+                ],
+                [
+                  205,
+                  38
+                ],
+                [
+                  204,
+                  48
+                ],
+                [
+                  36,
+                  46
+                ]
+              ],
+              "expandedPaths": [
+                [
+                  [
+                    34,
+                    30
+                  ],
+                  [
+                    31,
+                    33
+                  ],
+                  [
+                    30,
+                    36
+                  ],
+                  [
+                    29,
+                    45
+                  ],
+                  [
+                    30,
+                    50
+                  ],
+                  [
+                    32,
+                    52
+                  ],
+                  [
+                    36,
+                    53
+                  ],
+                  [
+                    204,
+                    55
+                  ],
+                  [
+                    207,
+                    55
+                  ],
+                  [
+                    210,
+                    52
+                  ],
+                  [
+                    211,
+                    49
+                  ],
+                  [
+                    212,
+                    39
+                  ],
+                  [
+                    211,
+                    34
+                  ],
+                  [
+                    209,
+                    32
+                  ],
+                  [
+                    205,
+                    31
+                  ],
+                  [
+                    37,
+                    30
+                  ]
+                ]
+              ],
+              "expandedQuad": [
+                [
+                  29.191598892211914,
+                  28.907045364379883
+                ],
+                [
+                  212.09422302246094,
+                  31.08445930480957
+                ],
+                [
+                  211.8083953857422,
+                  55.09296417236328
+                ],
+                [
+                  28.90578269958496,
+                  52.915550231933594
+                ]
+              ],
+              "expandedMinimumSide": 24.010204315185547,
+              "rawBox": [
+                [
+                  29,
+                  27
+                ],
+                [
+                  212,
+                  29
+                ],
+                [
+                  212,
+                  51
+                ],
+                [
+                  29,
+                  49
+                ]
+              ],
+              "rawBoxIndex": 1,
+              "finalBox": [
+                [
+                  29,
+                  27
+                ],
+                [
+                  212,
+                  29
+                ],
+                [
+                  212,
+                  51
+                ],
+                [
+                  29,
+                  49
+                ]
+              ],
+              "finalBoxIndex": 1
+            }
+          }
+        ],
+        "sourceRuns": 180,
+        "dilatedRuns": 176,
+        "contourCount": 2,
+        "processedCandidates": 2,
+        "usableBoxes": 2,
+        "upstreamProcessedReference": 2,
+        "upstreamDilatedRunsReference": 176,
+        "stages": {
+          "dilation": "EXECUTED",
+          "findContours": "EXECUTED",
+          "scores": 2,
+          "unclip": 2
+        }
+      },
+      "mask": {
+        "comparedChannels": 81920,
+        "actualChannels": 81920,
+        "expectedChannels": 81920,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "dilated": {
+        "comparedChannels": 81920,
+        "actualChannels": 81920,
+        "expectedChannels": 81920,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "crops": [
+        {
+          "id": "zh-hant-quality-16.box-1",
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 3.346255117442354e-08,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 2.842170943040401e-14,
+              "forward.y": 7.105427357601002e-15,
+              "inverse.x": 2.842170943040401e-14,
+              "inverse.y": 3.552713678800501e-15,
+              "sourceRoundtrip.x": 0,
+              "sourceRoundtrip.y": 7.105427357601002e-15,
+              "rotatedForward.x": 2.842170943040401e-14,
+              "rotatedForward.y": 7.105427357601002e-15,
+              "rotatedInverse.x": 0,
+              "rotatedInverse.y": 7.105427357601002e-15,
+              "pixelRoundtrip.x": 2.842170943040401e-14,
+              "pixelRoundtrip.y": 7.105427357601002e-15,
+              "pixelRotation.x": 2.842170943040401e-14,
+              "pixelRotation.y": 7.105427357601002e-15,
+              "pixelRotationInverse.x": 2.842170943040401e-14,
+              "pixelRotationInverse.y": 7.105427357601002e-15
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 12078,
+              "actualChannels": 12078,
+              "expectedChannels": 12078,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "zh-hant-quality-16.box-1"
+          },
+          "resize": {
+            "comparedChannels": 57600,
+            "actualChannels": 57600,
+            "expectedChannels": 57600,
+            "changedChannels": 0,
+            "maxAbs": 0,
+            "passed": true
+          },
+          "dimensionsMatch": true
+        },
+        {
+          "id": "zh-hant-quality-16.box-0",
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 6.596784329904182e-08,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 3.552713678800501e-15,
+              "forward.y": 3.552713678800501e-15,
+              "inverse.x": 2.842170943040401e-14,
+              "inverse.y": 0,
+              "sourceRoundtrip.x": 2.842170943040401e-14,
+              "sourceRoundtrip.y": 0,
+              "rotatedForward.x": 3.552713678800501e-15,
+              "rotatedForward.y": 3.552713678800501e-15,
+              "rotatedInverse.x": 2.842170943040401e-14,
+              "rotatedInverse.y": 0,
+              "pixelRoundtrip.x": 2.842170943040401e-14,
+              "pixelRoundtrip.y": 3.552713678800501e-15,
+              "pixelRotation.x": 2.842170943040401e-14,
+              "pixelRotation.y": 3.552713678800501e-15,
+              "pixelRotationInverse.x": 2.842170943040401e-14,
+              "pixelRotationInverse.y": 0
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 12474,
+              "actualChannels": 12474,
+              "expectedChannels": 12474,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "zh-hant-quality-16.box-0"
+          },
+          "resize": {
+            "comparedChannels": 65088,
+            "actualChannels": 65088,
+            "expectedChannels": 65088,
+            "changedChannels": 0,
+            "maxAbs": 0,
+            "passed": true
+          },
+          "dimensionsMatch": true
+        }
+      ],
+      "tensorExact": true,
+      "tensorShapeExact": true,
+      "tensorRowToReadingOrder": [
+        0,
+        1
+      ],
+      "mappingExact": true
+    },
+    {
+      "id": "mixed-quality-16",
+      "status": "completed",
+      "passed": true,
+      "sourcePngSha256": "1afec2c7e0a618edd371fb015697a9c477d7945bae83ee756f98c64676dd0b2b",
+      "geometrySourcePngSha256": "16e61d8b4a086cb547380ed3d82f3f5642e351ab2c4f8d3dcebc489738c7098e",
+      "sourceBgrSha256": "5a6a5d9c8fafe8b8637a573481983a14b16f200256d34b0dabd6b70d2847ee21",
+      "scoreBudget": {
+        "sameInputAbsoluteTolerance": 1e-07,
+        "measuredInputMaxAbsoluteError": 5.602836608886719e-06,
+        "totalAbsoluteTolerance": 5.702836608886719e-06,
+        "basis": "For equal score masks, abs(mean(actual)-mean(reference)) <= max(abs(actual-reference)); detector numeric gate and every mask/geometry/disposition check remain mandatory."
+      },
+      "detectorPixelsExact": true,
+      "detectorInputExact": true,
+      "actualProbabilitySha256": "cde83db69dceece310dd02e5cfce6740f7d4a4b42e4468c4879176b759f3be96",
+      "detector": {
+        "comparedProbabilities": 102400,
+        "changedProbabilityBits": 5715,
+        "maxAbsoluteError": 5.602836608886719e-06,
+        "meanAbsoluteError": 5.5789132602512836e-09,
+        "maxRelativeError": "Infinity",
+        "relativeErrorDefinition": "abs(actual-reference)/abs(reference); nonzero/0=Infinity",
+        "toleranceViolations": 0,
+        "nonFinite": 0,
+        "outOfRange": 0,
+        "maskSha256": "b20d10b8fe514f399386cee2082ad4b61072b2d7b9c4a65fde254927d0aef1d6",
+        "positivePixels": 3177,
+        "maskFlips": 0,
+        "nearThresholdActual": 0,
+        "nearThresholdReference": 0,
+        "numericParityPassed": true
+      },
+      "trace": {
+        "passed": true,
+        "comparisons": {
+          "status": 1,
+          "processedCandidates": 1,
+          "contourCount": 1,
+          "dilatedRuns": 1,
+          "rows": 1,
+          "row.0": 1,
+          "row.1": 1,
+          "row.2": 1,
+          "rawBoxes": 1,
+          "topRawBox.length": 3,
+          "topRawBox.x": 12,
+          "topRawBox.y": 12,
+          "topRawScore": 3,
+          "usableBoxes": 1,
+          "readingOrder": 1,
+          "pairedBox.length": 3,
+          "pairedBox.x": 12,
+          "pairedBox.y": 12,
+          "pairedScore": 3
+        },
+        "maxFiniteAbs": {
+          "topRawBox.x": 0,
+          "topRawBox.y": 0,
+          "topRawScore": 1.1697411539390856e-07,
+          "pairedBox.x": 0,
+          "pairedBox.y": 0,
+          "pairedScore": 1.1697411539390856e-07
+        },
+        "mismatches": [],
+        "id": "mixed-quality-16",
+        "status": "COMPLETE",
+        "reason": "",
+        "rowChecks": [
+          {
+            "passed": true,
+            "comparisons": {
+              "contourIndex": 1,
+              "contourVertices": 1,
+              "contourCycleAndWinding": 1,
+              "preQuad.length": 1,
+              "preQuad.x": 4,
+              "preQuad.y": 4,
+              "minimumSide": 1,
+              "disposition": 1,
+              "scoreMaskFootprint": 1,
+              "score": 1,
+              "distance": 1,
+              "integerInput": 1,
+              "expandedPathsExactCanonical": 1,
+              "expandedVertices": 1,
+              "postQuad.length": 1,
+              "postQuad.x": 4,
+              "postQuad.y": 4,
+              "expandedMinimumSide": 1,
+              "rawBoxIndex": 1,
+              "rawBox.length": 1,
+              "rawBox.x": 4,
+              "rawBox.y": 4,
+              "finalBoxIndex": 1,
+              "finalBox.length": 1,
+              "finalBox.x": 4,
+              "finalBox.y": 4,
+              "finalScore": 1
+            },
+            "maxFiniteAbs": {
+              "preQuad.x": 0,
+              "preQuad.y": 0,
+              "minimumSide": 0,
+              "score": 3.4984191099596273e-09,
+              "distance": 0,
+              "postQuad.x": 0,
+              "postQuad.y": 0,
+              "expandedMinimumSide": 0,
+              "rawBox.x": 0,
+              "rawBox.y": 0,
+              "finalBox.x": 0,
+              "finalBox.y": 0,
+              "finalScore": 3.4984191099596273e-09
+            },
+            "mismatches": [],
+            "actual": {
+              "contourIndex": 0,
+              "contour": [
+                [
+                  37,
+                  99
+                ],
+                [
+                  37,
+                  100
+                ],
+                [
+                  36,
+                  101
+                ],
+                [
+                  36,
+                  105
+                ],
+                [
+                  37,
+                  106
+                ],
+                [
+                  37,
+                  107
+                ],
+                [
+                  38,
+                  107
+                ],
+                [
+                  39,
+                  108
+                ],
+                [
+                  131,
+                  108
+                ],
+                [
+                  132,
+                  109
+                ],
+                [
+                  136,
+                  109
+                ],
+                [
+                  137,
+                  108
+                ],
+                [
+                  137,
+                  105
+                ],
+                [
+                  138,
+                  104
+                ],
+                [
+                  138,
+                  101
+                ],
+                [
+                  136,
+                  99
+                ]
+              ],
+              "preUnclipQuad": [
+                [
+                  36,
+                  99
+                ],
+                [
+                  138,
+                  99
+                ],
+                [
+                  138,
+                  109
+                ],
+                [
+                  36,
+                  109
+                ]
+              ],
+              "minimumSide": 10,
+              "disposition": "accepted",
+              "score": 0.7981728654936785,
+              "distance": 7.285714285714286,
+              "integerInput": [
+                [
+                  36,
+                  99
+                ],
+                [
+                  138,
+                  99
+                ],
+                [
+                  138,
+                  109
+                ],
+                [
+                  36,
+                  109
+                ]
+              ],
+              "expandedPaths": [
+                [
+                  [
+                    36,
+                    92
+                  ],
+                  [
+                    32,
+                    93
+                  ],
+                  [
+                    30,
+                    95
+                  ],
+                  [
+                    29,
+                    99
+                  ],
+                  [
+                    29,
+                    109
+                  ],
+                  [
+                    30,
+                    113
+                  ],
+                  [
+                    32,
+                    115
+                  ],
+                  [
+                    36,
+                    116
+                  ],
+                  [
+                    138,
+                    116
+                  ],
+                  [
+                    142,
+                    115
+                  ],
+                  [
+                    144,
+                    113
+                  ],
+                  [
+                    145,
+                    109
+                  ],
+                  [
+                    145,
+                    99
+                  ],
+                  [
+                    144,
+                    95
+                  ],
+                  [
+                    142,
+                    93
+                  ],
+                  [
+                    138,
+                    92
+                  ]
+                ]
+              ],
+              "expandedQuad": [
+                [
+                  29,
+                  92
+                ],
+                [
+                  145,
+                  92
+                ],
+                [
+                  145,
+                  116
+                ],
+                [
+                  29,
+                  116
+                ]
+              ],
+              "expandedMinimumSide": 24,
+              "rawBox": [
+                [
+                  29,
+                  83
+                ],
+                [
+                  145,
+                  83
+                ],
+                [
+                  145,
+                  105
+                ],
+                [
+                  29,
+                  105
+                ]
+              ],
+              "rawBoxIndex": 0,
+              "finalBox": [
+                [
+                  29,
+                  83
+                ],
+                [
+                  145,
+                  83
+                ],
+                [
+                  145,
+                  105
+                ],
+                [
+                  29,
+                  105
+                ]
+              ],
+              "finalBoxIndex": 0
+            }
+          },
+          {
+            "passed": true,
+            "comparisons": {
+              "contourIndex": 1,
+              "contourVertices": 1,
+              "contourCycleAndWinding": 1,
+              "preQuad.length": 1,
+              "preQuad.x": 4,
+              "preQuad.y": 4,
+              "minimumSide": 1,
+              "disposition": 1,
+              "scoreMaskFootprint": 1,
+              "score": 1,
+              "distance": 1,
+              "integerInput": 1,
+              "expandedPathsExactCanonical": 1,
+              "expandedVertices": 1,
+              "postQuad.length": 1,
+              "postQuad.x": 4,
+              "postQuad.y": 4,
+              "expandedMinimumSide": 1,
+              "rawBoxIndex": 1,
+              "rawBox.length": 1,
+              "rawBox.x": 4,
+              "rawBox.y": 4,
+              "finalBoxIndex": 1,
+              "finalBox.length": 1,
+              "finalBox.x": 4,
+              "finalBox.y": 4,
+              "finalScore": 1
+            },
+            "maxFiniteAbs": {
+              "preQuad.x": 0,
+              "preQuad.y": 0,
+              "minimumSide": 0,
+              "score": 3.9753267344622145e-08,
+              "distance": 0,
+              "postQuad.x": 0,
+              "postQuad.y": 0,
+              "expandedMinimumSide": 0,
+              "rawBox.x": 0,
+              "rawBox.y": 0,
+              "finalBox.x": 0,
+              "finalBox.y": 0,
+              "finalScore": 3.9753267344622145e-08
+            },
+            "mismatches": [],
+            "actual": {
+              "contourIndex": 1,
+              "contour": [
+                [
+                  37,
+                  67
+                ],
+                [
+                  37,
+                  68
+                ],
+                [
+                  36,
+                  69
+                ],
+                [
+                  36,
+                  73
+                ],
+                [
+                  38,
+                  75
+                ],
+                [
+                  43,
+                  75
+                ],
+                [
+                  44,
+                  76
+                ],
+                [
+                  211,
+                  76
+                ],
+                [
+                  211,
+                  75
+                ],
+                [
+                  212,
+                  74
+                ],
+                [
+                  212,
+                  70
+                ],
+                [
+                  210,
+                  68
+                ],
+                [
+                  45,
+                  68
+                ],
+                [
+                  44,
+                  67
+                ]
+              ],
+              "preUnclipQuad": [
+                [
+                  36,
+                  67
+                ],
+                [
+                  212,
+                  67
+                ],
+                [
+                  212,
+                  76
+                ],
+                [
+                  36,
+                  76
+                ]
+              ],
+              "minimumSide": 9,
+              "disposition": "accepted",
+              "score": 0.7865341494649144,
+              "distance": 6.84972972972973,
+              "integerInput": [
+                [
+                  36,
+                  67
+                ],
+                [
+                  212,
+                  67
+                ],
+                [
+                  212,
+                  76
+                ],
+                [
+                  36,
+                  76
+                ]
+              ],
+              "expandedPaths": [
+                [
+                  [
+                    36,
+                    60
+                  ],
+                  [
+                    33,
+                    61
+                  ],
+                  [
+                    30,
+                    63
+                  ],
+                  [
+                    29,
+                    67
+                  ],
+                  [
+                    29,
+                    76
+                  ],
+                  [
+                    30,
+                    79
+                  ],
+                  [
+                    32,
+                    82
+                  ],
+                  [
+                    36,
+                    83
+                  ],
+                  [
+                    212,
+                    83
+                  ],
+                  [
+                    215,
+                    82
+                  ],
+                  [
+                    218,
+                    80
+                  ],
+                  [
+                    219,
+                    76
+                  ],
+                  [
+                    219,
+                    67
+                  ],
+                  [
+                    218,
+                    64
+                  ],
+                  [
+                    216,
+                    61
+                  ],
+                  [
+                    212,
+                    60
+                  ]
+                ]
+              ],
+              "expandedQuad": [
+                [
+                  29,
+                  60
+                ],
+                [
+                  219,
+                  60
+                ],
+                [
+                  219,
+                  83
+                ],
+                [
+                  29,
+                  83
+                ]
+              ],
+              "expandedMinimumSide": 23,
+              "rawBox": [
+                [
+                  29,
+                  54
+                ],
+                [
+                  219,
+                  54
+                ],
+                [
+                  219,
+                  75
+                ],
+                [
+                  29,
+                  75
+                ]
+              ],
+              "rawBoxIndex": 1,
+              "finalBox": [
+                [
+                  29,
+                  54
+                ],
+                [
+                  219,
+                  54
+                ],
+                [
+                  219,
+                  75
+                ],
+                [
+                  29,
+                  75
+                ]
+              ],
+              "finalBoxIndex": 1
+            }
+          },
+          {
+            "passed": true,
+            "comparisons": {
+              "contourIndex": 1,
+              "contourVertices": 1,
+              "contourCycleAndWinding": 1,
+              "preQuad.length": 1,
+              "preQuad.x": 4,
+              "preQuad.y": 4,
+              "minimumSide": 1,
+              "disposition": 1,
+              "scoreMaskFootprint": 1,
+              "score": 1,
+              "distance": 1,
+              "integerInput": 1,
+              "expandedPathsExactCanonical": 1,
+              "expandedVertices": 1,
+              "postQuad.length": 1,
+              "postQuad.x": 4,
+              "postQuad.y": 4,
+              "expandedMinimumSide": 1,
+              "rawBoxIndex": 1,
+              "rawBox.length": 1,
+              "rawBox.x": 4,
+              "rawBox.y": 4,
+              "finalBoxIndex": 1,
+              "finalBox.length": 1,
+              "finalBox.x": 4,
+              "finalBox.y": 4,
+              "finalScore": 1
+            },
+            "maxFiniteAbs": {
+              "preQuad.x": 0,
+              "preQuad.y": 0,
+              "minimumSide": 0,
+              "score": 1.1697411539390856e-07,
+              "distance": 0,
+              "postQuad.x": 0,
+              "postQuad.y": 0,
+              "expandedMinimumSide": 0,
+              "rawBox.x": 0,
+              "rawBox.y": 0,
+              "finalBox.x": 0,
+              "finalBox.y": 0,
+              "finalScore": 1.1697411539390856e-07
+            },
+            "mismatches": [],
+            "actual": {
+              "contourIndex": 2,
+              "contour": [
+                [
+                  38,
+                  39
+                ],
+                [
+                  36,
+                  41
+                ],
+                [
+                  36,
+                  46
+                ],
+                [
+                  37,
+                  47
+                ],
+                [
+                  67,
+                  47
+                ],
+                [
+                  68,
+                  48
+                ],
+                [
+                  143,
+                  48
+                ],
+                [
+                  143,
+                  41
+                ],
+                [
+                  142,
+                  40
+                ],
+                [
+                  89,
+                  40
+                ],
+                [
+                  88,
+                  39
+                ]
+              ],
+              "preUnclipQuad": [
+                [
+                  36,
+                  39
+                ],
+                [
+                  143,
+                  39
+                ],
+                [
+                  143,
+                  48
+                ],
+                [
+                  36,
+                  48
+                ]
+              ],
+              "minimumSide": 9,
+              "disposition": "accepted",
+              "score": 0.8009910665176533,
+              "distance": 6.641379310344829,
+              "integerInput": [
+                [
+                  36,
+                  39
+                ],
+                [
+                  143,
+                  39
+                ],
+                [
+                  143,
+                  48
+                ],
+                [
+                  36,
+                  48
+                ]
+              ],
+              "expandedPaths": [
+                [
+                  [
+                    36,
+                    32
+                  ],
+                  [
+                    33,
+                    33
+                  ],
+                  [
+                    30,
+                    36
+                  ],
+                  [
+                    29,
+                    39
+                  ],
+                  [
+                    29,
+                    48
+                  ],
+                  [
+                    30,
+                    51
+                  ],
+                  [
+                    33,
+                    54
+                  ],
+                  [
+                    36,
+                    55
+                  ],
+                  [
+                    143,
+                    55
+                  ],
+                  [
+                    146,
+                    54
+                  ],
+                  [
+                    149,
+                    51
+                  ],
+                  [
+                    150,
+                    48
+                  ],
+                  [
+                    150,
+                    39
+                  ],
+                  [
+                    149,
+                    36
+                  ],
+                  [
+                    146,
+                    33
+                  ],
+                  [
+                    143,
+                    32
+                  ]
+                ]
+              ],
+              "expandedQuad": [
+                [
+                  29,
+                  32
+                ],
+                [
+                  149.99998474121094,
+                  32
+                ],
+                [
+                  149.99998474121094,
+                  55
+                ],
+                [
+                  29,
+                  55
+                ]
+              ],
+              "expandedMinimumSide": 22.999996185302734,
+              "rawBox": [
+                [
+                  29,
+                  29
+                ],
+                [
+                  150,
+                  29
+                ],
+                [
+                  150,
+                  50
+                ],
+                [
+                  29,
+                  50
+                ]
+              ],
+              "rawBoxIndex": 2,
+              "finalBox": [
+                [
+                  29,
+                  29
+                ],
+                [
+                  150,
+                  29
+                ],
+                [
+                  150,
+                  50
+                ],
+                [
+                  29,
+                  50
+                ]
+              ],
+              "finalBoxIndex": 2
+            }
+          }
+        ],
+        "sourceRuns": 216,
+        "dilatedRuns": 222,
+        "contourCount": 3,
+        "processedCandidates": 3,
+        "usableBoxes": 3,
+        "upstreamProcessedReference": 3,
+        "upstreamDilatedRunsReference": 222,
+        "stages": {
+          "dilation": "EXECUTED",
+          "findContours": "EXECUTED",
+          "scores": 3,
+          "unclip": 3
+        }
+      },
+      "mask": {
+        "comparedChannels": 102400,
+        "actualChannels": 102400,
+        "expectedChannels": 102400,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "dilated": {
+        "comparedChannels": 102400,
+        "actualChannels": 102400,
+        "expectedChannels": 102400,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "crops": [
+        {
+          "id": "mixed-quality-16.box-2",
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 1.1697411539390856e-07,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 1.4210854715202004e-14,
+              "forward.y": 7.105427357601002e-15,
+              "inverse.x": 7.105427357601002e-15,
+              "inverse.y": 0,
+              "sourceRoundtrip.x": 0,
+              "sourceRoundtrip.y": 7.105427357601002e-15,
+              "rotatedForward.x": 1.4210854715202004e-14,
+              "rotatedForward.y": 7.105427357601002e-15,
+              "rotatedInverse.x": 0,
+              "rotatedInverse.y": 7.105427357601002e-15,
+              "pixelRoundtrip.x": 1.4210854715202004e-14,
+              "pixelRoundtrip.y": 7.105427357601002e-15,
+              "pixelRotation.x": 1.4210854715202004e-14,
+              "pixelRotation.y": 7.105427357601002e-15,
+              "pixelRotationInverse.x": 0,
+              "pixelRotationInverse.y": 7.105427357601002e-15
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 7623,
+              "actualChannels": 7623,
+              "expectedChannels": 7623,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "mixed-quality-16.box-2"
+          },
+          "resize": {
+            "comparedChannels": 39888,
+            "actualChannels": 39888,
+            "expectedChannels": 39888,
+            "changedChannels": 0,
+            "maxAbs": 0,
+            "passed": true
+          },
+          "dimensionsMatch": true
+        },
+        {
+          "id": "mixed-quality-16.box-1",
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 3.9753267344622145e-08,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 3.552713678800501e-15,
+              "forward.y": 1.4210854715202004e-14,
+              "inverse.x": 0,
+              "inverse.y": 7.105427357601002e-15,
+              "sourceRoundtrip.x": 3.552713678800501e-15,
+              "sourceRoundtrip.y": 1.4210854715202004e-14,
+              "rotatedForward.x": 3.552713678800501e-15,
+              "rotatedForward.y": 1.4210854715202004e-14,
+              "rotatedInverse.x": 3.552713678800501e-15,
+              "rotatedInverse.y": 1.4210854715202004e-14,
+              "pixelRoundtrip.x": 3.552713678800501e-15,
+              "pixelRoundtrip.y": 1.0658141036401503e-14,
+              "pixelRotation.x": 3.552713678800501e-15,
+              "pixelRotation.y": 1.0658141036401503e-14,
+              "pixelRotationInverse.x": 3.552713678800501e-15,
+              "pixelRotationInverse.y": 1.4210854715202004e-14
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 11970,
+              "actualChannels": 11970,
+              "expectedChannels": 11970,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "mixed-quality-16.box-1"
+          },
+          "resize": {
+            "comparedChannels": 62496,
+            "actualChannels": 62496,
+            "expectedChannels": 62496,
+            "changedChannels": 0,
+            "maxAbs": 0,
+            "passed": true
+          },
+          "dimensionsMatch": true
+        },
+        {
+          "id": "mixed-quality-16.box-0",
+          "geometry": {
+            "passed": true,
+            "comparisons": {
+              "id": 1,
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "score": 1,
+              "quad.length": 1,
+              "quad.x": 4,
+              "quad.y": 4,
+              "plan": 1,
+              "width": 1,
+              "height": 1,
+              "rotated": 1,
+              "matrix": 9,
+              "inverseMatrix": 9,
+              "forward.x": 4,
+              "forward.y": 4,
+              "inverse.x": 4,
+              "inverse.y": 4,
+              "sourceRoundtrip.x": 4,
+              "sourceRoundtrip.y": 4,
+              "rotatedForward.x": 4,
+              "rotatedForward.y": 4,
+              "rotatedInverse.x": 4,
+              "rotatedInverse.y": 4,
+              "pixelRoundtrip.x": 4,
+              "pixelRoundtrip.y": 4,
+              "pixelRotation.x": 4,
+              "pixelRotation.y": 4,
+              "pixelRotationInverse.x": 4,
+              "pixelRotationInverse.y": 4,
+              "pixels": 1
+            },
+            "maxFiniteAbs": {
+              "score": 3.4984191099596273e-09,
+              "quad.x": 0,
+              "quad.y": 0,
+              "matrix": 0,
+              "inverseMatrix": 0,
+              "forward.x": 3.552713678800501e-15,
+              "forward.y": 0,
+              "inverse.x": 3.552713678800501e-15,
+              "inverse.y": 0,
+              "sourceRoundtrip.x": 0,
+              "sourceRoundtrip.y": 0,
+              "rotatedForward.x": 3.552713678800501e-15,
+              "rotatedForward.y": 0,
+              "rotatedInverse.x": 0,
+              "rotatedInverse.y": 0,
+              "pixelRoundtrip.x": 0,
+              "pixelRoundtrip.y": 0,
+              "pixelRotation.x": 0,
+              "pixelRotation.y": 0,
+              "pixelRotationInverse.x": 0,
+              "pixelRotationInverse.y": 0
+            },
+            "mismatches": [],
+            "pixels": {
+              "comparedChannels": 7656,
+              "actualChannels": 7656,
+              "expectedChannels": 7656,
+              "changedChannels": 0,
+              "maxAbs": 0,
+              "passed": true
+            },
+            "id": "mixed-quality-16.box-0"
+          },
+          "resize": {
+            "comparedChannels": 36576,
+            "actualChannels": 36576,
+            "expectedChannels": 36576,
+            "changedChannels": 0,
+            "maxAbs": 0,
+            "passed": true
+          },
+          "dimensionsMatch": true
+        }
+      ],
+      "tensorExact": true,
+      "tensorShapeExact": true,
+      "tensorRowToReadingOrder": [
+        2,
+        0,
+        1
+      ],
+      "mappingExact": true
+    },
+    {
+      "id": "blank-negative-24",
+      "status": "completed",
+      "passed": true,
+      "sourcePngSha256": "ae57633560626ae3902356aa31cf7afd1e67ee1c9aa289e12e177412f834e19f",
+      "geometrySourcePngSha256": "98bdec534b06f7211e1fcb8a286606d54b10be0ddc28a77d41429d4ea1f76529",
+      "sourceBgrSha256": "c27113404b82277ff377ad614d0c4bcef5fb456f57c90341fe04bc99116692c5",
+      "scoreBudget": {
+        "sameInputAbsoluteTolerance": 1e-07,
+        "measuredInputMaxAbsoluteError": 1.4901161193847656e-07,
+        "totalAbsoluteTolerance": 2.4901161193847656e-07,
+        "basis": "For equal score masks, abs(mean(actual)-mean(reference)) <= max(abs(actual-reference)); detector numeric gate and every mask/geometry/disposition check remain mandatory."
+      },
+      "detectorPixelsExact": true,
+      "detectorInputExact": true,
+      "actualProbabilitySha256": "29ab3ebd4b902376e09100e96651890bfca76465817b8c498fa94be31bd8f342",
+      "detector": {
+        "comparedProbabilities": 61440,
+        "changedProbabilityBits": 608,
+        "maxAbsoluteError": 1.4901161193847656e-07,
+        "meanAbsoluteError": 5.10287160674731e-10,
+        "maxRelativeError": 0.36363636363636365,
+        "relativeErrorDefinition": "abs(actual-reference)/abs(reference); nonzero/0=Infinity",
+        "toleranceViolations": 0,
+        "nonFinite": 0,
+        "outOfRange": 0,
+        "maskSha256": "0693f6bfa2117a9b14f9ceca13d3a5611de5dca226bf999f20a7f615fbd08dff",
+        "positivePixels": 0,
+        "maskFlips": 0,
+        "nearThresholdActual": 0,
+        "nearThresholdReference": 0,
+        "numericParityPassed": true
+      },
+      "trace": {
+        "passed": true,
+        "comparisons": {
+          "status": 1,
+          "processedCandidates": 1,
+          "contourCount": 1,
+          "dilatedRuns": 1,
+          "rows": 1,
+          "rawBoxes": 1,
+          "usableBoxes": 1,
+          "readingOrder": 1
+        },
+        "maxFiniteAbs": {},
+        "mismatches": [],
+        "id": "blank-negative-24",
+        "status": "COMPLETE",
+        "reason": "",
+        "rowChecks": [],
+        "sourceRuns": 96,
+        "dilatedRuns": 96,
+        "contourCount": 0,
+        "processedCandidates": 0,
+        "usableBoxes": 0,
+        "upstreamProcessedReference": 0,
+        "upstreamDilatedRunsReference": 96,
+        "stages": {
+          "dilation": "EXECUTED",
+          "findContours": "EXECUTED",
+          "scores": 0,
+          "unclip": 0
+        }
+      },
+      "mask": {
+        "comparedChannels": 61440,
+        "actualChannels": 61440,
+        "expectedChannels": 61440,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "dilated": {
+        "comparedChannels": 61440,
+        "actualChannels": 61440,
+        "expectedChannels": 61440,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "crops": [],
+      "noRecognitionWork": true
+    },
+    {
+      "id": "color-control",
+      "status": "completed",
+      "passed": true,
+      "sourcePngSha256": "9dd718e24688d8ded5505526238bdd398985ffa117891731edb06a684bc3dc5e",
+      "geometrySourcePngSha256": "9dd718e24688d8ded5505526238bdd398985ffa117891731edb06a684bc3dc5e",
+      "sourceBgrSha256": "14dac98b86eafdb8aeb9c0ec933bc6ab21f48817801f8a42ce5aeecf71576844",
+      "scoreBudget": {
+        "sameInputAbsoluteTolerance": 1e-07,
+        "measuredInputMaxAbsoluteError": 1.7881393432617188e-07,
+        "totalAbsoluteTolerance": 2.7881393432617187e-07,
+        "basis": "For equal score masks, abs(mean(actual)-mean(reference)) <= max(abs(actual-reference)); detector numeric gate and every mask/geometry/disposition check remain mandatory."
+      },
+      "detectorPixelsExact": true,
+      "detectorInputExact": true,
+      "actualProbabilitySha256": "335af1180b51a403bc6edb8edb0dfca9bddcb5171246200e05f381ab9d56fd01",
+      "detector": {
+        "comparedProbabilities": 4096,
+        "changedProbabilityBits": 1774,
+        "maxAbsoluteError": 1.7881393432617188e-07,
+        "meanAbsoluteError": 2.2504536900669336e-08,
+        "maxRelativeError": "Infinity",
+        "relativeErrorDefinition": "abs(actual-reference)/abs(reference); nonzero/0=Infinity",
+        "toleranceViolations": 0,
+        "nonFinite": 0,
+        "outOfRange": 0,
+        "maskSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7",
+        "positivePixels": 0,
+        "maskFlips": 0,
+        "nearThresholdActual": 0,
+        "nearThresholdReference": 0,
+        "numericParityPassed": true
+      },
+      "trace": {
+        "passed": true,
+        "comparisons": {
+          "status": 1,
+          "processedCandidates": 1,
+          "contourCount": 1,
+          "dilatedRuns": 1,
+          "rows": 1,
+          "rawBoxes": 1,
+          "usableBoxes": 1,
+          "readingOrder": 1
+        },
+        "maxFiniteAbs": {},
+        "mismatches": [],
+        "id": "color-control",
+        "status": "COMPLETE",
+        "reason": "",
+        "rowChecks": [],
+        "sourceRuns": 64,
+        "dilatedRuns": 64,
+        "contourCount": 0,
+        "processedCandidates": 0,
+        "usableBoxes": 0,
+        "upstreamProcessedReference": 0,
+        "upstreamDilatedRunsReference": 64,
+        "stages": {
+          "dilation": "EXECUTED",
+          "findContours": "EXECUTED",
+          "scores": 0,
+          "unclip": 0
+        }
+      },
+      "mask": {
+        "comparedChannels": 4096,
+        "actualChannels": 4096,
+        "expectedChannels": 4096,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "dilated": {
+        "comparedChannels": 4096,
+        "actualChannels": 4096,
+        "expectedChannels": 4096,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "crops": [],
+      "noRecognitionWork": true
+    },
+    {
+      "id": "wide-959",
+      "status": "completed",
+      "passed": true,
+      "sourcePngSha256": "ddc561a0569ef22af5751cd0a8799ab235d2963d83bcdd7c798ca667d03ebb50",
+      "geometrySourcePngSha256": "ddc561a0569ef22af5751cd0a8799ab235d2963d83bcdd7c798ca667d03ebb50",
+      "sourceBgrSha256": "da51bb7c816de84d478f0c8aad6a8f1592cf90024903f78cbd7ed89057e107e4",
+      "scoreBudget": {
+        "sameInputAbsoluteTolerance": 1e-07,
+        "measuredInputMaxAbsoluteError": 1.7881393432617188e-07,
+        "totalAbsoluteTolerance": 2.7881393432617187e-07,
+        "basis": "For equal score masks, abs(mean(actual)-mean(reference)) <= max(abs(actual-reference)); detector numeric gate and every mask/geometry/disposition check remain mandatory."
+      },
+      "detectorPixelsExact": true,
+      "detectorInputExact": true,
+      "actualProbabilitySha256": "c2a7fb0b6a94db65993b1798ab308e5f57e64e4504b96624e23b711a4ff9be5e",
+      "detector": {
+        "comparedProbabilities": 92160,
+        "changedProbabilityBits": 43279,
+        "maxAbsoluteError": 1.7881393432617188e-07,
+        "meanAbsoluteError": 2.4318190601964793e-08,
+        "maxRelativeError": "Infinity",
+        "relativeErrorDefinition": "abs(actual-reference)/abs(reference); nonzero/0=Infinity",
+        "toleranceViolations": 0,
+        "nonFinite": 0,
+        "outOfRange": 0,
+        "maskSha256": "ba61c36dd3703f9a8cce36675bb7391e9a6b1ab917ea00c4a3ebf2d7c50c4fcb",
+        "positivePixels": 0,
+        "maskFlips": 0,
+        "nearThresholdActual": 0,
+        "nearThresholdReference": 0,
+        "numericParityPassed": true
+      },
+      "trace": {
+        "passed": true,
+        "comparisons": {
+          "status": 1,
+          "processedCandidates": 1,
+          "contourCount": 1,
+          "dilatedRuns": 1,
+          "rows": 1,
+          "rawBoxes": 1,
+          "usableBoxes": 1,
+          "readingOrder": 1
+        },
+        "maxFiniteAbs": {},
+        "mismatches": [],
+        "id": "wide-959",
+        "status": "COMPLETE",
+        "reason": "",
+        "rowChecks": [],
+        "sourceRuns": 96,
+        "dilatedRuns": 96,
+        "contourCount": 0,
+        "processedCandidates": 0,
+        "usableBoxes": 0,
+        "upstreamProcessedReference": 0,
+        "upstreamDilatedRunsReference": 96,
+        "stages": {
+          "dilation": "EXECUTED",
+          "findContours": "EXECUTED",
+          "scores": 0,
+          "unclip": 0
+        }
+      },
+      "mask": {
+        "comparedChannels": 92160,
+        "actualChannels": 92160,
+        "expectedChannels": 92160,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "dilated": {
+        "comparedChannels": 92160,
+        "actualChannels": 92160,
+        "expectedChannels": 92160,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "crops": [],
+      "noRecognitionWork": true
+    },
+    {
+      "id": "wide-1499",
+      "status": "completed",
+      "passed": true,
+      "sourcePngSha256": "340a8fc0ddbbd634bbe8c6db1ba54ed2823fbb5c578c91da8e43182c0aa30649",
+      "geometrySourcePngSha256": "340a8fc0ddbbd634bbe8c6db1ba54ed2823fbb5c578c91da8e43182c0aa30649",
+      "sourceBgrSha256": "e4dec6d638d65b0c5cb7e26dc4038f90e82f09de4a7724222d5bd9f451c1009d",
+      "scoreBudget": {
+        "sameInputAbsoluteTolerance": 1e-07,
+        "measuredInputMaxAbsoluteError": 1.7881393432617188e-07,
+        "totalAbsoluteTolerance": 2.7881393432617187e-07,
+        "basis": "For equal score masks, abs(mean(actual)-mean(reference)) <= max(abs(actual-reference)); detector numeric gate and every mask/geometry/disposition check remain mandatory."
+      },
+      "detectorPixelsExact": true,
+      "detectorInputExact": true,
+      "actualProbabilitySha256": "c9e614cececb28414b495a12e7cf351ff14ffed22eb9a5456520d2861100abf1",
+      "detector": {
+        "comparedProbabilities": 144384,
+        "changedProbabilityBits": 66598,
+        "maxAbsoluteError": 1.7881393432617188e-07,
+        "meanAbsoluteError": 2.3781751275908017e-08,
+        "maxRelativeError": "Infinity",
+        "relativeErrorDefinition": "abs(actual-reference)/abs(reference); nonzero/0=Infinity",
+        "toleranceViolations": 0,
+        "nonFinite": 0,
+        "outOfRange": 0,
+        "maskSha256": "47a97af2f30070956ecb7afe6690d223f5d82fb27d66b740b80f34649fdf60c8",
+        "positivePixels": 0,
+        "maskFlips": 0,
+        "nearThresholdActual": 0,
+        "nearThresholdReference": 0,
+        "numericParityPassed": true
+      },
+      "trace": {
+        "passed": true,
+        "comparisons": {
+          "status": 1,
+          "processedCandidates": 1,
+          "contourCount": 1,
+          "dilatedRuns": 1,
+          "rows": 1,
+          "rawBoxes": 1,
+          "usableBoxes": 1,
+          "readingOrder": 1
+        },
+        "maxFiniteAbs": {},
+        "mismatches": [],
+        "id": "wide-1499",
+        "status": "COMPLETE",
+        "reason": "",
+        "rowChecks": [],
+        "sourceRuns": 96,
+        "dilatedRuns": 96,
+        "contourCount": 0,
+        "processedCandidates": 0,
+        "usableBoxes": 0,
+        "upstreamProcessedReference": 0,
+        "upstreamDilatedRunsReference": 96,
+        "stages": {
+          "dilation": "EXECUTED",
+          "findContours": "EXECUTED",
+          "scores": 0,
+          "unclip": 0
+        }
+      },
+      "mask": {
+        "comparedChannels": 144384,
+        "actualChannels": 144384,
+        "expectedChannels": 144384,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "dilated": {
+        "comparedChannels": 144384,
+        "actualChannels": 144384,
+        "expectedChannels": 144384,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "crops": [],
+      "noRecognitionWork": true
+    },
+    {
+      "id": "wide-2001",
+      "status": "completed",
+      "passed": true,
+      "sourcePngSha256": "2230ae21bdc0b153ce1d7dce132f386b9454eb5b13f2dcbfc2af505a9f841b02",
+      "geometrySourcePngSha256": "2230ae21bdc0b153ce1d7dce132f386b9454eb5b13f2dcbfc2af505a9f841b02",
+      "sourceBgrSha256": "7fb17ed1439db926b8027d90697e99b9fb1cf68b369d30df4fc14911ce8a72fa",
+      "scoreBudget": {
+        "sameInputAbsoluteTolerance": 1e-07,
+        "measuredInputMaxAbsoluteError": 2.086162567138672e-07,
+        "totalAbsoluteTolerance": 3.086162567138672e-07,
+        "basis": "For equal score masks, abs(mean(actual)-mean(reference)) <= max(abs(actual-reference)); detector numeric gate and every mask/geometry/disposition check remain mandatory."
+      },
+      "detectorPixelsExact": true,
+      "detectorInputExact": true,
+      "actualProbabilitySha256": "ae4157c3f11592c7536b205216ccdd5149e54631f928da464d44e41ffc824d61",
+      "detector": {
+        "comparedProbabilities": 190464,
+        "changedProbabilityBits": 88996,
+        "maxAbsoluteError": 2.086162567138672e-07,
+        "meanAbsoluteError": 2.415539691805519e-08,
+        "maxRelativeError": "Infinity",
+        "relativeErrorDefinition": "abs(actual-reference)/abs(reference); nonzero/0=Infinity",
+        "toleranceViolations": 0,
+        "nonFinite": 0,
+        "outOfRange": 0,
+        "maskSha256": "9cba013cd0738a8219356e57e9499421b886f146778464e438a32022c43f8da7",
+        "positivePixels": 0,
+        "maskFlips": 0,
+        "nearThresholdActual": 0,
+        "nearThresholdReference": 0,
+        "numericParityPassed": true
+      },
+      "trace": {
+        "passed": true,
+        "comparisons": {
+          "status": 1,
+          "processedCandidates": 1,
+          "contourCount": 1,
+          "dilatedRuns": 1,
+          "rows": 1,
+          "rawBoxes": 1,
+          "usableBoxes": 1,
+          "readingOrder": 1
+        },
+        "maxFiniteAbs": {},
+        "mismatches": [],
+        "id": "wide-2001",
+        "status": "COMPLETE",
+        "reason": "",
+        "rowChecks": [],
+        "sourceRuns": 96,
+        "dilatedRuns": 96,
+        "contourCount": 0,
+        "processedCandidates": 0,
+        "usableBoxes": 0,
+        "upstreamProcessedReference": 0,
+        "upstreamDilatedRunsReference": 96,
+        "stages": {
+          "dilation": "EXECUTED",
+          "findContours": "EXECUTED",
+          "scores": 0,
+          "unclip": 0
+        }
+      },
+      "mask": {
+        "comparedChannels": 190464,
+        "actualChannels": 190464,
+        "expectedChannels": 190464,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "dilated": {
+        "comparedChannels": 190464,
+        "actualChannels": 190464,
+        "expectedChannels": 190464,
+        "changedChannels": 0,
+        "maxAbs": 0,
+        "passed": true
+      },
+      "crops": [],
+      "noRecognitionWork": true
+    }
+  ],
+  "models": [
+    {
+      "id": "ch/en-quality-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "argmaxSha256": "5b24faeb43620677a972f0b697da674fb88082c198bedb8782fd43f230c453f1",
+      "textMatches": true,
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "en-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "tensorRow": 0,
+          "raw": "The total is 39.90 €, tax not included.",
+          "quad": [
+            [
+              30,
+              27
+            ],
+            [
+              295,
+              27
+            ],
+            [
+              295,
+              48
+            ],
+            [
+              30,
+              48
+            ]
+          ],
+          "detectorScore": 0.7848805534224662,
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true
+    },
+    {
+      "id": "ch/fr-nonrefundable-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "Ce bilet n'est ni éechangeable ni remboursable."
+      ],
+      "argmaxSha256": "0426f0ad457fbdc1d2a31148c4fc76af3c4e9f5889b3e92f778bf7b51e63c751",
+      "textMatches": true,
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "fr-nonrefundable-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "tensorRow": 0,
+          "raw": "Ce bilet n'est ni éechangeable ni remboursable.",
+          "quad": [
+            [
+              30,
+              27
+            ],
+            [
+              366,
+              27
+            ],
+            [
+              366,
+              51
+            ],
+            [
+              30,
+              51
+            ]
+          ],
+          "detectorScore": 0.7906219916214047,
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true
+    },
+    {
+      "id": "ch/zh-hans-quality-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "总计1234.50元，不含税。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "argmaxSha256": "188310d3aab7a29fb6d9e4f99267e9eebfe847b3299a30670cca15ac7542fa9b",
+      "textMatches": true,
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "zh-hans-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "tensorRow": 0,
+          "raw": "总计1234.50元，不含税。",
+          "quad": [
+            [
+              29,
+              30
+            ],
+            [
+              212,
+              30
+            ],
+            [
+              212,
+              51
+            ],
+            [
+              29,
+              51
+            ]
+          ],
+          "detectorScore": 0.7844004850001896,
+          "passed": true
+        },
+        {
+          "boxId": "zh-hans-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "tensorRow": 1,
+          "raw": "行李最多8公斤，不可退款。",
+          "quad": [
+            [
+              30,
+              56
+            ],
+            [
+              228,
+              56
+            ],
+            [
+              228,
+              77
+            ],
+            [
+              30,
+              77
+            ]
+          ],
+          "detectorScore": 0.7958951793812417,
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true
+    },
+    {
+      "id": "ch/zh-hant-quality-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "總計1234.50元，不含稅。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "argmaxSha256": "858932dd431bea90e4cf8bcf0652bcc2d2eaaa8e99b11f564099ed51a9ee6bb8",
+      "textMatches": true,
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "zh-hant-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "tensorRow": 0,
+          "raw": "總計1234.50元，不含稅。",
+          "quad": [
+            [
+              29,
+              27
+            ],
+            [
+              212,
+              29
+            ],
+            [
+              212,
+              51
+            ],
+            [
+              29,
+              49
+            ]
+          ],
+          "detectorScore": 0.7939277095022337,
+          "passed": true
+        },
+        {
+          "boxId": "zh-hant-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "tensorRow": 1,
+          "raw": "行李最多8公斤，不可退款。",
+          "quad": [
+            [
+              30,
+              56
+            ],
+            [
+              228,
+              56
+            ],
+            [
+              228,
+              77
+            ],
+            [
+              30,
+              77
+            ]
+          ],
+          "detectorScore": 0.8001764733726914,
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true
+    },
+    {
+      "id": "ch/mixed-quality-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "不含税/不含税",
+        "房间A/Room A",
+        "Chambre A : 120 € / night"
+      ],
+      "argmaxSha256": "b64d12ae52ee3d8b06cccc1e59dc498ff345e9633853e994e035d5c90abfd71c",
+      "textMatches": true,
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "mixed-quality-16.box-2",
+          "originalIndex": 2,
+          "readingOrder": 0,
+          "tensorRow": 1,
+          "raw": "房间A/Room A",
+          "quad": [
+            [
+              29,
+              29
+            ],
+            [
+              150,
+              29
+            ],
+            [
+              150,
+              50
+            ],
+            [
+              29,
+              50
+            ]
+          ],
+          "detectorScore": 0.8009910665176533,
+          "passed": true
+        },
+        {
+          "boxId": "mixed-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 1,
+          "tensorRow": 2,
+          "raw": "Chambre A : 120 € / night",
+          "quad": [
+            [
+              29,
+              54
+            ],
+            [
+              219,
+              54
+            ],
+            [
+              219,
+              75
+            ],
+            [
+              29,
+              75
+            ]
+          ],
+          "detectorScore": 0.7865341494649144,
+          "passed": true
+        },
+        {
+          "boxId": "mixed-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 2,
+          "tensorRow": 0,
+          "raw": "不含税/不含税",
+          "quad": [
+            [
+              29,
+              83
+            ],
+            [
+              145,
+              83
+            ],
+            [
+              145,
+              105
+            ],
+            [
+              29,
+              105
+            ]
+          ],
+          "detectorScore": 0.7981728654936785,
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true
+    },
+    {
+      "id": "latin/en-quality-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "argmaxSha256": "ae7215b4defefee5dc66547ea89a10533902aad35ab213d0896954c19a6331bb",
+      "textMatches": true,
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "en-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "tensorRow": 0,
+          "raw": "The total is 39.90 €, tax not included.",
+          "quad": [
+            [
+              30,
+              27
+            ],
+            [
+              295,
+              27
+            ],
+            [
+              295,
+              48
+            ],
+            [
+              30,
+              48
+            ]
+          ],
+          "detectorScore": 0.7848805534224662,
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true
+    },
+    {
+      "id": "latin/fr-nonrefundable-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "argmaxSha256": "84382aa745ed8194284afe5ec0b540f448dcebf51ea6771f3844fe9079785c2b",
+      "textMatches": true,
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "fr-nonrefundable-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "tensorRow": 0,
+          "raw": "Ce billet n'est ni échangeable ni remboursable.",
+          "quad": [
+            [
+              30,
+              27
+            ],
+            [
+              366,
+              27
+            ],
+            [
+              366,
+              51
+            ],
+            [
+              30,
+              51
+            ]
+          ],
+          "detectorScore": 0.7906219916214047,
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true
+    },
+    {
+      "id": "latin/zh-hans-quality-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "1234.50",
+        "8"
+      ],
+      "argmaxSha256": "26144ade0665737b4beba4bfb97667c1022ec6bb25070790ccbb8f063a42b145",
+      "textMatches": true,
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "zh-hans-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "tensorRow": 0,
+          "raw": "1234.50",
+          "quad": [
+            [
+              29,
+              30
+            ],
+            [
+              212,
+              30
+            ],
+            [
+              212,
+              51
+            ],
+            [
+              29,
+              51
+            ]
+          ],
+          "detectorScore": 0.7844004850001896,
+          "passed": true
+        },
+        {
+          "boxId": "zh-hans-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "tensorRow": 1,
+          "raw": "8",
+          "quad": [
+            [
+              30,
+              56
+            ],
+            [
+              228,
+              56
+            ],
+            [
+              228,
+              77
+            ],
+            [
+              30,
+              77
+            ]
+          ],
+          "detectorScore": 0.7958951793812417,
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true
+    },
+    {
+      "id": "latin/zh-hant-quality-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "1234.50",
+        "8"
+      ],
+      "argmaxSha256": "85cc2dbae6273265ef9ded3596ac11b6dfe6895c3c352c99fc64dcdf8a6a4505",
+      "textMatches": true,
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "zh-hant-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "tensorRow": 0,
+          "raw": "1234.50",
+          "quad": [
+            [
+              29,
+              27
+            ],
+            [
+              212,
+              29
+            ],
+            [
+              212,
+              51
+            ],
+            [
+              29,
+              49
+            ]
+          ],
+          "detectorScore": 0.7939277095022337,
+          "passed": true
+        },
+        {
+          "boxId": "zh-hant-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "tensorRow": 1,
+          "raw": "8",
+          "quad": [
+            [
+              30,
+              56
+            ],
+            [
+              228,
+              56
+            ],
+            [
+              228,
+              77
+            ],
+            [
+              30,
+              77
+            ]
+          ],
+          "detectorScore": 0.8001764733726914,
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true
+    },
+    {
+      "id": "latin/mixed-quality-16",
+      "status": "completed",
+      "passed": true,
+      "raw": [
+        "/",
+        "A / Room A",
+        "Chambre A : 120 € / night"
+      ],
+      "argmaxSha256": "0d1d4f2b78aaf6ad854b3dbd1b8d409c242afc9826cc0c82f8d0e7b1a305e731",
+      "textMatches": true,
+      "argmaxMatches": true,
+      "bindings": [
+        {
+          "boxId": "mixed-quality-16.box-2",
+          "originalIndex": 2,
+          "readingOrder": 0,
+          "tensorRow": 1,
+          "raw": "A / Room A",
+          "quad": [
+            [
+              29,
+              29
+            ],
+            [
+              150,
+              29
+            ],
+            [
+              150,
+              50
+            ],
+            [
+              29,
+              50
+            ]
+          ],
+          "detectorScore": 0.8009910665176533,
+          "passed": true
+        },
+        {
+          "boxId": "mixed-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 1,
+          "tensorRow": 2,
+          "raw": "Chambre A : 120 € / night",
+          "quad": [
+            [
+              29,
+              54
+            ],
+            [
+              219,
+              54
+            ],
+            [
+              219,
+              75
+            ],
+            [
+              29,
+              75
+            ]
+          ],
+          "detectorScore": 0.7865341494649144,
+          "passed": true
+        },
+        {
+          "boxId": "mixed-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 2,
+          "tensorRow": 0,
+          "raw": "/",
+          "quad": [
+            [
+              29,
+              83
+            ],
+            [
+              145,
+              83
+            ],
+            [
+              145,
+              105
+            ],
+            [
+              29,
+              105
+            ]
+          ],
+          "detectorScore": 0.7981728654936785,
+          "passed": true
+        }
+      ],
+      "readingOrderMatches": true
+    }
+  ],
+  "errors": [],
+  "expectedCaseIds": [
+    "en-quality-16",
+    "fr-nonrefundable-16",
+    "zh-hans-quality-16",
+    "zh-hant-quality-16",
+    "mixed-quality-16",
+    "blank-negative-24",
+    "color-control",
+    "wide-959",
+    "wide-1499",
+    "wide-2001"
+  ],
+  "expectedCounts": {
+    "cases": 10,
+    "detectorInferences": 10,
+    "empty": 5,
+    "crops": 9,
+    "cropChannels": 116691,
+    "resizedChannels": 570960,
+    "tensors": 5,
+    "floats": 631728,
+    "recognitionInferences": 10,
+    "rawRows": 18,
+    "bindings": 18
+  },
+  "detectorFixtureSha256": "74aa1e39c8d3187ee2388ad07bb228e3c876c0486ccd02c47208942d26f2c80a",
+  "detectorModelSha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+  "geometryFixtureSha256": "1aa14f2efb50e62c5a2d95b45b7d5b5044d4ec90afa47a976e8dea50bbe466a6",
+  "recognitionFixtureSha256": "bbbfd058777e51e4fb7769764d2b49dac7618c784b8e0ef652af84d973f64f6a",
+  "boxFixtureSha256": "91cc2279377e8809ba3898bd31784f79df307dc0ad816a826fac139de7184118",
+  "boxConfiguration": "DB-v1:threshold>float32(.3);dilate2x2-default;LIST/SIMPLE;side3;score.5;ROUND1.6;side5;f32-div-mul-rint;inclusive-then-W-1;norm-int>3;paired-adjacent-dy10",
+  "recognitionConfiguration": "actual-DB-crop;BGR8-INTER_LINEAR;48-NCHW;stable-ratio;raw-CTC;page-order-after-infer-v1",
+  "scope": "10 packaged synthetic originals through fresh detector inference, actual boxes/crops and both recognizers; page-coordinate binding. No real pages, translation or quality acceptance.",
+  "bufferBudget": "One detector session then one recognizer session at a time; at most 5 prepared direct recognition tensors, 631728 floats/2526912 bytes. Transient one-case comparisons. Mat counts cover buffers, not finalizer-owned headers.",
+  "counts": {
+    "cases": 10,
+    "detectorInferences": 10,
+    "empty": 5,
+    "crops": 9,
+    "cropChannels": 116691,
+    "resizedChannels": 570960,
+    "tensors": 5,
+    "floats": 631728,
+    "recognitionInferences": 10,
+    "rawRows": 18,
+    "bindings": 18
+  },
+  "geometryCleanup": {
+    "matAcquired": {
+      "e2eResizeSource": 10,
+      "e2eResizeDestination": 10,
+      "boxMask": 10,
+      "boxKernel": 10,
+      "boxDilated": 10,
+      "boxContourSource": 10,
+      "boxHierarchy": 10,
+      "boxContour": 9,
+      "boxProbability": 10,
+      "boxRectInput": 18,
+      "boxRectPoints": 18,
+      "boxScoreMask": 9,
+      "boxScorePolygon": 9,
+      "boxScoreRoi": 9,
+      "sourceQuad": 9,
+      "targetQuad": 9,
+      "homography": 9,
+      "cropSource": 9,
+      "warpDestination": 9,
+      "recognitionResizeSource": 9,
+      "recognitionResizeDestination": 9
+    },
+    "matReleaseAttempts": {
+      "e2eResizeDestination": 10,
+      "e2eResizeSource": 10,
+      "boxScoreRoi": 9,
+      "boxScorePolygon": 9,
+      "boxScoreMask": 9,
+      "boxRectPoints": 18,
+      "boxRectInput": 18,
+      "boxProbability": 10,
+      "boxContour": 9,
+      "boxHierarchy": 10,
+      "boxContourSource": 10,
+      "boxDilated": 10,
+      "boxKernel": 10,
+      "boxMask": 10,
+      "warpDestination": 9,
+      "cropSource": 9,
+      "homography": 9,
+      "targetQuad": 9,
+      "sourceQuad": 9,
+      "recognitionResizeDestination": 9,
+      "recognitionResizeSource": 9
+    },
+    "matReleased": {
+      "e2eResizeDestination": 10,
+      "e2eResizeSource": 10,
+      "boxScoreRoi": 9,
+      "boxScorePolygon": 9,
+      "boxScoreMask": 9,
+      "boxRectPoints": 18,
+      "boxRectInput": 18,
+      "boxProbability": 10,
+      "boxContour": 9,
+      "boxHierarchy": 10,
+      "boxContourSource": 10,
+      "boxDilated": 10,
+      "boxKernel": 10,
+      "boxMask": 10,
+      "warpDestination": 9,
+      "cropSource": 9,
+      "homography": 9,
+      "targetQuad": 9,
+      "sourceQuad": 9,
+      "recognitionResizeDestination": 9,
+      "recognitionResizeSource": 9
+    },
+    "matOpened": 215,
+    "findContoursCalls": 10,
+    "bitmapOpened": 41,
+    "bitmapRecycleAttempts": 41,
+    "bitmapRecycled": 41,
+    "balanced": true,
+    "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+  },
+  "ortCleanup": {
+    "opened": 46,
+    "closed": 46,
+    "closeAttempts": 46,
+    "uncertain": false,
+    "balanced": true
+  },
+  "opencvRuntime": "5.0.0",
+  "opencvThreads": 1,
+  "opencvBuildSha256": "decbb1fb99d7b99b096023e5a843eb1d5a44a17ec1f43ae7f70cd53d115274b9",
+  "ortRuntime": "1.30.0",
+  "modelIdentities": [
+    {
+      "id": "ch",
+      "sha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af"
+    },
+    {
+      "id": "latin",
+      "sha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+      "dictionarySha256": "d80d308e9759b3ea3aaf6e57fa51b39ef0a2eeb3145a9b23df819f0f0279af44"
+    }
+  ],
+  "expectedModelIds": [
+    "ch/en-quality-16",
+    "ch/fr-nonrefundable-16",
+    "ch/zh-hans-quality-16",
+    "ch/zh-hant-quality-16",
+    "ch/mixed-quality-16",
+    "latin/en-quality-16",
+    "latin/fr-nonrefundable-16",
+    "latin/zh-hans-quality-16",
+    "latin/zh-hant-quality-16",
+    "latin/mixed-quality-16"
+  ],
+  "passed": true,
+  "elapsedNanos": 5463614062
+}

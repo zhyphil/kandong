@@ -1,3 +1,6 @@
 {
-  "modelprobe/src/androidTest/java/com/kandong/modelprobe/EndToEndOcrProbeTest.kt": "94926727755222f96abb0c776aa81b22620d474047beff995c2a5a3108d33855"
+  "modelprobe/src/androidTest/java/com/kandong/modelprobe/EndToEndOcrProbeTest.kt": "af1e166e7c0c8985f6c649641693152ac60341fb216f12ed7c9c59d18384ec43",
+  "modelprobe/src/androidTest/java/com/kandong/modelprobe/BoxTraceComparison.kt": "70999d66152557e6d76f445db91708bfb5a7cc3d4cf8deede3675c853429c622",
+  "modelprobe/src/testShared/java/com/kandong/modelprobe/EndToEndScoreBudget.kt": "08fd149e38f74fc472a2ee9f9c8bcce53a630e1b85d93724b160b67fa687d914",
+  "modelprobe/src/test/java/com/kandong/modelprobe/EndToEndScoreBudgetTest.kt": "3dd3d49b524819f02a86fff9d996b7ad0637aa34dcf42bece794984b38cdfa61"
 }

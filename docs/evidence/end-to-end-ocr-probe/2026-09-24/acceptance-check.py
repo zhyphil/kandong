@@ -37,6 +37,7 @@ for group,count in [('regression',7),('geometry',1),('polygon',1),('boxes',1),('
 expected={'cases':10,'detectorInferences':10,'empty':5,'crops':9,'cropChannels':116691,'resizedChannels':570960,
  'tensors':5,'floats':631728,'recognitionInferences':10,'rawRows':18,'bindings':18}
 fixture=read(root/'docs/fixtures/crop-recognition-v1/manifest.json')
+sourceIdentity={c['id']:c for c in read(evidence/'source-identity-diagnosis.json')['cases']}
 for report in reports['e2e']:
  assert report['status']=='passed' and report['api']==31 and report['device']=='LIO-AN00'
  assert report['recognitionFixtureSha256']=='bbbfd058777e51e4fb7769764d2b49dac7618c784b8e0ef652af84d973f64f6a'
@@ -47,8 +48,17 @@ for report in reports['e2e']:
  assert sum(c.get('noRecognitionWork',False) for c in report['cases'])==5
  assert sum(len(c['crops']) for c in report['cases'])==9
  for c in report['cases']:
+  identity=sourceIdentity[c['id']]
+  assert c['sourcePngSha256']==identity['originalPngSha256']
+  assert c['geometrySourcePngSha256']==identity['geometryPngSha256']
+  assert c['sourceBgrSha256']==identity['bgrSha256'] and identity['sameBgrPixels']
   assert c['detectorPixelsExact'] and c['detectorInputExact'] and c['detector']['numericParityPassed']
   assert c['detector']['maskFlips']==0
+  assert c['scoreBudget']['sameInputAbsoluteTolerance']==1e-7
+  assert c['scoreBudget']['measuredInputMaxAbsoluteError']==c['detector']['maxAbsoluteError']
+  assert c['scoreBudget']['totalAbsoluteTolerance']==1e-7+c['detector']['maxAbsoluteError']
+  for row in c['trace']['rowChecks']:
+   if 'score' in row['actual']:assert row['comparisons']['scoreMaskFootprint']==1
   if c['crops']:assert c['tensorExact'] and c['tensorShapeExact'] and c['mappingExact']
  g=report['geometryCleanup'];o=report['ortCleanup']
  assert g['balanced'] and g['matOpened']>0 and g['bitmapOpened']>0
@@ -62,7 +72,8 @@ for report in reports['e2e']:
   assert result['raw']==ref['expectedHostRaw'] and result['textMatches'] and result['argmaxMatches'] and result['readingOrderMatches']
   for b,row in zip(result['bindings'],case['rows'],strict=True):
    for k in ['boxId','originalIndex','readingOrder','quad']:assert b[k]==row[k],(result['id'],k)
-   assert abs(b['detectorScore']-row['detectorScore'])<=1e-7
+   caseReport=next(c for c in report['cases'] if c['id']==caseid)
+   assert abs(b['detectorScore']-row['detectorScore'])<=1e-7+caseReport['detector']['maxAbsoluteError']
    assert b['tensorRow']==row['tensorRow'] and b['raw']==ref['readingOrderRaw'][row['readingOrder']]
 identity=read(evidence/'apk-verification.json');assert read(raw/'installed.json')==identity
 summary=dict(status='accepted-synthetic-original-to-ocr-on-target-Huawei',device='LIO-AN00/API31',rounds=2,junitTestsPerRound=13,

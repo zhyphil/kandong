@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kandong.modelprobe.BoxPipelineGuardTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-09-24T13:50:01.646Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.02">
+<testsuite name="com.kandong.modelprobe.BoxPipelineGuardTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-09-24T14:38:40.908Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.025">
   <properties/>
-  <testcase name="halfEvenAndInclusiveMappingAreFrozen" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.002"/>
-  <testcase name="incompleteResultCannotExposePartialBoxes" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.006"/>
+  <testcase name="halfEvenAndInclusiveMappingAreFrozen" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.003"/>
+  <testcase name="incompleteResultCannotExposePartialBoxes" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.009"/>
   <testcase name="finalClippingAndTruncatedNormRejectThree" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.004"/>
   <testcase name="finalPointOrderMatchesPinnedYRuleOnBothSides" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.0"/>
   <testcase name="shapeAndValuesAreValidatedBeforeThresholdAllocation" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.001"/>
   <testcase name="pairedStableOrderUsesAdjacentYAndTenStartsNewLine" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.002"/>
-  <testcase name="cropRowUsesActualBoxIdentityScoreAndHomography" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.005"/>
+  <testcase name="cropRowUsesActualBoxIdentityScoreAndHomography" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.006"/>
   <testcase name="geometryLimitsCheckAllSizesBeforeCopies" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.0"/>
   <testcase name="contourComparisonPreservesShortPathsDuplicatesAndEveryVertex" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

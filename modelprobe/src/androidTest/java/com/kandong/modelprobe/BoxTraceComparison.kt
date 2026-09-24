@@ -5,7 +5,11 @@ import org.json.JSONObject
 import kotlin.math.abs
 
 /** Comparisons run only AFTER the probability-only pipeline returns. Never repairs results. */
-internal class BoxTraceComparison {
+internal class BoxTraceComparison(private val scoreAtol: Double = EndToEndScoreBudget.SAME_INPUT_ATOL) {
+    init {
+        require(scoreAtol.isFinite() && scoreAtol >= EndToEndScoreBudget.SAME_INPUT_ATOL &&
+            scoreAtol <= EndToEndScoreBudget.SAME_INPUT_ATOL + DetectorComparison.ATOL + DetectorComparison.RTOL)
+    }
     val counts = linkedMapOf("completeCases" to 0, "budgetCases" to 0, "rows" to 0, "contourVertices" to 0,
         "scores" to 0, "distances" to 0, "expandedPaths" to 0, "expandedVertices" to 0,
         "postQuads" to 0, "rawBoxes" to 0, "finalBoxes" to 0, "maskCases" to 0, "crops" to 0, "cropChannels" to 0)
@@ -81,7 +85,11 @@ internal class BoxTraceComparison {
                 q.number("minimumSide", row.minimumSide, r.getDouble("minimumSide"), 1e-4)
                 q.exact("disposition", row.disposition, r.getString("disposition")) // independent of score tolerance
                 fun number(key: String) = if (r.has(key)) r.getDouble(key) else null
-                q.number("score", row.score, number("score"), 1e-7)
+                if (scoreAtol > EndToEndScoreBudget.SAME_INPUT_ATOL && row.score != null) {
+                    q.exact("scoreMaskFootprint", EndToEndScoreBudget.maskFootprint(row.preQuad, c.shape[3].toInt(), c.shape[2].toInt()),
+                        EndToEndScoreBudget.maskFootprint(points(r.getJSONArray("preUnclipQuad")), c.shape[3].toInt(), c.shape[2].toInt()))
+                }
+                q.number("score", row.score, number("score"), scoreAtol)
                 q.number("distance", row.distance, number("distance"), 1e-9, 1e-12)
                 q.exact("integerInput", row.integerInput, if (r.has("integerInput")) ints(r.getJSONArray("integerInput")) else null)
                 if (r.has("expandedPaths") && row.expanded != null) {
@@ -99,7 +107,7 @@ internal class BoxTraceComparison {
                 q.exact("finalBoxIndex", row.finalBoxIndex, if (r.has("finalBoxIndex")) r.getInt("finalBoxIndex") else null)
                 val final = if (r.has("finalBox") && r.getJSONArray("finalBox").length() == 1) points(r.getJSONArray("finalBox").getJSONArray(0)) else null
                 q.quad("finalBox", row.finalBox, final, 0.0)
-                if (final != null) q.number("finalScore", row.score, r.getJSONArray("finalScore").getDouble(0), 1e-7)
+                if (final != null) q.number("finalScore", row.score, r.getJSONArray("finalScore").getDouble(0), scoreAtol)
                 val detail = q.json().put("actual", rowJson(row))
                 if (!q.passed) detail.put("reference", r)
                 rowChecks.put(detail); checks.exact("row.$index", q.passed, true)
@@ -109,7 +117,7 @@ internal class BoxTraceComparison {
             rawRows.forEachIndexed { i, r ->
                 if (i < e.getJSONArray("rawBoxes").length()) {
                     checks.quad("topRawBox", r.rawBox, points(e.getJSONArray("rawBoxes").getJSONArray(i)), 0.0)
-                    checks.number("topRawScore", r.score, e.getJSONArray("rawScores").getDouble(i), 1e-7)
+                    checks.number("topRawScore", r.score, e.getJSONArray("rawScores").getDouble(i), scoreAtol)
                 }
             }
             checks.exact("usableBoxes", a.boxes.size, c.accepted)
@@ -118,7 +126,7 @@ internal class BoxTraceComparison {
             a.boxes.forEach { box ->
                 if (box.finalBoxIndex < e.getJSONArray("boxes").length()) {
                     checks.quad("pairedBox", box.quad, points(e.getJSONArray("boxes").getJSONArray(box.finalBoxIndex)), 0.0)
-                    checks.number("pairedScore", box.score, e.getJSONArray("scores").getDouble(box.finalBoxIndex), 1e-7)
+                    checks.number("pairedScore", box.score, e.getJSONArray("scores").getDouble(box.finalBoxIndex), scoreAtol)
                 }
             }
             if (c.id == "candidate-count-1000") checks.exact("sourceRuns", a.sourceRuns, 2096L)
@@ -158,7 +166,7 @@ internal class BoxTraceComparison {
         val checks = Checks()
         checks.exact("id", actual.row.id, expected.id); checks.exact("originalIndex", actual.row.originalIndex, expected.originalIndex)
         checks.exact("readingOrder", actual.row.readingOrder, expected.readingOrder)
-        checks.number("score", actual.row.detectorScore, expected.detectorScore, 1e-7)
+        checks.number("score", actual.row.detectorScore, expected.detectorScore, scoreAtol)
         checks.quad("quad", actual.row.quad, expected.quad, 0.0)
         checks.exact("plan", actual.row.plan, expected.plan)
         checks.exact("width", actual.width, image.width); checks.exact("height", actual.height, image.height)

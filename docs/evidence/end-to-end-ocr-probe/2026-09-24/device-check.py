@@ -22,6 +22,8 @@ groups=[
  ('boxes','com.kandong.modelprobe.BoxPipelineProbeTest',1,{'boxes':'box-pipeline-probe-report.json'}),
  ('recognition','com.kandong.modelprobe.CropRecognitionProbeTest',1,{'recognition':'crop-recognition-probe-report.json'}),
  ('e2e','com.kandong.modelprobe.EndToEndOcrProbeTest',2,{'e2e':'end-to-end-ocr-probe-report.json'})]
+# Run the changed integration first, so a failure does not repeat expensive unchanged regressions.
+groups=[groups[-1],*groups[:-1]]
 seen=set()
 try:
  for n in [1,2]:

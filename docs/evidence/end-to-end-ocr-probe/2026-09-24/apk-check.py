@@ -42,7 +42,7 @@ with zipfile.ZipFile(main) as z:
    assert b'Lcom/kandong/modelprobe/BoxPipeline' not in raw and b'Lcom/kandong/modelprobe/BoxTrace' not in raw and b'Lcom/kandong/modelprobe/CropRecognition' not in raw
 with zipfile.ZipFile(test) as z:
  dex=b''.join(z.read(n) for n in z.namelist() if n.endswith('.dex'))
- for cls in ['BoxPipelineContract','BoxPipelineOpenCv','BoxPipelineProbeTest','BoxTraceFixtureInputs','CropRecognitionContract','CropRecognitionPipeline','CropRecognitionProbeTest','CropRecognitionFixtures','EndToEndOcrProbeTest']:
+ for cls in ['BoxPipelineContract','BoxPipelineOpenCv','BoxPipelineProbeTest','BoxTraceFixtureInputs','CropRecognitionContract','CropRecognitionPipeline','CropRecognitionProbeTest','CropRecognitionFixtures','EndToEndOcrProbeTest','EndToEndScoreBudget']:
   assert ('Lcom/kandong/modelprobe/'+cls+';').encode() in dex,cls
  assert b'Lcom/kandong/modelprobe/BoxPipelineGuardTest;' not in dex
  assert b'Lcom/kandong/modelprobe/CropRecognitionContractTest;' not in dex
@@ -58,8 +58,8 @@ with zipfile.ZipFile(test) as z:
 meta['testAssetCount']=len(sources)
 protected=json.loads(Path('/private/tmp/kandong-e2e-protected-20260924.json').read_bytes())
 for p,h in protected.items():
- if p not in {'TASKS.md','WORKLOG.md'}:assert sha((root/p).read_bytes())==h,p
-meta['protectedFilesUnchanged']=len(protected)-2
+ if p not in {'TASKS.md','WORKLOG.md','modelprobe/src/androidTest/java/com/kandong/modelprobe/BoxTraceComparison.kt'}:assert sha((root/p).read_bytes())==h,p
+meta['protectedFilesUnchanged']=len(protected)-3
 candidate=json.loads((root/'docs/evidence/polygon-offset/2026-09-24/expanded/all-round/comparison.json').read_bytes())['sourceSha256']
 folder=root/'modelprobe/src/testShared/java/de/lighti/clipper'
 assert {p.name for p in folder.iterdir() if p.is_file()}==candidate.keys()

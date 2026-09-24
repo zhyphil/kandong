@@ -1,0 +1,162 @@
+{
+  "status": "accepted-synthetic-original-to-ocr-on-target-Huawei",
+  "device": "LIO-AN00/API31",
+  "rounds": 2,
+  "junitTestsPerRound": 13,
+  "countsPerRound": {
+    "cases": 10,
+    "detectorInferences": 10,
+    "empty": 5,
+    "crops": 9,
+    "cropChannels": 116691,
+    "resizedChannels": 570960,
+    "tensors": 5,
+    "floats": 631728,
+    "recognitionInferences": 10,
+    "rawRows": 18,
+    "bindings": 18
+  },
+  "runIds": [
+    "e428ae57-2ef9-4ba5-b170-3575ccb8da5c",
+    "77af0d82-5308-46bc-b781-817b82c2a38f",
+    "3d9e8c05-c25e-4ef6-9278-acc31d3e290b",
+    "85469e86-b125-4f73-a968-ee60818584f4",
+    "8aece13a-9464-4563-8a01-c4a8f14df1e9",
+    "c23f77fe-d780-425c-a817-2f8ae301cf56",
+    "aec437ef-cf95-429f-aeb9-bd301afbe7fc",
+    "375d391d-9665-468c-a547-f3d5363e6d85",
+    "06b5e5dc-8fa4-4cdd-ab54-5cb66a9dc7d2",
+    "a4253ab9-55ed-435c-ba52-e6f5efb82fdb",
+    "54739814-45a3-463c-9f2b-598c37d4022d",
+    "4f4705ab-bef5-4c1d-b19d-cf9ad594e1a7",
+    "eabb1d71-e2b9-47d5-bb5a-d4c2fe0e297c",
+    "15aa312d-3923-4c2c-b53c-ca79acfa621f"
+  ],
+  "allSevenReportsNonTimingRepeat": true,
+  "oldSixReportsMatchAcceptedBaseline": true,
+  "geometryCleanup": {
+    "matAcquired": {
+      "e2eResizeSource": 10,
+      "e2eResizeDestination": 10,
+      "boxMask": 10,
+      "boxKernel": 10,
+      "boxDilated": 10,
+      "boxContourSource": 10,
+      "boxHierarchy": 10,
+      "boxContour": 9,
+      "boxProbability": 10,
+      "boxRectInput": 18,
+      "boxRectPoints": 18,
+      "boxScoreMask": 9,
+      "boxScorePolygon": 9,
+      "boxScoreRoi": 9,
+      "sourceQuad": 9,
+      "targetQuad": 9,
+      "homography": 9,
+      "cropSource": 9,
+      "warpDestination": 9,
+      "recognitionResizeSource": 9,
+      "recognitionResizeDestination": 9
+    },
+    "matReleaseAttempts": {
+      "e2eResizeDestination": 10,
+      "e2eResizeSource": 10,
+      "boxScoreRoi": 9,
+      "boxScorePolygon": 9,
+      "boxScoreMask": 9,
+      "boxRectPoints": 18,
+      "boxRectInput": 18,
+      "boxProbability": 10,
+      "boxContour": 9,
+      "boxHierarchy": 10,
+      "boxContourSource": 10,
+      "boxDilated": 10,
+      "boxKernel": 10,
+      "boxMask": 10,
+      "warpDestination": 9,
+      "cropSource": 9,
+      "homography": 9,
+      "targetQuad": 9,
+      "sourceQuad": 9,
+      "recognitionResizeDestination": 9,
+      "recognitionResizeSource": 9
+    },
+    "matReleased": {
+      "e2eResizeDestination": 10,
+      "e2eResizeSource": 10,
+      "boxScoreRoi": 9,
+      "boxScorePolygon": 9,
+      "boxScoreMask": 9,
+      "boxRectPoints": 18,
+      "boxRectInput": 18,
+      "boxProbability": 10,
+      "boxContour": 9,
+      "boxHierarchy": 10,
+      "boxContourSource": 10,
+      "boxDilated": 10,
+      "boxKernel": 10,
+      "boxMask": 10,
+      "warpDestination": 9,
+      "cropSource": 9,
+      "homography": 9,
+      "targetQuad": 9,
+      "sourceQuad": 9,
+      "recognitionResizeDestination": 9,
+      "recognitionResizeSource": 9
+    },
+    "matOpened": 215,
+    "findContoursCalls": 10,
+    "bitmapOpened": 41,
+    "bitmapRecycleAttempts": 41,
+    "bitmapRecycled": 41,
+    "balanced": true,
+    "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+  },
+  "ortCleanup": {
+    "opened": 46,
+    "closed": 46,
+    "closeAttempts": 46,
+    "uncertain": false,
+    "balanced": true
+  },
+  "excludedComparisonFields": [
+    "elapsedMs",
+    "elapsedNanos",
+    "elapsedNanosObservational",
+    "resizeNs",
+    "runId"
+  ],
+  "instrumentationSecondsObservational": {
+    "regression": [
+      6.221,
+      6.005
+    ],
+    "geometry": [
+      1.254,
+      1.213
+    ],
+    "polygon": [
+      15.945,
+      14.327
+    ],
+    "boxes": [
+      10.555,
+      10.555
+    ],
+    "recognition": [
+      6.814,
+      8.016
+    ],
+    "e2e": [
+      6.461,
+      6.497
+    ]
+  },
+  "limitations": [
+    "Synthetic inputs only, not trilingual quality acceptance",
+    "Known wrong raw text retained",
+    "No real screen collection, translation or product integration",
+    "Target Huawei only; API36 SIGILL unresolved",
+    "Resource counts do not prove long-term memory or battery behavior"
+  ]
+}

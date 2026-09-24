@@ -23,13 +23,9 @@
 > Task :modelprobe:bundleDebugClassesToRuntimeJar UP-TO-DATE
 > Task :modelprobe:bundleDebugClassesToCompileJar UP-TO-DATE
 > Task :modelprobe:verifyPolygonProbeVendor
-> Task :modelprobe:compileDebugUnitTestKotlin UP-TO-DATE
 > Task :modelprobe:preDebugUnitTestBuild
 > Task :modelprobe:javaPreCompileDebugUnitTest UP-TO-DATE
-> Task :modelprobe:compileDebugUnitTestJavaWithJavac UP-TO-DATE
 > Task :modelprobe:processDebugJavaRes UP-TO-DATE
-> Task :modelprobe:processDebugUnitTestJavaRes UP-TO-DATE
-> Task :modelprobe:testDebugUnitTest UP-TO-DATE
 > Task :modelprobe:mergeDebugNativeDebugMetadata NO-SOURCE
 > Task :modelprobe:mergeDebugShaders UP-TO-DATE
 > Task :modelprobe:compileDebugShaders NO-SOURCE
@@ -53,7 +49,11 @@
 > Task :modelprobe:packageDebug UP-TO-DATE
 > Task :modelprobe:createDebugApkListingFileRedirect UP-TO-DATE
 > Task :modelprobe:assembleDebug
+> Task :modelprobe:compileDebugUnitTestKotlin
 > Task :modelprobe:verifyOpenCvTestArtifact
+> Task :modelprobe:compileDebugUnitTestJavaWithJavac UP-TO-DATE
+> Task :modelprobe:processDebugUnitTestJavaRes UP-TO-DATE
+> Task :modelprobe:testDebugUnitTest
 > Task :modelprobe:preDebugAndroidTestBuild SKIPPED
 > Task :modelprobe:checkDebugAndroidTestAarMetadata UP-TO-DATE
 > Task :modelprobe:processDebugAndroidTestNavigationResources UP-TO-DATE
@@ -89,9 +89,8 @@
 > Task :modelprobe:generateDebugAndroidTestLintModel
 > Task :modelprobe:extractProguardFiles UP-TO-DATE
 > Task :modelprobe:generateDebugLintReportModel UP-TO-DATE
-> Task :modelprobe:generateDebugUnitTestLintModel UP-TO-DATE
+> Task :modelprobe:generateDebugUnitTestLintModel
 > Task :modelprobe:lintAnalyzeDebug UP-TO-DATE
-> Task :modelprobe:lintAnalyzeDebugUnitTest UP-TO-DATE
 > Task :modelprobe:compileDebugAndroidTestKotlin
 > Task :modelprobe:compileDebugAndroidTestJavaWithJavac UP-TO-DATE
 > Task :modelprobe:dexBuilderDebugAndroidTest
@@ -102,9 +101,10 @@
 > Task :modelprobe:packageDebugAndroidTest
 > Task :modelprobe:createDebugAndroidTestApkListingFileRedirect UP-TO-DATE
 > Task :modelprobe:assembleDebugAndroidTest
+> Task :modelprobe:lintAnalyzeDebugUnitTest
 > Task :modelprobe:lintAnalyzeDebugAndroidTest
 > Task :modelprobe:lintReportDebug UP-TO-DATE
 > Task :modelprobe:lintDebug
 
-BUILD SUCCESSFUL in 3s
-96 actionable tasks: 15 executed, 81 up-to-date
+BUILD SUCCESSFUL in 4s
+96 actionable tasks: 19 executed, 77 up-to-date

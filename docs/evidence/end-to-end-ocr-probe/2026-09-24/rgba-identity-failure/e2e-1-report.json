@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "runId": "b5c56413-5461-46dd-9f2e-1482010fc197",
+  "status": "failed",
+  "api": 31,
+  "device": "LIO-AN00",
+  "cases": [
+    {
+      "id": "en-quality-16",
+      "status": "started",
+      "passed": false
+    }
+  ],
+  "models": [],
+  "errors": [
+    "java.lang.IllegalStateException: Check failed.\n\tat com.kandong.modelprobe.EndToEndOcrProbeTest.originalPngThroughDetectionCropsRecognitionAndPageBindings$lambda$8(EndToEndOcrProbeTest.kt:134)\n\tat com.kandong.modelprobe.EndToEndOcrProbeTest.$r8$lambda$co-1qP_f6qX6oyUtchlK9_tamtc(Unknown Source:0)\n\tat com.kandong.modelprobe.EndToEndOcrProbeTest$$ExternalSyntheticLambda14.invoke(D8$$SyntheticClass:0)\n\tat com.kandong.modelprobe.OrtProbeEngine.withModel(OrtProbeEngine.kt:32)\n\tat com.kandong.modelprobe.EndToEndOcrProbeTest.originalPngThroughDetectionCropsRecognitionAndPageBindings(EndToEndOcrProbeTest.kt:129)\n\tat java.lang.reflect.Method.invoke(Native Method)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:115)\n\tat androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)\n\tat androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)\n\tat androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:463)\n\tat android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2338)\n"
+  ],
+  "expectedCaseIds": [
+    "en-quality-16",
+    "fr-nonrefundable-16",
+    "zh-hans-quality-16",
+    "zh-hant-quality-16",
+    "mixed-quality-16",
+    "blank-negative-24",
+    "color-control",
+    "wide-959",
+    "wide-1499",
+    "wide-2001"
+  ],
+  "expectedCounts": {
+    "cases": 10,
+    "detectorInferences": 10,
+    "empty": 5,
+    "crops": 9,
+    "cropChannels": 116691,
+    "resizedChannels": 570960,
+    "tensors": 5,
+    "floats": 631728,
+    "recognitionInferences": 10,
+    "rawRows": 18,
+    "bindings": 18
+  },
+  "detectorFixtureSha256": "74aa1e39c8d3187ee2388ad07bb228e3c876c0486ccd02c47208942d26f2c80a",
+  "detectorModelSha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+  "geometryFixtureSha256": "1aa14f2efb50e62c5a2d95b45b7d5b5044d4ec90afa47a976e8dea50bbe466a6",
+  "recognitionFixtureSha256": "bbbfd058777e51e4fb7769764d2b49dac7618c784b8e0ef652af84d973f64f6a",
+  "boxFixtureSha256": "91cc2279377e8809ba3898bd31784f79df307dc0ad816a826fac139de7184118",
+  "boxConfiguration": "DB-v1:threshold>float32(.3);dilate2x2-default;LIST/SIMPLE;side3;score.5;ROUND1.6;side5;f32-div-mul-rint;inclusive-then-W-1;norm-int>3;paired-adjacent-dy10",
+  "recognitionConfiguration": "actual-DB-crop;BGR8-INTER_LINEAR;48-NCHW;stable-ratio;raw-CTC;page-order-after-infer-v1",
+  "scope": "10 packaged synthetic originals through fresh detector inference, actual boxes/crops and both recognizers; page-coordinate binding. No real pages, translation or quality acceptance.",
+  "bufferBudget": "One detector session then one recognizer session at a time; at most 5 prepared direct recognition tensors, 631728 floats/2526912 bytes. Transient one-case comparisons. Mat counts cover buffers, not finalizer-owned headers.",
+  "counts": {
+    "cases": 0,
+    "detectorInferences": 0,
+    "empty": 0,
+    "crops": 0,
+    "cropChannels": 0,
+    "resizedChannels": 0,
+    "tensors": 0,
+    "floats": 0,
+    "recognitionInferences": 0,
+    "rawRows": 0,
+    "bindings": 0
+  },
+  "geometryCleanup": {
+    "matAcquired": {},
+    "matReleaseAttempts": {},
+    "matReleased": {},
+    "matOpened": 0,
+    "findContoursCalls": 0,
+    "bitmapOpened": 14,
+    "bitmapRecycleAttempts": 14,
+    "bitmapRecycled": 14,
+    "balanced": true,
+    "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+  },
+  "ortCleanup": {
+    "opened": 2,
+    "closed": 2,
+    "closeAttempts": 2,
+    "uncertain": false,
+    "balanced": true
+  },
+  "opencvRuntime": "5.0.0",
+  "opencvThreads": 1,
+  "opencvBuildSha256": "decbb1fb99d7b99b096023e5a843eb1d5a44a17ec1f43ae7f70cd53d115274b9",
+  "ortRuntime": "1.30.0",
+  "expectedModelIds": [
+    "ch/en-quality-16",
+    "ch/fr-nonrefundable-16",
+    "ch/zh-hans-quality-16",
+    "ch/zh-hant-quality-16",
+    "ch/mixed-quality-16",
+    "latin/en-quality-16",
+    "latin/fr-nonrefundable-16",
+    "latin/zh-hans-quality-16",
+    "latin/zh-hant-quality-16",
+    "latin/mixed-quality-16"
+  ],
+  "passed": false,
+  "elapsedNanos": 1038268750
+}

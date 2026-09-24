@@ -1,6 +1,6 @@
 {
   "mainApkSha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
-  "testApkSha256": "e25d61ee66f4a0be2d188b798407eafc267f44861131f1119d5f4fe6bfba85b6",
+  "testApkSha256": "768ab0228275fce79c05d01f9c6ceffb908fcd351f89b0c4542a63715fd24599",
   "testApkBytes": 247885033,
   "testManifest": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    android:compileSdkVersion=\"36\"\n    android:compileSdkVersionCodename=\"16\"\n    package=\"com.kandong.modelprobe.test\"\n    platformBuildVersionCode=\"36\"\n    platformBuildVersionName=\"16\">\n\n    <uses-sdk\n        android:minSdkVersion=\"29\"\n        android:targetSdkVersion=\"36\" />\n\n    <instrumentation\n        android:label=\"Tests for com.kandong.modelprobe\"\n        android:name=\"androidx.test.runner.AndroidJUnitRunner\"\n        android:targetPackage=\"com.kandong.modelprobe\"\n        android:handleProfiling=\"false\"\n        android:functionalTest=\"false\" />\n\n    <queries>\n\n        <package\n            android:name=\"androidx.test.orchestrator\" />\n\n        <package\n            android:name=\"androidx.test.services\" />\n\n        <package\n            android:name=\"com.google.android.apps.common.testing.services\" />\n    </queries>\n\n    <application\n        android:label=\"看懂缩放验证\"\n        android:debuggable=\"true\"\n        android:extractNativeLibs=\"false\">\n\n        <uses-library\n            android:name=\"android.test.runner\" />\n    </application>\n</manifest>\n",
   "nativeLibrariesUnchanged": [
@@ -46,9 +46,16 @@
     }
   ],
   "testAssetCount": 283,
-  "protectedFilesUnchanged": 1092,
+  "protectedFilesUnchanged": 1091,
   "vendorSourceFilesVerified": 11,
   "unitTests": [
+    {
+      "name": "com.kandong.modelprobe.EndToEndScoreBudgetTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
     {
       "name": "com.kandong.modelprobe.ProbeInputsTest",
       "tests": "6",

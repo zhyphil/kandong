@@ -1,5 +1,8 @@
 package com.kandong.modelprobe
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.ColorSpace
 import android.os.Build
 import android.os.SystemClock
 import android.util.AtomicFile
@@ -55,6 +58,36 @@ internal class EndToEndOcrProbeTest : DetectorProbeTestSupport() {
                 catch (e: Throwable) { if (failure == null) failure = e else failure!!.addSuppressed(e) }
             }
             failure?.let { throw it }
+        }
+    }
+
+    /** Decode the original detector PNG, which can be opaque RGBA or RGB.
+     * File identity and decoded BGR identity are separate; neither is substituted for the other. */
+    private fun original(reader: DetectorProbeInputs, c: DetectorCase, files: JSONObject): GeometryImage {
+        val raw = reader.asset(c.source) // Authenticates ORIGINAL file bytes before decoding.
+        require(c.sourceWidth in 1..DetectorPacking.MAX_SOURCE_DIMENSION && c.sourceHeight in 1..DetectorPacking.MAX_SOURCE_DIMENSION)
+        val count = c.sourceWidth.toLong() * c.sourceHeight
+        require(count in 1..DetectorPacking.MAX_PIXELS.toLong())
+        val metadata = files.getJSONObject(c.source)
+        require(metadata.getInt("width") == c.sourceWidth && metadata.getInt("height") == c.sourceHeight)
+        val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true; inScaled = false }
+        BitmapFactory.decodeByteArray(raw, 0, raw.size, bounds)
+        require(bounds.outWidth == c.sourceWidth && bounds.outHeight == c.sourceHeight && bounds.outMimeType == "image/png")
+        val options = BitmapFactory.Options().apply {
+            inScaled = false; inPreferredConfig = Bitmap.Config.ARGB_8888
+            inPreferredColorSpace = ColorSpace.get(ColorSpace.Named.SRGB)
+        }
+        val bitmap = checkNotNull(BitmapFactory.decodeByteArray(raw, 0, raw.size, options))
+        cleanup.bitmapOpened++
+        try {
+            require(bitmap.width == c.sourceWidth && bitmap.height == c.sourceHeight && bitmap.config == Bitmap.Config.ARGB_8888 &&
+                bitmap.colorSpace == ColorSpace.get(ColorSpace.Named.SRGB))
+            val argb = IntArray(count.toInt()); bitmap.getPixels(argb, 0, c.sourceWidth, 0, 0, c.sourceWidth, c.sourceHeight)
+            val bgr = GeometryProbeContract.bgr(c.sourceWidth, c.sourceHeight, argb) // Rejects non-opaque pixels.
+            val expected = metadata.getString("rawBgrSha256"); ProbeInputs.verifyHash(bgr, expected)
+            return GeometryImage(c.sourceWidth, c.sourceHeight, bgr, expected)
+        } finally {
+            cleanup.bitmapRecycleAttempts++; bitmap.recycle(); check(bitmap.isRecycled); cleanup.bitmapRecycled++
         }
     }
 
@@ -117,6 +150,9 @@ internal class EndToEndOcrProbeTest : DetectorProbeTestSupport() {
             report.put("opencvRuntime", Core.VERSION).put("opencvThreads", Core.getNumThreads())
                 .put("opencvBuildSha256", ProbeInputs.sha(Core.getBuildInformation().toByteArray()))
             val detector = DetectorProbeInputs { assets.open(it) }; val detectorCases = detector.manifest()
+            val detectorManifest = assets.open("detector-v1/manifest.json").use { ProbeInputs.bounded(it, DetectorProbeInputs.MANIFEST_CAP) }
+            ProbeInputs.verifyHash(detectorManifest, DetectorProbeInputs.MANIFEST_SHA)
+            val sourceFiles = JSONObject(String(detectorManifest, Charsets.UTF_8)).getJSONObject("files")
             val geometry = GeometryFixtureInputs({ assets.open(it) }, { assets.list(it)?.toList().orEmpty() }, cleanup)
             val geometryCases = geometry.manifest()
             val fixture = CropRecognitionFixtures({ assets.open(it) }, { assets.list(it)?.toList().orEmpty() }, cleanup)
@@ -124,15 +160,16 @@ internal class EndToEndOcrProbeTest : DetectorProbeTestSupport() {
             val traces = BoxTraceFixtureInputs({ assets.open(it) }, { assets.list(it)?.toList().orEmpty() }); val traceCases = traces.manifest()
             check(detectorCases.map { it.id } == ids)
             val engine = OrtProbeEngine(ort); check(engine.runtime == "1.30.0"); report.put("ortRuntime", engine.runtime)
-            val pipeline = CropRecognitionPipeline(cleanup); val comparison = BoxTraceComparison()
+            val pipeline = CropRecognitionPipeline(cleanup)
             val prepared = arrayListOf<CropRecognitionPipeline.Prepared>()
             engine.withModel(detector.model()) { session ->
                 for (c in detectorCases) {
                     val entry = JSONObject().put("id", c.id).put("status", "started").put("passed", false); cases.put(entry); checkpoint()
-                    val source = geometry.image(c.source)
-                    // Both namespaces must authenticate the same ORIGINAL PNG, before any inference.
-                    check(geometry.metadata(c.source).sha == detector.metadata(c.source).sha)
-                    check(source.width == c.sourceWidth && source.height == c.sourceHeight)
+                    val source = original(detector, c, sourceFiles)
+                    // Re-encoding RGBA as RGB changes PNG bytes; compare authenticated decoded pixels instead.
+                    check(source.sha == geometry.metadata(c.source).bgrSha) { "SOURCE_PIXEL_IDENTITY" }
+                    entry.put("sourcePngSha256", detector.metadata(c.source).sha)
+                        .put("geometrySourcePngSha256", geometry.metadata(c.source).sha).put("sourceBgrSha256", source.sha)
                     val plan = DetectorPacking.plan(source.width, source.height)
                     val argb = resize(source, plan); val packed = DetectorPacking.pack(plan.width, plan.height, argb)
                     val probability = infer(session, tensor(packed, plan.inputShape), plan.outputShape, ort) { output, _ ->
@@ -144,6 +181,11 @@ internal class EndToEndOcrProbeTest : DetectorProbeTestSupport() {
                     // All expected arrays enter comparisons only after fresh inference AND crop/packing have finished.
                     val reference = detector.load(c); val g = geometryCases.single { it.id == c.id }; val ref = references.single { it.getString("id") == c.id }
                     val probabilities = DetectorComparison.compare(java.nio.FloatBuffer.wrap(probability), reference.referenceOutput, reference.referenceMask)
+                    val scoreBudget = EndToEndScoreBudget.fromDetector(probabilities)
+                    val comparison = BoxTraceComparison(scoreBudget)
+                    entry.put("scoreBudget", JSONObject().put("sameInputAbsoluteTolerance", EndToEndScoreBudget.SAME_INPUT_ATOL)
+                        .put("measuredInputMaxAbsoluteError", probabilities.maxAbsolute).put("totalAbsoluteTolerance", scoreBudget)
+                        .put("basis", "For equal score masks, abs(mean(actual)-mean(reference)) <= max(abs(actual-reference)); detector numeric gate and every mask/geometry/disposition check remain mandatory."))
                     val traceCase = traceCases.single { it.id == c.id }; val trace = comparison.trace(traceCase, actual.boxes, traces.trace(traceCase))
                     val inputExact = packed.contentEquals(reference.referenceInput)
                     val mask = comparison.bytes(actual.boxes.mask, geometry.mask(g, false))

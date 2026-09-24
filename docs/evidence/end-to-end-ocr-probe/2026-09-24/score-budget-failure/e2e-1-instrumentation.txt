@@ -1,0 +1,55 @@
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.EndToEndOcrProbeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+com.kandong.modelprobe.EndToEndOcrProbeTest:
+INSTRUMENTATION_STATUS: test=resizeRejectsInvalidInputsAndReleasesOnFailure
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.EndToEndOcrProbeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=resizeRejectsInvalidInputsAndReleasesOnFailure
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.EndToEndOcrProbeTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=originalPngThroughDetectionCropsRecognitionAndPageBindings
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.EndToEndOcrProbeTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Inspect fresh end-to-end-ocr-probe-report.json
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.kandong.modelprobe.EndToEndOcrProbeTest.originalPngThroughDetectionCropsRecognitionAndPageBindings(EndToEndOcrProbeTest.kt:268)
+
+INSTRUMENTATION_STATUS: stream=
+Error in originalPngThroughDetectionCropsRecognitionAndPageBindings(com.kandong.modelprobe.EndToEndOcrProbeTest):
+java.lang.AssertionError: Inspect fresh end-to-end-ocr-probe-report.json
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.kandong.modelprobe.EndToEndOcrProbeTest.originalPngThroughDetectionCropsRecognitionAndPageBindings(EndToEndOcrProbeTest.kt:268)
+
+INSTRUMENTATION_STATUS: test=originalPngThroughDetectionCropsRecognitionAndPageBindings
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 6.424
+There was 1 failure:
+1) originalPngThroughDetectionCropsRecognitionAndPageBindings(com.kandong.modelprobe.EndToEndOcrProbeTest)
+java.lang.AssertionError: Inspect fresh end-to-end-ocr-probe-report.json
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.kandong.modelprobe.EndToEndOcrProbeTest.originalPngThroughDetectionCropsRecognitionAndPageBindings(EndToEndOcrProbeTest.kt:268)
+
+FAILURES!!!
+Tests run: 2,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1
