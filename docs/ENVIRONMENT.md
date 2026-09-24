@@ -29,3 +29,8 @@ Gradle Wrapper 由本机官方 Gradle 8.13 的 wrapper task 生成，临时生�
 2026-09-23用户先连接HMA-L29（HUAWEI，Android10/API29，EMUI12），再明确切换为妈妈的LIO-AN00（Android12/API31，EMUI14.2）。两台均未声明`android.software.window_magnification`，不支持本项目API33+官方WINDOW控制路线。当前目标LIO-AN00实际显示1176×2400，density480/override534。
 
 为用户明确要求的旧华为支持新增独立compat module，minSdk29，MediaProjection+悬浮窗；fixture降至29并保护WindowInsets版本分支。app仍minSdk33，不用兼容版本号掩盖API缺失。实际安装与验收状态见VALIDATION，不声称真机已通过。
+
+
+## 2026-09-24 后续模拟器记录
+
+用户暂停真机测试后，已改用独立 KanDong_OCR_API37_16K。当前OpenCV5完整流程的同一最终APK两轮各13项通过，详见[本机模拟器验收](OCR_EMULATOR.md)。此记录补充当前构件的第二设备证据；不修改上述历史构件结果，旧API36加载崩溃仍保留。

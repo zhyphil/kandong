@@ -1,0 +1,174 @@
+{
+  "status": "accepted-frozen-synthetic-OCR-baseline-on-dedicated-emulator",
+  "device": "sdk_gphone16k_arm64/API37/16KiB",
+  "rounds": 2,
+  "junitTestsPerRound": 13,
+  "countsPerRound": {
+    "cases": 10,
+    "detectorInferences": 10,
+    "empty": 5,
+    "crops": 9,
+    "cropChannels": 116691,
+    "resizedChannels": 570960,
+    "tensors": 5,
+    "floats": 631728,
+    "recognitionInferences": 10,
+    "rawRows": 18,
+    "bindings": 18
+  },
+  "runIds": [
+    "f436e00d-fe34-4781-81bc-306d0ed428d4",
+    "a80ee3b4-b518-4176-84e3-0b9c99900e99",
+    "5321e71d-0ba8-4a76-b948-ec6234b9b238",
+    "01ee53cc-aefc-4f18-903e-125a087d61dd",
+    "86385625-238e-4e3d-bf95-d1c9bc07f668",
+    "63bc8b69-6a28-4fd0-811b-72505126750d",
+    "9461b8c7-ee94-4abb-9575-c9870c231a8e",
+    "e0764d6d-32d2-4390-83df-9f2c5887dd49",
+    "df94d6a0-3383-4ce1-9246-850dd141e63e",
+    "4042231e-2344-4512-9155-59de165cdf85",
+    "9c107f2d-73b0-4174-a051-3d3a409ec2b8",
+    "8cf73872-ae47-44f3-9807-8015d05887b5",
+    "acf030c0-6910-44c8-bf83-f312d5d8f06b",
+    "51824d4d-55e8-4026-b7c9-7914acd834bd"
+  ],
+  "allSevenReportsNonTimingRepeat": true,
+  "allSevenReportResultsMatchAcceptedHuawei": true,
+  "geometryCleanup": {
+    "matAcquired": {
+      "e2eResizeSource": 10,
+      "e2eResizeDestination": 10,
+      "boxMask": 10,
+      "boxKernel": 10,
+      "boxDilated": 10,
+      "boxContourSource": 10,
+      "boxHierarchy": 10,
+      "boxContour": 9,
+      "boxProbability": 10,
+      "boxRectInput": 18,
+      "boxRectPoints": 18,
+      "boxScoreMask": 9,
+      "boxScorePolygon": 9,
+      "boxScoreRoi": 9,
+      "sourceQuad": 9,
+      "targetQuad": 9,
+      "homography": 9,
+      "cropSource": 9,
+      "warpDestination": 9,
+      "recognitionResizeSource": 9,
+      "recognitionResizeDestination": 9
+    },
+    "matReleaseAttempts": {
+      "e2eResizeDestination": 10,
+      "e2eResizeSource": 10,
+      "boxScoreRoi": 9,
+      "boxScorePolygon": 9,
+      "boxScoreMask": 9,
+      "boxRectPoints": 18,
+      "boxRectInput": 18,
+      "boxProbability": 10,
+      "boxContour": 9,
+      "boxHierarchy": 10,
+      "boxContourSource": 10,
+      "boxDilated": 10,
+      "boxKernel": 10,
+      "boxMask": 10,
+      "warpDestination": 9,
+      "cropSource": 9,
+      "homography": 9,
+      "targetQuad": 9,
+      "sourceQuad": 9,
+      "recognitionResizeDestination": 9,
+      "recognitionResizeSource": 9
+    },
+    "matReleased": {
+      "e2eResizeDestination": 10,
+      "e2eResizeSource": 10,
+      "boxScoreRoi": 9,
+      "boxScorePolygon": 9,
+      "boxScoreMask": 9,
+      "boxRectPoints": 18,
+      "boxRectInput": 18,
+      "boxProbability": 10,
+      "boxContour": 9,
+      "boxHierarchy": 10,
+      "boxContourSource": 10,
+      "boxDilated": 10,
+      "boxKernel": 10,
+      "boxMask": 10,
+      "warpDestination": 9,
+      "cropSource": 9,
+      "homography": 9,
+      "targetQuad": 9,
+      "sourceQuad": 9,
+      "recognitionResizeDestination": 9,
+      "recognitionResizeSource": 9
+    },
+    "matOpened": 215,
+    "findContoursCalls": 10,
+    "bitmapOpened": 41,
+    "bitmapRecycleAttempts": 41,
+    "bitmapRecycled": 41,
+    "balanced": true,
+    "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+  },
+  "ortCleanup": {
+    "opened": 46,
+    "closed": 46,
+    "closeAttempts": 46,
+    "uncertain": false,
+    "balanced": true
+  },
+  "excludedComparisonFields": [
+    "elapsedMs",
+    "elapsedNanos",
+    "elapsedNanosObservational",
+    "resizeNs",
+    "runId"
+  ],
+  "instrumentationSecondsObservational": {
+    "regression": [
+      3.473,
+      3.515
+    ],
+    "geometry": [
+      0.449,
+      0.431
+    ],
+    "polygon": [
+      4.675,
+      4.637
+    ],
+    "boxes": [
+      6.71,
+      6.647
+    ],
+    "recognition": [
+      4.068,
+      4.304
+    ],
+    "e2e": [
+      4.413,
+      4.393
+    ]
+  },
+  "limitations": [
+    "Synthetic inputs only, not trilingual quality acceptance",
+    "Known wrong raw text retained",
+    "No real screen collection, translation or product integration",
+    "API37 emulator environment workaround; old API36 SIGILL is not fixed",
+    "Resource counts do not prove long-term memory or battery behavior"
+  ],
+  "crossDeviceRootFieldsExcluded": [
+    "api",
+    "sdk",
+    "device",
+    "deviceModel",
+    "manufacturer",
+    "model",
+    "restoredOpenCvThreads",
+    "abis"
+  ],
+  "pageSize": 16384,
+  "runnerSha256": "d36e3bc4631a163dbc32bd30887c0211c7e94ea7e5285dee0122f078ff6f52ee"
+}

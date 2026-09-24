@@ -1,0 +1,15 @@
+{
+  "ro.product.model": "sdk_gphone16k_arm64",
+  "ro.build.version.sdk": "37",
+  "ro.build.version.release": "17",
+  "ro.build.version.codename": "REL",
+  "ro.build.fingerprint": "google/sdk_gphone16k_arm64/emu64a16k:17/CP31.260623.012/16064790:user/dev-keys",
+  "ro.kernel.qemu": "1",
+  "ro.product.cpu.abi": "arm64-v8a",
+  "pageSize": 16384,
+  "avd": "KanDong_OCR_API37_16K",
+  "serial": "emulator-5582",
+  "emulator": "37.1.11",
+  "sourceImage": "system-images;android-37.1;google_apis_playstore_ps16k;arm64-v8a",
+  "imageRevision": 9
+}
