@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "runId": "7164c388-eb15-4630-8128-0d002e9f133d",
+  "scope": "fixed_packaged_synthetic_ocr_only",
+  "sdk": "com.google.mlkit:text-recognition:16.0.1",
+  "fixtureSha256": "1f638fe9922fc979db040cb1d12cbee17dc66d950e62ec7b2872fe5544cf6553",
+  "startedAtEpochMs": 1790241897867,
+  "device": {
+    "manufacturer": "HUAWEI",
+    "model": "LIO-AN00",
+    "api": 31,
+    "fingerprint": "HUAWEI/LIO-AN00/HWLIO:12/HUAWEILIO-AN00/104.2.0.136C00:user/release-keys"
+  },
+  "render": {
+    "widthPx": 640,
+    "paddingPx": 32,
+    "font": "sans-serif / NORMAL",
+    "sizesPx": [
+      16,
+      24,
+      32
+    ],
+    "background": "#FFFFFF",
+    "foreground": "#000000",
+    "antiAlias": true,
+    "subpixelText": true,
+    "bitmapConfig": "ARGB_8888",
+    "bitmapDensity": "DENSITY_NONE",
+    "includeFontPadding": true,
+    "lineSpacingMultiplier": 1,
+    "wrap": "StaticLayout SIMPLE; no hyphenation; no maxLines; no ellipsis"
+  },
+  "normalization": "NFC + Unicode White_Space folding and trim only",
+  "expectedTotal": 37,
+  "lastAttemptedCase": {
+    "caseId": "fr-cancel",
+    "fontPx": 16,
+    "source": "Annulation gratuite jusqu'au 15 octobre à 18 h."
+  },
+  "results": [],
+  "status": "cancelled",
+  "completed": false,
+  "cancelled": true,
+  "processedCount": 0,
+  "elapsedMs": 90,
+  "updatedAtEpochMs": 1790241897957,
+  "cleanupPendingAtPublication": true,
+  "error": null
+}

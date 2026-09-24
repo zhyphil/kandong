@@ -1,0 +1,253 @@
+{
+  "scope": "synthetic_trilingual_ocr_diagnostic_only",
+  "baseCommit": "7bd871ae298bc248d91fe69429c3c0d87270147e",
+  "corpusCommit": "d864714",
+  "sourceAggregateSha256": "0a3835456c9f7c75619d725b73637053620a3e64359c6301aa87d0c8bf7e9407",
+  "sourceFiles": {
+    "ocrlab/build.gradle.kts": "e34446c6a4f17643225291b8a7fe86a06fb84be76cc287b184ef1d086c5d8445",
+    "ocrlab/src/main/AndroidManifest.xml": "5bd59f23b33efe3698c9949cb89a76f422e06d5253624dba34c204b16700b6ea",
+    "ocrlab/src/main/assets/translation-cases.json": "1f638fe9922fc979db040cb1d12cbee17dc66d950e62ec7b2872fe5544cf6553",
+    "ocrlab/src/main/assets/trilingual-v1/blank-negative-24.png": "ae57633560626ae3902356aa31cf7afd1e67ee1c9aa289e12e177412f834e19f",
+    "ocrlab/src/main/assets/trilingual-v1/en-quality-16.png": "7dcc8eea74aa255202c8e1d2e126236de81202048253a501646c5cc0dcd9070f",
+    "ocrlab/src/main/assets/trilingual-v1/en-quality-32.png": "34a0329aee2f195b036249aba56a2d25a8283cd5f70e7b192cafc9ff34dd1a6c",
+    "ocrlab/src/main/assets/trilingual-v1/fr-access-24.png": "ece98fa5506da12e7adcd7616780cec4c9cc1aba95aa5a606159c72038c82968",
+    "ocrlab/src/main/assets/trilingual-v1/fr-cancel-24.png": "5a6ecd2feaf5d125cfe3b541a99fbac1b656b69df8bf436a2797828e054b6804",
+    "ocrlab/src/main/assets/trilingual-v1/fr-luggage-32.png": "32bf969f6e913c6964d79a61efcc5fe3120757222f2962c0b1fb2930187b7683",
+    "ocrlab/src/main/assets/trilingual-v1/fr-nonrefundable-16.png": "dfffb230fa0bbc886a1695aef47550aec41a13a9961ef29e43b5b29ad2f5a8d1",
+    "ocrlab/src/main/assets/trilingual-v1/fr-quality-16.png": "eb41c4de09cbeb3539b3e4c6af53a8286f373238d4192b4d4f8b9eab894aa0ae",
+    "ocrlab/src/main/assets/trilingual-v1/fr-quality-32.png": "d3890f838fffa00cbeb4039a89c70d0596bb704603b23f8c2cce460f87a9cad3",
+    "ocrlab/src/main/assets/trilingual-v1/fr-total-16.png": "7074cd1cc0f06e35ded744aece306134d936f43de2dadfd51a1ee1102629b8dd",
+    "ocrlab/src/main/assets/trilingual-v1/fr-total-24.png": "cbdcb923df441afcc50145f2dc058ba5b491e0408b0fb6c9e2d71c993807497d",
+    "ocrlab/src/main/assets/trilingual-v1/fr-total-32.png": "fc646aa279939cc1fcb4ff687521f3f3c6d63b77f717238e9532bd31f43f5ea1",
+    "ocrlab/src/main/assets/trilingual-v1/manifest.json": "2341dff63bd10d41867351ddff0e4145daa2d9d3493bc8cdc88ea289c1a076a8",
+    "ocrlab/src/main/assets/trilingual-v1/mixed-quality-16.png": "1afec2c7e0a618edd371fb015697a9c477d7945bae83ee756f98c64676dd0b2b",
+    "ocrlab/src/main/assets/trilingual-v1/mixed-quality-32.png": "8f5275de5ea6428b5fe482bf6a7aa7a22928993c98b838cc10911722b7d6f4a1",
+    "ocrlab/src/main/assets/trilingual-v1/zh-hans-quality-16.png": "a5cd006a679246fe50c1bb4d6cb9e2b616c3a69168cd99f8c2d230a448957184",
+    "ocrlab/src/main/assets/trilingual-v1/zh-hans-quality-32.png": "7ec6dca17aa515c315585b7bde8f57cb031f1769e85345e23cbe86e229adc3e7",
+    "ocrlab/src/main/assets/trilingual-v1/zh-hant-quality-16.png": "9453b4a14282aa818b9446475b001e6ec2ea81ab2affa22b551d3939484683cc",
+    "ocrlab/src/main/assets/trilingual-v1/zh-hant-quality-32.png": "6dcafe90df18f1100b382ddd8c80652cde692d08980e900d329da3f5a528f938",
+    "ocrlab/src/main/java/com/kandong/ocrlab/OcrComparison.kt": "0f82e80af8ebdc73e83c40863f4cc3ee2d5dc490bc1dd2305f0f0efafcfe4e0a",
+    "ocrlab/src/main/java/com/kandong/ocrlab/OcrLabActivity.kt": "918798c376d6983b061ad7b493bedba7fc5c617170bd6cc350cec3d743e262b5",
+    "ocrlab/src/main/java/com/kandong/ocrlab/OcrReport.kt": "fddf0a80db23f7e1c38dffa514572522d9957964b80ca4f248b5c16b6d61e00e",
+    "ocrlab/src/main/java/com/kandong/ocrlab/OcrRunner.kt": "9b722c436ab7387017112b0c31abf81de1edb3f4b8ad154babf09264da5dac03",
+    "ocrlab/src/main/java/com/kandong/ocrlab/RunGate.kt": "37fcfd66d9517dbc623e1cc48509830f22c2b1aaf50e4e4572c2d6fea7c26dc8",
+    "ocrlab/src/main/java/com/kandong/ocrlab/SyntheticFixtures.kt": "7fe96c3e9875155a4521b084f5ce3289b55505198b886f6831fc029dc971a5dc",
+    "ocrlab/src/main/java/com/kandong/ocrlab/context/ContextContracts.kt": "17ad9d34b1f048eed27b5e5733545013de65dce69e8d0a807891bdb96b76668e",
+    "ocrlab/src/main/java/com/kandong/ocrlab/context/ContextEngine.kt": "ac98746ba4e23e00dcab5f22361642cbe75b0a74dcaed53b01cb6331799cff20",
+    "ocrlab/src/main/java/com/kandong/ocrlab/context/ContextFixtures.kt": "ac64ab8643061f96e0a8e88357c2242ec39921041b8b03db6a9c683fc8054c96",
+    "ocrlab/src/main/java/com/kandong/ocrlab/context/ContextGeometry.kt": "70dcc6ad5d1b8656616f001031439c81f61502d4e7084a0f9394cc3cb3f1a3b9",
+    "ocrlab/src/main/java/com/kandong/ocrlab/context/ContextLabActivity.kt": "391067e322d298547e87c9c877efdb3121dbba0eaf612038909f6ed7d58272b5",
+    "ocrlab/src/main/java/com/kandong/ocrlab/multilingual/ComparisonInputs.kt": "81e1c3b5b5f8b23ed1db57bad9a29089aee1e56aebe252aaaa4ebdb3c301d4ac",
+    "ocrlab/src/main/java/com/kandong/ocrlab/multilingual/ComparisonLabActivity.kt": "f749ccb3fc0482ad880d729d20102916c26deda9a9581ab6034f3d698e80e2d4",
+    "ocrlab/src/main/java/com/kandong/ocrlab/multilingual/ComparisonPlan.kt": "768ec848b5b04109c66e83854255f324af58e078125c132372cee2596ae4ebee",
+    "ocrlab/src/main/java/com/kandong/ocrlab/multilingual/ComparisonReport.kt": "978b0ff8ed58b21e47910340cc8ba8d2726391a0151e5ec4043799de0a70a74e",
+    "ocrlab/src/main/java/com/kandong/ocrlab/multilingual/ComparisonRunner.kt": "3a6ec6aba7c8f702ef1cf8f28254762a4b870fac130b56f8fc45c9401befc820",
+    "ocrlab/src/main/res/values/styles.xml": "a285d25609ed90e8ba20e23e7700f07505cc396c9a9ada56747c37c9a1185754",
+    "ocrlab/src/test/java/com/kandong/ocrlab/OcrComparisonTest.kt": "8764d3aedefa5b65f0ae678575e811f6cb97fe8f09d47b4dcd8729c0b7072298",
+    "ocrlab/src/test/java/com/kandong/ocrlab/RunGateTest.kt": "064cb497f313c94baad1e79593780e5cd7ef26d8ba7ce7842d804a38ff1a1765",
+    "ocrlab/src/test/java/com/kandong/ocrlab/context/ContextEngineTest.kt": "bb642c7196a4b058c09c5113275edb0524ef2b966f510813d248b0887bb4c109",
+    "ocrlab/src/test/java/com/kandong/ocrlab/context/ContextGeometryTest.kt": "56ea4fea69ef6e45663731822bb2ec663285abd9bca1df65218904faf8a9d793",
+    "ocrlab/src/test/java/com/kandong/ocrlab/context/ContextOwnershipTest.kt": "702347dfe5a9ae5b5801683de9448730cb276feabb6c36bdfa8c57986de15f29",
+    "ocrlab/src/test/java/com/kandong/ocrlab/multilingual/ComparisonPlanTest.kt": "4524d3fae1003ce8c6f2b3ccf031bcc828531f3a26deb61f4068d432dc43cc70"
+  },
+  "protectedOriginalFilesUnchanged": true,
+  "apkSha256": "a08fde25c2d53a20b0a06c4da27a7405e5a27885a19bbc2696b0c4ad29eec244",
+  "apkBytes": 53188277,
+  "permissions": [
+    "com.kandong.ocrlab.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "components": [
+    {
+      "type": "activity",
+      "name": "com.kandong.ocrlab.multilingual.ComparisonLabActivity",
+      "exported": "false"
+    },
+    {
+      "type": "activity",
+      "name": "com.kandong.ocrlab.context.ContextLabActivity",
+      "exported": "false"
+    },
+    {
+      "type": "activity",
+      "name": "com.kandong.ocrlab.OcrLabActivity",
+      "exported": "true"
+    },
+    {
+      "type": "service",
+      "name": "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+      "exported": "false"
+    },
+    {
+      "type": "provider",
+      "name": "com.google.mlkit.common.internal.MlKitInitProvider",
+      "exported": "false"
+    },
+    {
+      "type": "activity",
+      "name": "com.google.android.gms.common.api.GoogleApiActivity",
+      "exported": "false"
+    },
+    {
+      "type": "provider",
+      "name": "androidx.startup.InitializationProvider",
+      "exported": "false"
+    },
+    {
+      "type": "service",
+      "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+      "exported": "false"
+    },
+    {
+      "type": "service",
+      "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+      "exported": "false"
+    },
+    {
+      "type": "receiver",
+      "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+      "exported": "false"
+    }
+  ],
+  "testSuites": [
+    {
+      "name": "com.kandong.ocrlab.OcrComparisonTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.011"
+    },
+    {
+      "name": "com.kandong.ocrlab.RunGateTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.002"
+    },
+    {
+      "name": "com.kandong.ocrlab.context.ContextEngineTest",
+      "tests": "18",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.025"
+    },
+    {
+      "name": "com.kandong.ocrlab.context.ContextGeometryTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.001"
+    },
+    {
+      "name": "com.kandong.ocrlab.context.ContextOwnershipTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.0"
+    },
+    {
+      "name": "com.kandong.ocrlab.multilingual.ComparisonPlanTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.014"
+    }
+  ],
+  "tests": 37,
+  "lint": [
+    {
+      "id": "OldTargetApi",
+      "severity": "Warning"
+    },
+    {
+      "id": "DataExtractionRules",
+      "severity": "Warning"
+    },
+    {
+      "id": "DrawAllocation",
+      "severity": "Warning"
+    },
+    {
+      "id": "DrawAllocation",
+      "severity": "Warning"
+    },
+    {
+      "id": "StaticFieldLeak",
+      "severity": "Warning"
+    },
+    {
+      "id": "MissingApplicationIcon",
+      "severity": "Warning"
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning"
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning"
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning"
+    },
+    {
+      "id": "SetTextI18n",
+      "severity": "Warning"
+    },
+    {
+      "id": "SetTextI18n",
+      "severity": "Warning"
+    },
+    {
+      "id": "SetTextI18n",
+      "severity": "Warning"
+    },
+    {
+      "id": "SetTextI18n",
+      "severity": "Warning"
+    }
+  ],
+  "signatureVerified": true,
+  "alignmentVerified": true,
+  "newDependency": "com.google.mlkit:text-recognition-chinese:16.0.1",
+  "modelAssetCount": 30,
+  "priorModelAssetsChanged": [],
+  "modelAssets": {
+    "assets/mlkit-google-ocr-models/aksara/aksara_page_layout_analysis_rpn_gcn.binarypb": "b2963b78c7e55fdfd5ed82ca60f045aace7a7e373b5d93254e9ac979dcb5bb67",
+    "assets/mlkit-google-ocr-models/aksara/aksara_page_layout_analysis_ti_rpn_gcn.binarypb": "d448c5de8d480d491ac128657926e6253a770baa90afb0e97a67740c93c1e9f3",
+    "assets/mlkit-google-ocr-models/gocr/gocr_models/line_recognition_legacy_mobile/Latn_ctc/optical/assets.extra/LabelMap.pb": "c6d345043a561f9dfdb1472cfca7cdda0128b19cb6909c67032c5783077c92b3",
+    "assets/mlkit-google-ocr-models/gocr/gocr_models/line_recognition_legacy_mobile/Latn_ctc/optical/conv_model.fb": "64aba719b4ed1ee5b3d4886c5aaf0b1ac051bf5879e9b08e861e0e29e20a08a7",
+    "assets/mlkit-google-ocr-models/gocr/gocr_models/line_recognition_legacy_mobile/Latn_ctc/optical/lstm_model.fb": "0ed62e4fbe0fc5c4090aec473b136e188f828590765c028382358daddb3ccb6e",
+    "assets/mlkit-google-ocr-models/gocr/gocr_models/line_recognition_legacy_mobile/Latn_ctc_cpu.binarypb": "a1dce9a376905a597366f6c9a0b3723205486880e176869e1ad65e92d68e068b",
+    "assets/mlkit-google-ocr-models/gocr/gocr_models/line_recognition_legacy_mobile/tflite_langid.tflite": "7f931f6f7c1dd0ec591ace7780df91645a450fafc83505f3ff45ce5ef7c8441b",
+    "assets/mlkit-google-ocr-models/gocr/layout/line_clustering_custom_ops/model.tflite": "ecda697ed244c5762410e0497878eabcda5f8b0682fb7c3800cd88a7f45dd8e6",
+    "assets/mlkit-google-ocr-models/gocr/layout/line_splitting_custom_ops/model.tflite": "f42197e656972c330bb9f092edbe298b4a6c2fcd808ff6d614381311f8dd22a7",
+    "assets/mlkit-google-ocr-models/taser/detector/region_proposal_text_detector_tflite_vertical_mbv2_v1.bincfg": "7ac2d4c04fb2fe0cd5c33e3030d9276c40286c73f97c2daa3ab94ea8c3f314c3",
+    "assets/mlkit-google-ocr-models/taser/detector/rpn_text_detector_mobile_space_to_depth_quantized_mbv2_v1.tflite": "eb811a1290738f131e4005d8a1d63ef21770866414b847190a932f0b56c0d18f",
+    "assets/mlkit-google-ocr-models/taser/rpn_text_detection_tflite_mobile_mbv2.binarypb": "86660be29934bdd123a65ea30ec09eaa66481a7ac2def8e8f376e78484f8774a",
+    "assets/mlkit-google-ocr-models/taser/segmenter/tflite_script_detector_0.3.bincfg": "d4223c23cd8ee3d3d4999d4e10bb16ec0b8119f8812e5e66e64e907c5508f21b",
+    "assets/mlkit-google-ocr-models/taser/segmenter/tflite_script_detector_0.3.conv_model": "16be9fc0c0c9429cc3714d5d2e8662c53bd28cf0031375e237db288dc8da8d5f",
+    "assets/mlkit-google-ocr-models/taser/segmenter/tflite_script_detector_0.3.lstm_model": "2281a01686f9ff9164f2a12ed743818e2b8e0af6ae7c73240924d70342d3f2cb",
+    "assets/mlkit-google-ocr-models/taser/taser_script_identification_tflite_mobile.binarypb": "a3ebf2720f86e1440e42604f8bd48194111e152fa93886f987655f01a9336d32",
+    "assets/mlkit-google-ocr-models/taser_tflite_gocrlatin_mbv2_scriptid_aksara_layout_gcn_mobile_engine.binarypb": "78210a92ad8ff692898e15d37718094c179149c9546a8fd53759b22939d39348",
+    "assets/mlkit-google-ocr-models/taser_tflite_gocrlatin_mbv2_scriptid_aksara_layout_gcn_mobile_engine_ti.binarypb": "bfd6e9cb8ed0536d03fc9c06a31bc79de3996bc7dcfbe9f4cc19f819231b7d0a",
+    "assets/mlkit-google-ocr-models/taser_tflite_gocrlatin_mbv2_scriptid_aksara_layout_gcn_mobile_recognizer.binarypb": "e80538539371576a5ad7dd58ed314a4f4d9fd9fca7ad73efdac476a6c3eb1ab4",
+    "assets/mlkit-google-ocr-models/taser_tflite_gocrlatin_mbv2_scriptid_aksara_layout_gcn_mobile_runner.binarypb": "32c2c1b72ba32605c23a96a8b7bf4ebf8f5a916df6cd672724556a17d3d6c59e",
+    "assets/mlkit-google-ocr-models/taser_tflite_gocrlatin_mbv2_scriptid_aksara_layout_gcn_mobile_runner_ti.binarypb": "2c8581869ebb972a2d82403c9cd871a1d4c8d6419ae371fc1d859ad2bce2d5dc",
+    "assets/mlkit-google-ocr-models/gocr/gocr_models/line_recognition_legacy_mobile/Hani_ctc/optical/assets.extra/LabelMap.pb": "abbec0569d93413bd94d8da69558c37692087204b1cec86ce3807aeb2f9f0deb",
+    "assets/mlkit-google-ocr-models/gocr/gocr_models/line_recognition_legacy_mobile/Hani_ctc/optical/conv_model.fb": "33416e07504275cfa7cb3c74cba92ae33d7c04ddc82c434e7b24627c1b98766a",
+    "assets/mlkit-google-ocr-models/gocr/gocr_models/line_recognition_legacy_mobile/Hani_ctc/optical/lstm_model.fb": "e68a3e9bc71a974db4195e0bceccc6fe4e27c1b7c5ba424b5dbc4d301e0f6c3a",
+    "assets/mlkit-google-ocr-models/gocr/gocr_models/line_recognition_legacy_mobile/Hani_ctc_cpu.binarypb": "d2078a1b5113b3e1818b06b267bbfa56f2be66e1f3b2aaabd6f2e8af1fd9fdcd",
+    "assets/mlkit-google-ocr-models/taser_tflite_gocrchinese_and_latin_mbv2_aksara_layout_gcn_mobile_engine.binarypb": "b193080910cdda9d378f1dbdbe51c24dde5d19c10995511c8fd3628b01b4d590",
+    "assets/mlkit-google-ocr-models/taser_tflite_gocrchinese_and_latin_mbv2_aksara_layout_gcn_mobile_engine_ti.binarypb": "0288f7364556f5298bbdb0b5eaa392bbb122a20c204739ae5ea7369423a073b8",
+    "assets/mlkit-google-ocr-models/taser_tflite_gocrchinese_and_latin_mbv2_aksara_layout_gcn_mobile_recognizer.binarypb": "551f92a58336c7e5a6d7b533f0d6fc0f6dbf58697bbe0f2d6b9507992604360b",
+    "assets/mlkit-google-ocr-models/taser_tflite_gocrchinese_and_latin_mbv2_aksara_layout_gcn_mobile_runner.binarypb": "3b7fdb16279810558f1f30a1eb46719e03588b71833157987c14bca1778658df",
+    "assets/mlkit-google-ocr-models/taser_tflite_gocrchinese_and_latin_mbv2_aksara_layout_gcn_mobile_runner_ti.binarypb": "355e18877aad2b2ef945fe385c1c60609564c106ca429ab4d83c4d4e4554dfe2"
+  }
+}

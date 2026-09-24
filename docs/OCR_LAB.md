@@ -4,7 +4,7 @@
 
 ## 输入与边界
 
-首批产品识别目标现已明确为英语、法语、中文及同屏混排。下列37项历史实验只覆盖英法源文字；中文识别尚待独立实现和验收，预置中文译文不计入识别证据。后续语言覆盖计划见[验证计划](TRANSLATION_SPIKE.md#首批语言范围与缺口)。
+首批产品识别目标现已明确为英语、法语、中文及同屏混排。下列37项历史实验只覆盖英法源文字；后续[三语独立对照](TRILINGUAL_OCR.md)已新增真实中文OCR合成输入并完成华为/API36运行，但质量未通过；预置中文译文不计入识别证据。后续语言覆盖计划见[验证计划](TRANSLATION_SPIKE.md#首批语言范围与缺口)。
 
 新应用“看懂文字实验”，包名com.kandong.ocrlab，仅依赖随包Latin OCR：com.google.mlkit:text-recognition:16.0.1。沿用项目工具链和原生View实验界面，min29、compile/target36。生产app/compat/graphics/qualitylab源码与版本未改。
 

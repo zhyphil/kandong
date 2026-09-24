@@ -1,0 +1,1213 @@
+{
+  "schema": 1,
+  "runId": "461bd113-23dc-45b6-8867-85de9936a8fb",
+  "scope": "fixed_packaged_synthetic_ocr_only",
+  "fixtureVersion": "trilingual-v1",
+  "manifestSha256": "2341dff63bd10d41867351ddff0e4145daa2d9d3493bc8cdc88ea289c1a076a8",
+  "originalFixtureSha256": "1f638fe9922fc979db040cb1d12cbee17dc66d950e62ec7b2872fe5544cf6553",
+  "models": {
+    "latin": "com.google.mlkit:text-recognition:16.0.1",
+    "chinese": "com.google.mlkit:text-recognition-chinese:16.0.1"
+  },
+  "device": {
+    "manufacturer": "Google",
+    "model": "sdk_gphone64_arm64",
+    "api": 36,
+    "fingerprint": "google/sdk_gphone64_arm64/emu64a:16/BE2A.250530.026.F3/13894323:userdebug/dev-keys"
+  },
+  "startedAtEpochMs": 1790241820771,
+  "expectedTotal": 144,
+  "expectedInputs": 18,
+  "expectedBaseInputs": 36,
+  "expectedProcessedInputs": 72,
+  "pixelHashFormat": "row-major RGBA8888, opaque alpha 255; dimensions separate",
+  "nativeRender": "unchanged SyntheticFixtures.render; sans-serif NORMAL; padding 32; width 640",
+  "normalization": "NFC + Unicode White_Space folding and trim only",
+  "languagePolicy": "fixture language is scoring metadata only; SDK unknown/und does not establish EN/FR support",
+  "lastAttemptedTask": "fr-cancel-24/fixed/1x/chinese",
+  "results": [
+    {
+      "taskId": "fr-cancel-24/native/1x/latin",
+      "inputId": "fr-cancel-24",
+      "caseId": "fr-cancel",
+      "engine": "latin",
+      "sourceKind": "native",
+      "language": "fr",
+      "languageRole": "fixture_scoring_label_only",
+      "source": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "fontPx": 24,
+      "blankNegative": false,
+      "fixedReference": {
+        "asset": "fr-cancel-24.png",
+        "pngSha256": "5a6ecd2feaf5d125cfe3b541a99fbac1b656b69df8bf436a2797828e054b6804",
+        "pixelSha256": "d613bfcaa3e8e6663163d2d54c822fcff23a183d2632f3f27e4242d9d1ad2415",
+        "width": 640,
+        "height": 101
+      },
+      "base": {
+        "pixelSha256": "d83bf3043703c03c959745f86dfd570825ae0c239f84482278b20eb8017ea5f5",
+        "width": 640,
+        "height": 97,
+        "lineCount": 1
+      },
+      "processed": {
+        "pixelSha256": "d83bf3043703c03c959745f86dfd570825ae0c239f84482278b20eb8017ea5f5",
+        "width": 640,
+        "height": 97,
+        "scaleX": 1,
+        "scaleY": 1,
+        "algorithm": "identity-v1"
+      },
+      "recognizedRaw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "blocks": [
+        {
+          "text": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+          "boundsRaw": [
+            33,
+            37,
+            523,
+            61
+          ],
+          "boundsUnscaled": [
+            33,
+            37,
+            523,
+            61
+          ],
+          "sdkRecognizedLanguage": "und",
+          "sdkLanguageStatus": "unknown",
+          "confidence": null,
+          "confidenceStatus": "unknown",
+          "lines": [
+            {
+              "text": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+              "boundsRaw": [
+                33,
+                37,
+                523,
+                61
+              ],
+              "boundsUnscaled": [
+                33,
+                37,
+                523,
+                61
+              ],
+              "sdkRecognizedLanguage": "fr",
+              "sdkLanguageStatus": "sdk_reported",
+              "confidence": 0.8443359136581421,
+              "confidenceStatus": "sdk_reported",
+              "elements": [
+                {
+                  "text": "Annulation",
+                  "boundsRaw": [
+                    33,
+                    37,
+                    146,
+                    61
+                  ],
+                  "boundsUnscaled": [
+                    33,
+                    37,
+                    146,
+                    61
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.883593738079071,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "gratuite",
+                  "boundsRaw": [
+                    154,
+                    37,
+                    233,
+                    61
+                  ],
+                  "boundsUnscaled": [
+                    154,
+                    37,
+                    233,
+                    61
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.83984375,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "jusqu'au",
+                  "boundsRaw": [
+                    242,
+                    37,
+                    327,
+                    61
+                  ],
+                  "boundsUnscaled": [
+                    242,
+                    37,
+                    327,
+                    61
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.78271484375,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "15",
+                  "boundsRaw": [
+                    336,
+                    37,
+                    359,
+                    61
+                  ],
+                  "boundsUnscaled": [
+                    336,
+                    37,
+                    359,
+                    61
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.9375,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "octobre",
+                  "boundsRaw": [
+                    367,
+                    37,
+                    447,
+                    61
+                  ],
+                  "boundsUnscaled": [
+                    367,
+                    37,
+                    447,
+                    61
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.83203125,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "à",
+                  "boundsRaw": [
+                    468,
+                    37,
+                    475,
+                    61
+                  ],
+                  "boundsUnscaled": [
+                    468,
+                    37,
+                    475,
+                    61
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.8125,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "18",
+                  "boundsRaw": [
+                    476,
+                    37,
+                    499,
+                    61
+                  ],
+                  "boundsUnscaled": [
+                    476,
+                    37,
+                    499,
+                    61
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.927734375,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "h.",
+                  "boundsRaw": [
+                    507,
+                    37,
+                    523,
+                    61
+                  ],
+                  "boundsUnscaled": [
+                    507,
+                    37,
+                    523,
+                    61
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.794921875,
+                  "confidenceStatus": "sdk_reported"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sdkRecognizedLanguage": null,
+      "sdkLanguageStatus": "not_available_at_document_level",
+      "sourceNormalized": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "recognizedNormalized": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "exactNormalizedMatch": true,
+      "status": "recognized",
+      "error": null,
+      "ocrElapsedMs": 68
+    },
+    {
+      "taskId": "fr-cancel-24/native/1x/chinese",
+      "inputId": "fr-cancel-24",
+      "caseId": "fr-cancel",
+      "engine": "chinese",
+      "sourceKind": "native",
+      "language": "fr",
+      "languageRole": "fixture_scoring_label_only",
+      "source": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "fontPx": 24,
+      "blankNegative": false,
+      "fixedReference": {
+        "asset": "fr-cancel-24.png",
+        "pngSha256": "5a6ecd2feaf5d125cfe3b541a99fbac1b656b69df8bf436a2797828e054b6804",
+        "pixelSha256": "d613bfcaa3e8e6663163d2d54c822fcff23a183d2632f3f27e4242d9d1ad2415",
+        "width": 640,
+        "height": 101
+      },
+      "base": {
+        "pixelSha256": "d83bf3043703c03c959745f86dfd570825ae0c239f84482278b20eb8017ea5f5",
+        "width": 640,
+        "height": 97,
+        "lineCount": 1
+      },
+      "processed": {
+        "pixelSha256": "d83bf3043703c03c959745f86dfd570825ae0c239f84482278b20eb8017ea5f5",
+        "width": 640,
+        "height": 97,
+        "scaleX": 1,
+        "scaleY": 1,
+        "algorithm": "identity-v1"
+      },
+      "recognizedRaw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "blocks": [
+        {
+          "text": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+          "boundsRaw": [
+            33,
+            37,
+            523,
+            61
+          ],
+          "boundsUnscaled": [
+            33,
+            37,
+            523,
+            61
+          ],
+          "sdkRecognizedLanguage": "und",
+          "sdkLanguageStatus": "unknown",
+          "confidence": null,
+          "confidenceStatus": "unknown",
+          "lines": [
+            {
+              "text": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+              "boundsRaw": [
+                33,
+                37,
+                523,
+                61
+              ],
+              "boundsUnscaled": [
+                33,
+                37,
+                523,
+                61
+              ],
+              "sdkRecognizedLanguage": "fr",
+              "sdkLanguageStatus": "sdk_reported",
+              "confidence": 0.8443359136581421,
+              "confidenceStatus": "sdk_reported",
+              "elements": [
+                {
+                  "text": "Annulation",
+                  "boundsRaw": [
+                    33,
+                    37,
+                    146,
+                    61
+                  ],
+                  "boundsUnscaled": [
+                    33,
+                    37,
+                    146,
+                    61
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.883593738079071,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "gratuite",
+                  "boundsRaw": [
+                    154,
+                    37,
+                    233,
+                    61
+                  ],
+                  "boundsUnscaled": [
+                    154,
+                    37,
+                    233,
+                    61
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.83984375,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "jusqu'au",
+                  "boundsRaw": [
+                    242,
+                    37,
+                    327,
+                    61
+                  ],
+                  "boundsUnscaled": [
+                    242,
+                    37,
+                    327,
+                    61
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.78271484375,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "15",
+                  "boundsRaw": [
+                    336,
+                    37,
+                    359,
+                    61
+                  ],
+                  "boundsUnscaled": [
+                    336,
+                    37,
+                    359,
+                    61
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.9375,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "octobre",
+                  "boundsRaw": [
+                    367,
+                    37,
+                    447,
+                    61
+                  ],
+                  "boundsUnscaled": [
+                    367,
+                    37,
+                    447,
+                    61
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.83203125,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "à",
+                  "boundsRaw": [
+                    468,
+                    37,
+                    475,
+                    61
+                  ],
+                  "boundsUnscaled": [
+                    468,
+                    37,
+                    475,
+                    61
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.8125,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "18",
+                  "boundsRaw": [
+                    476,
+                    37,
+                    499,
+                    61
+                  ],
+                  "boundsUnscaled": [
+                    476,
+                    37,
+                    499,
+                    61
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.927734375,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "h.",
+                  "boundsRaw": [
+                    507,
+                    37,
+                    523,
+                    61
+                  ],
+                  "boundsUnscaled": [
+                    507,
+                    37,
+                    523,
+                    61
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.794921875,
+                  "confidenceStatus": "sdk_reported"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sdkRecognizedLanguage": null,
+      "sdkLanguageStatus": "not_available_at_document_level",
+      "sourceNormalized": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "recognizedNormalized": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "exactNormalizedMatch": true,
+      "status": "recognized",
+      "error": null,
+      "ocrElapsedMs": 52
+    },
+    {
+      "taskId": "fr-cancel-24/native/2x/latin",
+      "inputId": "fr-cancel-24",
+      "caseId": "fr-cancel",
+      "engine": "latin",
+      "sourceKind": "native",
+      "language": "fr",
+      "languageRole": "fixture_scoring_label_only",
+      "source": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "fontPx": 24,
+      "blankNegative": false,
+      "fixedReference": {
+        "asset": "fr-cancel-24.png",
+        "pngSha256": "5a6ecd2feaf5d125cfe3b541a99fbac1b656b69df8bf436a2797828e054b6804",
+        "pixelSha256": "d613bfcaa3e8e6663163d2d54c822fcff23a183d2632f3f27e4242d9d1ad2415",
+        "width": 640,
+        "height": 101
+      },
+      "base": {
+        "pixelSha256": "d83bf3043703c03c959745f86dfd570825ae0c239f84482278b20eb8017ea5f5",
+        "width": 640,
+        "height": 97,
+        "lineCount": 1
+      },
+      "processed": {
+        "pixelSha256": "7400d5c5d7d33ce13743cb0d95249291ff6c242f2b493a4cf6208b3ca0dce9fd",
+        "width": 1280,
+        "height": 194,
+        "scaleX": 2,
+        "scaleY": 2,
+        "algorithm": "nearest-neighbor-exact-2x2-v1"
+      },
+      "recognizedRaw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "blocks": [
+        {
+          "text": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+          "boundsRaw": [
+            66,
+            77,
+            1046,
+            127
+          ],
+          "boundsUnscaled": [
+            33,
+            38.5,
+            523,
+            63.5
+          ],
+          "sdkRecognizedLanguage": "und",
+          "sdkLanguageStatus": "unknown",
+          "confidence": null,
+          "confidenceStatus": "unknown",
+          "lines": [
+            {
+              "text": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+              "boundsRaw": [
+                66,
+                77,
+                1046,
+                127
+              ],
+              "boundsUnscaled": [
+                33,
+                38.5,
+                523,
+                63.5
+              ],
+              "sdkRecognizedLanguage": "fr",
+              "sdkLanguageStatus": "sdk_reported",
+              "confidence": 0.881542980670929,
+              "confidenceStatus": "sdk_reported",
+              "elements": [
+                {
+                  "text": "Annulation",
+                  "boundsRaw": [
+                    66,
+                    77,
+                    292,
+                    127
+                  ],
+                  "boundsUnscaled": [
+                    33,
+                    38.5,
+                    146,
+                    63.5
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.897265613079071,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "gratuite",
+                  "boundsRaw": [
+                    308,
+                    77,
+                    466,
+                    127
+                  ],
+                  "boundsUnscaled": [
+                    154,
+                    38.5,
+                    233,
+                    63.5
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.89111328125,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "jusqu'au",
+                  "boundsRaw": [
+                    480,
+                    77,
+                    654,
+                    127
+                  ],
+                  "boundsUnscaled": [
+                    240,
+                    38.5,
+                    327,
+                    63.5
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.841796875,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "15",
+                  "boundsRaw": [
+                    672,
+                    77,
+                    718,
+                    127
+                  ],
+                  "boundsUnscaled": [
+                    336,
+                    38.5,
+                    359,
+                    63.5
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.935546875,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "octobre",
+                  "boundsRaw": [
+                    734,
+                    77,
+                    894,
+                    127
+                  ],
+                  "boundsUnscaled": [
+                    367,
+                    38.5,
+                    447,
+                    63.5
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.8722098469734192,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "à",
+                  "boundsRaw": [
+                    934,
+                    77,
+                    949,
+                    127
+                  ],
+                  "boundsUnscaled": [
+                    467,
+                    38.5,
+                    474.5,
+                    63.5
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.8671875,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "18",
+                  "boundsRaw": [
+                    952,
+                    77,
+                    998,
+                    127
+                  ],
+                  "boundsUnscaled": [
+                    476,
+                    38.5,
+                    499,
+                    63.5
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.9453125,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "h.",
+                  "boundsRaw": [
+                    1014,
+                    77,
+                    1046,
+                    127
+                  ],
+                  "boundsUnscaled": [
+                    507,
+                    38.5,
+                    523,
+                    63.5
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.845703125,
+                  "confidenceStatus": "sdk_reported"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sdkRecognizedLanguage": null,
+      "sdkLanguageStatus": "not_available_at_document_level",
+      "sourceNormalized": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "recognizedNormalized": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "exactNormalizedMatch": true,
+      "status": "recognized",
+      "error": null,
+      "ocrElapsedMs": 30
+    },
+    {
+      "taskId": "fr-cancel-24/native/2x/chinese",
+      "inputId": "fr-cancel-24",
+      "caseId": "fr-cancel",
+      "engine": "chinese",
+      "sourceKind": "native",
+      "language": "fr",
+      "languageRole": "fixture_scoring_label_only",
+      "source": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "fontPx": 24,
+      "blankNegative": false,
+      "fixedReference": {
+        "asset": "fr-cancel-24.png",
+        "pngSha256": "5a6ecd2feaf5d125cfe3b541a99fbac1b656b69df8bf436a2797828e054b6804",
+        "pixelSha256": "d613bfcaa3e8e6663163d2d54c822fcff23a183d2632f3f27e4242d9d1ad2415",
+        "width": 640,
+        "height": 101
+      },
+      "base": {
+        "pixelSha256": "d83bf3043703c03c959745f86dfd570825ae0c239f84482278b20eb8017ea5f5",
+        "width": 640,
+        "height": 97,
+        "lineCount": 1
+      },
+      "processed": {
+        "pixelSha256": "7400d5c5d7d33ce13743cb0d95249291ff6c242f2b493a4cf6208b3ca0dce9fd",
+        "width": 1280,
+        "height": 194,
+        "scaleX": 2,
+        "scaleY": 2,
+        "algorithm": "nearest-neighbor-exact-2x2-v1"
+      },
+      "recognizedRaw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "blocks": [
+        {
+          "text": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+          "boundsRaw": [
+            66,
+            77,
+            1046,
+            127
+          ],
+          "boundsUnscaled": [
+            33,
+            38.5,
+            523,
+            63.5
+          ],
+          "sdkRecognizedLanguage": "und",
+          "sdkLanguageStatus": "unknown",
+          "confidence": null,
+          "confidenceStatus": "unknown",
+          "lines": [
+            {
+              "text": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+              "boundsRaw": [
+                66,
+                77,
+                1046,
+                127
+              ],
+              "boundsUnscaled": [
+                33,
+                38.5,
+                523,
+                63.5
+              ],
+              "sdkRecognizedLanguage": "fr",
+              "sdkLanguageStatus": "sdk_reported",
+              "confidence": 0.881542980670929,
+              "confidenceStatus": "sdk_reported",
+              "elements": [
+                {
+                  "text": "Annulation",
+                  "boundsRaw": [
+                    66,
+                    77,
+                    292,
+                    127
+                  ],
+                  "boundsUnscaled": [
+                    33,
+                    38.5,
+                    146,
+                    63.5
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.897265613079071,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "gratuite",
+                  "boundsRaw": [
+                    308,
+                    77,
+                    466,
+                    127
+                  ],
+                  "boundsUnscaled": [
+                    154,
+                    38.5,
+                    233,
+                    63.5
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.89111328125,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "jusqu'au",
+                  "boundsRaw": [
+                    480,
+                    77,
+                    654,
+                    127
+                  ],
+                  "boundsUnscaled": [
+                    240,
+                    38.5,
+                    327,
+                    63.5
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.841796875,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "15",
+                  "boundsRaw": [
+                    672,
+                    77,
+                    718,
+                    127
+                  ],
+                  "boundsUnscaled": [
+                    336,
+                    38.5,
+                    359,
+                    63.5
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.935546875,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "octobre",
+                  "boundsRaw": [
+                    734,
+                    77,
+                    894,
+                    127
+                  ],
+                  "boundsUnscaled": [
+                    367,
+                    38.5,
+                    447,
+                    63.5
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.8722098469734192,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "à",
+                  "boundsRaw": [
+                    934,
+                    77,
+                    949,
+                    127
+                  ],
+                  "boundsUnscaled": [
+                    467,
+                    38.5,
+                    474.5,
+                    63.5
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.8671875,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "18",
+                  "boundsRaw": [
+                    952,
+                    77,
+                    998,
+                    127
+                  ],
+                  "boundsUnscaled": [
+                    476,
+                    38.5,
+                    499,
+                    63.5
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.9453125,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "h.",
+                  "boundsRaw": [
+                    1014,
+                    77,
+                    1046,
+                    127
+                  ],
+                  "boundsUnscaled": [
+                    507,
+                    38.5,
+                    523,
+                    63.5
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.845703125,
+                  "confidenceStatus": "sdk_reported"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sdkRecognizedLanguage": null,
+      "sdkLanguageStatus": "not_available_at_document_level",
+      "sourceNormalized": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "recognizedNormalized": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "exactNormalizedMatch": true,
+      "status": "recognized",
+      "error": null,
+      "ocrElapsedMs": 20
+    },
+    {
+      "taskId": "fr-cancel-24/fixed/1x/latin",
+      "inputId": "fr-cancel-24",
+      "caseId": "fr-cancel",
+      "engine": "latin",
+      "sourceKind": "fixed",
+      "language": "fr",
+      "languageRole": "fixture_scoring_label_only",
+      "source": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "fontPx": 24,
+      "blankNegative": false,
+      "fixedReference": {
+        "asset": "fr-cancel-24.png",
+        "pngSha256": "5a6ecd2feaf5d125cfe3b541a99fbac1b656b69df8bf436a2797828e054b6804",
+        "pixelSha256": "d613bfcaa3e8e6663163d2d54c822fcff23a183d2632f3f27e4242d9d1ad2415",
+        "width": 640,
+        "height": 101
+      },
+      "base": {
+        "pixelSha256": "d613bfcaa3e8e6663163d2d54c822fcff23a183d2632f3f27e4242d9d1ad2415",
+        "width": 640,
+        "height": 101,
+        "lineCount": 1
+      },
+      "processed": {
+        "pixelSha256": "d613bfcaa3e8e6663163d2d54c822fcff23a183d2632f3f27e4242d9d1ad2415",
+        "width": 640,
+        "height": 101,
+        "scaleX": 1,
+        "scaleY": 1,
+        "algorithm": "identity-v1"
+      },
+      "recognizedRaw": "Annulation gratuite jusqu'au 15 octobre à 18h.",
+      "blocks": [
+        {
+          "text": "Annulation gratuite jusqu'au 15 octobre à 18h.",
+          "boundsRaw": [
+            32,
+            29,
+            525,
+            52
+          ],
+          "boundsUnscaled": [
+            32,
+            29,
+            525,
+            52
+          ],
+          "sdkRecognizedLanguage": "und",
+          "sdkLanguageStatus": "unknown",
+          "confidence": null,
+          "confidenceStatus": "unknown",
+          "lines": [
+            {
+              "text": "Annulation gratuite jusqu'au 15 octobre à 18h.",
+              "boundsRaw": [
+                32,
+                29,
+                525,
+                52
+              ],
+              "boundsUnscaled": [
+                32,
+                29,
+                525,
+                52
+              ],
+              "sdkRecognizedLanguage": "fr",
+              "sdkLanguageStatus": "sdk_reported",
+              "confidence": 0.866406261920929,
+              "confidenceStatus": "sdk_reported",
+              "elements": [
+                {
+                  "text": "Annulation",
+                  "boundsRaw": [
+                    32,
+                    29,
+                    144,
+                    52
+                  ],
+                  "boundsUnscaled": [
+                    32,
+                    29,
+                    144,
+                    52
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.8941406011581421,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "gratuite",
+                  "boundsRaw": [
+                    153,
+                    29,
+                    232,
+                    52
+                  ],
+                  "boundsUnscaled": [
+                    153,
+                    29,
+                    232,
+                    52
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.89794921875,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "jusqu'au",
+                  "boundsRaw": [
+                    240,
+                    29,
+                    326,
+                    52
+                  ],
+                  "boundsUnscaled": [
+                    240,
+                    29,
+                    326,
+                    52
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.79638671875,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "15",
+                  "boundsRaw": [
+                    336,
+                    29,
+                    360,
+                    52
+                  ],
+                  "boundsUnscaled": [
+                    336,
+                    29,
+                    360,
+                    52
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.93359375,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "octobre",
+                  "boundsRaw": [
+                    368,
+                    29,
+                    447,
+                    52
+                  ],
+                  "boundsUnscaled": [
+                    368,
+                    29,
+                    447,
+                    52
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.8420758843421936,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "à",
+                  "boundsRaw": [
+                    468,
+                    29,
+                    474,
+                    52
+                  ],
+                  "boundsUnscaled": [
+                    468,
+                    29,
+                    474,
+                    52
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.80859375,
+                  "confidenceStatus": "sdk_reported"
+                },
+                {
+                  "text": "18h.",
+                  "boundsRaw": [
+                    476,
+                    29,
+                    525,
+                    52
+                  ],
+                  "boundsUnscaled": [
+                    476,
+                    29,
+                    525,
+                    52
+                  ],
+                  "sdkRecognizedLanguage": "fr",
+                  "sdkLanguageStatus": "sdk_reported",
+                  "confidence": 0.8974609375,
+                  "confidenceStatus": "sdk_reported"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sdkRecognizedLanguage": null,
+      "sdkLanguageStatus": "not_available_at_document_level",
+      "sourceNormalized": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "recognizedNormalized": "Annulation gratuite jusqu'au 15 octobre à 18h.",
+      "exactNormalizedMatch": false,
+      "status": "recognized",
+      "error": null,
+      "ocrElapsedMs": 17
+    }
+  ],
+  "status": "cancelled",
+  "completed": false,
+  "cancelled": true,
+  "processedCount": 5,
+  "operationalCompletedCount": 5,
+  "recognizedCount": 5,
+  "mismatchCount": 1,
+  "errorCount": 0,
+  "elapsedMs": 556,
+  "updatedAtEpochMs": 1790241821327,
+  "cleanupPendingAtPublication": true,
+  "error": null
+}

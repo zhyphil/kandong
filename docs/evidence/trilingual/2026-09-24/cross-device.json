@@ -1,0 +1,801 @@
+{
+  "scope": "same_pixel_comparison_not_root_cause_proof",
+  "devices": [
+    "kandong-trilingual-api36-20260924",
+    "kandong-trilingual-huawei-20260924"
+  ],
+  "tasks": [
+    {
+      "taskId": "fr-cancel-24/native/1x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-cancel-24/native/1x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-cancel-24/native/2x/latin",
+      "samePixels": false,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-cancel-24/native/2x/chinese",
+      "samePixels": false,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-cancel-24/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-cancel-24/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-cancel-24/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-cancel-24/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-total-16/native/1x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-total-16/native/1x/chinese",
+      "samePixels": false,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-total-16/native/2x/latin",
+      "samePixels": false,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-total-16/native/2x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-total-16/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-total-16/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-total-16/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-total-16/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-total-24/native/1x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-total-24/native/1x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-total-24/native/2x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-total-24/native/2x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-total-24/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-total-24/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-total-24/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-total-24/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-total-32/native/1x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-total-32/native/1x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-total-32/native/2x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-total-32/native/2x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-total-32/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-total-32/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-total-32/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-total-32/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-nonrefundable-16/native/1x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-nonrefundable-16/native/1x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-nonrefundable-16/native/2x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-nonrefundable-16/native/2x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-nonrefundable-16/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-nonrefundable-16/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-nonrefundable-16/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-nonrefundable-16/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-access-24/native/1x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-access-24/native/1x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-access-24/native/2x/latin",
+      "samePixels": false,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-access-24/native/2x/chinese",
+      "samePixels": false,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-access-24/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-access-24/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-access-24/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-access-24/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-luggage-32/native/1x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-luggage-32/native/1x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-luggage-32/native/2x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-luggage-32/native/2x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-luggage-32/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-luggage-32/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-luggage-32/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-luggage-32/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "en-quality-16/native/1x/latin",
+      "samePixels": false,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "en-quality-16/native/1x/chinese",
+      "samePixels": false,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "en-quality-16/native/2x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "en-quality-16/native/2x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "en-quality-16/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "en-quality-16/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "en-quality-16/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "en-quality-16/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "en-quality-32/native/1x/latin",
+      "samePixels": false,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "en-quality-32/native/1x/chinese",
+      "samePixels": false,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "en-quality-32/native/2x/latin",
+      "samePixels": false,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "en-quality-32/native/2x/chinese",
+      "samePixels": false,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "en-quality-32/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "en-quality-32/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "en-quality-32/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "en-quality-32/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-quality-16/native/1x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-quality-16/native/1x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-quality-16/native/2x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-quality-16/native/2x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-quality-16/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-quality-16/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-quality-16/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-quality-16/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-quality-32/native/1x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-quality-32/native/1x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-quality-32/native/2x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-quality-32/native/2x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "fr-quality-32/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-quality-32/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-quality-32/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "fr-quality-32/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "zh-hans-quality-16/native/1x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "zh-hans-quality-16/native/1x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "zh-hans-quality-16/native/2x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "zh-hans-quality-16/native/2x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "zh-hans-quality-16/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "zh-hans-quality-16/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "zh-hans-quality-16/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "zh-hans-quality-16/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "zh-hans-quality-32/native/1x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "zh-hans-quality-32/native/1x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "zh-hans-quality-32/native/2x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "zh-hans-quality-32/native/2x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "zh-hans-quality-32/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "zh-hans-quality-32/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "zh-hans-quality-32/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "zh-hans-quality-32/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "zh-hant-quality-16/native/1x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "zh-hant-quality-16/native/1x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "zh-hant-quality-16/native/2x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "zh-hant-quality-16/native/2x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "zh-hant-quality-16/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "zh-hant-quality-16/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "zh-hant-quality-16/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "zh-hant-quality-16/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "zh-hant-quality-32/native/1x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "zh-hant-quality-32/native/1x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "zh-hant-quality-32/native/2x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "zh-hant-quality-32/native/2x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "zh-hant-quality-32/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "zh-hant-quality-32/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "zh-hant-quality-32/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "zh-hant-quality-32/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "mixed-quality-16/native/1x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "mixed-quality-16/native/1x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "mixed-quality-16/native/2x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "mixed-quality-16/native/2x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "mixed-quality-16/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "mixed-quality-16/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "mixed-quality-16/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "mixed-quality-16/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "mixed-quality-32/native/1x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "mixed-quality-32/native/1x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "mixed-quality-32/native/2x/latin",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "mixed-quality-32/native/2x/chinese",
+      "samePixels": false,
+      "sameRawOutput": false
+    },
+    {
+      "taskId": "mixed-quality-32/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "mixed-quality-32/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "mixed-quality-32/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "mixed-quality-32/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "blank-negative-24/native/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "blank-negative-24/native/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "blank-negative-24/native/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "blank-negative-24/native/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "blank-negative-24/fixed/1x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "blank-negative-24/fixed/1x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "blank-negative-24/fixed/2x/latin",
+      "samePixels": true,
+      "sameRawOutput": true
+    },
+    {
+      "taskId": "blank-negative-24/fixed/2x/chinese",
+      "samePixels": true,
+      "sameRawOutput": true
+    }
+  ],
+  "fixedAllSamePixels": true,
+  "fixedOutputDifferences": [],
+  "nativeDifferentPixels": [
+    "fr-cancel-24/native/1x/latin",
+    "fr-cancel-24/native/1x/chinese",
+    "fr-cancel-24/native/2x/latin",
+    "fr-cancel-24/native/2x/chinese",
+    "fr-total-16/native/1x/latin",
+    "fr-total-16/native/1x/chinese",
+    "fr-total-16/native/2x/latin",
+    "fr-total-16/native/2x/chinese",
+    "fr-total-24/native/1x/latin",
+    "fr-total-24/native/1x/chinese",
+    "fr-total-24/native/2x/latin",
+    "fr-total-24/native/2x/chinese",
+    "fr-total-32/native/1x/latin",
+    "fr-total-32/native/1x/chinese",
+    "fr-total-32/native/2x/latin",
+    "fr-total-32/native/2x/chinese",
+    "fr-nonrefundable-16/native/1x/latin",
+    "fr-nonrefundable-16/native/1x/chinese",
+    "fr-nonrefundable-16/native/2x/latin",
+    "fr-nonrefundable-16/native/2x/chinese",
+    "fr-access-24/native/1x/latin",
+    "fr-access-24/native/1x/chinese",
+    "fr-access-24/native/2x/latin",
+    "fr-access-24/native/2x/chinese",
+    "fr-luggage-32/native/1x/latin",
+    "fr-luggage-32/native/1x/chinese",
+    "fr-luggage-32/native/2x/latin",
+    "fr-luggage-32/native/2x/chinese",
+    "en-quality-16/native/1x/latin",
+    "en-quality-16/native/1x/chinese",
+    "en-quality-16/native/2x/latin",
+    "en-quality-16/native/2x/chinese",
+    "en-quality-32/native/1x/latin",
+    "en-quality-32/native/1x/chinese",
+    "en-quality-32/native/2x/latin",
+    "en-quality-32/native/2x/chinese",
+    "fr-quality-16/native/1x/latin",
+    "fr-quality-16/native/1x/chinese",
+    "fr-quality-16/native/2x/latin",
+    "fr-quality-16/native/2x/chinese",
+    "fr-quality-32/native/1x/latin",
+    "fr-quality-32/native/1x/chinese",
+    "fr-quality-32/native/2x/latin",
+    "fr-quality-32/native/2x/chinese",
+    "zh-hans-quality-16/native/1x/latin",
+    "zh-hans-quality-16/native/1x/chinese",
+    "zh-hans-quality-16/native/2x/latin",
+    "zh-hans-quality-16/native/2x/chinese",
+    "zh-hans-quality-32/native/1x/latin",
+    "zh-hans-quality-32/native/1x/chinese",
+    "zh-hans-quality-32/native/2x/latin",
+    "zh-hans-quality-32/native/2x/chinese",
+    "zh-hant-quality-16/native/1x/latin",
+    "zh-hant-quality-16/native/1x/chinese",
+    "zh-hant-quality-16/native/2x/latin",
+    "zh-hant-quality-16/native/2x/chinese",
+    "zh-hant-quality-32/native/1x/latin",
+    "zh-hant-quality-32/native/1x/chinese",
+    "zh-hant-quality-32/native/2x/latin",
+    "zh-hant-quality-32/native/2x/chinese",
+    "mixed-quality-16/native/1x/latin",
+    "mixed-quality-16/native/1x/chinese",
+    "mixed-quality-16/native/2x/latin",
+    "mixed-quality-16/native/2x/chinese",
+    "mixed-quality-32/native/1x/latin",
+    "mixed-quality-32/native/1x/chinese",
+    "mixed-quality-32/native/2x/latin",
+    "mixed-quality-32/native/2x/chinese"
+  ]
+}
