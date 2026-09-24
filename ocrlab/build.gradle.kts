@@ -20,6 +20,9 @@ android {
     }
     kotlinOptions { jvmTarget = "17" }
     sourceSets.getByName("main").java.srcDir("src/contextShared/java")
+    // Metadata-only privacy cases exercise the same contract on JVM and Android.
+    sourceSets.getByName("test").java.srcDir("src/captureTest/java")
+    sourceSets.getByName("androidTest").java.srcDir("src/captureTest/java")
 }
 dependencies {
     implementation("com.google.mlkit:text-recognition:16.0.1")
