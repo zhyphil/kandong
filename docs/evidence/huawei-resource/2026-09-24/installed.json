@@ -1,0 +1,9 @@
+{
+  "candidateInstalled": true,
+  "installedApkSha256": "f1d7aabb3172dfc1ad2352aa6e171a0b39f59b92ca327f63dfadba901c253712",
+  "versionCode": 7,
+  "versionName": "0.1.1-clarity-dev",
+  "model": "LIO-AN00",
+  "api": 31,
+  "sameVersionDifferentBinaryVerified": true
+}

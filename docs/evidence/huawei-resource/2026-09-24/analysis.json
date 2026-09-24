@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "model": "LIO-AN00",
+  "api": 31,
+  "installedApkSha256": "f1d7aabb3172dfc1ad2352aa6e171a0b39f59b92ca327f63dfadba901c253712",
+  "active": {
+    "requestedSeconds": 600,
+    "sampleCount": 41,
+    "elapsedSeconds": 600.0,
+    "newRenderOrCleanupErrors": 0,
+    "intervalsWithoutEnhancedCounterAdvance": 0,
+    "batteryC": {
+      "first": 29.0,
+      "last": 29.0,
+      "min": 29.0,
+      "max": 29.0
+    },
+    "pssMiB": {
+      "first": 69.055,
+      "last": 70.888,
+      "min": 67.984,
+      "max": 71.663
+    }
+  },
+  "fixedGeometrySubset": {
+    "selection": "EXPANDED, scale 2.077086, bitmap548x189 and enhanced/viewport1096x379",
+    "sampleCount": 38,
+    "firstElapsedSeconds": 15.305,
+    "lastElapsedSeconds": 582.002,
+    "coverageSeconds": 566.697,
+    "firstTenMedianPssMiB": 68.608,
+    "lastTenMedianPssMiB": 68.609
+  },
+  "endpointLimits": [
+    "First sample scale3.7615016; user adjusted to2.077086 by second sample, not an exact2x run.",
+    "Last two samples (597.336s and600s) had enhancedBitmap dimensions0; final sample also bitmap0 while EXPANDED/capturing reported. Timing/cause unresolved; both excluded from fixed-geometry subset, not labelled application failures or valid enhanced displayed-frame samples.",
+    "Only sampled counters and dimensions, no screen content or continuous trace."
+  ],
+  "paused": {
+    "samples": 13,
+    "elapsedSeconds": 60.005,
+    "countersConstant": true,
+    "resourcesReleasedInAllSamples": true,
+    "newRenderOrCleanupErrors": 0,
+    "pssMiB": {
+      "first": 55.664,
+      "last": 44.73,
+      "min": 43.938,
+      "max": 55.664
+    }
+  },
+  "userFeedback": {
+    "afterTenMinutes": "没有明显卡顿或发热",
+    "threeCycleGestureRecheck": "pending"
+  },
+  "limits": [
+    "External power reported in all samples; no battery-drain conclusion.",
+    "Different conditions from original15-minute mixed-use run; no controlled before/after memory-saving percentage or leak-proof claim.",
+    "Candidate is still code7 development build, verified by installed APK SHA rather than version string.",
+    "No screen capture, page text, device serial or projection session UUID persisted."
+  ],
+  "rawSha256": {
+    "active.json": "b016a3376486d4da04c1a01a260ddb640c484f13ea5675c09eb4fa04bfebfb55",
+    "installed.json": "8abe70a96cd464c1f0dfd22115c5c58403cabcaea15c92f3e05c5328f7174c15",
+    "paused.json": "d3056a151be5c9e16db295102ac32ef6b373cb470748239544a92c2bac7bca70"
+  }
+}
