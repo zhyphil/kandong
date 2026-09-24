@@ -1,0 +1,175 @@
+2026-09-24 17:25:18.766 Python[38827:6776771] 2026-09-24 17:25:18.766950 [W:onnxruntime:Default, telemetry.cc:800 operator()] Failed to persist telemetry device ID; using an in-memory identifier
+1 arial-unicode-en-payment-16.png 1 exact True missing []
+2 arial-unicode-en-payment-16.png 2 exact True missing []
+3 arial-unicode-en-payment-24.png 1 exact True missing []
+4 arial-unicode-en-payment-24.png 2 exact True missing []
+5 arial-unicode-en-payment-32.png 1 exact True missing []
+6 arial-unicode-en-payment-32.png 2 exact True missing []
+7 arial-unicode-en-platform-16.png 1 exact True missing []
+8 arial-unicode-en-platform-16.png 2 exact True missing []
+9 arial-unicode-en-platform-24.png 1 exact True missing []
+10 arial-unicode-en-platform-24.png 2 exact True missing []
+11 arial-unicode-en-platform-32.png 1 exact True missing []
+12 arial-unicode-en-platform-32.png 2 exact True missing []
+13 arial-unicode-fr-deadline-16.png 1 exact True missing []
+14 arial-unicode-fr-deadline-16.png 2 exact True missing []
+15 arial-unicode-fr-deadline-24.png 1 exact True missing []
+16 arial-unicode-fr-deadline-24.png 2 exact True missing []
+17 arial-unicode-fr-deadline-32.png 1 exact False missing []
+18 arial-unicode-fr-deadline-32.png 2 exact False missing []
+19 arial-unicode-fr-cancellation-16.png 1 exact True missing []
+20 arial-unicode-fr-cancellation-16.png 2 exact True missing []
+21 arial-unicode-fr-cancellation-24.png 1 exact True missing []
+22 arial-unicode-fr-cancellation-24.png 2 exact True missing []
+23 arial-unicode-fr-cancellation-32.png 1 exact True missing []
+24 arial-unicode-fr-cancellation-32.png 2 exact True missing []
+25 arial-unicode-hans-payment-16.png 1 exact True missing []
+26 arial-unicode-hans-payment-16.png 2 exact True missing []
+27 arial-unicode-hans-payment-24.png 1 exact True missing []
+28 arial-unicode-hans-payment-24.png 2 exact True missing []
+29 arial-unicode-hans-payment-32.png 1 exact True missing []
+30 arial-unicode-hans-payment-32.png 2 exact True missing []
+31 arial-unicode-hans-pickup-16.png 1 exact False missing ['19:20']
+32 arial-unicode-hans-pickup-16.png 2 exact True missing []
+33 arial-unicode-hans-pickup-24.png 1 exact True missing []
+34 arial-unicode-hans-pickup-24.png 2 exact True missing []
+35 arial-unicode-hans-pickup-32.png 1 exact True missing []
+36 arial-unicode-hans-pickup-32.png 2 exact True missing []
+37 arial-unicode-hant-payment-16.png 1 exact False missing ['未含城市稅']
+38 arial-unicode-hant-payment-16.png 2 exact False missing ['未含城市稅']
+39 arial-unicode-hant-payment-24.png 1 exact False missing ['未含城市稅']
+40 arial-unicode-hant-payment-24.png 2 exact True missing []
+41 arial-unicode-hant-payment-32.png 1 exact True missing []
+42 arial-unicode-hant-payment-32.png 2 exact True missing []
+43 arial-unicode-hant-baggage-16.png 1 exact True missing []
+44 arial-unicode-hant-baggage-16.png 2 exact True missing []
+45 arial-unicode-hant-baggage-24.png 1 exact True missing []
+46 arial-unicode-hant-baggage-24.png 2 exact True missing []
+47 arial-unicode-hant-baggage-32.png 1 exact True missing []
+48 arial-unicode-hant-baggage-32.png 2 exact True missing []
+49 arial-unicode-mixed-breakfast-16.png 1 exact False missing []
+50 arial-unicode-mixed-breakfast-16.png 2 exact False missing ['Room C', 'Chambre C']
+51 arial-unicode-mixed-breakfast-24.png 1 exact False missing []
+52 arial-unicode-mixed-breakfast-24.png 2 exact False missing ['Chambre C']
+53 arial-unicode-mixed-breakfast-32.png 1 exact False missing []
+54 arial-unicode-mixed-breakfast-32.png 2 exact False missing []
+55 arial-unicode-mixed-exit-16.png 1 exact False missing []
+56 arial-unicode-mixed-exit-16.png 2 exact False missing []
+57 arial-unicode-mixed-exit-24.png 1 exact False missing []
+58 arial-unicode-mixed-exit-24.png 2 exact False missing []
+59 arial-unicode-mixed-exit-32.png 1 exact False missing []
+60 arial-unicode-mixed-exit-32.png 2 exact False missing []
+61 arial-unicode-blank-24.png 1 exact True missing []
+62 arial-unicode-blank-24.png 2 exact True missing []
+63 heiti-medium-en-payment-16.png 1 exact True missing []
+64 heiti-medium-en-payment-16.png 2 exact True missing []
+65 heiti-medium-en-payment-24.png 1 exact True missing []
+66 heiti-medium-en-payment-24.png 2 exact True missing []
+67 heiti-medium-en-payment-32.png 1 exact True missing []
+68 heiti-medium-en-payment-32.png 2 exact True missing []
+69 heiti-medium-en-platform-16.png 1 exact True missing []
+70 heiti-medium-en-platform-16.png 2 exact True missing []
+71 heiti-medium-en-platform-24.png 1 exact True missing []
+72 heiti-medium-en-platform-24.png 2 exact True missing []
+73 heiti-medium-en-platform-32.png 1 exact True missing []
+74 heiti-medium-en-platform-32.png 2 exact True missing []
+75 heiti-medium-fr-deadline-16.png 1 exact False missing []
+76 heiti-medium-fr-deadline-16.png 2 exact False missing ['09:15']
+77 heiti-medium-fr-deadline-24.png 1 exact False missing []
+78 heiti-medium-fr-deadline-24.png 2 exact False missing []
+79 heiti-medium-fr-deadline-32.png 1 exact False missing []
+80 heiti-medium-fr-deadline-32.png 2 exact False missing []
+81 heiti-medium-fr-cancellation-16.png 1 exact True missing []
+82 heiti-medium-fr-cancellation-16.png 2 exact True missing []
+83 heiti-medium-fr-cancellation-24.png 1 exact True missing []
+84 heiti-medium-fr-cancellation-24.png 2 exact True missing []
+85 heiti-medium-fr-cancellation-32.png 1 exact True missing []
+86 heiti-medium-fr-cancellation-32.png 2 exact True missing []
+87 heiti-medium-hans-payment-16.png 1 exact True missing []
+88 heiti-medium-hans-payment-16.png 2 exact True missing []
+89 heiti-medium-hans-payment-24.png 1 exact True missing []
+90 heiti-medium-hans-payment-24.png 2 exact True missing []
+91 heiti-medium-hans-payment-32.png 1 exact True missing []
+92 heiti-medium-hans-payment-32.png 2 exact True missing []
+93 heiti-medium-hans-pickup-16.png 1 exact True missing []
+94 heiti-medium-hans-pickup-16.png 2 exact False missing []
+95 heiti-medium-hans-pickup-24.png 1 exact True missing []
+96 heiti-medium-hans-pickup-24.png 2 exact True missing []
+97 heiti-medium-hans-pickup-32.png 1 exact True missing []
+98 heiti-medium-hans-pickup-32.png 2 exact True missing []
+99 heiti-medium-hant-payment-16.png 1 exact False missing ['未含城市稅']
+100 heiti-medium-hant-payment-16.png 2 exact False missing []
+101 heiti-medium-hant-payment-24.png 1 exact True missing []
+102 heiti-medium-hant-payment-24.png 2 exact False missing []
+103 heiti-medium-hant-payment-32.png 1 exact True missing []
+104 heiti-medium-hant-payment-32.png 2 exact False missing []
+105 heiti-medium-hant-baggage-16.png 1 exact True missing []
+106 heiti-medium-hant-baggage-16.png 2 exact True missing []
+107 heiti-medium-hant-baggage-24.png 1 exact True missing []
+108 heiti-medium-hant-baggage-24.png 2 exact False missing []
+109 heiti-medium-hant-baggage-32.png 1 exact True missing []
+110 heiti-medium-hant-baggage-32.png 2 exact True missing []
+111 heiti-medium-mixed-breakfast-16.png 1 exact False missing ['Chambre C']
+112 heiti-medium-mixed-breakfast-16.png 2 exact False missing ['Room C', 'Chambre C']
+113 heiti-medium-mixed-breakfast-24.png 1 exact False missing ['Chambre C']
+114 heiti-medium-mixed-breakfast-24.png 2 exact False missing ['Room C', 'Chambre C']
+115 heiti-medium-mixed-breakfast-32.png 1 exact False missing ['Room C', 'Chambre C']
+116 heiti-medium-mixed-breakfast-32.png 2 exact False missing ['Room C', 'Chambre C']
+117 heiti-medium-mixed-exit-16.png 1 exact False missing []
+118 heiti-medium-mixed-exit-16.png 2 exact False missing ['Sortie 4']
+119 heiti-medium-mixed-exit-24.png 1 exact False missing []
+120 heiti-medium-mixed-exit-24.png 2 exact False missing ['Sortie 4']
+121 heiti-medium-mixed-exit-32.png 1 exact False missing []
+122 heiti-medium-mixed-exit-32.png 2 exact False missing ['Sortie 4']
+123 heiti-medium-blank-24.png 1 exact True missing []
+124 heiti-medium-blank-24.png 2 exact True missing []
+[
+  {
+    "font": "arial-unicode",
+    "scale": 1,
+    "textImages": 30,
+    "selectedExact": 20,
+    "chExact": 18,
+    "review": 0,
+    "regressions": [],
+    "literalCriticalTotal": 93,
+    "literalCriticalMisses": 3,
+    "blankPassed": true
+  },
+  {
+    "font": "arial-unicode",
+    "scale": 2,
+    "textImages": 30,
+    "selectedExact": 22,
+    "chExact": 20,
+    "review": 0,
+    "regressions": [],
+    "literalCriticalTotal": 93,
+    "literalCriticalMisses": 4,
+    "blankPassed": true
+  },
+  {
+    "font": "heiti-medium",
+    "scale": 1,
+    "textImages": 30,
+    "selectedExact": 20,
+    "chExact": 19,
+    "review": 0,
+    "regressions": [],
+    "literalCriticalTotal": 93,
+    "literalCriticalMisses": 5,
+    "blankPassed": true
+  },
+  {
+    "font": "heiti-medium",
+    "scale": 2,
+    "textImages": 30,
+    "selectedExact": 16,
+    "chExact": 16,
+    "review": 0,
+    "regressions": [],
+    "literalCriticalTotal": 93,
+    "literalCriticalMisses": 10,
+    "blankPassed": true
+  }
+]

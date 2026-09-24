@@ -1,0 +1,459 @@
+{
+  "schema": 1,
+  "status": "quality-evaluation-complete-not-accepted-for-product",
+  "rawReportSha256": "78862bb839cda33d9bd11f3200c246812085bd5403dfd75a98cfd8f73330d082",
+  "manifestSha256": "b9263fbb0176f98223df02310892e3fcc3fdc5dcf2dcbe36d4b2b65aeeadd2f9",
+  "groups": [
+    {
+      "font": "arial-unicode",
+      "scale": 1,
+      "textImages": 30,
+      "selectedExact": 20,
+      "chExact": 18,
+      "review": 0,
+      "regressions": [],
+      "literalCriticalTotal": 93,
+      "literalCriticalMisses": 3,
+      "blankPassed": true
+    },
+    {
+      "font": "arial-unicode",
+      "scale": 2,
+      "textImages": 30,
+      "selectedExact": 22,
+      "chExact": 20,
+      "review": 0,
+      "regressions": [],
+      "literalCriticalTotal": 93,
+      "literalCriticalMisses": 4,
+      "blankPassed": true
+    },
+    {
+      "font": "heiti-medium",
+      "scale": 1,
+      "textImages": 30,
+      "selectedExact": 20,
+      "chExact": 19,
+      "review": 0,
+      "regressions": [],
+      "literalCriticalTotal": 93,
+      "literalCriticalMisses": 5,
+      "blankPassed": true
+    },
+    {
+      "font": "heiti-medium",
+      "scale": 2,
+      "textImages": 30,
+      "selectedExact": 16,
+      "chExact": 16,
+      "review": 0,
+      "regressions": [],
+      "literalCriticalTotal": 93,
+      "literalCriticalMisses": 10,
+      "blankPassed": true
+    }
+  ],
+  "strictMismatches": 42,
+  "diagnosticCategories": {
+    "spacing-and-apostrophe-style": 7,
+    "spacing-and-compatibility-forms": 4,
+    "spacing-and-tax-glyph-form": 4,
+    "spacing-only": 22,
+    "missing-final-period": 4,
+    "other-content-difference": 1
+  },
+  "characterEditRegressions": [
+    {
+      "font": "heiti-medium",
+      "id": "hant-payment",
+      "fontPx": 32,
+      "scale": 2,
+      "before": 1,
+      "after": 2,
+      "chRaw": "應付59.40元，未含城市稅。\n訂單確認後不可取消\n。",
+      "selectedRaw": "應付59.40元，未含城市稅。\n訂單確認後不可取消\no"
+    }
+  ],
+  "diagnosticDifferences": [
+    {
+      "font": "arial-unicode",
+      "id": "fr-deadline",
+      "fontPx": 32,
+      "scale": 1,
+      "category": "spacing-and-apostrophe-style",
+      "source": "Aucun paiement aujourd’hui.\nÉchéance : 21/11 à 09:15.",
+      "selectedRaw": "Aucun paiement aujourd'hui.\nÉchéance : 21/11 à 09:15."
+    },
+    {
+      "font": "arial-unicode",
+      "id": "fr-deadline",
+      "fontPx": 32,
+      "scale": 2,
+      "category": "spacing-and-apostrophe-style",
+      "source": "Aucun paiement aujourd’hui.\nÉchéance : 21/11 à 09:15.",
+      "selectedRaw": "Aucun paiement aujourd'hui.\nÉchéance : 21/11 à 09:15."
+    },
+    {
+      "font": "arial-unicode",
+      "id": "hans-pickup",
+      "fontPx": 16,
+      "scale": 1,
+      "category": "spacing-and-compatibility-forms",
+      "source": "取件码407216，有效至19:20。\n请不要把取件码告诉陌生人。",
+      "selectedRaw": "取件码407216，有效至19：20。\n请不要把取件码告诉陌生人。"
+    },
+    {
+      "font": "arial-unicode",
+      "id": "hant-payment",
+      "fontPx": 16,
+      "scale": 1,
+      "category": "spacing-and-tax-glyph-form",
+      "source": "應付59.40元，未含城市稅。\n訂單確認後不可取消。",
+      "selectedRaw": "應付59.40元，未含城市税。\n訂單確認後不可取消。"
+    },
+    {
+      "font": "arial-unicode",
+      "id": "hant-payment",
+      "fontPx": 16,
+      "scale": 2,
+      "category": "spacing-and-tax-glyph-form",
+      "source": "應付59.40元，未含城市稅。\n訂單確認後不可取消。",
+      "selectedRaw": "應付59.40元，未含城市税。\n訂單確認後不可取消。"
+    },
+    {
+      "font": "arial-unicode",
+      "id": "hant-payment",
+      "fontPx": 24,
+      "scale": 1,
+      "category": "spacing-and-tax-glyph-form",
+      "source": "應付59.40元，未含城市稅。\n訂單確認後不可取消。",
+      "selectedRaw": "應付59.40元，未含城市税。\n訂單確認後不可取消。"
+    },
+    {
+      "font": "arial-unicode",
+      "id": "mixed-breakfast",
+      "fontPx": 16,
+      "scale": 1,
+      "category": "spacing-only",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "selectedRaw": "Room C /房间C / Chambre C\nBreakfast not included /不含早餐"
+    },
+    {
+      "font": "arial-unicode",
+      "id": "mixed-breakfast",
+      "fontPx": 16,
+      "scale": 2,
+      "category": "spacing-only",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "selectedRaw": "RoomC/房间C / ChambreC\nBreakfast not included/不含早餐"
+    },
+    {
+      "font": "arial-unicode",
+      "id": "mixed-breakfast",
+      "fontPx": 24,
+      "scale": 1,
+      "category": "spacing-only",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "selectedRaw": "Room C /房间C / Chambre C\nBreakfast not included /不含早餐"
+    },
+    {
+      "font": "arial-unicode",
+      "id": "mixed-breakfast",
+      "fontPx": 24,
+      "scale": 2,
+      "category": "spacing-only",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "selectedRaw": "Room C/房间C/ChambreC\nBreakfast not included /不含早餐"
+    },
+    {
+      "font": "arial-unicode",
+      "id": "mixed-breakfast",
+      "fontPx": 32,
+      "scale": 1,
+      "category": "spacing-only",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "selectedRaw": "Room C/房间C/Chambre C\nBreakfast not included / 不含早餐"
+    },
+    {
+      "font": "arial-unicode",
+      "id": "mixed-breakfast",
+      "fontPx": 32,
+      "scale": 2,
+      "category": "spacing-only",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "selectedRaw": "Room C/房间C/Chambre C\nBreakfast not included /不含早餐"
+    },
+    {
+      "font": "arial-unicode",
+      "id": "mixed-exit",
+      "fontPx": 16,
+      "scale": 1,
+      "category": "spacing-only",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "selectedRaw": "Exit 4/出口4 /Sortie 4\nDo not enter /請勿進入"
+    },
+    {
+      "font": "arial-unicode",
+      "id": "mixed-exit",
+      "fontPx": 16,
+      "scale": 2,
+      "category": "spacing-only",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "selectedRaw": "Exit 4 /出口4/ Sortie 4\nDo not enter /請勿進入"
+    },
+    {
+      "font": "arial-unicode",
+      "id": "mixed-exit",
+      "fontPx": 24,
+      "scale": 1,
+      "category": "spacing-only",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "selectedRaw": "Exit 4/出口4/ Sortie 4\nDo not enter /請勿進入"
+    },
+    {
+      "font": "arial-unicode",
+      "id": "mixed-exit",
+      "fontPx": 24,
+      "scale": 2,
+      "category": "spacing-only",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "selectedRaw": "Exit 4/出口4/Sortie 4\nDo not enter /請勿進入"
+    },
+    {
+      "font": "arial-unicode",
+      "id": "mixed-exit",
+      "fontPx": 32,
+      "scale": 1,
+      "category": "spacing-only",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "selectedRaw": "Exit 4 /出口4 / Sortie 4\nDo not enter /請勿進入"
+    },
+    {
+      "font": "arial-unicode",
+      "id": "mixed-exit",
+      "fontPx": 32,
+      "scale": 2,
+      "category": "spacing-only",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "selectedRaw": "Exit 4/出口4 / Sortie 4\nDo not enter /請勿進入"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "fr-deadline",
+      "fontPx": 16,
+      "scale": 1,
+      "category": "spacing-and-apostrophe-style",
+      "source": "Aucun paiement aujourd’hui.\nÉchéance : 21/11 à 09:15.",
+      "selectedRaw": "Aucun paiement aujourd' hui.\nÉchéance : 21/11 à 09:15."
+    },
+    {
+      "font": "heiti-medium",
+      "id": "fr-deadline",
+      "fontPx": 16,
+      "scale": 2,
+      "category": "spacing-only",
+      "source": "Aucun paiement aujourd’hui.\nÉchéance : 21/11 à 09:15.",
+      "selectedRaw": "Aucun paiement aujourd’ hui.\nÉchéance : 21/11 à 09: 15."
+    },
+    {
+      "font": "heiti-medium",
+      "id": "fr-deadline",
+      "fontPx": 24,
+      "scale": 1,
+      "category": "spacing-and-apostrophe-style",
+      "source": "Aucun paiement aujourd’hui.\nÉchéance : 21/11 à 09:15.",
+      "selectedRaw": "Aucun paiement aujourd' hui.\nÉchéance : 21/11 à 09:15."
+    },
+    {
+      "font": "heiti-medium",
+      "id": "fr-deadline",
+      "fontPx": 24,
+      "scale": 2,
+      "category": "spacing-and-apostrophe-style",
+      "source": "Aucun paiement aujourd’hui.\nÉchéance : 21/11 à 09:15.",
+      "selectedRaw": "Aucun paiement aujourd' hui.\nÉchéance : 21/11 à 09:15."
+    },
+    {
+      "font": "heiti-medium",
+      "id": "fr-deadline",
+      "fontPx": 32,
+      "scale": 1,
+      "category": "spacing-and-apostrophe-style",
+      "source": "Aucun paiement aujourd’hui.\nÉchéance : 21/11 à 09:15.",
+      "selectedRaw": "Aucun paiement aujourd' hui.\nÉchéance : 21/11 à 09:15."
+    },
+    {
+      "font": "heiti-medium",
+      "id": "fr-deadline",
+      "fontPx": 32,
+      "scale": 2,
+      "category": "spacing-and-apostrophe-style",
+      "source": "Aucun paiement aujourd’hui.\nÉchéance : 21/11 à 09:15.",
+      "selectedRaw": "Aucun paiement\naujourd'\nhui.\nÉchéance : 21/11 à 09:15."
+    },
+    {
+      "font": "heiti-medium",
+      "id": "hans-pickup",
+      "fontPx": 16,
+      "scale": 2,
+      "category": "missing-final-period",
+      "source": "取件码407216，有效至19:20。\n请不要把取件码告诉陌生人。",
+      "selectedRaw": "取件码407216，有效至19:20。\n请不要把取件码告诉陌生人"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "hant-payment",
+      "fontPx": 16,
+      "scale": 1,
+      "category": "spacing-and-tax-glyph-form",
+      "source": "應付59.40元，未含城市稅。\n訂單確認後不可取消。",
+      "selectedRaw": "應付59.40元，未含城市税。\n訂單確認後不可取消。"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "hant-payment",
+      "fontPx": 16,
+      "scale": 2,
+      "category": "missing-final-period",
+      "source": "應付59.40元，未含城市稅。\n訂單確認後不可取消。",
+      "selectedRaw": "應付59.40元，未含城市稅。\n訂單確認後不可取消"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "hant-payment",
+      "fontPx": 24,
+      "scale": 2,
+      "category": "missing-final-period",
+      "source": "應付59.40元，未含城市稅。\n訂單確認後不可取消。",
+      "selectedRaw": "應付59.40元，未含城市稅。\n訂單確認後不可取消"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "hant-payment",
+      "fontPx": 32,
+      "scale": 2,
+      "category": "other-content-difference",
+      "source": "應付59.40元，未含城市稅。\n訂單確認後不可取消。",
+      "selectedRaw": "應付59.40元，未含城市稅。\n訂單確認後不可取消\no"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "hant-baggage",
+      "fontPx": 24,
+      "scale": 2,
+      "category": "missing-final-period",
+      "source": "手提行李限重6公斤。\n充電器不可放入託運行李。",
+      "selectedRaw": "手提行李限重6公斤。\n充電器不可放入託運行李"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "mixed-breakfast",
+      "fontPx": 16,
+      "scale": 1,
+      "category": "spacing-only",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "selectedRaw": "Room C/房间C /ChambreC\nBreakfast not included /不含早餐"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "mixed-breakfast",
+      "fontPx": 16,
+      "scale": 2,
+      "category": "spacing-only",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "selectedRaw": "RoomC/房间C/ChambreC\nBreakfast not included /不含早餐"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "mixed-breakfast",
+      "fontPx": 24,
+      "scale": 1,
+      "category": "spacing-only",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "selectedRaw": "Room C/房间C/ChambreC\nBreakfast not included /不含早餐"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "mixed-breakfast",
+      "fontPx": 24,
+      "scale": 2,
+      "category": "spacing-and-compatibility-forms",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "selectedRaw": "RoomC/房间C/ChambreC\nBreakfast not included ／不含早餐"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "mixed-breakfast",
+      "fontPx": 32,
+      "scale": 1,
+      "category": "spacing-and-compatibility-forms",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "selectedRaw": "RoomC/房间C/ChambreC\nBreakfast not included／不含早餐"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "mixed-breakfast",
+      "fontPx": 32,
+      "scale": 2,
+      "category": "spacing-and-compatibility-forms",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "selectedRaw": "RoomC/房间C/ChambreC\nBreakfast not included ／不含早餐"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "mixed-exit",
+      "fontPx": 16,
+      "scale": 1,
+      "category": "spacing-only",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "selectedRaw": "Exit 4 /出口4/ Sortie 4\nDo not enter /請勿進入"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "mixed-exit",
+      "fontPx": 16,
+      "scale": 2,
+      "category": "spacing-only",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "selectedRaw": "Exit 4/出口4/Sortie4\nDo not enter/請勿進入"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "mixed-exit",
+      "fontPx": 24,
+      "scale": 1,
+      "category": "spacing-only",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "selectedRaw": "Exit 4 /出口4/ Sortie 4\nDo not enter /請勿進入"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "mixed-exit",
+      "fontPx": 24,
+      "scale": 2,
+      "category": "spacing-only",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "selectedRaw": "Exit 4/出口4/Sortie4\nDo not enter/請勿進入"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "mixed-exit",
+      "fontPx": 32,
+      "scale": 1,
+      "category": "spacing-only",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "selectedRaw": "Exit 4/出口4/ Sortie 4\nDo not enter /請勿進入"
+    },
+    {
+      "font": "heiti-medium",
+      "id": "mixed-exit",
+      "fontPx": 32,
+      "scale": 2,
+      "category": "spacing-only",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "selectedRaw": "Exit 4/出口4/ Sortie4\nDo not enter /請勿進入"
+    }
+  ],
+  "scoring": "Original NFC + Unicode White_Space remains unchanged. Diagnostic equivalences do not alter scores or raw text.",
+  "conclusion": "Page exact-match regression count is insufficient: a pre-existing spacing mismatch can hide a new letter error. v2 produced one new character error (period to o)."
+}
