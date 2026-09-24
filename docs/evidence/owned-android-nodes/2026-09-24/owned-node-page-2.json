@@ -1,0 +1,163 @@
+{
+  "scope": "owned-synthetic-view-registry",
+  "api": 37,
+  "page": 2,
+  "origin": "OWNED_ANDROID_FIXTURE",
+  "coverage": "UNVERIFIED",
+  "obtained": 12,
+  "released": 12,
+  "labelReads": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    10
+  ],
+  "observations": [
+    {
+      "id": 1,
+      "class": "android.widget.TextView",
+      "clickable": false,
+      "frameworkWindowId": -1,
+      "screenBounds": "CaptureRect(left=42, top=544, right=1038, bottom=688)",
+      "viewScreenBounds": "CaptureRect(left=42, top=544, right=1038, bottom=688)",
+      "visible": "YES",
+      "password": "NO",
+      "editable": "NO",
+      "sensitive": "NO"
+    },
+    {
+      "id": 2,
+      "class": "android.widget.Button",
+      "clickable": true,
+      "frameworkWindowId": -1,
+      "screenBounds": "CaptureRect(left=42, top=688, right=1038, bottom=832)",
+      "viewScreenBounds": "CaptureRect(left=42, top=688, right=1038, bottom=832)",
+      "visible": "YES",
+      "password": "NO",
+      "editable": "NO",
+      "sensitive": "NO"
+    },
+    {
+      "id": 3,
+      "class": "android.widget.TextView",
+      "clickable": false,
+      "frameworkWindowId": -1,
+      "screenBounds": "CaptureRect(left=42, top=832, right=1038, bottom=976)",
+      "viewScreenBounds": "CaptureRect(left=42, top=832, right=1038, bottom=976)",
+      "visible": "YES",
+      "password": "NO",
+      "editable": "NO",
+      "sensitive": "NO"
+    },
+    {
+      "id": 4,
+      "class": "android.widget.TextView",
+      "clickable": false,
+      "frameworkWindowId": -1,
+      "screenBounds": "CaptureRect(left=42, top=976, right=1038, bottom=1160)",
+      "viewScreenBounds": "CaptureRect(left=42, top=976, right=1038, bottom=1160)",
+      "visible": "YES",
+      "password": "NO",
+      "editable": "NO",
+      "sensitive": "NO"
+    },
+    {
+      "id": 5,
+      "class": "android.widget.ImageView",
+      "clickable": false,
+      "frameworkWindowId": -1,
+      "screenBounds": "CaptureRect(left=42, top=1160, right=1038, bottom=1304)",
+      "viewScreenBounds": "CaptureRect(left=42, top=1160, right=1038, bottom=1304)",
+      "visible": "YES",
+      "password": "NO",
+      "editable": "NO",
+      "sensitive": "NO"
+    },
+    {
+      "id": 6,
+      "class": "android.widget.EditText",
+      "clickable": true,
+      "frameworkWindowId": -1,
+      "screenBounds": "CaptureRect(left=42, top=1304, right=1038, bottom=1448)",
+      "viewScreenBounds": "CaptureRect(left=42, top=1304, right=1038, bottom=1448)",
+      "visible": "YES",
+      "password": "YES",
+      "editable": "YES",
+      "sensitive": "NO"
+    },
+    {
+      "id": 7,
+      "class": "android.widget.EditText",
+      "clickable": true,
+      "frameworkWindowId": -1,
+      "screenBounds": "CaptureRect(left=42, top=1448, right=1038, bottom=1592)",
+      "viewScreenBounds": "CaptureRect(left=42, top=1448, right=1038, bottom=1592)",
+      "visible": "YES",
+      "password": "NO",
+      "editable": "YES",
+      "sensitive": "NO"
+    },
+    {
+      "id": 8,
+      "class": "android.widget.TextView",
+      "clickable": false,
+      "frameworkWindowId": -1,
+      "screenBounds": "CaptureRect(left=42, top=1592, right=1038, bottom=1736)",
+      "viewScreenBounds": "CaptureRect(left=42, top=1592, right=1038, bottom=1736)",
+      "visible": "YES",
+      "password": "NO",
+      "editable": "NO",
+      "sensitive": "YES"
+    },
+    {
+      "id": 9,
+      "class": "android.widget.LinearLayout",
+      "clickable": false,
+      "frameworkWindowId": -1,
+      "screenBounds": "CaptureRect(left=42, top=1736, right=1038, bottom=1894)",
+      "viewScreenBounds": "CaptureRect(left=42, top=1736, right=1038, bottom=1894)",
+      "visible": "YES",
+      "password": "NO",
+      "editable": "NO",
+      "sensitive": "NO"
+    },
+    {
+      "id": 10,
+      "class": "android.widget.TextView",
+      "clickable": false,
+      "frameworkWindowId": -1,
+      "screenBounds": "CaptureRect(left=42, top=1736, right=1038, bottom=1880)",
+      "viewScreenBounds": "CaptureRect(left=42, top=1736, right=1038, bottom=1880)",
+      "visible": "YES",
+      "password": "NO",
+      "editable": "NO",
+      "sensitive": "NO"
+    },
+    {
+      "id": 11,
+      "class": "android.widget.TextView",
+      "clickable": false,
+      "frameworkWindowId": -1,
+      "screenBounds": "CaptureRect(left=42, top=1894, right=1038, bottom=1983)",
+      "viewScreenBounds": "CaptureRect(left=42, top=1894, right=1038, bottom=2038)",
+      "visible": "YES",
+      "password": "NO",
+      "editable": "NO",
+      "sensitive": "NO"
+    },
+    {
+      "id": 12,
+      "class": "android.widget.TextView",
+      "clickable": false,
+      "frameworkWindowId": -1,
+      "screenBounds": "CaptureRect(left=42, top=2038, right=1038, bottom=1983)",
+      "viewScreenBounds": "CaptureRect(left=42, top=2038, right=1038, bottom=2235)",
+      "visible": "NO",
+      "password": "NO",
+      "editable": "NO",
+      "sensitive": "NO"
+    }
+  ]
+}

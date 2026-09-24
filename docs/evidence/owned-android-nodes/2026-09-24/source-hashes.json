@@ -1,0 +1,10 @@
+{
+  "ocrlab/src/main/java/com/kandong/ocrlab/context/capture/OwnedNodeSnapshot.kt": "02932bdd63bdb60a36b205a73fd87c4741d89ca729605ffba50438ae84fea1a5",
+  "ocrlab/src/main/java/com/kandong/ocrlab/context/capture/OwnedNodeLabActivity.kt": "63813ea906ec5a832b0359ece51366aba569df9955731c5b06fdf0c14d24ef31",
+  "ocrlab/src/androidTest/java/com/kandong/ocrlab/context/capture/OwnedNodeCaptureInstrumentedTest.kt": "3d7cd07bd7236c52a3266ed6c32c7f42c5d2e2849774bd5ac9b69a4ca2309ecc",
+  "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/capture/LocalCapturePrivacy.kt": "720425d6f9ed1bbf3be95705cd701bdf719c2432853e4f38836d681d12d0bd85",
+  "ocrlab/src/captureTest/java/com/kandong/ocrlab/context/capture/CaptureOriginTest.kt": "7a0ae919203022225fd224d070f623a4e6aafc28a97e0f905a8749c7bca70738",
+  "ocrlab/src/main/AndroidManifest.xml": "1e42a218209c1dc0686a67f5dcf3e6979b9866570e0d8449a65eb41a95ddfacf",
+  "ocrlab/src/main/java/com/kandong/ocrlab/OcrLabActivity.kt": "8a6adc69981b76ee6ac950c14ff289eddc0734b8d0e291f771e8505b835d5744",
+  "ocrlab/build.gradle.kts": "84e237fd824a30a0deb40a4a49c68228f7b731abb40257bf349d22094d1c8d8a"
+}

@@ -1,0 +1,8 @@
+{
+  "avd": "KanDong_OCR_API37_16K",
+  "serial": "emulator-5582",
+  "api": 37,
+  "pageBytes": 16384,
+  "physicalDeviceOperated": false,
+  "permissionsEnabled": false
+}

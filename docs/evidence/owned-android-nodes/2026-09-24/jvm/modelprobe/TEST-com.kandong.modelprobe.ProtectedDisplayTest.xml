@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.ProtectedDisplayTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-09-24T21:14:54.261Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.002">
+  <properties/>
+  <testcase name="threeOutcomesKeepSourceOwnershipAndDistinctOrigins" classname="com.kandong.modelprobe.ProtectedDisplayTest" time="0.0"/>
+  <testcase name="originalPresentationNeverDisplaysRejectedTextAndChineseNeedsNoWarning" classname="com.kandong.modelprobe.ProtectedDisplayTest" time="0.001"/>
+  <testcase name="contradictoryOutcomesAreRejectedAtomically" classname="com.kandong.modelprobe.ProtectedDisplayTest" time="0.0"/>
+  <testcase name="everyClearReasonRevokesEveryKindAndOldCallback" classname="com.kandong.modelprobe.ProtectedDisplayTest" time="0.001"/>
+  <testcase name="sourceMismatchDoesNotPublishPartialResults" classname="com.kandong.modelprobe.ProtectedDisplayTest" time="0.0"/>
+  <testcase name="pendingAndDisplayedResultsCannotSurviveWindowRevisionOrExpiry" classname="com.kandong.modelprobe.ProtectedDisplayTest" time="0.0"/>
+  <testcase name="movingAndZoomingDoNotChangeAnswersOrIssueAnotherRequest" classname="com.kandong.modelprobe.ProtectedDisplayTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

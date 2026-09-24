@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "date": "2026-09-24",
+  "baseline": "718777d",
+  "scope": "actual Android NodeInfo from owned fixed synthetic View registry only",
+  "origin": "OWNED_ANDROID_FIXTURE",
+  "coverage": "UNVERIFIED",
+  "redOriginTests": {
+    "tests": 2,
+    "failedBeforeFix": 2
+  },
+  "jvm": {
+    "modelprobe": {
+      "tests": 116,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "ocrlab": {
+      "tests": 76,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "android": {
+    "initial": {
+      "tests": 40,
+      "failures": 1,
+      "failure": "static-position test clicked during smooth scroll; capture cancelled as designed"
+    },
+    "targetedScroll": {
+      "tests": 2,
+      "failures": 0
+    },
+    "final": {
+      "tests": 42,
+      "failures": 0,
+      "runnerSeconds": 34.671,
+      "ownedNodes": 14,
+      "privacyContract": 25,
+      "origin": 2,
+      "existingBinding": 1
+    },
+    "beforeLayoutRegression": {
+      "tests": 41,
+      "failures": 0,
+      "runnerSeconds": 33.304,
+      "ownedNodes": 13,
+      "privacyContract": 25,
+      "origin": 2,
+      "existingBinding": 1
+    }
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 30,
+    "newWarnings": 4,
+    "newWarningKind": "UseKtx"
+  },
+  "pages": [
+    "EN",
+    "FR",
+    "ZH-Hans",
+    "ZH-Hant"
+  ],
+  "nodesObtainedPerPage": 12,
+  "nodesReleasedPerPage": 12,
+  "initialDeferredLabelReadsPerPage": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    10
+  ],
+  "observedFrameworkWindowIds": [
+    -1
+  ],
+  "realThirdPartyTree": false,
+  "rawSystemWindowEnumeration": false,
+  "physicalDeviceUpdated": false,
+  "permissionsEnabled": false,
+  "screenProjection": false,
+  "credentialsRead": false,
+  "networkRequests": 0,
+  "images": "renderings of owned synthetic decor only, not device screenshots",
+  "limitations": [
+    "API31 branch unit behavior only; no Huawei run",
+    "Framework NodeInfo creation may already include text before deferred getters",
+    "Window and parent/label-scope policy partly declared by fixed registry",
+    "Same-window covering panel only; no cross-app overlay acceptance",
+    "No true semantic grouping or model/network conversion",
+    "API31 sensitivity unavailable; usable third-party capture remains unresolved"
+  ],
+  "imagesFromAndroidRun": "beforeLayoutRegression; identical main APK, only Android test addition afterward"
+}

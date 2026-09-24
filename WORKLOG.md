@@ -719,3 +719,12 @@
 - 已核对专用API37/16KiB模拟器，首轮24项、最终26项通过（25新契约＋1旧展示绑定）；安装APK指纹一致。华为虽在线，本轮没有对其安装/操作或开启任何真实采集。旧展示UI全部生命周期测试未重复运行，仅复用未改源码的既有证据。
 - Android官方可见性/敏感接口/窗口区域已核查：API31敏感标记不可用不能当false，可触摸区域不是无障碍遮挡证明；真实窗口保护/标签范围分类未实现。本轮输出独立LocalCaptureInspection，来源合成、覆盖UNVERIFIED，没有ScreenSnapshot/网络转换，也不声称通用隐私过滤或实际页面完整可读。
 - 新报告LOCAL_CAPTURE_PRIVACY与证据local-capture-privacy/2026-09-24、TASKS已同步。函数无缓存，采集中途取消返回空；返回后的文字失效/释放仍需未来调用方负责。app/compat/graphics、既有翻译资源不变；无密钥/DeepL/真实文字上传/推送/发布。下一项自有合成页面的实际Android节点属性映射。
+
+## 2026-09-24 Android自有页面实际节点适配
+
+- 用户继续。起点718777d干净、AO_ORCHESTRATED未设置；NORMAL范围一个自有View适配器＋内部实验页，复用TDD/完成前核实，首轮滚动失败按系统化调试处理。无AO/代理、无其他项目访问。
+- 四张单语随包页通过View.createAccessibilityNodeInfo取得实际class/clickable/password/editable/visible/sensitive/bounds，View几何归一与延迟标签getter接入旧过滤器；新增OWNED_ANDROID_FIXTURE来源，2来源回归先失败再通过。固定注册/父子/窗口策略显式区分，coverage仍UNVERIFIED；实际frameworkWindowId均-1，不伪称真实窗口键。
+- Android节点初始化已可能带文字，本轮“不读排除标签”仅指本层getter，不保证NodeInfo/IPC从未含密码或屏外内容。这一边界写入新报告及上下文设计。API31不支持的新标记保留UNAVAILABLE，没有默认false或宣称旧机采集已可用。
+- 最终192 JVM（116＋76）通过、主/测试包构建、Lint 0错误30警告；新增4项UseKtx建议，无新依赖。首轮Android40项39通过，剩余固定位置用例误在fullScroll平滑动画期间读取而被取消；即时滚动前提与新增动画取消用例定向2项通过。41项通过后审查补节点位置变化回归；最终42项34.671秒全通过，保留首轮失败。
+- 四页各12节点创建/释放计数闭合，初始getter仅1/2/3/4/5/10；实际改价、节点布局、滚动、换页、同窗口遮挡、队列取消、后台返回及15秒过期清理通过。四张仅绘制自有decor的检查图已目视核对，中文结果末行可在结果区滚动，不作为正式UI或翻译验收。
+- 仅专用API37/16KiB模拟器安装且APK指纹一致；华为在线但未操作/安装。无真实App节点/全局窗口/投屏/OCR/DeepL/密钥/网络，app/compat/graphics与原有冻结资源未改。证据owned-android-nodes/2026-09-24、新报告OWNED_ANDROID_NODES及TASKS同步；下一项API31本地整屏采集兼容实验。

@@ -67,3 +67,5 @@ Android 定向类为 `com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest
 3. 对 API 31 明确制定证据来源与无法读取时的提示；未解决的问题留作缺口，再评估目标华为和第三方 App 的本地采集。获得可追溯节点不等于模型安全上下文，后续仍需语义归属、隐私分类、树/OCR对齐及翻译质量验收。
 
 产品接入、真实内容上传、后端凭据和完整翻译质量仍各自未完成。本轮不扩大 Phase 0A 的屏幕共享授权。
+
+后续增补：[自有Android节点验证](OWNED_ANDROID_NODES.md)已为固定View页增加独立OWNED_ANDROID_FIXTURE来源，成功/拒绝均保留；本文件上面的SYNTHETIC_METADATA固定来源描述属于上一轮手写元数据验收。真实节点对象可能预先附带标签，getter延迟不等于系统未取得内容。第三方采集、API31隐私证据和正式产品接入仍未完成。

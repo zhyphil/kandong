@@ -1,0 +1,84 @@
+> Task :ocrlab:preBuild UP-TO-DATE
+> Task :ocrlab:preDebugBuild UP-TO-DATE
+> Task :ocrlab:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :ocrlab:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :ocrlab:checkDebugAarMetadata UP-TO-DATE
+> Task :ocrlab:processDebugNavigationResources UP-TO-DATE
+> Task :ocrlab:compileDebugNavigationResources UP-TO-DATE
+> Task :ocrlab:generateDebugResValues UP-TO-DATE
+> Task :ocrlab:mapDebugSourceSetPaths UP-TO-DATE
+> Task :ocrlab:generateDebugResources UP-TO-DATE
+> Task :ocrlab:mergeDebugResources UP-TO-DATE
+> Task :ocrlab:packageDebugResources UP-TO-DATE
+> Task :ocrlab:parseDebugLocalResources UP-TO-DATE
+> Task :ocrlab:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :ocrlab:extractDeepLinksDebug UP-TO-DATE
+> Task :ocrlab:processDebugMainManifest UP-TO-DATE
+> Task :ocrlab:processDebugManifest UP-TO-DATE
+> Task :ocrlab:processDebugManifestForPackage UP-TO-DATE
+> Task :ocrlab:processDebugResources UP-TO-DATE
+> Task :ocrlab:javaPreCompileDebug UP-TO-DATE
+> Task :ocrlab:mergeDebugShaders UP-TO-DATE
+> Task :ocrlab:compileDebugShaders NO-SOURCE
+> Task :ocrlab:generateDebugAssets UP-TO-DATE
+> Task :ocrlab:mergeDebugAssets UP-TO-DATE
+> Task :ocrlab:compressDebugAssets UP-TO-DATE
+> Task :ocrlab:desugarDebugFileDependencies UP-TO-DATE
+> Task :ocrlab:checkDebugDuplicateClasses UP-TO-DATE
+> Task :ocrlab:mergeExtDexDebug UP-TO-DATE
+> Task :ocrlab:mergeLibDexDebug UP-TO-DATE
+> Task :ocrlab:mergeDebugJniLibFolders UP-TO-DATE
+> Task :ocrlab:mergeDebugNativeLibs UP-TO-DATE
+> Task :ocrlab:stripDebugDebugSymbols UP-TO-DATE
+> Task :ocrlab:validateSigningDebug UP-TO-DATE
+> Task :ocrlab:writeDebugAppMetadata UP-TO-DATE
+> Task :ocrlab:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :ocrlab:preDebugAndroidTestBuild SKIPPED
+> Task :ocrlab:checkDebugAndroidTestAarMetadata UP-TO-DATE
+> Task :ocrlab:processDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :ocrlab:compileDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :ocrlab:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :ocrlab:mapDebugAndroidTestSourceSetPaths UP-TO-DATE
+> Task :ocrlab:generateDebugAndroidTestResources UP-TO-DATE
+> Task :ocrlab:mergeDebugAndroidTestResources UP-TO-DATE
+> Task :ocrlab:processDebugAndroidTestManifest UP-TO-DATE
+> Task :ocrlab:processDebugAndroidTestResources UP-TO-DATE
+> Task :ocrlab:javaPreCompileDebugAndroidTest UP-TO-DATE
+> Task :ocrlab:mergeDebugAndroidTestShaders UP-TO-DATE
+> Task :ocrlab:compileDebugAndroidTestShaders NO-SOURCE
+> Task :ocrlab:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :ocrlab:mergeDebugAndroidTestAssets UP-TO-DATE
+> Task :ocrlab:compressDebugAndroidTestAssets UP-TO-DATE
+> Task :ocrlab:desugarDebugAndroidTestFileDependencies UP-TO-DATE
+> Task :ocrlab:checkDebugAndroidTestDuplicateClasses UP-TO-DATE
+> Task :ocrlab:mergeExtDexDebugAndroidTest UP-TO-DATE
+> Task :ocrlab:mergeLibDexDebugAndroidTest UP-TO-DATE
+> Task :ocrlab:mergeDebugAndroidTestJniLibFolders UP-TO-DATE
+> Task :ocrlab:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :ocrlab:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :ocrlab:validateSigningDebugAndroidTest UP-TO-DATE
+> Task :ocrlab:writeDebugAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :ocrlab:compileDebugKotlin
+> Task :ocrlab:compileDebugJavaWithJavac NO-SOURCE
+> Task :ocrlab:dexBuilderDebug
+> Task :ocrlab:mergeDebugGlobalSynthetics UP-TO-DATE
+> Task :ocrlab:processDebugJavaRes UP-TO-DATE
+> Task :ocrlab:mergeDebugJavaResource UP-TO-DATE
+> Task :ocrlab:mergeProjectDexDebug
+> Task :ocrlab:bundleDebugClassesToCompileJar
+> Task :ocrlab:packageDebug
+> Task :ocrlab:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :ocrlab:assembleDebug
+> Task :ocrlab:compileDebugAndroidTestKotlin
+> Task :ocrlab:compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :ocrlab:dexBuilderDebugAndroidTest
+> Task :ocrlab:mergeDebugAndroidTestGlobalSynthetics UP-TO-DATE
+> Task :ocrlab:processDebugAndroidTestJavaRes UP-TO-DATE
+> Task :ocrlab:mergeDebugAndroidTestJavaResource UP-TO-DATE
+> Task :ocrlab:mergeProjectDexDebugAndroidTest
+> Task :ocrlab:packageDebugAndroidTest
+> Task :ocrlab:createDebugAndroidTestApkListingFileRedirect UP-TO-DATE
+> Task :ocrlab:assembleDebugAndroidTest
+
+BUILD SUCCESSFUL in 1s
+66 actionable tasks: 9 executed, 57 up-to-date

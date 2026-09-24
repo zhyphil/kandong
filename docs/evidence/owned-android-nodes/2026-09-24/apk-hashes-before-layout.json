@@ -1,0 +1,16 @@
+[
+  {
+    "package": "com.kandong.ocrlab",
+    "path": "ocrlab/build/outputs/apk/debug/ocrlab-debug.apk",
+    "sha256": "03e82ff3e45f347f9b9381d249d88f719de51ccc04c7ec46d841fac5aaca040d",
+    "installedSha256": "03e82ff3e45f347f9b9381d249d88f719de51ccc04c7ec46d841fac5aaca040d",
+    "bytes": 53471605
+  },
+  {
+    "package": "com.kandong.ocrlab.test",
+    "path": "ocrlab/build/outputs/apk/androidTest/debug/ocrlab-debug-androidTest.apk",
+    "sha256": "df015f295f84d6c8cf2a4ef39f99a39516db0692128a31042a712ed04e79315a",
+    "installedSha256": "df015f295f84d6c8cf2a4ef39f99a39516db0692128a31042a712ed04e79315a",
+    "bytes": 920684
+  }
+]

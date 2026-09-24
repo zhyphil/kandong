@@ -1,0 +1,3 @@
+package: com.kandong.ocrlab
+permission: com.kandong.ocrlab.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission: name='com.kandong.ocrlab.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
