@@ -1,0 +1,706 @@
+{
+  "schema": 1,
+  "syntheticOnly": true,
+  "qualityAccepted": false,
+  "evidence": "docs/evidence/translation-protected/2026-09-24/audit.json.gz",
+  "evidenceSha256": "390ed92b09a22157dca0782dde2906a51907f3ba8bada6929e36be0b2bae9772",
+  "pages": [
+    {
+      "source": {
+        "id": "p303",
+        "sourceLanguage": "en",
+        "viewport": [
+          0,
+          0,
+          1080,
+          1920
+        ],
+        "blocks": [
+          {
+            "id": "b001",
+            "text": "Scooter hire conditions",
+            "role": "heading",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              60,
+              1040,
+              160
+            ],
+            "readingOrder": 1
+          },
+          {
+            "id": "b002",
+            "text": "£18.75 per hour",
+            "role": "value",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              195,
+              1040,
+              295
+            ],
+            "readingOrder": 2
+          },
+          {
+            "id": "b003",
+            "text": "Minimum age: 18 years",
+            "role": "paragraph",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              330,
+              1040,
+              430
+            ],
+            "readingOrder": 3
+          },
+          {
+            "id": "b004",
+            "text": "Valid only on 14 February 2027.",
+            "role": "paragraph",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              465,
+              1040,
+              565
+            ],
+            "readingOrder": 4
+          },
+          {
+            "id": "b005",
+            "text": "No refund if cancelled less than 24 hours before pickup.",
+            "role": "paragraph",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              600,
+              1040,
+              700
+            ],
+            "readingOrder": 5
+          }
+        ],
+        "groups": [
+          {
+            "id": "g001",
+            "blockIds": [
+              "b001",
+              "b002",
+              "b003",
+              "b004",
+              "b005"
+            ]
+          }
+        ],
+        "targetIds": [
+          "b002",
+          "b003",
+          "b004",
+          "b005"
+        ],
+        "roi": [
+          40,
+          195,
+          1040,
+          295
+        ]
+      },
+      "answers": [
+        {
+          "id": "b001",
+          "chinese": null,
+          "kind": "KEEP_ORIGINAL",
+          "origin": "SOURCE",
+          "reason": "NO_RECORDED_RESULT"
+        },
+        {
+          "id": "b002",
+          "chinese": "£18.75 每小时",
+          "kind": "CANDIDATE",
+          "origin": "RECORDED_DEEPL",
+          "reason": null
+        },
+        {
+          "id": "b003",
+          "chinese": "最低年龄：18岁",
+          "kind": "CANDIDATE",
+          "origin": "RECORDED_DEEPL",
+          "reason": null
+        },
+        {
+          "id": "b004",
+          "chinese": "仅在2027年2月14日有效",
+          "kind": "LOCAL_DATE",
+          "origin": "LOCAL_DATE_RULE",
+          "reason": null
+        },
+        {
+          "id": "b005",
+          "chinese": null,
+          "kind": "KEEP_ORIGINAL",
+          "origin": "SOURCE",
+          "reason": "CHECK_UNVERIFIED"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "p106",
+        "sourceLanguage": "fr",
+        "viewport": [
+          0,
+          0,
+          1080,
+          1920
+        ],
+        "blocks": [
+          {
+            "id": "b001",
+            "text": "Votre réservation",
+            "role": "heading",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              60,
+              1040,
+              160
+            ],
+            "readingOrder": 1
+          },
+          {
+            "id": "b002",
+            "text": "Tarif réduit",
+            "role": "heading",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              195,
+              1040,
+              295
+            ],
+            "readingOrder": 2
+          },
+          {
+            "id": "b003",
+            "text": "Prix total : 37,80 €",
+            "role": "value",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              330,
+              1040,
+              430
+            ],
+            "readingOrder": 3
+          },
+          {
+            "id": "b004",
+            "text": "Valable le 5 décembre 2026",
+            "role": "paragraph",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              465,
+              1040,
+              565
+            ],
+            "readingOrder": 4
+          },
+          {
+            "id": "b005",
+            "text": "Aucun remboursement après le départ.",
+            "role": "paragraph",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              600,
+              1040,
+              700
+            ],
+            "readingOrder": 5
+          },
+          {
+            "id": "b006",
+            "text": "2 bagages, 6 kg maximum chacun.",
+            "role": "paragraph",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              735,
+              1040,
+              835
+            ],
+            "readingOrder": 6
+          }
+        ],
+        "groups": [
+          {
+            "id": "g001",
+            "blockIds": [
+              "b001",
+              "b002",
+              "b003",
+              "b004",
+              "b005",
+              "b006"
+            ]
+          }
+        ],
+        "targetIds": [
+          "b003",
+          "b004",
+          "b005",
+          "b006"
+        ],
+        "roi": [
+          40,
+          330,
+          1040,
+          430
+        ]
+      },
+      "answers": [
+        {
+          "id": "b001",
+          "chinese": null,
+          "kind": "KEEP_ORIGINAL",
+          "origin": "SOURCE",
+          "reason": "NO_RECORDED_RESULT"
+        },
+        {
+          "id": "b002",
+          "chinese": null,
+          "kind": "KEEP_ORIGINAL",
+          "origin": "SOURCE",
+          "reason": "NO_RECORDED_RESULT"
+        },
+        {
+          "id": "b003",
+          "chinese": "总价：37,80 €",
+          "kind": "CANDIDATE",
+          "origin": "RECORDED_DEEPL",
+          "reason": null
+        },
+        {
+          "id": "b004",
+          "chinese": "在2026年12月5日有效",
+          "kind": "LOCAL_DATE",
+          "origin": "LOCAL_DATE_RULE",
+          "reason": null
+        },
+        {
+          "id": "b005",
+          "chinese": "出发后不予退款。",
+          "kind": "CANDIDATE",
+          "origin": "RECORDED_DEEPL",
+          "reason": null
+        },
+        {
+          "id": "b006",
+          "chinese": "2件行李，每件不超过6公斤。",
+          "kind": "CANDIDATE",
+          "origin": "RECORDED_DEEPL",
+          "reason": null
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "p304",
+        "sourceLanguage": "fr",
+        "viewport": [
+          0,
+          0,
+          1080,
+          1920
+        ],
+        "blocks": [
+          {
+            "id": "b001",
+            "text": "Conditions du voyage",
+            "role": "heading",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              60,
+              1040,
+              160
+            ],
+            "readingOrder": 1
+          },
+          {
+            "id": "b002",
+            "text": "3 bagages, 5 kg maximum chacun.",
+            "role": "paragraph",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              195,
+              1040,
+              295
+            ],
+            "readingOrder": 2
+          },
+          {
+            "id": "b003",
+            "text": "Valable jusqu'au 9 mars 2027 inclus.",
+            "role": "paragraph",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              330,
+              1040,
+              430
+            ],
+            "readingOrder": 3
+          },
+          {
+            "id": "b004",
+            "text": "Ni échangeable ni remboursable.",
+            "role": "paragraph",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              465,
+              1040,
+              565
+            ],
+            "readingOrder": 4
+          }
+        ],
+        "groups": [
+          {
+            "id": "g001",
+            "blockIds": [
+              "b001",
+              "b002",
+              "b003",
+              "b004"
+            ]
+          }
+        ],
+        "targetIds": [
+          "b002",
+          "b003",
+          "b004"
+        ],
+        "roi": [
+          40,
+          195,
+          1040,
+          295
+        ]
+      },
+      "answers": [
+        {
+          "id": "b001",
+          "chinese": null,
+          "kind": "KEEP_ORIGINAL",
+          "origin": "SOURCE",
+          "reason": "NO_RECORDED_RESULT"
+        },
+        {
+          "id": "b002",
+          "chinese": "3件行李，每件不超过5公斤。",
+          "kind": "CANDIDATE",
+          "origin": "RECORDED_DEEPL",
+          "reason": null
+        },
+        {
+          "id": "b003",
+          "chinese": "有效期至2027年3月9日（含当日）",
+          "kind": "LOCAL_DATE",
+          "origin": "LOCAL_DATE_RULE",
+          "reason": null
+        },
+        {
+          "id": "b004",
+          "chinese": null,
+          "kind": "KEEP_ORIGINAL",
+          "origin": "SOURCE",
+          "reason": "CHECK_UNVERIFIED"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "p007",
+        "sourceLanguage": "zh-CN",
+        "viewport": [
+          0,
+          0,
+          1080,
+          1920
+        ],
+        "blocks": [
+          {
+            "id": "b001",
+            "text": "提醒设置",
+            "role": "heading",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              60,
+              1040,
+              160
+            ],
+            "readingOrder": 1
+          },
+          {
+            "id": "b002",
+            "text": "每日提醒",
+            "role": "label",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              195,
+              1040,
+              295
+            ],
+            "readingOrder": 2
+          },
+          {
+            "id": "b003",
+            "text": "08:30",
+            "role": "value",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              330,
+              1040,
+              430
+            ],
+            "readingOrder": 3
+          },
+          {
+            "id": "b004",
+            "text": "每月费用：¥12.50",
+            "role": "paragraph",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              465,
+              1040,
+              565
+            ],
+            "readingOrder": 4
+          },
+          {
+            "id": "b005",
+            "text": "关闭自动续费",
+            "role": "button",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              600,
+              1040,
+              700
+            ],
+            "readingOrder": 5
+          }
+        ],
+        "groups": [
+          {
+            "id": "g001",
+            "blockIds": [
+              "b001",
+              "b002",
+              "b003",
+              "b004",
+              "b005"
+            ]
+          }
+        ],
+        "targetIds": [
+          "b003",
+          "b004",
+          "b005"
+        ],
+        "roi": [
+          40,
+          330,
+          1040,
+          430
+        ]
+      },
+      "answers": [
+        {
+          "id": "b001",
+          "chinese": null,
+          "kind": "KEEP_ORIGINAL",
+          "origin": "SOURCE",
+          "reason": "ALREADY_CHINESE"
+        },
+        {
+          "id": "b002",
+          "chinese": null,
+          "kind": "KEEP_ORIGINAL",
+          "origin": "SOURCE",
+          "reason": "ALREADY_CHINESE"
+        },
+        {
+          "id": "b003",
+          "chinese": null,
+          "kind": "KEEP_ORIGINAL",
+          "origin": "SOURCE",
+          "reason": "ALREADY_CHINESE"
+        },
+        {
+          "id": "b004",
+          "chinese": null,
+          "kind": "KEEP_ORIGINAL",
+          "origin": "SOURCE",
+          "reason": "ALREADY_CHINESE"
+        },
+        {
+          "id": "b005",
+          "chinese": null,
+          "kind": "KEEP_ORIGINAL",
+          "origin": "SOURCE",
+          "reason": "ALREADY_CHINESE"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "p008",
+        "sourceLanguage": "zh-TW",
+        "viewport": [
+          0,
+          0,
+          1080,
+          1920
+        ],
+        "blocks": [
+          {
+            "id": "b001",
+            "text": "提醒設定",
+            "role": "heading",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              60,
+              1040,
+              160
+            ],
+            "readingOrder": 1
+          },
+          {
+            "id": "b002",
+            "text": "每日提醒",
+            "role": "label",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              195,
+              1040,
+              295
+            ],
+            "readingOrder": 2
+          },
+          {
+            "id": "b003",
+            "text": "20:45",
+            "role": "value",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              330,
+              1040,
+              430
+            ],
+            "readingOrder": 3
+          },
+          {
+            "id": "b004",
+            "text": "每月費用：NT$120.50",
+            "role": "paragraph",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              465,
+              1040,
+              565
+            ],
+            "readingOrder": 4
+          },
+          {
+            "id": "b005",
+            "text": "關閉自動續訂",
+            "role": "button",
+            "groupId": "g001",
+            "bounds": [
+              40,
+              600,
+              1040,
+              700
+            ],
+            "readingOrder": 5
+          }
+        ],
+        "groups": [
+          {
+            "id": "g001",
+            "blockIds": [
+              "b001",
+              "b002",
+              "b003",
+              "b004",
+              "b005"
+            ]
+          }
+        ],
+        "targetIds": [
+          "b003",
+          "b004",
+          "b005"
+        ],
+        "roi": [
+          40,
+          330,
+          1040,
+          430
+        ]
+      },
+      "answers": [
+        {
+          "id": "b001",
+          "chinese": null,
+          "kind": "KEEP_ORIGINAL",
+          "origin": "SOURCE",
+          "reason": "ALREADY_CHINESE"
+        },
+        {
+          "id": "b002",
+          "chinese": null,
+          "kind": "KEEP_ORIGINAL",
+          "origin": "SOURCE",
+          "reason": "ALREADY_CHINESE"
+        },
+        {
+          "id": "b003",
+          "chinese": null,
+          "kind": "KEEP_ORIGINAL",
+          "origin": "SOURCE",
+          "reason": "ALREADY_CHINESE"
+        },
+        {
+          "id": "b004",
+          "chinese": null,
+          "kind": "KEEP_ORIGINAL",
+          "origin": "SOURCE",
+          "reason": "ALREADY_CHINESE"
+        },
+        {
+          "id": "b005",
+          "chinese": null,
+          "kind": "KEEP_ORIGINAL",
+          "origin": "SOURCE",
+          "reason": "ALREADY_CHINESE"
+        }
+      ]
+    }
+  ]
+}

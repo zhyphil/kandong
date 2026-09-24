@@ -56,14 +56,47 @@ data class FixtureRequest(
     val targetLanguage: String = "zh-CN", val model: String = "HANDCRAFTED_NO_MODEL",
     val version: String = "prewritten-fixture-v1",
 )
-data class FixtureAnswer(val binding: TargetBinding, val chinese: String)
+enum class AnswerKind { CANDIDATE, LOCAL_DATE, KEEP_ORIGINAL }
+enum class AnswerOrigin { HANDCRAFTED_FIXTURE, RECORDED_DEEPL, LOCAL_DATE_RULE, SOURCE }
+enum class KeepOriginalReason { CHECK_UNVERIFIED, ALREADY_CHINESE, NO_RECORDED_RESULT }
+data class FixtureAnswer(
+    val binding: TargetBinding, val chinese: String?,
+    val kind: AnswerKind = AnswerKind.CANDIDATE,
+    val origin: AnswerOrigin = AnswerOrigin.HANDCRAFTED_FIXTURE,
+    val keepReason: KeepOriginalReason? = null,
+)
+/** Structural consistency only; this is not a semantic translation checker. */
+internal fun FixtureAnswer.validOutcome(): Boolean {
+    val hasText = !chinese.isNullOrBlank() && chinese.length <= 2000
+    return when (kind) {
+        AnswerKind.CANDIDATE -> hasText && keepReason == null &&
+            origin in setOf(AnswerOrigin.HANDCRAFTED_FIXTURE, AnswerOrigin.RECORDED_DEEPL)
+        AnswerKind.LOCAL_DATE -> hasText && keepReason == null && origin == AnswerOrigin.LOCAL_DATE_RULE
+        AnswerKind.KEEP_ORIGINAL -> chinese == null && keepReason != null && origin == AnswerOrigin.SOURCE
+    }
+}
 data class FixtureResponse(
     val requestId: Long, val page: ScreenIdentity, val targetLanguage: String,
     val model: String, val version: String, val answers: List<FixtureAnswer>,
 )
 data class SourceAnchor(val sourceId: String, val rect: ContextRect)
 /** Text cards deliberately have no source-derived rectangle. They are laid out readably by the UI. */
-data class TranslationCard(val targetId: String, val sourceText: String, val chinese: String?, val reason: String?)
+data class TranslationCard(
+    val targetId: String, val sourceText: String, val chinese: String?, val reason: String?,
+    val kind: AnswerKind? = null, val origin: AnswerOrigin? = null,
+)
+data class CardPresentation(val text: String, val notice: String?)
+fun TranslationCard.presentation(): CardPresentation {
+    if (kind != AnswerKind.KEEP_ORIGINAL && reason == null && !chinese.isNullOrBlank()) {
+        return CardPresentation(chinese, null)
+    }
+    val notice = when (reason) {
+        "CHECK_UNVERIFIED" -> "这段翻译暂时无法核对，请先看原文。"
+        "ALREADY_CHINESE", "NO_RECORDED_RESULT", "AWAITING_HANDCRAFTED_FIXTURE", null -> null
+        else -> "这段信息不完整，请先看原文。"
+    }
+    return CardPresentation(sourceText, notice)
+}
 data class ContextRender(val selectionGeneration: Long, val viewGeneration: Long, val anchors: List<SourceAnchor>, val cards: List<TranslationCard>)
 
 internal fun <T> frozen(values: Collection<T>): List<T> = Collections.unmodifiableList(ArrayList(values))

@@ -51,6 +51,10 @@ class OcrLabActivity : Activity() {
             text = "点击翻译交互实验"; minHeight = dp(48); minWidth = dp(48)
             setOnClickListener { startActivity(Intent(this@OcrLabActivity, com.kandong.ocrlab.context.OnDemandLabActivity::class.java)) }
         })
+        content.addView(Button(this).apply {
+            text = "译文展示与清理实验"; minHeight = dp(48); minWidth = dp(48)
+            setOnClickListener { startActivity(Intent(this@OcrLabActivity, com.kandong.ocrlab.context.ProtectedTranslationLabActivity::class.java)) }
+        })
         start = Button(this).apply {
             text = "开始 37 项合成文字实验"
             minHeight = dp(48)

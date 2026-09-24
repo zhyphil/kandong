@@ -134,7 +134,7 @@ class ContextEngine {
         if (response.page != req.page || response.targetLanguage != req.targetLanguage || response.model != req.model || response.version != req.version) return false
         if (response.answers.size != req.targets.size || response.answers.map { it.binding.id }.distinct().size != response.answers.size) return false
         val expected = req.targets.associateBy { it.id }
-        if (response.answers.any { expected[it.binding.id] != it.binding || it.chinese.isBlank() || it.chinese.length > 2000 }) return false
+        if (response.answers.any { expected[it.binding.id] != it.binding || !it.validOutcome() }) return false
         // All-or-nothing structural validation only. It cannot establish translation meaning/quality.
         response.answers.forEach { cache[it.binding.id] = it.copy(binding = it.binding.freeze()) }
         pending.remove(req.id)
@@ -147,10 +147,12 @@ class ContextEngine {
         val anchors = current.targets.flatMap { target -> target.sources.mapNotNull { b ->
             ContextGeometry.map(b.visible, current.roi, t)?.let { SourceAnchor(b.id, it) }
         } }
-        val cards = current.targets.map { target -> TranslationCard(
-            target.id, target.sources.joinToString(" ") { it.text }, cache[target.id]?.chinese,
-            target.reason ?: if (target.id !in cache) "AWAITING_HANDCRAFTED_FIXTURE" else null,
-        ) }
+        val cards = current.targets.map { target ->
+            val answer = cache[target.id]
+            TranslationCard(target.id, target.sources.joinToString(" ") { it.text }, answer?.chinese,
+                target.reason ?: answer?.keepReason?.name ?: if (answer == null) "AWAITING_HANDCRAFTED_FIXTURE" else null,
+                answer?.kind, answer?.origin)
+        }
         return ContextRender(current.generation, viewGeneration, frozen(anchors), frozen(cards))
     }
     companion object { const val MAX_TTL = 60_000L }
