@@ -79,3 +79,5 @@ modelprobe使用Microsoft ONNX Runtime Android1.30.0（MIT及其ThirdPartyNotice
 
 
 - Android完整框测试流程：`BoxPipelineContract`/`BoxPipelineOpenCv`按固定RapidOCR3.9.2的DBPostProcess与排序规则实现检测后处理，保留PaddlePaddle Authors/Apache-2.0归属；复用上述有修改记录的Boost许可polygon候选，仅测试源集。框/分数身份绑定、输入认证、预算与失败防护为本项目新增，未复制整套OCR产品。目标华为的有界合成验收见[完整框探针](BOX_PIPELINE_PROBE.md)。
+
+- 裁剪→识别参考导出器调用固定RapidOCR3.9.2的TextRecognizer.resize_norm_img与CTCLabelDecode；其PaddlePaddle/RapidOCR归属与Apache-2.0许可沿用上文。复用既有两模型/字典，不复制完整项目或引入新模型；合成图片及身份回映记录由本项目生成，见[CROP_RECOGNITION_REFERENCE](CROP_RECOGNITION_REFERENCE.md)。

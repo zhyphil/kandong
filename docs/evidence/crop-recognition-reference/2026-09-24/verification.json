@@ -1,0 +1,23 @@
+{
+  "fileCount": 51,
+  "bytes": 682245,
+  "manifestBytes": 50281,
+  "manifestSha256": "bbbfd058777e51e4fb7769764d2b49dac7618c784b8e0ef652af84d973f64f6a",
+  "byteIdenticalTwoRuns": true,
+  "caseCount": 16,
+  "readyCases": 8,
+  "emptyCases": 8,
+  "cropRows": 13,
+  "modelRuns": 16,
+  "recognitionRows": 26,
+  "tensorFloats": 816048,
+  "excludedUndeclaredFilesA": [
+    ":memory:.ses"
+  ],
+  "excludedUndeclaredFilesB": [
+    ":memory:.ses"
+  ],
+  "protectedFiles": 963,
+  "qualityAccepted": false,
+  "androidAccepted": false
+}

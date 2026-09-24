@@ -1,0 +1,18 @@
+2026-09-24 15:38:14.001 Python[26704:6576877] 2026-09-24 15:38:14.001666 [W:onnxruntime:Default, telemetry.cc:800 operator()] Failed to persist telemetry device ID; using an in-memory identifier
+ch en-quality-16 [1, 76, 18385] ['The total is 39.90 €, tax not included.']
+ch fr-nonrefundable-16 [1, 84, 18385] ["Ce bilet n'est ni éechangeable ni remboursable."]
+ch zh-hans-quality-16 [2, 56, 18385] ['总计1234.50元，不含税。', '行李最多8公斤，不可退款。']
+ch zh-hant-quality-16 [2, 56, 18385] ['總計1234.50元，不含稅。', '行李最多8公斤，不可退款。']
+ch mixed-quality-16 [3, 54, 18385] ['房间A/Room A', 'Chambre A : 120 € / night', '不含税/不含税']
+ch two-blocks [2, 40, 18385] ['7', '7']
+ch edge-touching [1, 40, 18385] ['']
+ch vertical [1, 40, 18385] ['1']
+latin en-quality-16 [1, 76, 504] ['The total is 39.90 €, tax not included.']
+latin fr-nonrefundable-16 [1, 84, 504] ["Ce billet n'est ni échangeable ni remboursable."]
+latin zh-hans-quality-16 [2, 56, 504] ['1234.50', '8']
+latin zh-hant-quality-16 [2, 56, 504] ['1234.50', '8']
+latin mixed-quality-16 [3, 54, 504] ['A / Room A', 'Chambre A : 120 € / night', '/']
+latin two-blocks [2, 40, 504] ['A7', '%2']
+latin edge-touching [1, 40, 504] ['A']
+latin vertical [1, 40, 504] ['MNNN']
+MANIFEST bbbfd058777e51e4fb7769764d2b49dac7618c784b8e0ef652af84d973f64f6a files 51

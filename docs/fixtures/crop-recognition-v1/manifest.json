@@ -1,0 +1,1729 @@
+{
+  "schema": 1,
+  "scope": "fixed_synthetic_geometry_crops_to_two_recognizers_not_quality_or_end_to_end_detection",
+  "parentManifestSha256": "1aa14f2efb50e62c5a2d95b45b7d5b5044d4ec90afa47a976e8dea50bbe466a6",
+  "probeManifestSha256": "126d8d3860d5a4ea098f0875838dbed51a55d8a321f50d409805d394a460061c",
+  "versions": {
+    "rapidocr": "3.9.2",
+    "numpy": "2.5.3",
+    "opencv-python": "5.0.0.93",
+    "pillow": "12.3.0",
+    "onnxruntime": "1.30.0"
+  },
+  "sourceHashes": {
+    "rapidocr/ch_ppocr_rec/main.py": "84b7a55a8972d14a92800b66facc73976b8d0b06bd8888e551414dbec8d6d326",
+    "rapidocr/ch_ppocr_rec/utils.py": "ee16b3e71c85a8e55e572cd9b2d251f302642447fc4219d174d2092b9f3231f7"
+  },
+  "scriptSha256": "b0280c19952649494026658fe4afffc0a0d078a232c454ef7addef7ddf9a6679",
+  "models": [
+    {
+      "id": "ch",
+      "asset": "models/ch_PP-OCRv5_rec_mobile.onnx",
+      "sha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "bytes": 16631306,
+      "dictionaryAsset": "probes/ch-dictionary.json",
+      "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+      "vocabularySize": 18385,
+      "inputName": "x",
+      "outputName": "fetch_name_0"
+    },
+    {
+      "id": "latin",
+      "asset": "models/latin_PP-OCRv5_rec_mobile.onnx",
+      "sha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+      "bytes": 7904513,
+      "dictionaryAsset": "probes/latin-dictionary.json",
+      "dictionarySha256": "d80d308e9759b3ea3aaf6e57fa51b39ef0a2eeb3145a9b23df819f0f0279af44",
+      "vocabularySize": 504,
+      "inputName": "x",
+      "outputName": "fetch_name_0"
+    }
+  ],
+  "cases": [
+    {
+      "id": "en-quality-16",
+      "status": "READY",
+      "rows": [
+        {
+          "boxId": "en-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              27.0
+            ],
+            [
+              295.0,
+              27.0
+            ],
+            [
+              295.0,
+              48.0
+            ],
+            [
+              30.0,
+              48.0
+            ]
+          ],
+          "detectorScore": 0.7848805975701127,
+          "crop": "en-quality-16-crop-00.png",
+          "cropSha256": "5e708a96579095592610ead9a91f4b72ce3d12eedbaafc86e08e9b2a3e191ae0",
+          "cropBgrSha256": "cf447df56859abe0a361a7072d022f2abb5058d9ab9fe9fc1e3efae49df96e3a",
+          "width": 265,
+          "height": 21,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0,
+              1.2664502346178883e-17,
+              -29.999999999999996
+            ],
+            [
+              -1.2043097216272884e-17,
+              1.0,
+              -26.999999999999996
+            ],
+            [
+              -0.0,
+              3.1920158839177906e-19,
+              1.0
+            ]
+          ],
+          "tensorRow": 0,
+          "resizedWidth": 605,
+          "resizedHeight": 48,
+          "resized": "en-quality-16-row-0-resized.png",
+          "resizedArgb": "en-quality-16-row-0-resized.argbz"
+        }
+      ],
+      "tensorRowToReadingOrder": [
+        0
+      ],
+      "models": [
+        {
+          "model": "ch",
+          "outputShape": [
+            1,
+            76,
+            18385
+          ],
+          "argmax": "en-quality-16-ch-argmax.i32z",
+          "expectedHostRaw": [
+            "The total is 39.90 €, tax not included."
+          ],
+          "readingOrderRaw": [
+            "The total is 39.90 €, tax not included."
+          ],
+          "bindings": [
+            {
+              "boxId": "en-quality-16.box-0",
+              "originalIndex": 0,
+              "readingOrder": 0,
+              "tensorRow": 0,
+              "raw": "The total is 39.90 €, tax not included."
+            }
+          ]
+        },
+        {
+          "model": "latin",
+          "outputShape": [
+            1,
+            76,
+            504
+          ],
+          "argmax": "en-quality-16-latin-argmax.i32z",
+          "expectedHostRaw": [
+            "The total is 39.90 €, tax not included."
+          ],
+          "readingOrderRaw": [
+            "The total is 39.90 €, tax not included."
+          ],
+          "bindings": [
+            {
+              "boxId": "en-quality-16.box-0",
+              "originalIndex": 0,
+              "readingOrder": 0,
+              "tensorRow": 0,
+              "raw": "The total is 39.90 €, tax not included."
+            }
+          ]
+        }
+      ],
+      "shape": [
+        1,
+        3,
+        48,
+        605
+      ],
+      "tensor": "en-quality-16.f32z"
+    },
+    {
+      "id": "fr-nonrefundable-16",
+      "status": "READY",
+      "rows": [
+        {
+          "boxId": "fr-nonrefundable-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              27.0
+            ],
+            [
+              366.0,
+              27.0
+            ],
+            [
+              366.0,
+              51.0
+            ],
+            [
+              30.0,
+              51.0
+            ]
+          ],
+          "detectorScore": 0.7906220418996359,
+          "crop": "fr-nonrefundable-16-crop-00.png",
+          "cropSha256": "c0a97dbbecaf7cd5cbdaf7175610ee60752310d293e3e2a4c8012115678819d8",
+          "cropBgrSha256": "21d6f4ce136f5b3d1f31f2c82eee7051d1243ad46de91a343745314634b42088",
+          "width": 336,
+          "height": 24,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0000000000000002,
+              1.1147358328352937e-16,
+              -30.000000000000014
+            ],
+            [
+              0.0,
+              1.0000000000000002,
+              -27.000000000000007
+            ],
+            [
+              9.441940885629014e-19,
+              1.1902352574546464e-19,
+              1.0
+            ]
+          ],
+          "tensorRow": 0,
+          "resizedWidth": 672,
+          "resizedHeight": 48,
+          "resized": "fr-nonrefundable-16-row-0-resized.png",
+          "resizedArgb": "fr-nonrefundable-16-row-0-resized.argbz"
+        }
+      ],
+      "tensorRowToReadingOrder": [
+        0
+      ],
+      "models": [
+        {
+          "model": "ch",
+          "outputShape": [
+            1,
+            84,
+            18385
+          ],
+          "argmax": "fr-nonrefundable-16-ch-argmax.i32z",
+          "expectedHostRaw": [
+            "Ce bilet n'est ni éechangeable ni remboursable."
+          ],
+          "readingOrderRaw": [
+            "Ce bilet n'est ni éechangeable ni remboursable."
+          ],
+          "bindings": [
+            {
+              "boxId": "fr-nonrefundable-16.box-0",
+              "originalIndex": 0,
+              "readingOrder": 0,
+              "tensorRow": 0,
+              "raw": "Ce bilet n'est ni éechangeable ni remboursable."
+            }
+          ]
+        },
+        {
+          "model": "latin",
+          "outputShape": [
+            1,
+            84,
+            504
+          ],
+          "argmax": "fr-nonrefundable-16-latin-argmax.i32z",
+          "expectedHostRaw": [
+            "Ce billet n'est ni échangeable ni remboursable."
+          ],
+          "readingOrderRaw": [
+            "Ce billet n'est ni échangeable ni remboursable."
+          ],
+          "bindings": [
+            {
+              "boxId": "fr-nonrefundable-16.box-0",
+              "originalIndex": 0,
+              "readingOrder": 0,
+              "tensorRow": 0,
+              "raw": "Ce billet n'est ni échangeable ni remboursable."
+            }
+          ]
+        }
+      ],
+      "shape": [
+        1,
+        3,
+        48,
+        672
+      ],
+      "tensor": "fr-nonrefundable-16.f32z"
+    },
+    {
+      "id": "zh-hans-quality-16",
+      "status": "READY",
+      "rows": [
+        {
+          "boxId": "zh-hans-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              30.0
+            ],
+            [
+              212.0,
+              30.0
+            ],
+            [
+              212.0,
+              51.0
+            ],
+            [
+              29.0,
+              51.0
+            ]
+          ],
+          "detectorScore": 0.7844004929065703,
+          "crop": "zh-hans-quality-16-crop-00.png",
+          "cropSha256": "923a7c988fd5f47bed35487310f8775b424e9a6323dcfa3fcdda060b64de06ce",
+          "cropBgrSha256": "10d4b67dd0458cc12c0528ce8059dc5662cee51c81465832ff3710440ff56b0b",
+          "width": 183,
+          "height": 21,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0,
+              2.9582975211439065e-17,
+              -29.000000000000004
+            ],
+            [
+              0.0,
+              1.0,
+              -30.0
+            ],
+            [
+              -1.3674127656265582e-35,
+              4.622318083268932e-19,
+              1.0
+            ]
+          ],
+          "tensorRow": 0,
+          "resizedWidth": 419,
+          "resizedHeight": 48,
+          "resized": "zh-hans-quality-16-row-0-resized.png",
+          "resizedArgb": "zh-hans-quality-16-row-0-resized.argbz"
+        },
+        {
+          "boxId": "zh-hans-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              56.0
+            ],
+            [
+              228.0,
+              56.0
+            ],
+            [
+              228.0,
+              77.0
+            ],
+            [
+              30.0,
+              77.0
+            ]
+          ],
+          "detectorScore": 0.7958953108336475,
+          "crop": "zh-hans-quality-16-crop-01.png",
+          "cropSha256": "3cbc7a023b4865bb7e39d3944dbb224dadfaaec6d789d5dcc62b3b6c667361fa",
+          "cropBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335",
+          "width": 198,
+          "height": 21,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0000000000000002,
+              1.782239027400998e-17,
+              -30.000000000000004
+            ],
+            [
+              0.0,
+              1.0000000000000002,
+              -56.000000000000014
+            ],
+            [
+              7.832261196650137e-19,
+              2.0597829770411068e-19,
+              1.0
+            ]
+          ],
+          "tensorRow": 1,
+          "resizedWidth": 452,
+          "resizedHeight": 48,
+          "resized": "zh-hans-quality-16-row-1-resized.png",
+          "resizedArgb": "zh-hans-quality-16-row-1-resized.argbz"
+        }
+      ],
+      "tensorRowToReadingOrder": [
+        0,
+        1
+      ],
+      "models": [
+        {
+          "model": "ch",
+          "outputShape": [
+            2,
+            56,
+            18385
+          ],
+          "argmax": "zh-hans-quality-16-ch-argmax.i32z",
+          "expectedHostRaw": [
+            "总计1234.50元，不含税。",
+            "行李最多8公斤，不可退款。"
+          ],
+          "readingOrderRaw": [
+            "总计1234.50元，不含税。",
+            "行李最多8公斤，不可退款。"
+          ],
+          "bindings": [
+            {
+              "boxId": "zh-hans-quality-16.box-1",
+              "originalIndex": 1,
+              "readingOrder": 0,
+              "tensorRow": 0,
+              "raw": "总计1234.50元，不含税。"
+            },
+            {
+              "boxId": "zh-hans-quality-16.box-0",
+              "originalIndex": 0,
+              "readingOrder": 1,
+              "tensorRow": 1,
+              "raw": "行李最多8公斤，不可退款。"
+            }
+          ]
+        },
+        {
+          "model": "latin",
+          "outputShape": [
+            2,
+            56,
+            504
+          ],
+          "argmax": "zh-hans-quality-16-latin-argmax.i32z",
+          "expectedHostRaw": [
+            "1234.50",
+            "8"
+          ],
+          "readingOrderRaw": [
+            "1234.50",
+            "8"
+          ],
+          "bindings": [
+            {
+              "boxId": "zh-hans-quality-16.box-1",
+              "originalIndex": 1,
+              "readingOrder": 0,
+              "tensorRow": 0,
+              "raw": "1234.50"
+            },
+            {
+              "boxId": "zh-hans-quality-16.box-0",
+              "originalIndex": 0,
+              "readingOrder": 1,
+              "tensorRow": 1,
+              "raw": "8"
+            }
+          ]
+        }
+      ],
+      "shape": [
+        2,
+        3,
+        48,
+        452
+      ],
+      "tensor": "zh-hans-quality-16.f32z"
+    },
+    {
+      "id": "zh-hant-quality-16",
+      "status": "READY",
+      "rows": [
+        {
+          "boxId": "zh-hant-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              27.0
+            ],
+            [
+              212.0,
+              29.0
+            ],
+            [
+              212.0,
+              51.0
+            ],
+            [
+              29.0,
+              49.0
+            ]
+          ],
+          "detectorScore": 0.7939277429647849,
+          "crop": "zh-hant-quality-16-crop-00.png",
+          "cropSha256": "d528c5fc189bb2c5d8b39f0ad8aec3e7b721330333edded7bc5a6434b1037cbe",
+          "cropBgrSha256": "a9273c2cb3b7b1df4e2c56d7f2ad2359a8777407dd594c82d781254561beea6b",
+          "width": 183,
+          "height": 22,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0000000000000002,
+              2.7200429540982913e-17,
+              -29.000000000000014
+            ],
+            [
+              -0.010928961748633868,
+              1.0000000000000002,
+              -26.683060109289627
+            ],
+            [
+              1.811923544018469e-18,
+              1.2928263900695758e-19,
+              1.0
+            ]
+          ],
+          "tensorRow": 0,
+          "resizedWidth": 400,
+          "resizedHeight": 48,
+          "resized": "zh-hant-quality-16-row-0-resized.png",
+          "resizedArgb": "zh-hant-quality-16-row-0-resized.argbz"
+        },
+        {
+          "boxId": "zh-hant-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              56.0
+            ],
+            [
+              228.0,
+              56.0
+            ],
+            [
+              228.0,
+              77.0
+            ],
+            [
+              30.0,
+              77.0
+            ]
+          ],
+          "detectorScore": 0.8001764074048481,
+          "crop": "zh-hant-quality-16-crop-01.png",
+          "cropSha256": "3cbc7a023b4865bb7e39d3944dbb224dadfaaec6d789d5dcc62b3b6c667361fa",
+          "cropBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335",
+          "width": 198,
+          "height": 21,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0000000000000002,
+              1.782239027400998e-17,
+              -30.000000000000004
+            ],
+            [
+              0.0,
+              1.0000000000000002,
+              -56.000000000000014
+            ],
+            [
+              7.832261196650137e-19,
+              2.0597829770411068e-19,
+              1.0
+            ]
+          ],
+          "tensorRow": 1,
+          "resizedWidth": 452,
+          "resizedHeight": 48,
+          "resized": "zh-hant-quality-16-row-1-resized.png",
+          "resizedArgb": "zh-hant-quality-16-row-1-resized.argbz"
+        }
+      ],
+      "tensorRowToReadingOrder": [
+        0,
+        1
+      ],
+      "models": [
+        {
+          "model": "ch",
+          "outputShape": [
+            2,
+            56,
+            18385
+          ],
+          "argmax": "zh-hant-quality-16-ch-argmax.i32z",
+          "expectedHostRaw": [
+            "總計1234.50元，不含稅。",
+            "行李最多8公斤，不可退款。"
+          ],
+          "readingOrderRaw": [
+            "總計1234.50元，不含稅。",
+            "行李最多8公斤，不可退款。"
+          ],
+          "bindings": [
+            {
+              "boxId": "zh-hant-quality-16.box-1",
+              "originalIndex": 1,
+              "readingOrder": 0,
+              "tensorRow": 0,
+              "raw": "總計1234.50元，不含稅。"
+            },
+            {
+              "boxId": "zh-hant-quality-16.box-0",
+              "originalIndex": 0,
+              "readingOrder": 1,
+              "tensorRow": 1,
+              "raw": "行李最多8公斤，不可退款。"
+            }
+          ]
+        },
+        {
+          "model": "latin",
+          "outputShape": [
+            2,
+            56,
+            504
+          ],
+          "argmax": "zh-hant-quality-16-latin-argmax.i32z",
+          "expectedHostRaw": [
+            "1234.50",
+            "8"
+          ],
+          "readingOrderRaw": [
+            "1234.50",
+            "8"
+          ],
+          "bindings": [
+            {
+              "boxId": "zh-hant-quality-16.box-1",
+              "originalIndex": 1,
+              "readingOrder": 0,
+              "tensorRow": 0,
+              "raw": "1234.50"
+            },
+            {
+              "boxId": "zh-hant-quality-16.box-0",
+              "originalIndex": 0,
+              "readingOrder": 1,
+              "tensorRow": 1,
+              "raw": "8"
+            }
+          ]
+        }
+      ],
+      "shape": [
+        2,
+        3,
+        48,
+        452
+      ],
+      "tensor": "zh-hant-quality-16.f32z"
+    },
+    {
+      "id": "mixed-quality-16",
+      "status": "READY",
+      "rows": [
+        {
+          "boxId": "mixed-quality-16.box-2",
+          "originalIndex": 2,
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              29.0
+            ],
+            [
+              150.0,
+              29.0
+            ],
+            [
+              150.0,
+              50.0
+            ],
+            [
+              29.0,
+              50.0
+            ]
+          ],
+          "detectorScore": 0.8009911834917687,
+          "crop": "mixed-quality-16-crop-00.png",
+          "cropSha256": "f4e4e7e6996d8fd9199e981e8d29685b54e98063855b774a7311ec6c6a49bec1",
+          "cropBgrSha256": "ca53b4fc5f377c96bbd6e02f7b846cb324fffe20720ebede9b4dd74a13963422",
+          "width": 121,
+          "height": 21,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0000000000000002,
+              1.307760543287234e-17,
+              -29.000000000000014
+            ],
+            [
+              0.0,
+              1.0000000000000002,
+              -29.000000000000007
+            ],
+            [
+              1.6660839473001336e-18,
+              -4.3114962932353906e-19,
+              1.0
+            ]
+          ],
+          "tensorRow": 1,
+          "resizedWidth": 277,
+          "resizedHeight": 48,
+          "resized": "mixed-quality-16-row-0-resized.png",
+          "resizedArgb": "mixed-quality-16-row-0-resized.argbz"
+        },
+        {
+          "boxId": "mixed-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 1,
+          "quad": [
+            [
+              29.0,
+              54.0
+            ],
+            [
+              219.0,
+              54.0
+            ],
+            [
+              219.0,
+              75.0
+            ],
+            [
+              29.0,
+              75.0
+            ]
+          ],
+          "detectorScore": 0.7865341892181817,
+          "crop": "mixed-quality-16-crop-01.png",
+          "cropSha256": "83737017a2a6deeece9dbc1834f87a2b13fb8a60cd2ad11556a629ca77b74ba2",
+          "cropBgrSha256": "fee25a7dd0410e67b4210c9100ae043bd8b3e237d03574401d7110e0cb284911",
+          "width": 190,
+          "height": 21,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              0.9999999999999993,
+              3.0207354079979485e-17,
+              -28.999999999999982
+            ],
+            [
+              -3.2444873779000007e-17,
+              0.9999999999999993,
+              -53.99999999999996
+            ],
+            [
+              -2.5042961685725707e-18,
+              2.4628590150708275e-19,
+              1.0
+            ]
+          ],
+          "tensorRow": 2,
+          "resizedWidth": 434,
+          "resizedHeight": 48,
+          "resized": "mixed-quality-16-row-1-resized.png",
+          "resizedArgb": "mixed-quality-16-row-1-resized.argbz"
+        },
+        {
+          "boxId": "mixed-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 2,
+          "quad": [
+            [
+              29.0,
+              83.0
+            ],
+            [
+              145.0,
+              83.0
+            ],
+            [
+              145.0,
+              105.0
+            ],
+            [
+              29.0,
+              105.0
+            ]
+          ],
+          "detectorScore": 0.7981728689920976,
+          "crop": "mixed-quality-16-crop-02.png",
+          "cropSha256": "df2c526763fa268e5b2e2dd0856d88179bb4202c123d8f27e0a3aa00a144398a",
+          "cropBgrSha256": "3590e94e4f545491b33a76e8c06a4a819c2cc970dd77a49c10416afd61840e5a",
+          "width": 116,
+          "height": 22,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0,
+              1.4568537427207937e-17,
+              -29.000000000000004
+            ],
+            [
+              0.0,
+              0.9999999999999999,
+              -82.99999999999999
+            ],
+            [
+              -0.0,
+              -0.0,
+              1.0
+            ]
+          ],
+          "tensorRow": 0,
+          "resizedWidth": 254,
+          "resizedHeight": 48,
+          "resized": "mixed-quality-16-row-2-resized.png",
+          "resizedArgb": "mixed-quality-16-row-2-resized.argbz"
+        }
+      ],
+      "tensorRowToReadingOrder": [
+        2,
+        0,
+        1
+      ],
+      "models": [
+        {
+          "model": "ch",
+          "outputShape": [
+            3,
+            54,
+            18385
+          ],
+          "argmax": "mixed-quality-16-ch-argmax.i32z",
+          "expectedHostRaw": [
+            "不含税/不含税",
+            "房间A/Room A",
+            "Chambre A : 120 € / night"
+          ],
+          "readingOrderRaw": [
+            "房间A/Room A",
+            "Chambre A : 120 € / night",
+            "不含税/不含税"
+          ],
+          "bindings": [
+            {
+              "boxId": "mixed-quality-16.box-0",
+              "originalIndex": 0,
+              "readingOrder": 2,
+              "tensorRow": 0,
+              "raw": "不含税/不含税"
+            },
+            {
+              "boxId": "mixed-quality-16.box-2",
+              "originalIndex": 2,
+              "readingOrder": 0,
+              "tensorRow": 1,
+              "raw": "房间A/Room A"
+            },
+            {
+              "boxId": "mixed-quality-16.box-1",
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "tensorRow": 2,
+              "raw": "Chambre A : 120 € / night"
+            }
+          ]
+        },
+        {
+          "model": "latin",
+          "outputShape": [
+            3,
+            54,
+            504
+          ],
+          "argmax": "mixed-quality-16-latin-argmax.i32z",
+          "expectedHostRaw": [
+            "/",
+            "A / Room A",
+            "Chambre A : 120 € / night"
+          ],
+          "readingOrderRaw": [
+            "A / Room A",
+            "Chambre A : 120 € / night",
+            "/"
+          ],
+          "bindings": [
+            {
+              "boxId": "mixed-quality-16.box-0",
+              "originalIndex": 0,
+              "readingOrder": 2,
+              "tensorRow": 0,
+              "raw": "/"
+            },
+            {
+              "boxId": "mixed-quality-16.box-2",
+              "originalIndex": 2,
+              "readingOrder": 0,
+              "tensorRow": 1,
+              "raw": "A / Room A"
+            },
+            {
+              "boxId": "mixed-quality-16.box-1",
+              "originalIndex": 1,
+              "readingOrder": 1,
+              "tensorRow": 2,
+              "raw": "Chambre A : 120 € / night"
+            }
+          ]
+        }
+      ],
+      "shape": [
+        3,
+        3,
+        48,
+        434
+      ],
+      "tensor": "mixed-quality-16.f32z"
+    },
+    {
+      "id": "blank-negative-24",
+      "status": "EMPTY_NO_INFERENCE",
+      "rows": [],
+      "tensorRowToReadingOrder": [],
+      "models": []
+    },
+    {
+      "id": "color-control",
+      "status": "EMPTY_NO_INFERENCE",
+      "rows": [],
+      "tensorRowToReadingOrder": [],
+      "models": []
+    },
+    {
+      "id": "wide-959",
+      "status": "EMPTY_NO_INFERENCE",
+      "rows": [],
+      "tensorRowToReadingOrder": [],
+      "models": []
+    },
+    {
+      "id": "wide-1499",
+      "status": "EMPTY_NO_INFERENCE",
+      "rows": [],
+      "tensorRowToReadingOrder": [],
+      "models": []
+    },
+    {
+      "id": "wide-2001",
+      "status": "EMPTY_NO_INFERENCE",
+      "rows": [],
+      "tensorRowToReadingOrder": [],
+      "models": []
+    },
+    {
+      "id": "threshold-equal",
+      "status": "EMPTY_NO_INFERENCE",
+      "rows": [],
+      "tensorRowToReadingOrder": [],
+      "models": []
+    },
+    {
+      "id": "below-box-score",
+      "status": "EMPTY_NO_INFERENCE",
+      "rows": [],
+      "tensorRowToReadingOrder": [],
+      "models": []
+    },
+    {
+      "id": "tiny-negative",
+      "status": "EMPTY_NO_INFERENCE",
+      "rows": [],
+      "tensorRowToReadingOrder": [],
+      "models": []
+    },
+    {
+      "id": "two-blocks",
+      "status": "READY",
+      "rows": [
+        {
+          "boxId": "two-blocks.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "quad": [
+            [
+              4.0,
+              12.0
+            ],
+            [
+              50.0,
+              12.0
+            ],
+            [
+              50.0,
+              43.0
+            ],
+            [
+              4.0,
+              43.0
+            ]
+          ],
+          "detectorScore": 0.7711693764694275,
+          "crop": "two-blocks-crop-00.png",
+          "cropSha256": "44d2e7b2cdf53d23729bc3c01a693cd9f606f5dd88b2e92bd6563068eb360891",
+          "cropBgrSha256": "4c0a6f00526c49d5beaa29582c84829478e2cd0b4e84128620ef07015bc0e9c8",
+          "width": 46,
+          "height": 31,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0000000000000002,
+              5.863731883311994e-18,
+              -4.000000000000001
+            ],
+            [
+              3.552713678800501e-17,
+              1.0,
+              -12.000000000000002
+            ],
+            [
+              3.125193595286003e-18,
+              -1.0015316537467234e-19,
+              1.0
+            ]
+          ],
+          "tensorRow": 0,
+          "resizedWidth": 72,
+          "resizedHeight": 48,
+          "resized": "two-blocks-row-0-resized.png",
+          "resizedArgb": "two-blocks-row-0-resized.argbz"
+        },
+        {
+          "boxId": "two-blocks.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "quad": [
+            [
+              72.0,
+              12.0
+            ],
+            [
+              118.0,
+              12.0
+            ],
+            [
+              118.0,
+              43.0
+            ],
+            [
+              72.0,
+              43.0
+            ]
+          ],
+          "detectorScore": 0.8618951504749637,
+          "crop": "two-blocks-crop-01.png",
+          "cropSha256": "801ea70e16582ed8fe09206c469eafe13f25edad62a6849a2efa0a488d3a0945",
+          "cropBgrSha256": "b2b821c2fd2fc084d2b76c20a7f54e3c47a02c5f12a1b10af3fd0a97d35c1c26",
+          "width": 46,
+          "height": 31,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0000000000000007,
+              2.365915150223095e-16,
+              -72.00000000000006
+            ],
+            [
+              1.5053871520341106e-17,
+              1.0000000000000007,
+              -12.000000000000009
+            ],
+            [
+              1.8785982705560118e-18,
+              3.7974374238960244e-18,
+              1.0
+            ]
+          ],
+          "tensorRow": 1,
+          "resizedWidth": 72,
+          "resizedHeight": 48,
+          "resized": "two-blocks-row-1-resized.png",
+          "resizedArgb": "two-blocks-row-1-resized.argbz"
+        }
+      ],
+      "tensorRowToReadingOrder": [
+        0,
+        1
+      ],
+      "models": [
+        {
+          "model": "ch",
+          "outputShape": [
+            2,
+            40,
+            18385
+          ],
+          "argmax": "two-blocks-ch-argmax.i32z",
+          "expectedHostRaw": [
+            "7",
+            "7"
+          ],
+          "readingOrderRaw": [
+            "7",
+            "7"
+          ],
+          "bindings": [
+            {
+              "boxId": "two-blocks.box-1",
+              "originalIndex": 1,
+              "readingOrder": 0,
+              "tensorRow": 0,
+              "raw": "7"
+            },
+            {
+              "boxId": "two-blocks.box-0",
+              "originalIndex": 0,
+              "readingOrder": 1,
+              "tensorRow": 1,
+              "raw": "7"
+            }
+          ]
+        },
+        {
+          "model": "latin",
+          "outputShape": [
+            2,
+            40,
+            504
+          ],
+          "argmax": "two-blocks-latin-argmax.i32z",
+          "expectedHostRaw": [
+            "A7",
+            "%2"
+          ],
+          "readingOrderRaw": [
+            "A7",
+            "%2"
+          ],
+          "bindings": [
+            {
+              "boxId": "two-blocks.box-1",
+              "originalIndex": 1,
+              "readingOrder": 0,
+              "tensorRow": 0,
+              "raw": "A7"
+            },
+            {
+              "boxId": "two-blocks.box-0",
+              "originalIndex": 0,
+              "readingOrder": 1,
+              "tensorRow": 1,
+              "raw": "%2"
+            }
+          ]
+        }
+      ],
+      "shape": [
+        2,
+        3,
+        48,
+        320
+      ],
+      "tensor": "two-blocks.f32z"
+    },
+    {
+      "id": "edge-touching",
+      "status": "READY",
+      "rows": [
+        {
+          "boxId": "edge-touching.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "quad": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              52.0,
+              0.0
+            ],
+            [
+              52.0,
+              28.0
+            ],
+            [
+              0.0,
+              28.0
+            ]
+          ],
+          "detectorScore": 0.8328029155147556,
+          "crop": "edge-touching-crop-00.png",
+          "cropSha256": "c53e9a1d902783aba35c3388ac96a1e86304f4b6ebfa99297b645537f5421c15",
+          "cropBgrSha256": "741ccb954e9d216b348558d30849437903d75e1c30aa5fd0cf8017dd72f87bb1",
+          "width": 52,
+          "height": 28,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "tensorRow": 0,
+          "resizedWidth": 90,
+          "resizedHeight": 48,
+          "resized": "edge-touching-row-0-resized.png",
+          "resizedArgb": "edge-touching-row-0-resized.argbz"
+        }
+      ],
+      "tensorRowToReadingOrder": [
+        0
+      ],
+      "models": [
+        {
+          "model": "ch",
+          "outputShape": [
+            1,
+            40,
+            18385
+          ],
+          "argmax": "edge-touching-ch-argmax.i32z",
+          "expectedHostRaw": [
+            ""
+          ],
+          "readingOrderRaw": [
+            ""
+          ],
+          "bindings": [
+            {
+              "boxId": "edge-touching.box-0",
+              "originalIndex": 0,
+              "readingOrder": 0,
+              "tensorRow": 0,
+              "raw": ""
+            }
+          ]
+        },
+        {
+          "model": "latin",
+          "outputShape": [
+            1,
+            40,
+            504
+          ],
+          "argmax": "edge-touching-latin-argmax.i32z",
+          "expectedHostRaw": [
+            "A"
+          ],
+          "readingOrderRaw": [
+            "A"
+          ],
+          "bindings": [
+            {
+              "boxId": "edge-touching.box-0",
+              "originalIndex": 0,
+              "readingOrder": 0,
+              "tensorRow": 0,
+              "raw": "A"
+            }
+          ]
+        }
+      ],
+      "shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "tensor": "edge-touching.f32z"
+    },
+    {
+      "id": "vertical",
+      "status": "READY",
+      "rows": [
+        {
+          "boxId": "vertical.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "quad": [
+            [
+              45.0,
+              6.0
+            ],
+            [
+              75.0,
+              6.0
+            ],
+            [
+              75.0,
+              120.0
+            ],
+            [
+              45.0,
+              120.0
+            ]
+          ],
+          "detectorScore": 0.830769208761362,
+          "crop": "vertical-crop-00.png",
+          "cropSha256": "5f15a83ff077f4f9cafec5e54411d88ac160178ef91cf6f3c98525715df1a3cd",
+          "cropBgrSha256": "ac143c02b735563d41ff269664afd1ca579f15444336cdd775175db7717197de",
+          "width": 114,
+          "height": 30,
+          "rotateCounterClockwise90": true,
+          "sourceToPreRotationCrop": [
+            [
+              0.9999999999999998,
+              -2.7503385346187348e-18,
+              -45.0
+            ],
+            [
+              -1.1842378929335004e-17,
+              0.9999999999999997,
+              -5.999999999999997
+            ],
+            [
+              -5.346633822093055e-18,
+              -1.0575464996127997e-19,
+              1.0
+            ]
+          ],
+          "tensorRow": 0,
+          "resizedWidth": 183,
+          "resizedHeight": 48,
+          "resized": "vertical-row-0-resized.png",
+          "resizedArgb": "vertical-row-0-resized.argbz"
+        }
+      ],
+      "tensorRowToReadingOrder": [
+        0
+      ],
+      "models": [
+        {
+          "model": "ch",
+          "outputShape": [
+            1,
+            40,
+            18385
+          ],
+          "argmax": "vertical-ch-argmax.i32z",
+          "expectedHostRaw": [
+            "1"
+          ],
+          "readingOrderRaw": [
+            "1"
+          ],
+          "bindings": [
+            {
+              "boxId": "vertical.box-0",
+              "originalIndex": 0,
+              "readingOrder": 0,
+              "tensorRow": 0,
+              "raw": "1"
+            }
+          ]
+        },
+        {
+          "model": "latin",
+          "outputShape": [
+            1,
+            40,
+            504
+          ],
+          "argmax": "vertical-latin-argmax.i32z",
+          "expectedHostRaw": [
+            "MNNN"
+          ],
+          "readingOrderRaw": [
+            "MNNN"
+          ],
+          "bindings": [
+            {
+              "boxId": "vertical.box-0",
+              "originalIndex": 0,
+              "readingOrder": 0,
+              "tensorRow": 0,
+              "raw": "MNNN"
+            }
+          ]
+        }
+      ],
+      "shape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "tensor": "vertical.f32z"
+    }
+  ],
+  "files": {
+    "en-quality-16-row-0-resized.png": {
+      "bytes": 15844,
+      "sha256": "ab3cc5486a4f2904e6474c78dc979de0f8f33063aafe487f14d15e6be34eb02a",
+      "width": 605,
+      "height": 48,
+      "rawBgrSha256": "9c2e468f3244a6dfcb923ddc08f8534f1f43956d19b0c796951a870c113ae165"
+    },
+    "en-quality-16-row-0-resized.argbz": {
+      "bytes": 14765,
+      "sha256": "02def02ef71629144ccd0f1fe81f135b47ebc75e86cce89d2c39a0048e4c10c2",
+      "decodedBytes": 116160,
+      "decodedSha256": "7a14d987c0e5d915685caecdb5117a8161f4fa937f1fbd2399b0cab454eaff44"
+    },
+    "en-quality-16.f32z": {
+      "bytes": 46533,
+      "sha256": "12e9847e730c4d5f51f8be6a685fc3525167aec2365b00f37086e25fb29c7748",
+      "decodedBytes": 348480,
+      "decodedSha256": "b80c3599a60269f6a7bc74e9d33e6f3bd44dc043e55f07401ec4dc1350cc67da"
+    },
+    "fr-nonrefundable-16-row-0-resized.png": {
+      "bytes": 9458,
+      "sha256": "d2affc6b9ea58f8320b5f5e5e035e5915fecbb27b4dfe21a5b827d50381d10f0",
+      "width": 672,
+      "height": 48,
+      "rawBgrSha256": "44f79105e372559ec33d4e98dfa0330206aa65cbaf64de61e98bab71f154f020"
+    },
+    "fr-nonrefundable-16-row-0-resized.argbz": {
+      "bytes": 8356,
+      "sha256": "35724abeb09f2c8040977764bbd325c1be0e0d8342937c1d851e63088470839f",
+      "decodedBytes": 129024,
+      "decodedSha256": "ede1c5432762e1b8339131fe2cde485b2808bfc4fe792f5591a0e1d445ede646"
+    },
+    "fr-nonrefundable-16.f32z": {
+      "bytes": 25234,
+      "sha256": "c8b53d73a77e5920695e4336e67b7eade2d78594e4d3f4efc3c8b9e0e4e7a4a4",
+      "decodedBytes": 387072,
+      "decodedSha256": "449b53db1a3dc20f458b90d6e0ec4856583cc5a235701d2c73fe416ffd1f4260"
+    },
+    "zh-hans-quality-16-row-0-resized.png": {
+      "bytes": 12303,
+      "sha256": "f3cc1340ae99acc30ad49df8bf7cca4b05e69bac1aba1807e39a0046ccf55654",
+      "width": 419,
+      "height": 48,
+      "rawBgrSha256": "cef74e33663e6bf57465a20d34bfe3b38d222a0e1331cc0a60716634b273c6ce"
+    },
+    "zh-hans-quality-16-row-0-resized.argbz": {
+      "bytes": 10876,
+      "sha256": "131489ab2676dadac80455f3046fdbce65d453b0f18b6e2a0ba01a59bf68fe36",
+      "decodedBytes": 80448,
+      "decodedSha256": "a009b4cf888a099cbd87fde85fd562bf77a236a1c9a67881c30add242c256c7b"
+    },
+    "zh-hans-quality-16-row-1-resized.png": {
+      "bytes": 14042,
+      "sha256": "8591ea09a3828f4ae27875796db40800e0da9280dc1c5fd040b33ffaf14bb63a",
+      "width": 452,
+      "height": 48,
+      "rawBgrSha256": "80632dd38a601138c2630f485eff1e8278e93a152f9f5e91b8b90a698740673f"
+    },
+    "zh-hans-quality-16-row-1-resized.argbz": {
+      "bytes": 12593,
+      "sha256": "868740c90dee833bd3bfef452a2622cc530b2aa741c385dadb13b02bc123aad9",
+      "decodedBytes": 86784,
+      "decodedSha256": "103cff95803c4ec828aeb1ab835e3ae848c5616543b2a1f3f8fa1beca6920396"
+    },
+    "zh-hans-quality-16.f32z": {
+      "bytes": 72244,
+      "sha256": "ef6e34aeac5b1d532caa38043e3b5eecd909348a1790da02d6991eac0577ca25",
+      "decodedBytes": 520704,
+      "decodedSha256": "657b6584c3d9aa1177525c66f429467db7914e455e21bf33c6d038713f61e21a"
+    },
+    "zh-hant-quality-16-row-0-resized.png": {
+      "bytes": 13553,
+      "sha256": "e75eb3eb5e8a0358117d0630482cd2d80c4a4ac28bdd604e2f791c992e06c275",
+      "width": 400,
+      "height": 48,
+      "rawBgrSha256": "59f3c753776da0f9f64669a184650a612bd0c1ce41265060693182152f7f0de5"
+    },
+    "zh-hant-quality-16-row-0-resized.argbz": {
+      "bytes": 13113,
+      "sha256": "715141cdf302776d3b2259cc383d8d43ad0a7ac2270881725cfc58ae2fc65b4d",
+      "decodedBytes": 76800,
+      "decodedSha256": "1ab5e1bb651dd3cc2547b8d2cf702cab6a8c2cf3ce2dd593c82589412e376f0c"
+    },
+    "zh-hant-quality-16-row-1-resized.png": {
+      "bytes": 14042,
+      "sha256": "8591ea09a3828f4ae27875796db40800e0da9280dc1c5fd040b33ffaf14bb63a",
+      "width": 452,
+      "height": 48,
+      "rawBgrSha256": "80632dd38a601138c2630f485eff1e8278e93a152f9f5e91b8b90a698740673f"
+    },
+    "zh-hant-quality-16-row-1-resized.argbz": {
+      "bytes": 12593,
+      "sha256": "868740c90dee833bd3bfef452a2622cc530b2aa741c385dadb13b02bc123aad9",
+      "decodedBytes": 86784,
+      "decodedSha256": "103cff95803c4ec828aeb1ab835e3ae848c5616543b2a1f3f8fa1beca6920396"
+    },
+    "zh-hant-quality-16.f32z": {
+      "bytes": 79442,
+      "sha256": "bfc32c7c461ee223db8928cf1689348cc7ed3ce7240527a94a3fb4d79225731e",
+      "decodedBytes": 520704,
+      "decodedSha256": "b887890f7bae543e4aa10ba97845786531549f602067c5a92c198ee132f037c4"
+    },
+    "mixed-quality-16-row-2-resized.png": {
+      "bytes": 8389,
+      "sha256": "1273e70205a57208287f7581f0cf4e320f8964edad3e6336edd7831de3e334f3",
+      "width": 254,
+      "height": 48,
+      "rawBgrSha256": "42208987f96e9eb93321a034dd6385090d8ba7dee9b0c1abed11665f26c32a4f"
+    },
+    "mixed-quality-16-row-2-resized.argbz": {
+      "bytes": 7151,
+      "sha256": "dc1805c7ebacd76a5814b6eca077b444f5d7bce3a1bc673f9843e6decb9ff17e",
+      "decodedBytes": 48768,
+      "decodedSha256": "971349a929f07e2529a44baee86e8e3f7257a8724d90bf8d03c43ed911da5788"
+    },
+    "mixed-quality-16-row-0-resized.png": {
+      "bytes": 7873,
+      "sha256": "dd75c69b8ac15311a12d5a081aaf6ce542f5164fc404daaee594c80cf95c2ec7",
+      "width": 277,
+      "height": 48,
+      "rawBgrSha256": "7dc3c3c35ccf193c302f9b809631ded28984412fcb9235382006109580011d37"
+    },
+    "mixed-quality-16-row-0-resized.argbz": {
+      "bytes": 6995,
+      "sha256": "e38270f08f034b482cb4f92434a9a644fdc48f58fbcef78db10cf4b3977efa09",
+      "decodedBytes": 53184,
+      "decodedSha256": "8ce333d2180657b78fa3c33e4cccc878cb10a162ae67ef203ef3d42a9dc9cae2"
+    },
+    "mixed-quality-16-row-1-resized.png": {
+      "bytes": 11406,
+      "sha256": "99d959c6796813ac92ed967837fb49c5a810fe1ca31e60e3648793be82e7a20d",
+      "width": 434,
+      "height": 48,
+      "rawBgrSha256": "1744a6d57a33083a9cadc277b1d88dac51a3d154dd4360619b6fd7b523e48809"
+    },
+    "mixed-quality-16-row-1-resized.argbz": {
+      "bytes": 10716,
+      "sha256": "c18355ab25723b6f738d1c617fedc964550efdff1b07424b4859f778355cb0f5",
+      "decodedBytes": 83328,
+      "decodedSha256": "485821910e7692aa978b73a87592d9018e63f11088922fa8b11c36125804fbd9"
+    },
+    "mixed-quality-16.f32z": {
+      "bytes": 78681,
+      "sha256": "3c93178ee355dc60674274e2dd1ab6cdee93fdabbbc4892fb305e518d3988252",
+      "decodedBytes": 749952,
+      "decodedSha256": "b840f28b1ef433060e5e8ae31656c3089d3ed913b5ec1111e5869a3483fe18b1"
+    },
+    "two-blocks-row-0-resized.png": {
+      "bytes": 2790,
+      "sha256": "912d9bacbaacea2117c95a22e91c762dfd1a95d78d4d406de308367e2f7d4f8a",
+      "width": 72,
+      "height": 48,
+      "rawBgrSha256": "e42d4ce919b9c406f766ec076d2ef13d51fa41546627ac8c8f2b0694998c02ac"
+    },
+    "two-blocks-row-0-resized.argbz": {
+      "bytes": 11844,
+      "sha256": "ce8d038b7106c9a35b5519b7ed518084a155234d724d62708c262fac927dc748",
+      "decodedBytes": 13824,
+      "decodedSha256": "e846c54b78364647deae5dff9c8a117afd922e4a9539a5421fdd77682378b381"
+    },
+    "two-blocks-row-1-resized.png": {
+      "bytes": 2851,
+      "sha256": "65bc89df17dbebeec1ca602ea8ffd66b2a9399e3fb068fbd30c8a9027e7e8c72",
+      "width": 72,
+      "height": 48,
+      "rawBgrSha256": "bb4db182432c0f0233e74e2a7c3f0835a64101b0085c35a74ffd880af3bbf999"
+    },
+    "two-blocks-row-1-resized.argbz": {
+      "bytes": 11852,
+      "sha256": "15ed3963705208ebf6fcff842578210117bedc6af1f6f166dda50bfaaace3d8f",
+      "decodedBytes": 13824,
+      "decodedSha256": "58c1aed3b07fe3394b1293668411ed80abf07af603803a9d99b644389f9b87b9"
+    },
+    "two-blocks.f32z": {
+      "bytes": 16837,
+      "sha256": "05d318c8b3890080713af1d6af44021fee610030e1cc363a7011d5696410a49d",
+      "decodedBytes": 368640,
+      "decodedSha256": "0ab2e9a3c0626ad872e2402cbbbd3be61d72db819a6e73f9a05a9a4f4ad80667"
+    },
+    "edge-touching-row-0-resized.png": {
+      "bytes": 3268,
+      "sha256": "76da90684b31562d4881ae0b13d5e2d5b0957a05e694142565eb61b22e8fb0d8",
+      "width": 90,
+      "height": 48,
+      "rawBgrSha256": "914c31af131e83d82511eb38b02a116ff1e33e536eb35387a87e70d87dc9a18f"
+    },
+    "edge-touching-row-0-resized.argbz": {
+      "bytes": 14833,
+      "sha256": "3e884cc49fcbae00560e0144397745cbdb24c9fa2961feebf4a2636452f29b71",
+      "decodedBytes": 17280,
+      "decodedSha256": "7e1e9786fb14898a6459430e235acdd3cce0ca1d6523d482f5adcb6a10400ed1"
+    },
+    "edge-touching.f32z": {
+      "bytes": 10103,
+      "sha256": "2a1192fd0f4700fdaa3a20b0ece567855c75457d6b908cfd651da0231e6b1262",
+      "decodedBytes": 184320,
+      "decodedSha256": "08024740b176e69de9263d1e0385512945f45ada21944fd76ccda7f7194c3a76"
+    },
+    "vertical-row-0-resized.png": {
+      "bytes": 7080,
+      "sha256": "7965d9f37bcfe9ceb1a21b36b991ac78137457cff15b001e30d4cdb85965a6ff",
+      "width": 183,
+      "height": 48,
+      "rawBgrSha256": "aa335077a9d6612ba777aac901fd243df8edb3f810fe866cb8cc1719eb3d0bca"
+    },
+    "vertical-row-0-resized.argbz": {
+      "bytes": 30077,
+      "sha256": "f913bf1cbf5edcba07789bfa4bdc72336a1bf7d24af729157fa6fccb3e565904",
+      "decodedBytes": 35136,
+      "decodedSha256": "87876ca043441f34132f5847af943c3206425a2a9ec6edbf5f6f5e977e5cc1b0"
+    },
+    "vertical.f32z": {
+      "bytes": 12994,
+      "sha256": "15c8001cc20901f6c1646b2425f7e73e25c64d06119657bd8be733e8fc7fd690",
+      "decodedBytes": 184320,
+      "decodedSha256": "3a30369a8dd2f9de64f03ae8f6519f8cf8b9ef8c7df6243060cd2bcd684e0af7"
+    },
+    "en-quality-16-ch-argmax.i32z": {
+      "bytes": 118,
+      "sha256": "67e063009227d62e1ed32ca92d776501b3225b0fcea5bc2dc1704723fbdbc272",
+      "decodedBytes": 304,
+      "decodedSha256": "5b24faeb43620677a972f0b697da674fb88082c198bedb8782fd43f230c453f1"
+    },
+    "fr-nonrefundable-16-ch-argmax.i32z": {
+      "bytes": 125,
+      "sha256": "f84e973298135a63fe8adc6593fec89237ff027902b0850fd5a6a65640f935f5",
+      "decodedBytes": 336,
+      "decodedSha256": "0426f0ad457fbdc1d2a31148c4fc76af3c4e9f5889b3e92f778bf7b51e63c751"
+    },
+    "zh-hans-quality-16-ch-argmax.i32z": {
+      "bytes": 118,
+      "sha256": "be7d621696b6bdee4e1df84a78c721b0927919d5f7b03461f96c4d2854bb2ec8",
+      "decodedBytes": 448,
+      "decodedSha256": "188310d3aab7a29fb6d9e4f99267e9eebfe847b3299a30670cca15ac7542fa9b"
+    },
+    "zh-hant-quality-16-ch-argmax.i32z": {
+      "bytes": 119,
+      "sha256": "a4d5562deb57614944ab5b2545230397494e218611666f35b3c1849f8456ca33",
+      "decodedBytes": 448,
+      "decodedSha256": "858932dd431bea90e4cf8bcf0652bcc2d2eaaa8e99b11f564099ed51a9ee6bb8"
+    },
+    "mixed-quality-16-ch-argmax.i32z": {
+      "bytes": 135,
+      "sha256": "ceea9b430e8ee9e82f2cb82fda2e432d18f03f3ab0154af112b37b530626047c",
+      "decodedBytes": 648,
+      "decodedSha256": "b64d12ae52ee3d8b06cccc1e59dc498ff345e9633853e994e035d5c90abfd71c"
+    },
+    "two-blocks-ch-argmax.i32z": {
+      "bytes": 33,
+      "sha256": "81299d2e41628572ddd2fa5e14000d0fd403c2b385f8d77a1101416c0fa89a69",
+      "decodedBytes": 320,
+      "decodedSha256": "fab383b8b1e2dc2d37adb13a7950f8cc8e8ecd0f5051b9e9a9ff077a6a2a1442"
+    },
+    "edge-touching-ch-argmax.i32z": {
+      "bytes": 24,
+      "sha256": "6d8981e049f8156b68e1d1d398b7fa7762de94af0b84f03a32a03f35a9089941",
+      "decodedBytes": 160,
+      "decodedSha256": "b393978842a0fa3d3e1470196f098f473f9678e72463cb65ec4ab5581856c2e4"
+    },
+    "vertical-ch-argmax.i32z": {
+      "bytes": 28,
+      "sha256": "2ab7f28b5aea199b7d9458d83ebb55121cc23f9a50bae120e7f7b686dfef459a",
+      "decodedBytes": 160,
+      "decodedSha256": "eada17874706a8f4fff9787f5ca00d704cbcb1becd6febc5770f1809a1716257"
+    },
+    "en-quality-16-latin-argmax.i32z": {
+      "bytes": 110,
+      "sha256": "4842eeef7d7ec2cb68becc1d81eec5d442949ec47faf0e080138a4190770f6b1",
+      "decodedBytes": 304,
+      "decodedSha256": "ae7215b4defefee5dc66547ea89a10533902aad35ab213d0896954c19a6331bb"
+    },
+    "fr-nonrefundable-16-latin-argmax.i32z": {
+      "bytes": 119,
+      "sha256": "b95d72bf08eb2efa4f9d21566f05a31e97087537748dc99e3a9a9e4a0d7b2312",
+      "decodedBytes": 336,
+      "decodedSha256": "84382aa745ed8194284afe5ec0b540f448dcebf51ea6771f3844fe9079785c2b"
+    },
+    "zh-hans-quality-16-latin-argmax.i32z": {
+      "bytes": 48,
+      "sha256": "50fe441c8c8ec9725eb67cfd8477fee01be995b9bad051897f1a099184f51fbb",
+      "decodedBytes": 448,
+      "decodedSha256": "26144ade0665737b4beba4bfb97667c1022ec6bb25070790ccbb8f063a42b145"
+    },
+    "zh-hant-quality-16-latin-argmax.i32z": {
+      "bytes": 48,
+      "sha256": "cb991caef9a4cde7bf894466c9718c17ab7031373b271007de9efe77b923a89c",
+      "decodedBytes": 448,
+      "decodedSha256": "85cc2dbae6273265ef9ded3596ac11b6dfe6895c3c352c99fc64dcdf8a6a4505"
+    },
+    "mixed-quality-16-latin-argmax.i32z": {
+      "bytes": 108,
+      "sha256": "89a342f1abfc900764c45da07720e798907781f36bb02aa823dc5e9256be5bc8",
+      "decodedBytes": 648,
+      "decodedSha256": "0d1d4f2b78aaf6ad854b3dbd1b8d409c242afc9826cc0c82f8d0e7b1a305e731"
+    },
+    "two-blocks-latin-argmax.i32z": {
+      "bytes": 38,
+      "sha256": "2c03b78e39f4304c5165e5f28fe2ad3d876a76609e2262b5f6de6b43133fa309",
+      "decodedBytes": 320,
+      "decodedSha256": "177a29ab3a2a7a2bc12c93bebc20ae144dbfacfab0da369b7c62a2f7e3f84f6d"
+    },
+    "edge-touching-latin-argmax.i32z": {
+      "bytes": 28,
+      "sha256": "ddc32165326af60cc4e957f1c35b9e5ee91b73725800b17518acb781022f003a",
+      "decodedBytes": 160,
+      "decodedSha256": "cd2c6da6074d9b0f99499bb650e3a06ff999b8bbc009d93d398aaafcc25e0f47"
+    },
+    "vertical-latin-argmax.i32z": {
+      "bytes": 34,
+      "sha256": "5a9f77a3f58b9181b2125084ba02ed8d72308a85a2deb1200bf64fa897e1f9c9",
+      "decodedBytes": 160,
+      "decodedSha256": "12ea92148361b8c794c06b9fbc7f54cd2bb8469017c8ff3ad37f0e92c7232049"
+    }
+  },
+  "contract": {
+    "height": 48,
+    "baseWidth": 320,
+    "maxWidth": 2048,
+    "maxBatch": 3,
+    "channels": "BGR",
+    "layout": "NCHW",
+    "resize": "OpenCV INTER_LINEAR",
+    "normalization": "float32 /255 then -0.5 then /0.5; right positive zero",
+    "rowOrder": "pinned upstream argsort of aspect ratios; verified against stable order for these inputs only",
+    "empty": "no resize, tensor, model run or invented text",
+    "runtime": "ORT CPU sequential 1/1 threads ALL_OPT cpu arena off",
+    "noModelRouting": true,
+    "noTextNormalization": true
+  }
+}
