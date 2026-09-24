@@ -1,0 +1,11 @@
+# Critical checks and full plain-context regression, frozen before API calls
+
+NORMAL phase: one independent bounded Python consistency gate, one synthetic-only regression runner, existing unittest infrastructure. No AO or agents. Production Android and original fixture/evidence/probe scripts unchanged.
+
+Source-only whole-page context, one requested element per response. Frozen 48 old foreign targets plus 8 targets on 4 new authored monolingual pages (2 EN/2 FR), each twice =112 requests/2244 source characters. The 2 original Chinese pages retain their 6 targets locally, never sent. All new source/rubric files and runner/gate are committed before inference. The provider receives only source text/context, language pair and billing-metadata request; no rubrics, answers, gate reasons or instructions. New pages are unseen by this service before this run, but authored by the same engineering agent: not external blind evaluation.
+
+Same DeepL account/endpoint/quota guard, 2-second pacing, no automatic retries, no fallback or upgrade; stop at first transport/structure failure. The service model is unpinned. Target identity and complete source geometry/groups remain local. Raw returned translation is saved separately from display decision because these are synthetic data only.
+
+Gate supports limited date syntax/relations, amount-currency pairs, clocks, weight/bounds/each, billing period/tax and some negative refund/exchange clauses. Unsupported recognized critical content is withheld. No fixture IDs or expected translations enter the gate. A withheld item shows original source with an explicit warning, never a repaired guessed translation. Other items are candidate-unverified; semanticVerified always false. The gate cannot validate word sense, all negation scopes, arbitrary conditions or grouping beyond local binding.
+
+Acceptance: replay the prior 14 results (2 failures withheld,12 correct labels retained); evaluate all new actual results against prewritten semantic criteria. Report raw translation correctness separately from withheld coverage, both rounds and all false positives/escaped errors. No admission to the product merely because this gate's tests pass. New API results cannot change this frozen gate mid-run.

@@ -1,0 +1,19 @@
+"""Independent critical-fact gate; legacy baseline for a regression red run."""
+import copy
+from translation_fact_checks import issues
+
+
+def evaluate(source, translation, language):
+    reasons = issues(source, translation, language)
+    return {'status': 'withheld' if reasons else 'candidate-unverified',
+            'reasons': reasons, 'semanticVerified': False}
+
+
+def guarded_display(bound, language):
+    result = evaluate(bound['source']['text'], bound['text'], language)
+    blocked = result['status'] == 'withheld'
+    return {'id': bound['id'], 'pageId': bound.get('pageId'), 'source': copy.deepcopy(bound['source']),
+            'state': 'original-with-warning' if blocked else 'candidate-unverified',
+            'displayText': bound['source']['text'] if blocked else bound['text'],
+            'translation': None if blocked else bound['text'],
+            'message': '这段翻译暂时无法核对，请先看原文。' if blocked else '', 'check': result}

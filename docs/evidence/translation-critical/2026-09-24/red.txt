@@ -1,0 +1,200 @@
+FFFFFFFF.F.FFFFF
+======================================================================
+FAIL: test_bad_candidate_cannot_reach_display_and_source_is_not_mutated (test_translation_critical_checks.CriticalTranslationTest.test_bad_candidate_cannot_reach_display_and_source_is_not_mutated)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 81, in test_bad_candidate_cannot_reach_display_and_source_is_not_mutated
+    self.assertEqual('original-with-warning', result['state'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'original-with-warning' != 'candidate-unverified'
+- original-with-warning
++ candidate-unverified
+
+
+======================================================================
+FAIL: test_bare_dollar_is_not_a_guessed_currency_even_if_symbol_remains (test_translation_critical_checks.CriticalTranslationTest.test_bare_dollar_is_not_a_guessed_currency_even_if_symbol_remains)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 49, in test_bare_dollar_is_not_a_guessed_currency_even_if_symbol_remains
+    self.withheld('$12.50 per night', '每晚12.50美元', 'currency-amount-unverified')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 15, in withheld
+    self.assertIn(reason, result['reasons'])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'currency-amount-unverified' not found in ['missing-currency-identity']
+
+======================================================================
+FAIL: test_cancellation_date_and_clock_direction (test_translation_critical_checks.CriticalTranslationTest.test_cancellation_date_and_clock_direction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 40, in test_cancellation_date_and_clock_direction
+    self.withheld('Free cancellation before 09:25 on 8 April 2028.', '2028年4月8日9:25后可免费取消。', 'date-relation-unverified')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 14, in withheld
+    self.assertEqual('withheld', result['status'], result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'withheld' != 'candidate-unverified'
+- withheld
++ candidate-unverified
+ : {'status': 'candidate-unverified', 'reasons': [], 'semanticVerified': False}
+
+======================================================================
+FAIL: test_currency_amount_pairs_cannot_swap (test_translation_critical_checks.CriticalTranslationTest.test_currency_amount_pairs_cannot_swap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 45, in test_currency_amount_pairs_cannot_swap
+    self.withheld('€12.50 and £30.00', '30欧元和12.50英镑', 'currency-amount-unverified')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 14, in withheld
+    self.assertEqual('withheld', result['status'], result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'withheld' != 'candidate-unverified'
+- withheld
++ candidate-unverified
+ : {'status': 'candidate-unverified', 'reasons': [], 'semanticVerified': False}
+
+======================================================================
+FAIL: test_display_rejects_mismatched_local_identity (test_translation_critical_checks.CriticalTranslationTest.test_display_rejects_mismatched_local_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 101, in test_display_rejects_mismatched_local_identity
+    with self.assertRaises(ValueError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_explicit_currency_and_french_decimal_equivalence (test_translation_critical_checks.CriticalTranslationTest.test_explicit_currency_and_french_decimal_equivalence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 56, in test_explicit_currency_and_french_decimal_equivalence
+    self.withheld('1,200 €', '1200欧元', 'currency-amount-unverified')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 15, in withheld
+    self.assertIn(reason, result['reasons'])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'currency-amount-unverified' not found in ['missing-source-number']
+
+======================================================================
+FAIL: test_missing_translation_and_unsupported_language_are_withheld (test_translation_critical_checks.CriticalTranslationTest.test_missing_translation_and_unsupported_language_are_withheld)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 96, in test_missing_translation_and_unsupported_language_are_withheld
+    self.withheld('€12.50', None, 'translation-unavailable')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 14, in withheld
+    self.assertEqual('withheld', result['status'], result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'withheld' != 'candidate-unverified'
+- withheld
++ candidate-unverified
+ : {'status': 'candidate-unverified', 'reasons': [], 'semanticVerified': False}
+
+======================================================================
+FAIL: test_month_day_and_year_have_roles_not_just_number_membership (test_translation_critical_checks.CriticalTranslationTest.test_month_day_and_year_have_roles_not_just_number_membership)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 26, in test_month_day_and_year_have_roles_not_just_number_membership
+    self.withheld('Valid on 8 April 2028.', '2028年5月8日有效', 'date-value-unverified')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 14, in withheld
+    self.assertEqual('withheld', result['status'], result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'withheld' != 'candidate-unverified'
+- withheld
++ candidate-unverified
+ : {'status': 'candidate-unverified', 'reasons': [], 'semanticVerified': False}
+
+======================================================================
+FAIL: test_refund_negation_and_condition_must_survive (test_translation_critical_checks.CriticalTranslationTest.test_refund_negation_and_condition_must_survive)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 66, in test_refund_negation_and_condition_must_survive
+    self.withheld('No refund after departure.', '出发后可退款。', 'refund-negation-unverified')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 14, in withheld
+    self.assertEqual('withheld', result['status'], result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'withheld' != 'candidate-unverified'
+- withheld
++ candidate-unverified
+ : {'status': 'candidate-unverified', 'reasons': [], 'semanticVerified': False}
+
+======================================================================
+FAIL: test_single_day_must_not_become_deadline (test_translation_critical_checks.CriticalTranslationTest.test_single_day_must_not_become_deadline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 18, in test_single_day_must_not_become_deadline
+    self.withheld('Valable le 8 avril 2028', '有效期至2028年4月8日', 'date-relation-unverified', 'fr')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 14, in withheld
+    self.assertEqual('withheld', result['status'], result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'withheld' != 'candidate-unverified'
+- withheld
++ candidate-unverified
+ : {'status': 'candidate-unverified', 'reasons': [], 'semanticVerified': False}
+
+======================================================================
+FAIL: test_ticket_exchange_is_not_silently_redeem (test_translation_critical_checks.CriticalTranslationTest.test_ticket_exchange_is_not_silently_redeem)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 72, in test_ticket_exchange_is_not_silently_redeem
+    self.withheld('Non échangeable et non remboursable.', '不可兑换，不可退款。', 'exchange-condition-unverified', 'fr')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 14, in withheld
+    self.assertEqual('withheld', result['status'], result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'withheld' != 'candidate-unverified'
+- withheld
++ candidate-unverified
+ : {'status': 'candidate-unverified', 'reasons': [], 'semanticVerified': False}
+
+======================================================================
+FAIL: test_unknown_or_multiple_date_formats_require_review (test_translation_critical_checks.CriticalTranslationTest.test_unknown_or_multiple_date_formats_require_review)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 35, in test_unknown_or_multiple_date_formats_require_review
+    self.withheld('Valid on 04/08/2028.', '2028年4月8日有效', 'date-format-unverified')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 14, in withheld
+    self.assertEqual('withheld', result['status'], result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'withheld' != 'candidate-unverified'
+- withheld
++ candidate-unverified
+ : {'status': 'candidate-unverified', 'reasons': [], 'semanticVerified': False}
+
+======================================================================
+FAIL: test_until_and_inclusive_condition_preserved (test_translation_critical_checks.CriticalTranslationTest.test_until_and_inclusive_condition_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 31, in test_until_and_inclusive_condition_preserved
+    self.withheld("Valable jusqu'au 8 avril 2028 inclus.", '有效期至2028年4月8日。', 'date-inclusive-unverified', 'fr')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 14, in withheld
+    self.assertEqual('withheld', result['status'], result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'withheld' != 'candidate-unverified'
+- withheld
++ candidate-unverified
+ : {'status': 'candidate-unverified', 'reasons': [], 'semanticVerified': False}
+
+======================================================================
+FAIL: test_weights_and_direction_and_each_are_independent (test_translation_critical_checks.CriticalTranslationTest.test_weights_and_direction_and_each_are_independent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 60, in test_weights_and_direction_and_each_are_independent
+    self.withheld('9 kg maximum.', '最多9克。', 'weight-value-unverified')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_critical_checks.py", line 14, in withheld
+    self.assertEqual('withheld', result['status'], result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'withheld' != 'candidate-unverified'
+- withheld
++ candidate-unverified
+ : {'status': 'candidate-unverified', 'reasons': [], 'semanticVerified': False}
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.004s
+
+FAILED (failures=14)
