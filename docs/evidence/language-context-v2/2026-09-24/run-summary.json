@@ -1,0 +1,16 @@
+{
+  "rounds": 2,
+  "testsPerRound": 24,
+  "casesPerRound": 82,
+  "evidenceExactlyRepeatable": true,
+  "qualityAccepted": false,
+  "gates": {
+    "newNoWrongAutomatic": false,
+    "newPureAtLeast10": true,
+    "newShortAtLeast6": true,
+    "newShortImprovesOverV1": true,
+    "literalConflictAllCorrect": true,
+    "legacyNoWrongAutomatic": true,
+    "legacyPureAtLeast15": true
+  }
+}

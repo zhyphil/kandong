@@ -1,0 +1,390 @@
+{
+  "status": "evaluation-complete-candidate-B-not-adopted",
+  "technicalPassed": true,
+  "qualityAccepted": false,
+  "jvmTests": 97,
+  "rounds": 2,
+  "technicalTestsPerRound": 24,
+  "newPages": 44,
+  "knownRegressions": 38,
+  "uniqueInferencesPerRound": 1204,
+  "evidenceQueriesPerRound": 2013,
+  "scoresExactlyRepeat": true,
+  "oldV1EvidenceExactlyRepeated": true,
+  "newStats": {
+    "v1": {
+      "cases": 44,
+      "matching": 28,
+      "correctReady": 14,
+      "correctReview": 14,
+      "wrongAutomatic": 4,
+      "reviewInsteadOfReady": 12,
+      "categories": {
+        "short": {
+          "cases": 12,
+          "matching": 0,
+          "correctReady": 0,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 12
+        },
+        "pure": {
+          "cases": 12,
+          "matching": 12,
+          "correctReady": 12,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "mixed": {
+          "cases": 8,
+          "matching": 4,
+          "correctReady": 0,
+          "correctReview": 4,
+          "wrongAutomatic": 4,
+          "reviewInsteadOfReady": 0
+        },
+        "conflicting": {
+          "cases": 4,
+          "matching": 4,
+          "correctReady": 0,
+          "correctReview": 4,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "unsupported": {
+          "cases": 4,
+          "matching": 4,
+          "correctReady": 0,
+          "correctReview": 4,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "literal-conflict": {
+          "cases": 4,
+          "matching": 4,
+          "correctReady": 2,
+          "correctReview": 2,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        }
+      }
+    },
+    "A": {
+      "cases": 44,
+      "matching": 36,
+      "correctReady": 24,
+      "correctReview": 12,
+      "wrongAutomatic": 6,
+      "reviewInsteadOfReady": 2,
+      "categories": {
+        "short": {
+          "cases": 12,
+          "matching": 10,
+          "correctReady": 10,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 2
+        },
+        "pure": {
+          "cases": 12,
+          "matching": 12,
+          "correctReady": 12,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "mixed": {
+          "cases": 8,
+          "matching": 2,
+          "correctReady": 0,
+          "correctReview": 2,
+          "wrongAutomatic": 6,
+          "reviewInsteadOfReady": 0
+        },
+        "conflicting": {
+          "cases": 4,
+          "matching": 4,
+          "correctReady": 0,
+          "correctReview": 4,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "unsupported": {
+          "cases": 4,
+          "matching": 4,
+          "correctReady": 0,
+          "correctReview": 4,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "literal-conflict": {
+          "cases": 4,
+          "matching": 4,
+          "correctReady": 2,
+          "correctReview": 2,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        }
+      }
+    },
+    "B": {
+      "cases": 44,
+      "matching": 39,
+      "correctReady": 23,
+      "correctReview": 16,
+      "wrongAutomatic": 2,
+      "reviewInsteadOfReady": 3,
+      "categories": {
+        "short": {
+          "cases": 12,
+          "matching": 10,
+          "correctReady": 10,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 2
+        },
+        "pure": {
+          "cases": 12,
+          "matching": 11,
+          "correctReady": 11,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 1
+        },
+        "mixed": {
+          "cases": 8,
+          "matching": 6,
+          "correctReady": 0,
+          "correctReview": 6,
+          "wrongAutomatic": 2,
+          "reviewInsteadOfReady": 0
+        },
+        "conflicting": {
+          "cases": 4,
+          "matching": 4,
+          "correctReady": 0,
+          "correctReview": 4,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "unsupported": {
+          "cases": 4,
+          "matching": 4,
+          "correctReady": 0,
+          "correctReview": 4,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "literal-conflict": {
+          "cases": 4,
+          "matching": 4,
+          "correctReady": 2,
+          "correctReview": 2,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        }
+      }
+    }
+  },
+  "legacyStats": {
+    "v1": {
+      "cases": 38,
+      "matching": 36,
+      "correctReady": 22,
+      "correctReview": 14,
+      "wrongAutomatic": 2,
+      "reviewInsteadOfReady": 0,
+      "categories": {
+        "en": {
+          "cases": 6,
+          "matching": 6,
+          "correctReady": 6,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "fr": {
+          "cases": 6,
+          "matching": 6,
+          "correctReady": 6,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "zh": {
+          "cases": 6,
+          "matching": 6,
+          "correctReady": 6,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "short": {
+          "cases": 8,
+          "matching": 8,
+          "correctReady": 0,
+          "correctReview": 8,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "literal": {
+          "cases": 4,
+          "matching": 4,
+          "correctReady": 4,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "mixed": {
+          "cases": 4,
+          "matching": 2,
+          "correctReady": 0,
+          "correctReview": 2,
+          "wrongAutomatic": 2,
+          "reviewInsteadOfReady": 0
+        },
+        "unsupported": {
+          "cases": 4,
+          "matching": 4,
+          "correctReady": 0,
+          "correctReview": 4,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        }
+      }
+    },
+    "A": {
+      "cases": 38,
+      "matching": 36,
+      "correctReady": 22,
+      "correctReview": 14,
+      "wrongAutomatic": 2,
+      "reviewInsteadOfReady": 0,
+      "categories": {
+        "en": {
+          "cases": 6,
+          "matching": 6,
+          "correctReady": 6,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "fr": {
+          "cases": 6,
+          "matching": 6,
+          "correctReady": 6,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "zh": {
+          "cases": 6,
+          "matching": 6,
+          "correctReady": 6,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "short": {
+          "cases": 8,
+          "matching": 8,
+          "correctReady": 0,
+          "correctReview": 8,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "literal": {
+          "cases": 4,
+          "matching": 4,
+          "correctReady": 4,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "mixed": {
+          "cases": 4,
+          "matching": 2,
+          "correctReady": 0,
+          "correctReview": 2,
+          "wrongAutomatic": 2,
+          "reviewInsteadOfReady": 0
+        },
+        "unsupported": {
+          "cases": 4,
+          "matching": 4,
+          "correctReady": 0,
+          "correctReview": 4,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        }
+      }
+    },
+    "B": {
+      "cases": 38,
+      "matching": 35,
+      "correctReady": 19,
+      "correctReview": 16,
+      "wrongAutomatic": 0,
+      "reviewInsteadOfReady": 3,
+      "categories": {
+        "en": {
+          "cases": 6,
+          "matching": 6,
+          "correctReady": 6,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "fr": {
+          "cases": 6,
+          "matching": 3,
+          "correctReady": 3,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 3
+        },
+        "zh": {
+          "cases": 6,
+          "matching": 6,
+          "correctReady": 6,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "short": {
+          "cases": 8,
+          "matching": 8,
+          "correctReady": 0,
+          "correctReview": 8,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "literal": {
+          "cases": 4,
+          "matching": 4,
+          "correctReady": 4,
+          "correctReview": 0,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "mixed": {
+          "cases": 4,
+          "matching": 4,
+          "correctReady": 0,
+          "correctReview": 4,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        },
+        "unsupported": {
+          "cases": 4,
+          "matching": 4,
+          "correctReady": 0,
+          "correctReview": 4,
+          "wrongAutomatic": 0,
+          "reviewInsteadOfReady": 0
+        }
+      }
+    }
+  }
+}

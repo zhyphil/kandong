@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "tool": "zipalign",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "tool": "apksigner",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "WARNING: A restricted method in java.lang.System has been called\nWARNING: java.lang.System::loadLibrary has been called by org.conscrypt.NativeLibraryUtil in an unnamed module (file:/Users/haoyuzuo/Library/Android/sdk/build-tools/35.0.0/lib/apksigner.jar)\nWARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module\nWARNING: Restricted methods will be blocked in a future release unless native access is enabled\n\n"
+    }
+  ],
+  "existingAssetsNativeUnchanged": 298,
+  "addedAsset": "language-context-v2.json"
+}
