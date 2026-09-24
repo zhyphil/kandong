@@ -1,0 +1,796 @@
+{
+  "schema": 1,
+  "scope": "New authored synthetic pages frozen before Lingua inference; manual card groups, not external blind test",
+  "cases": [
+    {
+      "id": "pure-1",
+      "category": "pure",
+      "pageId": "dfb01191b1e04232c99cba854864017999b697181dd0f63a10de4eefab95d924",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "The lift is out of service until tomorrow morning.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "pure-2",
+      "category": "pure",
+      "pageId": "e6286622fabf83353ea35118ce026041d8d73107f02064adb49021c67eb999f3",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Do not leave your suitcase unattended on the platform.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "pure-3",
+      "category": "pure",
+      "pageId": "7cc39628455786c4d2a5acdf96a13187deed0475182cab20107e7bd159c9accc",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "The museum closes thirty minutes earlier on Sundays.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "pure-4",
+      "category": "pure",
+      "pageId": "31b53ed26642368e5e6645abba3e7ce0096843edb2f7b26e0112c7734512c7ab",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Your deposit will be returned within seven working days.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "pure-5",
+      "category": "pure",
+      "pageId": "ac27ca54f77e0d0977b4e6127d6146a9c629c40979507abb368f7f08f196d6ce",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "L’ascenseur est hors service jusqu’à demain matin.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "pure-6",
+      "category": "pure",
+      "pageId": "24e13ccd06fafb24ca55e0aa6120b706883cd839842a8be4ec3013cccaf74481",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Ne laissez pas votre valise sans surveillance sur le quai.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "pure-7",
+      "category": "pure",
+      "pageId": "f10a1b7b7f7409d4893bf846c17849d1611a37de5bb6b7a195d93434335fe1f0",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Le musée ferme trente minutes plus tôt le dimanche.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "pure-8",
+      "category": "pure",
+      "pageId": "e16a5d51ba651c541624dcb72453de36cab9ef2e1e32dbc94cee67d5ee7671ef",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Votre caution sera remboursée sous sept jours ouvrables.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "pure-9",
+      "category": "pure",
+      "pageId": "3d02dc009263771b0623916319add46ccbf1a2348f6f681ff3b42d7b2ef2812f",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "电梯将在明天上午恢复正常运行。",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "pure-10",
+      "category": "pure",
+      "pageId": "f6f952937c559b921bdd8b5cb1b0eaa00647aa9f35abccf5110421095bb58541",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "请不要将行李单独留在候车站台上。",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "pure-11",
+      "category": "pure",
+      "pageId": "993580bf06dfacaece1219eb6f080944d93b293e257f44c25ae19ee0be2405ef",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "博物館在星期日提前三十分鐘關門。",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "pure-12",
+      "category": "pure",
+      "pageId": "214355964a3c019540e8077d08f571bc06dc5a0f4d0a4637c475785565e2a076",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "押金將在七個工作日內退還至原付款帳戶。",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "mixed-1",
+      "category": "mixed",
+      "pageId": "81c828657e5021f92ed5a8a3dc5b53ba19f3e5ca5d8d756ffec6bf80d9e56c5b",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Your luggage doit rester with you.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "mixed-2",
+      "category": "mixed",
+      "pageId": "5930c7dd16a6b1021356b6dbd1056ae50dc424e907a98c1b73387875d0c918ff",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Le billet is not refundable après validation.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "mixed-3",
+      "category": "mixed",
+      "pageId": "c5c411b4b4c0f3f5dbf1e51b51a100dbb97140d4220d682d8df0f56e449cb2a2",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Please conserver ce reçu until checkout.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "mixed-4",
+      "category": "mixed",
+      "pageId": "f31460455ce61f1971648a26cf4b512ec41ae3ce7efdff2484add03e8d0a80b7",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Les visiteurs must leave avant la fermeture.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "mixed-5",
+      "category": "mixed",
+      "pageId": "328629943dc095d063d1d861f834431abebbd716e3698128f8e0fe1c06a30750",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Payment accepté only by bank card.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "mixed-6",
+      "category": "mixed",
+      "pageId": "270e3258e7e0b359317bfc951d019957d58b0974fb95d2114469b761d07e54bc",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Le montant does not include les repas.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "mixed-7",
+      "category": "mixed",
+      "pageId": "ab982713db8cee410a3a9fe4e226134959af9e2dd57cd14b3f73aa0bc600b76f",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "请在 boarding 前准备好证件。",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "mixed-8",
+      "category": "mixed",
+      "pageId": "5482e2f7dc02eee4d90d8fba16d59ad2f9f6d10c2859ad64c97b77299f27e515",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "房间费用不包含 le petit déjeuner。",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "short-1",
+      "category": "short",
+      "pageId": "804bd6910592c9acf2c889e5e14f0c716252ac71148eae58edb7328fc4468f7f",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context",
+          "groupId": "card-a",
+          "text": "Send the completed form to confirm your request.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Submit",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "short-2",
+      "category": "short",
+      "pageId": "3327ce5dbcaef01a0efd09a4c356d0c38c415bb03226457f3703c1414b1f8db3",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context",
+          "groupId": "card-a",
+          "text": "Go back to the ticket details without making any changes.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Return",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "short-3",
+      "category": "short",
+      "pageId": "80282a0835ae4234681cd17f102a898d4c22e23d9a8ce71ee5c70f7dd42fc43b",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context",
+          "groupId": "card-a",
+          "text": "Envoyez le formulaire pour confirmer votre demande.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Envoyer",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "short-4",
+      "category": "short",
+      "pageId": "de7ff1d2a580e1f411440f23868ed40c78f74b81c1f06b2007ade3238b81e6db",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context",
+          "groupId": "card-a",
+          "text": "Revenez aux détails du billet sans modifier votre choix.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Précédent",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "short-5",
+      "category": "short",
+      "pageId": "2ca71fe54445e33a96dabfca7843e93f563b3745d457bb34bb04319358b0f7f1",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context",
+          "groupId": "card-a",
+          "text": "请检查填写的信息是否准确，再确认这次申请。",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "确认",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "short-6",
+      "category": "short",
+      "pageId": "b763d5fc61bbd3784c7f6ad6bf5107990c454dba987777174b54f1dfd50092fa",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context",
+          "groupId": "card-a",
+          "text": "請回到前一個步驟檢查您的乘車日期。",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "上一步",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "unsupported-1",
+      "category": "unsupported",
+      "pageId": "421569bc67a6b06e87bcc947e46ca6ec206de61a4d9ffaf23fd29ece31952c03",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "O bilhete não permite alterações após a partida.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "unsupported-2",
+      "category": "unsupported",
+      "pageId": "c28b92c19a00c3ca99e73033f126f13ad62786815ff816bc05cc510258aec832",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Der Fahrpreis enthält keine Reservierung für einen Sitzplatz.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "unsupported-3",
+      "category": "unsupported",
+      "pageId": "32d513dd701992ac335f982bb14334c894cfd93150ab8a96c7f6ae4f3a324a02",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "この切符には座席の予約は含まれていません。",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "unsupported-4",
+      "category": "unsupported",
+      "pageId": "9938433cf596f746271eb32077139c380fc010ed3c6eba825fc66dfe14287c77",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "승차권에는 좌석 예약 요금이 포함되지 않습니다.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "literal-1",
+      "category": "literal",
+      "pageId": "9a2af246d8ce68bcf129f1938fd50c42c53edf8b39af514e690b5d0482f67e64",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "€109.50",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "keep-literal"
+      }
+    },
+    {
+      "id": "literal-2",
+      "category": "literal",
+      "pageId": "85f60a53800a8cc2d7affe2eafd2c99692323c22476624707180b3fa153c55d5",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "06:45",
+          "ocrConflict": false
+        },
+        {
+          "id": "other",
+          "groupId": "card-b",
+          "text": "This separate card concerns a different journey.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "keep-literal"
+      }
+    }
+  ]
+}
