@@ -1,0 +1,14 @@
+{
+  "completed": 74,
+  "expected": 192,
+  "complete": false,
+  "roundsCompleted": 0,
+  "prefixMatchesFrozenPlan": true,
+  "sourceHashesMatch": true,
+  "boundIdsMatch": true,
+  "billedCharactersInSuccessfulResponses": 1454,
+  "secondsMedian": 0.26668418748886324,
+  "secondsMax": 0.38611329201376066,
+  "semanticQualityAccepted": false,
+  "stoppedOn": "HTTP_429"
+}

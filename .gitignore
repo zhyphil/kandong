@@ -27,3 +27,5 @@ captures/
 /.local/
 /.env
 /.env.*
+
+**/__pycache__/

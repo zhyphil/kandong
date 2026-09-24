@@ -1,0 +1,208 @@
+{
+  "syntheticOnly": true,
+  "contextRepresentation": "whole-page-source-lines-v1",
+  "purpose": "selected development diagnosis; not a blind holdout",
+  "calls": 14,
+  "sourceCharacters": 91,
+  "paceSeconds": 2.0,
+  "retries": 0,
+  "qualityAccepted": false,
+  "rows": [
+    {
+      "page": "p001",
+      "target": "b005",
+      "mode": "plain-full",
+      "request": {
+        "text": [
+          "Book"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Reserve a room\nSelect your dates\n12–14 October 2026\n2 adults · 1 room\nBook"
+      }
+    },
+    {
+      "page": "p002",
+      "target": "b004",
+      "mode": "plain-full",
+      "request": {
+        "text": [
+          "Book"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Bookshop\nCategories\nBooks and magazines\nBook\nMagazine\nBrowse categories"
+      }
+    },
+    {
+      "page": "p101",
+      "target": "b003",
+      "mode": "plain-full",
+      "request": {
+        "text": [
+          "Book"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Library catalogue\nChoose a type of publication\nBook\nJournal"
+      }
+    },
+    {
+      "page": "p102",
+      "target": "b004",
+      "mode": "plain-full",
+      "request": {
+        "text": [
+          "Book"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Restaurant reservations\nChoose a table for tonight\n4 guests at 19:30\nBook"
+      }
+    },
+    {
+      "page": "p004",
+      "target": "b004",
+      "mode": "plain-full",
+      "request": {
+        "text": [
+          "Vol"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Informations sur votre voyage\nDépart : Paris\nArrivée : Nice\nVol\nDurée : 1 h 30"
+      }
+    },
+    {
+      "page": "p005",
+      "target": "b004",
+      "mode": "plain-full",
+      "request": {
+        "text": [
+          "Vol"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Déclaration à la police\nObjet dérobé : vélo\nLieu des faits\nVol\nDécrire les circonstances"
+      }
+    },
+    {
+      "page": "p103",
+      "target": "b003",
+      "mode": "plain-full",
+      "request": {
+        "text": [
+          "Vol"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Votre départ\nEmbarquement à la porte 12\nVol\nDestination : Lyon"
+      }
+    },
+    {
+      "page": "p104",
+      "target": "b004",
+      "mode": "plain-full",
+      "request": {
+        "text": [
+          "Vol"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Assurance habitation\nDéclarer un sinistre\nObjets disparus\nVol"
+      }
+    },
+    {
+      "page": "p201",
+      "target": "b004",
+      "mode": "plain-full",
+      "request": {
+        "text": [
+          "Return"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Returns and refunds\nUnopened products only\nSelect an item from your order\nReturn"
+      }
+    },
+    {
+      "page": "p202",
+      "target": "b003",
+      "mode": "plain-full",
+      "request": {
+        "text": [
+          "Return"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Account settings\nReturn to the previous screen\nReturn"
+      }
+    },
+    {
+      "page": "p203",
+      "target": "b003",
+      "mode": "plain-full",
+      "request": {
+        "text": [
+          "Note"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Au restaurant\nDétail des consommations\nNote\nPayer à la caisse"
+      }
+    },
+    {
+      "page": "p204",
+      "target": "b003",
+      "mode": "plain-full",
+      "request": {
+        "text": [
+          "Note"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Avis des clients\nÉvaluation sur 5 étoiles\nNote\nDonner votre avis"
+      }
+    },
+    {
+      "page": "p106",
+      "target": "b004",
+      "mode": "plain-full",
+      "request": {
+        "text": [
+          "Valable le 5 décembre 2026"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Votre réservation\nTarif réduit\nPrix total : 37,80 €\nValable le 5 décembre 2026\nAucun remboursement après le départ.\n2 bagages, 6 kg maximum chacun."
+      }
+    },
+    {
+      "page": "p003",
+      "target": "b004",
+      "mode": "plain-full",
+      "request": {
+        "text": [
+          "$120.00 per night"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now."
+      }
+    }
+  ]
+}

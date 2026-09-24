@@ -1,0 +1,8 @@
+{
+  "status": "stopped",
+  "completed": 74,
+  "attemptedSourceCharacters": 1474,
+  "error": "HTTP_429",
+  "retried": false,
+  "qualityAccepted": false
+}
