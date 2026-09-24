@@ -1,0 +1,177 @@
+> Task :ocrlab:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :ocrlab:preBuild UP-TO-DATE
+> Task :ocrlab:preDebugBuild UP-TO-DATE
+> Task :ocrlab:checkDebugAarMetadata UP-TO-DATE
+> Task :ocrlab:processDebugNavigationResources UP-TO-DATE
+> Task :ocrlab:compileDebugNavigationResources UP-TO-DATE
+> Task :ocrlab:generateDebugResValues UP-TO-DATE
+> Task :ocrlab:mapDebugSourceSetPaths UP-TO-DATE
+> Task :ocrlab:generateDebugResources UP-TO-DATE
+> Task :ocrlab:mergeDebugResources UP-TO-DATE
+> Task :ocrlab:packageDebugResources UP-TO-DATE
+> Task :ocrlab:parseDebugLocalResources UP-TO-DATE
+> Task :ocrlab:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :ocrlab:extractDeepLinksDebug UP-TO-DATE
+> Task :ocrlab:processDebugMainManifest
+> Task :ocrlab:processDebugManifest
+> Task :ocrlab:javaPreCompileDebug UP-TO-DATE
+> Task :ocrlab:preDebugUnitTestBuild UP-TO-DATE
+> Task :ocrlab:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :ocrlab:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :ocrlab:mergeDebugShaders UP-TO-DATE
+> Task :ocrlab:compileDebugShaders NO-SOURCE
+> Task :ocrlab:generateDebugAssets UP-TO-DATE
+> Task :ocrlab:mergeDebugAssets UP-TO-DATE
+> Task :ocrlab:compressDebugAssets UP-TO-DATE
+> Task :ocrlab:desugarDebugFileDependencies UP-TO-DATE
+> Task :ocrlab:checkDebugDuplicateClasses UP-TO-DATE
+> Task :ocrlab:mergeExtDexDebug UP-TO-DATE
+> Task :ocrlab:mergeLibDexDebug UP-TO-DATE
+> Task :ocrlab:mergeDebugJniLibFolders UP-TO-DATE
+> Task :ocrlab:mergeDebugNativeLibs UP-TO-DATE
+> Task :ocrlab:stripDebugDebugSymbols UP-TO-DATE
+> Task :ocrlab:validateSigningDebug UP-TO-DATE
+> Task :ocrlab:writeDebugAppMetadata UP-TO-DATE
+> Task :ocrlab:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :ocrlab:preDebugAndroidTestBuild SKIPPED
+> Task :ocrlab:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :ocrlab:extractProguardFiles UP-TO-DATE
+> Task :modelprobe:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :modelprobe:validateProbeAssets
+> Task :modelprobe:preBuild
+> Task :modelprobe:preDebugBuild
+> Task :modelprobe:checkDebugAarMetadata UP-TO-DATE
+> Task :modelprobe:processDebugNavigationResources UP-TO-DATE
+> Task :modelprobe:compileDebugNavigationResources UP-TO-DATE
+> Task :modelprobe:generateDebugResValues UP-TO-DATE
+> Task :ocrlab:processDebugManifestForPackage
+> Task :modelprobe:mapDebugSourceSetPaths UP-TO-DATE
+> Task :modelprobe:generateDebugResources UP-TO-DATE
+> Task :modelprobe:mergeDebugResources UP-TO-DATE
+> Task :modelprobe:packageDebugResources UP-TO-DATE
+> Task :modelprobe:parseDebugLocalResources UP-TO-DATE
+> Task :modelprobe:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :modelprobe:extractDeepLinksDebug UP-TO-DATE
+> Task :modelprobe:processDebugMainManifest UP-TO-DATE
+> Task :modelprobe:processDebugManifest UP-TO-DATE
+> Task :modelprobe:processDebugManifestForPackage UP-TO-DATE
+> Task :modelprobe:processDebugResources UP-TO-DATE
+> Task :modelprobe:compileDebugKotlin UP-TO-DATE
+> Task :modelprobe:javaPreCompileDebug UP-TO-DATE
+> Task :modelprobe:compileDebugJavaWithJavac NO-SOURCE
+> Task :modelprobe:bundleDebugClassesToRuntimeJar UP-TO-DATE
+> Task :modelprobe:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :modelprobe:verifyPolygonProbeVendor
+> Task :modelprobe:compileDebugUnitTestKotlin UP-TO-DATE
+> Task :modelprobe:preDebugUnitTestBuild
+> Task :modelprobe:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :modelprobe:compileDebugUnitTestJavaWithJavac UP-TO-DATE
+> Task :modelprobe:processDebugJavaRes UP-TO-DATE
+> Task :modelprobe:processDebugUnitTestJavaRes UP-TO-DATE
+> Task :modelprobe:testDebugUnitTest UP-TO-DATE
+> Task :modelprobe:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :modelprobe:mergeDebugShaders UP-TO-DATE
+> Task :modelprobe:compileDebugShaders NO-SOURCE
+> Task :modelprobe:generateDebugAssets UP-TO-DATE
+> Task :modelprobe:mergeDebugAssets UP-TO-DATE
+> Task :modelprobe:compressDebugAssets UP-TO-DATE
+> Task :modelprobe:desugarDebugFileDependencies UP-TO-DATE
+> Task :modelprobe:dexBuilderDebug UP-TO-DATE
+> Task :modelprobe:mergeDebugGlobalSynthetics UP-TO-DATE
+> Task :modelprobe:mergeDebugJavaResource UP-TO-DATE
+> Task :modelprobe:checkDebugDuplicateClasses UP-TO-DATE
+> Task :modelprobe:mergeExtDexDebug UP-TO-DATE
+> Task :modelprobe:mergeLibDexDebug UP-TO-DATE
+> Task :modelprobe:mergeProjectDexDebug UP-TO-DATE
+> Task :modelprobe:mergeDebugJniLibFolders UP-TO-DATE
+> Task :modelprobe:mergeDebugNativeLibs UP-TO-DATE
+> Task :modelprobe:stripDebugDebugSymbols UP-TO-DATE
+> Task :modelprobe:validateSigningDebug UP-TO-DATE
+> Task :modelprobe:writeDebugAppMetadata UP-TO-DATE
+> Task :modelprobe:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :modelprobe:packageDebug UP-TO-DATE
+> Task :modelprobe:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :modelprobe:assembleDebug
+> Task :ocrlab:processDebugResources
+> Task :modelprobe:verifyOpenCvTestArtifact
+> Task :modelprobe:preDebugAndroidTestBuild SKIPPED
+> Task :modelprobe:checkDebugAndroidTestAarMetadata UP-TO-DATE
+> Task :modelprobe:processDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :modelprobe:compileDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :modelprobe:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :modelprobe:mapDebugAndroidTestSourceSetPaths UP-TO-DATE
+> Task :modelprobe:generateDebugAndroidTestResources UP-TO-DATE
+> Task :modelprobe:mergeDebugAndroidTestResources UP-TO-DATE
+> Task :modelprobe:processDebugAndroidTestManifest UP-TO-DATE
+> Task :modelprobe:processDebugAndroidTestResources UP-TO-DATE
+> Task :modelprobe:javaPreCompileDebugAndroidTest UP-TO-DATE
+> Task :modelprobe:mergeDebugAndroidTestShaders UP-TO-DATE
+> Task :modelprobe:compileDebugAndroidTestShaders NO-SOURCE
+> Task :modelprobe:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :modelprobe:stageCropRecognitionProbeAssets UP-TO-DATE
+> Task :modelprobe:stageGeometryProbeAssets UP-TO-DATE
+> Task :modelprobe:stageBoxTraceProbeAssets UP-TO-DATE
+> Task :modelprobe:validateBoxTraceProbeAssets
+> Task :modelprobe:validateDetectorProbeAssets
+> Task :modelprobe:stagePolygonOffsetProbeAssets UP-TO-DATE
+> Task :modelprobe:validatePolygonOffsetProbeAssets
+> Task :modelprobe:mergeDebugAndroidTestAssets UP-TO-DATE
+> Task :modelprobe:compressDebugAndroidTestAssets UP-TO-DATE
+> Task :modelprobe:desugarDebugAndroidTestFileDependencies UP-TO-DATE
+> Task :modelprobe:checkDebugAndroidTestDuplicateClasses UP-TO-DATE
+> Task :modelprobe:mergeExtDexDebugAndroidTest UP-TO-DATE
+> Task :modelprobe:mergeLibDexDebugAndroidTest UP-TO-DATE
+> Task :modelprobe:mergeDebugAndroidTestJniLibFolders UP-TO-DATE
+> Task :modelprobe:mergeDebugAndroidTestNativeLibs UP-TO-DATE
+> Task :modelprobe:stripDebugAndroidTestDebugSymbols UP-TO-DATE
+> Task :modelprobe:validateSigningDebugAndroidTest UP-TO-DATE
+> Task :modelprobe:writeDebugAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :modelprobe:generateDebugAndroidTestLintModel
+> Task :modelprobe:extractProguardFiles UP-TO-DATE
+> Task :modelprobe:generateDebugLintReportModel UP-TO-DATE
+> Task :modelprobe:generateDebugUnitTestLintModel
+> Task :modelprobe:lintAnalyzeDebug UP-TO-DATE
+> Task :modelprobe:compileDebugAndroidTestKotlin
+> Task :modelprobe:compileDebugAndroidTestJavaWithJavac UP-TO-DATE
+> Task :ocrlab:compileDebugKotlin
+> Task :modelprobe:dexBuilderDebugAndroidTest
+> Task :ocrlab:compileDebugJavaWithJavac NO-SOURCE
+> Task :ocrlab:processDebugJavaRes UP-TO-DATE
+> Task :ocrlab:bundleDebugClassesToCompileJar
+> Task :ocrlab:bundleDebugClassesToRuntimeJar
+> Task :ocrlab:dexBuilderDebug
+> Task :ocrlab:mergeDebugGlobalSynthetics UP-TO-DATE
+> Task :ocrlab:mergeDebugJavaResource UP-TO-DATE
+> Task :ocrlab:compileDebugUnitTestKotlin
+> Task :ocrlab:generateDebugAndroidTestLintModel
+> Task :ocrlab:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :ocrlab:processDebugUnitTestJavaRes UP-TO-DATE
+> Task :ocrlab:mergeProjectDexDebug
+> Task :ocrlab:testDebugUnitTest
+> Task :ocrlab:generateDebugLintReportModel
+> Task :ocrlab:generateDebugUnitTestLintModel
+> Task :modelprobe:mergeDebugAndroidTestGlobalSynthetics UP-TO-DATE
+> Task :modelprobe:processDebugAndroidTestJavaRes UP-TO-DATE
+> Task :modelprobe:mergeDebugAndroidTestJavaResource UP-TO-DATE
+> Task :modelprobe:mergeProjectDexDebugAndroidTest
+> Task :ocrlab:packageDebug
+> Task :ocrlab:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :ocrlab:assembleDebug
+> Task :modelprobe:packageDebugAndroidTest
+> Task :modelprobe:createDebugAndroidTestApkListingFileRedirect UP-TO-DATE
+> Task :modelprobe:assembleDebugAndroidTest
+> Task :modelprobe:lintAnalyzeDebugUnitTest
+> Task :ocrlab:lintAnalyzeDebugAndroidTest
+> Task :ocrlab:lintAnalyzeDebugUnitTest
+> Task :ocrlab:lintAnalyzeDebug
+
+> Task :ocrlab:lintReportDebug
+Wrote HTML report to file:///Users/haoyuzuo/Projects/KanDong/ocrlab/build/reports/lint-results-debug.html
+
+> Task :ocrlab:lintDebug
+> Task :modelprobe:lintAnalyzeDebugAndroidTest
+> Task :modelprobe:lintReportDebug UP-TO-DATE
+> Task :modelprobe:lintDebug
+
+BUILD SUCCESSFUL in 4s
+149 actionable tasks: 37 executed, 112 up-to-date

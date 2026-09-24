@@ -5,6 +5,7 @@
     <application android:label="看懂文字实验" android:allowBackup="false"
         android:supportsRtl="true" android:theme="@style/OcrLabTheme">
         <activity android:name=".multilingual.ComparisonLabActivity" android:exported="false" />
+        <activity android:name=".context.OnDemandLabActivity" android:exported="false" />
         <activity android:name=".context.ContextLabActivity" android:exported="false" />
         <activity android:name=".OcrLabActivity" android:exported="true">
             <intent-filter>

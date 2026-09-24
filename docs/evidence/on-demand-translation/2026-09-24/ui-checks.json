@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "checks": [
+    "no automatic processing at entry",
+    "move before click remains idle",
+    "explicit click translates fixture",
+    "move uses same page without processing again",
+    "page change clears and does not auto process",
+    "second click processes new page",
+    "original clears translation",
+    "background return does not restore translation"
+  ],
+  "limits": [
+    "Only handmade sources and Chinese, not a model or product overlay"
+  ]
+}

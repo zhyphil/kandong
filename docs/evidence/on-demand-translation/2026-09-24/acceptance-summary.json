@@ -1,0 +1,34 @@
+{
+  "status": "accepted-synthetic-on-demand-flow",
+  "unitTests": 131,
+  "androidRounds": 2,
+  "androidTestsPerRound": 8,
+  "uiChecks": 8,
+  "scope": "Pure one-click/one-page controller and a handmade UI demonstration; no model, real screen or production overlay",
+  "sourceSha256": {
+    "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/OnDemandTranslation.kt": "d3bc9e8f723c16bfbb98fea065f8c159cfb33ba4b2ae977d3e9c89b8df8b004c",
+    "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/OnDemandFixtures.kt": "41f428720e1b0ac4fe69dc0a972b25ef854c2487295ca52822307ed03460e991",
+    "ocrlab/src/main/java/com/kandong/ocrlab/context/OnDemandLabActivity.kt": "295d37b91e05d3fd827d24508fed3d425929f11d14c1916997be949f31f128af",
+    "ocrlab/src/main/java/com/kandong/ocrlab/OcrLabActivity.kt": "de0cdd1bb2066540da842fc77ebdd865cb192e65b0806f08e05a70bc23301860",
+    "ocrlab/src/main/AndroidManifest.xml": "a01fb3432e91a2fa438545ac7b613bc0e15670f1f99ec20ca3e4a8b8764b94a5",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/OnDemandTranslationTest.kt": "8ecd18ae2089a5bfc1a16cf9cb613f1794c9eabd6e79e78fb9dcb77981e746e4"
+  },
+  "apkChecks": [
+    {
+      "apk": "ocrlab/build/outputs/apk/debug/ocrlab-debug.apk",
+      "sha256": "83f03645fedef5f6c88ea423f193f0fd314885ae200bb4fa47267076897fa545",
+      "permissions": "package: com.kandong.ocrlab\npermission: com.kandong.ocrlab.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION\nuses-permission: name='com.kandong.ocrlab.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'\n"
+    },
+    {
+      "apk": "modelprobe/build/outputs/apk/androidTest/debug/modelprobe-debug-androidTest.apk",
+      "sha256": "3e67dca6f57def63c6c44e08402d44a900c9ca1f32995fa15c76f405dc84264a",
+      "permissions": "package: com.kandong.modelprobe.test\n"
+    }
+  ],
+  "limitations": [
+    "UI sources and Chinese are prewritten",
+    "Page-change signals are manually simulated; real change detection remains unimplemented",
+    "Original mode cancels this translation; returning to translation requires another click",
+    "Existing magnification sharing does not authorize OCR; no production integration"
+  ]
+}

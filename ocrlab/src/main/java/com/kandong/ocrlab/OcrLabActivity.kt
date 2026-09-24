@@ -47,6 +47,10 @@ class OcrLabActivity : Activity() {
         content.addView(label("看懂文字实验", 26f))
         content.addView(label("原 37 项实验仅用项目随包的合成法语、英语文字。12 句原文分别绘制为 16、24、32 像素字号，再加一张空白图片，共 37 项。", 18f))
         content.addView(label("不会读取真实屏幕、照片、相机或外部传入文字。没有翻译模型、账号或模型下载入口。下方另有三语 OCR 对照实验（识别随包合成中文图片）及人工预置中文的合成上下文实验。各实验仅在明确点击后运行；返回页面不会自动运行。", 17f))
+        content.addView(Button(this).apply {
+            text = "点击翻译交互实验"; minHeight = dp(48); minWidth = dp(48)
+            setOnClickListener { startActivity(Intent(this@OcrLabActivity, com.kandong.ocrlab.context.OnDemandLabActivity::class.java)) }
+        })
         start = Button(this).apply {
             text = "开始 37 项合成文字实验"
             minHeight = dp(48)

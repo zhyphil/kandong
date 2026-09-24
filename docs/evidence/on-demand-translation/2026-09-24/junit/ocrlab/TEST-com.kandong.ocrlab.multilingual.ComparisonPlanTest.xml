@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.ocrlab.multilingual.ComparisonPlanTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-09-24T16:14:54.298Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.01">
+  <properties/>
+  <testcase name="matrixRejectsMissingAndDuplicateInputs" classname="com.kandong.ocrlab.multilingual.ComparisonPlanTest" time="0.0"/>
+  <testcase name="geometryRetainsFractionalCoordinates" classname="com.kandong.ocrlab.multilingual.ComparisonPlanTest" time="0.001"/>
+  <testcase name="dimensionsAndDecodedPixelsMustMatchIndependently" classname="com.kandong.ocrlab.multilingual.ComparisonPlanTest" time="0.001"/>
+  <testcase name="smoothProfileKeepsSeparateTaskIdentitiesAndBothEngines" classname="com.kandong.ocrlab.multilingual.ComparisonPlanTest" time="0.005"/>
+  <testcase name="everyInputHasBothEnginesForEveryRenderingAndScale" classname="com.kandong.ocrlab.multilingual.ComparisonPlanTest" time="0.001"/>
+  <testcase name="hashUsesOpaqueRgbaByteOrderAndRejectsTampering" classname="com.kandong.ocrlab.multilingual.ComparisonPlanTest" time="0.001"/>
+  <testcase name="replicationCopiesPixelsInTwoByTwoSquares" classname="com.kandong.ocrlab.multilingual.ComparisonPlanTest" time="0.0"/>
+  <testcase name="cancellationDoesNotAdvanceToSecondEngineAndBusyDrainingBlocksBothEntrypoints" classname="com.kandong.ocrlab.multilingual.ComparisonPlanTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
