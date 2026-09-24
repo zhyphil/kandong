@@ -1,6 +1,6 @@
 # Android图片缩放对照
 
-2026-09-24。当前状态：构建/22单测通过（Lint 0错误/6提示），专用API36两轮各3项设备测试通过；**目标华为等待系统安装确认，本阶段尚未双设备验收**。只扩展独立modelprobe的androidTest和构建配置，不改变应用运行器、已有输入或正式放大镜。
+2026-09-24。当前状态：构建/22单测通过（Lint 0错误/6提示），专用API36两轮各3项设备测试通过；目标华为LIO-AN00/API31也完成两轮各3项设备测试，**本阶段双设备技术验收通过**。只扩展独立modelprobe的androidTest和构建配置，不改变应用运行器、已有输入或正式放大镜。
 
 ## 检查范围
 
@@ -20,6 +20,8 @@
 
 ## 真机与下一项
 
-华为停在系统安装界面（InstallStaging），首次等待90秒后安装命令超时。已请用户亲自确认，未替用户处理系统安全提示；没有当前版本真机结果。安装完成后继续相同两轮及安装包哈希核对，再决定是否进入检测/裁剪技术验证。
+用户确认安装后，核对主包与测试包实际安装SHA均与已验收产物相同。目标华为两轮各3项测试通过；主对照耗时5904/5611ms，10/10原文一致、7/10 argmax一致。全部缩放像素/张量指标和模型结果与API36逐项相同，重跑也相同；36个Bitmap、44项原生资源每轮均关闭。见[真机证据](evidence/android-resize/2026-09-24/huawei/report-1.json)。这是合成输入的有界技术验收，没有测持续性能、温度或电池。
 
-模拟器命令使用安装后的 `com.kandong.modelprobe.test/androidx.test.runner.AndroidJUnitRunner`，仅运行 `com.kandong.modelprobe.AndroidResizeProbeTest`。结果保存在目标应用私有 `files/resize-probe-report.json`，仅含合成数据；每次运行先删除本测试旧报告，不把旧结果当新结果。取消/后台的产品会话规则仍由原模型探针验证，本测试没有新增会话UI。真机验收后还需新增语料、真实检测框、透视裁剪及坐标映射，三语质量与翻译继续保留待验收。
+保留此前安装等待90秒超时的历史事实；用户确认后完成，不是代码故障。本阶段验收完成，自动推进独立检测/裁剪技术验证。
+
+模拟器命令使用安装后的 `com.kandong.modelprobe.test/androidx.test.runner.AndroidJUnitRunner`，仅运行 `com.kandong.modelprobe.AndroidResizeProbeTest`。结果保存在目标应用私有 `files/resize-probe-report.json`，仅含合成数据；每次运行先删除本测试旧报告，不把旧结果当新结果。取消/后台的产品会话规则仍由原模型探针验证，本测试没有新增会话UI。后续还需新增语料、真实检测框、透视裁剪及坐标映射，三语质量与翻译继续保留待验收。

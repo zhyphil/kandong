@@ -92,9 +92,66 @@
     ]
   },
   "huawei": {
-    "status": "pending_user_system_install_confirmation",
-    "adbInstallTimedOutSeconds": 90,
-    "noCurrentDeviceResults": true
+    "api": 31,
+    "runs": 2,
+    "instrumentedTestsPerRun": 3,
+    "decodedSourceAndReferencePngBgrAllMatchPinnedHashes": true,
+    "rawTextMatchCount": 10,
+    "argmaxMatchCount": 7,
+    "modelComparisonsPerRun": 10,
+    "baselineAndResizedInferenceCallsPerRun": 20,
+    "firstElapsedMs": 5904,
+    "restartElapsedMs": 5611,
+    "resultsIdenticalAcrossRuns": true,
+    "bitmapsOpenedAndRecycled": 36,
+    "nativeOpenedAndClosed": 44,
+    "caseMetrics": [
+      {
+        "case": "en-quality-16",
+        "changedRgbChannels": 34476,
+        "totalRgbChannels": 98928,
+        "maxAbsChannelError": 9,
+        "changedFloatBits": 34476
+      },
+      {
+        "case": "fr-nonrefundable-16",
+        "changedRgbChannels": 40728,
+        "totalRgbChannels": 122112,
+        "maxAbsChannelError": 8,
+        "changedFloatBits": 40728
+      },
+      {
+        "case": "zh-hans-quality-16",
+        "changedRgbChannels": 45549,
+        "totalRgbChannels": 125712,
+        "maxAbsChannelError": 8,
+        "changedFloatBits": 45549
+      },
+      {
+        "case": "zh-hant-quality-16",
+        "changedRgbChannels": 49590,
+        "totalRgbChannels": 128880,
+        "maxAbsChannelError": 8,
+        "changedFloatBits": 49590
+      },
+      {
+        "case": "mixed-quality-16",
+        "changedRgbChannels": 50154,
+        "totalRgbChannels": 145728,
+        "maxAbsChannelError": 9,
+        "changedFloatBits": 50154
+      },
+      {
+        "case": "color-controls",
+        "changedRgbChannels": 49357,
+        "totalRgbChannels": 59472,
+        "maxAbsChannelError": 26,
+        "changedFloatBits": 49357
+      }
+    ],
+    "model": "LIO-AN00",
+    "status": "passed_bounded_resize_comparison",
+    "resultsIdenticalToApi36": true
   },
   "initialFailure": {
     "test": "extremeDimensionsKeepConstantColorAndSameSizeOwnership",
@@ -105,8 +162,11 @@
   "limitations": [
     "Different pixels and 3 changed argmax sequences; 10 exact decoded texts do not establish general OCR quality",
     "No fresh holdout corpus or complete Android detector/perspective crop in this test",
-    "Await target phone run before accepting this phase",
     "No real page, screen-sharing or network access",
     "No sustained performance or power measurement"
-  ]
+  ],
+  "historicalInstallWait": {
+    "adbInstallTimedOutSeconds": 90,
+    "resolved": "user confirmed app; missing test package installed successfully before both runs"
+  }
 }
