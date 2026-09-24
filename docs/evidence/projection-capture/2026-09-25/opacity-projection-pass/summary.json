@@ -14,7 +14,7 @@
   "secure_activity": "BLACK_OBSERVED",
   "cleanup_confirmed": true,
   "previous_confirmation_attempt": "No new projection records, page showed consent not granted and 0 images. The 120-second waiting timeout is a possible cause; not independently timestamp-proven. A fresh user confirmation produced this successful session.",
-  "huawei_next": "User confirmed installation, but ADB installation returned an empty failure and the device disconnected. macOS USB identifies this Huawei after reconnect; ADB still does not list it. Installed package/hash not yet verified. Restore debugging connection before retrying or testing.",
+  "huawei_next": "User confirmed installation and USB debugging. Mac identifies the Huawei and its ADB interface, but host reads/writes fail (e00002ed). Refreshing native and testing libusb did not restore transport; default native restored. Installation/hash remain unverified. Requires USB connection recovery before target test.",
   "no_new_code_changes": true,
   "no_push_or_release": true
 }

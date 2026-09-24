@@ -1,0 +1,18 @@
+{
+  "default_backend_restored": true,
+  "devices": "List of devices attached\nemulator-5582          device product:sdk_gphone16k_arm64 model:sdk_gphone16k_arm64 device:emu64a16k transport_id:2\n\n",
+  "usb_device_identified": "HUAWEI LIO-AN00 / 2KE0220109017133",
+  "usb_adb_interface_identified": true,
+  "debugging_connection_usable": false,
+  "native_retry": "target unavailable",
+  "libusb_retry": "target unavailable",
+  "installed_package_hash_verified": false,
+  "error": "USB read/write failed status e00002ed; cause not yet isolated",
+  "official_backend_reference": "https://developer.android.google.cn/tools/releases/platform-tools?hl=en",
+  "last_native_io_errors": [
+    "09-25 00:25:18.346 81961 7526956 E adb     : usb_osx.cpp:631 usb_read failed with status: e00002ed",
+    "09-25 00:25:18.346 81961 7526957 E adb     : usb_osx.cpp:593 usb_write failed with status: e00002ed",
+    "09-25 00:26:24.525 82166 7528174 E adb     : usb_osx.cpp:631 usb_read failed with status: e00002ed",
+    "09-25 00:26:24.525 82166 7528175 E adb     : usb_osx.cpp:593 usb_write failed with status: e00002ed"
+  ]
+}

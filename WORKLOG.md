@@ -753,3 +753,5 @@
 - d94ecf0同包PID5213/session1七阶段全部通过，5个公开对照CURRENT_CONFIRMED、2个保护阶段BLACK_OBSERVED、各连续3帧；两个保护前后对照均CONTROLLED_OBSERVATION。Image38/38、VirtualDisplay1，停止后dumpsys确认服务空、projection null、自有固定overlay无残留。单次自有页模拟器证据，不算所有App／OEM兼容。
 - 无源码改动，不重复无关测试；保存原始枚举日志、独立审计、清理状态、APK与环境指纹到opacity-projection-pass，旧失败保留。模拟器这项标为完成，推进同包华为API31验证。
 - 目标手机当前在线，重新核对LIO-AN00/HWLIO、Android12/API31；安装前包查询为空。本轮向该机发出同一已验证APK安装请求，用户确认后ADB返回无细节失败，随即目标设备不在调试列表；不能据此断言手机未装好。重新插线后Mac USB库存识别正确型号和序列，但ADB仍未枚举，待手机USB调试恢复后核对实际安装／指纹，再做权限和七阶段验证。未读取手机第三方页面内容，未上传／调用翻译／推送／发布。
+
+- 后续用户重新插线、选择传输文件并允许USB调试后，Mac IORegistry确认同一华为以及255/66/1 ADB接口，但ADB不列出设备；主机日志出现usb_read／usb_write e00002ed。仅有看懂专用设备时刷新NATIVE服务，再按官方37.0.1说明以进程级ADB_LIBUSB=1对照，仍不可用，已恢复默认NATIVE，无全局配置更改、未关闭用户其他程序。安装与手机验收保留未核实，不能将环境故障归为应用缺陷；下一步恢复USB传输后查包和哈希，不盲目重复安装。连接证据追加huawei-usb-diagnosis.json。

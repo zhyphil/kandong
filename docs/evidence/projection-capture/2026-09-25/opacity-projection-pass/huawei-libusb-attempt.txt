@@ -1,0 +1,6 @@
+usb_backend: LIBUSB
+usb_backend_forced: true
+version: "37.0.1"
+List of devices attached
+emulator-5582          device product:sdk_gphone16k_arm64 model:sdk_gphone16k_arm64 device:emu64a16k transport_id:1
+
