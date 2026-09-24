@@ -1,0 +1,6285 @@
+{
+  "schema": 1,
+  "ruleFrozenAtLocalCommit": "e123c55",
+  "rule": "Pair exact geometry; Han evidence in ch -> ch; otherwise Latin letters in latin -> latin; otherwise review. Text retained verbatim.",
+  "scope": "Retrospective offline selection of already recorded synthetic outputs, not new OCR inference or unseen-data validation",
+  "scriptSha256": "f3990f153ed205207619f3be0bfbb9a9391d1d135f6f6b0c3e17ad3c12b6ed4c",
+  "phoneAuditSha256": "84cc37b0dbc610486ad44b1f18c0489bd6950d3051b870bb87474625250c9725",
+  "historicalSourceSha256": {
+    "baseline72": "fe2ee51156b4fca67744efaa62eee68c4dead0be58a69321cfe891892b78da29",
+    "holdout124": "64c37cf7b2595cc1fed7f28563f497b4adb20ae1659696a23266da8a20ee6757"
+  },
+  "selfChecks": "10 assertions: Han/mixed/Latin/diacritics/numeric/punctuation/geometry mismatch/length mismatch/empty",
+  "groups": [
+    {
+      "dataset": "accepted-phone-five",
+      "scale": 1,
+      "textImages": 5,
+      "chExact": 3,
+      "latinExact": 2,
+      "selectedExact": 4,
+      "improvedVsCh": [
+        "fr-nonrefundable-16"
+      ],
+      "readyWrongRegressionsVsCh": [],
+      "reviewOrAlignmentRequired": [],
+      "remainingMismatches": [
+        "mixed-quality-16"
+      ],
+      "negativeControls": 0,
+      "negativeControlsExact": 0
+    },
+    {
+      "dataset": "baseline72",
+      "scale": 1,
+      "textImages": 17,
+      "chExact": 11,
+      "latinExact": 10,
+      "selectedExact": 13,
+      "improvedVsCh": [
+        "fr-nonrefundable-16",
+        "fr-total-24",
+        "fr-total-32"
+      ],
+      "readyWrongRegressionsVsCh": [],
+      "reviewOrAlignmentRequired": [
+        "fr-quality-32"
+      ],
+      "remainingMismatches": [
+        "fr-quality-32",
+        "fr-total-16",
+        "mixed-quality-16",
+        "mixed-quality-32"
+      ],
+      "negativeControls": 1,
+      "negativeControlsExact": 1
+    },
+    {
+      "dataset": "baseline72",
+      "scale": 2,
+      "textImages": 17,
+      "chExact": 12,
+      "latinExact": 10,
+      "selectedExact": 13,
+      "improvedVsCh": [
+        "fr-total-24",
+        "fr-total-32"
+      ],
+      "readyWrongRegressionsVsCh": [],
+      "reviewOrAlignmentRequired": [
+        "fr-quality-32"
+      ],
+      "remainingMismatches": [
+        "fr-quality-32",
+        "fr-total-16",
+        "mixed-quality-16",
+        "mixed-quality-32"
+      ],
+      "negativeControls": 1,
+      "negativeControlsExact": 1
+    },
+    {
+      "dataset": "holdout124",
+      "scale": 1,
+      "textImages": 30,
+      "chExact": 22,
+      "latinExact": 12,
+      "selectedExact": 14,
+      "improvedVsCh": [
+        "fr-departure-24"
+      ],
+      "readyWrongRegressionsVsCh": [],
+      "reviewOrAlignmentRequired": [
+        "hans-luggage-16",
+        "hans-luggage-24",
+        "hans-luggage-32",
+        "hans-order-16",
+        "hans-order-32",
+        "hant-luggage-16",
+        "hant-luggage-24",
+        "hant-luggage-32",
+        "hant-order-16",
+        "hant-order-32",
+        "mixed-room-16",
+        "mixed-room-24",
+        "mixed-room-32"
+      ],
+      "remainingMismatches": [
+        "hans-luggage-16",
+        "hans-luggage-24",
+        "hans-luggage-32",
+        "hans-order-16",
+        "hans-order-32",
+        "hant-luggage-16",
+        "hant-luggage-24",
+        "hant-luggage-32",
+        "hant-order-16",
+        "hant-order-32",
+        "mixed-exit-16",
+        "mixed-exit-24",
+        "mixed-exit-32",
+        "mixed-room-16",
+        "mixed-room-24",
+        "mixed-room-32"
+      ],
+      "negativeControls": 1,
+      "negativeControlsExact": 1
+    },
+    {
+      "dataset": "holdout124",
+      "scale": 2,
+      "textImages": 30,
+      "chExact": 22,
+      "latinExact": 12,
+      "selectedExact": 12,
+      "improvedVsCh": [
+        "fr-departure-32"
+      ],
+      "readyWrongRegressionsVsCh": [],
+      "reviewOrAlignmentRequired": [
+        "hans-luggage-16",
+        "hans-luggage-24",
+        "hans-luggage-32",
+        "hans-order-16",
+        "hans-order-24",
+        "hans-order-32",
+        "hant-luggage-16",
+        "hant-luggage-24",
+        "hant-luggage-32",
+        "hant-order-24",
+        "hant-order-32",
+        "mixed-room-16",
+        "mixed-room-24",
+        "mixed-room-32"
+      ],
+      "remainingMismatches": [
+        "hans-luggage-16",
+        "hans-luggage-24",
+        "hans-luggage-32",
+        "hans-order-16",
+        "hans-order-24",
+        "hans-order-32",
+        "hant-luggage-16",
+        "hant-luggage-24",
+        "hant-luggage-32",
+        "hant-order-16",
+        "hant-order-24",
+        "hant-order-32",
+        "mixed-exit-16",
+        "mixed-exit-24",
+        "mixed-exit-32",
+        "mixed-room-16",
+        "mixed-room-24",
+        "mixed-room-32"
+      ],
+      "negativeControls": 1,
+      "negativeControlsExact": 1
+    }
+  ],
+  "results": [
+    {
+      "dataset": "accepted-phone-five",
+      "id": "en-quality-16",
+      "scale": 1,
+      "languageForScoringOnly": "en",
+      "source": "The total is 39.90 €, tax not included.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "The total is 39.90 €, tax not included.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "The total is 39.90 €, tax not included.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30,
+                27
+              ],
+              [
+                295,
+                27
+              ],
+              [
+                295,
+                48
+              ],
+              [
+                30,
+                48
+              ]
+            ],
+            "candidates": {
+              "ch": "The total is 39.90 €, tax not included.",
+              "latin": "The total is 39.90 €, tax not included."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "The total is 39.90 €, tax not included.",
+      "chExact": true,
+      "latinRaw": "The total is 39.90 €, tax not included.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "accepted-phone-five",
+      "id": "fr-nonrefundable-16",
+      "scale": 1,
+      "languageForScoringOnly": "fr",
+      "source": "Ce billet n'est ni échangeable ni remboursable.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Ce billet n'est ni échangeable ni remboursable.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Ce billet n'est ni échangeable ni remboursable.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30,
+                27
+              ],
+              [
+                366,
+                27
+              ],
+              [
+                366,
+                51
+              ],
+              [
+                30,
+                51
+              ]
+            ],
+            "candidates": {
+              "ch": "Ce bilet n'est ni éechangeable ni remboursable.",
+              "latin": "Ce billet n'est ni échangeable ni remboursable."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Ce bilet n'est ni éechangeable ni remboursable.",
+      "chExact": false,
+      "latinRaw": "Ce billet n'est ni échangeable ni remboursable.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "accepted-phone-five",
+      "id": "zh-hans-quality-16",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hans",
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "总计1234.50元，不含税。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29,
+                30
+              ],
+              [
+                212,
+                30
+              ],
+              [
+                212,
+                51
+              ],
+              [
+                29,
+                51
+              ]
+            ],
+            "candidates": {
+              "ch": "总计1234.50元，不含税。",
+              "latin": "1234.50"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "行李最多8公斤，不可退款。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                30,
+                56
+              ],
+              [
+                228,
+                56
+              ],
+              [
+                228,
+                77
+              ],
+              [
+                30,
+                77
+              ]
+            ],
+            "candidates": {
+              "ch": "行李最多8公斤，不可退款。",
+              "latin": "8"
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "chExact": true,
+      "latinRaw": "1234.50\n8",
+      "latinExact": false,
+      "edits": []
+    },
+    {
+      "dataset": "accepted-phone-five",
+      "id": "zh-hant-quality-16",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hant",
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "總計1234.50元，不含稅。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29,
+                27
+              ],
+              [
+                212,
+                29
+              ],
+              [
+                212,
+                51
+              ],
+              [
+                29,
+                49
+              ]
+            ],
+            "candidates": {
+              "ch": "總計1234.50元，不含稅。",
+              "latin": "1234.50"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "行李最多8公斤，不可退款。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                30,
+                56
+              ],
+              [
+                228,
+                56
+              ],
+              [
+                228,
+                77
+              ],
+              [
+                30,
+                77
+              ]
+            ],
+            "candidates": {
+              "ch": "行李最多8公斤，不可退款。",
+              "latin": "8"
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "chExact": true,
+      "latinRaw": "1234.50\n8",
+      "latinExact": false,
+      "edits": []
+    },
+    {
+      "dataset": "accepted-phone-five",
+      "id": "mixed-quality-16",
+      "scale": 1,
+      "languageForScoringOnly": "mixed",
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "房间A/Room A\nChambre A : 120 € / night\n不含税/不含税",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "房间A/Room A",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29,
+                29
+              ],
+              [
+                150,
+                29
+              ],
+              [
+                150,
+                50
+              ],
+              [
+                29,
+                50
+              ]
+            ],
+            "candidates": {
+              "ch": "房间A/Room A",
+              "latin": "A / Room A"
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Chambre A : 120 € / night",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29,
+                54
+              ],
+              [
+                219,
+                54
+              ],
+              [
+                219,
+                75
+              ],
+              [
+                29,
+                75
+              ]
+            ],
+            "candidates": {
+              "ch": "Chambre A : 120 € / night",
+              "latin": "Chambre A : 120 € / night"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "不含税/不含税",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29,
+                83
+              ],
+              [
+                145,
+                83
+              ],
+              [
+                145,
+                105
+              ],
+              [
+                29,
+                105
+              ]
+            ],
+            "candidates": {
+              "ch": "不含税/不含税",
+              "latin": "/"
+            }
+          }
+        ]
+      },
+      "exactNormalized": false,
+      "chRaw": "房间A/Room A\nChambre A : 120 € / night\n不含税/不含税",
+      "chExact": false,
+      "latinRaw": "A / Room A\nChambre A : 120 € / night\n/",
+      "latinExact": false,
+      "edits": [
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            3,
+            4
+          ],
+          "actualRange": [
+            3,
+            3
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            5,
+            6
+          ],
+          "actualRange": [
+            4,
+            4
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            42,
+            43
+          ],
+          "actualRange": [
+            40,
+            40
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            44,
+            45
+          ],
+          "actualRange": [
+            41,
+            41
+          ]
+        },
+        {
+          "kind": "replace",
+          "expected": "稅",
+          "actual": "税",
+          "expectedRange": [
+            47,
+            48
+          ],
+          "actualRange": [
+            43,
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "baseline72",
+      "id": "blank-negative-24",
+      "scale": 1,
+      "languageForScoringOnly": "none",
+      "source": "",
+      "isText": false,
+      "selection": {
+        "state": "EMPTY",
+        "raw": "",
+        "blocks": []
+      },
+      "exactNormalized": true,
+      "chRaw": "",
+      "chExact": true,
+      "latinRaw": "",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "blank-negative-24",
+      "scale": 2,
+      "languageForScoringOnly": "none",
+      "source": "",
+      "isText": false,
+      "selection": {
+        "state": "EMPTY",
+        "raw": "",
+        "blocks": []
+      },
+      "exactNormalized": true,
+      "chRaw": "",
+      "chExact": true,
+      "latinRaw": "",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "en-quality-16",
+      "scale": 1,
+      "languageForScoringOnly": "en",
+      "source": "The total is 39.90 €, tax not included.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "The total is 39.90 €, tax not included.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "The total is 39.90 €, tax not included.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                27.0
+              ],
+              [
+                295.0,
+                27.0
+              ],
+              [
+                295.0,
+                48.0
+              ],
+              [
+                30.0,
+                48.0
+              ]
+            ],
+            "candidates": {
+              "ch": "The total is 39.90 €, tax not included.",
+              "latin": "The total is 39.90 €, tax not included."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "The total is 39.90 €, tax not included.",
+      "chExact": true,
+      "latinRaw": "The total is 39.90 €, tax not included.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "en-quality-16",
+      "scale": 2,
+      "languageForScoringOnly": "en",
+      "source": "The total is 39.90 €, tax not included.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "The total is 39.90 €, tax not included.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "The total is 39.90 €, tax not included.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.5,
+                28.0
+              ],
+              [
+                295.5,
+                28.0
+              ],
+              [
+                295.5,
+                46.5
+              ],
+              [
+                30.5,
+                46.5
+              ]
+            ],
+            "candidates": {
+              "ch": "The total is 39.90 €, tax not included.",
+              "latin": "The total is 39.90 €, tax not included."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "The total is 39.90 €, tax not included.",
+      "chExact": true,
+      "latinRaw": "The total is 39.90 €, tax not included.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "en-quality-32",
+      "scale": 1,
+      "languageForScoringOnly": "en",
+      "source": "The total is 39.90 €, tax not included.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "The total is 39.90 €, tax not included.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "The total is 39.90 €, tax not included.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                27.0
+              ],
+              [
+                557.0,
+                27.0
+              ],
+              [
+                557.0,
+                61.0
+              ],
+              [
+                30.0,
+                61.0
+              ]
+            ],
+            "candidates": {
+              "ch": "The total is 39.90 €, tax not included.",
+              "latin": "The total is 39.90 €, tax not included."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "The total is 39.90 €, tax not included.",
+      "chExact": true,
+      "latinRaw": "The total is 39.90 €, tax not included.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "en-quality-32",
+      "scale": 2,
+      "languageForScoringOnly": "en",
+      "source": "The total is 39.90 €, tax not included.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "The total is 39.90 €, tax not included.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "The total is 39.90 €, tax not included.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                25.5
+              ],
+              [
+                557.5,
+                26.5
+              ],
+              [
+                557.5,
+                61.0
+              ],
+              [
+                29.0,
+                60.0
+              ]
+            ],
+            "candidates": {
+              "ch": "The total is 39.90 €, tax not included.",
+              "latin": "The total is 39.90 €, tax not included."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "The total is 39.90 €, tax not included.",
+      "chExact": true,
+      "latinRaw": "The total is 39.90 €, tax not included.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-access-24",
+      "scale": 1,
+      "languageForScoringOnly": "fr",
+      "source": "Accès sans marche, ascenseur indisponible.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Accès sans marche, ascenseur indisponible.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Accès sans marche, ascenseur indisponible.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                26.0
+              ],
+              [
+                507.0,
+                26.0
+              ],
+              [
+                507.0,
+                58.0
+              ],
+              [
+                30.0,
+                58.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Accès sans marche, ascenseur indisponible.",
+              "latin": "Accès sans marche, ascenseur indisponible."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Accès sans marche, ascenseur indisponible.",
+      "chExact": true,
+      "latinRaw": "Accès sans marche, ascenseur indisponible.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-access-24",
+      "scale": 2,
+      "languageForScoringOnly": "fr",
+      "source": "Accès sans marche, ascenseur indisponible.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Accès sans marche, ascenseur indisponible.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Accès sans marche, ascenseur indisponible.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.5,
+                26.0
+              ],
+              [
+                508.5,
+                27.0
+              ],
+              [
+                508.5,
+                58.0
+              ],
+              [
+                28.5,
+                57.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Accès sans marche, ascenseur indisponible.",
+              "latin": "Accès sans marche, ascenseur indisponible."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Accès sans marche, ascenseur indisponible.",
+      "chExact": true,
+      "latinRaw": "Accès sans marche, ascenseur indisponible.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-cancel-24",
+      "scale": 1,
+      "languageForScoringOnly": "fr",
+      "source": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                26.0
+              ],
+              [
+                530.0,
+                26.0
+              ],
+              [
+                530.0,
+                58.0
+              ],
+              [
+                30.0,
+                58.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+              "latin": "Annulation gratuite jusqu'au 15 octobre à 18 h."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "chExact": true,
+      "latinRaw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-cancel-24",
+      "scale": 2,
+      "languageForScoringOnly": "fr",
+      "source": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.5,
+                27.0
+              ],
+              [
+                529.5,
+                27.0
+              ],
+              [
+                529.5,
+                56.5
+              ],
+              [
+                29.5,
+                56.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+              "latin": "Annulation gratuite jusqu'au 15 octobre à 18 h."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "chExact": true,
+      "latinRaw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-luggage-32",
+      "scale": 1,
+      "languageForScoringOnly": "fr",
+      "source": "Un bagage de 8 kg maximum est inclus.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Un bagage de 8 kg maximum est inclus.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Un bagage de 8 kg maximum est inclus.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                31.0,
+                25.0
+              ],
+              [
+                604.0,
+                25.0
+              ],
+              [
+                604.0,
+                63.0
+              ],
+              [
+                31.0,
+                63.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Un bagage de 8 kg maximum est inclus.",
+              "latin": "Un bagage de 8 kg maximum est inclus."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Un bagage de 8 kg maximum est inclus.",
+      "chExact": true,
+      "latinRaw": "Un bagage de 8 kg maximum est inclus.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-luggage-32",
+      "scale": 2,
+      "languageForScoringOnly": "fr",
+      "source": "Un bagage de 8 kg maximum est inclus.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Un bagage de 8 kg maximum est inclus.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Un bagage de 8 kg maximum est inclus.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                23.5
+              ],
+              [
+                606.0,
+                24.5
+              ],
+              [
+                606.0,
+                67.5
+              ],
+              [
+                28.0,
+                66.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Un bagage de 8 kg maximum est inclus.",
+              "latin": "Un bagage de 8 kg maximum est inclus."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Un bagage de 8 kg maximum est inclus.",
+      "chExact": true,
+      "latinRaw": "Un bagage de 8 kg maximum est inclus.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-nonrefundable-16",
+      "scale": 1,
+      "languageForScoringOnly": "fr",
+      "source": "Ce billet n'est ni échangeable ni remboursable.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Ce billet n'est ni échangeable ni remboursable.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Ce billet n'est ni échangeable ni remboursable.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                27.0
+              ],
+              [
+                366.0,
+                27.0
+              ],
+              [
+                366.0,
+                51.0
+              ],
+              [
+                30.0,
+                51.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Ce bilet n'est ni éechangeable ni remboursable.",
+              "latin": "Ce billet n'est ni échangeable ni remboursable."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Ce bilet n'est ni éechangeable ni remboursable.",
+      "chExact": false,
+      "latinRaw": "Ce billet n'est ni échangeable ni remboursable.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-nonrefundable-16",
+      "scale": 2,
+      "languageForScoringOnly": "fr",
+      "source": "Ce billet n'est ni échangeable ni remboursable.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Ce billet n'est ni échangeable ni remboursable.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Ce billet n'est ni échangeable ni remboursable.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.5,
+                29.5
+              ],
+              [
+                366.5,
+                29.5
+              ],
+              [
+                366.5,
+                48.5
+              ],
+              [
+                30.5,
+                48.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Ce billet n'est ni échangeable ni remboursable.",
+              "latin": "Ce billet n'est ni échangeable ni remboursable."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Ce billet n'est ni échangeable ni remboursable.",
+      "chExact": true,
+      "latinRaw": "Ce billet n'est ni échangeable ni remboursable.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-quality-16",
+      "scale": 1,
+      "languageForScoringOnly": "fr",
+      "source": "Ne payez pas maintenant. Échéance : 18:00.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Ne payez pas maintenant. Échéance : 18:00.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Ne payez pas maintenant. Échéance : 18:00.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                28.0
+              ],
+              [
+                353.0,
+                27.0
+              ],
+              [
+                353.0,
+                53.0
+              ],
+              [
+                28.0,
+                54.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Ne payez pas maintenant. Échéance : 18:00.",
+              "latin": "Ne payez pas maintenant. Échéance : 18:00."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Ne payez pas maintenant. Échéance : 18:00.",
+      "chExact": true,
+      "latinRaw": "Ne payez pas maintenant. Échéance : 18:00.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-quality-16",
+      "scale": 2,
+      "languageForScoringOnly": "fr",
+      "source": "Ne payez pas maintenant. Échéance : 18:00.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Ne payez pas maintenant. Échéance : 18:00.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Ne payez pas maintenant. Échéance : 18:00.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.5,
+                30.0
+              ],
+              [
+                354.5,
+                28.5
+              ],
+              [
+                354.5,
+                51.5
+              ],
+              [
+                28.5,
+                53.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Ne payez pas maintenant. Échéance : 18:00.",
+              "latin": "Ne payez pas maintenant. Échéance : 18:00."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Ne payez pas maintenant. Échéance : 18:00.",
+      "chExact": true,
+      "latinRaw": "Ne payez pas maintenant. Échéance : 18:00.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-quality-32",
+      "scale": 1,
+      "languageForScoringOnly": "fr",
+      "source": "Ne payez pas maintenant. Échéance : 18:00.",
+      "isText": true,
+      "selection": {
+        "state": "REQUIRES_REVIEW",
+        "raw": null,
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Ne payez pas maintenant. Échéance :",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                27.0,
+                31.0
+              ],
+              [
+                578.0,
+                29.0
+              ],
+              [
+                578.0,
+                68.0
+              ],
+              [
+                27.0,
+                70.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Ne payez pas maintenant. Échéance :",
+              "latin": "Ne payez pas maintenant. Échéance :"
+            }
+          },
+          {
+            "model": null,
+            "raw": null,
+            "reason": "Insufficient glyph evidence; preserve both candidates for review",
+            "quad": [
+              [
+                29.0,
+                74.0
+              ],
+              [
+                125.0,
+                74.0
+              ],
+              [
+                125.0,
+                109.0
+              ],
+              [
+                29.0,
+                109.0
+              ]
+            ],
+            "candidates": {
+              "ch": "18:00.",
+              "latin": "18:00."
+            }
+          }
+        ]
+      },
+      "exactNormalized": false,
+      "chRaw": "Ne payez pas maintenant. Échéance :\n18:00.",
+      "chExact": true,
+      "latinRaw": "Ne payez pas maintenant. Échéance :\n18:00.",
+      "latinExact": true,
+      "edits": null
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-quality-32",
+      "scale": 2,
+      "languageForScoringOnly": "fr",
+      "source": "Ne payez pas maintenant. Échéance : 18:00.",
+      "isText": true,
+      "selection": {
+        "state": "REQUIRES_REVIEW",
+        "raw": null,
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Ne payez pas maintenant. Échéance :",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                26.5,
+                29.0
+              ],
+              [
+                580.5,
+                27.5
+              ],
+              [
+                580.5,
+                70.5
+              ],
+              [
+                26.5,
+                72.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Ne payez pas maintenant. Échéance :",
+              "latin": "Ne payez pas maintenant. Échéance :"
+            }
+          },
+          {
+            "model": null,
+            "raw": null,
+            "reason": "Insufficient glyph evidence; preserve both candidates for review",
+            "quad": [
+              [
+                31.0,
+                75.5
+              ],
+              [
+                125.0,
+                75.5
+              ],
+              [
+                125.0,
+                108.5
+              ],
+              [
+                31.0,
+                108.5
+              ]
+            ],
+            "candidates": {
+              "ch": "18:00.",
+              "latin": "18:00."
+            }
+          }
+        ]
+      },
+      "exactNormalized": false,
+      "chRaw": "Ne payez pas maintenant. Échéance :\n18:00.",
+      "chExact": true,
+      "latinRaw": "Ne payez pas maintenant. Échéance :\n18:00.",
+      "latinExact": true,
+      "edits": null
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-total-16",
+      "scale": 1,
+      "languageForScoringOnly": "fr",
+      "source": "Total : 1 234,50 €",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Total : 1234,50 €",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Total : 1234,50 €",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                27.0
+              ],
+              [
+                158.0,
+                27.0
+              ],
+              [
+                158.0,
+                46.0
+              ],
+              [
+                29.0,
+                46.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Total: 1234,50 €",
+              "latin": "Total : 1234,50 €"
+            }
+          }
+        ]
+      },
+      "exactNormalized": false,
+      "chRaw": "Total: 1234,50 €",
+      "chExact": false,
+      "latinRaw": "Total : 1234,50 €",
+      "latinExact": false,
+      "edits": [
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            9,
+            10
+          ],
+          "actualRange": [
+            9,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-total-16",
+      "scale": 2,
+      "languageForScoringOnly": "fr",
+      "source": "Total : 1 234,50 €",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Total : 1234,50 €",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Total : 1234,50 €",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                28.0
+              ],
+              [
+                157.0,
+                28.0
+              ],
+              [
+                157.0,
+                45.5
+              ],
+              [
+                30.0,
+                45.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Total : 1234,50 €",
+              "latin": "Total : 1234,50 €"
+            }
+          }
+        ]
+      },
+      "exactNormalized": false,
+      "chRaw": "Total : 1234,50 €",
+      "chExact": false,
+      "latinRaw": "Total : 1234,50 €",
+      "latinExact": false,
+      "edits": [
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            9,
+            10
+          ],
+          "actualRange": [
+            9,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-total-24",
+      "scale": 1,
+      "languageForScoringOnly": "fr",
+      "source": "Total : 1 234,50 €",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Total : 1 234,50 €",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Total : 1 234,50 €",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                26.0
+              ],
+              [
+                220.0,
+                26.0
+              ],
+              [
+                220.0,
+                55.0
+              ],
+              [
+                30.0,
+                55.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Total : 1234,50 €",
+              "latin": "Total : 1 234,50 €"
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Total : 1234,50 €",
+      "chExact": false,
+      "latinRaw": "Total : 1 234,50 €",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-total-24",
+      "scale": 2,
+      "languageForScoringOnly": "fr",
+      "source": "Total : 1 234,50 €",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Total : 1 234,50 €",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Total : 1 234,50 €",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                26.5
+              ],
+              [
+                218.5,
+                27.5
+              ],
+              [
+                218.5,
+                53.5
+              ],
+              [
+                30.0,
+                52.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Total : 1234,50 €",
+              "latin": "Total : 1 234,50 €"
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Total : 1234,50 €",
+      "chExact": false,
+      "latinRaw": "Total : 1 234,50 €",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-total-32",
+      "scale": 1,
+      "languageForScoringOnly": "fr",
+      "source": "Total : 1 234,50 €",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Total : 1 234,50 €",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Total : 1 234,50 €",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                27.0
+              ],
+              [
+                282.0,
+                27.0
+              ],
+              [
+                282.0,
+                62.0
+              ],
+              [
+                28.0,
+                62.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Total : 1234,50 €",
+              "latin": "Total : 1 234,50 €"
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Total : 1234,50 €",
+      "chExact": false,
+      "latinRaw": "Total : 1 234,50 €",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-total-32",
+      "scale": 2,
+      "languageForScoringOnly": "fr",
+      "source": "Total : 1 234,50 €",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Total : 1 234,50 €",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Total : 1 234,50 €",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                26.5
+              ],
+              [
+                281.0,
+                26.5
+              ],
+              [
+                281.0,
+                61.5
+              ],
+              [
+                29.0,
+                61.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Total : 1234,50 €",
+              "latin": "Total : 1 234,50 €"
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Total : 1234,50 €",
+      "chExact": false,
+      "latinRaw": "Total : 1 234,50 €",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "mixed-quality-16",
+      "scale": 1,
+      "languageForScoringOnly": "mixed",
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "房间A/Room A\nChambre A : 120 € / night\n不含税/不含税",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "房间A/Room A",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                29.0
+              ],
+              [
+                150.0,
+                29.0
+              ],
+              [
+                150.0,
+                50.0
+              ],
+              [
+                29.0,
+                50.0
+              ]
+            ],
+            "candidates": {
+              "ch": "房间A/Room A",
+              "latin": "A / Room A"
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Chambre A : 120 € / night",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                54.0
+              ],
+              [
+                219.0,
+                54.0
+              ],
+              [
+                219.0,
+                75.0
+              ],
+              [
+                29.0,
+                75.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Chambre A : 120 € / night",
+              "latin": "Chambre A : 120 € / night"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "不含税/不含税",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                83.0
+              ],
+              [
+                145.0,
+                83.0
+              ],
+              [
+                145.0,
+                105.0
+              ],
+              [
+                29.0,
+                105.0
+              ]
+            ],
+            "candidates": {
+              "ch": "不含税/不含税",
+              "latin": "/"
+            }
+          }
+        ]
+      },
+      "exactNormalized": false,
+      "chRaw": "房间A/Room A\nChambre A : 120 € / night\n不含税/不含税",
+      "chExact": false,
+      "latinRaw": "A / Room A\nChambre A : 120 € / night\n/",
+      "latinExact": false,
+      "edits": [
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            3,
+            4
+          ],
+          "actualRange": [
+            3,
+            3
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            5,
+            6
+          ],
+          "actualRange": [
+            4,
+            4
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            42,
+            43
+          ],
+          "actualRange": [
+            40,
+            40
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            44,
+            45
+          ],
+          "actualRange": [
+            41,
+            41
+          ]
+        },
+        {
+          "kind": "replace",
+          "expected": "稅",
+          "actual": "税",
+          "expectedRange": [
+            47,
+            48
+          ],
+          "actualRange": [
+            43,
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "baseline72",
+      "id": "mixed-quality-16",
+      "scale": 2,
+      "languageForScoringOnly": "mixed",
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "房间A/Room A\nChambre A : 120 € / night\n不含税/不含税",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "房间A/Room A",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                31.0,
+                28.0
+              ],
+              [
+                148.5,
+                30.0
+              ],
+              [
+                148.5,
+                49.0
+              ],
+              [
+                31.0,
+                47.0
+              ]
+            ],
+            "candidates": {
+              "ch": "房间A/Room A",
+              "latin": "A / Room A"
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Chambre A : 120 € / night",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                54.5
+              ],
+              [
+                217.5,
+                55.5
+              ],
+              [
+                217.5,
+                75.0
+              ],
+              [
+                30.0,
+                74.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Chambre A : 120 € / night",
+              "latin": "Chambre A : 120 € / night"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "不含税/不含税",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                83.0
+              ],
+              [
+                143.5,
+                83.0
+              ],
+              [
+                143.5,
+                104.5
+              ],
+              [
+                30.0,
+                104.5
+              ]
+            ],
+            "candidates": {
+              "ch": "不含税/不含税",
+              "latin": "/"
+            }
+          }
+        ]
+      },
+      "exactNormalized": false,
+      "chRaw": "房间A/Room A\nChambre A : 120 € / night\n不含税/不含税",
+      "chExact": false,
+      "latinRaw": "A / Room A\nChambre A : 120 € / night\n/",
+      "latinExact": false,
+      "edits": [
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            3,
+            4
+          ],
+          "actualRange": [
+            3,
+            3
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            5,
+            6
+          ],
+          "actualRange": [
+            4,
+            4
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            42,
+            43
+          ],
+          "actualRange": [
+            40,
+            40
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            44,
+            45
+          ],
+          "actualRange": [
+            41,
+            41
+          ]
+        },
+        {
+          "kind": "replace",
+          "expected": "稅",
+          "actual": "税",
+          "expectedRange": [
+            47,
+            48
+          ],
+          "actualRange": [
+            43,
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "baseline72",
+      "id": "mixed-quality-32",
+      "scale": 1,
+      "languageForScoringOnly": "mixed",
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "房间A/Room A\nChambre A : 120 € / night\n不含税／不含稅",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "房间A/Room A",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                27.0
+              ],
+              [
+                263.0,
+                29.0
+              ],
+              [
+                263.0,
+                66.0
+              ],
+              [
+                30.0,
+                64.0
+              ]
+            ],
+            "candidates": {
+              "ch": "房间A/Room A",
+              "latin": "A / Room A"
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Chambre A : 120 € / night",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                31.0,
+                75.0
+              ],
+              [
+                400.0,
+                75.0
+              ],
+              [
+                400.0,
+                110.0
+              ],
+              [
+                31.0,
+                110.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Chambre A : 120 € / night",
+              "latin": "Chambre A : 120 € / night"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "不含税／不含稅",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                121.0
+              ],
+              [
+                255.0,
+                124.0
+              ],
+              [
+                255.0,
+                164.0
+              ],
+              [
+                29.0,
+                161.0
+              ]
+            ],
+            "candidates": {
+              "ch": "不含税／不含稅",
+              "latin": "/ "
+            }
+          }
+        ]
+      },
+      "exactNormalized": false,
+      "chRaw": "房间A/Room A\nChambre A : 120 € / night\n不含税／不含稅",
+      "chExact": false,
+      "latinRaw": "A / Room A\nChambre A : 120 € / night\n/ ",
+      "latinExact": false,
+      "edits": [
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            3,
+            4
+          ],
+          "actualRange": [
+            3,
+            3
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            5,
+            6
+          ],
+          "actualRange": [
+            4,
+            4
+          ]
+        },
+        {
+          "kind": "replace",
+          "expected": " / ",
+          "actual": "／",
+          "expectedRange": [
+            42,
+            45
+          ],
+          "actualRange": [
+            40,
+            41
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "baseline72",
+      "id": "mixed-quality-32",
+      "scale": 2,
+      "languageForScoringOnly": "mixed",
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "房间A/Room A\nChambre A : 120 € / night\n不含税／不含稅",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "房间A/Room A",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.5,
+                27.5
+              ],
+              [
+                262.5,
+                27.5
+              ],
+              [
+                262.5,
+                64.5
+              ],
+              [
+                29.5,
+                64.5
+              ]
+            ],
+            "candidates": {
+              "ch": "房间A/Room A",
+              "latin": "A / Room A"
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Chambre A : 120 € / night",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                69.5
+              ],
+              [
+                402.0,
+                74.5
+              ],
+              [
+                401.5,
+                114.5
+              ],
+              [
+                28.5,
+                109.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Chambre A : 120 € / night",
+              "latin": "Chambre A : 120 € / night"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "不含税／不含稅",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.5,
+                123.5
+              ],
+              [
+                254.5,
+                124.5
+              ],
+              [
+                254.5,
+                162.0
+              ],
+              [
+                29.5,
+                161.0
+              ]
+            ],
+            "candidates": {
+              "ch": "不含税／不含稅",
+              "latin": " /"
+            }
+          }
+        ]
+      },
+      "exactNormalized": false,
+      "chRaw": "房间A/Room A\nChambre A : 120 € / night\n不含税／不含稅",
+      "chExact": false,
+      "latinRaw": "A / Room A\nChambre A : 120 € / night\n /",
+      "latinExact": false,
+      "edits": [
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            3,
+            4
+          ],
+          "actualRange": [
+            3,
+            3
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            5,
+            6
+          ],
+          "actualRange": [
+            4,
+            4
+          ]
+        },
+        {
+          "kind": "replace",
+          "expected": " / ",
+          "actual": "／",
+          "expectedRange": [
+            42,
+            45
+          ],
+          "actualRange": [
+            40,
+            41
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "baseline72",
+      "id": "zh-hans-quality-16",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hans",
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "总计1234.50元，不含税。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                30.0
+              ],
+              [
+                212.0,
+                30.0
+              ],
+              [
+                212.0,
+                51.0
+              ],
+              [
+                29.0,
+                51.0
+              ]
+            ],
+            "candidates": {
+              "ch": "总计1234.50元，不含税。",
+              "latin": "1234.50"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "行李最多8公斤，不可退款。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                56.0
+              ],
+              [
+                228.0,
+                56.0
+              ],
+              [
+                228.0,
+                77.0
+              ],
+              [
+                30.0,
+                77.0
+              ]
+            ],
+            "candidates": {
+              "ch": "行李最多8公斤，不可退款。",
+              "latin": "8"
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "chExact": true,
+      "latinRaw": "1234.50\n8",
+      "latinExact": false,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "zh-hans-quality-16",
+      "scale": 2,
+      "languageForScoringOnly": "zh-Hans",
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "总计1234.50元，不含税。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                32.0,
+                30.0
+              ],
+              [
+                210.0,
+                30.0
+              ],
+              [
+                210.0,
+                49.5
+              ],
+              [
+                32.0,
+                49.5
+              ]
+            ],
+            "candidates": {
+              "ch": "总计1234.50元，不含税。",
+              "latin": "1234.50"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "行李最多8公斤，不可退款。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                31.0,
+                54.5
+              ],
+              [
+                225.5,
+                56.5
+              ],
+              [
+                225.5,
+                77.5
+              ],
+              [
+                31.0,
+                76.0
+              ]
+            ],
+            "candidates": {
+              "ch": "行李最多8公斤，不可退款。",
+              "latin": "8"
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "chExact": true,
+      "latinRaw": "1234.50\n8",
+      "latinExact": false,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "zh-hans-quality-32",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hans",
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "总计1234.50元，不含税。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                26.0
+              ],
+              [
+                389.0,
+                28.0
+              ],
+              [
+                389.0,
+                68.0
+              ],
+              [
+                30.0,
+                66.0
+              ]
+            ],
+            "candidates": {
+              "ch": "总计1234.50元，不含税。",
+              "latin": "1234.50"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "行李最多8公斤，不可退款。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                75.0
+              ],
+              [
+                419.0,
+                77.0
+              ],
+              [
+                419.0,
+                116.0
+              ],
+              [
+                30.0,
+                114.0
+              ]
+            ],
+            "candidates": {
+              "ch": "行李最多8公斤，不可退款。",
+              "latin": "8"
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "chExact": true,
+      "latinRaw": "1234.50\n8",
+      "latinExact": false,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "zh-hans-quality-32",
+      "scale": 2,
+      "languageForScoringOnly": "zh-Hans",
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "总计1234.50元，不含税。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.5,
+                25.5
+              ],
+              [
+                388.5,
+                27.0
+              ],
+              [
+                388.5,
+                68.0
+              ],
+              [
+                29.5,
+                66.5
+              ]
+            ],
+            "candidates": {
+              "ch": "总计1234.50元，不含税。",
+              "latin": "1234.50"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "行李最多8公斤，不可退款。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.5,
+                74.0
+              ],
+              [
+                418.0,
+                76.0
+              ],
+              [
+                418.0,
+                116.0
+              ],
+              [
+                28.5,
+                114.0
+              ]
+            ],
+            "candidates": {
+              "ch": "行李最多8公斤，不可退款。",
+              "latin": "8"
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "chExact": true,
+      "latinRaw": "1234.50\n8",
+      "latinExact": false,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "zh-hant-quality-16",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hant",
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "總計1234.50元，不含稅。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                27.0
+              ],
+              [
+                212.0,
+                29.0
+              ],
+              [
+                212.0,
+                51.0
+              ],
+              [
+                29.0,
+                49.0
+              ]
+            ],
+            "candidates": {
+              "ch": "總計1234.50元，不含稅。",
+              "latin": "1234.50"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "行李最多8公斤，不可退款。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                56.0
+              ],
+              [
+                228.0,
+                56.0
+              ],
+              [
+                228.0,
+                77.0
+              ],
+              [
+                30.0,
+                77.0
+              ]
+            ],
+            "candidates": {
+              "ch": "行李最多8公斤，不可退款。",
+              "latin": "8"
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "chExact": true,
+      "latinRaw": "1234.50\n8",
+      "latinExact": false,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "zh-hant-quality-16",
+      "scale": 2,
+      "languageForScoringOnly": "zh-Hant",
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "總計1234.50元，不含稅。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                31.5,
+                30.0
+              ],
+              [
+                210.0,
+                30.0
+              ],
+              [
+                210.0,
+                49.5
+              ],
+              [
+                31.5,
+                49.5
+              ]
+            ],
+            "candidates": {
+              "ch": "總計1234.50元，不含稅。",
+              "latin": "1234.50"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "行李最多8公斤，不可退款。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                31.0,
+                56.0
+              ],
+              [
+                225.5,
+                57.0
+              ],
+              [
+                225.5,
+                77.5
+              ],
+              [
+                31.0,
+                76.5
+              ]
+            ],
+            "candidates": {
+              "ch": "行李最多8公斤，不可退款。",
+              "latin": "8"
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "chExact": true,
+      "latinRaw": "1234.50\n8",
+      "latinExact": false,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "zh-hant-quality-32",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hant",
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "總計1234.50元，不含稅。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                26.0
+              ],
+              [
+                389.0,
+                28.0
+              ],
+              [
+                389.0,
+                68.0
+              ],
+              [
+                29.0,
+                66.0
+              ]
+            ],
+            "candidates": {
+              "ch": "總計1234.50元，不含稅。",
+              "latin": "1234.50"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "行李最多8公斤，不可退款。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                75.0
+              ],
+              [
+                418.0,
+                77.0
+              ],
+              [
+                418.0,
+                116.0
+              ],
+              [
+                30.0,
+                114.0
+              ]
+            ],
+            "candidates": {
+              "ch": "行李最多8公斤，不可退款。",
+              "latin": "8"
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "chExact": true,
+      "latinRaw": "1234.50\n8",
+      "latinExact": false,
+      "edits": []
+    },
+    {
+      "dataset": "baseline72",
+      "id": "zh-hant-quality-32",
+      "scale": 2,
+      "languageForScoringOnly": "zh-Hant",
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "總計1234.50元，不含稅。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                26.0
+              ],
+              [
+                387.5,
+                26.0
+              ],
+              [
+                387.5,
+                69.0
+              ],
+              [
+                28.0,
+                69.0
+              ]
+            ],
+            "candidates": {
+              "ch": "總計1234.50元，不含稅。",
+              "latin": "1234.50"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "行李最多8公斤，不可退款。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.5,
+                74.0
+              ],
+              [
+                418.0,
+                76.0
+              ],
+              [
+                418.0,
+                116.0
+              ],
+              [
+                28.5,
+                114.0
+              ]
+            ],
+            "candidates": {
+              "ch": "行李最多8公斤，不可退款。",
+              "latin": "8"
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "chExact": true,
+      "latinRaw": "1234.50\n8",
+      "latinExact": false,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "blank-negative-24",
+      "scale": 1,
+      "languageForScoringOnly": "none",
+      "source": "",
+      "isText": false,
+      "selection": {
+        "state": "EMPTY",
+        "raw": "",
+        "blocks": []
+      },
+      "exactNormalized": true,
+      "chRaw": "",
+      "chExact": true,
+      "latinRaw": "",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "blank-negative-24",
+      "scale": 2,
+      "languageForScoringOnly": "none",
+      "source": "",
+      "isText": false,
+      "selection": {
+        "state": "EMPTY",
+        "raw": "",
+        "blocks": []
+      },
+      "exactNormalized": true,
+      "chRaw": "",
+      "chExact": true,
+      "latinRaw": "",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-checkin-16",
+      "scale": 1,
+      "languageForScoringOnly": "en",
+      "source": "Check-in after 16:30.\nBreakfast is not included.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Check-in after 16:30.\nBreakfast is not included.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Check-in after 16:30.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                27.0
+              ],
+              [
+                182.0,
+                27.0
+              ],
+              [
+                182.0,
+                48.0
+              ],
+              [
+                29.0,
+                48.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Check-in after 16:30.",
+              "latin": "Check-in after 16:30."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Breakfast is not included.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                54.0
+              ],
+              [
+                211.0,
+                54.0
+              ],
+              [
+                211.0,
+                73.0
+              ],
+              [
+                30.0,
+                73.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Breakfast is not included.",
+              "latin": "Breakfast is not included."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Check-in after 16:30.\nBreakfast is not included.",
+      "chExact": true,
+      "latinRaw": "Check-in after 16:30.\nBreakfast is not included.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-checkin-16",
+      "scale": 2,
+      "languageForScoringOnly": "en",
+      "source": "Check-in after 16:30.\nBreakfast is not included.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Check-in after 16:30.\nBreakfast is not included.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Check-in after 16:30.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                31.5,
+                28.0
+              ],
+              [
+                182.0,
+                28.0
+              ],
+              [
+                182.0,
+                47.0
+              ],
+              [
+                31.5,
+                47.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Check-in after 16:30.",
+              "latin": "Check-in after 16:30."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Breakfast is not included.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                31.0,
+                56.0
+              ],
+              [
+                210.0,
+                56.0
+              ],
+              [
+                210.0,
+                73.0
+              ],
+              [
+                31.0,
+                73.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Breakfast is not included.",
+              "latin": "Breakfast is not included."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Check-in after 16:30.\nBreakfast is not included.",
+      "chExact": true,
+      "latinRaw": "Check-in after 16:30.\nBreakfast is not included.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-checkin-24",
+      "scale": 1,
+      "languageForScoringOnly": "en",
+      "source": "Check-in after 16:30.\nBreakfast is not included.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Check-in after 16:30.\nBreakfast is not included.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Check-in after 16:30.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                31.0,
+                26.0
+              ],
+              [
+                256.0,
+                26.0
+              ],
+              [
+                256.0,
+                54.0
+              ],
+              [
+                31.0,
+                54.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Check-in after 16:30.",
+              "latin": "Check-in after 16:30."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Breakfast is not included.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                64.0
+              ],
+              [
+                301.0,
+                64.0
+              ],
+              [
+                301.0,
+                92.0
+              ],
+              [
+                30.0,
+                92.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Breakfast is not included.",
+              "latin": "Breakfast is not included."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Check-in after 16:30.\nBreakfast is not included.",
+      "chExact": true,
+      "latinRaw": "Check-in after 16:30.\nBreakfast is not included.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-checkin-24",
+      "scale": 2,
+      "languageForScoringOnly": "en",
+      "source": "Check-in after 16:30.\nBreakfast is not included.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Check-in after 16:30.\nBreakfast is not included.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Check-in after 16:30.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                32.0,
+                29.0
+              ],
+              [
+                255.0,
+                29.0
+              ],
+              [
+                255.0,
+                52.5
+              ],
+              [
+                32.0,
+                52.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Check-in after 16:30.",
+              "latin": "Check-in after 16:30."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Breakfast is not included.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                64.0
+              ],
+              [
+                301.5,
+                65.0
+              ],
+              [
+                301.5,
+                90.5
+              ],
+              [
+                30.0,
+                89.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Breakfast is not included.",
+              "latin": "Breakfast is not included."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Check-in after 16:30.\nBreakfast is not included.",
+      "chExact": true,
+      "latinRaw": "Check-in after 16:30.\nBreakfast is not included.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-checkin-32",
+      "scale": 1,
+      "languageForScoringOnly": "en",
+      "source": "Check-in after 16:30.\nBreakfast is not included.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Check-in after 16:30.\nBreakfast is not included.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Check-in after 16:30.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                32.0,
+                27.0
+              ],
+              [
+                330.0,
+                27.0
+              ],
+              [
+                330.0,
+                60.0
+              ],
+              [
+                32.0,
+                60.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Check-in after 16:30.",
+              "latin": "Check-in after 16:30."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Breakfast is not included.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                74.0
+              ],
+              [
+                390.0,
+                76.0
+              ],
+              [
+                390.0,
+                109.0
+              ],
+              [
+                30.0,
+                107.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Breakfast is not included.",
+              "latin": "Breakfast is not included."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Check-in after 16:30.\nBreakfast is not included.",
+      "chExact": true,
+      "latinRaw": "Check-in after 16:30.\nBreakfast is not included.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-checkin-32",
+      "scale": 2,
+      "languageForScoringOnly": "en",
+      "source": "Check-in after 16:30.\nBreakfast is not included.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Check-in after 16:30.\nBreakfast is not included.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Check-in after 16:30.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.5,
+                25.5
+              ],
+              [
+                331.0,
+                26.5
+              ],
+              [
+                331.0,
+                61.5
+              ],
+              [
+                30.5,
+                60.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Check-in after 16:30.",
+              "latin": "Check-in after 16:30."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Breakfast is not included.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                74.0
+              ],
+              [
+                392.0,
+                75.0
+              ],
+              [
+                392.0,
+                108.5
+              ],
+              [
+                30.0,
+                107.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Breakfast is not included.",
+              "latin": "Breakfast is not included."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Check-in after 16:30.\nBreakfast is not included.",
+      "chExact": true,
+      "latinRaw": "Check-in after 16:30.\nBreakfast is not included.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-tickets-16",
+      "scale": 1,
+      "languageForScoringOnly": "en",
+      "source": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "2 tickets: €27.40 total.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                27.0
+              ],
+              [
+                190.0,
+                27.0
+              ],
+              [
+                190.0,
+                48.0
+              ],
+              [
+                28.0,
+                48.0
+              ]
+            ],
+            "candidates": {
+              "ch": "2 tickets: €27.40 total.",
+              "latin": "2 tickets: €27.40 total."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Free cancellation before Monday.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                52.0
+              ],
+              [
+                272.0,
+                54.0
+              ],
+              [
+                272.0,
+                77.0
+              ],
+              [
+                28.0,
+                74.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Free cancellation before Monday.",
+              "latin": "Free cancellation before Monday."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "chExact": true,
+      "latinRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-tickets-16",
+      "scale": 2,
+      "languageForScoringOnly": "en",
+      "source": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "2 tickets: €27.40 total.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.5,
+                29.0
+              ],
+              [
+                188.0,
+                29.0
+              ],
+              [
+                188.0,
+                46.5
+              ],
+              [
+                30.5,
+                46.5
+              ]
+            ],
+            "candidates": {
+              "ch": "2 tickets: €27.40 total.",
+              "latin": "2 tickets: €27.40 total."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Free cancellation before Monday.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                54.0
+              ],
+              [
+                271.0,
+                56.0
+              ],
+              [
+                271.0,
+                75.5
+              ],
+              [
+                30.0,
+                73.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Free cancellation before Monday.",
+              "latin": "Free cancellation before Monday."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "chExact": true,
+      "latinRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-tickets-24",
+      "scale": 1,
+      "languageForScoringOnly": "en",
+      "source": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "2 tickets: €27.40 total.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                27.0
+              ],
+              [
+                267.0,
+                27.0
+              ],
+              [
+                267.0,
+                55.0
+              ],
+              [
+                29.0,
+                55.0
+              ]
+            ],
+            "candidates": {
+              "ch": "2 tickets: €27.40 total.",
+              "latin": "2 tickets: €27.40 total."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Free cancellation before Monday.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                59.0
+              ],
+              [
+                390.0,
+                64.0
+              ],
+              [
+                390.0,
+                96.0
+              ],
+              [
+                28.0,
+                92.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Free cancellation before Monday.",
+              "latin": "Free cancellation before Monday."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "chExact": true,
+      "latinRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-tickets-24",
+      "scale": 2,
+      "languageForScoringOnly": "en",
+      "source": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "2 tickets: €27.40 total.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.5,
+                27.0
+              ],
+              [
+                268.5,
+                28.5
+              ],
+              [
+                268.5,
+                53.5
+              ],
+              [
+                29.5,
+                52.0
+              ]
+            ],
+            "candidates": {
+              "ch": "2 tickets: €27.40 total.",
+              "latin": "2 tickets: €27.40 total."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Free cancellation before Monday.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                61.5
+              ],
+              [
+                389.5,
+                65.5
+              ],
+              [
+                389.5,
+                95.0
+              ],
+              [
+                28.0,
+                91.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Free cancellation before Monday.",
+              "latin": "Free cancellation before Monday."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "chExact": true,
+      "latinRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-tickets-32",
+      "scale": 1,
+      "languageForScoringOnly": "en",
+      "source": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "2 tickets: €27.40 total.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                25.0
+              ],
+              [
+                344.0,
+                27.0
+              ],
+              [
+                344.0,
+                61.0
+              ],
+              [
+                29.0,
+                59.0
+              ]
+            ],
+            "candidates": {
+              "ch": "2 tickets: €27.40 total.",
+              "latin": "2 tickets: €27.40 total."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Free cancellation before Monday.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                71.0
+              ],
+              [
+                508.0,
+                76.0
+              ],
+              [
+                508.0,
+                113.0
+              ],
+              [
+                28.0,
+                108.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Free cancellation before Monday.",
+              "latin": "Free cancellation before Monday."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "chExact": true,
+      "latinRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-tickets-32",
+      "scale": 2,
+      "languageForScoringOnly": "en",
+      "source": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "2 tickets: €27.40 total.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                26.5
+              ],
+              [
+                344.0,
+                27.5
+              ],
+              [
+                344.0,
+                61.0
+              ],
+              [
+                29.0,
+                60.0
+              ]
+            ],
+            "candidates": {
+              "ch": "2 tickets: €27.40 total.",
+              "latin": "2 tickets: €27.40 total."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Free cancellation before Monday.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                70.0
+              ],
+              [
+                508.5,
+                75.0
+              ],
+              [
+                508.0,
+                114.5
+              ],
+              [
+                27.5,
+                109.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Free cancellation before Monday.",
+              "latin": "Free cancellation before Monday."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "chExact": true,
+      "latinRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-departure-16",
+      "scale": 1,
+      "languageForScoringOnly": "fr",
+      "source": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Départ à 07:45, voie 6.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                28.0
+              ],
+              [
+                197.0,
+                28.0
+              ],
+              [
+                197.0,
+                49.0
+              ],
+              [
+                29.0,
+                49.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Départ à 07:45, voie 6.",
+              "latin": "Départ à 07:45, voie 6."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Ne prenez pas le train de 07:15.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                54.0
+              ],
+              [
+                262.0,
+                54.0
+              ],
+              [
+                262.0,
+                76.0
+              ],
+              [
+                28.0,
+                76.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Ne prenez pas le train de 07:15.",
+              "latin": "Ne prenez pas le train de 07:15."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "chExact": true,
+      "latinRaw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-departure-16",
+      "scale": 2,
+      "languageForScoringOnly": "fr",
+      "source": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Départ à 07:45, voie 6.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                31.5,
+                29.0
+              ],
+              [
+                196.0,
+                29.0
+              ],
+              [
+                196.0,
+                48.5
+              ],
+              [
+                31.5,
+                48.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Départ à 07:45, voie 6.",
+              "latin": "Départ à 07:45, voie 6."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Ne prenez pas le train de 07:15.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                55.5
+              ],
+              [
+                260.5,
+                55.0
+              ],
+              [
+                260.5,
+                74.5
+              ],
+              [
+                30.0,
+                75.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Ne prenez pas le train de 07:15.",
+              "latin": "Ne prenez pas le train de 07:15."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "chExact": true,
+      "latinRaw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-departure-24",
+      "scale": 1,
+      "languageForScoringOnly": "fr",
+      "source": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Départ à 07:45, voie 6.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                26.0
+              ],
+              [
+                277.0,
+                24.0
+              ],
+              [
+                277.0,
+                56.0
+              ],
+              [
+                29.0,
+                58.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Départ a 07:45, voie 6.",
+              "latin": "Départ à 07:45, voie 6."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Ne prenez pas le train de 07:15.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                63.0
+              ],
+              [
+                375.0,
+                63.0
+              ],
+              [
+                375.0,
+                94.0
+              ],
+              [
+                29.0,
+                94.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Ne prenez pas le train de 07:15.",
+              "latin": "Ne prenez pas le train de 07:15."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Départ a 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "chExact": false,
+      "latinRaw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-departure-24",
+      "scale": 2,
+      "languageForScoringOnly": "fr",
+      "source": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Départ à 07:45, voie 6.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                28.0
+              ],
+              [
+                279.0,
+                26.5
+              ],
+              [
+                279.0,
+                55.0
+              ],
+              [
+                30.0,
+                56.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Départ à 07:45, voie 6.",
+              "latin": "Départ à 07:45, voie 6."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Ne prenez pas le train de 07:15.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.5,
+                64.5
+              ],
+              [
+                376.0,
+                61.5
+              ],
+              [
+                376.0,
+                91.5
+              ],
+              [
+                28.5,
+                94.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Ne prenez pas le train de 07:15.",
+              "latin": "Ne prenez pas le train de 07:15."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "chExact": true,
+      "latinRaw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-departure-32",
+      "scale": 1,
+      "languageForScoringOnly": "fr",
+      "source": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Départ à 07:45, voie 6.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                31.0,
+                26.0
+              ],
+              [
+                359.0,
+                26.0
+              ],
+              [
+                359.0,
+                66.0
+              ],
+              [
+                31.0,
+                66.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Départ à 07:45, voie 6.",
+              "latin": "Départ à 07:45, voie 6."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Ne prenez pas le train de 07:15.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                27.0,
+                74.0
+              ],
+              [
+                490.0,
+                71.0
+              ],
+              [
+                490.0,
+                114.0
+              ],
+              [
+                27.0,
+                117.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Ne prenez pas le train de 07:15.",
+              "latin": "Ne prenez pas le train de 07:15."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "chExact": true,
+      "latinRaw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-departure-32",
+      "scale": 2,
+      "languageForScoringOnly": "fr",
+      "source": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Départ à 07:45, voie 6.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.5,
+                24.0
+              ],
+              [
+                361.5,
+                24.0
+              ],
+              [
+                361.5,
+                67.5
+              ],
+              [
+                29.5,
+                67.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Départ a 07:45, voie 6.",
+              "latin": "Départ à 07:45, voie 6."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Ne prenez pas le train de 07:15.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                27.5,
+                74.5
+              ],
+              [
+                490.5,
+                71.5
+              ],
+              [
+                490.5,
+                111.0
+              ],
+              [
+                27.5,
+                114.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Ne prenez pas le train de 07:15.",
+              "latin": "Ne prenez pas le train de 07:15."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Départ a 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "chExact": false,
+      "latinRaw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-price-16",
+      "scale": 1,
+      "languageForScoringOnly": "fr",
+      "source": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Prix total : 82,60 €.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                26.0
+              ],
+              [
+                168.0,
+                26.0
+              ],
+              [
+                168.0,
+                47.0
+              ],
+              [
+                28.0,
+                47.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Prix total : 82,60 €.",
+              "latin": "Prix total : 82,60 €."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Aucun remboursement après confirmation.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                55.0
+              ],
+              [
+                336.0,
+                55.0
+              ],
+              [
+                336.0,
+                77.0
+              ],
+              [
+                30.0,
+                77.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Aucun remboursement après confirmation.",
+              "latin": "Aucun remboursement après confirmation."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "chExact": true,
+      "latinRaw": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-price-16",
+      "scale": 2,
+      "languageForScoringOnly": "fr",
+      "source": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Prix total : 82,60 €.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.5,
+                28.5
+              ],
+              [
+                167.0,
+                28.5
+              ],
+              [
+                167.0,
+                46.0
+              ],
+              [
+                30.5,
+                46.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Prix total : 82,60 €.",
+              "latin": "Prix total : 82,60 €."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Aucun remboursement après confirmation.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                56.0
+              ],
+              [
+                336.5,
+                56.0
+              ],
+              [
+                336.5,
+                76.5
+              ],
+              [
+                30.0,
+                76.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Aucun remboursement après confirmation.",
+              "latin": "Aucun remboursement après confirmation."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "chExact": true,
+      "latinRaw": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-price-24",
+      "scale": 1,
+      "languageForScoringOnly": "fr",
+      "source": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Prix total : 82,60 €.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                25.0
+              ],
+              [
+                234.0,
+                27.0
+              ],
+              [
+                234.0,
+                56.0
+              ],
+              [
+                29.0,
+                54.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Prix total : 82,60 €.",
+              "latin": "Prix total : 82,60 €."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Aucun remboursement après confirmation.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                61.0
+              ],
+              [
+                486.0,
+                63.0
+              ],
+              [
+                486.0,
+                95.0
+              ],
+              [
+                28.0,
+                94.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Aucun remboursement après confirmation.",
+              "latin": "Aucun remboursement après confirmation."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "chExact": true,
+      "latinRaw": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-price-24",
+      "scale": 2,
+      "languageForScoringOnly": "fr",
+      "source": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Prix total : 82,60 €.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.5,
+                28.5
+              ],
+              [
+                233.5,
+                28.5
+              ],
+              [
+                233.5,
+                53.5
+              ],
+              [
+                30.5,
+                53.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Prix total : 82,60 €.",
+              "latin": "Prix total : 82,60 €."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Aucun remboursement après confirmation.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.5,
+                63.5
+              ],
+              [
+                487.5,
+                64.5
+              ],
+              [
+                487.5,
+                93.0
+              ],
+              [
+                29.5,
+                92.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Aucun remboursement après confirmation.",
+              "latin": "Aucun remboursement après confirmation."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "chExact": true,
+      "latinRaw": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-price-32",
+      "scale": 1,
+      "languageForScoringOnly": "fr",
+      "source": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Prix total : 82,60 €.\nAucun remboursement après\nconfirmation.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Prix total : 82,60 €.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                27.0
+              ],
+              [
+                301.0,
+                27.0
+              ],
+              [
+                301.0,
+                63.0
+              ],
+              [
+                30.0,
+                63.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Prix total : 82,60 €.",
+              "latin": "Prix total : 82,60 €."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Aucun remboursement après",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                74.0
+              ],
+              [
+                447.0,
+                76.0
+              ],
+              [
+                447.0,
+                113.0
+              ],
+              [
+                29.0,
+                110.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Aucun remboursement après",
+              "latin": "Aucun remboursement après"
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "confirmation.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                124.0
+              ],
+              [
+                218.0,
+                124.0
+              ],
+              [
+                218.0,
+                159.0
+              ],
+              [
+                30.0,
+                159.0
+              ]
+            ],
+            "candidates": {
+              "ch": "confirmation.",
+              "latin": "confirmation."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Prix total : 82,60 €.\nAucun remboursement après\nconfirmation.",
+      "chExact": true,
+      "latinRaw": "Prix total : 82,60 €.\nAucun remboursement après\nconfirmation.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-price-32",
+      "scale": 2,
+      "languageForScoringOnly": "fr",
+      "source": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Prix total : 82,60 €.\nAucun remboursement après\nconfirmation.",
+        "blocks": [
+          {
+            "model": "latin",
+            "raw": "Prix total : 82,60 €.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.5,
+                23.5
+              ],
+              [
+                302.0,
+                27.0
+              ],
+              [
+                301.5,
+                64.0
+              ],
+              [
+                29.0,
+                60.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Prix total : 82,60 €.",
+              "latin": "Prix total : 82,60 €."
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "Aucun remboursement après",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                26.5,
+                71.0
+              ],
+              [
+                449.5,
+                73.0
+              ],
+              [
+                449.5,
+                116.0
+              ],
+              [
+                26.5,
+                114.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Aucun remboursement après",
+              "latin": "Aucun remboursement après"
+            }
+          },
+          {
+            "model": "latin",
+            "raw": "confirmation.",
+            "reason": "Latin letter evidence in the Latin candidate and no Han evidence in the Chinese candidate",
+            "quad": [
+              [
+                31.0,
+                122.5
+              ],
+              [
+                216.0,
+                122.5
+              ],
+              [
+                216.0,
+                158.0
+              ],
+              [
+                31.0,
+                158.0
+              ]
+            ],
+            "candidates": {
+              "ch": "confirmation.",
+              "latin": "confirmation."
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "Prix total : 82,60 €.\nAucun remboursement après\nconfirmation.",
+      "chExact": true,
+      "latinRaw": "Prix total : 82,60 €.\nAucun remboursement après\nconfirmation.",
+      "latinExact": true,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-luggage-16",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hans",
+      "source": "每人限带7公斤行李。\n请勿重复付款。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "每人限带7公斤行李。\n请勿重复付款。",
+      "chExact": true,
+      "latinRaw": "7",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-luggage-16",
+      "scale": 2,
+      "languageForScoringOnly": "zh-Hans",
+      "source": "每人限带7公斤行李。\n请勿重复付款。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "每人限带7公斤行李。\n请勿重复付款。",
+      "chExact": true,
+      "latinRaw": "7",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-luggage-24",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hans",
+      "source": "每人限带7公斤行李。\n请勿重复付款。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "每人限带7公斤行李。\n请勿重复付款。",
+      "chExact": true,
+      "latinRaw": "7",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-luggage-24",
+      "scale": 2,
+      "languageForScoringOnly": "zh-Hans",
+      "source": "每人限带7公斤行李。\n请勿重复付款。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "每人限带7公斤行李。\n请勿重复付款。",
+      "chExact": true,
+      "latinRaw": "7",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-luggage-32",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hans",
+      "source": "每人限带7公斤行李。\n请勿重复付款。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "每人限带7公斤行李。\n请勿重复付款。",
+      "chExact": true,
+      "latinRaw": "7",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-luggage-32",
+      "scale": 2,
+      "languageForScoringOnly": "zh-Hans",
+      "source": "每人限带7公斤行李。\n请勿重复付款。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "每人限带7公斤行李。\n请勿重复付款。",
+      "chExact": true,
+      "latinRaw": "7",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-order-16",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hans",
+      "source": "订单合计268.90元。\n含早餐，不含城市税。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "订单合计268.90元。\n含早餐，不含城市税。",
+      "chExact": true,
+      "latinRaw": "268.90",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-order-16",
+      "scale": 2,
+      "languageForScoringOnly": "zh-Hans",
+      "source": "订单合计268.90元。\n含早餐，不含城市税。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "订单合计268.90元。\n含早餐，不含城市税。",
+      "chExact": true,
+      "latinRaw": "268.90",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-order-24",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hans",
+      "source": "订单合计268.90元。\n含早餐，不含城市税。",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "订单合计268.90元。\n含早餐，不含城市税。",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "订单合计268.90元。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                25.0
+              ],
+              [
+                239.0,
+                28.0
+              ],
+              [
+                239.0,
+                61.0
+              ],
+              [
+                28.0,
+                57.0
+              ]
+            ],
+            "candidates": {
+              "ch": "订单合计268.90元。",
+              "latin": "268.90"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "含早餐，不含城市税。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                31.0,
+                66.0
+              ],
+              [
+                261.0,
+                66.0
+              ],
+              [
+                261.0,
+                95.0
+              ],
+              [
+                31.0,
+                95.0
+              ]
+            ],
+            "candidates": {
+              "ch": "含早餐，不含城市税。",
+              "latin": ","
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "订单合计268.90元。\n含早餐，不含城市税。",
+      "chExact": true,
+      "latinRaw": "268.90\n,",
+      "latinExact": false,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-order-24",
+      "scale": 2,
+      "languageForScoringOnly": "zh-Hans",
+      "source": "订单合计268.90元。\n含早餐，不含城市税。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "订单合计268.90元。\n含早餐，不含城市税。",
+      "chExact": true,
+      "latinRaw": "268.90",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-order-32",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hans",
+      "source": "订单合计268.90元。\n含早餐，不含城市税。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "订单合计268.90元。\n含早餐，不含城市税。",
+      "chExact": true,
+      "latinRaw": "268.90",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-order-32",
+      "scale": 2,
+      "languageForScoringOnly": "zh-Hans",
+      "source": "订单合计268.90元。\n含早餐，不含城市税。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "订单合计268.90元。\n含早餐，不含城市税。",
+      "chExact": true,
+      "latinRaw": "268.90.",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-luggage-16",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hant",
+      "source": "每人限帶7公斤行李。\n請勿重複付款。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "每人限帶7公斤行李。\n請勿重複付款。",
+      "chExact": true,
+      "latinRaw": "7",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-luggage-16",
+      "scale": 2,
+      "languageForScoringOnly": "zh-Hant",
+      "source": "每人限帶7公斤行李。\n請勿重複付款。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "每人限帶7公斤行李。\n請勿重複付款。",
+      "chExact": true,
+      "latinRaw": "7",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-luggage-24",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hant",
+      "source": "每人限帶7公斤行李。\n請勿重複付款。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "每人限帶7公斤行李。\n請勿重複付款。",
+      "chExact": true,
+      "latinRaw": "7",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-luggage-24",
+      "scale": 2,
+      "languageForScoringOnly": "zh-Hant",
+      "source": "每人限帶7公斤行李。\n請勿重複付款。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "每人限帶7公斤行李。\n請勿重複付款。",
+      "chExact": true,
+      "latinRaw": "7",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-luggage-32",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hant",
+      "source": "每人限帶7公斤行李。\n請勿重複付款。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "每人限帶7公斤行李。\n請勿重複付款。",
+      "chExact": true,
+      "latinRaw": "7",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-luggage-32",
+      "scale": 2,
+      "languageForScoringOnly": "zh-Hant",
+      "source": "每人限帶7公斤行李。\n請勿重複付款。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "每人限帶7公斤行李。\n請勿重複付款。",
+      "chExact": true,
+      "latinRaw": "7",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-order-16",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hant",
+      "source": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "訂單合計268.90元。\n含早餐，不含城市税。",
+      "chExact": false,
+      "latinRaw": "268.90",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-order-16",
+      "scale": 2,
+      "languageForScoringOnly": "zh-Hant",
+      "source": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "訂單合計268.90元。\n含早餐，不含城市税。",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "訂單合計268.90元。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                28.0
+              ],
+              [
+                169.0,
+                29.5
+              ],
+              [
+                169.0,
+                50.5
+              ],
+              [
+                30.0,
+                49.0
+              ]
+            ],
+            "candidates": {
+              "ch": "訂單合計268.90元。",
+              "latin": "268.90"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "含早餐，不含城市税。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                31.0,
+                55.5
+              ],
+              [
+                184.5,
+                56.5
+              ],
+              [
+                184.5,
+                77.5
+              ],
+              [
+                31.0,
+                76.5
+              ]
+            ],
+            "candidates": {
+              "ch": "含早餐，不含城市税。",
+              "latin": ","
+            }
+          }
+        ]
+      },
+      "exactNormalized": false,
+      "chRaw": "訂單合計268.90元。\n含早餐，不含城市税。",
+      "chExact": false,
+      "latinRaw": "268.90\n,",
+      "latinExact": false,
+      "edits": [
+        {
+          "kind": "replace",
+          "expected": "稅",
+          "actual": "税",
+          "expectedRange": [
+            21,
+            22
+          ],
+          "actualRange": [
+            21,
+            22
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-order-24",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hant",
+      "source": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "訂單合計268.90元。\n含早餐，不含城市稅。",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "訂單合計268.90元。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                25.0
+              ],
+              [
+                238.0,
+                28.0
+              ],
+              [
+                238.0,
+                61.0
+              ],
+              [
+                28.0,
+                57.0
+              ]
+            ],
+            "candidates": {
+              "ch": "訂單合計268.90元。",
+              "latin": "268.90"
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "含早餐，不含城市稅。",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                31.0,
+                66.0
+              ],
+              [
+                261.0,
+                66.0
+              ],
+              [
+                261.0,
+                95.0
+              ],
+              [
+                31.0,
+                95.0
+              ]
+            ],
+            "candidates": {
+              "ch": "含早餐，不含城市稅。",
+              "latin": ","
+            }
+          }
+        ]
+      },
+      "exactNormalized": true,
+      "chRaw": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "chExact": true,
+      "latinRaw": "268.90\n,",
+      "latinExact": false,
+      "edits": []
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-order-24",
+      "scale": 2,
+      "languageForScoringOnly": "zh-Hant",
+      "source": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "chExact": true,
+      "latinRaw": "268.90",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-order-32",
+      "scale": 1,
+      "languageForScoringOnly": "zh-Hant",
+      "source": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "chExact": true,
+      "latinRaw": "268.90",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-order-32",
+      "scale": 2,
+      "languageForScoringOnly": "zh-Hant",
+      "source": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "chExact": true,
+      "latinRaw": "268.90",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-exit-16",
+      "scale": 1,
+      "languageForScoringOnly": "mixed",
+      "source": "Sortie / Exit / 出口\nNe pas entrer / 禁止进入",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Sortie /Exit /出口\nNe pas entrer / 禁止进入",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "Sortie /Exit /出口",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                29.0
+              ],
+              [
+                161.0,
+                29.0
+              ],
+              [
+                161.0,
+                50.0
+              ],
+              [
+                29.0,
+                50.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Sortie /Exit /出口",
+              "latin": "Sortie / Exit / "
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "Ne pas entrer / 禁止进入",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                56.0
+              ],
+              [
+                209.0,
+                54.0
+              ],
+              [
+                209.0,
+                76.0
+              ],
+              [
+                28.0,
+                78.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Ne pas entrer / 禁止进入",
+              "latin": "Ne pas entrer /"
+            }
+          }
+        ]
+      },
+      "exactNormalized": false,
+      "chRaw": "Sortie /Exit /出口\nNe pas entrer / 禁止进入",
+      "chExact": false,
+      "latinRaw": "Sortie / Exit / \nNe pas entrer /",
+      "latinExact": false,
+      "edits": [
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            8,
+            9
+          ],
+          "actualRange": [
+            8,
+            8
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            15,
+            16
+          ],
+          "actualRange": [
+            14,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-exit-16",
+      "scale": 2,
+      "languageForScoringOnly": "mixed",
+      "source": "Sortie / Exit / 出口\nNe pas entrer / 禁止进入",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Sortie/Exit /出口\nNe pas entrer /禁止进入",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "Sortie/Exit /出口",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                29.5
+              ],
+              [
+                160.0,
+                28.5
+              ],
+              [
+                160.0,
+                48.0
+              ],
+              [
+                30.0,
+                49.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Sortie/Exit /出口",
+              "latin": "Sortie / Exit / "
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "Ne pas entrer /禁止进入",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                57.5
+              ],
+              [
+                207.0,
+                55.0
+              ],
+              [
+                207.0,
+                76.5
+              ],
+              [
+                29.0,
+                78.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Ne pas entrer /禁止进入",
+              "latin": "Ne pas entrer / "
+            }
+          }
+        ]
+      },
+      "exactNormalized": false,
+      "chRaw": "Sortie/Exit /出口\nNe pas entrer /禁止进入",
+      "chExact": false,
+      "latinRaw": "Sortie / Exit / \nNe pas entrer / ",
+      "latinExact": false,
+      "edits": [
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            6,
+            7
+          ],
+          "actualRange": [
+            6,
+            6
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            8,
+            9
+          ],
+          "actualRange": [
+            7,
+            7
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            15,
+            16
+          ],
+          "actualRange": [
+            13,
+            13
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            34,
+            35
+          ],
+          "actualRange": [
+            31,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-exit-24",
+      "scale": 1,
+      "languageForScoringOnly": "mixed",
+      "source": "Sortie / Exit / 出口\nNe pas entrer / 禁止进入",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Sortie/Exit /出口\nNe pas entrer /禁止进入",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "Sortie/Exit /出口",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                29.0
+              ],
+              [
+                223.0,
+                27.0
+              ],
+              [
+                223.0,
+                56.0
+              ],
+              [
+                29.0,
+                58.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Sortie/Exit /出口",
+              "latin": "Sortie / Exit / "
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "Ne pas entrer /禁止进入",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                65.0
+              ],
+              [
+                294.0,
+                62.0
+              ],
+              [
+                294.0,
+                95.0
+              ],
+              [
+                28.0,
+                97.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Ne pas entrer /禁止进入",
+              "latin": "Ne pas entrer /"
+            }
+          }
+        ]
+      },
+      "exactNormalized": false,
+      "chRaw": "Sortie/Exit /出口\nNe pas entrer /禁止进入",
+      "chExact": false,
+      "latinRaw": "Sortie / Exit / \nNe pas entrer /",
+      "latinExact": false,
+      "edits": [
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            6,
+            7
+          ],
+          "actualRange": [
+            6,
+            6
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            8,
+            9
+          ],
+          "actualRange": [
+            7,
+            7
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            15,
+            16
+          ],
+          "actualRange": [
+            13,
+            13
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            34,
+            35
+          ],
+          "actualRange": [
+            31,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-exit-24",
+      "scale": 2,
+      "languageForScoringOnly": "mixed",
+      "source": "Sortie / Exit / 出口\nNe pas entrer / 禁止进入",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Sortie/Exit /出口\nNe pas entrer /禁止进入",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "Sortie/Exit /出口",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.5,
+                30.0
+              ],
+              [
+                222.5,
+                27.5
+              ],
+              [
+                222.5,
+                55.0
+              ],
+              [
+                29.5,
+                57.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Sortie/Exit /出口",
+              "latin": "Sortie / Exit / "
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "Ne pas entrer /禁止进入",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                66.5
+              ],
+              [
+                294.0,
+                63.5
+              ],
+              [
+                294.5,
+                94.0
+              ],
+              [
+                29.5,
+                97.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Ne pas entrer /禁止进入",
+              "latin": "Ne pas entrer /"
+            }
+          }
+        ]
+      },
+      "exactNormalized": false,
+      "chRaw": "Sortie/Exit /出口\nNe pas entrer /禁止进入",
+      "chExact": false,
+      "latinRaw": "Sortie / Exit / \nNe pas entrer /",
+      "latinExact": false,
+      "edits": [
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            6,
+            7
+          ],
+          "actualRange": [
+            6,
+            6
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            8,
+            9
+          ],
+          "actualRange": [
+            7,
+            7
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            15,
+            16
+          ],
+          "actualRange": [
+            13,
+            13
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            34,
+            35
+          ],
+          "actualRange": [
+            31,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-exit-32",
+      "scale": 1,
+      "languageForScoringOnly": "mixed",
+      "source": "Sortie / Exit / 出口\nNe pas entrer / 禁止进入",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Sortie /Exit /出口\nNe pas entrer / 禁止进入",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "Sortie /Exit /出口",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                30.0,
+                29.0
+              ],
+              [
+                287.0,
+                29.0
+              ],
+              [
+                287.0,
+                65.0
+              ],
+              [
+                30.0,
+                65.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Sortie /Exit /出口",
+              "latin": "Sortie / Exit /  "
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "Ne pas entrer / 禁止进入",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                78.0
+              ],
+              [
+                382.0,
+                74.0
+              ],
+              [
+                382.0,
+                111.0
+              ],
+              [
+                28.0,
+                115.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Ne pas entrer / 禁止进入",
+              "latin": "Ne pas entrer / "
+            }
+          }
+        ]
+      },
+      "exactNormalized": false,
+      "chRaw": "Sortie /Exit /出口\nNe pas entrer / 禁止进入",
+      "chExact": false,
+      "latinRaw": "Sortie / Exit /  \nNe pas entrer / ",
+      "latinExact": false,
+      "edits": [
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            8,
+            9
+          ],
+          "actualRange": [
+            8,
+            8
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            15,
+            16
+          ],
+          "actualRange": [
+            14,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-exit-32",
+      "scale": 2,
+      "languageForScoringOnly": "mixed",
+      "source": "Sortie / Exit / 出口\nNe pas entrer / 禁止进入",
+      "isText": true,
+      "selection": {
+        "state": "READY",
+        "raw": "Sortie/Exit /出口\nNe pas entrer /禁止进入",
+        "blocks": [
+          {
+            "model": "ch",
+            "raw": "Sortie/Exit /出口",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                29.0,
+                27.5
+              ],
+              [
+                285.5,
+                26.5
+              ],
+              [
+                285.5,
+                65.0
+              ],
+              [
+                29.0,
+                66.0
+              ]
+            ],
+            "candidates": {
+              "ch": "Sortie/Exit /出口",
+              "latin": "Sortie / Exit / "
+            }
+          },
+          {
+            "model": "ch",
+            "raw": "Ne pas entrer /禁止进入",
+            "reason": "Han glyph evidence in the Chinese candidate",
+            "quad": [
+              [
+                28.0,
+                76.5
+              ],
+              [
+                384.0,
+                74.0
+              ],
+              [
+                384.0,
+                114.0
+              ],
+              [
+                28.0,
+                116.5
+              ]
+            ],
+            "candidates": {
+              "ch": "Ne pas entrer /禁止进入",
+              "latin": "Ne pas entrer /"
+            }
+          }
+        ]
+      },
+      "exactNormalized": false,
+      "chRaw": "Sortie/Exit /出口\nNe pas entrer /禁止进入",
+      "chExact": false,
+      "latinRaw": "Sortie / Exit / \nNe pas entrer /",
+      "latinExact": false,
+      "edits": [
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            6,
+            7
+          ],
+          "actualRange": [
+            6,
+            6
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            8,
+            9
+          ],
+          "actualRange": [
+            7,
+            7
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            15,
+            16
+          ],
+          "actualRange": [
+            13,
+            13
+          ]
+        },
+        {
+          "kind": "delete",
+          "expected": " ",
+          "actual": "",
+          "expectedRange": [
+            34,
+            35
+          ],
+          "actualRange": [
+            31,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-room-16",
+      "scale": 1,
+      "languageForScoringOnly": "mixed",
+      "source": "Room B / 房间B\nChambre B : 95 €\n每晚，不含税。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "RoomB/房间B\nChambre B : 95 €\n每晚，不含税。",
+      "chExact": false,
+      "latinRaw": "Room B / B\nChambre B : 95 €",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-room-16",
+      "scale": 2,
+      "languageForScoringOnly": "mixed",
+      "source": "Room B / 房间B\nChambre B : 95 €\n每晚，不含税。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "RoomB/房间B\nChambre B : 95 €\n每晚，不含税。",
+      "chExact": false,
+      "latinRaw": "Room B / B\nChambre B : 95 €",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-room-24",
+      "scale": 1,
+      "languageForScoringOnly": "mixed",
+      "source": "Room B / 房间B\nChambre B : 95 €\n每晚，不含税。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "Room B/房间B\nChambre B : 95 €\n每晚，不含税。",
+      "chExact": false,
+      "latinRaw": "Room B / B\nChambre B : 95 €",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-room-24",
+      "scale": 2,
+      "languageForScoringOnly": "mixed",
+      "source": "Room B / 房间B\nChambre B : 95 €\n每晚，不含税。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "RoomB/房间B\nChambre B : 95 €\n每晚，不含税。",
+      "chExact": false,
+      "latinRaw": "Room B / B\nChambre B : 95 €",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-room-32",
+      "scale": 1,
+      "languageForScoringOnly": "mixed",
+      "source": "Room B / 房间B\nChambre B : 95 €\n每晚，不含税。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "Room B/房间B\nChambre B : 95 €\n每晚，不含税。",
+      "chExact": false,
+      "latinRaw": "Room B / B\nChambre B : 95 €",
+      "latinExact": false,
+      "edits": null
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-room-32",
+      "scale": 2,
+      "languageForScoringOnly": "mixed",
+      "source": "Room B / 房间B\nChambre B : 95 €\n每晚，不含税。",
+      "isText": true,
+      "selection": {
+        "state": "UNALIGNED",
+        "raw": null,
+        "blocks": []
+      },
+      "exactNormalized": false,
+      "chRaw": "Room B／房间B\nChambre B : 95 €\n每晚，不含税。",
+      "chExact": false,
+      "latinRaw": "Room B / B\nChambre B : 95 €",
+      "latinExact": false,
+      "edits": null
+    }
+  ],
+  "limitations": [
+    "A model can hallucinate or omit Han; glyph evidence is not reliable language identification",
+    "No calibrated model confidence; no semantic confidence guarantee",
+    "Known reports informed design; fresh locked corpus still required",
+    "Not integrated into Android or translation; same-line mixed scripts remain a risk"
+  ]
+}
