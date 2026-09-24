@@ -116,13 +116,14 @@ class ContextEngine {
         transform = ContextGeometry.transform(current.roi, value); viewGeneration++
         return true
     }
-    fun requestMissing(now: Long): FixtureRequest? {
+    fun requestMissing(now: Long, model: String = "HANDCRAFTED_NO_MODEL",
+        version: String = "prewritten-fixture-v1"): FixtureRequest? {
         if (!tick(now) || pending.size >= 8) return null
         val alreadyPending = pending.values.flatMap { it.targets }.map { it.id }.toSet()
         val targets = selection?.targets?.filter { it.reason == null && it.id !in cache && it.id !in alreadyPending }.orEmpty()
         if (targets.isEmpty()) return null
         val page = snapshot!!
-        val request = FixtureRequest(++nextRequest, page.identity, frozen(targets.map { it.freeze() }), page)
+        val request = FixtureRequest(++nextRequest, page.identity, frozen(targets.map { it.freeze() }), page, model = model, version = version)
         pending[request.id] = request
         return request
     }

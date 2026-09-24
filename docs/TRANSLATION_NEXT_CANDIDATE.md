@@ -72,3 +72,7 @@ D请求正文/输出schema与C完全相同，仅model字段不同；完整48目�
 全部源文件指纹/manifest/请求/响应、两轮一致性、上下文预算、实际think模式及卸载由独立审计核对。A/C/D完整，B明确不完整。上游文本原字节保存在gzip，格式整理版有provenance；构件采用Apache-2.0与已有Ollama MIT，未复制上游工程或加入Android运行依赖。
 
 复核入口：`python3 -m unittest discover -s scripts -p 'test_translation*.py' -v`；`scripts/audit-translation-candidate-v3.py <配置证据目录> --protocol C`或`D`，A/B使用默认v3；B审计只证明两条已完成记录真实，complete为false。最终统一复核时曾漏传C/D协议导致断言，正确传参后四组与既有报告完全一致，未改输入或模型。各次模型已卸载，专用服务器已退出并检查端口关闭。
+
+### 用户随后确认
+
+用户已选择“支持用户主动选择联网翻译，也保留本地能力”，并询问免费服务商。保留本文件已完成的本地模型结果及失败，不继续等待路线偏好。下一步按[可选联网方案](ONLINE_TRANSLATION.md)验证免费候选；本地能力保留但尚未通过真实翻译验收。

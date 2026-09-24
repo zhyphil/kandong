@@ -8,9 +8,43 @@ data class TranslationPage(val session: Long, val generation: Long, val revision
 }
 
 /** Synthetic one-click/one-page experiment. Acquisition/model work is outside this class. */
-class OnDemandTranslation {
+class OnDemandTranslation(initialProvider: TranslationProviderChoice = TranslationProviderChoice.fixture()) {
+    var provider = initialProvider
+        private set
+    var issue: TranslationIssue? = null
+        private set
+    private var networkAvailable = false
+    private var onlineConsent: Pair<Long, TranslationProviderChoice>? = null
+
+    /** A user selection revokes in-flight work and prior provider consent, never starts IO. */
+    fun chooseProvider(value: TranslationProviderChoice) {
+        if (value == provider) return
+        invalidate(ClearReason.PROVIDER_CHANGE)
+        onlineConsent = null
+        provider = value
+    }
+    /** The UI supplies the exact disclosure choice/session it displayed, not a blanket flag. */
+    fun confirmOnlineUse(shown: TranslationProviderChoice, session: Long): Boolean {
+        if (shown != provider || shown.mode != TranslationMode.ONLINE || !shown.configured || page?.session != session) return false
+        onlineConsent = session to shown
+        issue = null
+        return true
+    }
+    fun revokeOnlineUse() {
+        onlineConsent = null
+        if (provider.mode == TranslationMode.ONLINE) invalidate(ClearReason.PROVIDER_CHANGE)
+    }
+    fun setNetworkAvailable(available: Boolean) {
+        networkAvailable = available
+        if (!available && provider.mode == TranslationMode.ONLINE) {
+            invalidate(ClearReason.PROVIDER_CHANGE)
+            issue = TranslationIssue.NETWORK_UNAVAILABLE
+        }
+        // Reconnection never captures, retries, or falls back to another provider.
+    }
+
     enum class Phase { ORIGINAL, CAPTURING, PROCESSING, DISPLAYING, NEEDS_REFRESH, FAILED }
-    class Capture internal constructor(val page: TranslationPage, val clickedAt: Long)
+    class Capture internal constructor(val page: TranslationPage, val clickedAt: Long, val provider: TranslationProviderChoice)
     private val engine = ContextEngine()
     private var page: TranslationPage? = null
     private var capture: Capture? = null
@@ -26,12 +60,14 @@ class OnDemandTranslation {
     fun observePage(value: TranslationPage) {
         if (page == value) return
         val previous = page
+        if (previous?.session != value.session) onlineConsent = null
         invalidate(ClearReason.PAGE_CHANGE)
         page = value
         if (previous == null) phase = Phase.ORIGINAL
     }
     fun invalidate(reason: ClearReason) {
-        capture = null; pending = null; engine.clear(reason)
+        capture = null; pending = null; engine.clear(reason); issue = null
+        if (reason == ClearReason.STOP || reason == ClearReason.CLOCK_INVALID) onlineConsent = null
         phase = if (reason == ClearReason.PAGE_CHANGE || reason == ClearReason.EXPIRED) Phase.NEEDS_REFRESH else Phase.ORIGINAL
     }
     private fun clock(now: Long): Boolean {
@@ -60,7 +96,14 @@ class OnDemandTranslation {
         if (phase == Phase.CAPTURING || phase == Phase.PROCESSING) return null
         val current = page ?: return null
         invalidate(ClearReason.PAGE_CHANGE)
-        return Capture(current, now).also { capture = it; phase = Phase.CAPTURING }
+        issue = when {
+            !provider.configured -> TranslationIssue.PROVIDER_UNAVAILABLE
+            provider.mode == TranslationMode.ONLINE && onlineConsent != (current.session to provider) -> TranslationIssue.ONLINE_CONSENT_REQUIRED
+            provider.mode == TranslationMode.ONLINE && !networkAvailable -> TranslationIssue.NETWORK_UNAVAILABLE
+            else -> null
+        }
+        if (issue != null) { phase = Phase.FAILED; return null }
+        return Capture(current, now, provider).also { capture = it; phase = Phase.CAPTURING }
     }
     fun captured(ticket: Capture, input: ScreenSnapshot, roi: ContextRect, now: Long): Boolean {
         if (ticket !== capture) return false
@@ -76,7 +119,7 @@ class OnDemandTranslation {
             }
             // Translate eligible targets of this captured page once; ROI only selects presentation.
             engine.select(ContextRect(0.0, 0.0, input.width, input.height), now)
-            pending = engine.requestMissing(now)
+            pending = engine.requestMissing(now, ticket.provider.model, ticket.provider.version)
             engine.select(roi, now)
             phase = if (pending == null) Phase.DISPLAYING else Phase.PROCESSING
             return true
@@ -90,6 +133,13 @@ class OnDemandTranslation {
         if (!tick(now) || pending?.id != response.requestId) return false
         if (!engine.acceptResponse(response, now)) return false
         pending = null; phase = Phase.DISPLAYING
+        return true
+    }
+    /** Callbacks carry their request ID: an old failure cannot cancel newer work. */
+    fun failed(requestId: Long, now: Long): Boolean {
+        if (!tick(now) || pending?.id != requestId) return false
+        invalidate(ClearReason.PROVIDER_CHANGE)
+        issue = TranslationIssue.REQUEST_FAILED; phase = Phase.FAILED
         return true
     }
     fun render(now: Long): ContextRender {

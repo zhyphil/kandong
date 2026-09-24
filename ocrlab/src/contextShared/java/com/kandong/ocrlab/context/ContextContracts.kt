@@ -20,7 +20,7 @@ data class OcrEvidence(
 )
 enum class BlockState { KNOWN, UNKNOWN, ICON_ONLY, OCCLUDED, AMBIGUOUS, TRUNCATED, CONFLICT }
 enum class GroupKind { CARD, PHRASE }
-enum class ClearReason { PAGE_CHANGE, PAUSE, MENU, STOP, EXPIRED, INVALID_SNAPSHOT, CLOCK_INVALID }
+enum class ClearReason { PAGE_CHANGE, PAUSE, MENU, STOP, EXPIRED, INVALID_SNAPSHOT, CLOCK_INVALID, PROVIDER_CHANGE }
 data class ContextBlock(
     val id: String, val text: String, val language: String, val role: String,
     val original: ContextRect, val visible: ContextRect, val order: Int,

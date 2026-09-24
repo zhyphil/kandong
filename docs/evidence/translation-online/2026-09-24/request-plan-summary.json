@@ -1,0 +1,10 @@
+{
+  "syntheticOnly": true,
+  "networkCalls": 0,
+  "provider": null,
+  "pages": 24,
+  "foreignRequests": 44,
+  "chineseLocalPages": 2,
+  "planSha256": "ee2184a89593b0d98a5b059bfdf950624d9be54967bdd4ecf96ea67477943fb4",
+  "maxRequestUtf8Bytes": 3372
+}

@@ -1,0 +1,7 @@
+{
+  "main": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+  "test": "6556617027717f004cd251ab94936c30d9b38bfc44ba20147bf047b854a0fdbf",
+  "avd": "KanDong_OCR_API37_16K",
+  "sdk": 37,
+  "pageSize": 16384
+}

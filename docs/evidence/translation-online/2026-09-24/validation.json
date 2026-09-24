@@ -1,0 +1,47 @@
+{
+  "baseline": "9763d9f",
+  "scope": "synthetic provider routing and text protocol; no semantic model pass",
+  "jvm": {
+    "ocrlab": {
+      "tests": 49,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "modelprobe": {
+      "tests": 109,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "python": {
+    "tests": 47,
+    "failures": 0
+  },
+  "emulator": {
+    "main": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+    "test": "6556617027717f004cd251ab94936c30d9b38bfc44ba20147bf047b854a0fdbf",
+    "avd": "KanDong_OCR_API37_16K",
+    "sdk": 37,
+    "pageSize": 16384,
+    "tests": 20
+  },
+  "phoneUpdated": false,
+  "productionModulesModified": false,
+  "cloudInferenceCalls": 0,
+  "lint": {
+    "errors": 0,
+    "warnings": 18
+  },
+  "buildPassed": true,
+  "sourceSha256": {
+    "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/OnDemandTranslation.kt": "38f6f877c46969bdff60f932faae10c420ec7e53a4e086f310fdf47e8de48824",
+    "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/TranslationProviderChoice.kt": "c28111064dc583610c396eec2c547e3a57b95cfaf7cea48a3a0ff88ec9591215",
+    "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextEngine.kt": "8870ac5ba1a83f8b530408189374e5c8bb5f245207f776a038f551dbeb61408d",
+    "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt": "7ea776a81ee49b34c1c36536ed0e1f21b7cc0f23949b15a01bd2f30a3cb89f68",
+    "scripts/translation_online_contract.py": "f401793eca165c66248f5aac4ad2bdafc9385009e777d732f0d5cc18d602bda1",
+    "scripts/test_translation_online_contract.py": "14e18deb8315acd020986387fe394ac43219838738d0b663d9eaa07abbd9c74b",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/TranslationRoutingTest.kt": "25cc834525c8fe7b37120eaaca0c5e3ab8bfbb0e0a7695130c26bbf882607133"
+  }
+}
