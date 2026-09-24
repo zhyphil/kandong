@@ -1,0 +1,84 @@
+{
+  "calls": 6,
+  "sourceCharacters": 1070,
+  "syntheticOnly": true,
+  "diagnosticOnly": true,
+  "elementBinding": false,
+  "purpose": "Check whether whole-page text resolves date/currency failures; not product output",
+  "paceSeconds": 2,
+  "retries": 0,
+  "rows": [
+    {
+      "round": 1,
+      "page": "p106",
+      "request": {
+        "text": [
+          "Votre réservation\nTarif réduit\nPrix total : 37,80 €\nValable le 5 décembre 2026\nAucun remboursement après le départ.\n2 bagages, 6 kg maximum chacun."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true
+      }
+    },
+    {
+      "round": 1,
+      "page": "p304",
+      "request": {
+        "text": [
+          "Conditions du voyage\n3 bagages, 5 kg maximum chacun.\nValable jusqu'au 9 mars 2027 inclus.\nNi échangeable ni remboursable."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true
+      }
+    },
+    {
+      "round": 1,
+      "page": "p003",
+      "request": {
+        "text": [
+          "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true
+      }
+    },
+    {
+      "round": 2,
+      "page": "p106",
+      "request": {
+        "text": [
+          "Votre réservation\nTarif réduit\nPrix total : 37,80 €\nValable le 5 décembre 2026\nAucun remboursement après le départ.\n2 bagages, 6 kg maximum chacun."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true
+      }
+    },
+    {
+      "round": 2,
+      "page": "p304",
+      "request": {
+        "text": [
+          "Conditions du voyage\n3 bagages, 5 kg maximum chacun.\nValable jusqu'au 9 mars 2027 inclus.\nNi échangeable ni remboursable."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true
+      }
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "request": {
+        "text": [
+          "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true
+      }
+    }
+  ]
+}
