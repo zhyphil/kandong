@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-25",
+  "sourceBase": "8565284",
+  "scope": "Test-only full-width strip geometry; no frame read, OCR, translation or product integration",
+  "unitTests": {
+    "tests": 124,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "Error": 0,
+    "Warning": 6
+  },
+  "build": [
+    ":modelprobe:assembleDebug",
+    ":modelprobe:assembleDebugAndroidTest"
+  ],
+  "tdd": {
+    "initialTests": 7,
+    "expectedMissingBehaviorFailures": 7,
+    "finalNewTests": 8
+  },
+  "device": {
+    "serial": "2KE0220109017133",
+    "model": "LIO-AN00",
+    "api": 31,
+    "newTestsPassed": 8,
+    "seconds": 0.183,
+    "sharingRequired": false
+  },
+  "emulator": "No new Android run; dedicated emulator was no longer connected",
+  "geometry": {
+    "width": [
+      32,
+      2048
+    ],
+    "height": [
+      32,
+      4096
+    ],
+    "framePixelCap": 4194304,
+    "stripSourceAndDetectorPixelCap": 1048576,
+    "verticalHalo": 64,
+    "maxStrips": 16,
+    "huawei1176x2400Strips": 4,
+    "emulator1080x2400Strips": 3
+  },
+  "sourceSha256": {
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageStripPlanner.kt": "1152687f1a3898c927232dc9f5b28bf7a077035bb8b29f2c757e74ad4f7090e0",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/FullPageStripPlannerTest.kt": "7cb9cad3fac9e6f8dc1e20accafb56282d947e6ef9757f506da3f752353a597e",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/DetectorPacking.kt": "b7500fc0250adf88e2e2b3330882b8f9bcc40948c0f7ad7ecb05561cfc470df7"
+  },
+  "limitations": [
+    "No actual RGBA handoff or OCR inference",
+    "Core ownership is not seam-fragment merging",
+    "No privacy, completeness, source or freshness claim",
+    "Wide landscape inputs explicitly unsupported",
+    "No push or release"
+  ]
+}
