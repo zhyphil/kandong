@@ -4,7 +4,7 @@
 
 ## 人工运行
 
-1. 本轮已核对并安装到 `KanDong_OCR_API37_16K`（`emulator-5582`）；未安装或操作华为。新设备必须先核对身份。
+1. 已核对并安装到 `KanDong_OCR_API37_16K`（`emulator-5582`），七阶段实测通过。随后核对华为 `LIO-AN00/HWLIO`、API31/Android12，发出同一APK安装请求，用户已确认；随后调试连接中断，尚未核对实际安装与指纹，华为实测仍未通过。新设备必须先核对身份。
 2. 打开实验，阅读整屏缓冲区披露。点「授权悬浮窗」，在系统设置中手动授权并返回。
 3. 点「开始采集验证」，手动确认本次系统屏幕共享。API 34+ 请求默认整屏，API 31–33 使用平台标准授权入口。平台若仍允许改选单应用，本实验会在尺寸或标记不符时停止／超时，不假定已获得整屏证据。
 4. 保持实验页在前台并有焦点，序列最多 40 秒。停止按钮在色块外；前台服务通知也提供停止操作。API 33+ 若通知权限未获准，系统可能不在通知抽屉显示它；本实验不自动申请额外通知权限，页面停止和系统前台服务管理仍可用。
@@ -70,7 +70,7 @@ JVM 测试覆盖同帧匹配、来源时间基、版本、重复时间戳、取�
 - 首次布局修正版及仅换 TRANSLUCENT 的对照版均经用户确认实际投屏：7阶段结束，但 COVER／RESTORE／SECURE_ACTIVITY 超时，保护前后对照均 INSUFFICIENT；分别取得／关闭177/177与179/179帧。不能把 COMPLETED 当通过。格式对照无效，已恢复 OPAQUE。
 - 已定位为系统对 FLAG_NOT_TOUCHABLE 应用悬浮层的 alpha 0.8 限制：自有色块实际RGB191/90/83恰为指定色228/82/53与底色41/124/201按0.8/0.2混合；WindowManager 明确记录该包降透明度。开发截图只用于定位自有窗口绘制，不冒充投屏验收。
 - 修复只移除固定实验窗口的 FLAG_NOT_TOUCHABLE，保留不可聚焦，窗口仍局限于色块、不覆盖停止按钮、无点击动作；未改系统安全设置和正式放大镜。实际合成回归先失败（6项中此1项失败），修正后6项12.894秒全部通过；22 JVM及构建、Lint0错误10警告通过，安装指纹一致。采集色容差、同帧新鲜度和安全判断均未放宽。
-- 透明度修正版实际投屏等待新会话确认；未通过前不能把华为兼容采集或按需 OCR 标为完成。失败及修复证据见[透明度回归](evidence/projection-capture/2026-09-25/opacity-fix/summary.json)。系统策略依据[AOSP透明度限制实现](https://android.googlesource.com/platform/frameworks/base/+/a451d5bae2e2fb1e75152c596a6f476d6f7ac1ec%5E!/)。
+- 透明度修正版经新一次用户确认，在专用模拟器完成实际投屏七阶段，全部满足同帧／连续3帧门槛。普通遮挡／隐藏／恢复成功，安全悬浮层和安全Activity均BLACK_OBSERVED且两个前后对照CONTROLLED_OBSERVATION；取得／关闭38/38、显示1次，结束后服务／投屏／固定悬浮窗均无残留。仅这一合成页／会话通过，华为与按需OCR未完成。成功日志及审计见[七阶段实测](evidence/projection-capture/2026-09-25/opacity-projection-pass/summary.json)。失败及修复证据见[透明度回归](evidence/projection-capture/2026-09-25/opacity-fix/summary.json)。系统策略依据[AOSP透明度限制实现](https://android.googlesource.com/platform/frameworks/base/+/a451d5bae2e2fb1e75152c596a6f476d6f7ac1ec%5E!/)。
 
 构件／原始失败／测试／只读审查记录见 [证据](evidence/projection-capture/2026-09-25/summary.json)。
 

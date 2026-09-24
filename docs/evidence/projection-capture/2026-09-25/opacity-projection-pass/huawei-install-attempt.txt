@@ -1,0 +1,2 @@
+Performing Streamed Install
+adb: failed to install /Users/haoyuzuo/Projects/KanDong/capturelab/build/outputs/apk/debug/capturelab-debug.apk: 

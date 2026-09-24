@@ -1,0 +1,5 @@
+{
+  "services": "ACTIVITY MANAGER SERVICES (dumpsys activity services)\n  (nothing)",
+  "projection": "MEDIA PROJECTION MANAGER (dumpsys media_projection)\nMedia Projection: \nnull",
+  "owned_overlay_window_present": false
+}

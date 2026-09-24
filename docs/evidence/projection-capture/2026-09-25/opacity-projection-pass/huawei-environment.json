@@ -1,0 +1,7 @@
+{
+  "ro.product.model": "LIO-AN00",
+  "ro.product.device": "HWLIO",
+  "ro.build.version.sdk": "31",
+  "ro.build.version.release": "12",
+  "ro.build.fingerprint": "HUAWEI/LIO-AN00/HWLIO:12/HUAWEILIO-AN00/104.2.0.136C00:user/release-keys"
+}
