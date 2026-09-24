@@ -1,0 +1,203 @@
+FFFFFFF.FFFFFFFFFFFFFFF
+======================================================================
+FAIL: test_complete_labels_preserve_relation_and_explicit_only (test_translation_protected_facts.LocalDateTest.test_complete_labels_preserve_relation_and_explicit_only) (source='Valable le 29 février 2028.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 20, in test_complete_labels_preserve_relation_and_explicit_only
+    self.assertIsNotNone(result)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_complete_labels_preserve_relation_and_explicit_only (test_translation_protected_facts.LocalDateTest.test_complete_labels_preserve_relation_and_explicit_only) (source='Valid on April 8, 2029')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 20, in test_complete_labels_preserve_relation_and_explicit_only
+    self.assertIsNotNone(result)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_complete_labels_preserve_relation_and_explicit_only (test_translation_protected_facts.LocalDateTest.test_complete_labels_preserve_relation_and_explicit_only) (source='Only valid on 8 April 2029.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 20, in test_complete_labels_preserve_relation_and_explicit_only
+    self.assertIsNotNone(result)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_complete_labels_preserve_relation_and_explicit_only (test_translation_protected_facts.LocalDateTest.test_complete_labels_preserve_relation_and_explicit_only) (source='Valid only on 8 April 2029')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 20, in test_complete_labels_preserve_relation_and_explicit_only
+    self.assertIsNotNone(result)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_complete_labels_preserve_relation_and_explicit_only (test_translation_protected_facts.LocalDateTest.test_complete_labels_preserve_relation_and_explicit_only) (source='Valable jusqu’au 1er août 2030 inclus.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 20, in test_complete_labels_preserve_relation_and_explicit_only
+    self.assertIsNotNone(result)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_complete_labels_preserve_relation_and_explicit_only (test_translation_protected_facts.LocalDateTest.test_complete_labels_preserve_relation_and_explicit_only) (source='Valid until 3 May 2031')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 20, in test_complete_labels_preserve_relation_and_explicit_only
+    self.assertIsNotNone(result)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_complete_labels_preserve_relation_and_explicit_only (test_translation_protected_facts.LocalDateTest.test_complete_labels_preserve_relation_and_explicit_only) (source='Valid until May 3, 2031 inclusive.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 20, in test_complete_labels_preserve_relation_and_explicit_only
+    self.assertIsNotNone(result)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_ambiguous_partial_signed_and_unbound_money_is_rejected (test_translation_protected_facts.ProtectedMoneyTest.test_ambiguous_partial_signed_and_unbound_money_is_rejected) (source='$1,200 total')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 62, in test_ambiguous_partial_signed_and_unbound_money_is_rejected
+    with self.subTest(source=source), self.assertRaises(ValueError):protect_money(source, lang)
+                                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_ambiguous_partial_signed_and_unbound_money_is_rejected (test_translation_protected_facts.ProtectedMoneyTest.test_ambiguous_partial_signed_and_unbound_money_is_rejected) (source='1 200 €')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 62, in test_ambiguous_partial_signed_and_unbound_money_is_rejected
+    with self.subTest(source=source), self.assertRaises(ValueError):protect_money(source, lang)
+                                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_ambiguous_partial_signed_and_unbound_money_is_rejected (test_translation_protected_facts.ProtectedMoneyTest.test_ambiguous_partial_signed_and_unbound_money_is_rejected) (source='$1 200')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 62, in test_ambiguous_partial_signed_and_unbound_money_is_rejected
+    with self.subTest(source=source), self.assertRaises(ValueError):protect_money(source, lang)
+                                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_ambiguous_partial_signed_and_unbound_money_is_rejected (test_translation_protected_facts.ProtectedMoneyTest.test_ambiguous_partial_signed_and_unbound_money_is_rejected) (source='€1.234')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 62, in test_ambiguous_partial_signed_and_unbound_money_is_rejected
+    with self.subTest(source=source), self.assertRaises(ValueError):protect_money(source, lang)
+                                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_ambiguous_partial_signed_and_unbound_money_is_rejected (test_translation_protected_facts.ProtectedMoneyTest.test_ambiguous_partial_signed_and_unbound_money_is_rejected) (source='-$12')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 62, in test_ambiguous_partial_signed_and_unbound_money_is_rejected
+    with self.subTest(source=source), self.assertRaises(ValueError):protect_money(source, lang)
+                                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_ambiguous_partial_signed_and_unbound_money_is_rejected (test_translation_protected_facts.ProtectedMoneyTest.test_ambiguous_partial_signed_and_unbound_money_is_rejected) (source='USD -12')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 62, in test_ambiguous_partial_signed_and_unbound_money_is_rejected
+    with self.subTest(source=source), self.assertRaises(ValueError):protect_money(source, lang)
+                                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_ambiguous_partial_signed_and_unbound_money_is_rejected (test_translation_protected_facts.ProtectedMoneyTest.test_ambiguous_partial_signed_and_unbound_money_is_rejected) (source='+£12')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 62, in test_ambiguous_partial_signed_and_unbound_money_is_rejected
+    with self.subTest(source=source), self.assertRaises(ValueError):protect_money(source, lang)
+                                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_ambiguous_partial_signed_and_unbound_money_is_rejected (test_translation_protected_facts.ProtectedMoneyTest.test_ambiguous_partial_signed_and_unbound_money_is_rejected) (source='Price in USD')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 62, in test_ambiguous_partial_signed_and_unbound_money_is_rejected
+    with self.subTest(source=source), self.assertRaises(ValueError):protect_money(source, lang)
+                                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_ambiguous_partial_signed_and_unbound_money_is_rejected (test_translation_protected_facts.ProtectedMoneyTest.test_ambiguous_partial_signed_and_unbound_money_is_rejected) (source='$12 USD')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 62, in test_ambiguous_partial_signed_and_unbound_money_is_rejected
+    with self.subTest(source=source), self.assertRaises(ValueError):protect_money(source, lang)
+                                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_ambiguous_partial_signed_and_unbound_money_is_rejected (test_translation_protected_facts.ProtectedMoneyTest.test_ambiguous_partial_signed_and_unbound_money_is_rejected) (source='CAD12 and 4 USD extra USD')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 62, in test_ambiguous_partial_signed_and_unbound_money_is_rejected
+    with self.subTest(source=source), self.assertRaises(ValueError):protect_money(source, lang)
+                                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_extra_currency_or_wrong_period_is_still_withheld (test_translation_protected_facts.ProtectedMoneyTest.test_extra_currency_or_wrong_period_is_still_withheld)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 85, in test_extra_currency_or_wrong_period_is_still_withheld
+    self.assertIsNotNone(item)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_french_decimal_is_kept_for_display_and_compared_numerically (test_translation_protected_facts.ProtectedMoneyTest.test_french_decimal_is_kept_for_display_and_compared_numerically)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 52, in test_french_decimal_is_kept_for_display_and_compared_numerically
+    self.assertIsNotNone(item)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_parser_size_is_bounded (test_translation_protected_facts.ProtectedMoneyTest.test_parser_size_is_bounded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 93, in test_parser_size_is_bounded
+    self.assertIsNotNone(item)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_protection_escapes_markup_and_keeps_exact_original_spelling (test_translation_protected_facts.ProtectedMoneyTest.test_protection_escapes_markup_and_keeps_exact_original_spelling)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 44, in test_protection_escapes_markup_and_keeps_exact_original_spelling
+    self.assertIsNotNone(item)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_tampered_or_reordered_markup_is_rejected (test_translation_protected_facts.ProtectedMoneyTest.test_tampered_or_reordered_markup_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-protected-facts/test_translation_protected_facts.py", line 67, in test_tampered_or_reordered_markup_is_rejected
+    self.assertIsNotNone(item)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+AssertionError: unexpectedly None
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.002s
+
+FAILED (failures=22)

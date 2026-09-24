@@ -1,0 +1,7 @@
+{
+  "scripts/translation_protected_facts.py": "cbd7e8b809c8e521883e14e10c820b17dd82ecf8b3f10b3b3df7ad159262593e",
+  "scripts/translation_deepl_protected.py": "f533d73b84058073c92f050935f0b303d2ecf779a57673326e525a9b24825c00",
+  "scripts/test_translation_protected_facts.py": "dcf99f073fe16b3a9f81963047f3854b3e994005d2d3e824a5559c7707f54bb4",
+  "scripts/test_translation_deepl_protected.py": "fdbddd08a2623fdfd44b89abc2c75a2797c3ba4ba3694ef18398ff8a2f3c2701",
+  "scripts/replay-translation-protected.py": "354ba09ae28747a449fab5b07c5e39a4240323de7aa5392390a8f2cc78cd31fe"
+}

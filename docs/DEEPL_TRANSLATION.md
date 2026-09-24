@@ -98,3 +98,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 scripts/run-translation-deepl.py --execute-syn
 ## 后续关键事实检查已执行
 
 见[完整检查与回归](TRANSLATION_CRITICAL_CHECKS.md)：新增112次成功合成调用/2244字符，两轮各56目标；原始译文各46通过、9失败、1待复核，最终展示各45候选/11保留原文。86宿主测试通过；校验不是翻译修复，正式手机仍未接入。之前94次与其失败证据不变。
+
+## 金额保护与本地日期实验
+
+后续36次受保护金额请求已完成，两轮18条金额均通过开发复核；新增计费382字符，usage5241/1000000。旧56条的混合来源回放每轮48候选、6本地日期、2原文；不等于DeepL新翻译54条。日期错误由有限本地表达绕开，原始DeepL失败仍保留。见[金额与日期报告](TRANSLATION_PROTECTED_FACTS.md)。

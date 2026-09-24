@@ -1,0 +1,1233 @@
+{
+  "syntheticOnly": true,
+  "qualityAccepted": false,
+  "version": "protected-facts-v1",
+  "routesPerRound": {
+    "plain": 40,
+    "protected-money": 18,
+    "local-date": 10,
+    "withheld": 4
+  },
+  "calls": 36,
+  "maxSourceCharacters": 2112,
+  "paceSeconds": 2,
+  "retries": 0,
+  "rows": [
+    {
+      "round": 1,
+      "page": "p003",
+      "target": "b004",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">$120.00</keep> per night</segment>"
+        ],
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now.",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "page": "p003",
+      "target": "b005",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">$240.00</keep> for 2 nights</segment>"
+        ],
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now.",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "page": "p003",
+      "target": "b009",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">$210.00</keep> for 2 nights</segment>"
+        ],
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now.",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "page": "p105",
+      "target": "b003",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">$19.50</keep> per month</segment>"
+        ],
+        "context": "Choose your plan\n\nMonthly plan\n$19.50 per month\nTax not included\nCancel before 09:15 on 6 November 2026. No refund after renewal.\n\nAnnual plan\n$195.00 per year\nTax included",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "page": "p105",
+      "target": "b007",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">$195.00</keep> per year</segment>"
+        ],
+        "context": "Choose your plan\n\nMonthly plan\n$19.50 per month\nTax not included\nCancel before 09:15 on 6 November 2026. No refund after renewal.\n\nAnnual plan\n$195.00 per year\nTax included",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "page": "p106",
+      "target": "b003",
+      "request": {
+        "text": [
+          "<segment>Prix total : <keep id=\"m0\">37,80 €</keep></segment>"
+        ],
+        "context": "Votre réservation\nTarif réduit\nPrix total : 37,80 €\nValable le 5 décembre 2026\nAucun remboursement après le départ.\n2 bagages, 6 kg maximum chacun.",
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "page": "p205",
+      "target": "b003",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">$48.90</keep> total for 2 people</segment>"
+        ],
+        "context": "Train tickets\n\nStandard fare\n$48.90 total for 2 people\nOnly valid on 21 November 2026.\nNo changes or refunds after departure.\n\nChild fare\n$12.45 per child\nFree cancellation until 07:05 on 20 November 2026.",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "page": "p205",
+      "target": "b007",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">$12.45</keep> per child</segment>"
+        ],
+        "context": "Train tickets\n\nStandard fare\n$48.90 total for 2 people\nOnly valid on 21 November 2026.\nNo changes or refunds after departure.\n\nChild fare\n$12.45 per child\nFree cancellation until 07:05 on 20 November 2026.",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "page": "p303",
+      "target": "b002",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">£18.75</keep> per hour</segment>"
+        ],
+        "context": "Scooter hire conditions\n£18.75 per hour\nMinimum age: 18 years\nValid only on 14 February 2027.\nNo refund if cancelled less than 24 hours before pickup.",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "page": "p402",
+      "target": "b004",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">£24.80</keep> per month</segment>"
+        ],
+        "context": "Developer console\nChoose the operating system for your application.\nPlatform\n£24.80 per month",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "page": "p501",
+      "target": "b003",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">$9.95</keep> per month</segment>"
+        ],
+        "context": "Museum admission\nPrices are shown in the original currency notation.\n$9.95 per month\nCAD 24.00 per person\nUS$ 8.50 per child\nFrom $12 to $24",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "page": "p501",
+      "target": "b004",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">CAD 24.00</keep> per person</segment>"
+        ],
+        "context": "Museum admission\nPrices are shown in the original currency notation.\n$9.95 per month\nCAD 24.00 per person\nUS$ 8.50 per child\nFrom $12 to $24",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "page": "p501",
+      "target": "b005",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">US$ 8.50</keep> per child</segment>"
+        ],
+        "context": "Museum admission\nPrices are shown in the original currency notation.\n$9.95 per month\nCAD 24.00 per person\nUS$ 8.50 per child\nFrom $12 to $24",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "page": "p501",
+      "target": "b006",
+      "request": {
+        "text": [
+          "<segment>From <keep id=\"m0\">$12</keep> to <keep id=\"m1\">$24</keep></segment>"
+        ],
+        "context": "Museum admission\nPrices are shown in the original currency notation.\n$9.95 per month\nCAD 24.00 per person\nUS$ 8.50 per child\nFrom $12 to $24",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "page": "p502",
+      "target": "b003",
+      "request": {
+        "text": [
+          "<segment>Tarif : <keep id=\"m0\">18,40 €</keep></segment>"
+        ],
+        "context": "Billetterie du musée\nLes montants utilisent la notation de devise affichée.\nTarif : 18,40 €\nPrix total : 9,50 $\nPrix : 14,20 EUR\nPrix : 12,00 GBP",
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "page": "p502",
+      "target": "b004",
+      "request": {
+        "text": [
+          "<segment>Prix total : <keep id=\"m0\">9,50 $</keep></segment>"
+        ],
+        "context": "Billetterie du musée\nLes montants utilisent la notation de devise affichée.\nTarif : 18,40 €\nPrix total : 9,50 $\nPrix : 14,20 EUR\nPrix : 12,00 GBP",
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "page": "p502",
+      "target": "b005",
+      "request": {
+        "text": [
+          "<segment>Prix : <keep id=\"m0\">14,20 EUR</keep></segment>"
+        ],
+        "context": "Billetterie du musée\nLes montants utilisent la notation de devise affichée.\nTarif : 18,40 €\nPrix total : 9,50 $\nPrix : 14,20 EUR\nPrix : 12,00 GBP",
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "page": "p502",
+      "target": "b006",
+      "request": {
+        "text": [
+          "<segment>Prix : <keep id=\"m0\">12,00 GBP</keep></segment>"
+        ],
+        "context": "Billetterie du musée\nLes montants utilisent la notation de devise affichée.\nTarif : 18,40 €\nPrix total : 9,50 $\nPrix : 14,20 EUR\nPrix : 12,00 GBP",
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "target": "b004",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">$120.00</keep> per night</segment>"
+        ],
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now.",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "target": "b005",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">$240.00</keep> for 2 nights</segment>"
+        ],
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now.",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "target": "b009",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">$210.00</keep> for 2 nights</segment>"
+        ],
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now.",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p105",
+      "target": "b003",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">$19.50</keep> per month</segment>"
+        ],
+        "context": "Choose your plan\n\nMonthly plan\n$19.50 per month\nTax not included\nCancel before 09:15 on 6 November 2026. No refund after renewal.\n\nAnnual plan\n$195.00 per year\nTax included",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p105",
+      "target": "b007",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">$195.00</keep> per year</segment>"
+        ],
+        "context": "Choose your plan\n\nMonthly plan\n$19.50 per month\nTax not included\nCancel before 09:15 on 6 November 2026. No refund after renewal.\n\nAnnual plan\n$195.00 per year\nTax included",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p106",
+      "target": "b003",
+      "request": {
+        "text": [
+          "<segment>Prix total : <keep id=\"m0\">37,80 €</keep></segment>"
+        ],
+        "context": "Votre réservation\nTarif réduit\nPrix total : 37,80 €\nValable le 5 décembre 2026\nAucun remboursement après le départ.\n2 bagages, 6 kg maximum chacun.",
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p205",
+      "target": "b003",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">$48.90</keep> total for 2 people</segment>"
+        ],
+        "context": "Train tickets\n\nStandard fare\n$48.90 total for 2 people\nOnly valid on 21 November 2026.\nNo changes or refunds after departure.\n\nChild fare\n$12.45 per child\nFree cancellation until 07:05 on 20 November 2026.",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p205",
+      "target": "b007",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">$12.45</keep> per child</segment>"
+        ],
+        "context": "Train tickets\n\nStandard fare\n$48.90 total for 2 people\nOnly valid on 21 November 2026.\nNo changes or refunds after departure.\n\nChild fare\n$12.45 per child\nFree cancellation until 07:05 on 20 November 2026.",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p303",
+      "target": "b002",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">£18.75</keep> per hour</segment>"
+        ],
+        "context": "Scooter hire conditions\n£18.75 per hour\nMinimum age: 18 years\nValid only on 14 February 2027.\nNo refund if cancelled less than 24 hours before pickup.",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p402",
+      "target": "b004",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">£24.80</keep> per month</segment>"
+        ],
+        "context": "Developer console\nChoose the operating system for your application.\nPlatform\n£24.80 per month",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p501",
+      "target": "b003",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">$9.95</keep> per month</segment>"
+        ],
+        "context": "Museum admission\nPrices are shown in the original currency notation.\n$9.95 per month\nCAD 24.00 per person\nUS$ 8.50 per child\nFrom $12 to $24",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p501",
+      "target": "b004",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">CAD 24.00</keep> per person</segment>"
+        ],
+        "context": "Museum admission\nPrices are shown in the original currency notation.\n$9.95 per month\nCAD 24.00 per person\nUS$ 8.50 per child\nFrom $12 to $24",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p501",
+      "target": "b005",
+      "request": {
+        "text": [
+          "<segment><keep id=\"m0\">US$ 8.50</keep> per child</segment>"
+        ],
+        "context": "Museum admission\nPrices are shown in the original currency notation.\n$9.95 per month\nCAD 24.00 per person\nUS$ 8.50 per child\nFrom $12 to $24",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p501",
+      "target": "b006",
+      "request": {
+        "text": [
+          "<segment>From <keep id=\"m0\">$12</keep> to <keep id=\"m1\">$24</keep></segment>"
+        ],
+        "context": "Museum admission\nPrices are shown in the original currency notation.\n$9.95 per month\nCAD 24.00 per person\nUS$ 8.50 per child\nFrom $12 to $24",
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p502",
+      "target": "b003",
+      "request": {
+        "text": [
+          "<segment>Tarif : <keep id=\"m0\">18,40 €</keep></segment>"
+        ],
+        "context": "Billetterie du musée\nLes montants utilisent la notation de devise affichée.\nTarif : 18,40 €\nPrix total : 9,50 $\nPrix : 14,20 EUR\nPrix : 12,00 GBP",
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p502",
+      "target": "b004",
+      "request": {
+        "text": [
+          "<segment>Prix total : <keep id=\"m0\">9,50 $</keep></segment>"
+        ],
+        "context": "Billetterie du musée\nLes montants utilisent la notation de devise affichée.\nTarif : 18,40 €\nPrix total : 9,50 $\nPrix : 14,20 EUR\nPrix : 12,00 GBP",
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p502",
+      "target": "b005",
+      "request": {
+        "text": [
+          "<segment>Prix : <keep id=\"m0\">14,20 EUR</keep></segment>"
+        ],
+        "context": "Billetterie du musée\nLes montants utilisent la notation de devise affichée.\nTarif : 18,40 €\nPrix total : 9,50 $\nPrix : 14,20 EUR\nPrix : 12,00 GBP",
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "page": "p502",
+      "target": "b006",
+      "request": {
+        "text": [
+          "<segment>Prix : <keep id=\"m0\">12,00 GBP</keep></segment>"
+        ],
+        "context": "Billetterie du musée\nLes montants utilisent la notation de devise affichée.\nTarif : 18,40 €\nPrix total : 9,50 $\nPrix : 14,20 EUR\nPrix : 12,00 GBP",
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "tag_handling": "xml",
+        "tag_handling_version": "v2",
+        "ignore_tags": [
+          "keep"
+        ]
+      }
+    }
+  ],
+  "local": [
+    {
+      "id": "b004",
+      "pageId": "p106",
+      "source": {
+        "id": "b004",
+        "text": "Valable le 5 décembre 2026",
+        "role": "paragraph",
+        "groupId": "g001",
+        "bounds": [
+          40,
+          465,
+          1040,
+          565
+        ],
+        "readingOrder": 4
+      },
+      "state": "local-date-rendered",
+      "displayText": "在2026年12月5日有效",
+      "translation": "在2026年12月5日有效",
+      "message": "",
+      "check": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      },
+      "provenance": {
+        "version": "protected-facts-v1",
+        "route": "local-date",
+        "provider": null,
+        "origin": "local-date-rule",
+        "fact": {
+          "date": "2026-12-05",
+          "relation": "on",
+          "only": false,
+          "inclusive": false
+        }
+      }
+    },
+    {
+      "id": "b004",
+      "pageId": "p205",
+      "source": {
+        "id": "b004",
+        "text": "Only valid on 21 November 2026.",
+        "role": "paragraph",
+        "groupId": "g002",
+        "bounds": [
+          40,
+          465,
+          1040,
+          565
+        ],
+        "readingOrder": 4
+      },
+      "state": "local-date-rendered",
+      "displayText": "仅在2026年11月21日有效",
+      "translation": "仅在2026年11月21日有效",
+      "message": "",
+      "check": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      },
+      "provenance": {
+        "version": "protected-facts-v1",
+        "route": "local-date",
+        "provider": null,
+        "origin": "local-date-rule",
+        "fact": {
+          "date": "2026-11-21",
+          "relation": "on",
+          "only": true,
+          "inclusive": false
+        }
+      }
+    },
+    {
+      "id": "b007",
+      "pageId": "p206",
+      "source": {
+        "id": "b007",
+        "text": "Valable jusqu'au 3 janvier 2027 inclus.",
+        "role": "paragraph",
+        "groupId": "g003",
+        "bounds": [
+          40,
+          870,
+          1040,
+          970
+        ],
+        "readingOrder": 7
+      },
+      "state": "local-date-rendered",
+      "displayText": "有效期至2027年1月3日（含当日）",
+      "translation": "有效期至2027年1月3日（含当日）",
+      "message": "",
+      "check": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      },
+      "provenance": {
+        "version": "protected-facts-v1",
+        "route": "local-date",
+        "provider": null,
+        "origin": "local-date-rule",
+        "fact": {
+          "date": "2027-01-03",
+          "relation": "until",
+          "only": false,
+          "inclusive": true
+        }
+      }
+    },
+    {
+      "id": "b004",
+      "pageId": "p303",
+      "source": {
+        "id": "b004",
+        "text": "Valid only on 14 February 2027.",
+        "role": "paragraph",
+        "groupId": "g001",
+        "bounds": [
+          40,
+          465,
+          1040,
+          565
+        ],
+        "readingOrder": 4
+      },
+      "state": "local-date-rendered",
+      "displayText": "仅在2027年2月14日有效",
+      "translation": "仅在2027年2月14日有效",
+      "message": "",
+      "check": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      },
+      "provenance": {
+        "version": "protected-facts-v1",
+        "route": "local-date",
+        "provider": null,
+        "origin": "local-date-rule",
+        "fact": {
+          "date": "2027-02-14",
+          "relation": "on",
+          "only": true,
+          "inclusive": false
+        }
+      }
+    },
+    {
+      "id": "b003",
+      "pageId": "p304",
+      "source": {
+        "id": "b003",
+        "text": "Valable jusqu'au 9 mars 2027 inclus.",
+        "role": "paragraph",
+        "groupId": "g001",
+        "bounds": [
+          40,
+          330,
+          1040,
+          430
+        ],
+        "readingOrder": 3
+      },
+      "state": "local-date-rendered",
+      "displayText": "有效期至2027年3月9日（含当日）",
+      "translation": "有效期至2027年3月9日（含当日）",
+      "message": "",
+      "check": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      },
+      "provenance": {
+        "version": "protected-facts-v1",
+        "route": "local-date",
+        "provider": null,
+        "origin": "local-date-rule",
+        "fact": {
+          "date": "2027-03-09",
+          "relation": "until",
+          "only": false,
+          "inclusive": true
+        }
+      }
+    },
+    {
+      "id": "b004",
+      "pageId": "p404",
+      "source": {
+        "id": "b004",
+        "text": "Valable le 11 juin 2028.",
+        "role": "label",
+        "groupId": "g001",
+        "bounds": [
+          40,
+          465,
+          1040,
+          565
+        ],
+        "readingOrder": 4
+      },
+      "state": "local-date-rendered",
+      "displayText": "在2028年6月11日有效",
+      "translation": "在2028年6月11日有效",
+      "message": "",
+      "check": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      },
+      "provenance": {
+        "version": "protected-facts-v1",
+        "route": "local-date",
+        "provider": null,
+        "origin": "local-date-rule",
+        "fact": {
+          "date": "2028-06-11",
+          "relation": "on",
+          "only": false,
+          "inclusive": false
+        }
+      }
+    },
+    {
+      "id": "b003",
+      "pageId": "p503",
+      "source": {
+        "id": "b003",
+        "text": "Valid on April 8, 2029",
+        "role": "label",
+        "groupId": "g001",
+        "bounds": [
+          40,
+          420,
+          1040,
+          520
+        ],
+        "readingOrder": 3
+      },
+      "state": "local-date-rendered",
+      "displayText": "在2029年4月8日有效",
+      "translation": "在2029年4月8日有效",
+      "message": "",
+      "check": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      },
+      "provenance": {
+        "version": "protected-facts-v1",
+        "route": "local-date",
+        "provider": null,
+        "origin": "local-date-rule",
+        "fact": {
+          "date": "2029-04-08",
+          "relation": "on",
+          "only": false,
+          "inclusive": false
+        }
+      }
+    },
+    {
+      "id": "b004",
+      "pageId": "p503",
+      "source": {
+        "id": "b004",
+        "text": "Valid until 3 May 2031 inclusive.",
+        "role": "label",
+        "groupId": "g001",
+        "bounds": [
+          40,
+          600,
+          1040,
+          700
+        ],
+        "readingOrder": 4
+      },
+      "state": "local-date-rendered",
+      "displayText": "有效期至2031年5月3日（含当日）",
+      "translation": "有效期至2031年5月3日（含当日）",
+      "message": "",
+      "check": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      },
+      "provenance": {
+        "version": "protected-facts-v1",
+        "route": "local-date",
+        "provider": null,
+        "origin": "local-date-rule",
+        "fact": {
+          "date": "2031-05-03",
+          "relation": "until",
+          "only": false,
+          "inclusive": true
+        }
+      }
+    },
+    {
+      "id": "b005",
+      "pageId": "p503",
+      "source": {
+        "id": "b005",
+        "text": "Valid on 8 April 2029 except children",
+        "role": "label",
+        "groupId": "g001",
+        "bounds": [
+          40,
+          780,
+          1040,
+          880
+        ],
+        "readingOrder": 5
+      },
+      "state": "original-with-warning",
+      "displayText": "Valid on 8 April 2029 except children",
+      "translation": null,
+      "message": "这段翻译暂时无法核对，请先看原文。",
+      "check": {
+        "version": "critical-facts-v2",
+        "status": "withheld",
+        "reasons": [
+          "complete-validity-label-unverified"
+        ],
+        "semanticVerified": false,
+        "protectionVersion": "protected-facts-v1"
+      },
+      "provenance": {
+        "version": "protected-facts-v1",
+        "route": "withheld",
+        "provider": null
+      }
+    },
+    {
+      "id": "b006",
+      "pageId": "p503",
+      "source": {
+        "id": "b006",
+        "text": "Valid on 04/08/2029",
+        "role": "label",
+        "groupId": "g001",
+        "bounds": [
+          40,
+          960,
+          1040,
+          1060
+        ],
+        "readingOrder": 6
+      },
+      "state": "original-with-warning",
+      "displayText": "Valid on 04/08/2029",
+      "translation": null,
+      "message": "这段翻译暂时无法核对，请先看原文。",
+      "check": {
+        "version": "critical-facts-v2",
+        "status": "withheld",
+        "reasons": [
+          "complete-validity-label-unverified"
+        ],
+        "semanticVerified": false,
+        "protectionVersion": "protected-facts-v1"
+      },
+      "provenance": {
+        "version": "protected-facts-v1",
+        "route": "withheld",
+        "provider": null
+      }
+    },
+    {
+      "id": "b003",
+      "pageId": "p504",
+      "source": {
+        "id": "b003",
+        "text": "Valable le 1er août 2030.",
+        "role": "label",
+        "groupId": "g001",
+        "bounds": [
+          40,
+          420,
+          1040,
+          520
+        ],
+        "readingOrder": 3
+      },
+      "state": "local-date-rendered",
+      "displayText": "在2030年8月1日有效",
+      "translation": "在2030年8月1日有效",
+      "message": "",
+      "check": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      },
+      "provenance": {
+        "version": "protected-facts-v1",
+        "route": "local-date",
+        "provider": null,
+        "origin": "local-date-rule",
+        "fact": {
+          "date": "2030-08-01",
+          "relation": "on",
+          "only": false,
+          "inclusive": false
+        }
+      }
+    },
+    {
+      "id": "b004",
+      "pageId": "p504",
+      "source": {
+        "id": "b004",
+        "text": "Valable jusqu’au 9 mars 2031 inclus.",
+        "role": "label",
+        "groupId": "g001",
+        "bounds": [
+          40,
+          600,
+          1040,
+          700
+        ],
+        "readingOrder": 4
+      },
+      "state": "local-date-rendered",
+      "displayText": "有效期至2031年3月9日（含当日）",
+      "translation": "有效期至2031年3月9日（含当日）",
+      "message": "",
+      "check": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      },
+      "provenance": {
+        "version": "protected-facts-v1",
+        "route": "local-date",
+        "provider": null,
+        "origin": "local-date-rule",
+        "fact": {
+          "date": "2031-03-09",
+          "relation": "until",
+          "only": false,
+          "inclusive": true
+        }
+      }
+    },
+    {
+      "id": "b005",
+      "pageId": "p504",
+      "source": {
+        "id": "b005",
+        "text": "Valable le 8 avril 2029 sauf le matin.",
+        "role": "label",
+        "groupId": "g001",
+        "bounds": [
+          40,
+          780,
+          1040,
+          880
+        ],
+        "readingOrder": 5
+      },
+      "state": "original-with-warning",
+      "displayText": "Valable le 8 avril 2029 sauf le matin.",
+      "translation": null,
+      "message": "这段翻译暂时无法核对，请先看原文。",
+      "check": {
+        "version": "critical-facts-v2",
+        "status": "withheld",
+        "reasons": [
+          "complete-validity-label-unverified"
+        ],
+        "semanticVerified": false,
+        "protectionVersion": "protected-facts-v1"
+      },
+      "provenance": {
+        "version": "protected-facts-v1",
+        "route": "withheld",
+        "provider": null
+      }
+    },
+    {
+      "id": "b006",
+      "pageId": "p504",
+      "source": {
+        "id": "b006",
+        "text": "Valable le 29 février 2027",
+        "role": "label",
+        "groupId": "g001",
+        "bounds": [
+          40,
+          960,
+          1040,
+          1060
+        ],
+        "readingOrder": 6
+      },
+      "state": "original-with-warning",
+      "displayText": "Valable le 29 février 2027",
+      "translation": null,
+      "message": "这段翻译暂时无法核对，请先看原文。",
+      "check": {
+        "version": "critical-facts-v2",
+        "status": "withheld",
+        "reasons": [
+          "complete-validity-label-unverified"
+        ],
+        "semanticVerified": false,
+        "protectionVersion": "protected-facts-v1"
+      },
+      "provenance": {
+        "version": "protected-facts-v1",
+        "route": "withheld",
+        "provider": null
+      }
+    }
+  ]
+}

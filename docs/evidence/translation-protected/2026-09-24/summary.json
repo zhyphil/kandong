@@ -1,0 +1,55 @@
+{
+  "syntheticOnly": true,
+  "qualityAccepted": false,
+  "liveCalls": 36,
+  "billedCharacters": 382,
+  "priorEvidence": "docs/evidence/translation-critical/2026-09-24/live/responses.jsonl.gz",
+  "priorSha256": "f18c8de469603be69a5cdd668e8155c322b637117c7257b7546e7ad24e6db1a0",
+  "priorResponsesReused": 80,
+  "localDatesRendered": 20,
+  "unsupportedDatesRetained": 8,
+  "perRound": {
+    "1": {
+      "prior56": {
+        "candidate-unverified": 48,
+        "local-date-rendered": 6,
+        "original-with-warning": 2
+      },
+      "new16": {
+        "candidate-unverified": 8,
+        "local-date-rendered": 4,
+        "original-with-warning": 4
+      }
+    },
+    "2": {
+      "prior56": {
+        "candidate-unverified": 48,
+        "local-date-rendered": 6,
+        "original-with-warning": 2
+      },
+      "new16": {
+        "candidate-unverified": 8,
+        "local-date-rendered": 4,
+        "original-with-warning": 4
+      }
+    }
+  },
+  "pairsWithSameDisplayText": 70,
+  "pairsWithSameState": 72,
+  "newMoneyPerRound": {
+    "passCount": 18,
+    "failCount": 0,
+    "reviewCount": 0
+  },
+  "priorComparison": {
+    "beforeCandidate": 45,
+    "beforeOriginal": 11,
+    "nowCandidate": 48,
+    "nowLocalDate": 6,
+    "nowOriginal": 2
+  },
+  "unitTests": 101,
+  "oldTargetsFreshInference": 10,
+  "newTargetsFreshInference": 8,
+  "latestUsage": 5241
+}
