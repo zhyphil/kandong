@@ -1,0 +1,2068 @@
+{
+  "schema": 1,
+  "scope": "synthetic_DB_geometry_and_perspective_crop_reference_not_OCR_quality_or_Android_implementation",
+  "parentManifestSha256": "74aa1e39c8d3187ee2388ad07bb228e3c876c0486ccd02c47208942d26f2c80a",
+  "versions": {
+    "rapidocr": "3.9.2",
+    "numpy": "2.5.3",
+    "opencv-python": "5.0.0.93",
+    "pillow": "12.3.0",
+    "pyclipper": "1.4.0",
+    "shapely": "2.1.2",
+    "onnxruntime": "1.30.0"
+  },
+  "sourceHashes": {
+    "rapidocr/ch_ppocr_det/utils.py": "01d25a0b1bbdcdd4aba70a23ae96714c5408df93b295c43ca194952e279adb9e",
+    "rapidocr/ch_ppocr_det/main.py": "a56c0f51fd6a8c03a5abf2f0a5843b382b8f3257d1bfacf8d5ac6305d5e63024",
+    "rapidocr/utils/process_img.py": "abaf2ed615878f618a372cba6157bc6c41a494e05f6c41bf9f7c5c2ba1ee5772"
+  },
+  "scriptSha256": "d348a656ab25ef5a80f07590fbd9c51ee8cd031ab61180f35455b8f655b049a0",
+  "configuration": {
+    "thresh": 0.3,
+    "box_thresh": 0.5,
+    "max_candidates": 1000,
+    "unclip_ratio": 1.6,
+    "use_dilation": true,
+    "score_mode": "fast"
+  },
+  "morphology": {
+    "kernel": [
+      2,
+      2
+    ],
+    "anchor": "OpenCV default (-1,-1)",
+    "iterations": 1,
+    "contours": "RETR_LIST + CHAIN_APPROX_SIMPLE"
+  },
+  "crop": {
+    "interpolation": "INTER_CUBIC",
+    "border": "BORDER_REPLICATE",
+    "dimensionRule": "truncate maximum opposite-edge length",
+    "rotation": "CCW 90 when pre-rotation height/width >= 1.5"
+  },
+  "pairing": {
+    "originalIds": [
+      "right",
+      "left"
+    ],
+    "originalScores": [
+      0.2,
+      0.9
+    ],
+    "orderedIds": [
+      "left",
+      "right"
+    ],
+    "orderedScores": [
+      0.9,
+      0.2
+    ],
+    "order": [
+      1,
+      0
+    ]
+  },
+  "unclipKernels": [
+    {
+      "id": "axis-aligned",
+      "input": [
+        [
+          10.0,
+          10.0
+        ],
+        [
+          40.0,
+          10.0
+        ],
+        [
+          40.0,
+          20.0
+        ],
+        [
+          10.0,
+          20.0
+        ]
+      ],
+      "expanded": [
+        [
+          [
+            43,
+            5
+          ]
+        ],
+        [
+          [
+            45,
+            8
+          ]
+        ],
+        [
+          [
+            46,
+            10
+          ]
+        ],
+        [
+          [
+            46,
+            20
+          ]
+        ],
+        [
+          [
+            45,
+            23
+          ]
+        ],
+        [
+          [
+            42,
+            25
+          ]
+        ],
+        [
+          [
+            40,
+            26
+          ]
+        ],
+        [
+          [
+            10,
+            26
+          ]
+        ],
+        [
+          [
+            7,
+            25
+          ]
+        ],
+        [
+          [
+            5,
+            22
+          ]
+        ],
+        [
+          [
+            4,
+            20
+          ]
+        ],
+        [
+          [
+            4,
+            10
+          ]
+        ],
+        [
+          [
+            5,
+            7
+          ]
+        ],
+        [
+          [
+            8,
+            5
+          ]
+        ],
+        [
+          [
+            10,
+            4
+          ]
+        ],
+        [
+          [
+            40,
+            4
+          ]
+        ]
+      ],
+      "minimumRectangle": [
+        [
+          4.0,
+          4.0
+        ],
+        [
+          46.0,
+          4.0
+        ],
+        [
+          46.0,
+          26.0
+        ],
+        [
+          4.0,
+          26.0
+        ]
+      ],
+      "minimumSide": 22.0
+    },
+    {
+      "id": "fractional-rotated",
+      "input": [
+        [
+          12.25,
+          6.75
+        ],
+        [
+          43.75,
+          18.25
+        ],
+        [
+          39.25,
+          31.75
+        ],
+        [
+          7.75,
+          20.25
+        ]
+      ],
+      "expanded": [
+        [
+          [
+            15,
+            -1
+          ]
+        ],
+        [
+          [
+            46,
+            11
+          ]
+        ],
+        [
+          [
+            49,
+            13
+          ]
+        ],
+        [
+          [
+            51,
+            16
+          ]
+        ],
+        [
+          [
+            51,
+            20
+          ]
+        ],
+        [
+          [
+            47,
+            33
+          ]
+        ],
+        [
+          [
+            45,
+            37
+          ]
+        ],
+        [
+          [
+            41,
+            39
+          ]
+        ],
+        [
+          [
+            36,
+            39
+          ]
+        ],
+        [
+          [
+            4,
+            28
+          ]
+        ],
+        [
+          [
+            1,
+            25
+          ]
+        ],
+        [
+          [
+            -1,
+            22
+          ]
+        ],
+        [
+          [
+            -1,
+            17
+          ]
+        ],
+        [
+          [
+            4,
+            3
+          ]
+        ],
+        [
+          [
+            7,
+            0
+          ]
+        ],
+        [
+          [
+            10,
+            -2
+          ]
+        ]
+      ],
+      "minimumRectangle": [
+        [
+          6.224454879760742,
+          -4.016592979431152
+        ],
+        [
+          54.07073974609375,
+          12.43056583404541
+        ],
+        [
+          43.993011474609375,
+          41.747596740722656
+        ],
+        [
+          -3.853273391723633,
+          25.300437927246094
+        ]
+      ],
+      "minimumSide": 31.00078773498535
+    }
+  ],
+  "cases": [
+    {
+      "id": "en-quality-16",
+      "origin": "frozen_detector_v1_probability_no_new_inference",
+      "source": "en-quality-16-source.png",
+      "probability": "en-quality-16-probability.f32z",
+      "probabilityShape": [
+        1,
+        1,
+        96,
+        640
+      ],
+      "mask": "en-quality-16-mask.u8z",
+      "dilatedMask": "en-quality-16-dilated.u8z",
+      "positivePixels": 2011,
+      "dilatedPositivePixels": 2279,
+      "contourCount": 1,
+      "candidateLimit": 1000,
+      "truncated": false,
+      "boxesBeforeSort": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            295.0,
+            27.0
+          ],
+          [
+            295.0,
+            48.0
+          ],
+          [
+            30.0,
+            48.0
+          ]
+        ]
+      ],
+      "scoresBeforeSort": [
+        0.7848805975701127
+      ],
+      "boxes": [
+        {
+          "id": "en-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              27.0
+            ],
+            [
+              295.0,
+              27.0
+            ],
+            [
+              295.0,
+              48.0
+            ],
+            [
+              30.0,
+              48.0
+            ]
+          ],
+          "detectorScore": 0.7848805975701127,
+          "preRotationWidth": 265,
+          "preRotationHeight": 21,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0,
+              1.2664502346178883e-17,
+              -29.999999999999996
+            ],
+            [
+              -1.2043097216272884e-17,
+              1.0,
+              -26.999999999999996
+            ],
+            [
+              -0.0,
+              3.1920158839177906e-19,
+              1.0
+            ]
+          ],
+          "crop": "en-quality-16-crop-00.png"
+        }
+      ],
+      "hostRepeatEqual": true
+    },
+    {
+      "id": "fr-nonrefundable-16",
+      "origin": "frozen_detector_v1_probability_no_new_inference",
+      "source": "fr-nonrefundable-16-source.png",
+      "probability": "fr-nonrefundable-16-probability.f32z",
+      "probabilityShape": [
+        1,
+        1,
+        96,
+        640
+      ],
+      "mask": "fr-nonrefundable-16-mask.u8z",
+      "dilatedMask": "fr-nonrefundable-16-dilated.u8z",
+      "positivePixels": 2831,
+      "dilatedPositivePixels": 3174,
+      "contourCount": 1,
+      "candidateLimit": 1000,
+      "truncated": false,
+      "boxesBeforeSort": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            366.0,
+            27.0
+          ],
+          [
+            366.0,
+            51.0
+          ],
+          [
+            30.0,
+            51.0
+          ]
+        ]
+      ],
+      "scoresBeforeSort": [
+        0.7906220418996359
+      ],
+      "boxes": [
+        {
+          "id": "fr-nonrefundable-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              27.0
+            ],
+            [
+              366.0,
+              27.0
+            ],
+            [
+              366.0,
+              51.0
+            ],
+            [
+              30.0,
+              51.0
+            ]
+          ],
+          "detectorScore": 0.7906220418996359,
+          "preRotationWidth": 336,
+          "preRotationHeight": 24,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0000000000000002,
+              1.1147358328352937e-16,
+              -30.000000000000014
+            ],
+            [
+              0.0,
+              1.0000000000000002,
+              -27.000000000000007
+            ],
+            [
+              9.441940885629014e-19,
+              1.1902352574546464e-19,
+              1.0
+            ]
+          ],
+          "crop": "fr-nonrefundable-16-crop-00.png"
+        }
+      ],
+      "hostRepeatEqual": true
+    },
+    {
+      "id": "zh-hans-quality-16",
+      "origin": "frozen_detector_v1_probability_no_new_inference",
+      "source": "zh-hans-quality-16-source.png",
+      "probability": "zh-hans-quality-16-probability.f32z",
+      "probabilityShape": [
+        1,
+        1,
+        128,
+        640
+      ],
+      "mask": "zh-hans-quality-16-mask.u8z",
+      "dilatedMask": "zh-hans-quality-16-dilated.u8z",
+      "positivePixels": 2823,
+      "dilatedPositivePixels": 3202,
+      "contourCount": 2,
+      "candidateLimit": 1000,
+      "truncated": false,
+      "boxesBeforeSort": [
+        [
+          [
+            30.0,
+            56.0
+          ],
+          [
+            228.0,
+            56.0
+          ],
+          [
+            228.0,
+            77.0
+          ],
+          [
+            30.0,
+            77.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            30.0
+          ],
+          [
+            212.0,
+            30.0
+          ],
+          [
+            212.0,
+            51.0
+          ],
+          [
+            29.0,
+            51.0
+          ]
+        ]
+      ],
+      "scoresBeforeSort": [
+        0.7958953108336475,
+        0.7844004929065703
+      ],
+      "boxes": [
+        {
+          "id": "zh-hans-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              30.0
+            ],
+            [
+              212.0,
+              30.0
+            ],
+            [
+              212.0,
+              51.0
+            ],
+            [
+              29.0,
+              51.0
+            ]
+          ],
+          "detectorScore": 0.7844004929065703,
+          "preRotationWidth": 183,
+          "preRotationHeight": 21,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0,
+              2.9582975211439065e-17,
+              -29.000000000000004
+            ],
+            [
+              0.0,
+              1.0,
+              -30.0
+            ],
+            [
+              -1.3674127656265582e-35,
+              4.622318083268932e-19,
+              1.0
+            ]
+          ],
+          "crop": "zh-hans-quality-16-crop-00.png"
+        },
+        {
+          "id": "zh-hans-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              56.0
+            ],
+            [
+              228.0,
+              56.0
+            ],
+            [
+              228.0,
+              77.0
+            ],
+            [
+              30.0,
+              77.0
+            ]
+          ],
+          "detectorScore": 0.7958953108336475,
+          "preRotationWidth": 198,
+          "preRotationHeight": 21,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0000000000000002,
+              1.782239027400998e-17,
+              -30.000000000000004
+            ],
+            [
+              0.0,
+              1.0000000000000002,
+              -56.000000000000014
+            ],
+            [
+              7.832261196650137e-19,
+              2.0597829770411068e-19,
+              1.0
+            ]
+          ],
+          "crop": "zh-hans-quality-16-crop-01.png"
+        }
+      ],
+      "hostRepeatEqual": true
+    },
+    {
+      "id": "zh-hant-quality-16",
+      "origin": "frozen_detector_v1_probability_no_new_inference",
+      "source": "zh-hant-quality-16-source.png",
+      "probability": "zh-hant-quality-16-probability.f32z",
+      "probabilityShape": [
+        1,
+        1,
+        128,
+        640
+      ],
+      "mask": "zh-hant-quality-16-mask.u8z",
+      "dilatedMask": "zh-hant-quality-16-dilated.u8z",
+      "positivePixels": 2930,
+      "dilatedPositivePixels": 3311,
+      "contourCount": 2,
+      "candidateLimit": 1000,
+      "truncated": false,
+      "boxesBeforeSort": [
+        [
+          [
+            30.0,
+            56.0
+          ],
+          [
+            228.0,
+            56.0
+          ],
+          [
+            228.0,
+            77.0
+          ],
+          [
+            30.0,
+            77.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            27.0
+          ],
+          [
+            212.0,
+            29.0
+          ],
+          [
+            212.0,
+            51.0
+          ],
+          [
+            29.0,
+            49.0
+          ]
+        ]
+      ],
+      "scoresBeforeSort": [
+        0.8001764074048481,
+        0.7939277429647849
+      ],
+      "boxes": [
+        {
+          "id": "zh-hant-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              27.0
+            ],
+            [
+              212.0,
+              29.0
+            ],
+            [
+              212.0,
+              51.0
+            ],
+            [
+              29.0,
+              49.0
+            ]
+          ],
+          "detectorScore": 0.7939277429647849,
+          "preRotationWidth": 183,
+          "preRotationHeight": 22,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0000000000000002,
+              2.7200429540982913e-17,
+              -29.000000000000014
+            ],
+            [
+              -0.010928961748633868,
+              1.0000000000000002,
+              -26.683060109289627
+            ],
+            [
+              1.811923544018469e-18,
+              1.2928263900695758e-19,
+              1.0
+            ]
+          ],
+          "crop": "zh-hant-quality-16-crop-00.png"
+        },
+        {
+          "id": "zh-hant-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              56.0
+            ],
+            [
+              228.0,
+              56.0
+            ],
+            [
+              228.0,
+              77.0
+            ],
+            [
+              30.0,
+              77.0
+            ]
+          ],
+          "detectorScore": 0.8001764074048481,
+          "preRotationWidth": 198,
+          "preRotationHeight": 21,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0000000000000002,
+              1.782239027400998e-17,
+              -30.000000000000004
+            ],
+            [
+              0.0,
+              1.0000000000000002,
+              -56.000000000000014
+            ],
+            [
+              7.832261196650137e-19,
+              2.0597829770411068e-19,
+              1.0
+            ]
+          ],
+          "crop": "zh-hant-quality-16-crop-01.png"
+        }
+      ],
+      "hostRepeatEqual": true
+    },
+    {
+      "id": "mixed-quality-16",
+      "origin": "frozen_detector_v1_probability_no_new_inference",
+      "source": "mixed-quality-16-source.png",
+      "probability": "mixed-quality-16-probability.f32z",
+      "probabilityShape": [
+        1,
+        1,
+        160,
+        640
+      ],
+      "mask": "mixed-quality-16-mask.u8z",
+      "dilatedMask": "mixed-quality-16-dilated.u8z",
+      "positivePixels": 3177,
+      "dilatedPositivePixels": 3593,
+      "contourCount": 3,
+      "candidateLimit": 1000,
+      "truncated": false,
+      "boxesBeforeSort": [
+        [
+          [
+            29.0,
+            83.0
+          ],
+          [
+            145.0,
+            83.0
+          ],
+          [
+            145.0,
+            105.0
+          ],
+          [
+            29.0,
+            105.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            54.0
+          ],
+          [
+            219.0,
+            54.0
+          ],
+          [
+            219.0,
+            75.0
+          ],
+          [
+            29.0,
+            75.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            29.0
+          ],
+          [
+            150.0,
+            29.0
+          ],
+          [
+            150.0,
+            50.0
+          ],
+          [
+            29.0,
+            50.0
+          ]
+        ]
+      ],
+      "scoresBeforeSort": [
+        0.7981728689920976,
+        0.7865341892181817,
+        0.8009911834917687
+      ],
+      "boxes": [
+        {
+          "id": "mixed-quality-16.box-2",
+          "originalIndex": 2,
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              29.0
+            ],
+            [
+              150.0,
+              29.0
+            ],
+            [
+              150.0,
+              50.0
+            ],
+            [
+              29.0,
+              50.0
+            ]
+          ],
+          "detectorScore": 0.8009911834917687,
+          "preRotationWidth": 121,
+          "preRotationHeight": 21,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0000000000000002,
+              1.307760543287234e-17,
+              -29.000000000000014
+            ],
+            [
+              0.0,
+              1.0000000000000002,
+              -29.000000000000007
+            ],
+            [
+              1.6660839473001336e-18,
+              -4.3114962932353906e-19,
+              1.0
+            ]
+          ],
+          "crop": "mixed-quality-16-crop-00.png"
+        },
+        {
+          "id": "mixed-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 1,
+          "quad": [
+            [
+              29.0,
+              54.0
+            ],
+            [
+              219.0,
+              54.0
+            ],
+            [
+              219.0,
+              75.0
+            ],
+            [
+              29.0,
+              75.0
+            ]
+          ],
+          "detectorScore": 0.7865341892181817,
+          "preRotationWidth": 190,
+          "preRotationHeight": 21,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              0.9999999999999993,
+              3.0207354079979485e-17,
+              -28.999999999999982
+            ],
+            [
+              -3.2444873779000007e-17,
+              0.9999999999999993,
+              -53.99999999999996
+            ],
+            [
+              -2.5042961685725707e-18,
+              2.4628590150708275e-19,
+              1.0
+            ]
+          ],
+          "crop": "mixed-quality-16-crop-01.png"
+        },
+        {
+          "id": "mixed-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 2,
+          "quad": [
+            [
+              29.0,
+              83.0
+            ],
+            [
+              145.0,
+              83.0
+            ],
+            [
+              145.0,
+              105.0
+            ],
+            [
+              29.0,
+              105.0
+            ]
+          ],
+          "detectorScore": 0.7981728689920976,
+          "preRotationWidth": 116,
+          "preRotationHeight": 22,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0,
+              1.4568537427207937e-17,
+              -29.000000000000004
+            ],
+            [
+              0.0,
+              0.9999999999999999,
+              -82.99999999999999
+            ],
+            [
+              -0.0,
+              -0.0,
+              1.0
+            ]
+          ],
+          "crop": "mixed-quality-16-crop-02.png"
+        }
+      ],
+      "hostRepeatEqual": true
+    },
+    {
+      "id": "blank-negative-24",
+      "origin": "frozen_detector_v1_probability_no_new_inference",
+      "source": "blank-negative-24-source.png",
+      "probability": "blank-negative-24-probability.f32z",
+      "probabilityShape": [
+        1,
+        1,
+        96,
+        640
+      ],
+      "mask": "blank-negative-24-mask.u8z",
+      "dilatedMask": "blank-negative-24-dilated.u8z",
+      "positivePixels": 0,
+      "dilatedPositivePixels": 0,
+      "contourCount": 0,
+      "candidateLimit": 1000,
+      "truncated": false,
+      "boxesBeforeSort": [],
+      "scoresBeforeSort": [],
+      "boxes": [],
+      "hostRepeatEqual": true
+    },
+    {
+      "id": "color-control",
+      "origin": "frozen_detector_v1_probability_no_new_inference",
+      "source": "color-control-source.png",
+      "probability": "color-control-probability.f32z",
+      "probabilityShape": [
+        1,
+        1,
+        64,
+        64
+      ],
+      "mask": "color-control-mask.u8z",
+      "dilatedMask": "color-control-dilated.u8z",
+      "positivePixels": 0,
+      "dilatedPositivePixels": 0,
+      "contourCount": 0,
+      "candidateLimit": 1000,
+      "truncated": false,
+      "boxesBeforeSort": [],
+      "scoresBeforeSort": [],
+      "boxes": [],
+      "hostRepeatEqual": true
+    },
+    {
+      "id": "wide-959",
+      "origin": "frozen_detector_v1_probability_no_new_inference",
+      "source": "wide-959-source.png",
+      "probability": "wide-959-probability.f32z",
+      "probabilityShape": [
+        1,
+        1,
+        96,
+        960
+      ],
+      "mask": "wide-959-mask.u8z",
+      "dilatedMask": "wide-959-dilated.u8z",
+      "positivePixels": 0,
+      "dilatedPositivePixels": 0,
+      "contourCount": 0,
+      "candidateLimit": 1000,
+      "truncated": false,
+      "boxesBeforeSort": [],
+      "scoresBeforeSort": [],
+      "boxes": [],
+      "hostRepeatEqual": true
+    },
+    {
+      "id": "wide-1499",
+      "origin": "frozen_detector_v1_probability_no_new_inference",
+      "source": "wide-1499-source.png",
+      "probability": "wide-1499-probability.f32z",
+      "probabilityShape": [
+        1,
+        1,
+        96,
+        1504
+      ],
+      "mask": "wide-1499-mask.u8z",
+      "dilatedMask": "wide-1499-dilated.u8z",
+      "positivePixels": 0,
+      "dilatedPositivePixels": 0,
+      "contourCount": 0,
+      "candidateLimit": 1000,
+      "truncated": false,
+      "boxesBeforeSort": [],
+      "scoresBeforeSort": [],
+      "boxes": [],
+      "hostRepeatEqual": true
+    },
+    {
+      "id": "wide-2001",
+      "origin": "frozen_detector_v1_probability_no_new_inference",
+      "source": "wide-2001-source.png",
+      "probability": "wide-2001-probability.f32z",
+      "probabilityShape": [
+        1,
+        1,
+        96,
+        1984
+      ],
+      "mask": "wide-2001-mask.u8z",
+      "dilatedMask": "wide-2001-dilated.u8z",
+      "positivePixels": 0,
+      "dilatedPositivePixels": 0,
+      "contourCount": 0,
+      "candidateLimit": 1000,
+      "truncated": false,
+      "boxesBeforeSort": [],
+      "scoresBeforeSort": [],
+      "boxes": [],
+      "hostRepeatEqual": true
+    },
+    {
+      "id": "threshold-equal",
+      "origin": "hand-authored_geometry_map_not_neural_detection",
+      "source": "threshold-equal-source.png",
+      "probability": "threshold-equal-probability.f32z",
+      "probabilityShape": [
+        1,
+        1,
+        128,
+        128
+      ],
+      "mask": "threshold-equal-mask.u8z",
+      "dilatedMask": "threshold-equal-dilated.u8z",
+      "positivePixels": 0,
+      "dilatedPositivePixels": 0,
+      "contourCount": 0,
+      "candidateLimit": 1000,
+      "truncated": false,
+      "boxesBeforeSort": [],
+      "scoresBeforeSort": [],
+      "boxes": [],
+      "hostRepeatEqual": true
+    },
+    {
+      "id": "below-box-score",
+      "origin": "hand-authored_geometry_map_not_neural_detection",
+      "source": "below-box-score-source.png",
+      "probability": "below-box-score-probability.f32z",
+      "probabilityShape": [
+        1,
+        1,
+        128,
+        128
+      ],
+      "mask": "below-box-score-mask.u8z",
+      "dilatedMask": "below-box-score-dilated.u8z",
+      "positivePixels": 3600,
+      "dilatedPositivePixels": 3731,
+      "contourCount": 1,
+      "candidateLimit": 1000,
+      "truncated": false,
+      "boxesBeforeSort": [],
+      "scoresBeforeSort": [],
+      "boxes": [],
+      "hostRepeatEqual": true
+    },
+    {
+      "id": "tiny-negative",
+      "origin": "hand-authored_geometry_map_not_neural_detection",
+      "source": "tiny-negative-source.png",
+      "probability": "tiny-negative-probability.f32z",
+      "probabilityShape": [
+        1,
+        1,
+        128,
+        128
+      ],
+      "mask": "tiny-negative-mask.u8z",
+      "dilatedMask": "tiny-negative-dilated.u8z",
+      "positivePixels": 1,
+      "dilatedPositivePixels": 4,
+      "contourCount": 1,
+      "candidateLimit": 1000,
+      "truncated": false,
+      "boxesBeforeSort": [],
+      "scoresBeforeSort": [],
+      "boxes": [],
+      "hostRepeatEqual": true
+    },
+    {
+      "id": "two-blocks",
+      "origin": "hand-authored_geometry_map_not_neural_detection",
+      "source": "two-blocks-source.png",
+      "probability": "two-blocks-probability.f32z",
+      "probabilityShape": [
+        1,
+        1,
+        128,
+        128
+      ],
+      "mask": "two-blocks-mask.u8z",
+      "dilatedMask": "two-blocks-dilated.u8z",
+      "positivePixels": 900,
+      "dilatedPositivePixels": 992,
+      "contourCount": 2,
+      "candidateLimit": 1000,
+      "truncated": false,
+      "boxesBeforeSort": [
+        [
+          [
+            72.0,
+            12.0
+          ],
+          [
+            118.0,
+            12.0
+          ],
+          [
+            118.0,
+            43.0
+          ],
+          [
+            72.0,
+            43.0
+          ]
+        ],
+        [
+          [
+            4.0,
+            12.0
+          ],
+          [
+            50.0,
+            12.0
+          ],
+          [
+            50.0,
+            43.0
+          ],
+          [
+            4.0,
+            43.0
+          ]
+        ]
+      ],
+      "scoresBeforeSort": [
+        0.8618951504749637,
+        0.7711693764694275
+      ],
+      "boxes": [
+        {
+          "id": "two-blocks.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "quad": [
+            [
+              4.0,
+              12.0
+            ],
+            [
+              50.0,
+              12.0
+            ],
+            [
+              50.0,
+              43.0
+            ],
+            [
+              4.0,
+              43.0
+            ]
+          ],
+          "detectorScore": 0.7711693764694275,
+          "preRotationWidth": 46,
+          "preRotationHeight": 31,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0000000000000002,
+              5.863731883311994e-18,
+              -4.000000000000001
+            ],
+            [
+              3.552713678800501e-17,
+              1.0,
+              -12.000000000000002
+            ],
+            [
+              3.125193595286003e-18,
+              -1.0015316537467234e-19,
+              1.0
+            ]
+          ],
+          "crop": "two-blocks-crop-00.png"
+        },
+        {
+          "id": "two-blocks.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "quad": [
+            [
+              72.0,
+              12.0
+            ],
+            [
+              118.0,
+              12.0
+            ],
+            [
+              118.0,
+              43.0
+            ],
+            [
+              72.0,
+              43.0
+            ]
+          ],
+          "detectorScore": 0.8618951504749637,
+          "preRotationWidth": 46,
+          "preRotationHeight": 31,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0000000000000007,
+              2.365915150223095e-16,
+              -72.00000000000006
+            ],
+            [
+              1.5053871520341106e-17,
+              1.0000000000000007,
+              -12.000000000000009
+            ],
+            [
+              1.8785982705560118e-18,
+              3.7974374238960244e-18,
+              1.0
+            ]
+          ],
+          "crop": "two-blocks-crop-01.png"
+        }
+      ],
+      "hostRepeatEqual": true
+    },
+    {
+      "id": "edge-touching",
+      "origin": "hand-authored_geometry_map_not_neural_detection",
+      "source": "edge-touching-source.png",
+      "probability": "edge-touching-probability.f32z",
+      "probabilityShape": [
+        1,
+        1,
+        128,
+        128
+      ],
+      "mask": "edge-touching-mask.u8z",
+      "dilatedMask": "edge-touching-dilated.u8z",
+      "positivePixels": 756,
+      "dilatedPositivePixels": 817,
+      "contourCount": 1,
+      "candidateLimit": 1000,
+      "truncated": false,
+      "boxesBeforeSort": [
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            52.0,
+            0.0
+          ],
+          [
+            52.0,
+            28.0
+          ],
+          [
+            0.0,
+            28.0
+          ]
+        ]
+      ],
+      "scoresBeforeSort": [
+        0.8328029155147556
+      ],
+      "boxes": [
+        {
+          "id": "edge-touching.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "quad": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              52.0,
+              0.0
+            ],
+            [
+              52.0,
+              28.0
+            ],
+            [
+              0.0,
+              28.0
+            ]
+          ],
+          "detectorScore": 0.8328029155147556,
+          "preRotationWidth": 52,
+          "preRotationHeight": 28,
+          "rotateCounterClockwise90": false,
+          "sourceToPreRotationCrop": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "crop": "edge-touching-crop-00.png"
+        }
+      ],
+      "hostRepeatEqual": true
+    },
+    {
+      "id": "vertical",
+      "origin": "hand-authored_geometry_map_not_neural_detection",
+      "source": "vertical-source.png",
+      "probability": "vertical-probability.f32z",
+      "probabilityShape": [
+        1,
+        1,
+        128,
+        128
+      ],
+      "mask": "vertical-mask.u8z",
+      "dilatedMask": "vertical-dilated.u8z",
+      "positivePixels": 1164,
+      "dilatedPositivePixels": 1274,
+      "contourCount": 1,
+      "candidateLimit": 1000,
+      "truncated": false,
+      "boxesBeforeSort": [
+        [
+          [
+            45.0,
+            6.0
+          ],
+          [
+            75.0,
+            6.0
+          ],
+          [
+            75.0,
+            120.0
+          ],
+          [
+            45.0,
+            120.0
+          ]
+        ]
+      ],
+      "scoresBeforeSort": [
+        0.830769208761362
+      ],
+      "boxes": [
+        {
+          "id": "vertical.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "quad": [
+            [
+              45.0,
+              6.0
+            ],
+            [
+              75.0,
+              6.0
+            ],
+            [
+              75.0,
+              120.0
+            ],
+            [
+              45.0,
+              120.0
+            ]
+          ],
+          "detectorScore": 0.830769208761362,
+          "preRotationWidth": 30,
+          "preRotationHeight": 114,
+          "rotateCounterClockwise90": true,
+          "sourceToPreRotationCrop": [
+            [
+              0.9999999999999998,
+              -2.7503385346187348e-18,
+              -45.0
+            ],
+            [
+              -1.1842378929335004e-17,
+              0.9999999999999997,
+              -5.999999999999997
+            ],
+            [
+              -5.346633822093055e-18,
+              -1.0575464996127997e-19,
+              1.0
+            ]
+          ],
+          "crop": "vertical-crop-00.png"
+        }
+      ],
+      "hostRepeatEqual": true
+    }
+  ],
+  "files": {
+    "en-quality-16-crop-00.png": {
+      "bytes": 2793,
+      "sha256": "5e708a96579095592610ead9a91f4b72ce3d12eedbaafc86e08e9b2a3e191ae0",
+      "width": 265,
+      "height": 21,
+      "rawBgrSha256": "cf447df56859abe0a361a7072d022f2abb5058d9ab9fe9fc1e3efae49df96e3a"
+    },
+    "en-quality-16-source.png": {
+      "bytes": 3371,
+      "sha256": "14d4b31b4259779e6a4ae8d83fbd88eccea5e525c12deac03f233ba43a8d16b3",
+      "width": 640,
+      "height": 91,
+      "rawBgrSha256": "e042c3241f4642b12bd4a8076ebf695e8902cdcb5b4a2ab5f9314c2d189c67e1"
+    },
+    "en-quality-16-probability.f32z": {
+      "bytes": 9123,
+      "sha256": "519099dc76a553fb336098a1811093947ea4fc21e62589321f1a43c215fe394a",
+      "decodedBytes": 245760,
+      "decodedSha256": "996f0eada34f1615dd5c39eb38867359b130c8e19185bf331854a43b82388aa6"
+    },
+    "en-quality-16-mask.u8z": {
+      "bytes": 137,
+      "sha256": "68983e2da7cae448b208b031a8dd75c842a19d585dc672c64e726b5ec839fcba",
+      "decodedBytes": 61440,
+      "decodedSha256": "7ecf721f92afe360eef2300e190d54a6f8b9f14796c61e553cd12a90fe2361f1"
+    },
+    "en-quality-16-dilated.u8z": {
+      "bytes": 129,
+      "sha256": "250164dfa6715bed3cf290c4ce76192f71c9a0770cef449a466f19f1cecc4435",
+      "decodedBytes": 61440,
+      "decodedSha256": "f6966ad397e50b13ef47cf30a7af1ae82f42e6088418f021a8cce9872a672440"
+    },
+    "fr-nonrefundable-16-crop-00.png": {
+      "bytes": 2603,
+      "sha256": "c0a97dbbecaf7cd5cbdaf7175610ee60752310d293e3e2a4c8012115678819d8",
+      "width": 336,
+      "height": 24,
+      "rawBgrSha256": "21d6f4ce136f5b3d1f31f2c82eee7051d1243ad46de91a343745314634b42088"
+    },
+    "fr-nonrefundable-16-source.png": {
+      "bytes": 3103,
+      "sha256": "a231182351d997a48580efe8582ce162869339671e9e22e2e87bef44bc6892f5",
+      "width": 640,
+      "height": 91,
+      "rawBgrSha256": "1291a8592d4f17cfda4e2d0a668e9c25306f12e491239dec9f0795c022f10c43"
+    },
+    "fr-nonrefundable-16-probability.f32z": {
+      "bytes": 9113,
+      "sha256": "89b60dfd0df3c9619588cfd0b49ba85bd5a7a71db206ec80a276ca8827f4ca38",
+      "decodedBytes": 245760,
+      "decodedSha256": "6749b5dc4483be104f4477ddbba629c30ae89b5752759df53e728ca71bb8c654"
+    },
+    "fr-nonrefundable-16-mask.u8z": {
+      "bytes": 153,
+      "sha256": "0b1a4048d4cbe38375ce165365799051dda38fed25b9fd4d4a6c22822b7c9e63",
+      "decodedBytes": 61440,
+      "decodedSha256": "3cb602f30b18fcd199f164e0eac0a6c2868ddfe6a6a0dfd392eb944916a08cc1"
+    },
+    "fr-nonrefundable-16-dilated.u8z": {
+      "bytes": 148,
+      "sha256": "f0da807b7804163a6633a85e18d13021438e7313f4bfb480b0be68f69036a018",
+      "decodedBytes": 61440,
+      "decodedSha256": "405ddb15b4e5b47c917db2a6e30544d780e1e4585f7e96f7c63d4d2379182acb"
+    },
+    "zh-hans-quality-16-crop-00.png": {
+      "bytes": 2546,
+      "sha256": "923a7c988fd5f47bed35487310f8775b424e9a6323dcfa3fcdda060b64de06ce",
+      "width": 183,
+      "height": 21,
+      "rawBgrSha256": "10d4b67dd0458cc12c0528ce8059dc5662cee51c81465832ff3710440ff56b0b"
+    },
+    "zh-hans-quality-16-crop-01.png": {
+      "bytes": 2877,
+      "sha256": "3cbc7a023b4865bb7e39d3944dbb224dadfaaec6d789d5dcc62b3b6c667361fa",
+      "width": 198,
+      "height": 21,
+      "rawBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335"
+    },
+    "zh-hans-quality-16-source.png": {
+      "bytes": 6467,
+      "sha256": "d793159a661552487a142738f032fc2cc54e9a47d6e91b794441ab7e1ac0b9ed",
+      "width": 640,
+      "height": 118,
+      "rawBgrSha256": "66eef5fb3d7c0138b91860a9abd7d64d00f7887fd1964f52abbc2c029aaf0687"
+    },
+    "zh-hans-quality-16-probability.f32z": {
+      "bytes": 15523,
+      "sha256": "0b33b4c4120315db05160faeb624aca067fa67c8b6bfe836f2c6dc07ad8bdda5",
+      "decodedBytes": 327680,
+      "decodedSha256": "945222873ab5f71812710afa7cff8a889a08e3e54609f0642efa7e466b21eaa9"
+    },
+    "zh-hans-quality-16-mask.u8z": {
+      "bytes": 179,
+      "sha256": "59b21ec7f89d8afafec8f1122355c3c17f2794698a054c6b319b4c1fb04f7d5b",
+      "decodedBytes": 81920,
+      "decodedSha256": "15f0143f9cef69d1287765b352f84b2f0608797d8e75d6019a87f8b36ccf29d2"
+    },
+    "zh-hans-quality-16-dilated.u8z": {
+      "bytes": 177,
+      "sha256": "bed7d0c7b93bfeffd142c1abc7eacb9072e0d19bd08395e4b85f2ae97dce90e8",
+      "decodedBytes": 81920,
+      "decodedSha256": "9bde74e12335ffc1d7be7f16b9c3323cf8839e86091e8ea83c597007e089a534"
+    },
+    "zh-hant-quality-16-crop-00.png": {
+      "bytes": 3998,
+      "sha256": "d528c5fc189bb2c5d8b39f0ad8aec3e7b721330333edded7bc5a6434b1037cbe",
+      "width": 183,
+      "height": 22,
+      "rawBgrSha256": "a9273c2cb3b7b1df4e2c56d7f2ad2359a8777407dd594c82d781254561beea6b"
+    },
+    "zh-hant-quality-16-crop-01.png": {
+      "bytes": 2877,
+      "sha256": "3cbc7a023b4865bb7e39d3944dbb224dadfaaec6d789d5dcc62b3b6c667361fa",
+      "width": 198,
+      "height": 21,
+      "rawBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335"
+    },
+    "zh-hant-quality-16-source.png": {
+      "bytes": 6650,
+      "sha256": "551938fa81d5fb439620c1f47c7db42d7ff8de3e06b2eeff41c59cba024e92dc",
+      "width": 640,
+      "height": 118,
+      "rawBgrSha256": "ecdd63a178b3d1abbfe74f37bef28fb81de8ae9dd6fc082086f82339f8510c3d"
+    },
+    "zh-hant-quality-16-probability.f32z": {
+      "bytes": 14906,
+      "sha256": "7031b93a658120894fb70fb89a3e2ee45612ab8ff6b17e2ba063f30a89cebe2c",
+      "decodedBytes": 327680,
+      "decodedSha256": "7997791b2daea6bf665f47f1506d7363df374ce0cdeef08c24cdf932f2c5bd6d"
+    },
+    "zh-hant-quality-16-mask.u8z": {
+      "bytes": 193,
+      "sha256": "d557160ec603d614d936110d28a0e8f0d64fb7235bbcbaa3157441db53fc1f61",
+      "decodedBytes": 81920,
+      "decodedSha256": "0ca36ef906dad588d9144cfd13d43c93e74dac8e9e3ab3e08277a257afe2e70b"
+    },
+    "zh-hant-quality-16-dilated.u8z": {
+      "bytes": 189,
+      "sha256": "32900b710baf1f3ef7a62db7e2d9a66f36a094c880b90519a1c5717fbf34233d",
+      "decodedBytes": 81920,
+      "decodedSha256": "f8d50cc7ea2945422465aedef41794c15a2ddc9ab6f30d7ef872577a63be41fe"
+    },
+    "mixed-quality-16-crop-00.png": {
+      "bytes": 1412,
+      "sha256": "f4e4e7e6996d8fd9199e981e8d29685b54e98063855b774a7311ec6c6a49bec1",
+      "width": 121,
+      "height": 21,
+      "rawBgrSha256": "ca53b4fc5f377c96bbd6e02f7b846cb324fffe20720ebede9b4dd74a13963422"
+    },
+    "mixed-quality-16-crop-01.png": {
+      "bytes": 2458,
+      "sha256": "83737017a2a6deeece9dbc1834f87a2b13fb8a60cd2ad11556a629ca77b74ba2",
+      "width": 190,
+      "height": 21,
+      "rawBgrSha256": "fee25a7dd0410e67b4210c9100ae043bd8b3e237d03574401d7110e0cb284911"
+    },
+    "mixed-quality-16-crop-02.png": {
+      "bytes": 1419,
+      "sha256": "df2c526763fa268e5b2e2dd0856d88179bb4202c123d8f27e0a3aa00a144398a",
+      "width": 116,
+      "height": 22,
+      "rawBgrSha256": "3590e94e4f545491b33a76e8c06a4a819c2cc970dd77a49c10416afd61840e5a"
+    },
+    "mixed-quality-16-source.png": {
+      "bytes": 6119,
+      "sha256": "16e61d8b4a086cb547380ed3d82f3f5642e351ab2c4f8d3dcebc489738c7098e",
+      "width": 640,
+      "height": 145,
+      "rawBgrSha256": "5a6a5d9c8fafe8b8637a573481983a14b16f200256d34b0dabd6b70d2847ee21"
+    },
+    "mixed-quality-16-probability.f32z": {
+      "bytes": 18532,
+      "sha256": "fa174a0ad743c9acf9cdff8070e602c9813b926f5ebcaf85c08663af89283fb0",
+      "decodedBytes": 409600,
+      "decodedSha256": "9d6c9f9abedecd9ef1fcc016a1c9f088f2836766f2747aba081e33d8d9b17d2a"
+    },
+    "mixed-quality-16-mask.u8z": {
+      "bytes": 210,
+      "sha256": "3eb6a2eb6aa0e5c2f39cf55fc12111238286a916b4e102b6496e0bbe2f9aa105",
+      "decodedBytes": 102400,
+      "decodedSha256": "b20d10b8fe514f399386cee2082ad4b61072b2d7b9c4a65fde254927d0aef1d6"
+    },
+    "mixed-quality-16-dilated.u8z": {
+      "bytes": 220,
+      "sha256": "c5a13798bd441f1053c1382c07a43af7fe32bdc3f39804d4edaf3e9681041579",
+      "decodedBytes": 102400,
+      "decodedSha256": "f1aac0790ea4aa47d82397674d44c5a3cc349de84866f46c8864d98c31532298"
+    },
+    "blank-negative-24-source.png": {
+      "bytes": 479,
+      "sha256": "98bdec534b06f7211e1fcb8a286606d54b10be0ddc28a77d41429d4ea1f76529",
+      "width": 640,
+      "height": 101,
+      "rawBgrSha256": "c27113404b82277ff377ad614d0c4bcef5fb456f57c90341fe04bc99116692c5"
+    },
+    "blank-negative-24-probability.f32z": {
+      "bytes": 2044,
+      "sha256": "4cb26022c147b0eec77ccf78f09cb959e30b8ff608f34ed03c67c6c361b9d979",
+      "decodedBytes": 245760,
+      "decodedSha256": "94b156200f0ff52fc7436733be63ef8a7db74fe73424e06927a45ad5c34c9081"
+    },
+    "blank-negative-24-mask.u8z": {
+      "bytes": 94,
+      "sha256": "0c91cb3d9647f138a555f87342e91321fd090ff56873acb61bd23142820941a3",
+      "decodedBytes": 61440,
+      "decodedSha256": "0693f6bfa2117a9b14f9ceca13d3a5611de5dca226bf999f20a7f615fbd08dff"
+    },
+    "blank-negative-24-dilated.u8z": {
+      "bytes": 94,
+      "sha256": "0c91cb3d9647f138a555f87342e91321fd090ff56873acb61bd23142820941a3",
+      "decodedBytes": 61440,
+      "decodedSha256": "0693f6bfa2117a9b14f9ceca13d3a5611de5dca226bf999f20a7f615fbd08dff"
+    },
+    "color-control-source.png": {
+      "bytes": 558,
+      "sha256": "9dd718e24688d8ded5505526238bdd398985ffa117891731edb06a684bc3dc5e",
+      "width": 67,
+      "height": 53,
+      "rawBgrSha256": "14dac98b86eafdb8aeb9c0ec933bc6ab21f48817801f8a42ce5aeecf71576844"
+    },
+    "color-control-probability.f32z": {
+      "bytes": 3816,
+      "sha256": "f65f40a1c3ffffbc334e70ab40857255d4b5f3f408cfea37849cedabd3668e4c",
+      "decodedBytes": 16384,
+      "decodedSha256": "82d6f0419702a169dee23ef3f436997dbda46d744eacbf1dd2b61c2357872782"
+    },
+    "color-control-mask.u8z": {
+      "bytes": 38,
+      "sha256": "cff445672d15fef1deb1a63b86a313146aa301372be8acc42bc8b89663738081",
+      "decodedBytes": 4096,
+      "decodedSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    "color-control-dilated.u8z": {
+      "bytes": 38,
+      "sha256": "cff445672d15fef1deb1a63b86a313146aa301372be8acc42bc8b89663738081",
+      "decodedBytes": 4096,
+      "decodedSha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    "wide-959-source.png": {
+      "bytes": 5501,
+      "sha256": "ddc561a0569ef22af5751cd0a8799ab235d2963d83bcdd7c798ca667d03ebb50",
+      "width": 959,
+      "height": 100,
+      "rawBgrSha256": "da51bb7c816de84d478f0c8aad6a8f1592cf90024903f78cbd7ed89057e107e4"
+    },
+    "wide-959-probability.f32z": {
+      "bytes": 87626,
+      "sha256": "b13065eacc030e0783bbfcc967661b49412cc978142055fa73545827a29bb744",
+      "decodedBytes": 368640,
+      "decodedSha256": "62e35ada45fbbba0da80be4deb9737749d25e7c6f1ceb3a34e19a27ac5b6edae"
+    },
+    "wide-959-mask.u8z": {
+      "bytes": 124,
+      "sha256": "dbd78dda1d92ce9a0b7bcf2e4029da3255c40dbc2a4ec551d2ab1c8ef1531bc3",
+      "decodedBytes": 92160,
+      "decodedSha256": "ba61c36dd3703f9a8cce36675bb7391e9a6b1ab917ea00c4a3ebf2d7c50c4fcb"
+    },
+    "wide-959-dilated.u8z": {
+      "bytes": 124,
+      "sha256": "dbd78dda1d92ce9a0b7bcf2e4029da3255c40dbc2a4ec551d2ab1c8ef1531bc3",
+      "decodedBytes": 92160,
+      "decodedSha256": "ba61c36dd3703f9a8cce36675bb7391e9a6b1ab917ea00c4a3ebf2d7c50c4fcb"
+    },
+    "wide-1499-source.png": {
+      "bytes": 7557,
+      "sha256": "340a8fc0ddbbd634bbe8c6db1ba54ed2823fbb5c578c91da8e43182c0aa30649",
+      "width": 1499,
+      "height": 100,
+      "rawBgrSha256": "e4dec6d638d65b0c5cb7e26dc4038f90e82f09de4a7724222d5bd9f451c1009d"
+    },
+    "wide-1499-probability.f32z": {
+      "bytes": 137151,
+      "sha256": "69e7ccf81c1bf40848e99b04d51f8113f0e8f5ecfe9a5c39aa0b9d22fbcb9672",
+      "decodedBytes": 577536,
+      "decodedSha256": "2e2a7510aa4af9095dc527e95b407f0fdb62378f3b51b625eeb2324618418337"
+    },
+    "wide-1499-mask.u8z": {
+      "bytes": 175,
+      "sha256": "6e308dbdecf408c1cb170a243e610314f6a4939c3784c164530318c057b09aec",
+      "decodedBytes": 144384,
+      "decodedSha256": "47a97af2f30070956ecb7afe6690d223f5d82fb27d66b740b80f34649fdf60c8"
+    },
+    "wide-1499-dilated.u8z": {
+      "bytes": 175,
+      "sha256": "6e308dbdecf408c1cb170a243e610314f6a4939c3784c164530318c057b09aec",
+      "decodedBytes": 144384,
+      "decodedSha256": "47a97af2f30070956ecb7afe6690d223f5d82fb27d66b740b80f34649fdf60c8"
+    },
+    "wide-2001-source.png": {
+      "bytes": 9560,
+      "sha256": "2230ae21bdc0b153ce1d7dce132f386b9454eb5b13f2dcbfc2af505a9f841b02",
+      "width": 2001,
+      "height": 100,
+      "rawBgrSha256": "7fb17ed1439db926b8027d90697e99b9fb1cf68b369d30df4fc14911ce8a72fa"
+    },
+    "wide-2001-probability.f32z": {
+      "bytes": 181143,
+      "sha256": "26caa881163a8fc3ddb5e8073afe0985a2bf93453794de503a67dfc78dfebfaa",
+      "decodedBytes": 761856,
+      "decodedSha256": "84664b305bf6e7c37046a61b2b7c8a07fec37cec2a59da55dbf4faecba1d9be0"
+    },
+    "wide-2001-mask.u8z": {
+      "bytes": 219,
+      "sha256": "78bfc97d6ddcec08f9f00aa0d04fcfb4df54baa021d3c42a1e5e90a2227a9b9b",
+      "decodedBytes": 190464,
+      "decodedSha256": "9cba013cd0738a8219356e57e9499421b886f146778464e438a32022c43f8da7"
+    },
+    "wide-2001-dilated.u8z": {
+      "bytes": 219,
+      "sha256": "78bfc97d6ddcec08f9f00aa0d04fcfb4df54baa021d3c42a1e5e90a2227a9b9b",
+      "decodedBytes": 190464,
+      "decodedSha256": "9cba013cd0738a8219356e57e9499421b886f146778464e438a32022c43f8da7"
+    },
+    "threshold-equal-source.png": {
+      "bytes": 1785,
+      "sha256": "da1f1fbc586af1bc569211263bb4e2a799019166056ae2cc6e8d534a3db6d641",
+      "width": 128,
+      "height": 128,
+      "rawBgrSha256": "3db64a494d42f649f0987edb1f80f5ca713fad367b4f51bf6e2ef2a6c8b1ac24"
+    },
+    "threshold-equal-probability.f32z": {
+      "bytes": 187,
+      "sha256": "2e75fdd7dfd61544c65008808988e97f126ef5e2f77dfe3c1f7fd62deccb2710",
+      "decodedBytes": 65536,
+      "decodedSha256": "cd3d739afc27dfca9764f3016d117f3994191b5161ec3671c80fdf711ff1fe01"
+    },
+    "threshold-equal-mask.u8z": {
+      "bytes": 51,
+      "sha256": "66cbc896884324488b2fd6801c3c0e3f8476031d179f315d9682f11cfedde0ef",
+      "decodedBytes": 16384,
+      "decodedSha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    "threshold-equal-dilated.u8z": {
+      "bytes": 51,
+      "sha256": "66cbc896884324488b2fd6801c3c0e3f8476031d179f315d9682f11cfedde0ef",
+      "decodedBytes": 16384,
+      "decodedSha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    "below-box-score-source.png": {
+      "bytes": 1785,
+      "sha256": "da1f1fbc586af1bc569211263bb4e2a799019166056ae2cc6e8d534a3db6d641",
+      "width": 128,
+      "height": 128,
+      "rawBgrSha256": "3db64a494d42f649f0987edb1f80f5ca713fad367b4f51bf6e2ef2a6c8b1ac24"
+    },
+    "below-box-score-probability.f32z": {
+      "bytes": 188,
+      "sha256": "5215fc0db06ef38897ddbbee6e2b9ec92499bf171a3f0d5f183b258c76e0b11c",
+      "decodedBytes": 65536,
+      "decodedSha256": "d21a92e9b5b7635efc243a8b024420dd73baa6ec7de9e695a179d4fbbf818276"
+    },
+    "below-box-score-mask.u8z": {
+      "bytes": 70,
+      "sha256": "3ad460642e5ea7a371f3d5ea3552e868cb31b06505e592f168bd7b229c849ab6",
+      "decodedBytes": 16384,
+      "decodedSha256": "4715afba8ac7f519a22cc86fd1710e25d3f70b8ef59dd808f8713107ad75c910"
+    },
+    "below-box-score-dilated.u8z": {
+      "bytes": 70,
+      "sha256": "8cf17c89dd91e6edc4521ce8748d6e1db45ad22f7c8f3f9c1bfe2ffcd3dbde8f",
+      "decodedBytes": 16384,
+      "decodedSha256": "0994627f4815f1ecb49e095971907d040132491772f48a180117e0810b4928b2"
+    },
+    "tiny-negative-source.png": {
+      "bytes": 1785,
+      "sha256": "da1f1fbc586af1bc569211263bb4e2a799019166056ae2cc6e8d534a3db6d641",
+      "width": 128,
+      "height": 128,
+      "rawBgrSha256": "3db64a494d42f649f0987edb1f80f5ca713fad367b4f51bf6e2ef2a6c8b1ac24"
+    },
+    "tiny-negative-probability.f32z": {
+      "bytes": 106,
+      "sha256": "5f3a885af737bd894e1532aa182bea224aa20406e5e5347b18b0904f87caf54e",
+      "decodedBytes": 65536,
+      "decodedSha256": "d97fa6f8c865ee0ea9d3967b4887f046cde24ea7d6506331ef0f71d8913124cf"
+    },
+    "tiny-negative-mask.u8z": {
+      "bytes": 55,
+      "sha256": "790b793cb033d328bcc06e9bf767ad1d1afa7d0b32fe1e0df2a06a09fcd04eaf",
+      "decodedBytes": 16384,
+      "decodedSha256": "bee7d1f4fc8197607759524d13be2c37a629226153209ea63821818353509357"
+    },
+    "tiny-negative-dilated.u8z": {
+      "bytes": 56,
+      "sha256": "6b98f5daa19d82006a36576da4e916f4edd0af7afc181bc4c5ca71723cdbe5d3",
+      "decodedBytes": 16384,
+      "decodedSha256": "d12b8754249957b69ec2805f406f586154faad9184b0a3d6bb610014fea158da"
+    },
+    "two-blocks-crop-00.png": {
+      "bytes": 306,
+      "sha256": "44d2e7b2cdf53d23729bc3c01a693cd9f606f5dd88b2e92bd6563068eb360891",
+      "width": 46,
+      "height": 31,
+      "rawBgrSha256": "4c0a6f00526c49d5beaa29582c84829478e2cd0b4e84128620ef07015bc0e9c8"
+    },
+    "two-blocks-crop-01.png": {
+      "bytes": 310,
+      "sha256": "801ea70e16582ed8fe09206c469eafe13f25edad62a6849a2efa0a488d3a0945",
+      "width": 46,
+      "height": 31,
+      "rawBgrSha256": "b2b821c2fd2fc084d2b76c20a7f54e3c47a02c5f12a1b10af3fd0a97d35c1c26"
+    },
+    "two-blocks-source.png": {
+      "bytes": 1785,
+      "sha256": "da1f1fbc586af1bc569211263bb4e2a799019166056ae2cc6e8d534a3db6d641",
+      "width": 128,
+      "height": 128,
+      "rawBgrSha256": "3db64a494d42f649f0987edb1f80f5ca713fad367b4f51bf6e2ef2a6c8b1ac24"
+    },
+    "two-blocks-probability.f32z": {
+      "bytes": 148,
+      "sha256": "6808a1b7c1246927cd2fe8de00c95af8d2fbd2986e5c688a657285a58656ada8",
+      "decodedBytes": 65536,
+      "decodedSha256": "317abc4ee00dd06aff4ac60ed05dc7be0176e645f7c785a3f59a2f0b67a2a09d"
+    },
+    "two-blocks-mask.u8z": {
+      "bytes": 65,
+      "sha256": "11973d210948e5b37bf15e74b5dddd69f926c0959ddc06f3d9558e48a8b7c659",
+      "decodedBytes": 16384,
+      "decodedSha256": "aba78757cc0a6c0a5d66c2fded94b942c6c957e06ee756abe0c5bc17a9e35198"
+    },
+    "two-blocks-dilated.u8z": {
+      "bytes": 67,
+      "sha256": "971a9861535717c26b1212bcd9df6179e7e8c395b6373a92d627db28e7c1d7da",
+      "decodedBytes": 16384,
+      "decodedSha256": "a757bd531939ad2da57a0ed51c7b738b9631f22a000ebfe055c8a9e723859ee6"
+    },
+    "edge-touching-crop-00.png": {
+      "bytes": 289,
+      "sha256": "c53e9a1d902783aba35c3388ac96a1e86304f4b6ebfa99297b645537f5421c15",
+      "width": 52,
+      "height": 28,
+      "rawBgrSha256": "741ccb954e9d216b348558d30849437903d75e1c30aa5fd0cf8017dd72f87bb1"
+    },
+    "edge-touching-source.png": {
+      "bytes": 1785,
+      "sha256": "da1f1fbc586af1bc569211263bb4e2a799019166056ae2cc6e8d534a3db6d641",
+      "width": 128,
+      "height": 128,
+      "rawBgrSha256": "3db64a494d42f649f0987edb1f80f5ca713fad367b4f51bf6e2ef2a6c8b1ac24"
+    },
+    "edge-touching-probability.f32z": {
+      "bytes": 144,
+      "sha256": "416fff1150dfb7c51be72e5c9bc003f823d416d88c772780fee61694c7ee448a",
+      "decodedBytes": 65536,
+      "decodedSha256": "0093aeefa8c8cdb17f45bfcd17c256ded8b43c5514b9093760a5708d139f4549"
+    },
+    "edge-touching-mask.u8z": {
+      "bytes": 64,
+      "sha256": "c350e44467b99b86c256c69f9d84ce5aa1db6bdbd2d8f34f08428ca9ed2da231",
+      "decodedBytes": 16384,
+      "decodedSha256": "9975c38496040007129f95ea52c549fcaaa1dbd60336459e84e45f49dfcbbb12"
+    },
+    "edge-touching-dilated.u8z": {
+      "bytes": 64,
+      "sha256": "b6ad33e685289b459440a8ddf7753537f396c95a97d8a92518a0b8c16ff76705",
+      "decodedBytes": 16384,
+      "decodedSha256": "99102cd55f6304c1d0e48aa7cebcbd427ade00040655283ba5ca2186f3938b4e"
+    },
+    "vertical-crop-00.png": {
+      "bytes": 491,
+      "sha256": "5f15a83ff077f4f9cafec5e54411d88ac160178ef91cf6f3c98525715df1a3cd",
+      "width": 114,
+      "height": 30,
+      "rawBgrSha256": "ac143c02b735563d41ff269664afd1ca579f15444336cdd775175db7717197de"
+    },
+    "vertical-source.png": {
+      "bytes": 1785,
+      "sha256": "da1f1fbc586af1bc569211263bb4e2a799019166056ae2cc6e8d534a3db6d641",
+      "width": 128,
+      "height": 128,
+      "rawBgrSha256": "3db64a494d42f649f0987edb1f80f5ca713fad367b4f51bf6e2ef2a6c8b1ac24"
+    },
+    "vertical-probability.f32z": {
+      "bytes": 219,
+      "sha256": "f95dca52b98be26100c42b435e8086a019e9295d216d9daba82da4b22a3022ae",
+      "decodedBytes": 65536,
+      "decodedSha256": "7634444dc4e4abc52c9ac4330ee932c7804dbefd44ab653e15a9ed49978dc395"
+    },
+    "vertical-mask.u8z": {
+      "bytes": 86,
+      "sha256": "c6d212fcf24c8c68d6540fb4be51c2f10727c4288ac3ed84804b6651e705c86b",
+      "decodedBytes": 16384,
+      "decodedSha256": "00de84fda7c5853c71fc8b2a321eff9b306645444213f609975c6714c139d3d7"
+    },
+    "vertical-dilated.u8z": {
+      "bytes": 89,
+      "sha256": "86304d30dbf3b7722f493e2babd08362551468fa6320ed727a8a6b8e6c6ab422",
+      "decodedBytes": 16384,
+      "decodedSha256": "8475ed030bfcfb4275af9088cadcd281c5b5d7eac3977218c39fd26534d0f884"
+    }
+  },
+  "limitations": [
+    "Host golden data only; no Android geometry execution",
+    "Contours beyond 1000 require explicit incomplete status; stress case still pending",
+    "Reject invalid/nonfinite/degenerate geometry before allocation in Android port",
+    "Box/crop equality does not prove recognition or translation quality"
+  ]
+}

@@ -62,3 +62,9 @@ ocrlab使用Google ML Kit随包Latin OCR 16.0.1及其传递依赖，模型和原
 modelprobe使用Microsoft ONNX Runtime Android1.30.0（MIT及其ThirdPartyNotices）。PaddleOCR识别权重由RapidAI转换为ONNX，固定为ModelScope RapidAI/RapidOCR v3.9.2发布的两文件；模型卡声明Apache License 2.0。PaddleOCR、RapidOCR许可、模型卡、实际文件SHA与来源随包保存在modelprobe/src/main/assets/legal；未复制整个上游项目，CTC及Android生命周期代码独立实现。转换流程本身尚未独立审计，具体限制见[模型探针](MODEL_PROBE.md)。
 
 模型二进制不提交Git，只由明确运行的准备脚本下载并验证；编译不自动联网下载模型。所有输入来自本项目自编图片的真实宿主机检测/预处理张量，字典保持模型的原始索引，没有分发字体软件或用户页面。
+
+## 原图缩放与检测几何参考
+
+独立modelprobe instrumentation包使用[OpenCV官方Android构件](https://repo.maven.apache.org/maven2/org/opencv/opencv/4.14.0/)4.14.0，Apache-2.0许可和来源随测试包保存；未加入主应用。候选加载/数值差异、元数据不一致、体积及尚未完成的第三方notice审核见[原图探针](ORIGINAL_IMAGE_PROBE.md)。
+
+[几何参考生成器](../scripts/export-detector-geometry-fixtures.py)调用固定RapidOCR3.9.2的DBPostProcess与get_rotate_crop_image，并依据其排序规则将框/索引/分数一起排序。该上游检测入口保留Copyright (c) 2020 PaddlePaddle Authors、Apache-2.0归属；许可文本已有modelprobe/src/main/assets/legal/RapidOCR-LICENSE.txt和PaddleOCR-LICENSE.txt。新输入和裁剪均来自本项目合成数据，没有复制用户屏幕或字体文件，也未复制整个上游项目。Pyclipper与Shapely仅用于既有宿主参考环境，尚未选择或引入Android polygon实现。

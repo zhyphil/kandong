@@ -1,0 +1,15 @@
+{
+  "runs": 2,
+  "referenceFiles": 78,
+  "allReferenceBytesEqual": true,
+  "cases": 16,
+  "cropCount": 13,
+  "unclipKernelCases": 2,
+  "manifestSha256": "1aa14f2efb50e62c5a2d95b45b7d5b5044d4ec90afa47a976e8dea50bbe466a6",
+  "exporterSha256": "d348a656ab25ef5a80f07590fbd9c51ee8cd031ab61180f35455b8f655b049a0",
+  "totalReferenceBytes": 622505,
+  "excludedDependencyTemporaryFiles": [
+    ":memory:.ses"
+  ],
+  "scope": "host synthetic geometry preparation only; no Android postprocessing or OCR quality acceptance"
+}
