@@ -27,7 +27,15 @@
     "seconds": 0.779,
     "actualImagesClosedAndSlotsReused": 16
   },
-  "physicalPhone": "pending; experiment main package missing at latest query, must restore and verify before instrumenting",
+  "physicalPhone": {
+    "model": "LIO-AN00",
+    "api": 31,
+    "packages": "Main restored and test updated with user confirmation; both hashes equal emulator/final build",
+    "passed": 28,
+    "seconds": 1.28,
+    "actualImagesClosedAndSlotsReused": 16,
+    "projectionOrScreenRead": false
+  },
   "sha256": {
     "modelprobe/src/androidTest/java/com/kandong/modelprobe/AndroidRgbaFrameLease.kt": "8105d2c794aa8b7f5ec39278ad8c6ff558cc24b896b340a2072e7ec93d8aa65e",
     "modelprobe/src/androidTest/java/com/kandong/modelprobe/AndroidImageStripProbeTest.kt": "a88d58004e8172dcffe61d70410944100080b3ae4dd46d8a54046831f1dd5529"
@@ -35,7 +43,6 @@
   "limitations": [
     "No MediaProjection, protected screen, OCR, current-page proof, colorspace or privacy evidence",
     "Caller still authenticates version and source before accepting Image",
-    "No physical Huawei Image bridge result yet",
     "No product changes or network calls"
   ],
   "officialReferences": [
