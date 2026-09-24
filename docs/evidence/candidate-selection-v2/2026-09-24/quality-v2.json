@@ -1,0 +1,1064 @@
+{
+  "schema": 1,
+  "scope": "Same synthetic historical corpus; selection experiment only",
+  "parentSha256": "0003f8e56de7c364c04766226af7f9fb58b0ad51a03992bd2ddef1353048b2f1",
+  "groups": [
+    {
+      "dataset": "baseline72",
+      "scale": 1,
+      "textImages": 17,
+      "chExact": 11,
+      "selectedExact": 14,
+      "regressions": [],
+      "review": [],
+      "remainingFailures": [
+        "fr-total-16",
+        "mixed-quality-16",
+        "mixed-quality-32"
+      ],
+      "blanksPassed": true
+    },
+    {
+      "dataset": "baseline72",
+      "scale": 2,
+      "textImages": 17,
+      "chExact": 12,
+      "selectedExact": 14,
+      "regressions": [],
+      "review": [],
+      "remainingFailures": [
+        "fr-total-16",
+        "mixed-quality-16",
+        "mixed-quality-32"
+      ],
+      "blanksPassed": true
+    },
+    {
+      "dataset": "holdout124",
+      "scale": 1,
+      "textImages": 30,
+      "chExact": 22,
+      "selectedExact": 23,
+      "regressions": [],
+      "review": [],
+      "remainingFailures": [
+        "hant-order-16",
+        "mixed-room-16",
+        "mixed-room-24",
+        "mixed-room-32",
+        "mixed-exit-16",
+        "mixed-exit-24",
+        "mixed-exit-32"
+      ],
+      "blanksPassed": true
+    },
+    {
+      "dataset": "holdout124",
+      "scale": 2,
+      "textImages": 30,
+      "chExact": 22,
+      "selectedExact": 23,
+      "regressions": [],
+      "review": [],
+      "remainingFailures": [
+        "hant-order-16",
+        "mixed-room-16",
+        "mixed-room-24",
+        "mixed-room-32",
+        "mixed-exit-16",
+        "mixed-exit-24",
+        "mixed-exit-32"
+      ],
+      "blanksPassed": true
+    }
+  ],
+  "results": [
+    {
+      "dataset": "baseline72",
+      "id": "fr-cancel-24",
+      "scale": 1,
+      "source": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "raw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-cancel-24",
+      "scale": 2,
+      "source": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "raw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-total-16",
+      "scale": 1,
+      "source": "Total : 1 234,50 €",
+      "raw": "Total : 1234,50 €",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-total-16",
+      "scale": 2,
+      "source": "Total : 1 234,50 €",
+      "raw": "Total : 1234,50 €",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-total-24",
+      "scale": 1,
+      "source": "Total : 1 234,50 €",
+      "raw": "Total : 1 234,50 €",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-total-24",
+      "scale": 2,
+      "source": "Total : 1 234,50 €",
+      "raw": "Total : 1 234,50 €",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-total-32",
+      "scale": 1,
+      "source": "Total : 1 234,50 €",
+      "raw": "Total : 1 234,50 €",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-total-32",
+      "scale": 2,
+      "source": "Total : 1 234,50 €",
+      "raw": "Total : 1 234,50 €",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-nonrefundable-16",
+      "scale": 1,
+      "source": "Ce billet n'est ni échangeable ni remboursable.",
+      "raw": "Ce billet n'est ni échangeable ni remboursable.",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-nonrefundable-16",
+      "scale": 2,
+      "source": "Ce billet n'est ni échangeable ni remboursable.",
+      "raw": "Ce billet n'est ni échangeable ni remboursable.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-access-24",
+      "scale": 1,
+      "source": "Accès sans marche, ascenseur indisponible.",
+      "raw": "Accès sans marche, ascenseur indisponible.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-access-24",
+      "scale": 2,
+      "source": "Accès sans marche, ascenseur indisponible.",
+      "raw": "Accès sans marche, ascenseur indisponible.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-luggage-32",
+      "scale": 1,
+      "source": "Un bagage de 8 kg maximum est inclus.",
+      "raw": "Un bagage de 8 kg maximum est inclus.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-luggage-32",
+      "scale": 2,
+      "source": "Un bagage de 8 kg maximum est inclus.",
+      "raw": "Un bagage de 8 kg maximum est inclus.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "en-quality-16",
+      "scale": 1,
+      "source": "The total is 39.90 €, tax not included.",
+      "raw": "The total is 39.90 €, tax not included.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "en-quality-16",
+      "scale": 2,
+      "source": "The total is 39.90 €, tax not included.",
+      "raw": "The total is 39.90 €, tax not included.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "en-quality-32",
+      "scale": 1,
+      "source": "The total is 39.90 €, tax not included.",
+      "raw": "The total is 39.90 €, tax not included.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "en-quality-32",
+      "scale": 2,
+      "source": "The total is 39.90 €, tax not included.",
+      "raw": "The total is 39.90 €, tax not included.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-quality-16",
+      "scale": 1,
+      "source": "Ne payez pas maintenant. Échéance : 18:00.",
+      "raw": "Ne payez pas maintenant. Échéance : 18:00.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-quality-16",
+      "scale": 2,
+      "source": "Ne payez pas maintenant. Échéance : 18:00.",
+      "raw": "Ne payez pas maintenant. Échéance : 18:00.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-quality-32",
+      "scale": 1,
+      "source": "Ne payez pas maintenant. Échéance : 18:00.",
+      "raw": "Ne payez pas maintenant. Échéance :\n18:00.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "fr-quality-32",
+      "scale": 2,
+      "source": "Ne payez pas maintenant. Échéance : 18:00.",
+      "raw": "Ne payez pas maintenant. Échéance :\n18:00.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "zh-hans-quality-16",
+      "scale": 1,
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "raw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "zh-hans-quality-16",
+      "scale": 2,
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "raw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "zh-hans-quality-32",
+      "scale": 1,
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "raw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "zh-hans-quality-32",
+      "scale": 2,
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "raw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "zh-hant-quality-16",
+      "scale": 1,
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "raw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "zh-hant-quality-16",
+      "scale": 2,
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "raw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "zh-hant-quality-32",
+      "scale": 1,
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "raw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "zh-hant-quality-32",
+      "scale": 2,
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "raw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "mixed-quality-16",
+      "scale": 1,
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "raw": "房间A/Room A\nChambre A : 120 € / night\n不含税/不含税",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "baseline72",
+      "id": "mixed-quality-16",
+      "scale": 2,
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "raw": "房间A/Room A\nChambre A : 120 € / night\n不含税/不含税",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "baseline72",
+      "id": "mixed-quality-32",
+      "scale": 1,
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "raw": "房间A/Room A\nChambre A : 120 € / night\n不含税／不含稅",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "baseline72",
+      "id": "mixed-quality-32",
+      "scale": 2,
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "raw": "房间A/Room A\nChambre A : 120 € / night\n不含税／不含稅",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "baseline72",
+      "id": "blank-negative-24",
+      "scale": 1,
+      "source": "",
+      "raw": "",
+      "textImage": false,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "baseline72",
+      "id": "blank-negative-24",
+      "scale": 2,
+      "source": "",
+      "raw": "",
+      "textImage": false,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-checkin-16",
+      "scale": 1,
+      "source": "Check-in after 16:30.\nBreakfast is not included.",
+      "raw": "Check-in after 16:30.\nBreakfast is not included.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-checkin-16",
+      "scale": 2,
+      "source": "Check-in after 16:30.\nBreakfast is not included.",
+      "raw": "Check-in after 16:30.\nBreakfast is not included.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-checkin-24",
+      "scale": 1,
+      "source": "Check-in after 16:30.\nBreakfast is not included.",
+      "raw": "Check-in after 16:30.\nBreakfast is not included.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-checkin-24",
+      "scale": 2,
+      "source": "Check-in after 16:30.\nBreakfast is not included.",
+      "raw": "Check-in after 16:30.\nBreakfast is not included.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-checkin-32",
+      "scale": 1,
+      "source": "Check-in after 16:30.\nBreakfast is not included.",
+      "raw": "Check-in after 16:30.\nBreakfast is not included.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-checkin-32",
+      "scale": 2,
+      "source": "Check-in after 16:30.\nBreakfast is not included.",
+      "raw": "Check-in after 16:30.\nBreakfast is not included.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-tickets-16",
+      "scale": 1,
+      "source": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "raw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-tickets-16",
+      "scale": 2,
+      "source": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "raw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-tickets-24",
+      "scale": 1,
+      "source": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "raw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-tickets-24",
+      "scale": 2,
+      "source": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "raw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-tickets-32",
+      "scale": 1,
+      "source": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "raw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "en-tickets-32",
+      "scale": 2,
+      "source": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "raw": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-departure-16",
+      "scale": 1,
+      "source": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "raw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-departure-16",
+      "scale": 2,
+      "source": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "raw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-departure-24",
+      "scale": 1,
+      "source": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "raw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-departure-24",
+      "scale": 2,
+      "source": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "raw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-departure-32",
+      "scale": 1,
+      "source": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "raw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-departure-32",
+      "scale": 2,
+      "source": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "raw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-price-16",
+      "scale": 1,
+      "source": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "raw": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-price-16",
+      "scale": 2,
+      "source": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "raw": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-price-24",
+      "scale": 1,
+      "source": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "raw": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-price-24",
+      "scale": 2,
+      "source": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "raw": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-price-32",
+      "scale": 1,
+      "source": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "raw": "Prix total : 82,60 €.\nAucun remboursement après\nconfirmation.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "fr-price-32",
+      "scale": 2,
+      "source": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "raw": "Prix total : 82,60 €.\nAucun remboursement après\nconfirmation.",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-order-16",
+      "scale": 1,
+      "source": "订单合计268.90元。\n含早餐，不含城市税。",
+      "raw": "订单合计268.90元。\n含早餐，不含城市税。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-order-16",
+      "scale": 2,
+      "source": "订单合计268.90元。\n含早餐，不含城市税。",
+      "raw": "订单合计268.90元。\n含早餐，不含城市税。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-order-24",
+      "scale": 1,
+      "source": "订单合计268.90元。\n含早餐，不含城市税。",
+      "raw": "订单合计268.90元。\n含早餐，不含城市税。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-order-24",
+      "scale": 2,
+      "source": "订单合计268.90元。\n含早餐，不含城市税。",
+      "raw": "订单合计268.90元。\n含早餐，不含城市税。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-order-32",
+      "scale": 1,
+      "source": "订单合计268.90元。\n含早餐，不含城市税。",
+      "raw": "订单合计268.90元。\n含早餐，不含城市税。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-order-32",
+      "scale": 2,
+      "source": "订单合计268.90元。\n含早餐，不含城市税。",
+      "raw": "订单合计268.90元。\n含早餐，不含城市税。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-luggage-16",
+      "scale": 1,
+      "source": "每人限带7公斤行李。\n请勿重复付款。",
+      "raw": "每人限带7公斤行李。\n请勿重复付款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-luggage-16",
+      "scale": 2,
+      "source": "每人限带7公斤行李。\n请勿重复付款。",
+      "raw": "每人限带7公斤行李。\n请勿重复付款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-luggage-24",
+      "scale": 1,
+      "source": "每人限带7公斤行李。\n请勿重复付款。",
+      "raw": "每人限带7公斤行李。\n请勿重复付款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-luggage-24",
+      "scale": 2,
+      "source": "每人限带7公斤行李。\n请勿重复付款。",
+      "raw": "每人限带7公斤行李。\n请勿重复付款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-luggage-32",
+      "scale": 1,
+      "source": "每人限带7公斤行李。\n请勿重复付款。",
+      "raw": "每人限带7公斤行李。\n请勿重复付款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hans-luggage-32",
+      "scale": 2,
+      "source": "每人限带7公斤行李。\n请勿重复付款。",
+      "raw": "每人限带7公斤行李。\n请勿重复付款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-order-16",
+      "scale": 1,
+      "source": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "raw": "訂單合計268.90元。\n含早餐，不含城市税。",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-order-16",
+      "scale": 2,
+      "source": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "raw": "訂單合計268.90元。\n含早餐，不含城市税。",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-order-24",
+      "scale": 1,
+      "source": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "raw": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-order-24",
+      "scale": 2,
+      "source": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "raw": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-order-32",
+      "scale": 1,
+      "source": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "raw": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-order-32",
+      "scale": 2,
+      "source": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "raw": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-luggage-16",
+      "scale": 1,
+      "source": "每人限帶7公斤行李。\n請勿重複付款。",
+      "raw": "每人限帶7公斤行李。\n請勿重複付款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-luggage-16",
+      "scale": 2,
+      "source": "每人限帶7公斤行李。\n請勿重複付款。",
+      "raw": "每人限帶7公斤行李。\n請勿重複付款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-luggage-24",
+      "scale": 1,
+      "source": "每人限帶7公斤行李。\n請勿重複付款。",
+      "raw": "每人限帶7公斤行李。\n請勿重複付款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-luggage-24",
+      "scale": 2,
+      "source": "每人限帶7公斤行李。\n請勿重複付款。",
+      "raw": "每人限帶7公斤行李。\n請勿重複付款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-luggage-32",
+      "scale": 1,
+      "source": "每人限帶7公斤行李。\n請勿重複付款。",
+      "raw": "每人限帶7公斤行李。\n請勿重複付款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "hant-luggage-32",
+      "scale": 2,
+      "source": "每人限帶7公斤行李。\n請勿重複付款。",
+      "raw": "每人限帶7公斤行李。\n請勿重複付款。",
+      "textImage": true,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-room-16",
+      "scale": 1,
+      "source": "Room B / 房间B\nChambre B : 95 €\n每晚，不含税。",
+      "raw": "RoomB/房间B\nChambre B : 95 €\n每晚，不含税。",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-room-16",
+      "scale": 2,
+      "source": "Room B / 房间B\nChambre B : 95 €\n每晚，不含税。",
+      "raw": "RoomB/房间B\nChambre B : 95 €\n每晚，不含税。",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-room-24",
+      "scale": 1,
+      "source": "Room B / 房间B\nChambre B : 95 €\n每晚，不含税。",
+      "raw": "Room B/房间B\nChambre B : 95 €\n每晚，不含税。",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-room-24",
+      "scale": 2,
+      "source": "Room B / 房间B\nChambre B : 95 €\n每晚，不含税。",
+      "raw": "RoomB/房间B\nChambre B : 95 €\n每晚，不含税。",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-room-32",
+      "scale": 1,
+      "source": "Room B / 房间B\nChambre B : 95 €\n每晚，不含税。",
+      "raw": "Room B/房间B\nChambre B : 95 €\n每晚，不含税。",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-room-32",
+      "scale": 2,
+      "source": "Room B / 房间B\nChambre B : 95 €\n每晚，不含税。",
+      "raw": "Room B／房间B\nChambre B : 95 €\n每晚，不含税。",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-exit-16",
+      "scale": 1,
+      "source": "Sortie / Exit / 出口\nNe pas entrer / 禁止进入",
+      "raw": "Sortie /Exit /出口\nNe pas entrer / 禁止进入",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-exit-16",
+      "scale": 2,
+      "source": "Sortie / Exit / 出口\nNe pas entrer / 禁止进入",
+      "raw": "Sortie/Exit /出口\nNe pas entrer /禁止进入",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-exit-24",
+      "scale": 1,
+      "source": "Sortie / Exit / 出口\nNe pas entrer / 禁止进入",
+      "raw": "Sortie/Exit /出口\nNe pas entrer /禁止进入",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-exit-24",
+      "scale": 2,
+      "source": "Sortie / Exit / 出口\nNe pas entrer / 禁止进入",
+      "raw": "Sortie/Exit /出口\nNe pas entrer /禁止进入",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-exit-32",
+      "scale": 1,
+      "source": "Sortie / Exit / 出口\nNe pas entrer / 禁止进入",
+      "raw": "Sortie /Exit /出口\nNe pas entrer / 禁止进入",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "holdout124",
+      "id": "mixed-exit-32",
+      "scale": 2,
+      "source": "Sortie / Exit / 出口\nNe pas entrer / 禁止进入",
+      "raw": "Sortie/Exit /出口\nNe pas entrer /禁止进入",
+      "textImage": true,
+      "chExact": false,
+      "selectedExact": false
+    },
+    {
+      "dataset": "holdout124",
+      "id": "blank-negative-24",
+      "scale": 1,
+      "source": "",
+      "raw": "",
+      "textImage": false,
+      "chExact": true,
+      "selectedExact": true
+    },
+    {
+      "dataset": "holdout124",
+      "id": "blank-negative-24",
+      "scale": 2,
+      "source": "",
+      "raw": "",
+      "textImage": false,
+      "chExact": true,
+      "selectedExact": true
+    }
+  ],
+  "qualityAccepted": false,
+  "eligibleForAndroidSelectionExperiment": true,
+  "limitations": [
+    "No unseen data or additional fonts",
+    "Matching strings need not be correct",
+    "Known mixed-script and traditional glyph differences remain"
+  ]
+}

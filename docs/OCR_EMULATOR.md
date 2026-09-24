@@ -51,3 +51,8 @@ python3 -B scripts/run-ocr-emulator.py --output /private/tmp/kandong-ocr-emulato
 - 本机继续合成 EN/FR/中文、共同检测框的双模型候选、上下文/位置映射等实验。
 - 手机专项暂缓：华为系统权限和后台行为、真实手势体验、发热/耗电；不以模拟器补勾这些项目。
 - 本轮只补当前OCR数值链路的第二设备证据，未完成三语质量、真实屏幕授权、翻译或正式产品接入。
+
+
+## 后续实验包
+
+候选关联v2已完成两轮每轮14项模拟器验收，使用独立入口 `scripts/run-candidate-emulator.py`；详情及新构件身份见[候选v2](CANDIDATE_SELECTION_V2.md)。上文冻结旧包入口保持原身份检查。

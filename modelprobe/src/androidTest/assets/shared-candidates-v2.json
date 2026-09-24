@@ -1,0 +1,5797 @@
+{
+  "schema": 1,
+  "rule": "v2-agreement-before-glyph",
+  "ruleFrozenAt": "c5d61a2",
+  "parentSha256": "0003f8e56de7c364c04766226af7f9fb58b0ad51a03992bd2ddef1353048b2f1",
+  "scriptSha256": "9fd600a22285df37736822b6637813bc69638bad875cabf903e16a03079e9809",
+  "cases": [
+    {
+      "id": "baseline72/fr-cancel-24/1",
+      "pageId": "d613bfcaa3e8e6663163d2d54c822fcff23a183d2632f3f27e4242d9d1ad2415",
+      "rows": [
+        {
+          "boxId": "d613bfcaa3e8e6663163d2d54c822fcff23a183d2632f3f27e4242d9d1ad2415.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              26.0
+            ],
+            [
+              530.0,
+              26.0
+            ],
+            [
+              530.0,
+              58.0
+            ],
+            [
+              30.0,
+              58.0
+            ]
+          ],
+          "ch": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+          "latin": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Annulation gratuite jusqu'au 15 octobre à 18 h."
+          }
+        }
+      ],
+      "expectedRaw": "Annulation gratuite jusqu'au 15 octobre à 18 h."
+    },
+    {
+      "id": "baseline72/fr-cancel-24/2",
+      "pageId": "c1d267125e0c637777924e8244125b3eaa01cd05188af09ad01b44aad950fa7e",
+      "rows": [
+        {
+          "boxId": "c1d267125e0c637777924e8244125b3eaa01cd05188af09ad01b44aad950fa7e.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.5,
+              27.0
+            ],
+            [
+              529.5,
+              27.0
+            ],
+            [
+              529.5,
+              56.5
+            ],
+            [
+              29.5,
+              56.5
+            ]
+          ],
+          "ch": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+          "latin": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Annulation gratuite jusqu'au 15 octobre à 18 h."
+          }
+        }
+      ],
+      "expectedRaw": "Annulation gratuite jusqu'au 15 octobre à 18 h."
+    },
+    {
+      "id": "baseline72/fr-total-16/1",
+      "pageId": "f74b7ce2d2947770e3c68d42088a6d37949995348ffe1a10ac5aabaf9d643ca4",
+      "rows": [
+        {
+          "boxId": "f74b7ce2d2947770e3c68d42088a6d37949995348ffe1a10ac5aabaf9d643ca4.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              27.0
+            ],
+            [
+              158.0,
+              27.0
+            ],
+            [
+              158.0,
+              46.0
+            ],
+            [
+              29.0,
+              46.0
+            ]
+          ],
+          "ch": "Total: 1234,50 €",
+          "latin": "Total : 1234,50 €",
+          "expected": {
+            "origin": "LATIN",
+            "raw": "Total : 1234,50 €"
+          }
+        }
+      ],
+      "expectedRaw": "Total : 1234,50 €"
+    },
+    {
+      "id": "baseline72/fr-total-16/2",
+      "pageId": "26c22326dfaacaf956439fd6aadccb462ad4638387a565ca96465a2c40ec5b0a",
+      "rows": [
+        {
+          "boxId": "26c22326dfaacaf956439fd6aadccb462ad4638387a565ca96465a2c40ec5b0a.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              28.0
+            ],
+            [
+              157.0,
+              28.0
+            ],
+            [
+              157.0,
+              45.5
+            ],
+            [
+              30.0,
+              45.5
+            ]
+          ],
+          "ch": "Total : 1234,50 €",
+          "latin": "Total : 1234,50 €",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Total : 1234,50 €"
+          }
+        }
+      ],
+      "expectedRaw": "Total : 1234,50 €"
+    },
+    {
+      "id": "baseline72/fr-total-24/1",
+      "pageId": "5a5131721cc762ea36f4542bcfa7bbe4d4d91ac56f767fc9e107fb61ca31475a",
+      "rows": [
+        {
+          "boxId": "5a5131721cc762ea36f4542bcfa7bbe4d4d91ac56f767fc9e107fb61ca31475a.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              26.0
+            ],
+            [
+              220.0,
+              26.0
+            ],
+            [
+              220.0,
+              55.0
+            ],
+            [
+              30.0,
+              55.0
+            ]
+          ],
+          "ch": "Total : 1234,50 €",
+          "latin": "Total : 1 234,50 €",
+          "expected": {
+            "origin": "LATIN",
+            "raw": "Total : 1 234,50 €"
+          }
+        }
+      ],
+      "expectedRaw": "Total : 1 234,50 €"
+    },
+    {
+      "id": "baseline72/fr-total-24/2",
+      "pageId": "d4a481d5cf59b049b9256694fce38b2d2b2071e3f400dff478ec891cc9465d6b",
+      "rows": [
+        {
+          "boxId": "d4a481d5cf59b049b9256694fce38b2d2b2071e3f400dff478ec891cc9465d6b.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              26.5
+            ],
+            [
+              218.5,
+              27.5
+            ],
+            [
+              218.5,
+              53.5
+            ],
+            [
+              30.0,
+              52.5
+            ]
+          ],
+          "ch": "Total : 1234,50 €",
+          "latin": "Total : 1 234,50 €",
+          "expected": {
+            "origin": "LATIN",
+            "raw": "Total : 1 234,50 €"
+          }
+        }
+      ],
+      "expectedRaw": "Total : 1 234,50 €"
+    },
+    {
+      "id": "baseline72/fr-total-32/1",
+      "pageId": "9210f42de196b2397ec74f2dfbc17b46a686f3be70b0a2d43530624e69a19bcf",
+      "rows": [
+        {
+          "boxId": "9210f42de196b2397ec74f2dfbc17b46a686f3be70b0a2d43530624e69a19bcf.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              28.0,
+              27.0
+            ],
+            [
+              282.0,
+              27.0
+            ],
+            [
+              282.0,
+              62.0
+            ],
+            [
+              28.0,
+              62.0
+            ]
+          ],
+          "ch": "Total : 1234,50 €",
+          "latin": "Total : 1 234,50 €",
+          "expected": {
+            "origin": "LATIN",
+            "raw": "Total : 1 234,50 €"
+          }
+        }
+      ],
+      "expectedRaw": "Total : 1 234,50 €"
+    },
+    {
+      "id": "baseline72/fr-total-32/2",
+      "pageId": "864a5bb5daae87ce0a3508f75f444a4bc30cca22f87815977c37e40cb917ea71",
+      "rows": [
+        {
+          "boxId": "864a5bb5daae87ce0a3508f75f444a4bc30cca22f87815977c37e40cb917ea71.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              26.5
+            ],
+            [
+              281.0,
+              26.5
+            ],
+            [
+              281.0,
+              61.5
+            ],
+            [
+              29.0,
+              61.5
+            ]
+          ],
+          "ch": "Total : 1234,50 €",
+          "latin": "Total : 1 234,50 €",
+          "expected": {
+            "origin": "LATIN",
+            "raw": "Total : 1 234,50 €"
+          }
+        }
+      ],
+      "expectedRaw": "Total : 1 234,50 €"
+    },
+    {
+      "id": "baseline72/fr-nonrefundable-16/1",
+      "pageId": "f828ff322b1ae2c397cfe000f1397d0a7c724459104a81c21b257ba23da4b1b1",
+      "rows": [
+        {
+          "boxId": "f828ff322b1ae2c397cfe000f1397d0a7c724459104a81c21b257ba23da4b1b1.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              27.0
+            ],
+            [
+              366.0,
+              27.0
+            ],
+            [
+              366.0,
+              51.0
+            ],
+            [
+              30.0,
+              51.0
+            ]
+          ],
+          "ch": "Ce bilet n'est ni éechangeable ni remboursable.",
+          "latin": "Ce billet n'est ni échangeable ni remboursable.",
+          "expected": {
+            "origin": "LATIN",
+            "raw": "Ce billet n'est ni échangeable ni remboursable."
+          }
+        }
+      ],
+      "expectedRaw": "Ce billet n'est ni échangeable ni remboursable."
+    },
+    {
+      "id": "baseline72/fr-nonrefundable-16/2",
+      "pageId": "9985a578b4188dffd534ec3ab308a787f3500a06bb3143e8ec3a8ad63f8b1c98",
+      "rows": [
+        {
+          "boxId": "9985a578b4188dffd534ec3ab308a787f3500a06bb3143e8ec3a8ad63f8b1c98.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.5,
+              29.5
+            ],
+            [
+              366.5,
+              29.5
+            ],
+            [
+              366.5,
+              48.5
+            ],
+            [
+              30.5,
+              48.5
+            ]
+          ],
+          "ch": "Ce billet n'est ni échangeable ni remboursable.",
+          "latin": "Ce billet n'est ni échangeable ni remboursable.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Ce billet n'est ni échangeable ni remboursable."
+          }
+        }
+      ],
+      "expectedRaw": "Ce billet n'est ni échangeable ni remboursable."
+    },
+    {
+      "id": "baseline72/fr-access-24/1",
+      "pageId": "5da4714a1a077306061ff5bed2b02eb59254441e11702c02c8250cf268445a65",
+      "rows": [
+        {
+          "boxId": "5da4714a1a077306061ff5bed2b02eb59254441e11702c02c8250cf268445a65.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              26.0
+            ],
+            [
+              507.0,
+              26.0
+            ],
+            [
+              507.0,
+              58.0
+            ],
+            [
+              30.0,
+              58.0
+            ]
+          ],
+          "ch": "Accès sans marche, ascenseur indisponible.",
+          "latin": "Accès sans marche, ascenseur indisponible.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Accès sans marche, ascenseur indisponible."
+          }
+        }
+      ],
+      "expectedRaw": "Accès sans marche, ascenseur indisponible."
+    },
+    {
+      "id": "baseline72/fr-access-24/2",
+      "pageId": "08e1c50b3c00d1e0a44900f29f4615a92d1a9c3b145036d7c49947ce29c96187",
+      "rows": [
+        {
+          "boxId": "08e1c50b3c00d1e0a44900f29f4615a92d1a9c3b145036d7c49947ce29c96187.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              28.5,
+              26.0
+            ],
+            [
+              508.5,
+              27.0
+            ],
+            [
+              508.5,
+              58.0
+            ],
+            [
+              28.5,
+              57.0
+            ]
+          ],
+          "ch": "Accès sans marche, ascenseur indisponible.",
+          "latin": "Accès sans marche, ascenseur indisponible.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Accès sans marche, ascenseur indisponible."
+          }
+        }
+      ],
+      "expectedRaw": "Accès sans marche, ascenseur indisponible."
+    },
+    {
+      "id": "baseline72/fr-luggage-32/1",
+      "pageId": "a0685671046d9cf94a3af3d7cb5e3fd7927b3a71c2696dcbcc8c198f73f70e72",
+      "rows": [
+        {
+          "boxId": "a0685671046d9cf94a3af3d7cb5e3fd7927b3a71c2696dcbcc8c198f73f70e72.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              31.0,
+              25.0
+            ],
+            [
+              604.0,
+              25.0
+            ],
+            [
+              604.0,
+              63.0
+            ],
+            [
+              31.0,
+              63.0
+            ]
+          ],
+          "ch": "Un bagage de 8 kg maximum est inclus.",
+          "latin": "Un bagage de 8 kg maximum est inclus.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Un bagage de 8 kg maximum est inclus."
+          }
+        }
+      ],
+      "expectedRaw": "Un bagage de 8 kg maximum est inclus."
+    },
+    {
+      "id": "baseline72/fr-luggage-32/2",
+      "pageId": "6be6a00845d560480b6ce73e08af5794c7cb93b8000ea05abb187504b4fea4aa",
+      "rows": [
+        {
+          "boxId": "6be6a00845d560480b6ce73e08af5794c7cb93b8000ea05abb187504b4fea4aa.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              28.0,
+              23.5
+            ],
+            [
+              606.0,
+              24.5
+            ],
+            [
+              606.0,
+              67.5
+            ],
+            [
+              28.0,
+              66.5
+            ]
+          ],
+          "ch": "Un bagage de 8 kg maximum est inclus.",
+          "latin": "Un bagage de 8 kg maximum est inclus.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Un bagage de 8 kg maximum est inclus."
+          }
+        }
+      ],
+      "expectedRaw": "Un bagage de 8 kg maximum est inclus."
+    },
+    {
+      "id": "baseline72/en-quality-16/1",
+      "pageId": "14c6de2eaa55df85eb4e1618d5a971c3a01d860591cb884939facce93ce92d0e",
+      "rows": [
+        {
+          "boxId": "14c6de2eaa55df85eb4e1618d5a971c3a01d860591cb884939facce93ce92d0e.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              27.0
+            ],
+            [
+              295.0,
+              27.0
+            ],
+            [
+              295.0,
+              48.0
+            ],
+            [
+              30.0,
+              48.0
+            ]
+          ],
+          "ch": "The total is 39.90 €, tax not included.",
+          "latin": "The total is 39.90 €, tax not included.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "The total is 39.90 €, tax not included."
+          }
+        }
+      ],
+      "expectedRaw": "The total is 39.90 €, tax not included."
+    },
+    {
+      "id": "baseline72/en-quality-16/2",
+      "pageId": "337f10d89ab199d2c681c42446c3a9cc2b9be1f106bfd60c75cb1dfa50bce998",
+      "rows": [
+        {
+          "boxId": "337f10d89ab199d2c681c42446c3a9cc2b9be1f106bfd60c75cb1dfa50bce998.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.5,
+              28.0
+            ],
+            [
+              295.5,
+              28.0
+            ],
+            [
+              295.5,
+              46.5
+            ],
+            [
+              30.5,
+              46.5
+            ]
+          ],
+          "ch": "The total is 39.90 €, tax not included.",
+          "latin": "The total is 39.90 €, tax not included.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "The total is 39.90 €, tax not included."
+          }
+        }
+      ],
+      "expectedRaw": "The total is 39.90 €, tax not included."
+    },
+    {
+      "id": "baseline72/en-quality-32/1",
+      "pageId": "aa94285e724b2056520b43daaef47a8ab15c225fb02b7cdad2e784bc8ebcf0e3",
+      "rows": [
+        {
+          "boxId": "aa94285e724b2056520b43daaef47a8ab15c225fb02b7cdad2e784bc8ebcf0e3.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              27.0
+            ],
+            [
+              557.0,
+              27.0
+            ],
+            [
+              557.0,
+              61.0
+            ],
+            [
+              30.0,
+              61.0
+            ]
+          ],
+          "ch": "The total is 39.90 €, tax not included.",
+          "latin": "The total is 39.90 €, tax not included.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "The total is 39.90 €, tax not included."
+          }
+        }
+      ],
+      "expectedRaw": "The total is 39.90 €, tax not included."
+    },
+    {
+      "id": "baseline72/en-quality-32/2",
+      "pageId": "2730a3da9b19d44b3169f8ff2c06adee4313e8d687b420ab4e6fbdc89c06402b",
+      "rows": [
+        {
+          "boxId": "2730a3da9b19d44b3169f8ff2c06adee4313e8d687b420ab4e6fbdc89c06402b.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              25.5
+            ],
+            [
+              557.5,
+              26.5
+            ],
+            [
+              557.5,
+              61.0
+            ],
+            [
+              29.0,
+              60.0
+            ]
+          ],
+          "ch": "The total is 39.90 €, tax not included.",
+          "latin": "The total is 39.90 €, tax not included.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "The total is 39.90 €, tax not included."
+          }
+        }
+      ],
+      "expectedRaw": "The total is 39.90 €, tax not included."
+    },
+    {
+      "id": "baseline72/fr-quality-16/1",
+      "pageId": "c85c67a853799a774f0dec859c7d7e069be8c96fbf0637fe04f434399a8e3c59",
+      "rows": [
+        {
+          "boxId": "c85c67a853799a774f0dec859c7d7e069be8c96fbf0637fe04f434399a8e3c59.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              28.0,
+              28.0
+            ],
+            [
+              353.0,
+              27.0
+            ],
+            [
+              353.0,
+              53.0
+            ],
+            [
+              28.0,
+              54.0
+            ]
+          ],
+          "ch": "Ne payez pas maintenant. Échéance : 18:00.",
+          "latin": "Ne payez pas maintenant. Échéance : 18:00.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Ne payez pas maintenant. Échéance : 18:00."
+          }
+        }
+      ],
+      "expectedRaw": "Ne payez pas maintenant. Échéance : 18:00."
+    },
+    {
+      "id": "baseline72/fr-quality-16/2",
+      "pageId": "0c61d14f737499a00e8efdac162a49846a62b15023d6f6a3ce22a7ab2d94ff6a",
+      "rows": [
+        {
+          "boxId": "0c61d14f737499a00e8efdac162a49846a62b15023d6f6a3ce22a7ab2d94ff6a.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              28.5,
+              30.0
+            ],
+            [
+              354.5,
+              28.5
+            ],
+            [
+              354.5,
+              51.5
+            ],
+            [
+              28.5,
+              53.0
+            ]
+          ],
+          "ch": "Ne payez pas maintenant. Échéance : 18:00.",
+          "latin": "Ne payez pas maintenant. Échéance : 18:00.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Ne payez pas maintenant. Échéance : 18:00."
+          }
+        }
+      ],
+      "expectedRaw": "Ne payez pas maintenant. Échéance : 18:00."
+    },
+    {
+      "id": "baseline72/fr-quality-32/1",
+      "pageId": "a78c810fa563904cfa41ee5babccc854685d61f908837bee3d6532b2c1b244f6",
+      "rows": [
+        {
+          "boxId": "a78c810fa563904cfa41ee5babccc854685d61f908837bee3d6532b2c1b244f6.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              27.0,
+              31.0
+            ],
+            [
+              578.0,
+              29.0
+            ],
+            [
+              578.0,
+              68.0
+            ],
+            [
+              27.0,
+              70.0
+            ]
+          ],
+          "ch": "Ne payez pas maintenant. Échéance :",
+          "latin": "Ne payez pas maintenant. Échéance :",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Ne payez pas maintenant. Échéance :"
+          }
+        },
+        {
+          "boxId": "a78c810fa563904cfa41ee5babccc854685d61f908837bee3d6532b2c1b244f6.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              29.0,
+              74.0
+            ],
+            [
+              125.0,
+              74.0
+            ],
+            [
+              125.0,
+              109.0
+            ],
+            [
+              29.0,
+              109.0
+            ]
+          ],
+          "ch": "18:00.",
+          "latin": "18:00.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "18:00."
+          }
+        }
+      ],
+      "expectedRaw": "Ne payez pas maintenant. Échéance :\n18:00."
+    },
+    {
+      "id": "baseline72/fr-quality-32/2",
+      "pageId": "6e5d7b6a355ec3f36a6ebbbf01622533507fa9b29288f35145d33bd84c669ddf",
+      "rows": [
+        {
+          "boxId": "6e5d7b6a355ec3f36a6ebbbf01622533507fa9b29288f35145d33bd84c669ddf.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              26.5,
+              29.0
+            ],
+            [
+              580.5,
+              27.5
+            ],
+            [
+              580.5,
+              70.5
+            ],
+            [
+              26.5,
+              72.0
+            ]
+          ],
+          "ch": "Ne payez pas maintenant. Échéance :",
+          "latin": "Ne payez pas maintenant. Échéance :",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Ne payez pas maintenant. Échéance :"
+          }
+        },
+        {
+          "boxId": "6e5d7b6a355ec3f36a6ebbbf01622533507fa9b29288f35145d33bd84c669ddf.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              31.0,
+              75.5
+            ],
+            [
+              125.0,
+              75.5
+            ],
+            [
+              125.0,
+              108.5
+            ],
+            [
+              31.0,
+              108.5
+            ]
+          ],
+          "ch": "18:00.",
+          "latin": "18:00.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "18:00."
+          }
+        }
+      ],
+      "expectedRaw": "Ne payez pas maintenant. Échéance :\n18:00."
+    },
+    {
+      "id": "baseline72/zh-hans-quality-16/1",
+      "pageId": "3297c75597728431e21c6d2cb58636f845adec796a830734e36b7e914a50ca6b",
+      "rows": [
+        {
+          "boxId": "3297c75597728431e21c6d2cb58636f845adec796a830734e36b7e914a50ca6b.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              30.0
+            ],
+            [
+              212.0,
+              30.0
+            ],
+            [
+              212.0,
+              51.0
+            ],
+            [
+              29.0,
+              51.0
+            ]
+          ],
+          "ch": "总计1234.50元，不含税。",
+          "latin": "1234.50",
+          "expected": {
+            "origin": "CH",
+            "raw": "总计1234.50元，不含税。"
+          }
+        },
+        {
+          "boxId": "3297c75597728431e21c6d2cb58636f845adec796a830734e36b7e914a50ca6b.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              56.0
+            ],
+            [
+              228.0,
+              56.0
+            ],
+            [
+              228.0,
+              77.0
+            ],
+            [
+              30.0,
+              77.0
+            ]
+          ],
+          "ch": "行李最多8公斤，不可退款。",
+          "latin": "8",
+          "expected": {
+            "origin": "CH",
+            "raw": "行李最多8公斤，不可退款。"
+          }
+        }
+      ],
+      "expectedRaw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。"
+    },
+    {
+      "id": "baseline72/zh-hans-quality-16/2",
+      "pageId": "5f6e960dc9f1b165969695ba5efc0cd91166123b0d9eaf6516fcd150080d9d50",
+      "rows": [
+        {
+          "boxId": "5f6e960dc9f1b165969695ba5efc0cd91166123b0d9eaf6516fcd150080d9d50.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              32.0,
+              30.0
+            ],
+            [
+              210.0,
+              30.0
+            ],
+            [
+              210.0,
+              49.5
+            ],
+            [
+              32.0,
+              49.5
+            ]
+          ],
+          "ch": "总计1234.50元，不含税。",
+          "latin": "1234.50",
+          "expected": {
+            "origin": "CH",
+            "raw": "总计1234.50元，不含税。"
+          }
+        },
+        {
+          "boxId": "5f6e960dc9f1b165969695ba5efc0cd91166123b0d9eaf6516fcd150080d9d50.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              31.0,
+              54.5
+            ],
+            [
+              225.5,
+              56.5
+            ],
+            [
+              225.5,
+              77.5
+            ],
+            [
+              31.0,
+              76.0
+            ]
+          ],
+          "ch": "行李最多8公斤，不可退款。",
+          "latin": "8",
+          "expected": {
+            "origin": "CH",
+            "raw": "行李最多8公斤，不可退款。"
+          }
+        }
+      ],
+      "expectedRaw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。"
+    },
+    {
+      "id": "baseline72/zh-hans-quality-32/1",
+      "pageId": "51f2c73863b100ad84b19d5a7278ad9f7ca1aaecac5d7bf2b9c58101f7169983",
+      "rows": [
+        {
+          "boxId": "51f2c73863b100ad84b19d5a7278ad9f7ca1aaecac5d7bf2b9c58101f7169983.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              26.0
+            ],
+            [
+              389.0,
+              28.0
+            ],
+            [
+              389.0,
+              68.0
+            ],
+            [
+              30.0,
+              66.0
+            ]
+          ],
+          "ch": "总计1234.50元，不含税。",
+          "latin": "1234.50",
+          "expected": {
+            "origin": "CH",
+            "raw": "总计1234.50元，不含税。"
+          }
+        },
+        {
+          "boxId": "51f2c73863b100ad84b19d5a7278ad9f7ca1aaecac5d7bf2b9c58101f7169983.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              75.0
+            ],
+            [
+              419.0,
+              77.0
+            ],
+            [
+              419.0,
+              116.0
+            ],
+            [
+              30.0,
+              114.0
+            ]
+          ],
+          "ch": "行李最多8公斤，不可退款。",
+          "latin": "8",
+          "expected": {
+            "origin": "CH",
+            "raw": "行李最多8公斤，不可退款。"
+          }
+        }
+      ],
+      "expectedRaw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。"
+    },
+    {
+      "id": "baseline72/zh-hans-quality-32/2",
+      "pageId": "9d2de832037c2348664487505ad8288236ed1a2de7a0c38a88b0efba9b40ce91",
+      "rows": [
+        {
+          "boxId": "9d2de832037c2348664487505ad8288236ed1a2de7a0c38a88b0efba9b40ce91.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.5,
+              25.5
+            ],
+            [
+              388.5,
+              27.0
+            ],
+            [
+              388.5,
+              68.0
+            ],
+            [
+              29.5,
+              66.5
+            ]
+          ],
+          "ch": "总计1234.50元，不含税。",
+          "latin": "1234.50",
+          "expected": {
+            "origin": "CH",
+            "raw": "总计1234.50元，不含税。"
+          }
+        },
+        {
+          "boxId": "9d2de832037c2348664487505ad8288236ed1a2de7a0c38a88b0efba9b40ce91.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              28.5,
+              74.0
+            ],
+            [
+              418.0,
+              76.0
+            ],
+            [
+              418.0,
+              116.0
+            ],
+            [
+              28.5,
+              114.0
+            ]
+          ],
+          "ch": "行李最多8公斤，不可退款。",
+          "latin": "8",
+          "expected": {
+            "origin": "CH",
+            "raw": "行李最多8公斤，不可退款。"
+          }
+        }
+      ],
+      "expectedRaw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。"
+    },
+    {
+      "id": "baseline72/zh-hant-quality-16/1",
+      "pageId": "d635a5a6dfa0d907b212bafb574622a7b682613d6effe0facdd6f347cd93ccf7",
+      "rows": [
+        {
+          "boxId": "d635a5a6dfa0d907b212bafb574622a7b682613d6effe0facdd6f347cd93ccf7.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              27.0
+            ],
+            [
+              212.0,
+              29.0
+            ],
+            [
+              212.0,
+              51.0
+            ],
+            [
+              29.0,
+              49.0
+            ]
+          ],
+          "ch": "總計1234.50元，不含稅。",
+          "latin": "1234.50",
+          "expected": {
+            "origin": "CH",
+            "raw": "總計1234.50元，不含稅。"
+          }
+        },
+        {
+          "boxId": "d635a5a6dfa0d907b212bafb574622a7b682613d6effe0facdd6f347cd93ccf7.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              56.0
+            ],
+            [
+              228.0,
+              56.0
+            ],
+            [
+              228.0,
+              77.0
+            ],
+            [
+              30.0,
+              77.0
+            ]
+          ],
+          "ch": "行李最多8公斤，不可退款。",
+          "latin": "8",
+          "expected": {
+            "origin": "CH",
+            "raw": "行李最多8公斤，不可退款。"
+          }
+        }
+      ],
+      "expectedRaw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。"
+    },
+    {
+      "id": "baseline72/zh-hant-quality-16/2",
+      "pageId": "c5ecf16dc2a911db6dcc736e108cd87b2a97f468bbe3f938e4002a18613de6b6",
+      "rows": [
+        {
+          "boxId": "c5ecf16dc2a911db6dcc736e108cd87b2a97f468bbe3f938e4002a18613de6b6.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              31.5,
+              30.0
+            ],
+            [
+              210.0,
+              30.0
+            ],
+            [
+              210.0,
+              49.5
+            ],
+            [
+              31.5,
+              49.5
+            ]
+          ],
+          "ch": "總計1234.50元，不含稅。",
+          "latin": "1234.50",
+          "expected": {
+            "origin": "CH",
+            "raw": "總計1234.50元，不含稅。"
+          }
+        },
+        {
+          "boxId": "c5ecf16dc2a911db6dcc736e108cd87b2a97f468bbe3f938e4002a18613de6b6.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              31.0,
+              56.0
+            ],
+            [
+              225.5,
+              57.0
+            ],
+            [
+              225.5,
+              77.5
+            ],
+            [
+              31.0,
+              76.5
+            ]
+          ],
+          "ch": "行李最多8公斤，不可退款。",
+          "latin": "8",
+          "expected": {
+            "origin": "CH",
+            "raw": "行李最多8公斤，不可退款。"
+          }
+        }
+      ],
+      "expectedRaw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。"
+    },
+    {
+      "id": "baseline72/zh-hant-quality-32/1",
+      "pageId": "24b7418c31516032def1cbb08f6b29d616e9a02baa7eac4d75ab901e3a81c1f9",
+      "rows": [
+        {
+          "boxId": "24b7418c31516032def1cbb08f6b29d616e9a02baa7eac4d75ab901e3a81c1f9.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              26.0
+            ],
+            [
+              389.0,
+              28.0
+            ],
+            [
+              389.0,
+              68.0
+            ],
+            [
+              29.0,
+              66.0
+            ]
+          ],
+          "ch": "總計1234.50元，不含稅。",
+          "latin": "1234.50",
+          "expected": {
+            "origin": "CH",
+            "raw": "總計1234.50元，不含稅。"
+          }
+        },
+        {
+          "boxId": "24b7418c31516032def1cbb08f6b29d616e9a02baa7eac4d75ab901e3a81c1f9.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              75.0
+            ],
+            [
+              418.0,
+              77.0
+            ],
+            [
+              418.0,
+              116.0
+            ],
+            [
+              30.0,
+              114.0
+            ]
+          ],
+          "ch": "行李最多8公斤，不可退款。",
+          "latin": "8",
+          "expected": {
+            "origin": "CH",
+            "raw": "行李最多8公斤，不可退款。"
+          }
+        }
+      ],
+      "expectedRaw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。"
+    },
+    {
+      "id": "baseline72/zh-hant-quality-32/2",
+      "pageId": "666dc0837370cb537261ac7c7ba19edd53adfe0742a29f54f2cea044b26bdacd",
+      "rows": [
+        {
+          "boxId": "666dc0837370cb537261ac7c7ba19edd53adfe0742a29f54f2cea044b26bdacd.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              28.0,
+              26.0
+            ],
+            [
+              387.5,
+              26.0
+            ],
+            [
+              387.5,
+              69.0
+            ],
+            [
+              28.0,
+              69.0
+            ]
+          ],
+          "ch": "總計1234.50元，不含稅。",
+          "latin": "1234.50",
+          "expected": {
+            "origin": "CH",
+            "raw": "總計1234.50元，不含稅。"
+          }
+        },
+        {
+          "boxId": "666dc0837370cb537261ac7c7ba19edd53adfe0742a29f54f2cea044b26bdacd.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              28.5,
+              74.0
+            ],
+            [
+              418.0,
+              76.0
+            ],
+            [
+              418.0,
+              116.0
+            ],
+            [
+              28.5,
+              114.0
+            ]
+          ],
+          "ch": "行李最多8公斤，不可退款。",
+          "latin": "8",
+          "expected": {
+            "origin": "CH",
+            "raw": "行李最多8公斤，不可退款。"
+          }
+        }
+      ],
+      "expectedRaw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。"
+    },
+    {
+      "id": "baseline72/mixed-quality-16/1",
+      "pageId": "ff45e417cc83f1b2e9d1fe958d579163024dd600141a49e40abe649007d2b5c7",
+      "rows": [
+        {
+          "boxId": "ff45e417cc83f1b2e9d1fe958d579163024dd600141a49e40abe649007d2b5c7.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              29.0
+            ],
+            [
+              150.0,
+              29.0
+            ],
+            [
+              150.0,
+              50.0
+            ],
+            [
+              29.0,
+              50.0
+            ]
+          ],
+          "ch": "房间A/Room A",
+          "latin": "A / Room A",
+          "expected": {
+            "origin": "CH",
+            "raw": "房间A/Room A"
+          }
+        },
+        {
+          "boxId": "ff45e417cc83f1b2e9d1fe958d579163024dd600141a49e40abe649007d2b5c7.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              29.0,
+              54.0
+            ],
+            [
+              219.0,
+              54.0
+            ],
+            [
+              219.0,
+              75.0
+            ],
+            [
+              29.0,
+              75.0
+            ]
+          ],
+          "ch": "Chambre A : 120 € / night",
+          "latin": "Chambre A : 120 € / night",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Chambre A : 120 € / night"
+          }
+        },
+        {
+          "boxId": "ff45e417cc83f1b2e9d1fe958d579163024dd600141a49e40abe649007d2b5c7.box-2",
+          "readingOrder": 2,
+          "quad": [
+            [
+              29.0,
+              83.0
+            ],
+            [
+              145.0,
+              83.0
+            ],
+            [
+              145.0,
+              105.0
+            ],
+            [
+              29.0,
+              105.0
+            ]
+          ],
+          "ch": "不含税/不含税",
+          "latin": "/",
+          "expected": {
+            "origin": "CH",
+            "raw": "不含税/不含税"
+          }
+        }
+      ],
+      "expectedRaw": "房间A/Room A\nChambre A : 120 € / night\n不含税/不含税"
+    },
+    {
+      "id": "baseline72/mixed-quality-16/2",
+      "pageId": "180bde248bb429d8ef4a5490f547cb495bc6231c6d1dc91b9d44840d2d61c2a8",
+      "rows": [
+        {
+          "boxId": "180bde248bb429d8ef4a5490f547cb495bc6231c6d1dc91b9d44840d2d61c2a8.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              31.0,
+              28.0
+            ],
+            [
+              148.5,
+              30.0
+            ],
+            [
+              148.5,
+              49.0
+            ],
+            [
+              31.0,
+              47.0
+            ]
+          ],
+          "ch": "房间A/Room A",
+          "latin": "A / Room A",
+          "expected": {
+            "origin": "CH",
+            "raw": "房间A/Room A"
+          }
+        },
+        {
+          "boxId": "180bde248bb429d8ef4a5490f547cb495bc6231c6d1dc91b9d44840d2d61c2a8.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              54.5
+            ],
+            [
+              217.5,
+              55.5
+            ],
+            [
+              217.5,
+              75.0
+            ],
+            [
+              30.0,
+              74.0
+            ]
+          ],
+          "ch": "Chambre A : 120 € / night",
+          "latin": "Chambre A : 120 € / night",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Chambre A : 120 € / night"
+          }
+        },
+        {
+          "boxId": "180bde248bb429d8ef4a5490f547cb495bc6231c6d1dc91b9d44840d2d61c2a8.box-2",
+          "readingOrder": 2,
+          "quad": [
+            [
+              30.0,
+              83.0
+            ],
+            [
+              143.5,
+              83.0
+            ],
+            [
+              143.5,
+              104.5
+            ],
+            [
+              30.0,
+              104.5
+            ]
+          ],
+          "ch": "不含税/不含税",
+          "latin": "/",
+          "expected": {
+            "origin": "CH",
+            "raw": "不含税/不含税"
+          }
+        }
+      ],
+      "expectedRaw": "房间A/Room A\nChambre A : 120 € / night\n不含税/不含税"
+    },
+    {
+      "id": "baseline72/mixed-quality-32/1",
+      "pageId": "5c8a7787909f55ca2e70a76bc61897c5d520a8279dfdf01a0caa654c83d0d52b",
+      "rows": [
+        {
+          "boxId": "5c8a7787909f55ca2e70a76bc61897c5d520a8279dfdf01a0caa654c83d0d52b.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              27.0
+            ],
+            [
+              263.0,
+              29.0
+            ],
+            [
+              263.0,
+              66.0
+            ],
+            [
+              30.0,
+              64.0
+            ]
+          ],
+          "ch": "房间A/Room A",
+          "latin": "A / Room A",
+          "expected": {
+            "origin": "CH",
+            "raw": "房间A/Room A"
+          }
+        },
+        {
+          "boxId": "5c8a7787909f55ca2e70a76bc61897c5d520a8279dfdf01a0caa654c83d0d52b.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              31.0,
+              75.0
+            ],
+            [
+              400.0,
+              75.0
+            ],
+            [
+              400.0,
+              110.0
+            ],
+            [
+              31.0,
+              110.0
+            ]
+          ],
+          "ch": "Chambre A : 120 € / night",
+          "latin": "Chambre A : 120 € / night",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Chambre A : 120 € / night"
+          }
+        },
+        {
+          "boxId": "5c8a7787909f55ca2e70a76bc61897c5d520a8279dfdf01a0caa654c83d0d52b.box-2",
+          "readingOrder": 2,
+          "quad": [
+            [
+              29.0,
+              121.0
+            ],
+            [
+              255.0,
+              124.0
+            ],
+            [
+              255.0,
+              164.0
+            ],
+            [
+              29.0,
+              161.0
+            ]
+          ],
+          "ch": "不含税／不含稅",
+          "latin": "/ ",
+          "expected": {
+            "origin": "CH",
+            "raw": "不含税／不含稅"
+          }
+        }
+      ],
+      "expectedRaw": "房间A/Room A\nChambre A : 120 € / night\n不含税／不含稅"
+    },
+    {
+      "id": "baseline72/mixed-quality-32/2",
+      "pageId": "ec87458332edc44915ed4436976ad3f5b9a0289cff7dddede6d7b8540c9e1dc8",
+      "rows": [
+        {
+          "boxId": "ec87458332edc44915ed4436976ad3f5b9a0289cff7dddede6d7b8540c9e1dc8.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.5,
+              27.5
+            ],
+            [
+              262.5,
+              27.5
+            ],
+            [
+              262.5,
+              64.5
+            ],
+            [
+              29.5,
+              64.5
+            ]
+          ],
+          "ch": "房间A/Room A",
+          "latin": "A / Room A",
+          "expected": {
+            "origin": "CH",
+            "raw": "房间A/Room A"
+          }
+        },
+        {
+          "boxId": "ec87458332edc44915ed4436976ad3f5b9a0289cff7dddede6d7b8540c9e1dc8.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              29.0,
+              69.5
+            ],
+            [
+              402.0,
+              74.5
+            ],
+            [
+              401.5,
+              114.5
+            ],
+            [
+              28.5,
+              109.5
+            ]
+          ],
+          "ch": "Chambre A : 120 € / night",
+          "latin": "Chambre A : 120 € / night",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Chambre A : 120 € / night"
+          }
+        },
+        {
+          "boxId": "ec87458332edc44915ed4436976ad3f5b9a0289cff7dddede6d7b8540c9e1dc8.box-2",
+          "readingOrder": 2,
+          "quad": [
+            [
+              29.5,
+              123.5
+            ],
+            [
+              254.5,
+              124.5
+            ],
+            [
+              254.5,
+              162.0
+            ],
+            [
+              29.5,
+              161.0
+            ]
+          ],
+          "ch": "不含税／不含稅",
+          "latin": " /",
+          "expected": {
+            "origin": "CH",
+            "raw": "不含税／不含稅"
+          }
+        }
+      ],
+      "expectedRaw": "房间A/Room A\nChambre A : 120 € / night\n不含税／不含稅"
+    },
+    {
+      "id": "baseline72/blank-negative-24/1",
+      "pageId": "cb5d15f46063e0e36d09f0cc85ea65f95918fd5c9bd1aa701c212a7d78c3b728",
+      "rows": [],
+      "expectedRaw": ""
+    },
+    {
+      "id": "baseline72/blank-negative-24/2",
+      "pageId": "b3496b49cd5dde11c69c1ccfde173fb0e848e8faee693624e1515fe39de88279",
+      "rows": [],
+      "expectedRaw": ""
+    },
+    {
+      "id": "holdout124/en-checkin-16/1",
+      "pageId": "4b531da34a62b2759d9da8849b21cb6ee5b1f31fef5872d582deeeeec46a4ffc",
+      "rows": [
+        {
+          "boxId": "4b531da34a62b2759d9da8849b21cb6ee5b1f31fef5872d582deeeeec46a4ffc.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              27.0
+            ],
+            [
+              182.0,
+              27.0
+            ],
+            [
+              182.0,
+              48.0
+            ],
+            [
+              29.0,
+              48.0
+            ]
+          ],
+          "ch": "Check-in after 16:30.",
+          "latin": "Check-in after 16:30.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Check-in after 16:30."
+          }
+        },
+        {
+          "boxId": "4b531da34a62b2759d9da8849b21cb6ee5b1f31fef5872d582deeeeec46a4ffc.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              54.0
+            ],
+            [
+              211.0,
+              54.0
+            ],
+            [
+              211.0,
+              73.0
+            ],
+            [
+              30.0,
+              73.0
+            ]
+          ],
+          "ch": "Breakfast is not included.",
+          "latin": "Breakfast is not included.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Breakfast is not included."
+          }
+        }
+      ],
+      "expectedRaw": "Check-in after 16:30.\nBreakfast is not included."
+    },
+    {
+      "id": "holdout124/en-checkin-16/2",
+      "pageId": "3f4cc1ed871dc79e204abd6366685c1e14bbf14220cc56b807bd1a5456dc9c29",
+      "rows": [
+        {
+          "boxId": "3f4cc1ed871dc79e204abd6366685c1e14bbf14220cc56b807bd1a5456dc9c29.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              31.5,
+              28.0
+            ],
+            [
+              182.0,
+              28.0
+            ],
+            [
+              182.0,
+              47.0
+            ],
+            [
+              31.5,
+              47.0
+            ]
+          ],
+          "ch": "Check-in after 16:30.",
+          "latin": "Check-in after 16:30.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Check-in after 16:30."
+          }
+        },
+        {
+          "boxId": "3f4cc1ed871dc79e204abd6366685c1e14bbf14220cc56b807bd1a5456dc9c29.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              31.0,
+              56.0
+            ],
+            [
+              210.0,
+              56.0
+            ],
+            [
+              210.0,
+              73.0
+            ],
+            [
+              31.0,
+              73.0
+            ]
+          ],
+          "ch": "Breakfast is not included.",
+          "latin": "Breakfast is not included.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Breakfast is not included."
+          }
+        }
+      ],
+      "expectedRaw": "Check-in after 16:30.\nBreakfast is not included."
+    },
+    {
+      "id": "holdout124/en-checkin-24/1",
+      "pageId": "a63d8354ceb5f21af14d55ea6663b67344f4a6600ea650d311e4a8f078b93695",
+      "rows": [
+        {
+          "boxId": "a63d8354ceb5f21af14d55ea6663b67344f4a6600ea650d311e4a8f078b93695.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              31.0,
+              26.0
+            ],
+            [
+              256.0,
+              26.0
+            ],
+            [
+              256.0,
+              54.0
+            ],
+            [
+              31.0,
+              54.0
+            ]
+          ],
+          "ch": "Check-in after 16:30.",
+          "latin": "Check-in after 16:30.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Check-in after 16:30."
+          }
+        },
+        {
+          "boxId": "a63d8354ceb5f21af14d55ea6663b67344f4a6600ea650d311e4a8f078b93695.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              64.0
+            ],
+            [
+              301.0,
+              64.0
+            ],
+            [
+              301.0,
+              92.0
+            ],
+            [
+              30.0,
+              92.0
+            ]
+          ],
+          "ch": "Breakfast is not included.",
+          "latin": "Breakfast is not included.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Breakfast is not included."
+          }
+        }
+      ],
+      "expectedRaw": "Check-in after 16:30.\nBreakfast is not included."
+    },
+    {
+      "id": "holdout124/en-checkin-24/2",
+      "pageId": "116e82ccd2e200a08b76562f843cfcb1ef12b3b538e2a1dcba90b6d74301cda5",
+      "rows": [
+        {
+          "boxId": "116e82ccd2e200a08b76562f843cfcb1ef12b3b538e2a1dcba90b6d74301cda5.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              32.0,
+              29.0
+            ],
+            [
+              255.0,
+              29.0
+            ],
+            [
+              255.0,
+              52.5
+            ],
+            [
+              32.0,
+              52.5
+            ]
+          ],
+          "ch": "Check-in after 16:30.",
+          "latin": "Check-in after 16:30.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Check-in after 16:30."
+          }
+        },
+        {
+          "boxId": "116e82ccd2e200a08b76562f843cfcb1ef12b3b538e2a1dcba90b6d74301cda5.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              64.0
+            ],
+            [
+              301.5,
+              65.0
+            ],
+            [
+              301.5,
+              90.5
+            ],
+            [
+              30.0,
+              89.5
+            ]
+          ],
+          "ch": "Breakfast is not included.",
+          "latin": "Breakfast is not included.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Breakfast is not included."
+          }
+        }
+      ],
+      "expectedRaw": "Check-in after 16:30.\nBreakfast is not included."
+    },
+    {
+      "id": "holdout124/en-checkin-32/1",
+      "pageId": "318596c5e7d45400d9384b151848ac247f8dd1e8d915987d65e29d042e94c968",
+      "rows": [
+        {
+          "boxId": "318596c5e7d45400d9384b151848ac247f8dd1e8d915987d65e29d042e94c968.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              32.0,
+              27.0
+            ],
+            [
+              330.0,
+              27.0
+            ],
+            [
+              330.0,
+              60.0
+            ],
+            [
+              32.0,
+              60.0
+            ]
+          ],
+          "ch": "Check-in after 16:30.",
+          "latin": "Check-in after 16:30.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Check-in after 16:30."
+          }
+        },
+        {
+          "boxId": "318596c5e7d45400d9384b151848ac247f8dd1e8d915987d65e29d042e94c968.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              74.0
+            ],
+            [
+              390.0,
+              76.0
+            ],
+            [
+              390.0,
+              109.0
+            ],
+            [
+              30.0,
+              107.0
+            ]
+          ],
+          "ch": "Breakfast is not included.",
+          "latin": "Breakfast is not included.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Breakfast is not included."
+          }
+        }
+      ],
+      "expectedRaw": "Check-in after 16:30.\nBreakfast is not included."
+    },
+    {
+      "id": "holdout124/en-checkin-32/2",
+      "pageId": "274cf89f7581f55790879af89d9b4bfbd15ca8014831654013740f3ec9ad6f0a",
+      "rows": [
+        {
+          "boxId": "274cf89f7581f55790879af89d9b4bfbd15ca8014831654013740f3ec9ad6f0a.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.5,
+              25.5
+            ],
+            [
+              331.0,
+              26.5
+            ],
+            [
+              331.0,
+              61.5
+            ],
+            [
+              30.5,
+              60.5
+            ]
+          ],
+          "ch": "Check-in after 16:30.",
+          "latin": "Check-in after 16:30.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Check-in after 16:30."
+          }
+        },
+        {
+          "boxId": "274cf89f7581f55790879af89d9b4bfbd15ca8014831654013740f3ec9ad6f0a.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              74.0
+            ],
+            [
+              392.0,
+              75.0
+            ],
+            [
+              392.0,
+              108.5
+            ],
+            [
+              30.0,
+              107.5
+            ]
+          ],
+          "ch": "Breakfast is not included.",
+          "latin": "Breakfast is not included.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Breakfast is not included."
+          }
+        }
+      ],
+      "expectedRaw": "Check-in after 16:30.\nBreakfast is not included."
+    },
+    {
+      "id": "holdout124/en-tickets-16/1",
+      "pageId": "bf481222cabff671970e41e7e05c1a525079fe523b215df8e8d7dd1ea0bbe7f5",
+      "rows": [
+        {
+          "boxId": "bf481222cabff671970e41e7e05c1a525079fe523b215df8e8d7dd1ea0bbe7f5.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              28.0,
+              27.0
+            ],
+            [
+              190.0,
+              27.0
+            ],
+            [
+              190.0,
+              48.0
+            ],
+            [
+              28.0,
+              48.0
+            ]
+          ],
+          "ch": "2 tickets: €27.40 total.",
+          "latin": "2 tickets: €27.40 total.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "2 tickets: €27.40 total."
+          }
+        },
+        {
+          "boxId": "bf481222cabff671970e41e7e05c1a525079fe523b215df8e8d7dd1ea0bbe7f5.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              28.0,
+              52.0
+            ],
+            [
+              272.0,
+              54.0
+            ],
+            [
+              272.0,
+              77.0
+            ],
+            [
+              28.0,
+              74.0
+            ]
+          ],
+          "ch": "Free cancellation before Monday.",
+          "latin": "Free cancellation before Monday.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Free cancellation before Monday."
+          }
+        }
+      ],
+      "expectedRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday."
+    },
+    {
+      "id": "holdout124/en-tickets-16/2",
+      "pageId": "601c9bd644f4839ff115e5e48eef44b866d47e6f44e96b8e27957e8f392392f0",
+      "rows": [
+        {
+          "boxId": "601c9bd644f4839ff115e5e48eef44b866d47e6f44e96b8e27957e8f392392f0.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.5,
+              29.0
+            ],
+            [
+              188.0,
+              29.0
+            ],
+            [
+              188.0,
+              46.5
+            ],
+            [
+              30.5,
+              46.5
+            ]
+          ],
+          "ch": "2 tickets: €27.40 total.",
+          "latin": "2 tickets: €27.40 total.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "2 tickets: €27.40 total."
+          }
+        },
+        {
+          "boxId": "601c9bd644f4839ff115e5e48eef44b866d47e6f44e96b8e27957e8f392392f0.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              54.0
+            ],
+            [
+              271.0,
+              56.0
+            ],
+            [
+              271.0,
+              75.5
+            ],
+            [
+              30.0,
+              73.5
+            ]
+          ],
+          "ch": "Free cancellation before Monday.",
+          "latin": "Free cancellation before Monday.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Free cancellation before Monday."
+          }
+        }
+      ],
+      "expectedRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday."
+    },
+    {
+      "id": "holdout124/en-tickets-24/1",
+      "pageId": "baf5314914f1645b70f6adb7abfee4b7ee6e28abd5095314e4872358576c73ad",
+      "rows": [
+        {
+          "boxId": "baf5314914f1645b70f6adb7abfee4b7ee6e28abd5095314e4872358576c73ad.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              27.0
+            ],
+            [
+              267.0,
+              27.0
+            ],
+            [
+              267.0,
+              55.0
+            ],
+            [
+              29.0,
+              55.0
+            ]
+          ],
+          "ch": "2 tickets: €27.40 total.",
+          "latin": "2 tickets: €27.40 total.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "2 tickets: €27.40 total."
+          }
+        },
+        {
+          "boxId": "baf5314914f1645b70f6adb7abfee4b7ee6e28abd5095314e4872358576c73ad.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              28.0,
+              59.0
+            ],
+            [
+              390.0,
+              64.0
+            ],
+            [
+              390.0,
+              96.0
+            ],
+            [
+              28.0,
+              92.0
+            ]
+          ],
+          "ch": "Free cancellation before Monday.",
+          "latin": "Free cancellation before Monday.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Free cancellation before Monday."
+          }
+        }
+      ],
+      "expectedRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday."
+    },
+    {
+      "id": "holdout124/en-tickets-24/2",
+      "pageId": "41fc527baccd08ef5b68b28bbec2cc18f063ad53d76b5a246da0b138f01f5995",
+      "rows": [
+        {
+          "boxId": "41fc527baccd08ef5b68b28bbec2cc18f063ad53d76b5a246da0b138f01f5995.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.5,
+              27.0
+            ],
+            [
+              268.5,
+              28.5
+            ],
+            [
+              268.5,
+              53.5
+            ],
+            [
+              29.5,
+              52.0
+            ]
+          ],
+          "ch": "2 tickets: €27.40 total.",
+          "latin": "2 tickets: €27.40 total.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "2 tickets: €27.40 total."
+          }
+        },
+        {
+          "boxId": "41fc527baccd08ef5b68b28bbec2cc18f063ad53d76b5a246da0b138f01f5995.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              28.0,
+              61.5
+            ],
+            [
+              389.5,
+              65.5
+            ],
+            [
+              389.5,
+              95.0
+            ],
+            [
+              28.0,
+              91.5
+            ]
+          ],
+          "ch": "Free cancellation before Monday.",
+          "latin": "Free cancellation before Monday.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Free cancellation before Monday."
+          }
+        }
+      ],
+      "expectedRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday."
+    },
+    {
+      "id": "holdout124/en-tickets-32/1",
+      "pageId": "f440aae277aa31ff45f57f6597b89a8771dddd7b08545033d9e300948bcd9e3b",
+      "rows": [
+        {
+          "boxId": "f440aae277aa31ff45f57f6597b89a8771dddd7b08545033d9e300948bcd9e3b.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              25.0
+            ],
+            [
+              344.0,
+              27.0
+            ],
+            [
+              344.0,
+              61.0
+            ],
+            [
+              29.0,
+              59.0
+            ]
+          ],
+          "ch": "2 tickets: €27.40 total.",
+          "latin": "2 tickets: €27.40 total.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "2 tickets: €27.40 total."
+          }
+        },
+        {
+          "boxId": "f440aae277aa31ff45f57f6597b89a8771dddd7b08545033d9e300948bcd9e3b.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              28.0,
+              71.0
+            ],
+            [
+              508.0,
+              76.0
+            ],
+            [
+              508.0,
+              113.0
+            ],
+            [
+              28.0,
+              108.0
+            ]
+          ],
+          "ch": "Free cancellation before Monday.",
+          "latin": "Free cancellation before Monday.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Free cancellation before Monday."
+          }
+        }
+      ],
+      "expectedRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday."
+    },
+    {
+      "id": "holdout124/en-tickets-32/2",
+      "pageId": "2b9436d514b4077a1b2fd2d0b963afe1dec7acc2c782e1a0e5426c8e766cbcc8",
+      "rows": [
+        {
+          "boxId": "2b9436d514b4077a1b2fd2d0b963afe1dec7acc2c782e1a0e5426c8e766cbcc8.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              26.5
+            ],
+            [
+              344.0,
+              27.5
+            ],
+            [
+              344.0,
+              61.0
+            ],
+            [
+              29.0,
+              60.0
+            ]
+          ],
+          "ch": "2 tickets: €27.40 total.",
+          "latin": "2 tickets: €27.40 total.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "2 tickets: €27.40 total."
+          }
+        },
+        {
+          "boxId": "2b9436d514b4077a1b2fd2d0b963afe1dec7acc2c782e1a0e5426c8e766cbcc8.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              28.0,
+              70.0
+            ],
+            [
+              508.5,
+              75.0
+            ],
+            [
+              508.0,
+              114.5
+            ],
+            [
+              27.5,
+              109.5
+            ]
+          ],
+          "ch": "Free cancellation before Monday.",
+          "latin": "Free cancellation before Monday.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Free cancellation before Monday."
+          }
+        }
+      ],
+      "expectedRaw": "2 tickets: €27.40 total.\nFree cancellation before Monday."
+    },
+    {
+      "id": "holdout124/fr-departure-16/1",
+      "pageId": "0858e2f2d7737055c09b757a7a44e0b3dd2207bce9b098cdd98b1383ef5d4ee2",
+      "rows": [
+        {
+          "boxId": "0858e2f2d7737055c09b757a7a44e0b3dd2207bce9b098cdd98b1383ef5d4ee2.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              28.0
+            ],
+            [
+              197.0,
+              28.0
+            ],
+            [
+              197.0,
+              49.0
+            ],
+            [
+              29.0,
+              49.0
+            ]
+          ],
+          "ch": "Départ à 07:45, voie 6.",
+          "latin": "Départ à 07:45, voie 6.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Départ à 07:45, voie 6."
+          }
+        },
+        {
+          "boxId": "0858e2f2d7737055c09b757a7a44e0b3dd2207bce9b098cdd98b1383ef5d4ee2.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              28.0,
+              54.0
+            ],
+            [
+              262.0,
+              54.0
+            ],
+            [
+              262.0,
+              76.0
+            ],
+            [
+              28.0,
+              76.0
+            ]
+          ],
+          "ch": "Ne prenez pas le train de 07:15.",
+          "latin": "Ne prenez pas le train de 07:15.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Ne prenez pas le train de 07:15."
+          }
+        }
+      ],
+      "expectedRaw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15."
+    },
+    {
+      "id": "holdout124/fr-departure-16/2",
+      "pageId": "4be3c2ad2ec9e8b9f391ac31e3b65898cfade3a2f190ed05319be19ccccf8d67",
+      "rows": [
+        {
+          "boxId": "4be3c2ad2ec9e8b9f391ac31e3b65898cfade3a2f190ed05319be19ccccf8d67.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              31.5,
+              29.0
+            ],
+            [
+              196.0,
+              29.0
+            ],
+            [
+              196.0,
+              48.5
+            ],
+            [
+              31.5,
+              48.5
+            ]
+          ],
+          "ch": "Départ à 07:45, voie 6.",
+          "latin": "Départ à 07:45, voie 6.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Départ à 07:45, voie 6."
+          }
+        },
+        {
+          "boxId": "4be3c2ad2ec9e8b9f391ac31e3b65898cfade3a2f190ed05319be19ccccf8d67.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              55.5
+            ],
+            [
+              260.5,
+              55.0
+            ],
+            [
+              260.5,
+              74.5
+            ],
+            [
+              30.0,
+              75.0
+            ]
+          ],
+          "ch": "Ne prenez pas le train de 07:15.",
+          "latin": "Ne prenez pas le train de 07:15.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Ne prenez pas le train de 07:15."
+          }
+        }
+      ],
+      "expectedRaw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15."
+    },
+    {
+      "id": "holdout124/fr-departure-24/1",
+      "pageId": "8a3e388e70632a5fba836922ac4475e49b7b9814203baa49c1f8ec7d1151cb67",
+      "rows": [
+        {
+          "boxId": "8a3e388e70632a5fba836922ac4475e49b7b9814203baa49c1f8ec7d1151cb67.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              26.0
+            ],
+            [
+              277.0,
+              24.0
+            ],
+            [
+              277.0,
+              56.0
+            ],
+            [
+              29.0,
+              58.0
+            ]
+          ],
+          "ch": "Départ a 07:45, voie 6.",
+          "latin": "Départ à 07:45, voie 6.",
+          "expected": {
+            "origin": "LATIN",
+            "raw": "Départ à 07:45, voie 6."
+          }
+        },
+        {
+          "boxId": "8a3e388e70632a5fba836922ac4475e49b7b9814203baa49c1f8ec7d1151cb67.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              29.0,
+              63.0
+            ],
+            [
+              375.0,
+              63.0
+            ],
+            [
+              375.0,
+              94.0
+            ],
+            [
+              29.0,
+              94.0
+            ]
+          ],
+          "ch": "Ne prenez pas le train de 07:15.",
+          "latin": "Ne prenez pas le train de 07:15.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Ne prenez pas le train de 07:15."
+          }
+        }
+      ],
+      "expectedRaw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15."
+    },
+    {
+      "id": "holdout124/fr-departure-24/2",
+      "pageId": "2fb7daee61ac9f6a62bcd3ae9ab922b17b3780350f660329e63a17ecba990174",
+      "rows": [
+        {
+          "boxId": "2fb7daee61ac9f6a62bcd3ae9ab922b17b3780350f660329e63a17ecba990174.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              28.0
+            ],
+            [
+              279.0,
+              26.5
+            ],
+            [
+              279.0,
+              55.0
+            ],
+            [
+              30.0,
+              56.5
+            ]
+          ],
+          "ch": "Départ à 07:45, voie 6.",
+          "latin": "Départ à 07:45, voie 6.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Départ à 07:45, voie 6."
+          }
+        },
+        {
+          "boxId": "2fb7daee61ac9f6a62bcd3ae9ab922b17b3780350f660329e63a17ecba990174.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              28.5,
+              64.5
+            ],
+            [
+              376.0,
+              61.5
+            ],
+            [
+              376.0,
+              91.5
+            ],
+            [
+              28.5,
+              94.0
+            ]
+          ],
+          "ch": "Ne prenez pas le train de 07:15.",
+          "latin": "Ne prenez pas le train de 07:15.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Ne prenez pas le train de 07:15."
+          }
+        }
+      ],
+      "expectedRaw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15."
+    },
+    {
+      "id": "holdout124/fr-departure-32/1",
+      "pageId": "e5aae8b2c6606c521789fa9cbebe920846818f54d78dab6528378ec15227bed7",
+      "rows": [
+        {
+          "boxId": "e5aae8b2c6606c521789fa9cbebe920846818f54d78dab6528378ec15227bed7.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              31.0,
+              26.0
+            ],
+            [
+              359.0,
+              26.0
+            ],
+            [
+              359.0,
+              66.0
+            ],
+            [
+              31.0,
+              66.0
+            ]
+          ],
+          "ch": "Départ à 07:45, voie 6.",
+          "latin": "Départ à 07:45, voie 6.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Départ à 07:45, voie 6."
+          }
+        },
+        {
+          "boxId": "e5aae8b2c6606c521789fa9cbebe920846818f54d78dab6528378ec15227bed7.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              27.0,
+              74.0
+            ],
+            [
+              490.0,
+              71.0
+            ],
+            [
+              490.0,
+              114.0
+            ],
+            [
+              27.0,
+              117.0
+            ]
+          ],
+          "ch": "Ne prenez pas le train de 07:15.",
+          "latin": "Ne prenez pas le train de 07:15.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Ne prenez pas le train de 07:15."
+          }
+        }
+      ],
+      "expectedRaw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15."
+    },
+    {
+      "id": "holdout124/fr-departure-32/2",
+      "pageId": "356c730b6a6441c7b4e3815e90f29104f8c7c9e3bd3be78310cbba2bab6c7b16",
+      "rows": [
+        {
+          "boxId": "356c730b6a6441c7b4e3815e90f29104f8c7c9e3bd3be78310cbba2bab6c7b16.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.5,
+              24.0
+            ],
+            [
+              361.5,
+              24.0
+            ],
+            [
+              361.5,
+              67.5
+            ],
+            [
+              29.5,
+              67.5
+            ]
+          ],
+          "ch": "Départ a 07:45, voie 6.",
+          "latin": "Départ à 07:45, voie 6.",
+          "expected": {
+            "origin": "LATIN",
+            "raw": "Départ à 07:45, voie 6."
+          }
+        },
+        {
+          "boxId": "356c730b6a6441c7b4e3815e90f29104f8c7c9e3bd3be78310cbba2bab6c7b16.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              27.5,
+              74.5
+            ],
+            [
+              490.5,
+              71.5
+            ],
+            [
+              490.5,
+              111.0
+            ],
+            [
+              27.5,
+              114.0
+            ]
+          ],
+          "ch": "Ne prenez pas le train de 07:15.",
+          "latin": "Ne prenez pas le train de 07:15.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Ne prenez pas le train de 07:15."
+          }
+        }
+      ],
+      "expectedRaw": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15."
+    },
+    {
+      "id": "holdout124/fr-price-16/1",
+      "pageId": "e80261e7e0f0009615d7383e1d10df8bec20917fa2fa8a282eb84117b2f62767",
+      "rows": [
+        {
+          "boxId": "e80261e7e0f0009615d7383e1d10df8bec20917fa2fa8a282eb84117b2f62767.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              28.0,
+              26.0
+            ],
+            [
+              168.0,
+              26.0
+            ],
+            [
+              168.0,
+              47.0
+            ],
+            [
+              28.0,
+              47.0
+            ]
+          ],
+          "ch": "Prix total : 82,60 €.",
+          "latin": "Prix total : 82,60 €.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Prix total : 82,60 €."
+          }
+        },
+        {
+          "boxId": "e80261e7e0f0009615d7383e1d10df8bec20917fa2fa8a282eb84117b2f62767.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              55.0
+            ],
+            [
+              336.0,
+              55.0
+            ],
+            [
+              336.0,
+              77.0
+            ],
+            [
+              30.0,
+              77.0
+            ]
+          ],
+          "ch": "Aucun remboursement après confirmation.",
+          "latin": "Aucun remboursement après confirmation.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Aucun remboursement après confirmation."
+          }
+        }
+      ],
+      "expectedRaw": "Prix total : 82,60 €.\nAucun remboursement après confirmation."
+    },
+    {
+      "id": "holdout124/fr-price-16/2",
+      "pageId": "73d20c38d6830aa3bd4782a4f3a7016ad8d3f5eb3b79f729538097f48ba16595",
+      "rows": [
+        {
+          "boxId": "73d20c38d6830aa3bd4782a4f3a7016ad8d3f5eb3b79f729538097f48ba16595.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.5,
+              28.5
+            ],
+            [
+              167.0,
+              28.5
+            ],
+            [
+              167.0,
+              46.0
+            ],
+            [
+              30.5,
+              46.0
+            ]
+          ],
+          "ch": "Prix total : 82,60 €.",
+          "latin": "Prix total : 82,60 €.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Prix total : 82,60 €."
+          }
+        },
+        {
+          "boxId": "73d20c38d6830aa3bd4782a4f3a7016ad8d3f5eb3b79f729538097f48ba16595.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              56.0
+            ],
+            [
+              336.5,
+              56.0
+            ],
+            [
+              336.5,
+              76.5
+            ],
+            [
+              30.0,
+              76.5
+            ]
+          ],
+          "ch": "Aucun remboursement après confirmation.",
+          "latin": "Aucun remboursement après confirmation.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Aucun remboursement après confirmation."
+          }
+        }
+      ],
+      "expectedRaw": "Prix total : 82,60 €.\nAucun remboursement après confirmation."
+    },
+    {
+      "id": "holdout124/fr-price-24/1",
+      "pageId": "36c394df547c43f47444f0c98e2c8ad6e91528cd85c5063ba133316c44ca3b98",
+      "rows": [
+        {
+          "boxId": "36c394df547c43f47444f0c98e2c8ad6e91528cd85c5063ba133316c44ca3b98.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              25.0
+            ],
+            [
+              234.0,
+              27.0
+            ],
+            [
+              234.0,
+              56.0
+            ],
+            [
+              29.0,
+              54.0
+            ]
+          ],
+          "ch": "Prix total : 82,60 €.",
+          "latin": "Prix total : 82,60 €.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Prix total : 82,60 €."
+          }
+        },
+        {
+          "boxId": "36c394df547c43f47444f0c98e2c8ad6e91528cd85c5063ba133316c44ca3b98.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              28.0,
+              61.0
+            ],
+            [
+              486.0,
+              63.0
+            ],
+            [
+              486.0,
+              95.0
+            ],
+            [
+              28.0,
+              94.0
+            ]
+          ],
+          "ch": "Aucun remboursement après confirmation.",
+          "latin": "Aucun remboursement après confirmation.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Aucun remboursement après confirmation."
+          }
+        }
+      ],
+      "expectedRaw": "Prix total : 82,60 €.\nAucun remboursement après confirmation."
+    },
+    {
+      "id": "holdout124/fr-price-24/2",
+      "pageId": "774581203224fc4dc91462eeb39ddebd42fa39fbc48b9e5f832d6d700c51852b",
+      "rows": [
+        {
+          "boxId": "774581203224fc4dc91462eeb39ddebd42fa39fbc48b9e5f832d6d700c51852b.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.5,
+              28.5
+            ],
+            [
+              233.5,
+              28.5
+            ],
+            [
+              233.5,
+              53.5
+            ],
+            [
+              30.5,
+              53.5
+            ]
+          ],
+          "ch": "Prix total : 82,60 €.",
+          "latin": "Prix total : 82,60 €.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Prix total : 82,60 €."
+          }
+        },
+        {
+          "boxId": "774581203224fc4dc91462eeb39ddebd42fa39fbc48b9e5f832d6d700c51852b.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              29.5,
+              63.5
+            ],
+            [
+              487.5,
+              64.5
+            ],
+            [
+              487.5,
+              93.0
+            ],
+            [
+              29.5,
+              92.0
+            ]
+          ],
+          "ch": "Aucun remboursement après confirmation.",
+          "latin": "Aucun remboursement après confirmation.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Aucun remboursement après confirmation."
+          }
+        }
+      ],
+      "expectedRaw": "Prix total : 82,60 €.\nAucun remboursement après confirmation."
+    },
+    {
+      "id": "holdout124/fr-price-32/1",
+      "pageId": "7b27f722f6679e6209e391780c8de42dca83840ae7adff1ec86af7ffc96548a3",
+      "rows": [
+        {
+          "boxId": "7b27f722f6679e6209e391780c8de42dca83840ae7adff1ec86af7ffc96548a3.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              27.0
+            ],
+            [
+              301.0,
+              27.0
+            ],
+            [
+              301.0,
+              63.0
+            ],
+            [
+              30.0,
+              63.0
+            ]
+          ],
+          "ch": "Prix total : 82,60 €.",
+          "latin": "Prix total : 82,60 €.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Prix total : 82,60 €."
+          }
+        },
+        {
+          "boxId": "7b27f722f6679e6209e391780c8de42dca83840ae7adff1ec86af7ffc96548a3.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              29.0,
+              74.0
+            ],
+            [
+              447.0,
+              76.0
+            ],
+            [
+              447.0,
+              113.0
+            ],
+            [
+              29.0,
+              110.0
+            ]
+          ],
+          "ch": "Aucun remboursement après",
+          "latin": "Aucun remboursement après",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Aucun remboursement après"
+          }
+        },
+        {
+          "boxId": "7b27f722f6679e6209e391780c8de42dca83840ae7adff1ec86af7ffc96548a3.box-2",
+          "readingOrder": 2,
+          "quad": [
+            [
+              30.0,
+              124.0
+            ],
+            [
+              218.0,
+              124.0
+            ],
+            [
+              218.0,
+              159.0
+            ],
+            [
+              30.0,
+              159.0
+            ]
+          ],
+          "ch": "confirmation.",
+          "latin": "confirmation.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "confirmation."
+          }
+        }
+      ],
+      "expectedRaw": "Prix total : 82,60 €.\nAucun remboursement après\nconfirmation."
+    },
+    {
+      "id": "holdout124/fr-price-32/2",
+      "pageId": "bf932812b46a125071d97dacc9b1d5144c30f685f184822fa8140d3671541116",
+      "rows": [
+        {
+          "boxId": "bf932812b46a125071d97dacc9b1d5144c30f685f184822fa8140d3671541116.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.5,
+              23.5
+            ],
+            [
+              302.0,
+              27.0
+            ],
+            [
+              301.5,
+              64.0
+            ],
+            [
+              29.0,
+              60.5
+            ]
+          ],
+          "ch": "Prix total : 82,60 €.",
+          "latin": "Prix total : 82,60 €.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Prix total : 82,60 €."
+          }
+        },
+        {
+          "boxId": "bf932812b46a125071d97dacc9b1d5144c30f685f184822fa8140d3671541116.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              26.5,
+              71.0
+            ],
+            [
+              449.5,
+              73.0
+            ],
+            [
+              449.5,
+              116.0
+            ],
+            [
+              26.5,
+              114.0
+            ]
+          ],
+          "ch": "Aucun remboursement après",
+          "latin": "Aucun remboursement après",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Aucun remboursement après"
+          }
+        },
+        {
+          "boxId": "bf932812b46a125071d97dacc9b1d5144c30f685f184822fa8140d3671541116.box-2",
+          "readingOrder": 2,
+          "quad": [
+            [
+              31.0,
+              122.5
+            ],
+            [
+              216.0,
+              122.5
+            ],
+            [
+              216.0,
+              158.0
+            ],
+            [
+              31.0,
+              158.0
+            ]
+          ],
+          "ch": "confirmation.",
+          "latin": "confirmation.",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "confirmation."
+          }
+        }
+      ],
+      "expectedRaw": "Prix total : 82,60 €.\nAucun remboursement après\nconfirmation."
+    },
+    {
+      "id": "holdout124/hans-order-16/1",
+      "pageId": "f584ebb1536b51575d5b912e6072a9fdf37ab1a8fc0863c3f78c4730ad4000c8",
+      "rows": [
+        {
+          "boxId": "f584ebb1536b51575d5b912e6072a9fdf37ab1a8fc0863c3f78c4730ad4000c8.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              28.0,
+              27.0
+            ],
+            [
+              171.0,
+              30.0
+            ],
+            [
+              171.0,
+              52.0
+            ],
+            [
+              28.0,
+              49.0
+            ]
+          ],
+          "ch": "订单合计268.90元。",
+          "latin": "268.90",
+          "expected": {
+            "origin": "CH",
+            "raw": "订单合计268.90元。"
+          }
+        },
+        {
+          "boxId": "f584ebb1536b51575d5b912e6072a9fdf37ab1a8fc0863c3f78c4730ad4000c8.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              56.0
+            ],
+            [
+              186.0,
+              56.0
+            ],
+            [
+              186.0,
+              77.0
+            ],
+            [
+              30.0,
+              77.0
+            ]
+          ],
+          "ch": "含早餐，不含城市税。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "含早餐，不含城市税。"
+          }
+        }
+      ],
+      "expectedRaw": "订单合计268.90元。\n含早餐，不含城市税。"
+    },
+    {
+      "id": "holdout124/hans-order-16/2",
+      "pageId": "be33689b9eab2cc6990e00431ee75764c9dfa5efe0c0c03ccc000675a43c5515",
+      "rows": [
+        {
+          "boxId": "be33689b9eab2cc6990e00431ee75764c9dfa5efe0c0c03ccc000675a43c5515.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.5,
+              28.0
+            ],
+            [
+              169.5,
+              29.5
+            ],
+            [
+              169.5,
+              50.5
+            ],
+            [
+              30.5,
+              49.0
+            ]
+          ],
+          "ch": "订单合计268.90元。",
+          "latin": "268.90",
+          "expected": {
+            "origin": "CH",
+            "raw": "订单合计268.90元。"
+          }
+        },
+        {
+          "boxId": "be33689b9eab2cc6990e00431ee75764c9dfa5efe0c0c03ccc000675a43c5515.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              31.5,
+              57.0
+            ],
+            [
+              184.0,
+              57.0
+            ],
+            [
+              184.0,
+              76.5
+            ],
+            [
+              31.5,
+              76.5
+            ]
+          ],
+          "ch": "含早餐，不含城市税。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "含早餐，不含城市税。"
+          }
+        }
+      ],
+      "expectedRaw": "订单合计268.90元。\n含早餐，不含城市税。"
+    },
+    {
+      "id": "holdout124/hans-order-24/1",
+      "pageId": "dba8d0f0bda59aa4f44f87df6bbda52f65ebc981e8b17f9539af5e8f3b7fcc56",
+      "rows": [
+        {
+          "boxId": "dba8d0f0bda59aa4f44f87df6bbda52f65ebc981e8b17f9539af5e8f3b7fcc56.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              28.0,
+              25.0
+            ],
+            [
+              239.0,
+              28.0
+            ],
+            [
+              239.0,
+              61.0
+            ],
+            [
+              28.0,
+              57.0
+            ]
+          ],
+          "ch": "订单合计268.90元。",
+          "latin": "268.90",
+          "expected": {
+            "origin": "CH",
+            "raw": "订单合计268.90元。"
+          }
+        },
+        {
+          "boxId": "dba8d0f0bda59aa4f44f87df6bbda52f65ebc981e8b17f9539af5e8f3b7fcc56.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              31.0,
+              66.0
+            ],
+            [
+              261.0,
+              66.0
+            ],
+            [
+              261.0,
+              95.0
+            ],
+            [
+              31.0,
+              95.0
+            ]
+          ],
+          "ch": "含早餐，不含城市税。",
+          "latin": ",",
+          "expected": {
+            "origin": "CH",
+            "raw": "含早餐，不含城市税。"
+          }
+        }
+      ],
+      "expectedRaw": "订单合计268.90元。\n含早餐，不含城市税。"
+    },
+    {
+      "id": "holdout124/hans-order-24/2",
+      "pageId": "6a20bd0d0580ad41295777af9a0fbb29d0666bc00f1091bda1fe328dcaecd94d",
+      "rows": [
+        {
+          "boxId": "6a20bd0d0580ad41295777af9a0fbb29d0666bc00f1091bda1fe328dcaecd94d.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              28.0
+            ],
+            [
+              234.0,
+              29.5
+            ],
+            [
+              234.0,
+              58.0
+            ],
+            [
+              30.0,
+              57.0
+            ]
+          ],
+          "ch": "订单合计268.90元。",
+          "latin": "268.90",
+          "expected": {
+            "origin": "CH",
+            "raw": "订单合计268.90元。"
+          }
+        },
+        {
+          "boxId": "6a20bd0d0580ad41295777af9a0fbb29d0666bc00f1091bda1fe328dcaecd94d.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              31.0,
+              66.5
+            ],
+            [
+              258.0,
+              66.5
+            ],
+            [
+              258.0,
+              94.0
+            ],
+            [
+              31.0,
+              94.0
+            ]
+          ],
+          "ch": "含早餐，不含城市税。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "含早餐，不含城市税。"
+          }
+        }
+      ],
+      "expectedRaw": "订单合计268.90元。\n含早餐，不含城市税。"
+    },
+    {
+      "id": "holdout124/hans-order-32/1",
+      "pageId": "bbd8c3531c74f429ba3b5c814ce693dc1068aeab21e78cb2dd1f0456de872765",
+      "rows": [
+        {
+          "boxId": "bbd8c3531c74f429ba3b5c814ce693dc1068aeab21e78cb2dd1f0456de872765.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              25.0
+            ],
+            [
+              306.0,
+              27.0
+            ],
+            [
+              306.0,
+              67.0
+            ],
+            [
+              29.0,
+              65.0
+            ]
+          ],
+          "ch": "订单合计268.90元。",
+          "latin": "268.90",
+          "expected": {
+            "origin": "CH",
+            "raw": "订单合计268.90元。"
+          }
+        },
+        {
+          "boxId": "bbd8c3531c74f429ba3b5c814ce693dc1068aeab21e78cb2dd1f0456de872765.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              31.0,
+              78.0
+            ],
+            [
+              335.0,
+              78.0
+            ],
+            [
+              335.0,
+              115.0
+            ],
+            [
+              31.0,
+              115.0
+            ]
+          ],
+          "ch": "含早餐，不含城市税。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "含早餐，不含城市税。"
+          }
+        }
+      ],
+      "expectedRaw": "订单合计268.90元。\n含早餐，不含城市税。"
+    },
+    {
+      "id": "holdout124/hans-order-32/2",
+      "pageId": "752433d1f237c9b0931ed00b4c8048f9f71a4e5d852eedc229b691edff8b98fe",
+      "rows": [
+        {
+          "boxId": "752433d1f237c9b0931ed00b4c8048f9f71a4e5d852eedc229b691edff8b98fe.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.5,
+              26.5
+            ],
+            [
+              305.5,
+              27.5
+            ],
+            [
+              305.5,
+              66.0
+            ],
+            [
+              29.5,
+              65.0
+            ]
+          ],
+          "ch": "订单合计268.90元。",
+          "latin": "268.90.",
+          "expected": {
+            "origin": "CH",
+            "raw": "订单合计268.90元。"
+          }
+        },
+        {
+          "boxId": "752433d1f237c9b0931ed00b4c8048f9f71a4e5d852eedc229b691edff8b98fe.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              29.5,
+              75.5
+            ],
+            [
+              334.5,
+              76.5
+            ],
+            [
+              334.5,
+              115.0
+            ],
+            [
+              29.5,
+              114.0
+            ]
+          ],
+          "ch": "含早餐，不含城市税。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "含早餐，不含城市税。"
+          }
+        }
+      ],
+      "expectedRaw": "订单合计268.90元。\n含早餐，不含城市税。"
+    },
+    {
+      "id": "holdout124/hans-luggage-16/1",
+      "pageId": "51c2b5fee2914ec2f9474ef76a90824fee8ba565fa51319a953a6f2359ec9435",
+      "rows": [
+        {
+          "boxId": "51c2b5fee2914ec2f9474ef76a90824fee8ba565fa51319a953a6f2359ec9435.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              29.0
+            ],
+            [
+              180.0,
+              29.0
+            ],
+            [
+              180.0,
+              50.0
+            ],
+            [
+              29.0,
+              50.0
+            ]
+          ],
+          "ch": "每人限带7公斤行李。",
+          "latin": "7",
+          "expected": {
+            "origin": "CH",
+            "raw": "每人限带7公斤行李。"
+          }
+        },
+        {
+          "boxId": "51c2b5fee2914ec2f9474ef76a90824fee8ba565fa51319a953a6f2359ec9435.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              56.0
+            ],
+            [
+              138.0,
+              56.0
+            ],
+            [
+              138.0,
+              78.0
+            ],
+            [
+              30.0,
+              78.0
+            ]
+          ],
+          "ch": "请勿重复付款。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "请勿重复付款。"
+          }
+        }
+      ],
+      "expectedRaw": "每人限带7公斤行李。\n请勿重复付款。"
+    },
+    {
+      "id": "holdout124/hans-luggage-16/2",
+      "pageId": "eef716adfe43bf82f8a91753c1d10a7526b1a018a60fdfc90215c1aa4499cdea",
+      "rows": [
+        {
+          "boxId": "eef716adfe43bf82f8a91753c1d10a7526b1a018a60fdfc90215c1aa4499cdea.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.5,
+              28.0
+            ],
+            [
+              177.0,
+              29.0
+            ],
+            [
+              177.0,
+              48.5
+            ],
+            [
+              30.5,
+              47.5
+            ]
+          ],
+          "ch": "每人限带7公斤行李。",
+          "latin": "7",
+          "expected": {
+            "origin": "CH",
+            "raw": "每人限带7公斤行李。"
+          }
+        },
+        {
+          "boxId": "eef716adfe43bf82f8a91753c1d10a7526b1a018a60fdfc90215c1aa4499cdea.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.5,
+              56.5
+            ],
+            [
+              137.0,
+              56.5
+            ],
+            [
+              137.0,
+              77.5
+            ],
+            [
+              30.5,
+              77.5
+            ]
+          ],
+          "ch": "请勿重复付款。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "请勿重复付款。"
+          }
+        }
+      ],
+      "expectedRaw": "每人限带7公斤行李。\n请勿重复付款。"
+    },
+    {
+      "id": "holdout124/hans-luggage-24/1",
+      "pageId": "739f5ad046ea7e8d02a1ec359a4f12c887117d37bb22a0f3263748deaf3a8ffa",
+      "rows": [
+        {
+          "boxId": "739f5ad046ea7e8d02a1ec359a4f12c887117d37bb22a0f3263748deaf3a8ffa.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              31.0,
+              28.0
+            ],
+            [
+              249.0,
+              28.0
+            ],
+            [
+              249.0,
+              57.0
+            ],
+            [
+              31.0,
+              57.0
+            ]
+          ],
+          "ch": "每人限带7公斤行李。",
+          "latin": "7",
+          "expected": {
+            "origin": "CH",
+            "raw": "每人限带7公斤行李。"
+          }
+        },
+        {
+          "boxId": "739f5ad046ea7e8d02a1ec359a4f12c887117d37bb22a0f3263748deaf3a8ffa.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              29.0,
+              62.0
+            ],
+            [
+              190.0,
+              65.0
+            ],
+            [
+              190.0,
+              97.0
+            ],
+            [
+              29.0,
+              95.0
+            ]
+          ],
+          "ch": "请勿重复付款。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "请勿重复付款。"
+          }
+        }
+      ],
+      "expectedRaw": "每人限带7公斤行李。\n请勿重复付款。"
+    },
+    {
+      "id": "holdout124/hans-luggage-24/2",
+      "pageId": "c38c4c2e55d05f67ab06f38b89b988090b9a2ffe101b0e975768313d1e9d2baf",
+      "rows": [
+        {
+          "boxId": "c38c4c2e55d05f67ab06f38b89b988090b9a2ffe101b0e975768313d1e9d2baf.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.5,
+              29.0
+            ],
+            [
+              247.5,
+              29.0
+            ],
+            [
+              247.5,
+              56.5
+            ],
+            [
+              30.5,
+              56.5
+            ]
+          ],
+          "ch": "每人限带7公斤行李。",
+          "latin": "7",
+          "expected": {
+            "origin": "CH",
+            "raw": "每人限带7公斤行李。"
+          }
+        },
+        {
+          "boxId": "c38c4c2e55d05f67ab06f38b89b988090b9a2ffe101b0e975768313d1e9d2baf.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.5,
+              65.5
+            ],
+            [
+              187.5,
+              67.0
+            ],
+            [
+              187.5,
+              94.5
+            ],
+            [
+              30.5,
+              93.0
+            ]
+          ],
+          "ch": "请勿重复付款。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "请勿重复付款。"
+          }
+        }
+      ],
+      "expectedRaw": "每人限带7公斤行李。\n请勿重复付款。"
+    },
+    {
+      "id": "holdout124/hans-luggage-32/1",
+      "pageId": "93f8f1dd50ab102a2ee3648b4207bd5550d23335d19c7b757f6340ec38e10fd3",
+      "rows": [
+        {
+          "boxId": "93f8f1dd50ab102a2ee3648b4207bd5550d23335d19c7b757f6340ec38e10fd3.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              30.0
+            ],
+            [
+              322.0,
+              30.0
+            ],
+            [
+              322.0,
+              67.0
+            ],
+            [
+              30.0,
+              67.0
+            ]
+          ],
+          "ch": "每人限带7公斤行李。",
+          "latin": "7",
+          "expected": {
+            "origin": "CH",
+            "raw": "每人限带7公斤行李。"
+          }
+        },
+        {
+          "boxId": "93f8f1dd50ab102a2ee3648b4207bd5550d23335d19c7b757f6340ec38e10fd3.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              29.0,
+              75.0
+            ],
+            [
+              241.0,
+              77.0
+            ],
+            [
+              241.0,
+              114.0
+            ],
+            [
+              29.0,
+              112.0
+            ]
+          ],
+          "ch": "请勿重复付款。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "请勿重复付款。"
+          }
+        }
+      ],
+      "expectedRaw": "每人限带7公斤行李。\n请勿重复付款。"
+    },
+    {
+      "id": "holdout124/hans-luggage-32/2",
+      "pageId": "24633660e2ec8d7512a5e055dc79eec7c9e732dd818102014ead6c46df8fe2a4",
+      "rows": [
+        {
+          "boxId": "24633660e2ec8d7512a5e055dc79eec7c9e732dd818102014ead6c46df8fe2a4.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.5,
+              28.0
+            ],
+            [
+              322.0,
+              28.0
+            ],
+            [
+              322.0,
+              66.0
+            ],
+            [
+              29.5,
+              66.0
+            ]
+          ],
+          "ch": "每人限带7公斤行李。",
+          "latin": "7",
+          "expected": {
+            "origin": "CH",
+            "raw": "每人限带7公斤行李。"
+          }
+        },
+        {
+          "boxId": "24633660e2ec8d7512a5e055dc79eec7c9e732dd818102014ead6c46df8fe2a4.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              29.5,
+              75.5
+            ],
+            [
+              238.5,
+              76.5
+            ],
+            [
+              238.5,
+              113.5
+            ],
+            [
+              29.5,
+              112.5
+            ]
+          ],
+          "ch": "请勿重复付款。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "请勿重复付款。"
+          }
+        }
+      ],
+      "expectedRaw": "每人限带7公斤行李。\n请勿重复付款。"
+    },
+    {
+      "id": "holdout124/hant-order-16/1",
+      "pageId": "0ab828f3dcc5dfd9b4ed9b8fe0fc60699dcb9e71558cb519920412b20738ef9d",
+      "rows": [
+        {
+          "boxId": "0ab828f3dcc5dfd9b4ed9b8fe0fc60699dcb9e71558cb519920412b20738ef9d.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              28.0,
+              28.0
+            ],
+            [
+              171.0,
+              30.0
+            ],
+            [
+              171.0,
+              52.0
+            ],
+            [
+              28.0,
+              50.0
+            ]
+          ],
+          "ch": "訂單合計268.90元。",
+          "latin": "268.90",
+          "expected": {
+            "origin": "CH",
+            "raw": "訂單合計268.90元。"
+          }
+        },
+        {
+          "boxId": "0ab828f3dcc5dfd9b4ed9b8fe0fc60699dcb9e71558cb519920412b20738ef9d.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              56.0
+            ],
+            [
+              186.0,
+              56.0
+            ],
+            [
+              186.0,
+              77.0
+            ],
+            [
+              30.0,
+              77.0
+            ]
+          ],
+          "ch": "含早餐，不含城市税。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "含早餐，不含城市税。"
+          }
+        }
+      ],
+      "expectedRaw": "訂單合計268.90元。\n含早餐，不含城市税。"
+    },
+    {
+      "id": "holdout124/hant-order-16/2",
+      "pageId": "f762c18638d3bb188731bef3d3e1e08f414d265f03e6b2c211c814ac6990547d",
+      "rows": [
+        {
+          "boxId": "f762c18638d3bb188731bef3d3e1e08f414d265f03e6b2c211c814ac6990547d.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              28.0
+            ],
+            [
+              169.0,
+              29.5
+            ],
+            [
+              169.0,
+              50.5
+            ],
+            [
+              30.0,
+              49.0
+            ]
+          ],
+          "ch": "訂單合計268.90元。",
+          "latin": "268.90",
+          "expected": {
+            "origin": "CH",
+            "raw": "訂單合計268.90元。"
+          }
+        },
+        {
+          "boxId": "f762c18638d3bb188731bef3d3e1e08f414d265f03e6b2c211c814ac6990547d.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              31.0,
+              55.5
+            ],
+            [
+              184.5,
+              56.5
+            ],
+            [
+              184.5,
+              77.5
+            ],
+            [
+              31.0,
+              76.5
+            ]
+          ],
+          "ch": "含早餐，不含城市税。",
+          "latin": ",",
+          "expected": {
+            "origin": "CH",
+            "raw": "含早餐，不含城市税。"
+          }
+        }
+      ],
+      "expectedRaw": "訂單合計268.90元。\n含早餐，不含城市税。"
+    },
+    {
+      "id": "holdout124/hant-order-24/1",
+      "pageId": "74771f84bb2ed420ce01f6271b084022c2feefbd68c8349d625536ce8ee55162",
+      "rows": [
+        {
+          "boxId": "74771f84bb2ed420ce01f6271b084022c2feefbd68c8349d625536ce8ee55162.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              28.0,
+              25.0
+            ],
+            [
+              238.0,
+              28.0
+            ],
+            [
+              238.0,
+              61.0
+            ],
+            [
+              28.0,
+              57.0
+            ]
+          ],
+          "ch": "訂單合計268.90元。",
+          "latin": "268.90",
+          "expected": {
+            "origin": "CH",
+            "raw": "訂單合計268.90元。"
+          }
+        },
+        {
+          "boxId": "74771f84bb2ed420ce01f6271b084022c2feefbd68c8349d625536ce8ee55162.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              31.0,
+              66.0
+            ],
+            [
+              261.0,
+              66.0
+            ],
+            [
+              261.0,
+              95.0
+            ],
+            [
+              31.0,
+              95.0
+            ]
+          ],
+          "ch": "含早餐，不含城市稅。",
+          "latin": ",",
+          "expected": {
+            "origin": "CH",
+            "raw": "含早餐，不含城市稅。"
+          }
+        }
+      ],
+      "expectedRaw": "訂單合計268.90元。\n含早餐，不含城市稅。"
+    },
+    {
+      "id": "holdout124/hant-order-24/2",
+      "pageId": "70050cb481756bbce1c3af87b36da417bee6fbf39707ed7cf2ba237871ada2af",
+      "rows": [
+        {
+          "boxId": "70050cb481756bbce1c3af87b36da417bee6fbf39707ed7cf2ba237871ada2af.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.5,
+              27.5
+            ],
+            [
+              234.0,
+              29.5
+            ],
+            [
+              234.0,
+              58.0
+            ],
+            [
+              29.5,
+              56.5
+            ]
+          ],
+          "ch": "訂單合計268.90元。",
+          "latin": "268.90",
+          "expected": {
+            "origin": "CH",
+            "raw": "訂單合計268.90元。"
+          }
+        },
+        {
+          "boxId": "70050cb481756bbce1c3af87b36da417bee6fbf39707ed7cf2ba237871ada2af.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              31.0,
+              66.5
+            ],
+            [
+              259.0,
+              66.5
+            ],
+            [
+              259.0,
+              94.0
+            ],
+            [
+              31.0,
+              94.0
+            ]
+          ],
+          "ch": "含早餐，不含城市稅。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "含早餐，不含城市稅。"
+          }
+        }
+      ],
+      "expectedRaw": "訂單合計268.90元。\n含早餐，不含城市稅。"
+    },
+    {
+      "id": "holdout124/hant-order-32/1",
+      "pageId": "f6826aefe6eb61802a8031a773131a72bd84860bc7dc427340edd9063eea24b1",
+      "rows": [
+        {
+          "boxId": "f6826aefe6eb61802a8031a773131a72bd84860bc7dc427340edd9063eea24b1.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              29.0
+            ],
+            [
+              305.0,
+              29.0
+            ],
+            [
+              305.0,
+              66.0
+            ],
+            [
+              29.0,
+              66.0
+            ]
+          ],
+          "ch": "訂單合計268.90元。",
+          "latin": "268.90",
+          "expected": {
+            "origin": "CH",
+            "raw": "訂單合計268.90元。"
+          }
+        },
+        {
+          "boxId": "f6826aefe6eb61802a8031a773131a72bd84860bc7dc427340edd9063eea24b1.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              31.0,
+              78.0
+            ],
+            [
+              335.0,
+              78.0
+            ],
+            [
+              335.0,
+              115.0
+            ],
+            [
+              31.0,
+              115.0
+            ]
+          ],
+          "ch": "含早餐，不含城市稅。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "含早餐，不含城市稅。"
+          }
+        }
+      ],
+      "expectedRaw": "訂單合計268.90元。\n含早餐，不含城市稅。"
+    },
+    {
+      "id": "holdout124/hant-order-32/2",
+      "pageId": "8a21c1f03d427abb38126df622894a1343b32dfdedb12c78398cc7e5a878793e",
+      "rows": [
+        {
+          "boxId": "8a21c1f03d427abb38126df622894a1343b32dfdedb12c78398cc7e5a878793e.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.5,
+              27.0
+            ],
+            [
+              305.5,
+              28.0
+            ],
+            [
+              305.5,
+              66.0
+            ],
+            [
+              29.5,
+              65.0
+            ]
+          ],
+          "ch": "訂單合計268.90元。",
+          "latin": "268.90",
+          "expected": {
+            "origin": "CH",
+            "raw": "訂單合計268.90元。"
+          }
+        },
+        {
+          "boxId": "8a21c1f03d427abb38126df622894a1343b32dfdedb12c78398cc7e5a878793e.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              29.5,
+              75.5
+            ],
+            [
+              334.0,
+              77.0
+            ],
+            [
+              334.0,
+              115.5
+            ],
+            [
+              29.5,
+              114.0
+            ]
+          ],
+          "ch": "含早餐，不含城市稅。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "含早餐，不含城市稅。"
+          }
+        }
+      ],
+      "expectedRaw": "訂單合計268.90元。\n含早餐，不含城市稅。"
+    },
+    {
+      "id": "holdout124/hant-luggage-16/1",
+      "pageId": "e529db28b996b2c415a213d330d9f8a2c849aa4a52e7a3c42b818b0b98876db2",
+      "rows": [
+        {
+          "boxId": "e529db28b996b2c415a213d330d9f8a2c849aa4a52e7a3c42b818b0b98876db2.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              29.0
+            ],
+            [
+              180.0,
+              29.0
+            ],
+            [
+              180.0,
+              50.0
+            ],
+            [
+              29.0,
+              50.0
+            ]
+          ],
+          "ch": "每人限帶7公斤行李。",
+          "latin": "7",
+          "expected": {
+            "origin": "CH",
+            "raw": "每人限帶7公斤行李。"
+          }
+        },
+        {
+          "boxId": "e529db28b996b2c415a213d330d9f8a2c849aa4a52e7a3c42b818b0b98876db2.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              29.0,
+              56.0
+            ],
+            [
+              138.0,
+              56.0
+            ],
+            [
+              138.0,
+              78.0
+            ],
+            [
+              29.0,
+              78.0
+            ]
+          ],
+          "ch": "請勿重複付款。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "請勿重複付款。"
+          }
+        }
+      ],
+      "expectedRaw": "每人限帶7公斤行李。\n請勿重複付款。"
+    },
+    {
+      "id": "holdout124/hant-luggage-16/2",
+      "pageId": "9e18d5be8778707a5c04a1d6eb128ee6b6440431bacf8269263acebd41ee587e",
+      "rows": [
+        {
+          "boxId": "9e18d5be8778707a5c04a1d6eb128ee6b6440431bacf8269263acebd41ee587e.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              31.0,
+              29.0
+            ],
+            [
+              177.0,
+              29.0
+            ],
+            [
+              177.0,
+              48.5
+            ],
+            [
+              31.0,
+              48.5
+            ]
+          ],
+          "ch": "每人限帶7公斤行李。",
+          "latin": "7",
+          "expected": {
+            "origin": "CH",
+            "raw": "每人限帶7公斤行李。"
+          }
+        },
+        {
+          "boxId": "9e18d5be8778707a5c04a1d6eb128ee6b6440431bacf8269263acebd41ee587e.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              56.5
+            ],
+            [
+              137.0,
+              56.5
+            ],
+            [
+              137.0,
+              77.5
+            ],
+            [
+              30.0,
+              77.5
+            ]
+          ],
+          "ch": "請勿重複付款。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "請勿重複付款。"
+          }
+        }
+      ],
+      "expectedRaw": "每人限帶7公斤行李。\n請勿重複付款。"
+    },
+    {
+      "id": "holdout124/hant-luggage-24/1",
+      "pageId": "a2f9cc384c368069ede9d69f25677dd6432601d69edf2fefe5065b483d74c63c",
+      "rows": [
+        {
+          "boxId": "a2f9cc384c368069ede9d69f25677dd6432601d69edf2fefe5065b483d74c63c.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              31.0,
+              28.0
+            ],
+            [
+              249.0,
+              28.0
+            ],
+            [
+              249.0,
+              57.0
+            ],
+            [
+              31.0,
+              57.0
+            ]
+          ],
+          "ch": "每人限帶7公斤行李。",
+          "latin": "7",
+          "expected": {
+            "origin": "CH",
+            "raw": "每人限帶7公斤行李。"
+          }
+        },
+        {
+          "boxId": "a2f9cc384c368069ede9d69f25677dd6432601d69edf2fefe5065b483d74c63c.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              28.0,
+              61.0
+            ],
+            [
+              190.0,
+              65.0
+            ],
+            [
+              190.0,
+              97.0
+            ],
+            [
+              28.0,
+              94.0
+            ]
+          ],
+          "ch": "請勿重複付款。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "請勿重複付款。"
+          }
+        }
+      ],
+      "expectedRaw": "每人限帶7公斤行李。\n請勿重複付款。"
+    },
+    {
+      "id": "holdout124/hant-luggage-24/2",
+      "pageId": "09c24b8133b60084d90587dcfe83681a51f7a7d5ef4a963ae77dc7248a1dec4c",
+      "rows": [
+        {
+          "boxId": "09c24b8133b60084d90587dcfe83681a51f7a7d5ef4a963ae77dc7248a1dec4c.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.5,
+              29.0
+            ],
+            [
+              247.5,
+              29.0
+            ],
+            [
+              247.5,
+              56.5
+            ],
+            [
+              30.5,
+              56.5
+            ]
+          ],
+          "ch": "每人限帶7公斤行李。",
+          "latin": "7",
+          "expected": {
+            "origin": "CH",
+            "raw": "每人限帶7公斤行李。"
+          }
+        },
+        {
+          "boxId": "09c24b8133b60084d90587dcfe83681a51f7a7d5ef4a963ae77dc7248a1dec4c.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              65.5
+            ],
+            [
+              187.5,
+              67.0
+            ],
+            [
+              187.5,
+              94.5
+            ],
+            [
+              30.0,
+              93.0
+            ]
+          ],
+          "ch": "請勿重複付款。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "請勿重複付款。"
+          }
+        }
+      ],
+      "expectedRaw": "每人限帶7公斤行李。\n請勿重複付款。"
+    },
+    {
+      "id": "holdout124/hant-luggage-32/1",
+      "pageId": "386cd9cd9872768878af3e063460d2e7c0e5dff1fa29f4de3c68e85f92249adb",
+      "rows": [
+        {
+          "boxId": "386cd9cd9872768878af3e063460d2e7c0e5dff1fa29f4de3c68e85f92249adb.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              30.0
+            ],
+            [
+              322.0,
+              30.0
+            ],
+            [
+              322.0,
+              67.0
+            ],
+            [
+              30.0,
+              67.0
+            ]
+          ],
+          "ch": "每人限帶7公斤行李。",
+          "latin": "7",
+          "expected": {
+            "origin": "CH",
+            "raw": "每人限帶7公斤行李。"
+          }
+        },
+        {
+          "boxId": "386cd9cd9872768878af3e063460d2e7c0e5dff1fa29f4de3c68e85f92249adb.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              28.0,
+              75.0
+            ],
+            [
+              241.0,
+              77.0
+            ],
+            [
+              241.0,
+              115.0
+            ],
+            [
+              28.0,
+              113.0
+            ]
+          ],
+          "ch": "請勿重複付款。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "請勿重複付款。"
+          }
+        }
+      ],
+      "expectedRaw": "每人限帶7公斤行李。\n請勿重複付款。"
+    },
+    {
+      "id": "holdout124/hant-luggage-32/2",
+      "pageId": "f8c1a7b5b143a938bd9b87f97e00cf3c3181174f6f5c468ec56ea3ca7613b7df",
+      "rows": [
+        {
+          "boxId": "f8c1a7b5b143a938bd9b87f97e00cf3c3181174f6f5c468ec56ea3ca7613b7df.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.5,
+              28.0
+            ],
+            [
+              322.0,
+              28.0
+            ],
+            [
+              322.0,
+              66.0
+            ],
+            [
+              29.5,
+              66.0
+            ]
+          ],
+          "ch": "每人限帶7公斤行李。",
+          "latin": "7",
+          "expected": {
+            "origin": "CH",
+            "raw": "每人限帶7公斤行李。"
+          }
+        },
+        {
+          "boxId": "f8c1a7b5b143a938bd9b87f97e00cf3c3181174f6f5c468ec56ea3ca7613b7df.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              29.5,
+              75.5
+            ],
+            [
+              238.5,
+              76.5
+            ],
+            [
+              238.5,
+              113.5
+            ],
+            [
+              29.5,
+              112.5
+            ]
+          ],
+          "ch": "請勿重複付款。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "請勿重複付款。"
+          }
+        }
+      ],
+      "expectedRaw": "每人限帶7公斤行李。\n請勿重複付款。"
+    },
+    {
+      "id": "holdout124/mixed-room-16/1",
+      "pageId": "06a7a5bc9df767bb841478055734851f78d9010e44c146b7f4122ffc0ced4f17",
+      "rows": [
+        {
+          "boxId": "06a7a5bc9df767bb841478055734851f78d9010e44c146b7f4122ffc0ced4f17.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              29.0
+            ],
+            [
+              149.0,
+              29.0
+            ],
+            [
+              149.0,
+              50.0
+            ],
+            [
+              29.0,
+              50.0
+            ]
+          ],
+          "ch": "RoomB/房间B",
+          "latin": "Room B / B",
+          "expected": {
+            "origin": "CH",
+            "raw": "RoomB/房间B"
+          }
+        },
+        {
+          "boxId": "06a7a5bc9df767bb841478055734851f78d9010e44c146b7f4122ffc0ced4f17.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              28.0,
+              53.0
+            ],
+            [
+              162.0,
+              53.0
+            ],
+            [
+              162.0,
+              74.0
+            ],
+            [
+              28.0,
+              74.0
+            ]
+          ],
+          "ch": "Chambre B : 95 €",
+          "latin": "Chambre B : 95 €",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Chambre B : 95 €"
+          }
+        },
+        {
+          "boxId": "06a7a5bc9df767bb841478055734851f78d9010e44c146b7f4122ffc0ced4f17.box-2",
+          "readingOrder": 2,
+          "quad": [
+            [
+              30.0,
+              83.0
+            ],
+            [
+              139.0,
+              83.0
+            ],
+            [
+              139.0,
+              105.0
+            ],
+            [
+              30.0,
+              105.0
+            ]
+          ],
+          "ch": "每晚，不含税。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "每晚，不含税。"
+          }
+        }
+      ],
+      "expectedRaw": "RoomB/房间B\nChambre B : 95 €\n每晚，不含税。"
+    },
+    {
+      "id": "holdout124/mixed-room-16/2",
+      "pageId": "338ce9a8762827aefe184abdc89dff0dcc0062e182c8c6953604c33a06c58088",
+      "rows": [
+        {
+          "boxId": "338ce9a8762827aefe184abdc89dff0dcc0062e182c8c6953604c33a06c58088.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.5,
+              29.5
+            ],
+            [
+              147.5,
+              28.5
+            ],
+            [
+              147.5,
+              47.5
+            ],
+            [
+              30.5,
+              48.5
+            ]
+          ],
+          "ch": "RoomB/房间B",
+          "latin": "Room B / B",
+          "expected": {
+            "origin": "CH",
+            "raw": "RoomB/房间B"
+          }
+        },
+        {
+          "boxId": "338ce9a8762827aefe184abdc89dff0dcc0062e182c8c6953604c33a06c58088.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.5,
+              55.5
+            ],
+            [
+              160.0,
+              55.5
+            ],
+            [
+              160.0,
+              73.5
+            ],
+            [
+              30.5,
+              73.5
+            ]
+          ],
+          "ch": "Chambre B : 95 €",
+          "latin": "Chambre B : 95 €",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Chambre B : 95 €"
+          }
+        },
+        {
+          "boxId": "338ce9a8762827aefe184abdc89dff0dcc0062e182c8c6953604c33a06c58088.box-2",
+          "readingOrder": 2,
+          "quad": [
+            [
+              29.5,
+              82.0
+            ],
+            [
+              136.0,
+              83.0
+            ],
+            [
+              136.0,
+              105.0
+            ],
+            [
+              29.5,
+              103.5
+            ]
+          ],
+          "ch": "每晚，不含税。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "每晚，不含税。"
+          }
+        }
+      ],
+      "expectedRaw": "RoomB/房间B\nChambre B : 95 €\n每晚，不含税。"
+    },
+    {
+      "id": "holdout124/mixed-room-24/1",
+      "pageId": "9f354598ab748f310850ffb92fe780d184a43f9343cfc6b27c597bad4c5f9fdc",
+      "rows": [
+        {
+          "boxId": "9f354598ab748f310850ffb92fe780d184a43f9343cfc6b27c597bad4c5f9fdc.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              27.0
+            ],
+            [
+              206.0,
+              27.0
+            ],
+            [
+              206.0,
+              56.0
+            ],
+            [
+              30.0,
+              56.0
+            ]
+          ],
+          "ch": "Room B/房间B",
+          "latin": "Room B / B",
+          "expected": {
+            "origin": "CH",
+            "raw": "Room B/房间B"
+          }
+        },
+        {
+          "boxId": "9f354598ab748f310850ffb92fe780d184a43f9343cfc6b27c597bad4c5f9fdc.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.0,
+              62.0
+            ],
+            [
+              224.0,
+              62.0
+            ],
+            [
+              224.0,
+              91.0
+            ],
+            [
+              30.0,
+              91.0
+            ]
+          ],
+          "ch": "Chambre B : 95 €",
+          "latin": "Chambre B : 95 €",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Chambre B : 95 €"
+          }
+        },
+        {
+          "boxId": "9f354598ab748f310850ffb92fe780d184a43f9343cfc6b27c597bad4c5f9fdc.box-2",
+          "readingOrder": 2,
+          "quad": [
+            [
+              30.0,
+              101.0
+            ],
+            [
+              190.0,
+              101.0
+            ],
+            [
+              190.0,
+              133.0
+            ],
+            [
+              30.0,
+              133.0
+            ]
+          ],
+          "ch": "每晚，不含税。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "每晚，不含税。"
+          }
+        }
+      ],
+      "expectedRaw": "Room B/房间B\nChambre B : 95 €\n每晚，不含税。"
+    },
+    {
+      "id": "holdout124/mixed-room-24/2",
+      "pageId": "2ce300d56c34ea6c1e5aae02b2924003f773680b1d96bc6cb62d1d6e7f743588",
+      "rows": [
+        {
+          "boxId": "2ce300d56c34ea6c1e5aae02b2924003f773680b1d96bc6cb62d1d6e7f743588.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.5,
+              29.5
+            ],
+            [
+              204.5,
+              28.0
+            ],
+            [
+              204.5,
+              54.0
+            ],
+            [
+              29.5,
+              56.0
+            ]
+          ],
+          "ch": "RoomB/房间B",
+          "latin": "Room B / B",
+          "expected": {
+            "origin": "CH",
+            "raw": "RoomB/房间B"
+          }
+        },
+        {
+          "boxId": "2ce300d56c34ea6c1e5aae02b2924003f773680b1d96bc6cb62d1d6e7f743588.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              31.5,
+              65.5
+            ],
+            [
+              223.5,
+              64.5
+            ],
+            [
+              223.5,
+              90.0
+            ],
+            [
+              31.5,
+              91.0
+            ]
+          ],
+          "ch": "Chambre B : 95 €",
+          "latin": "Chambre B : 95 €",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Chambre B : 95 €"
+          }
+        },
+        {
+          "boxId": "2ce300d56c34ea6c1e5aae02b2924003f773680b1d96bc6cb62d1d6e7f743588.box-2",
+          "readingOrder": 2,
+          "quad": [
+            [
+              30.0,
+              103.0
+            ],
+            [
+              186.5,
+              102.0
+            ],
+            [
+              186.5,
+              131.5
+            ],
+            [
+              30.0,
+              133.0
+            ]
+          ],
+          "ch": "每晚，不含税。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "每晚，不含税。"
+          }
+        }
+      ],
+      "expectedRaw": "RoomB/房间B\nChambre B : 95 €\n每晚，不含税。"
+    },
+    {
+      "id": "holdout124/mixed-room-32/1",
+      "pageId": "5ff1743caa5d2186fc8c299828dd1cb6f7fa5f1b2191a9269245c2665fe9500c",
+      "rows": [
+        {
+          "boxId": "5ff1743caa5d2186fc8c299828dd1cb6f7fa5f1b2191a9269245c2665fe9500c.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              28.0
+            ],
+            [
+              262.0,
+              27.0
+            ],
+            [
+              262.0,
+              64.0
+            ],
+            [
+              29.0,
+              65.0
+            ]
+          ],
+          "ch": "Room B/房间B",
+          "latin": "Room B / B",
+          "expected": {
+            "origin": "CH",
+            "raw": "Room B/房间B"
+          }
+        },
+        {
+          "boxId": "5ff1743caa5d2186fc8c299828dd1cb6f7fa5f1b2191a9269245c2665fe9500c.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              31.0,
+              74.0
+            ],
+            [
+              285.0,
+              74.0
+            ],
+            [
+              285.0,
+              106.0
+            ],
+            [
+              31.0,
+              106.0
+            ]
+          ],
+          "ch": "Chambre B : 95 €",
+          "latin": "Chambre B : 95 €",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Chambre B : 95 €"
+          }
+        },
+        {
+          "boxId": "5ff1743caa5d2186fc8c299828dd1cb6f7fa5f1b2191a9269245c2665fe9500c.box-2",
+          "readingOrder": 2,
+          "quad": [
+            [
+              29.0,
+              122.0
+            ],
+            [
+              241.0,
+              122.0
+            ],
+            [
+              241.0,
+              162.0
+            ],
+            [
+              29.0,
+              162.0
+            ]
+          ],
+          "ch": "每晚，不含税。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "每晚，不含税。"
+          }
+        }
+      ],
+      "expectedRaw": "Room B/房间B\nChambre B : 95 €\n每晚，不含税。"
+    },
+    {
+      "id": "holdout124/mixed-room-32/2",
+      "pageId": "6c68917032b95820ac41bcd61d102acba9d57199bd132a1862c01db43efb3a4c",
+      "rows": [
+        {
+          "boxId": "6c68917032b95820ac41bcd61d102acba9d57199bd132a1862c01db43efb3a4c.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              28.0,
+              29.5
+            ],
+            [
+              261.5,
+              26.0
+            ],
+            [
+              262.0,
+              64.0
+            ],
+            [
+              28.5,
+              67.5
+            ]
+          ],
+          "ch": "Room B／房间B",
+          "latin": "Room B / B",
+          "expected": {
+            "origin": "CH",
+            "raw": "Room B／房间B"
+          }
+        },
+        {
+          "boxId": "6c68917032b95820ac41bcd61d102acba9d57199bd132a1862c01db43efb3a4c.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              30.5,
+              75.0
+            ],
+            [
+              286.5,
+              74.0
+            ],
+            [
+              286.5,
+              107.5
+            ],
+            [
+              30.5,
+              108.5
+            ]
+          ],
+          "ch": "Chambre B : 95 €",
+          "latin": "Chambre B : 95 €",
+          "expected": {
+            "origin": "AGREED",
+            "raw": "Chambre B : 95 €"
+          }
+        },
+        {
+          "boxId": "6c68917032b95820ac41bcd61d102acba9d57199bd132a1862c01db43efb3a4c.box-2",
+          "readingOrder": 2,
+          "quad": [
+            [
+              29.0,
+              123.0
+            ],
+            [
+              240.0,
+              124.5
+            ],
+            [
+              240.0,
+              163.0
+            ],
+            [
+              29.0,
+              161.5
+            ]
+          ],
+          "ch": "每晚，不含税。",
+          "latin": "",
+          "expected": {
+            "origin": "CH",
+            "raw": "每晚，不含税。"
+          }
+        }
+      ],
+      "expectedRaw": "Room B／房间B\nChambre B : 95 €\n每晚，不含税。"
+    },
+    {
+      "id": "holdout124/mixed-exit-16/1",
+      "pageId": "bd2257eb348b8045bf170180e845376c979ab9f6cdb8173c44029099551e87eb",
+      "rows": [
+        {
+          "boxId": "bd2257eb348b8045bf170180e845376c979ab9f6cdb8173c44029099551e87eb.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              29.0
+            ],
+            [
+              161.0,
+              29.0
+            ],
+            [
+              161.0,
+              50.0
+            ],
+            [
+              29.0,
+              50.0
+            ]
+          ],
+          "ch": "Sortie /Exit /出口",
+          "latin": "Sortie / Exit / ",
+          "expected": {
+            "origin": "CH",
+            "raw": "Sortie /Exit /出口"
+          }
+        },
+        {
+          "boxId": "bd2257eb348b8045bf170180e845376c979ab9f6cdb8173c44029099551e87eb.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              28.0,
+              56.0
+            ],
+            [
+              209.0,
+              54.0
+            ],
+            [
+              209.0,
+              76.0
+            ],
+            [
+              28.0,
+              78.0
+            ]
+          ],
+          "ch": "Ne pas entrer / 禁止进入",
+          "latin": "Ne pas entrer /",
+          "expected": {
+            "origin": "CH",
+            "raw": "Ne pas entrer / 禁止进入"
+          }
+        }
+      ],
+      "expectedRaw": "Sortie /Exit /出口\nNe pas entrer / 禁止进入"
+    },
+    {
+      "id": "holdout124/mixed-exit-16/2",
+      "pageId": "00828c7900fc13e641e1597e41d805206320efd40cb31adac0795471748cd175",
+      "rows": [
+        {
+          "boxId": "00828c7900fc13e641e1597e41d805206320efd40cb31adac0795471748cd175.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              29.5
+            ],
+            [
+              160.0,
+              28.5
+            ],
+            [
+              160.0,
+              48.0
+            ],
+            [
+              30.0,
+              49.0
+            ]
+          ],
+          "ch": "Sortie/Exit /出口",
+          "latin": "Sortie / Exit / ",
+          "expected": {
+            "origin": "CH",
+            "raw": "Sortie/Exit /出口"
+          }
+        },
+        {
+          "boxId": "00828c7900fc13e641e1597e41d805206320efd40cb31adac0795471748cd175.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              29.0,
+              57.5
+            ],
+            [
+              207.0,
+              55.0
+            ],
+            [
+              207.0,
+              76.5
+            ],
+            [
+              29.0,
+              78.5
+            ]
+          ],
+          "ch": "Ne pas entrer /禁止进入",
+          "latin": "Ne pas entrer / ",
+          "expected": {
+            "origin": "CH",
+            "raw": "Ne pas entrer /禁止进入"
+          }
+        }
+      ],
+      "expectedRaw": "Sortie/Exit /出口\nNe pas entrer /禁止进入"
+    },
+    {
+      "id": "holdout124/mixed-exit-24/1",
+      "pageId": "489f7c93c2cb1efe8ed44be84da6db9f8e78093eb15ea9a46bfa45ddfa34a417",
+      "rows": [
+        {
+          "boxId": "489f7c93c2cb1efe8ed44be84da6db9f8e78093eb15ea9a46bfa45ddfa34a417.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              29.0
+            ],
+            [
+              223.0,
+              27.0
+            ],
+            [
+              223.0,
+              56.0
+            ],
+            [
+              29.0,
+              58.0
+            ]
+          ],
+          "ch": "Sortie/Exit /出口",
+          "latin": "Sortie / Exit / ",
+          "expected": {
+            "origin": "CH",
+            "raw": "Sortie/Exit /出口"
+          }
+        },
+        {
+          "boxId": "489f7c93c2cb1efe8ed44be84da6db9f8e78093eb15ea9a46bfa45ddfa34a417.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              28.0,
+              65.0
+            ],
+            [
+              294.0,
+              62.0
+            ],
+            [
+              294.0,
+              95.0
+            ],
+            [
+              28.0,
+              97.0
+            ]
+          ],
+          "ch": "Ne pas entrer /禁止进入",
+          "latin": "Ne pas entrer /",
+          "expected": {
+            "origin": "CH",
+            "raw": "Ne pas entrer /禁止进入"
+          }
+        }
+      ],
+      "expectedRaw": "Sortie/Exit /出口\nNe pas entrer /禁止进入"
+    },
+    {
+      "id": "holdout124/mixed-exit-24/2",
+      "pageId": "70c07b7f1bd357a1bf80e2dab0e797de751b6ace42be064ddde20f65d6eb7813",
+      "rows": [
+        {
+          "boxId": "70c07b7f1bd357a1bf80e2dab0e797de751b6ace42be064ddde20f65d6eb7813.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.5,
+              30.0
+            ],
+            [
+              222.5,
+              27.5
+            ],
+            [
+              222.5,
+              55.0
+            ],
+            [
+              29.5,
+              57.0
+            ]
+          ],
+          "ch": "Sortie/Exit /出口",
+          "latin": "Sortie / Exit / ",
+          "expected": {
+            "origin": "CH",
+            "raw": "Sortie/Exit /出口"
+          }
+        },
+        {
+          "boxId": "70c07b7f1bd357a1bf80e2dab0e797de751b6ace42be064ddde20f65d6eb7813.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              29.0,
+              66.5
+            ],
+            [
+              294.0,
+              63.5
+            ],
+            [
+              294.5,
+              94.0
+            ],
+            [
+              29.5,
+              97.0
+            ]
+          ],
+          "ch": "Ne pas entrer /禁止进入",
+          "latin": "Ne pas entrer /",
+          "expected": {
+            "origin": "CH",
+            "raw": "Ne pas entrer /禁止进入"
+          }
+        }
+      ],
+      "expectedRaw": "Sortie/Exit /出口\nNe pas entrer /禁止进入"
+    },
+    {
+      "id": "holdout124/mixed-exit-32/1",
+      "pageId": "d9ed8f523d9e0542cb4bba6d9a12995ce6047bf6ee61b8a56725a5a7ba3cfeef",
+      "rows": [
+        {
+          "boxId": "d9ed8f523d9e0542cb4bba6d9a12995ce6047bf6ee61b8a56725a5a7ba3cfeef.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              30.0,
+              29.0
+            ],
+            [
+              287.0,
+              29.0
+            ],
+            [
+              287.0,
+              65.0
+            ],
+            [
+              30.0,
+              65.0
+            ]
+          ],
+          "ch": "Sortie /Exit /出口",
+          "latin": "Sortie / Exit /  ",
+          "expected": {
+            "origin": "CH",
+            "raw": "Sortie /Exit /出口"
+          }
+        },
+        {
+          "boxId": "d9ed8f523d9e0542cb4bba6d9a12995ce6047bf6ee61b8a56725a5a7ba3cfeef.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              28.0,
+              78.0
+            ],
+            [
+              382.0,
+              74.0
+            ],
+            [
+              382.0,
+              111.0
+            ],
+            [
+              28.0,
+              115.0
+            ]
+          ],
+          "ch": "Ne pas entrer / 禁止进入",
+          "latin": "Ne pas entrer / ",
+          "expected": {
+            "origin": "CH",
+            "raw": "Ne pas entrer / 禁止进入"
+          }
+        }
+      ],
+      "expectedRaw": "Sortie /Exit /出口\nNe pas entrer / 禁止进入"
+    },
+    {
+      "id": "holdout124/mixed-exit-32/2",
+      "pageId": "018b1eaac5f0c1cfdacc5ae5c465ad4b645a88974f7829c07cf1d7428091e362",
+      "rows": [
+        {
+          "boxId": "018b1eaac5f0c1cfdacc5ae5c465ad4b645a88974f7829c07cf1d7428091e362.box-0",
+          "readingOrder": 0,
+          "quad": [
+            [
+              29.0,
+              27.5
+            ],
+            [
+              285.5,
+              26.5
+            ],
+            [
+              285.5,
+              65.0
+            ],
+            [
+              29.0,
+              66.0
+            ]
+          ],
+          "ch": "Sortie/Exit /出口",
+          "latin": "Sortie / Exit / ",
+          "expected": {
+            "origin": "CH",
+            "raw": "Sortie/Exit /出口"
+          }
+        },
+        {
+          "boxId": "018b1eaac5f0c1cfdacc5ae5c465ad4b645a88974f7829c07cf1d7428091e362.box-1",
+          "readingOrder": 1,
+          "quad": [
+            [
+              28.0,
+              76.5
+            ],
+            [
+              384.0,
+              74.0
+            ],
+            [
+              384.0,
+              114.0
+            ],
+            [
+              28.0,
+              116.5
+            ]
+          ],
+          "ch": "Ne pas entrer /禁止进入",
+          "latin": "Ne pas entrer /",
+          "expected": {
+            "origin": "CH",
+            "raw": "Ne pas entrer /禁止进入"
+          }
+        }
+      ],
+      "expectedRaw": "Sortie/Exit /出口\nNe pas entrer /禁止进入"
+    },
+    {
+      "id": "holdout124/blank-negative-24/1",
+      "pageId": "cb5d15f46063e0e36d09f0cc85ea65f95918fd5c9bd1aa701c212a7d78c3b728",
+      "rows": [],
+      "expectedRaw": ""
+    },
+    {
+      "id": "holdout124/blank-negative-24/2",
+      "pageId": "b3496b49cd5dde11c69c1ccfde173fb0e848e8faee693624e1515fe39de88279",
+      "rows": [],
+      "expectedRaw": ""
+    }
+  ],
+  "controls": [
+    {
+      "ch": "18:00.",
+      "latin": "18:00.",
+      "expected": {
+        "origin": "AGREED",
+        "raw": "18:00."
+      }
+    },
+    {
+      "ch": "8",
+      "latin": "9",
+      "expected": {
+        "origin": "REVIEW",
+        "raw": null
+      }
+    },
+    {
+      "ch": "",
+      "latin": "",
+      "expected": {
+        "origin": "REVIEW",
+        "raw": null
+      }
+    },
+    {
+      "ch": "€",
+      "latin": "€",
+      "expected": {
+        "origin": "AGREED",
+        "raw": "€"
+      }
+    },
+    {
+      "ch": "行李",
+      "latin": "",
+      "expected": {
+        "origin": "CH",
+        "raw": "行李"
+      }
+    },
+    {
+      "ch": "Ce bilet",
+      "latin": "Ce billet",
+      "expected": {
+        "origin": "LATIN",
+        "raw": "Ce billet"
+      }
+    },
+    {
+      "ch": "税",
+      "latin": "稅",
+      "expected": {
+        "origin": "CH",
+        "raw": "税"
+      }
+    },
+    {
+      "ch": "é",
+      "latin": "é",
+      "expected": {
+        "origin": "LATIN",
+        "raw": "é"
+      }
+    }
+  ]
+}

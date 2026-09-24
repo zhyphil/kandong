@@ -1,0 +1,133 @@
+{
+  "status": "accepted-independent-candidate-selection-experiment",
+  "rounds": 2,
+  "junitPerRound": 14,
+  "unitTests": 69,
+  "fixedPages": 98,
+  "fixedBlocks": 180,
+  "retainedEmptyLatin": 27,
+  "freshPages": 5,
+  "freshBlocks": 9,
+  "controls": 8,
+  "api": 37,
+  "priorSevenReportsUnchanged": true,
+  "eightReportTypesRepeat": true,
+  "runIds": [
+    "d9ca21bb-f968-4a85-8474-55090705d5ca",
+    "29bcc1af-77c4-4b0e-a213-2bee0039c044",
+    "11e58a1c-1a24-4c3f-8b73-6a5a588b8ad8",
+    "8be229b2-fdae-4987-a534-2f5b647a76ba",
+    "1a030a84-45b4-44fb-9a4e-4e07dcce3af4",
+    "53a847a0-15bd-454a-b27b-ca6918f9cc78",
+    "2103f964-f675-470c-8a29-a8fc36837450",
+    "f342f7ca-c781-48f8-9b7c-78c70e9385ba",
+    "17cb6b4c-3277-463f-9895-abe8fe86074c",
+    "b5fa51f0-546a-4a95-a420-3425102fb3e2",
+    "71c9b17d-329d-4b52-b572-8df2fb57d0c9",
+    "16ae76bd-6fca-4bfa-bfff-2fe8b6b31351",
+    "01839218-605d-436a-b585-514db581e008",
+    "a2539727-0692-42cf-b14b-fa62f89babad",
+    "233c8558-073e-4d88-82ce-db63470306aa",
+    "09081465-8181-4746-ac32-4873b3b851c3"
+  ],
+  "excludedFields": [
+    "elapsedMs",
+    "elapsedNanos",
+    "elapsedNanosObservational",
+    "freshE2eReportSha256",
+    "freshE2eRunId",
+    "resizeNs",
+    "runId"
+  ],
+  "apk": {
+    "mainApkSha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+    "testApkSha256": "b4ed779255686bb8f6eea0d3af0a82b11eb6508fcd8434a2999eeb59a78127bc",
+    "testApkBytes": 247885111,
+    "oldAssetsAndNativeUnchanged": 291,
+    "newFixtureSha256": "1dab0781e9522504c6feab6513d7f9db3d82a313df00d79aa3551fd95983f1d3"
+  },
+  "sourceSha256": {
+    "scripts/export-candidate-selection-v2.py": "9fd600a22285df37736822b6637813bc69638bad875cabf903e16a03079e9809",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/SharedCandidates.kt": "69988d2c2d953df1310d5425ddf067bb0e2782ff9fab982b2b579b70dd3ee913",
+    "modelprobe/src/test/java/com/kandong/modelprobe/SharedCandidatesTest.kt": "19ef5c92171f2bfe429381f7585c12f2eceecb4f6e2e5a38657c9c000e519ac2",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/CandidateSelectionProbeTest.kt": "f96bcd560d9ff7cb58963cdb4e02e276a2656a4c2752c793c97be6f898d072f0",
+    "modelprobe/src/androidTest/assets/shared-candidates-v2.json": "1dab0781e9522504c6feab6513d7f9db3d82a313df00d79aa3551fd95983f1d3"
+  },
+  "rawReports": {
+    "polygon-2-report.json": {
+      "file": "polygon-2-report.json.gz",
+      "sha256": "de251fcd891ae1111fffa4fdbe72c5d9b151868d8e551e0468d9f22c24b3d05a"
+    },
+    "detector-1-report.json": {
+      "file": "detector-1-report.json.gz",
+      "sha256": "1336bdbc56a4346d354adb0e09a6a6e2035cf8eefb80457f0672bf7f4b562545"
+    },
+    "original-2-report.json": {
+      "file": "original-2-report.json.gz",
+      "sha256": "b1d42fee8e2a1363681b98085e74fa0d738df5206fdaa39253d394f8447c13be"
+    },
+    "geometry-1-report.json": {
+      "file": "geometry-1-report.json.gz",
+      "sha256": "6acbd6f67583556dd413dd3aaad9476d501e0c0f30afefaccc3d9b8f1e4d7d00"
+    },
+    "e2e-1-report.json": {
+      "file": "e2e-1-report.json.gz",
+      "sha256": "2051284cae1bd286d6ac4b3b699363910958737441f03dfc77683bff01446951"
+    },
+    "e2e-2-report.json": {
+      "file": "e2e-2-report.json.gz",
+      "sha256": "f47bbaefab0b0a1f6284775a0101c21179291881a67d01ed5fb2197381b1eb26"
+    },
+    "geometry-2-report.json": {
+      "file": "geometry-2-report.json.gz",
+      "sha256": "3c10ad8df717767d1a2ff087a61aa4ebf2e190d2279716b5246be04768aeac7f"
+    },
+    "original-1-report.json": {
+      "file": "original-1-report.json.gz",
+      "sha256": "45dd0cc182dfa1ec47d61e27c1aa6b8ae3e502d17dd135a18b37b0df90831570"
+    },
+    "detector-2-report.json": {
+      "file": "detector-2-report.json.gz",
+      "sha256": "97676d31af3e0fc3c48dae0a0de26de4b413666190d8f70ecb684bb52e3eae68"
+    },
+    "polygon-1-report.json": {
+      "file": "polygon-1-report.json.gz",
+      "sha256": "d0f1d74e95bd341062e1746b15d033e79da3e969e7f5a6f2af291daddc4a02b5"
+    },
+    "installed.json": {
+      "file": "installed.json.gz",
+      "sha256": "6083d1b6810eaa5a218e19f25acbea1d467243baff00dda2dddf5ae9c6fabd85"
+    },
+    "recognition-1-report.json": {
+      "file": "recognition-1-report.json.gz",
+      "sha256": "7b68e72d55a94dc3f9d7351736dfa6d68a6157ea80d1800e14b07b1437949ca4"
+    },
+    "selection-2-report.json": {
+      "file": "selection-2-report.json.gz",
+      "sha256": "7f3501116e7a7739d46ed1325f6bd14a00c0e07fe230f666be8560bbcb71df3d"
+    },
+    "boxes-2-report.json": {
+      "file": "boxes-2-report.json.gz",
+      "sha256": "c2139fa592af57d453cfd726d3c4fa32e91a452bdf8b670a93334604d16fee05"
+    },
+    "boxes-1-report.json": {
+      "file": "boxes-1-report.json.gz",
+      "sha256": "37b8995c149df1a545ead4adb28cb8d6ae23d9fe3c40a71887aa5634be4ef500"
+    },
+    "selection-1-report.json": {
+      "file": "selection-1-report.json.gz",
+      "sha256": "70c18d9f8137ba2602d95c61571e0c136b4a19e9735f3d67ef22424285ce56ba"
+    },
+    "recognition-2-report.json": {
+      "file": "recognition-2-report.json.gz",
+      "sha256": "9bb7f23ee061972c19dd0dce9cb40595b9608b9411c0c5910d76120e48b9ecef"
+    }
+  },
+  "qualityAccepted": false,
+  "limits": [
+    "Frozen candidates are not 98 new Android image inferences",
+    "Fresh nine boxes come from separately executed same-package E2E, bound by runId and on-device raw-report SHA check",
+    "Same fonts and authored corpus; unseen/multifont data pending",
+    "No real screens, translation, product integration or phone actions"
+  ]
+}

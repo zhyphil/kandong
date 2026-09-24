@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.EndToEndScoreBudgetTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-09-24T15:16:29.327Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.001">
+  <properties/>
+  <testcase name="acceptedInputErrorPropagatesToEveryUnchangedMeanMask" classname="com.kandong.modelprobe.EndToEndScoreBudgetTest" time="0.0"/>
+  <testcase name="badDetectorOutputCannotAcquireALargerScoreBudget" classname="com.kandong.modelprobe.EndToEndScoreBudgetTest" time="0.001"/>
+  <testcase name="nearEqualFloatingQuadsCannotHideChangedScoreMasks" classname="com.kandong.modelprobe.EndToEndScoreBudgetTest" time="0.0"/>
+  <testcase name="identicalProbabilityInputKeepsTheFrozenArithmeticGate" classname="com.kandong.modelprobe.EndToEndScoreBudgetTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

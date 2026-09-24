@@ -1,0 +1,7 @@
+{
+  "mainApkSha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+  "testApkSha256": "b4ed779255686bb8f6eea0d3af0a82b11eb6508fcd8434a2999eeb59a78127bc",
+  "testApkBytes": 247885111,
+  "oldAssetsAndNativeUnchanged": 291,
+  "newFixtureSha256": "1dab0781e9522504c6feab6513d7f9db3d82a313df00d79aa3551fd95983f1d3"
+}
