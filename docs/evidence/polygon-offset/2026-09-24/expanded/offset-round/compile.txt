@@ -1,0 +1,2 @@
+Note: /private/tmp/kandong-polygon-expanded-a-20260924/offset-round/source/Point.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.

@@ -1,0 +1,20 @@
+{
+  "independentRuns": 2,
+  "declaredResultFilesByteIdentical": [
+    "cases.json",
+    "summary.json",
+    "original/comparison.json",
+    "offset-round/comparison.json",
+    "all-round/comparison.json"
+  ],
+  "expectedCasesSha256": "972e5c809dfaea5744caa05ceb7920383a99dca1d923e2bf69c950a707c09576",
+  "scriptSha256": "9bc532407e7f8feac6c0b58b0ea8177ccf7fe44cc509b485ac41d477b91a4110",
+  "cppRoundingSource": "https://raw.githubusercontent.com/fonttools/pyclipper/1.4.0/src/clipper.cpp",
+  "cppSourceSha256": "5c642a3668311701f72572443aa42c1a981edb037298efc015166d9d90be0755",
+  "exactVerticesRequired": true,
+  "allowedNormalizations": [
+    "cyclic start",
+    "winding reversal",
+    "polygon order"
+  ]
+}

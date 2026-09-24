@@ -1,0 +1,180 @@
+--- upstream/ClipperOffset.java
++++ candidate/ClipperOffset.java
+@@ -9,6 +9,7 @@
+ import java.util.List;
+ 
+ public class ClipperOffset {
++    private static long roundAway(double x) { return (long)(x < 0 ? x - 0.5 : x + 0.5); }
+     private static boolean nearZero( double val ) {
+         return val > -TOLERANCE && val < TOLERANCE;
+     }
+@@ -109,8 +110,7 @@
+ 
+     private void doMiter( int j, int k, double r ) {
+         final double q = delta / r;
+-        destPoly.add( new LongPoint( Math.round( srcPoly.get( j ).getX() + (normals.get( k ).getX() + normals.get( j ).getX()) * q ), Math
+-                        .round( srcPoly.get( j ).getY() + (normals.get( k ).getY() + normals.get( j ).getY()) * q ) ) );
++        destPoly.add( new LongPoint( roundAway( srcPoly.get( j ).getX() + (normals.get( k ).getX() + normals.get( j ).getX()) * q ), roundAway( srcPoly.get( j ).getY() + (normals.get( k ).getY() + normals.get( j ).getY()) * q ) ) );
+     }
+ 
+     private void doOffset( double delta ) {
+@@ -171,7 +171,7 @@
+                 if (node.getJoinType() == JoinType.ROUND) {
+                     double X = 1.0, Y = 0.0;
+                     for (int j = 1; j <= steps; j++) {
+-                        destPoly.add( new LongPoint( Math.round( srcPoly.get( 0 ).getX() + X * delta ), Math.round( srcPoly.get( 0 ).getY() + Y
++                        destPoly.add( new LongPoint( roundAway( srcPoly.get( 0 ).getX() + X * delta ), roundAway( srcPoly.get( 0 ).getY() + Y
+                                         * delta ) ) );
+                         final double X2 = X;
+                         X = X * cos - sin * Y;
+@@ -181,7 +181,7 @@
+                 else {
+                     double X = -1.0, Y = -1.0;
+                     for (int j = 0; j < 4; ++j) {
+-                        destPoly.add( new LongPoint( Math.round( srcPoly.get( 0 ).getX() + X * delta ), Math.round( srcPoly.get( 0 ).getY() + Y
++                        destPoly.add( new LongPoint( roundAway( srcPoly.get( 0 ).getX() + X * delta ), roundAway( srcPoly.get( 0 ).getY() + Y
+                                         * delta ) ) );
+                         if (X < 0) {
+                             X = 1;
+@@ -245,10 +245,10 @@
+                 LongPoint pt1;
+                 if (node.getEndType() == EndType.OPEN_BUTT) {
+                     final int j = len - 1;
+-                    pt1 = new LongPoint( Math.round( srcPoly.get( j ).getX() + normals.get( j ).getX() * delta ), Math.round( srcPoly.get( j )
++                    pt1 = new LongPoint( roundAway( srcPoly.get( j ).getX() + normals.get( j ).getX() * delta ), roundAway( srcPoly.get( j )
+                                     .getY() + normals.get( j ).getY() * delta ), 0 );
+                     destPoly.add( pt1 );
+-                    pt1 = new LongPoint( Math.round( srcPoly.get( j ).getX() - normals.get( j ).getX() * delta ), Math.round( srcPoly.get( j )
++                    pt1 = new LongPoint( roundAway( srcPoly.get( j ).getX() - normals.get( j ).getX() * delta ), roundAway( srcPoly.get( j )
+                                     .getY() - normals.get( j ).getY() * delta ), 0 );
+                     destPoly.add( pt1 );
+                 }
+@@ -278,10 +278,10 @@
+                 }
+ 
+                 if (node.getEndType() == EndType.OPEN_BUTT) {
+-                    pt1 = new LongPoint( Math.round( srcPoly.get( 0 ).getX() - normals.get( 0 ).getX() * delta ), Math.round( srcPoly.get( 0 )
++                    pt1 = new LongPoint( roundAway( srcPoly.get( 0 ).getX() - normals.get( 0 ).getX() * delta ), roundAway( srcPoly.get( 0 )
+                                     .getY() - normals.get( 0 ).getY() * delta ) );
+                     destPoly.add( pt1 );
+-                    pt1 = new LongPoint( Math.round( srcPoly.get( 0 ).getX() + normals.get( 0 ).getX() * delta ), Math.round( srcPoly.get( 0 )
++                    pt1 = new LongPoint( roundAway( srcPoly.get( 0 ).getX() + normals.get( 0 ).getX() * delta ), roundAway( srcPoly.get( 0 )
+                                     .getY() + normals.get( 0 ).getY() * delta ) );
+                     destPoly.add( pt1 );
+                 }
+@@ -302,16 +302,16 @@
+ 
+     private void doRound( int j, int k ) {
+         final double a = Math.atan2( inA, normals.get( k ).getX() * normals.get( j ).getX() + normals.get( k ).getY() * normals.get( j ).getY() );
+-        final int steps = Math.max( (int) Math.round( stepsPerRad * Math.abs( a ) ), 1 );
++        final int steps = Math.max( (int) roundAway( stepsPerRad * Math.abs( a ) ), 1 );
+ 
+         double X = normals.get( k ).getX(), Y = normals.get( k ).getY(), X2;
+         for (int i = 0; i < steps; ++i) {
+-            destPoly.add( new LongPoint( Math.round( srcPoly.get( j ).getX() + X * delta ), Math.round( srcPoly.get( j ).getY() + Y * delta ) ) );
++            destPoly.add( new LongPoint( roundAway( srcPoly.get( j ).getX() + X * delta ), roundAway( srcPoly.get( j ).getY() + Y * delta ) ) );
+             X2 = X;
+             X = X * cos - sin * Y;
+             Y = X2 * sin + Y * cos;
+         }
+-        destPoly.add( new LongPoint( Math.round( srcPoly.get( j ).getX() + normals.get( j ).getX() * delta ), Math.round( srcPoly.get( j ).getY()
++        destPoly.add( new LongPoint( roundAway( srcPoly.get( j ).getX() + normals.get( j ).getX() * delta ), roundAway( srcPoly.get( j ).getY()
+                         + normals.get( j ).getY() * delta ) ) );
+     }
+ 
+@@ -323,8 +323,8 @@
+         final double sjx = srcPoly.get( j ).getX();
+         final double sjy = srcPoly.get( j ).getY();
+         final double dx = Math.tan( Math.atan2( inA, nkx * njx + nky * njy ) / 4 );
+-        destPoly.add( new LongPoint( Math.round( sjx + delta * (nkx - nky * dx) ), Math.round( sjy + delta * (nky + nkx * dx) ), 0 ) );
+-        destPoly.add( new LongPoint( Math.round( sjx + delta * (njx + njy * dx) ), Math.round( sjy + delta * (njy - njx * dx) ), 0 ) );
++        destPoly.add( new LongPoint( roundAway( sjx + delta * (nkx - nky * dx) ), roundAway( sjy + delta * (nky + nkx * dx) ), 0 ) );
++        destPoly.add( new LongPoint( roundAway( sjx + delta * (njx + njy * dx) ), roundAway( sjy + delta * (njy - njx * dx) ), 0 ) );
+     }
+ 
+     //------------------------------------------------------------------------------
+@@ -438,7 +438,7 @@
+             final double cosA = nkx * njx + njy * nky;
+             if (cosA > 0) // angle ==> 0 degrees
+             {
+-                destPoly.add( new LongPoint( Math.round( sjx + nkx * delta ), Math.round( sjy + nky * delta ), 0 ) );
++                destPoly.add( new LongPoint( roundAway( sjx + nkx * delta ), roundAway( sjy + nky * delta ), 0 ) );
+                 return;
+             }
+             //else angle ==> 180 degrees
+@@ -451,9 +451,9 @@
+         }
+ 
+         if (inA * delta < 0) {
+-            destPoly.add( new LongPoint( Math.round( sjx + nkx * delta ), Math.round( sjy + nky * delta ) ) );
++            destPoly.add( new LongPoint( roundAway( sjx + nkx * delta ), roundAway( sjy + nky * delta ) ) );
+             destPoly.add( srcPoly.get( j ) );
+-            destPoly.add( new LongPoint( Math.round( sjx + njx * delta ), Math.round( sjy + njy * delta ) ) );
++            destPoly.add( new LongPoint( roundAway( sjx + njx * delta ), roundAway( sjy + njy * delta ) ) );
+         }
+         else {
+             switch (jointype) {
+--- upstream/DefaultClipper.java
++++ candidate/DefaultClipper.java
+@@ -12,6 +12,7 @@
+ import java.util.logging.Logger;
+ 
+ public class DefaultClipper extends ClipperBase {
++    private static long roundAway(double x) { return (long)(x < 0 ? x - 0.5 : x + 0.5); }
+     private class IntersectNode {
+         Edge edge1;
+         Edge Edge2;
+@@ -1745,7 +1746,7 @@
+             }
+             else {
+                 b2 = edge2.getBot().getY() - edge2.getBot().getX() / edge2.deltaX;
+-                ip.setY( Math.round( ip.getX() / edge2.deltaX + b2 ) );
++                ip.setY( roundAway( ip.getX() / edge2.deltaX + b2 ) );
+             }
+         }
+         else if (edge2.getDelta().getX() == 0) {
+@@ -1755,19 +1756,19 @@
+             }
+             else {
+                 b1 = edge1.getBot().getY() - edge1.getBot().getX() / edge1.deltaX;
+-                ip.setY( Math.round( ip.getX() / edge1.deltaX + b1 ) );
++                ip.setY( roundAway( ip.getX() / edge1.deltaX + b1 ) );
+             }
+         }
+         else {
+             b1 = edge1.getBot().getX() - edge1.getBot().getY() * edge1.deltaX;
+             b2 = edge2.getBot().getX() - edge2.getBot().getY() * edge2.deltaX;
+             final double q = (b2 - b1) / (edge1.deltaX - edge2.deltaX);
+-            ip.setY( Math.round( q ) );
++            ip.setY( roundAway( q ) );
+             if (Math.abs( edge1.deltaX ) < Math.abs( edge2.deltaX )) {
+-                ip.setX( Math.round( edge1.deltaX * q + b1 ) );
+-            }
+-            else {
+-                ip.setX( Math.round( edge2.deltaX * q + b2 ) );
++                ip.setX( roundAway( edge1.deltaX * q + b1 ) );
++            }
++            else {
++                ip.setX( roundAway( edge2.deltaX * q + b2 ) );
+             }
+         }
+ 
+--- upstream/Edge.java
++++ candidate/Edge.java
+@@ -9,6 +9,7 @@
+ import java.util.logging.Logger;
+ 
+ class Edge {
++    private static long roundAway(double x) { return (long)(x < 0 ? x - 0.5 : x + 0.5); }
+     enum Side {
+         LEFT, RIGHT
+     }
+@@ -48,7 +49,7 @@
+         if (currentY == edge.getTop().getY()) {
+             return edge.getTop().getX();
+         }
+-        return edge.getBot().getX() + Math.round( edge.deltaX * (currentY - edge.getBot().getY()) );
++        return edge.getBot().getX() + roundAway( edge.deltaX * (currentY - edge.getBot().getY()) );
+     }
+ 
+     private final LongPoint bot;

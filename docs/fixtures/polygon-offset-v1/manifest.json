@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "scope": "synthetic positive round closed-polygon offset kernels; NOT full DB detector or OCR",
+  "sourceCommit": "5ef8c0a467023c495e44e582e9cbd8ca7308a590",
+  "sourceProvenance": "docs/evidence/polygon-offset/2026-09-24/provenance.json",
+  "referenceVersions": {
+    "numpy": "2.5.3",
+    "pyclipper": "1.4.0",
+    "shapely": "2.1.2"
+  },
+  "seed": 20260924,
+  "caseCount": 689,
+  "config": {
+    "join": "ROUND",
+    "end": "CLOSED_POLYGON",
+    "miterLimit": 2.0,
+    "arcTolerance": 0.25,
+    "unclipRatioSingleQuad": 1.6,
+    "inputCast": "float32 then truncate to integer toward zero",
+    "comparison": "all polygon integer vertices exact modulo cyclic start, winding and polygon order"
+  },
+  "files": {
+    "cases.json": {
+      "bytes": 1225517,
+      "sha256": "972e5c809dfaea5744caa05ceb7920383a99dca1d923e2bf69c950a707c09576"
+    }
+  },
+  "categories": {
+    "frozen-final-quad-not-pre-unclip": 13,
+    "frozen-micro": 2,
+    "general-multipath-offset": 6,
+    "half-tie-squares": 128,
+    "seeded-rotated-rectangles": 512,
+    "small-or-thin": 28
+  }
+}

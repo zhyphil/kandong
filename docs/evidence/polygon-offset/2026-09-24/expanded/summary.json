@@ -1,0 +1,92 @@
+{
+  "scope": "Host-only synthetic candidate intake; not Android, OCR quality or library adoption",
+  "versions": {
+    "numpy": "2.5.3",
+    "pyclipper": "1.4.0",
+    "shapely": "2.1.2"
+  },
+  "caseCount": 689,
+  "casesSha256": "972e5c809dfaea5744caa05ceb7920383a99dca1d923e2bf69c950a707c09576",
+  "seed": 20260924,
+  "commit": "5ef8c0a467023c495e44e582e9cbd8ca7308a590",
+  "variants": {
+    "original": {
+      "frozen-final-quad-not-pre-unclip": {
+        "total": 13,
+        "passed": 13
+      },
+      "frozen-micro": {
+        "total": 2,
+        "passed": 2
+      },
+      "general-multipath-offset": {
+        "total": 6,
+        "passed": 0
+      },
+      "half-tie-squares": {
+        "total": 128,
+        "passed": 32
+      },
+      "seeded-rotated-rectangles": {
+        "total": 512,
+        "passed": 512
+      },
+      "small-or-thin": {
+        "total": 28,
+        "passed": 28
+      }
+    },
+    "offset-round": {
+      "frozen-final-quad-not-pre-unclip": {
+        "total": 13,
+        "passed": 13
+      },
+      "frozen-micro": {
+        "total": 2,
+        "passed": 2
+      },
+      "general-multipath-offset": {
+        "total": 6,
+        "passed": 6
+      },
+      "half-tie-squares": {
+        "total": 128,
+        "passed": 128
+      },
+      "seeded-rotated-rectangles": {
+        "total": 512,
+        "passed": 512
+      },
+      "small-or-thin": {
+        "total": 28,
+        "passed": 28
+      }
+    },
+    "all-round": {
+      "frozen-final-quad-not-pre-unclip": {
+        "total": 13,
+        "passed": 13
+      },
+      "frozen-micro": {
+        "total": 2,
+        "passed": 2
+      },
+      "general-multipath-offset": {
+        "total": 6,
+        "passed": 6
+      },
+      "half-tie-squares": {
+        "total": 128,
+        "passed": 128
+      },
+      "seeded-rotated-rectangles": {
+        "total": 512,
+        "passed": 512
+      },
+      "small-or-thin": {
+        "total": 28,
+        "passed": 28
+      }
+    }
+  }
+}
