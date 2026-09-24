@@ -1,0 +1,4056 @@
+{
+  "schemaVersion": 1,
+  "runId": "1790232845722-dc6fbb31-9b80-49d5-9851-9d4db12fecc9",
+  "startedAtEpochMs": 1790232845722,
+  "state": "completed",
+  "fullSuite": true,
+  "model": "sdk_gphone64_arm64",
+  "manufacturer": "Google",
+  "api": 36,
+  "appVersion": "0.0.3-viewport-experiment",
+  "source": "fixed synthetic fixtures only",
+  "gpu": {
+    "renderer": "Android Emulator OpenGL ES Translator (ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver-5.0.0))",
+    "version": "OpenGL ES 3.1 (OpenGL ES 3.1.0 (ANGLE 2.1.1 git hash: fbf66f49c7cc))",
+    "coefficientMode": "CPU Float taps sampled from RGBA32F textures; no float render targets",
+    "arithmeticMode": "standard-300",
+    "vendor": "Google (Google Inc. (Google))",
+    "shadingLanguage": "OpenGL ES GLSL ES 3.10",
+    "maxTextureSize": 8192,
+    "maxViewportDims": [
+      8192,
+      8192
+    ],
+    "context": "EGL14 GLES3 pbuffer 1x1; offscreen RGBA8 FBOs"
+  },
+  "initializationMs": 51.840916,
+  "expectedTestCount": 48,
+  "completedTestCount": 48,
+  "activeWork": "none",
+  "sampleWidth": 320,
+  "sampleHeight": 160,
+  "validationScales": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "benchmarkScales": [
+    2,
+    3,
+    5
+  ],
+  "maxInputPixelsPerImage": 51200,
+  "maxOutputPixelsPerImage": 1280000,
+  "thresholds": {
+    "rgbMaxPerFixturePerChannelCodeValues": 2,
+    "rgbMeanPerFixturePerChannelCodeValues": 0.1,
+    "unit": "8-bit code values; divide by 255 for normalized error",
+    "oneTimesExactRequired": true,
+    "alpha255Required": true,
+    "dimensionsAndOrientationRequired": true
+  },
+  "tests": [
+    {
+      "fixture": "synthetic-text",
+      "scale": 1,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "expectedWidth": 320,
+      "expectedHeight": 160,
+      "actualWidth": 320,
+      "actualHeight": 160,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": true,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 1,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 51200,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 51200,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 51200,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "synthetic-text",
+      "scale": 2,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "expectedWidth": 640,
+      "expectedHeight": 320,
+      "actualWidth": 640,
+      "actualHeight": 320,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 204800,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 204800,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 204800,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "synthetic-text",
+      "scale": 3,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "expectedWidth": 960,
+      "expectedHeight": 480,
+      "actualWidth": 960,
+      "actualHeight": 480,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 460800,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 460800,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 460800,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "synthetic-text",
+      "scale": 5,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "expectedWidth": 1600,
+      "expectedHeight": 800,
+      "actualWidth": 1600,
+      "actualHeight": 800,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1280000,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1280000,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1280000,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "single-pixel",
+      "scale": 1,
+      "sourceWidth": 1,
+      "sourceHeight": 1,
+      "expectedWidth": 1,
+      "expectedHeight": 1,
+      "actualWidth": 1,
+      "actualHeight": 1,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": true,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 1,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "single-pixel",
+      "scale": 2,
+      "sourceWidth": 1,
+      "sourceHeight": 1,
+      "expectedWidth": 2,
+      "expectedHeight": 2,
+      "actualWidth": 2,
+      "actualHeight": 2,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 4,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 4,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 4,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "single-pixel",
+      "scale": 3,
+      "sourceWidth": 1,
+      "sourceHeight": 1,
+      "expectedWidth": 3,
+      "expectedHeight": 3,
+      "actualWidth": 3,
+      "actualHeight": 3,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 9,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 9,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 9,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "single-pixel",
+      "scale": 5,
+      "sourceWidth": 1,
+      "sourceHeight": 1,
+      "expectedWidth": 5,
+      "expectedHeight": 5,
+      "actualWidth": 5,
+      "actualHeight": 5,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 25,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 25,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 25,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "vertical-1x17",
+      "scale": 1,
+      "sourceWidth": 1,
+      "sourceHeight": 17,
+      "expectedWidth": 1,
+      "expectedHeight": 17,
+      "actualWidth": 1,
+      "actualHeight": 17,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": true,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 1,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 17,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 17,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 17,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "vertical-1x17",
+      "scale": 2,
+      "sourceWidth": 1,
+      "sourceHeight": 17,
+      "expectedWidth": 2,
+      "expectedHeight": 34,
+      "actualWidth": 2,
+      "actualHeight": 34,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 68,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 68,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 68,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "vertical-1x17",
+      "scale": 3,
+      "sourceWidth": 1,
+      "sourceHeight": 17,
+      "expectedWidth": 3,
+      "expectedHeight": 51,
+      "actualWidth": 3,
+      "actualHeight": 51,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 153,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 153,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 153,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "vertical-1x17",
+      "scale": 5,
+      "sourceWidth": 1,
+      "sourceHeight": 17,
+      "expectedWidth": 5,
+      "expectedHeight": 85,
+      "actualWidth": 5,
+      "actualHeight": 85,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 425,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 425,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 425,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "horizontal-19x1",
+      "scale": 1,
+      "sourceWidth": 19,
+      "sourceHeight": 1,
+      "expectedWidth": 19,
+      "expectedHeight": 1,
+      "actualWidth": 19,
+      "actualHeight": 1,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": true,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 1,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 19,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 19,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 19,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "horizontal-19x1",
+      "scale": 2,
+      "sourceWidth": 19,
+      "sourceHeight": 1,
+      "expectedWidth": 38,
+      "expectedHeight": 2,
+      "actualWidth": 38,
+      "actualHeight": 2,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 76,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 76,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 76,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "horizontal-19x1",
+      "scale": 3,
+      "sourceWidth": 19,
+      "sourceHeight": 1,
+      "expectedWidth": 57,
+      "expectedHeight": 3,
+      "actualWidth": 57,
+      "actualHeight": 3,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 171,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 171,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 171,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "horizontal-19x1",
+      "scale": 5,
+      "sourceWidth": 19,
+      "sourceHeight": 1,
+      "expectedWidth": 95,
+      "expectedHeight": 5,
+      "actualWidth": 95,
+      "actualHeight": 5,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 475,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 475,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 475,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "asymmetric-colored-corners",
+      "scale": 1,
+      "sourceWidth": 17,
+      "sourceHeight": 13,
+      "expectedWidth": 17,
+      "expectedHeight": 13,
+      "actualWidth": 17,
+      "actualHeight": 13,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": true,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 1,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 221,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 221,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 221,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": true,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [
+        {
+          "corner": "top-left",
+          "expectedARGB": "FFE71F43",
+          "actualARGB": "FFE71F43",
+          "passed": true
+        },
+        {
+          "corner": "top-right",
+          "expectedARGB": "FF11CF59",
+          "actualARGB": "FF11CF59",
+          "passed": true
+        },
+        {
+          "corner": "bottom-left",
+          "expectedARGB": "FF2B47EF",
+          "actualARGB": "FF2B47EF",
+          "passed": true
+        },
+        {
+          "corner": "bottom-right",
+          "expectedARGB": "FFDBB317",
+          "actualARGB": "FFDBB317",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "fixture": "asymmetric-colored-corners",
+      "scale": 2,
+      "sourceWidth": 17,
+      "sourceHeight": 13,
+      "expectedWidth": 34,
+      "expectedHeight": 26,
+      "actualWidth": 34,
+      "actualHeight": 26,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 884,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 884,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 884,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": true,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [
+        {
+          "corner": "top-left",
+          "expectedARGB": "FFE71F43",
+          "actualARGB": "FFE71F43",
+          "passed": true
+        },
+        {
+          "corner": "top-right",
+          "expectedARGB": "FF11CF59",
+          "actualARGB": "FF11CF59",
+          "passed": true
+        },
+        {
+          "corner": "bottom-left",
+          "expectedARGB": "FF2B47EF",
+          "actualARGB": "FF2B47EF",
+          "passed": true
+        },
+        {
+          "corner": "bottom-right",
+          "expectedARGB": "FFDBB317",
+          "actualARGB": "FFDBB317",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "fixture": "asymmetric-colored-corners",
+      "scale": 3,
+      "sourceWidth": 17,
+      "sourceHeight": 13,
+      "expectedWidth": 51,
+      "expectedHeight": 39,
+      "actualWidth": 51,
+      "actualHeight": 39,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1989,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1989,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1989,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": true,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [
+        {
+          "corner": "top-left",
+          "expectedARGB": "FFE71F43",
+          "actualARGB": "FFE71F43",
+          "passed": true
+        },
+        {
+          "corner": "top-right",
+          "expectedARGB": "FF11CF59",
+          "actualARGB": "FF11CF59",
+          "passed": true
+        },
+        {
+          "corner": "bottom-left",
+          "expectedARGB": "FF2B47EF",
+          "actualARGB": "FF2B47EF",
+          "passed": true
+        },
+        {
+          "corner": "bottom-right",
+          "expectedARGB": "FFDBB317",
+          "actualARGB": "FFDBB317",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "fixture": "asymmetric-colored-corners",
+      "scale": 5,
+      "sourceWidth": 17,
+      "sourceHeight": 13,
+      "expectedWidth": 85,
+      "expectedHeight": 65,
+      "actualWidth": 85,
+      "actualHeight": 65,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 5525,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 5525,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 5525,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": true,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [
+        {
+          "corner": "top-left",
+          "expectedARGB": "FFE71F43",
+          "actualARGB": "FFE71F43",
+          "passed": true
+        },
+        {
+          "corner": "top-right",
+          "expectedARGB": "FF11CF59",
+          "actualARGB": "FF11CF59",
+          "passed": true
+        },
+        {
+          "corner": "bottom-left",
+          "expectedARGB": "FF2B47EF",
+          "actualARGB": "FF2B47EF",
+          "passed": true
+        },
+        {
+          "corner": "bottom-right",
+          "expectedARGB": "FFDBB317",
+          "actualARGB": "FFDBB317",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "fixture": "impulses",
+      "scale": 1,
+      "sourceWidth": 11,
+      "sourceHeight": 9,
+      "expectedWidth": 11,
+      "expectedHeight": 9,
+      "actualWidth": 11,
+      "actualHeight": 9,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": true,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 1,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 99,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 99,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 99,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "impulses",
+      "scale": 2,
+      "sourceWidth": 11,
+      "sourceHeight": 9,
+      "expectedWidth": 22,
+      "expectedHeight": 18,
+      "actualWidth": 22,
+      "actualHeight": 18,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 396,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 396,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 396,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "impulses",
+      "scale": 3,
+      "sourceWidth": 11,
+      "sourceHeight": 9,
+      "expectedWidth": 33,
+      "expectedHeight": 27,
+      "actualWidth": 33,
+      "actualHeight": 27,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 891,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 891,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 891,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "impulses",
+      "scale": 5,
+      "sourceWidth": 11,
+      "sourceHeight": 9,
+      "expectedWidth": 55,
+      "expectedHeight": 45,
+      "actualWidth": 55,
+      "actualHeight": 45,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 2475,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 2475,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 2475,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "checkerboard",
+      "scale": 1,
+      "sourceWidth": 17,
+      "sourceHeight": 11,
+      "expectedWidth": 17,
+      "expectedHeight": 11,
+      "actualWidth": 17,
+      "actualHeight": 11,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": true,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 1,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 187,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 187,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 187,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "checkerboard",
+      "scale": 2,
+      "sourceWidth": 17,
+      "sourceHeight": 11,
+      "expectedWidth": 34,
+      "expectedHeight": 22,
+      "actualWidth": 34,
+      "actualHeight": 22,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 748,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 748,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 748,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "checkerboard",
+      "scale": 3,
+      "sourceWidth": 17,
+      "sourceHeight": 11,
+      "expectedWidth": 51,
+      "expectedHeight": 33,
+      "actualWidth": 51,
+      "actualHeight": 33,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1683,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1683,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1683,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "checkerboard",
+      "scale": 5,
+      "sourceWidth": 17,
+      "sourceHeight": 11,
+      "expectedWidth": 85,
+      "expectedHeight": 55,
+      "actualWidth": 85,
+      "actualHeight": 55,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 4675,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 4675,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 4675,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "thin-lines",
+      "scale": 1,
+      "sourceWidth": 19,
+      "sourceHeight": 13,
+      "expectedWidth": 19,
+      "expectedHeight": 13,
+      "actualWidth": 19,
+      "actualHeight": 13,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": true,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 1,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 247,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 247,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 247,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "thin-lines",
+      "scale": 2,
+      "sourceWidth": 19,
+      "sourceHeight": 13,
+      "expectedWidth": 38,
+      "expectedHeight": 26,
+      "actualWidth": 38,
+      "actualHeight": 26,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 988,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 988,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 988,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "thin-lines",
+      "scale": 3,
+      "sourceWidth": 19,
+      "sourceHeight": 13,
+      "expectedWidth": 57,
+      "expectedHeight": 39,
+      "actualWidth": 57,
+      "actualHeight": 39,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 2223,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 2223,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 2223,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "thin-lines",
+      "scale": 5,
+      "sourceWidth": 19,
+      "sourceHeight": 13,
+      "expectedWidth": 95,
+      "expectedHeight": 65,
+      "actualWidth": 95,
+      "actualHeight": 65,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 6175,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 6175,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 6175,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "solid",
+      "scale": 1,
+      "sourceWidth": 7,
+      "sourceHeight": 5,
+      "expectedWidth": 7,
+      "expectedHeight": 5,
+      "actualWidth": 7,
+      "actualHeight": 5,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": true,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 1,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 35,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 35,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 35,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "solid",
+      "scale": 2,
+      "sourceWidth": 7,
+      "sourceHeight": 5,
+      "expectedWidth": 14,
+      "expectedHeight": 10,
+      "actualWidth": 14,
+      "actualHeight": 10,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 140,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 140,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 140,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "solid",
+      "scale": 3,
+      "sourceWidth": 7,
+      "sourceHeight": 5,
+      "expectedWidth": 21,
+      "expectedHeight": 15,
+      "actualWidth": 21,
+      "actualHeight": 15,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 315,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 315,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 315,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "solid",
+      "scale": 5,
+      "sourceWidth": 7,
+      "sourceHeight": 5,
+      "expectedWidth": 35,
+      "expectedHeight": 25,
+      "actualWidth": 35,
+      "actualHeight": 25,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 875,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 875,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 875,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "grayscale-ramp",
+      "scale": 1,
+      "sourceWidth": 31,
+      "sourceHeight": 7,
+      "expectedWidth": 31,
+      "expectedHeight": 7,
+      "actualWidth": 31,
+      "actualHeight": 7,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": true,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 1,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 217,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 217,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 217,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "grayscale-ramp",
+      "scale": 2,
+      "sourceWidth": 31,
+      "sourceHeight": 7,
+      "expectedWidth": 62,
+      "expectedHeight": 14,
+      "actualWidth": 62,
+      "actualHeight": 14,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 868,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 868,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 868,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "grayscale-ramp",
+      "scale": 3,
+      "sourceWidth": 31,
+      "sourceHeight": 7,
+      "expectedWidth": 93,
+      "expectedHeight": 21,
+      "actualWidth": 93,
+      "actualHeight": 21,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1953,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1953,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1953,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "grayscale-ramp",
+      "scale": 5,
+      "sourceWidth": 31,
+      "sourceHeight": 7,
+      "expectedWidth": 155,
+      "expectedHeight": 35,
+      "actualWidth": 155,
+      "actualHeight": 35,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 5425,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 5425,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 5425,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "color-ramp",
+      "scale": 1,
+      "sourceWidth": 23,
+      "sourceHeight": 17,
+      "expectedWidth": 23,
+      "expectedHeight": 17,
+      "actualWidth": 23,
+      "actualHeight": 17,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": true,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 1,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 391,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 391,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 391,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "color-ramp",
+      "scale": 2,
+      "sourceWidth": 23,
+      "sourceHeight": 17,
+      "expectedWidth": 46,
+      "expectedHeight": 34,
+      "actualWidth": 46,
+      "actualHeight": 34,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1564,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1564,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1564,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "color-ramp",
+      "scale": 3,
+      "sourceWidth": 23,
+      "sourceHeight": 17,
+      "expectedWidth": 69,
+      "expectedHeight": 51,
+      "actualWidth": 69,
+      "actualHeight": 51,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 3519,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 3519,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 3519,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "color-ramp",
+      "scale": 5,
+      "sourceWidth": 23,
+      "sourceHeight": 17,
+      "expectedWidth": 115,
+      "expectedHeight": 85,
+      "actualWidth": 115,
+      "actualHeight": 85,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 9775,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 9775,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 9775,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "seeded-noise",
+      "scale": 1,
+      "sourceWidth": 17,
+      "sourceHeight": 13,
+      "expectedWidth": 17,
+      "expectedHeight": 13,
+      "actualWidth": 17,
+      "actualHeight": 13,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": true,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 1,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 221,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 221,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 221,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "seeded-noise",
+      "scale": 2,
+      "sourceWidth": 17,
+      "sourceHeight": 13,
+      "expectedWidth": 34,
+      "expectedHeight": 26,
+      "actualWidth": 34,
+      "actualHeight": 26,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 884,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 884,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 884,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "seeded-noise",
+      "scale": 3,
+      "sourceWidth": 17,
+      "sourceHeight": 13,
+      "expectedWidth": 51,
+      "expectedHeight": 39,
+      "actualWidth": 51,
+      "actualHeight": 39,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1989,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1989,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 1989,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    },
+    {
+      "fixture": "seeded-noise",
+      "scale": 5,
+      "sourceWidth": 17,
+      "sourceHeight": 13,
+      "expectedWidth": 85,
+      "expectedHeight": 65,
+      "actualWidth": 85,
+      "actualHeight": 65,
+      "dimensionsPassed": true,
+      "alpha255": true,
+      "oneTimesExactRequired": false,
+      "exact": true,
+      "inputUnchanged": true,
+      "gpuDrawPasses": 2,
+      "densityNone": true,
+      "rgb": [
+        {
+          "channel": "R",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 5525,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "G",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 5525,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        },
+        {
+          "channel": "B",
+          "maxCodeValues": 0,
+          "sumAbsoluteCodeValues": 0,
+          "pixelCount": 5525,
+          "meanCodeValues": 0,
+          "maxNormalized": 0,
+          "meanNormalized": 0,
+          "passed": true
+        }
+      ],
+      "asymmetricMarkerCheckApplicable": false,
+      "channelOrderAndOrientationPassed": true,
+      "cornerMarkers": [],
+      "passed": true
+    }
+  ],
+  "benchmarks": [
+    {
+      "scale": 2,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "outputWidth": 640,
+      "outputHeight": 320,
+      "warmupsPerPath": 3,
+      "requestedRounds": 15,
+      "completedRounds": 15,
+      "p95Definition": "nearest-rank ceil(0.95*N); N=15 => maximum",
+      "freshUploadEveryGpuSample": true,
+      "allocationsExcluded": true,
+      "rounds": [
+        {
+          "round": 1,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 29.976375,
+          "gpuUploadAndCompletionMs": 2.663416,
+          "gpuReadbackAndBitmapMs": 5.999792,
+          "gpuEndToEndMs": 8.663208
+        },
+        {
+          "round": 2,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 3.465375,
+          "gpuReadbackAndBitmapMs": 5.660417,
+          "gpuEndToEndMs": 9.125792,
+          "cpuRenderAndBitmapMs": 29.612667
+        },
+        {
+          "round": 3,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 29.286334,
+          "gpuUploadAndCompletionMs": 3.088916,
+          "gpuReadbackAndBitmapMs": 5.613417,
+          "gpuEndToEndMs": 8.702333
+        },
+        {
+          "round": 4,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 2.69825,
+          "gpuReadbackAndBitmapMs": 5.92725,
+          "gpuEndToEndMs": 8.6255,
+          "cpuRenderAndBitmapMs": 31.046
+        },
+        {
+          "round": 5,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 30.151292,
+          "gpuUploadAndCompletionMs": 2.803458,
+          "gpuReadbackAndBitmapMs": 5.77875,
+          "gpuEndToEndMs": 8.582208
+        },
+        {
+          "round": 6,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 2.782083,
+          "gpuReadbackAndBitmapMs": 6.006083,
+          "gpuEndToEndMs": 8.788166,
+          "cpuRenderAndBitmapMs": 30.79775
+        },
+        {
+          "round": 7,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 29.709667,
+          "gpuUploadAndCompletionMs": 2.678958,
+          "gpuReadbackAndBitmapMs": 6.039042,
+          "gpuEndToEndMs": 8.718
+        },
+        {
+          "round": 8,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 2.624166,
+          "gpuReadbackAndBitmapMs": 5.682792,
+          "gpuEndToEndMs": 8.306958,
+          "cpuRenderAndBitmapMs": 29.6195
+        },
+        {
+          "round": 9,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 30.249291,
+          "gpuUploadAndCompletionMs": 2.674708,
+          "gpuReadbackAndBitmapMs": 5.915208,
+          "gpuEndToEndMs": 8.589916
+        },
+        {
+          "round": 10,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 2.907917,
+          "gpuReadbackAndBitmapMs": 5.790625,
+          "gpuEndToEndMs": 8.698542,
+          "cpuRenderAndBitmapMs": 29.963
+        },
+        {
+          "round": 11,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 30.42125,
+          "gpuUploadAndCompletionMs": 2.486167,
+          "gpuReadbackAndBitmapMs": 5.861125,
+          "gpuEndToEndMs": 8.347292
+        },
+        {
+          "round": 12,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 2.919584,
+          "gpuReadbackAndBitmapMs": 5.895875,
+          "gpuEndToEndMs": 8.815459,
+          "cpuRenderAndBitmapMs": 30.090875
+        },
+        {
+          "round": 13,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 29.506334,
+          "gpuUploadAndCompletionMs": 2.703416,
+          "gpuReadbackAndBitmapMs": 5.914084,
+          "gpuEndToEndMs": 8.6175
+        },
+        {
+          "round": 14,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 2.821042,
+          "gpuReadbackAndBitmapMs": 5.70325,
+          "gpuEndToEndMs": 8.524292,
+          "cpuRenderAndBitmapMs": 29.884833
+        },
+        {
+          "round": 15,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 29.904833,
+          "gpuUploadAndCompletionMs": 3.091333,
+          "gpuReadbackAndBitmapMs": 5.636208,
+          "gpuEndToEndMs": 8.727541
+        }
+      ],
+      "timingPassed": true,
+      "cpuRenderAndBitmap": {
+        "samplesMs": [
+          29.976375,
+          29.612667,
+          29.286334,
+          31.046,
+          30.151292,
+          30.79775,
+          29.709667,
+          29.6195,
+          30.249291,
+          29.963,
+          30.42125,
+          30.090875,
+          29.506334,
+          29.884833,
+          29.904833
+        ],
+        "medianMs": 29.963,
+        "p95Ms": 31.046
+      },
+      "gpuUploadAndCompletion": {
+        "samplesMs": [
+          2.663416,
+          3.465375,
+          3.088916,
+          2.69825,
+          2.803458,
+          2.782083,
+          2.678958,
+          2.624166,
+          2.674708,
+          2.907917,
+          2.486167,
+          2.919584,
+          2.703416,
+          2.821042,
+          3.091333
+        ],
+        "medianMs": 2.782083,
+        "p95Ms": 3.465375
+      },
+      "gpuReadbackAndBitmap": {
+        "samplesMs": [
+          5.999792,
+          5.660417,
+          5.613417,
+          5.92725,
+          5.77875,
+          6.006083,
+          6.039042,
+          5.682792,
+          5.915208,
+          5.790625,
+          5.861125,
+          5.895875,
+          5.914084,
+          5.70325,
+          5.636208
+        ],
+        "medianMs": 5.861125,
+        "p95Ms": 6.039042
+      },
+      "gpuEndToEnd": {
+        "samplesMs": [
+          8.663208,
+          9.125792,
+          8.702333,
+          8.6255,
+          8.582208,
+          8.788166,
+          8.718,
+          8.306958,
+          8.589916,
+          8.698542,
+          8.347292,
+          8.815459,
+          8.6175,
+          8.524292,
+          8.727541
+        ],
+        "medianMs": 8.663208,
+        "p95Ms": 9.125792
+      },
+      "completionMedianLower": true,
+      "completionP95Lower": true,
+      "endToEndMedianLower": true,
+      "endToEndP95Lower": true
+    },
+    {
+      "scale": 3,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "outputWidth": 960,
+      "outputHeight": 480,
+      "warmupsPerPath": 3,
+      "requestedRounds": 15,
+      "completedRounds": 15,
+      "p95Definition": "nearest-rank ceil(0.95*N); N=15 => maximum",
+      "freshUploadEveryGpuSample": true,
+      "allocationsExcluded": true,
+      "rounds": [
+        {
+          "round": 1,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 49.493917,
+          "gpuUploadAndCompletionMs": 4.649125,
+          "gpuReadbackAndBitmapMs": 12.572709,
+          "gpuEndToEndMs": 17.221834
+        },
+        {
+          "round": 2,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 4.706416,
+          "gpuReadbackAndBitmapMs": 12.441459,
+          "gpuEndToEndMs": 17.147875,
+          "cpuRenderAndBitmapMs": 51.540834
+        },
+        {
+          "round": 3,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 50.689291,
+          "gpuUploadAndCompletionMs": 4.591791,
+          "gpuReadbackAndBitmapMs": 12.651292,
+          "gpuEndToEndMs": 17.243083
+        },
+        {
+          "round": 4,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 4.912041,
+          "gpuReadbackAndBitmapMs": 12.874292,
+          "gpuEndToEndMs": 17.786333,
+          "cpuRenderAndBitmapMs": 49.661167
+        },
+        {
+          "round": 5,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 49.439709,
+          "gpuUploadAndCompletionMs": 4.7945,
+          "gpuReadbackAndBitmapMs": 12.557041,
+          "gpuEndToEndMs": 17.351541
+        },
+        {
+          "round": 6,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 4.9035,
+          "gpuReadbackAndBitmapMs": 12.9655,
+          "gpuEndToEndMs": 17.869,
+          "cpuRenderAndBitmapMs": 50.767084
+        },
+        {
+          "round": 7,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 50.137458,
+          "gpuUploadAndCompletionMs": 4.878125,
+          "gpuReadbackAndBitmapMs": 12.905208,
+          "gpuEndToEndMs": 17.783333
+        },
+        {
+          "round": 8,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 4.832209,
+          "gpuReadbackAndBitmapMs": 13.323791,
+          "gpuEndToEndMs": 18.156,
+          "cpuRenderAndBitmapMs": 49.785583
+        },
+        {
+          "round": 9,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 49.561,
+          "gpuUploadAndCompletionMs": 4.875083,
+          "gpuReadbackAndBitmapMs": 12.465458,
+          "gpuEndToEndMs": 17.340541
+        },
+        {
+          "round": 10,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 4.804,
+          "gpuReadbackAndBitmapMs": 12.903459,
+          "gpuEndToEndMs": 17.707459,
+          "cpuRenderAndBitmapMs": 50.153084
+        },
+        {
+          "round": 11,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 50.006,
+          "gpuUploadAndCompletionMs": 4.338084,
+          "gpuReadbackAndBitmapMs": 12.804375,
+          "gpuEndToEndMs": 17.142459
+        },
+        {
+          "round": 12,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 4.809417,
+          "gpuReadbackAndBitmapMs": 12.942166,
+          "gpuEndToEndMs": 17.751583,
+          "cpuRenderAndBitmapMs": 50.488709
+        },
+        {
+          "round": 13,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 52.424375,
+          "gpuUploadAndCompletionMs": 4.786583,
+          "gpuReadbackAndBitmapMs": 12.839084,
+          "gpuEndToEndMs": 17.625667
+        },
+        {
+          "round": 14,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 4.747125,
+          "gpuReadbackAndBitmapMs": 13.163084,
+          "gpuEndToEndMs": 17.910209,
+          "cpuRenderAndBitmapMs": 51.496458
+        },
+        {
+          "round": 15,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 50.201042,
+          "gpuUploadAndCompletionMs": 4.696292,
+          "gpuReadbackAndBitmapMs": 12.993042,
+          "gpuEndToEndMs": 17.689334
+        }
+      ],
+      "timingPassed": true,
+      "cpuRenderAndBitmap": {
+        "samplesMs": [
+          49.493917,
+          51.540834,
+          50.689291,
+          49.661167,
+          49.439709,
+          50.767084,
+          50.137458,
+          49.785583,
+          49.561,
+          50.153084,
+          50.006,
+          50.488709,
+          52.424375,
+          51.496458,
+          50.201042
+        ],
+        "medianMs": 50.153084,
+        "p95Ms": 52.424375
+      },
+      "gpuUploadAndCompletion": {
+        "samplesMs": [
+          4.649125,
+          4.706416,
+          4.591791,
+          4.912041,
+          4.7945,
+          4.9035,
+          4.878125,
+          4.832209,
+          4.875083,
+          4.804,
+          4.338084,
+          4.809417,
+          4.786583,
+          4.747125,
+          4.696292
+        ],
+        "medianMs": 4.7945,
+        "p95Ms": 4.912041
+      },
+      "gpuReadbackAndBitmap": {
+        "samplesMs": [
+          12.572709,
+          12.441459,
+          12.651292,
+          12.874292,
+          12.557041,
+          12.9655,
+          12.905208,
+          13.323791,
+          12.465458,
+          12.903459,
+          12.804375,
+          12.942166,
+          12.839084,
+          13.163084,
+          12.993042
+        ],
+        "medianMs": 12.874292,
+        "p95Ms": 13.323791
+      },
+      "gpuEndToEnd": {
+        "samplesMs": [
+          17.221834,
+          17.147875,
+          17.243083,
+          17.786333,
+          17.351541,
+          17.869,
+          17.783333,
+          18.156,
+          17.340541,
+          17.707459,
+          17.142459,
+          17.751583,
+          17.625667,
+          17.910209,
+          17.689334
+        ],
+        "medianMs": 17.689334,
+        "p95Ms": 18.156
+      },
+      "completionMedianLower": true,
+      "completionP95Lower": true,
+      "endToEndMedianLower": true,
+      "endToEndP95Lower": true
+    },
+    {
+      "scale": 5,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "outputWidth": 1600,
+      "outputHeight": 800,
+      "warmupsPerPath": 3,
+      "requestedRounds": 15,
+      "completedRounds": 15,
+      "p95Definition": "nearest-rank ceil(0.95*N); N=15 => maximum",
+      "freshUploadEveryGpuSample": true,
+      "allocationsExcluded": true,
+      "rounds": [
+        {
+          "round": 1,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 113.659375,
+          "gpuUploadAndCompletionMs": 11.559167,
+          "gpuReadbackAndBitmapMs": 34.68575,
+          "gpuEndToEndMs": 46.244917
+        },
+        {
+          "round": 2,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 11.76175,
+          "gpuReadbackAndBitmapMs": 35.745,
+          "gpuEndToEndMs": 47.50675,
+          "cpuRenderAndBitmapMs": 109.712125
+        },
+        {
+          "round": 3,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 114.594542,
+          "gpuUploadAndCompletionMs": 12.454167,
+          "gpuReadbackAndBitmapMs": 35.226916,
+          "gpuEndToEndMs": 47.681083
+        },
+        {
+          "round": 4,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 11.837,
+          "gpuReadbackAndBitmapMs": 35.829875,
+          "gpuEndToEndMs": 47.666875,
+          "cpuRenderAndBitmapMs": 112.073958
+        },
+        {
+          "round": 5,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 113.854125,
+          "gpuUploadAndCompletionMs": 11.516209,
+          "gpuReadbackAndBitmapMs": 34.715208,
+          "gpuEndToEndMs": 46.231417
+        },
+        {
+          "round": 6,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 11.805167,
+          "gpuReadbackAndBitmapMs": 35.963917,
+          "gpuEndToEndMs": 47.769084,
+          "cpuRenderAndBitmapMs": 115.172166
+        },
+        {
+          "round": 7,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 114.485375,
+          "gpuUploadAndCompletionMs": 11.697,
+          "gpuReadbackAndBitmapMs": 35.896292,
+          "gpuEndToEndMs": 47.593292
+        },
+        {
+          "round": 8,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 11.679208,
+          "gpuReadbackAndBitmapMs": 36.256917,
+          "gpuEndToEndMs": 47.936125,
+          "cpuRenderAndBitmapMs": 112.751458
+        },
+        {
+          "round": 9,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 114.337751,
+          "gpuUploadAndCompletionMs": 11.495875,
+          "gpuReadbackAndBitmapMs": 34.541708,
+          "gpuEndToEndMs": 46.037583
+        },
+        {
+          "round": 10,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 11.671125,
+          "gpuReadbackAndBitmapMs": 35.789209,
+          "gpuEndToEndMs": 47.460334,
+          "cpuRenderAndBitmapMs": 112.266208
+        },
+        {
+          "round": 11,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 114.716458,
+          "gpuUploadAndCompletionMs": 11.622,
+          "gpuReadbackAndBitmapMs": 35.501875,
+          "gpuEndToEndMs": 47.123875
+        },
+        {
+          "round": 12,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 11.862875,
+          "gpuReadbackAndBitmapMs": 36.901542,
+          "gpuEndToEndMs": 48.764417,
+          "cpuRenderAndBitmapMs": 112.790333
+        },
+        {
+          "round": 13,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 114.452417,
+          "gpuUploadAndCompletionMs": 11.612042,
+          "gpuReadbackAndBitmapMs": 34.753584,
+          "gpuEndToEndMs": 46.365626
+        },
+        {
+          "round": 14,
+          "order": "GPU,CPU",
+          "gpuUploadAndCompletionMs": 11.696375,
+          "gpuReadbackAndBitmapMs": 36.010292,
+          "gpuEndToEndMs": 47.706667,
+          "cpuRenderAndBitmapMs": 112.547417
+        },
+        {
+          "round": 15,
+          "order": "CPU,GPU",
+          "cpuRenderAndBitmapMs": 114.244459,
+          "gpuUploadAndCompletionMs": 12.730209,
+          "gpuReadbackAndBitmapMs": 34.76475,
+          "gpuEndToEndMs": 47.494959
+        }
+      ],
+      "timingPassed": true,
+      "cpuRenderAndBitmap": {
+        "samplesMs": [
+          113.659375,
+          109.712125,
+          114.594542,
+          112.073958,
+          113.854125,
+          115.172166,
+          114.485375,
+          112.751458,
+          114.337751,
+          112.266208,
+          114.716458,
+          112.790333,
+          114.452417,
+          112.547417,
+          114.244459
+        ],
+        "medianMs": 113.854125,
+        "p95Ms": 115.172166
+      },
+      "gpuUploadAndCompletion": {
+        "samplesMs": [
+          11.559167,
+          11.76175,
+          12.454167,
+          11.837,
+          11.516209,
+          11.805167,
+          11.697,
+          11.679208,
+          11.495875,
+          11.671125,
+          11.622,
+          11.862875,
+          11.612042,
+          11.696375,
+          12.730209
+        ],
+        "medianMs": 11.696375,
+        "p95Ms": 12.730209
+      },
+      "gpuReadbackAndBitmap": {
+        "samplesMs": [
+          34.68575,
+          35.745,
+          35.226916,
+          35.829875,
+          34.715208,
+          35.963917,
+          35.896292,
+          36.256917,
+          34.541708,
+          35.789209,
+          35.501875,
+          36.901542,
+          34.753584,
+          36.010292,
+          34.76475
+        ],
+        "medianMs": 35.745,
+        "p95Ms": 36.901542
+      },
+      "gpuEndToEnd": {
+        "samplesMs": [
+          46.244917,
+          47.50675,
+          47.681083,
+          47.666875,
+          46.231417,
+          47.769084,
+          47.593292,
+          47.936125,
+          46.037583,
+          47.460334,
+          47.123875,
+          48.764417,
+          46.365626,
+          47.706667,
+          47.494959
+        ],
+        "medianMs": 47.50675,
+        "p95Ms": 48.764417
+      },
+      "completionMedianLower": true,
+      "completionP95Lower": true,
+      "endToEndMedianLower": true,
+      "endToEndP95Lower": true
+    }
+  ],
+  "allocations": [
+    {
+      "phase": "validation",
+      "fixture": "synthetic-text",
+      "scale": 1,
+      "allocationMs": 0.777084,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "outputWidth": 320,
+      "outputHeight": 160,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "synthetic-text",
+      "scale": 2,
+      "allocationMs": 1.366541,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "outputWidth": 640,
+      "outputHeight": 320,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "synthetic-text",
+      "scale": 3,
+      "allocationMs": 2.166417,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "outputWidth": 960,
+      "outputHeight": 480,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "synthetic-text",
+      "scale": 5,
+      "allocationMs": 2.4745,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "outputWidth": 1600,
+      "outputHeight": 800,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "single-pixel",
+      "scale": 1,
+      "allocationMs": 0.335917,
+      "sourceWidth": 1,
+      "sourceHeight": 1,
+      "outputWidth": 1,
+      "outputHeight": 1,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "single-pixel",
+      "scale": 2,
+      "allocationMs": 0.224834,
+      "sourceWidth": 1,
+      "sourceHeight": 1,
+      "outputWidth": 2,
+      "outputHeight": 2,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "single-pixel",
+      "scale": 3,
+      "allocationMs": 0.288625,
+      "sourceWidth": 1,
+      "sourceHeight": 1,
+      "outputWidth": 3,
+      "outputHeight": 3,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "single-pixel",
+      "scale": 5,
+      "allocationMs": 0.265042,
+      "sourceWidth": 1,
+      "sourceHeight": 1,
+      "outputWidth": 5,
+      "outputHeight": 5,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "vertical-1x17",
+      "scale": 1,
+      "allocationMs": 0.690667,
+      "sourceWidth": 1,
+      "sourceHeight": 17,
+      "outputWidth": 1,
+      "outputHeight": 17,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "vertical-1x17",
+      "scale": 2,
+      "allocationMs": 0.329083,
+      "sourceWidth": 1,
+      "sourceHeight": 17,
+      "outputWidth": 2,
+      "outputHeight": 34,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "vertical-1x17",
+      "scale": 3,
+      "allocationMs": 0.444417,
+      "sourceWidth": 1,
+      "sourceHeight": 17,
+      "outputWidth": 3,
+      "outputHeight": 51,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "vertical-1x17",
+      "scale": 5,
+      "allocationMs": 0.281583,
+      "sourceWidth": 1,
+      "sourceHeight": 17,
+      "outputWidth": 5,
+      "outputHeight": 85,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "horizontal-19x1",
+      "scale": 1,
+      "allocationMs": 0.526209,
+      "sourceWidth": 19,
+      "sourceHeight": 1,
+      "outputWidth": 19,
+      "outputHeight": 1,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "horizontal-19x1",
+      "scale": 2,
+      "allocationMs": 0.310541,
+      "sourceWidth": 19,
+      "sourceHeight": 1,
+      "outputWidth": 38,
+      "outputHeight": 2,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "horizontal-19x1",
+      "scale": 3,
+      "allocationMs": 0.573292,
+      "sourceWidth": 19,
+      "sourceHeight": 1,
+      "outputWidth": 57,
+      "outputHeight": 3,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "horizontal-19x1",
+      "scale": 5,
+      "allocationMs": 0.379625,
+      "sourceWidth": 19,
+      "sourceHeight": 1,
+      "outputWidth": 95,
+      "outputHeight": 5,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "asymmetric-colored-corners",
+      "scale": 1,
+      "allocationMs": 0.827458,
+      "sourceWidth": 17,
+      "sourceHeight": 13,
+      "outputWidth": 17,
+      "outputHeight": 13,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "asymmetric-colored-corners",
+      "scale": 2,
+      "allocationMs": 0.948833,
+      "sourceWidth": 17,
+      "sourceHeight": 13,
+      "outputWidth": 34,
+      "outputHeight": 26,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "asymmetric-colored-corners",
+      "scale": 3,
+      "allocationMs": 0.215167,
+      "sourceWidth": 17,
+      "sourceHeight": 13,
+      "outputWidth": 51,
+      "outputHeight": 39,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "asymmetric-colored-corners",
+      "scale": 5,
+      "allocationMs": 0.234042,
+      "sourceWidth": 17,
+      "sourceHeight": 13,
+      "outputWidth": 85,
+      "outputHeight": 65,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "impulses",
+      "scale": 1,
+      "allocationMs": 0.579292,
+      "sourceWidth": 11,
+      "sourceHeight": 9,
+      "outputWidth": 11,
+      "outputHeight": 9,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "impulses",
+      "scale": 2,
+      "allocationMs": 0.429917,
+      "sourceWidth": 11,
+      "sourceHeight": 9,
+      "outputWidth": 22,
+      "outputHeight": 18,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "impulses",
+      "scale": 3,
+      "allocationMs": 0.201667,
+      "sourceWidth": 11,
+      "sourceHeight": 9,
+      "outputWidth": 33,
+      "outputHeight": 27,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "impulses",
+      "scale": 5,
+      "allocationMs": 0.257458,
+      "sourceWidth": 11,
+      "sourceHeight": 9,
+      "outputWidth": 55,
+      "outputHeight": 45,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "checkerboard",
+      "scale": 1,
+      "allocationMs": 0.383625,
+      "sourceWidth": 17,
+      "sourceHeight": 11,
+      "outputWidth": 17,
+      "outputHeight": 11,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "checkerboard",
+      "scale": 2,
+      "allocationMs": 0.77575,
+      "sourceWidth": 17,
+      "sourceHeight": 11,
+      "outputWidth": 34,
+      "outputHeight": 22,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "checkerboard",
+      "scale": 3,
+      "allocationMs": 0.2935,
+      "sourceWidth": 17,
+      "sourceHeight": 11,
+      "outputWidth": 51,
+      "outputHeight": 33,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "checkerboard",
+      "scale": 5,
+      "allocationMs": 0.31925,
+      "sourceWidth": 17,
+      "sourceHeight": 11,
+      "outputWidth": 85,
+      "outputHeight": 55,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "thin-lines",
+      "scale": 1,
+      "allocationMs": 0.521125,
+      "sourceWidth": 19,
+      "sourceHeight": 13,
+      "outputWidth": 19,
+      "outputHeight": 13,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "thin-lines",
+      "scale": 2,
+      "allocationMs": 0.362875,
+      "sourceWidth": 19,
+      "sourceHeight": 13,
+      "outputWidth": 38,
+      "outputHeight": 26,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "thin-lines",
+      "scale": 3,
+      "allocationMs": 0.283875,
+      "sourceWidth": 19,
+      "sourceHeight": 13,
+      "outputWidth": 57,
+      "outputHeight": 39,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "thin-lines",
+      "scale": 5,
+      "allocationMs": 0.521459,
+      "sourceWidth": 19,
+      "sourceHeight": 13,
+      "outputWidth": 95,
+      "outputHeight": 65,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "solid",
+      "scale": 1,
+      "allocationMs": 0.267375,
+      "sourceWidth": 7,
+      "sourceHeight": 5,
+      "outputWidth": 7,
+      "outputHeight": 5,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "solid",
+      "scale": 2,
+      "allocationMs": 3.379292,
+      "sourceWidth": 7,
+      "sourceHeight": 5,
+      "outputWidth": 14,
+      "outputHeight": 10,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "solid",
+      "scale": 3,
+      "allocationMs": 0.254792,
+      "sourceWidth": 7,
+      "sourceHeight": 5,
+      "outputWidth": 21,
+      "outputHeight": 15,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "solid",
+      "scale": 5,
+      "allocationMs": 3.134666,
+      "sourceWidth": 7,
+      "sourceHeight": 5,
+      "outputWidth": 35,
+      "outputHeight": 25,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "grayscale-ramp",
+      "scale": 1,
+      "allocationMs": 0.324916,
+      "sourceWidth": 31,
+      "sourceHeight": 7,
+      "outputWidth": 31,
+      "outputHeight": 7,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "grayscale-ramp",
+      "scale": 2,
+      "allocationMs": 0.26375,
+      "sourceWidth": 31,
+      "sourceHeight": 7,
+      "outputWidth": 62,
+      "outputHeight": 14,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "grayscale-ramp",
+      "scale": 3,
+      "allocationMs": 0.436958,
+      "sourceWidth": 31,
+      "sourceHeight": 7,
+      "outputWidth": 93,
+      "outputHeight": 21,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "grayscale-ramp",
+      "scale": 5,
+      "allocationMs": 0.651709,
+      "sourceWidth": 31,
+      "sourceHeight": 7,
+      "outputWidth": 155,
+      "outputHeight": 35,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "color-ramp",
+      "scale": 1,
+      "allocationMs": 2.550708,
+      "sourceWidth": 23,
+      "sourceHeight": 17,
+      "outputWidth": 23,
+      "outputHeight": 17,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "color-ramp",
+      "scale": 2,
+      "allocationMs": 0.295042,
+      "sourceWidth": 23,
+      "sourceHeight": 17,
+      "outputWidth": 46,
+      "outputHeight": 34,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "color-ramp",
+      "scale": 3,
+      "allocationMs": 2.980667,
+      "sourceWidth": 23,
+      "sourceHeight": 17,
+      "outputWidth": 69,
+      "outputHeight": 51,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "color-ramp",
+      "scale": 5,
+      "allocationMs": 0.299916,
+      "sourceWidth": 23,
+      "sourceHeight": 17,
+      "outputWidth": 115,
+      "outputHeight": 85,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "seeded-noise",
+      "scale": 1,
+      "allocationMs": 0.38,
+      "sourceWidth": 17,
+      "sourceHeight": 13,
+      "outputWidth": 17,
+      "outputHeight": 13,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "seeded-noise",
+      "scale": 2,
+      "allocationMs": 0.2705,
+      "sourceWidth": 17,
+      "sourceHeight": 13,
+      "outputWidth": 34,
+      "outputHeight": 26,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "seeded-noise",
+      "scale": 3,
+      "allocationMs": 0.251125,
+      "sourceWidth": 17,
+      "sourceHeight": 13,
+      "outputWidth": 51,
+      "outputHeight": 39,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "validation",
+      "fixture": "seeded-noise",
+      "scale": 5,
+      "allocationMs": 0.227042,
+      "sourceWidth": 17,
+      "sourceHeight": 13,
+      "outputWidth": 85,
+      "outputHeight": 65,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "benchmark",
+      "fixture": "synthetic-text",
+      "scale": 2,
+      "allocationMs": 0.533334,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "outputWidth": 640,
+      "outputHeight": 320,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "benchmark",
+      "fixture": "synthetic-text",
+      "scale": 3,
+      "allocationMs": 0.587334,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "outputWidth": 960,
+      "outputHeight": 480,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "benchmark",
+      "fixture": "synthetic-text",
+      "scale": 5,
+      "allocationMs": 0.618875,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "outputWidth": 1600,
+      "outputHeight": 800,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    },
+    {
+      "phase": "comparison",
+      "fixture": "synthetic-text",
+      "scale": 3,
+      "allocationMs": 0.483583,
+      "sourceWidth": 320,
+      "sourceHeight": 160,
+      "outputWidth": 960,
+      "outputHeight": 480,
+      "scope": "Texture/readback capacity allocation + completion; zero if reused"
+    }
+  ],
+  "inputPacking": [
+    {
+      "fixture": "synthetic-text",
+      "width": 320,
+      "height": 160,
+      "packingMs": 15.97925,
+      "scope": "Direct RGBA buffer allocation and explicit ARGB-to-RGBA packing, excluded from sample timing"
+    },
+    {
+      "fixture": "single-pixel",
+      "width": 1,
+      "height": 1,
+      "packingMs": 0.009042,
+      "scope": "Direct RGBA buffer allocation and explicit ARGB-to-RGBA packing, excluded from sample timing"
+    },
+    {
+      "fixture": "vertical-1x17",
+      "width": 1,
+      "height": 17,
+      "packingMs": 0.009625,
+      "scope": "Direct RGBA buffer allocation and explicit ARGB-to-RGBA packing, excluded from sample timing"
+    },
+    {
+      "fixture": "horizontal-19x1",
+      "width": 19,
+      "height": 1,
+      "packingMs": 0.009166,
+      "scope": "Direct RGBA buffer allocation and explicit ARGB-to-RGBA packing, excluded from sample timing"
+    },
+    {
+      "fixture": "asymmetric-colored-corners",
+      "width": 17,
+      "height": 13,
+      "packingMs": 0.018666,
+      "scope": "Direct RGBA buffer allocation and explicit ARGB-to-RGBA packing, excluded from sample timing"
+    },
+    {
+      "fixture": "impulses",
+      "width": 11,
+      "height": 9,
+      "packingMs": 0.011042,
+      "scope": "Direct RGBA buffer allocation and explicit ARGB-to-RGBA packing, excluded from sample timing"
+    },
+    {
+      "fixture": "checkerboard",
+      "width": 17,
+      "height": 11,
+      "packingMs": 0.015166,
+      "scope": "Direct RGBA buffer allocation and explicit ARGB-to-RGBA packing, excluded from sample timing"
+    },
+    {
+      "fixture": "thin-lines",
+      "width": 19,
+      "height": 13,
+      "packingMs": 0.014458,
+      "scope": "Direct RGBA buffer allocation and explicit ARGB-to-RGBA packing, excluded from sample timing"
+    },
+    {
+      "fixture": "solid",
+      "width": 7,
+      "height": 5,
+      "packingMs": 0.009917,
+      "scope": "Direct RGBA buffer allocation and explicit ARGB-to-RGBA packing, excluded from sample timing"
+    },
+    {
+      "fixture": "grayscale-ramp",
+      "width": 31,
+      "height": 7,
+      "packingMs": 0.01625,
+      "scope": "Direct RGBA buffer allocation and explicit ARGB-to-RGBA packing, excluded from sample timing"
+    },
+    {
+      "fixture": "color-ramp",
+      "width": 23,
+      "height": 17,
+      "packingMs": 0.018875,
+      "scope": "Direct RGBA buffer allocation and explicit ARGB-to-RGBA packing, excluded from sample timing"
+    },
+    {
+      "fixture": "seeded-noise",
+      "width": 17,
+      "height": 13,
+      "packingMs": 0.017291,
+      "scope": "Direct RGBA buffer allocation and explicit ARGB-to-RGBA packing, excluded from sample timing"
+    }
+  ],
+  "numericalPassed": true,
+  "timingGate3and5": true,
+  "allPassed": true,
+  "ready": true,
+  "limitations": [
+    "Independent synthetic experiment; no production integration or automatic production acceptance.",
+    "Opaque 8-bit RGBA only; no HDR, wide gamut, alpha compositing or captured pages.",
+    "Per-image bounds; fixtures and scales run serially, never as one large atlas.",
+    "Short debug workload; not FPS, battery, thermal, sustained performance or all-OEM evidence.",
+    "Upload + GPU completion includes CPU submission/driver/synchronization; NOT GPU-only timing.",
+    "End-to-end excludes input packing, EGL/shader initialization, texture/buffer allocation, UI and PNG.",
+    "Readback + Bitmap includes glReadPixels, explicit RGBA-to-ARGB conversion and Bitmap creation.",
+    "P95 uses nearest rank; with 15 measured rounds P95 is the maximum sample.",
+    "Driver floating-point arithmetic can differ; thresholds are fixed and never relaxed."
+  ],
+  "finishedAtEpochMs": 1790232852466,
+  "comparison": {
+    "file": "comparison-gpu-3x.png",
+    "runId": "1790232845722-dc6fbb31-9b80-49d5-9851-9d4db12fecc9",
+    "scale": 3,
+    "imageWidth": 960,
+    "imageHeight": 480
+  }
+}

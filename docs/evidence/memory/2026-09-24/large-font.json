@@ -1,0 +1,42 @@
+{
+  "scope": "Dedicated API36 emulator own menu structural checks only, not TalkBack or subjective legibility",
+  "cases": [
+    {
+      "fontScale": 1.0,
+      "passed": true,
+      "closeBounds": [
+        933,
+        84,
+        1059,
+        210
+      ],
+      "minIconTouchDp": 48,
+      "pagesChecked": 2
+    },
+    {
+      "fontScale": 1.5,
+      "passed": true,
+      "closeBounds": [
+        933,
+        93,
+        1059,
+        219
+      ],
+      "minIconTouchDp": 48,
+      "pagesChecked": 2
+    },
+    {
+      "fontScale": 2.0,
+      "passed": true,
+      "closeBounds": [
+        933,
+        108,
+        1059,
+        234
+      ],
+      "minIconTouchDp": 48,
+      "pagesChecked": 2
+    }
+  ],
+  "originalFontScaleRestored": true
+}

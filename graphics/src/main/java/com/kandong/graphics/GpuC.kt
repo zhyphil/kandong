@@ -72,7 +72,11 @@ class GpuC : AutoCloseable {
     private var sourceHeight = 0
     private var outputWidth = 0
     private var outputHeight = 0
-    private var readback: ByteBuffer? = null
+    private val scratch = GpuScratch()
+    val scratchStats: GpuScratchStats get() {
+        check(Thread.currentThread() === owner) { "GpuC must stay on its owner thread" }
+        return scratch.stats
+    }
     val renderer: String
     val version: String
     val vendor: String
@@ -159,13 +163,13 @@ class GpuC : AutoCloseable {
     /** Allocate outside measured samples. Integer laboratory math/limits remain unchanged. */
     fun prepare(input: Input, scale: Int): Double = guarded {
         val shape = GpuChecks.integerShape(input.width, input.height, input.count, scale)
-        prepareTargets(input, shape, scale, null)
+        prepareTargets(input.width, input.height, shape, scale, null)
     }
 
-    private fun prepareTargets(input: Input, shape: GpuChecks.Shape, scale: Int?, viewport: GpuViewport?): Double {
-        GpuChecks.deviceLimits(input.width, input.height, shape, maxTextureSize, maxViewportDims)
+    private fun prepareTargets(width: Int, height: Int, shape: GpuChecks.Shape, scale: Int?, viewport: GpuViewport?): Double {
+        GpuChecks.deviceLimits(width, height, shape, maxTextureSize, maxViewportDims)
         GpuChecks.cancellation()
-        val sourceChanged = sourceWidth != input.width || sourceHeight != input.height
+        val sourceChanged = sourceWidth != width || sourceHeight != height
         val outputChanged = outputWidth != shape.width || outputHeight != shape.height
         if (!sourceChanged && !outputChanged && integerScale == scale && preparedViewport == viewport) return 0.0
         GL.glFinish()
@@ -173,11 +177,11 @@ class GpuC : AutoCloseable {
         val start = System.nanoTime()
         for (index in 0..2) {
             if (!(if (index == 2) outputChanged else sourceChanged)) continue
-            val width = if (index == 2) shape.width else input.width
-            val height = if (index == 2) shape.height else input.height
+            val textureWidth = if (index == 2) shape.width else width
+            val textureHeight = if (index == 2) shape.height else height
             GL.glBindTexture(GL.GL_TEXTURE_2D, textures[index])
             textureParameters()
-            GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_RGBA8, width, height, 0,
+            GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_RGBA8, textureWidth, textureHeight, 0,
                 GL.GL_RGBA, GL.GL_UNSIGNED_BYTE, null)
             gl("allocate RGBA8 texture $index")
         }
@@ -186,7 +190,7 @@ class GpuC : AutoCloseable {
             val size = if (axis == 0) shape.width else shape.height
             val rows = if (viewport == null) 1 else 2
             val weights = if (viewport == null) GpuSamplingWeights.create(size, checkNotNull(scale))
-                else GpuSamplingWeights.viewport(if (axis == 0) input.width else input.height,
+                else GpuSamplingWeights.viewport(if (axis == 0) width else height,
                     size, viewport.scale, if (axis == 0) viewport.translateX else viewport.translateY)
             val bytes = weights.size * 4
             if ((coefficientBuffers[axis]?.capacity() ?: 0) < bytes)
@@ -204,14 +208,13 @@ class GpuC : AutoCloseable {
             coefficientRows[axis] = rows
             gl("upload Float sampling coefficients")
         }
-        val bytes = (shape.count.toLong() * 4L).toInt()
-        if ((readback?.capacity() ?: 0) < bytes) readback = ByteBuffer.allocateDirect(bytes)
-        attach(textures[1], input.width, input.height)
+        scratch.readback(shape.count)
+        attach(textures[1], width, height)
         attach(textures[2], shape.width, shape.height)
         GL.glFinish()
         gl("allocation completion")
-        sourceWidth = input.width
-        sourceHeight = input.height
+        sourceWidth = width
+        sourceHeight = height
         outputWidth = shape.width
         outputHeight = shape.height
         integerScale = scale
@@ -229,7 +232,7 @@ class GpuC : AutoCloseable {
 
     /** Fixed-size output; never allocates source * zoom dimensions. Caller owns/recycles the bitmap. */
     fun renderViewport(input: Input, viewport: GpuViewport): Output = guarded {
-        val allocationMs = prepareTargets(input, GpuChecks.output(viewport.width, viewport.height), null, viewport)
+        val allocationMs = prepareTargets(input.width, input.height, GpuChecks.output(viewport.width, viewport.height), null, viewport)
         GL.glFinish()
         gl("before viewport sample")
         GpuChecks.cancellation()
@@ -243,11 +246,35 @@ class GpuC : AutoCloseable {
         finishOutput(start, allocationMs)
     }
 
-    private fun upload(input: Input) {
+    /**
+     * Synchronous owner-thread live copy; keep bytes stable until this call returns.
+     * Each result owns its Bitmap. As with Input packing, CPU staging is outside sample timings.
+     */
+    fun renderViewportRgba(bytes: ByteArray, width: Int, height: Int, viewport: GpuViewport): Output = guarded {
+        val shape = GpuChecks.output(viewport.width, viewport.height)
+        // Validate dimensions, byte count and device caps before allocating any large scratch.
+        val buffer = scratch.copyRgba(bytes, width, height, shape, maxTextureSize, maxViewportDims)
+        val allocationMs = prepareTargets(width, height, shape, null, viewport)
+        GL.glFinish()
+        gl("before viewport sample")
+        GpuChecks.cancellation()
+        val start = System.nanoTime()
+        upload(width, height, buffer)
+        val source = if (viewport.scale == 1f) textures[0] else {
+            draw(sharpenProgram, textures[0], textures[1], width, height, 2)
+            textures[1]
+        }
+        draw(viewportProgram, source, textures[2], outputWidth, outputHeight, 1)
+        finishOutput(start, allocationMs)
+    }
+
+    private fun upload(input: Input) = upload(input.width, input.height, input.uploadBytes())
+
+    private fun upload(width: Int, height: Int, bytes: ByteBuffer) {
         GL.glActiveTexture(GL.GL_TEXTURE0)
         GL.glBindTexture(GL.GL_TEXTURE_2D, textures[0])
-        GL.glTexSubImage2D(GL.GL_TEXTURE_2D, 0, 0, 0, input.width, input.height,
-            GL.GL_RGBA, GL.GL_UNSIGNED_BYTE, input.uploadBytes())
+        GL.glTexSubImage2D(GL.GL_TEXTURE_2D, 0, 0, 0, width, height,
+            GL.GL_RGBA, GL.GL_UNSIGNED_BYTE, bytes)
         gl("upload RGBA")
     }
 
@@ -275,21 +302,12 @@ class GpuC : AutoCloseable {
         gl("upload + draws completion")
         val completed = System.nanoTime()
         GpuChecks.cancellation()
-        val buffer = checkNotNull(readback).apply { clear(); limit(outputWidth * outputHeight * 4) }
+        val buffer = scratch.readback(outputWidth * outputHeight)
         GL.glReadPixels(0, 0, outputWidth, outputHeight, GL.GL_RGBA, GL.GL_UNSIGNED_BYTE, buffer)
         gl("glReadPixels RGBA8")
         buffer.rewind()
-        val pixels = IntArray(outputWidth * outputHeight)
-        // Logical top row is uploaded to GL y=0, sampled as y=0, and read back first.
-        // No screen surface is presented; a flip at ANY of these boundaries would be a bug.
-        for (index in pixels.indices) {
-            if (index % 4096 == 0) GpuChecks.cancellation()
-            val r = buffer.get().toInt() and 255
-            val g = buffer.get().toInt() and 255
-            val b = buffer.get().toInt() and 255
-            val a = buffer.get().toInt() and 255
-            pixels[index] = (a shl 24) or (r shl 16) or (g shl 8) or b
-        }
+        // Logical top row remains GL y=0 at upload, sampling and readback; no row flip.
+        val pixels = scratch.toArgb(buffer, outputWidth * outputHeight)
         val bitmap = Bitmap.createBitmap(pixels, outputWidth, outputHeight, Bitmap.Config.ARGB_8888)
         try {
             bitmap.density = Bitmap.DENSITY_NONE
@@ -420,7 +438,7 @@ class GpuC : AutoCloseable {
         if (context != EGL.EGL_NO_CONTEXT) release { egl(EGL.eglDestroyContext(display, context), "destroy EGL context") }
         if (initialized) release { egl(EGL.eglTerminate(display), "terminate EGL") }
         release { egl(EGL.eglReleaseThread(), "release EGL thread") }
-        readback = null
+        scratch.clear()
         coefficientBuffers.fill(null)
         preparedViewport = null
         current = false

@@ -76,9 +76,10 @@ class ViewportLabActivity : Activity() {
                         }
                     }
                 }
-                val passed=(0 until cases.length()).all { cases.getJSONObject(it).getBoolean("passed") }
+                val reuse=ViewportReuseChecks.run()
+                val passed=(0 until cases.length()).all { cases.getJSONObject(it).getBoolean("passed") } && reuse.getBoolean("passed")
                 report(JSONObject().put("state","completed").put("ready",true).put("passed",passed)
-                    .put("cases",cases).put("timings",timings).put("device",detail)
+                    .put("cases",cases).put("timings",timings).put("device",detail).put("liveReuse",reuse)
                     .put("scope","Synthetic viewport math and target-size render only; not actual capture FPS or energy"))
                 runOnUiThread { label.text=if(passed) "视窗验证通过：${cases.length()}项" else "视窗验证未通过，请检查数值报告" }
             } catch (error: Exception) {

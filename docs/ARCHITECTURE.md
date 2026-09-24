@@ -77,4 +77,6 @@ Kotlin2.2.20、AGP8.13.0、Gradle8.13、JDK17、compile/target36、Build Tools35
 
 ## 可选本机清晰增强
 
-compat 通过 graphics 共享已在独立实验验证的 C 算法。固定镜面大小渲染、连续倍率/平移仍来自 MagnifierViewport；普通画面用缩放矩阵，增强输出用单位矩阵。主线程持有普通Bitmap，工作线程只接收独立选区字节；LatestRenderWorker 只保留一个待处理请求，并用失效代数丢弃迟到结果。收起/菜单/结束请求 owner 线程释放GL资源；系统共享会话规则不变。详细限制与验证见 [CLARITY_ENHANCEMENT](CLARITY_ENHANCEMENT.md)。
+compat 通过 graphics 共享已在独立实验验证的 C 算法。固定镜面大小渲染、连续倍率/平移仍来自 MagnifierViewport；普通画面用缩放矩阵，增强输出用单位矩阵。主线程持有普通Bitmap，工作线程只接收独立选区字节；LatestRenderWorker 只保留一个待处理请求、一个待交付结果和一个交付回调，用失效代数丢弃迟到结果；暂停/关闭立即释放未交付像素。GpuC在owner线程有界复用上传/读回/ARGB临时区，公共Input仍为不可变快照，输出Bitmap保持独立。收起/菜单/结束请求 owner 线程释放GL资源；系统共享会话规则不变。详细限制与验证见 [CLARITY_ENHANCEMENT](CLARITY_ENHANCEMENT.md)。
+
+内存与生命周期迭代的约束、回归和当前未完成范围见[MEMORY_STABILITY](MEMORY_STABILITY.md)。

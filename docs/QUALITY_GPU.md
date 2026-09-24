@@ -1,5 +1,7 @@
 # GPU C 独立实验
 
+本页记录2026-09-23独立实验阶段；后续已经接入可关闭的兼容镜面，当前状态见[清晰增强](CLARITY_ENHANCEMENT.md)与[资源管理迭代](MEMORY_STABILITY.md)。以下独立实验版本和数字保留为历史证据。
+
 实现范围仅为 `qualitylab`。版本 `0.0.2-gpu-experiment` / code 2。原 A/B/C 页面与用户选择的 CPU C 保持原实现；入口“独立 GPU C 实验（未接入放大镜）”打开 `GpuLabActivity`。该 Activity 可直接启动，只额外接受固定自测action，不接受外部图片、尺寸或算法参数，不申请权限，不读取页面、不联网。没有生产集成。
 
 ## 管线与边界

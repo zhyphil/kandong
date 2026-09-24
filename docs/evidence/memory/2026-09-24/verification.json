@@ -1,0 +1,56 @@
+{
+  "baseCommit": "e416be3",
+  "reviewedSourceSha256": "5d67a90143ab354c78f4128a02e2b3dcbd462137fe20a66c8fc333f4318f19dd",
+  "unitTests": {
+    "compat": {
+      "tests": 63,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "graphics": {
+      "tests": 20,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "qualitylab": {
+      "tests": 20,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "apks": {
+    "compatDebug": {
+      "sha256": "f1d7aabb3172dfc1ad2352aa6e171a0b39f59b92ca327f63dfadba901c253712",
+      "signatureVerified": true,
+      "alignmentVerified": true,
+      "hasInternetPermission": false
+    },
+    "compatRelease": {
+      "sha256": "3ba16e373af8f1f7aafc372b268eda512d72118f3a40dc01fe71e3bbb1ea3f7f",
+      "signatureVerified": true,
+      "alignmentVerified": true,
+      "hasInternetPermission": false
+    },
+    "labDebug": {
+      "sha256": "e984f0ce44faa69f040796fa995807a3190525d191a972f49551124c624b76c1",
+      "signatureVerified": true,
+      "alignmentVerified": true,
+      "hasInternetPermission": false
+    }
+  },
+  "versionUnchanged": true,
+  "phoneUpdated": false,
+  "published": false,
+  "lint": {
+    "compat": {
+      "Warning": 8
+    },
+    "graphics": {},
+    "qualitylab": {
+      "Warning": 12
+    }
+  }
+}

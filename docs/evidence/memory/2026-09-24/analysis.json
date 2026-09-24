@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "scope": "Dedicated KanDong API36 emulator, project synthetic fixture only; no physical phone interaction",
+  "reviewedSourceSha256": "5d67a90143ab354c78f4128a02e2b3dcbd462137fe20a66c8fc333f4318f19dd",
+  "active": {
+    "durationSeconds": 600.01,
+    "samples": 41,
+    "scale": 2,
+    "cropPixels": [
+      508,
+      154
+    ],
+    "viewportPixels": [
+      1017,
+      309
+    ],
+    "pssMiB": {
+      "first": 59.672,
+      "last": 65.11,
+      "min": 59.672,
+      "max": 66.009
+    },
+    "firstTenSamplesMedianPssMiB": 64.42,
+    "lastTenSamplesMedianPssMiB": 64.79,
+    "newErrors": 0,
+    "intervalsWithoutNewEnhancedFrame": 0
+  },
+  "paused": {
+    "durationSeconds": 60.003,
+    "samples": 13,
+    "countersConstant": true,
+    "captureStopped": true,
+    "surfaceDetached": true,
+    "gpuClosed": true,
+    "bitmapsCleared": true,
+    "newErrors": 0,
+    "pssMiB": {
+      "first": 55.958,
+      "last": 55.936,
+      "min": 55.837,
+      "max": 55.958
+    }
+  },
+  "finalStop": {
+    "dedicatedEmulatorVerified": true,
+    "projectionEnded": true,
+    "serviceRemoved": true,
+    "overlayWindowsRemoved": true,
+    "phoneOperated": false
+  },
+  "harnessNote": "Immediate assertion following the asynchronous collapse tap raced the UI transition; all 13 timed pause samples began after COLLAPSED and passed. No product failure or repeated tap was inferred.",
+  "limits": [
+    "Sampled state, not continuous event tracing or a proof of absence of leaks.",
+    "Pre-change 3-minute observation has different duration, warmup and process history; no percentage improvement or controlled A/B conclusion.",
+    "Emulator thermal, battery and power numbers are synthetic; no thermal or battery-drain conclusion.",
+    "Huawei still runs prior code7; previous physical-phone PSS rise remains unattributed and candidate acceptance pending."
+  ],
+  "rawSha256": {
+    "optimized-active.json": "764768bc75c3b55c36c9f8e01c876aa8e30d03f020223e6526b415d6ad5898dd",
+    "optimized-paused.json": "3e301d042d72e749d31dcaba94b8258bca648e93ac60361adbe153efc8479411",
+    "final-stop.json": "0918b26a35f932f58a0ec7ffbf0e05f136e3e03a7066d0589b59cd8fd6173281"
+  }
+}

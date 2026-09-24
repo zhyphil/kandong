@@ -1,0 +1,142 @@
+{
+  "scope": "Dedicated API36 emulator, synthetic fixture only; not phone acceptance or energy",
+  "state": "completed",
+  "requestedCycles": 20,
+  "cycles": [
+    {
+      "cycle": 1,
+      "passed": true,
+      "enhancedFrames": 14,
+      "pssKiB": 73570
+    },
+    {
+      "cycle": 2,
+      "passed": true,
+      "enhancedFrames": 20,
+      "pssKiB": 70218
+    },
+    {
+      "cycle": 3,
+      "passed": true,
+      "enhancedFrames": 26,
+      "pssKiB": 70606
+    },
+    {
+      "cycle": 4,
+      "passed": true,
+      "enhancedFrames": 34,
+      "pssKiB": 71932
+    },
+    {
+      "cycle": 5,
+      "passed": true,
+      "enhancedFrames": 41,
+      "pssKiB": 70322
+    },
+    {
+      "cycle": 6,
+      "passed": true,
+      "enhancedFrames": 47,
+      "pssKiB": 70631
+    },
+    {
+      "cycle": 7,
+      "passed": true,
+      "enhancedFrames": 54,
+      "pssKiB": 70507
+    },
+    {
+      "cycle": 8,
+      "passed": true,
+      "enhancedFrames": 60,
+      "pssKiB": 70715
+    },
+    {
+      "cycle": 9,
+      "passed": true,
+      "enhancedFrames": 67,
+      "pssKiB": 70335
+    },
+    {
+      "cycle": 10,
+      "passed": true,
+      "enhancedFrames": 73,
+      "pssKiB": 70383
+    },
+    {
+      "cycle": 11,
+      "passed": true,
+      "enhancedFrames": 79,
+      "pssKiB": 70695
+    },
+    {
+      "cycle": 12,
+      "passed": true,
+      "enhancedFrames": 86,
+      "pssKiB": 70415
+    },
+    {
+      "cycle": 13,
+      "passed": true,
+      "enhancedFrames": 92,
+      "pssKiB": 70519
+    },
+    {
+      "cycle": 14,
+      "passed": true,
+      "enhancedFrames": 98,
+      "pssKiB": 70895
+    },
+    {
+      "cycle": 15,
+      "passed": true,
+      "enhancedFrames": 105,
+      "pssKiB": 70824
+    },
+    {
+      "cycle": 16,
+      "passed": true,
+      "enhancedFrames": 112,
+      "pssKiB": 70788
+    },
+    {
+      "cycle": 17,
+      "passed": true,
+      "enhancedFrames": 119,
+      "pssKiB": 70520
+    },
+    {
+      "cycle": 18,
+      "passed": true,
+      "enhancedFrames": 126,
+      "pssKiB": 70568
+    },
+    {
+      "cycle": 19,
+      "passed": true,
+      "enhancedFrames": 132,
+      "pssKiB": 70512
+    },
+    {
+      "cycle": 20,
+      "passed": true,
+      "enhancedFrames": 138,
+      "pssKiB": 70692
+    }
+  ],
+  "initialGeometry": {
+    "crop": [
+      286.0,
+      537.0,
+      508.0,
+      154.0
+    ],
+    "pan": [
+      0.0,
+      0.0
+    ],
+    "scale": 2.0,
+    "panelBottom": true
+  },
+  "stopPassed": true
+}

@@ -1,0 +1,704 @@
+{
+  "schema": 1,
+  "model": "sdk_gphone64_arm64",
+  "api": 36,
+  "appVersion": "0.1.1-clarity-dev",
+  "startedAtUtc": "2026-09-24T06:47:37.736750+00:00",
+  "requestedSeconds": 60.0,
+  "intervalSeconds": 5.0,
+  "state": "completed",
+  "samples": [
+    {
+      "elapsedSeconds": 0.0,
+      "atUtc": "2026-09-24T06:47:37.755336+00:00",
+      "sessionIndex": 1,
+      "service": {
+        "state": "COLLAPSED",
+        "capturing": false,
+        "surfaceAttached": false,
+        "clarityEnabled": true,
+        "gpuOpen": false,
+        "copyAttempts": 334,
+        "renderedFrames": 334,
+        "enhancedFrames": 329,
+        "clarityFailures": 0,
+        "gpuCleanupFailures": 0,
+        "virtualDisplayCreates": 1,
+        "progress": null,
+        "scale": 2.0,
+        "viewport": [
+          0,
+          0
+        ],
+        "enhancedBitmap": [
+          0,
+          0
+        ],
+        "bitmap": [
+          0,
+          0
+        ]
+      },
+      "battery": {
+        "externalPower": true,
+        "temperatureC": 25.0,
+        "levelPercent": 100.0,
+        "status": 2,
+        "updatesStopped": false
+      },
+      "thermal": {
+        "status": 0,
+        "halReady": true,
+        "overridden": false
+      },
+      "memory": {
+        "pssKb": 66374,
+        "rssKb": 174288,
+        "swapPssKb": 133
+      },
+      "queryDurationSeconds": 0.086
+    },
+    {
+      "elapsedSeconds": 5.096,
+      "atUtc": "2026-09-24T06:47:42.868565+00:00",
+      "sessionIndex": 1,
+      "service": {
+        "state": "COLLAPSED",
+        "capturing": false,
+        "surfaceAttached": false,
+        "clarityEnabled": true,
+        "gpuOpen": false,
+        "copyAttempts": 334,
+        "renderedFrames": 334,
+        "enhancedFrames": 329,
+        "clarityFailures": 0,
+        "gpuCleanupFailures": 0,
+        "virtualDisplayCreates": 1,
+        "progress": null,
+        "scale": 2.0,
+        "viewport": [
+          0,
+          0
+        ],
+        "enhancedBitmap": [
+          0,
+          0
+        ],
+        "bitmap": [
+          0,
+          0
+        ]
+      },
+      "battery": {
+        "externalPower": true,
+        "temperatureC": 25.0,
+        "levelPercent": 100.0,
+        "status": 2,
+        "updatesStopped": false
+      },
+      "thermal": {
+        "status": 0,
+        "halReady": true,
+        "overridden": false
+      },
+      "memory": {
+        "pssKb": 62834,
+        "rssKb": 170748,
+        "swapPssKb": 133
+      },
+      "queryDurationSeconds": 0.116
+    },
+    {
+      "elapsedSeconds": 10.212,
+      "atUtc": "2026-09-24T06:47:48.002058+00:00",
+      "sessionIndex": 1,
+      "service": {
+        "state": "COLLAPSED",
+        "capturing": false,
+        "surfaceAttached": false,
+        "clarityEnabled": true,
+        "gpuOpen": false,
+        "copyAttempts": 334,
+        "renderedFrames": 334,
+        "enhancedFrames": 329,
+        "clarityFailures": 0,
+        "gpuCleanupFailures": 0,
+        "virtualDisplayCreates": 1,
+        "progress": null,
+        "scale": 2.0,
+        "viewport": [
+          0,
+          0
+        ],
+        "enhancedBitmap": [
+          0,
+          0
+        ],
+        "bitmap": [
+          0,
+          0
+        ]
+      },
+      "battery": {
+        "externalPower": true,
+        "temperatureC": 25.0,
+        "levelPercent": 100.0,
+        "status": 2,
+        "updatesStopped": false
+      },
+      "thermal": {
+        "status": 0,
+        "halReady": true,
+        "overridden": false
+      },
+      "memory": {
+        "pssKb": 62502,
+        "rssKb": 170416,
+        "swapPssKb": 133
+      },
+      "queryDurationSeconds": 0.127
+    },
+    {
+      "elapsedSeconds": 15.347,
+      "atUtc": "2026-09-24T06:47:53.120528+00:00",
+      "sessionIndex": 1,
+      "service": {
+        "state": "COLLAPSED",
+        "capturing": false,
+        "surfaceAttached": false,
+        "clarityEnabled": true,
+        "gpuOpen": false,
+        "copyAttempts": 334,
+        "renderedFrames": 334,
+        "enhancedFrames": 329,
+        "clarityFailures": 0,
+        "gpuCleanupFailures": 0,
+        "virtualDisplayCreates": 1,
+        "progress": null,
+        "scale": 2.0,
+        "viewport": [
+          0,
+          0
+        ],
+        "enhancedBitmap": [
+          0,
+          0
+        ],
+        "bitmap": [
+          0,
+          0
+        ]
+      },
+      "battery": {
+        "externalPower": true,
+        "temperatureC": 25.0,
+        "levelPercent": 100.0,
+        "status": 2,
+        "updatesStopped": false
+      },
+      "thermal": {
+        "status": 0,
+        "halReady": true,
+        "overridden": false
+      },
+      "memory": {
+        "pssKb": 62492,
+        "rssKb": 170408,
+        "swapPssKb": 133
+      },
+      "queryDurationSeconds": 0.112
+    },
+    {
+      "elapsedSeconds": 20.465,
+      "atUtc": "2026-09-24T06:47:58.242885+00:00",
+      "sessionIndex": 1,
+      "service": {
+        "state": "COLLAPSED",
+        "capturing": false,
+        "surfaceAttached": false,
+        "clarityEnabled": true,
+        "gpuOpen": false,
+        "copyAttempts": 334,
+        "renderedFrames": 334,
+        "enhancedFrames": 329,
+        "clarityFailures": 0,
+        "gpuCleanupFailures": 0,
+        "virtualDisplayCreates": 1,
+        "progress": null,
+        "scale": 2.0,
+        "viewport": [
+          0,
+          0
+        ],
+        "enhancedBitmap": [
+          0,
+          0
+        ],
+        "bitmap": [
+          0,
+          0
+        ]
+      },
+      "battery": {
+        "externalPower": true,
+        "temperatureC": 25.0,
+        "levelPercent": 100.0,
+        "status": 2,
+        "updatesStopped": false
+      },
+      "thermal": {
+        "status": 0,
+        "halReady": true,
+        "overridden": false
+      },
+      "memory": {
+        "pssKb": 62492,
+        "rssKb": 170408,
+        "swapPssKb": 133
+      },
+      "queryDurationSeconds": 0.109
+    },
+    {
+      "elapsedSeconds": 25.585,
+      "atUtc": "2026-09-24T06:48:03.350688+00:00",
+      "sessionIndex": 1,
+      "service": {
+        "state": "COLLAPSED",
+        "capturing": false,
+        "surfaceAttached": false,
+        "clarityEnabled": true,
+        "gpuOpen": false,
+        "copyAttempts": 334,
+        "renderedFrames": 334,
+        "enhancedFrames": 329,
+        "clarityFailures": 0,
+        "gpuCleanupFailures": 0,
+        "virtualDisplayCreates": 1,
+        "progress": null,
+        "scale": 2.0,
+        "viewport": [
+          0,
+          0
+        ],
+        "enhancedBitmap": [
+          0,
+          0
+        ],
+        "bitmap": [
+          0,
+          0
+        ]
+      },
+      "battery": {
+        "externalPower": true,
+        "temperatureC": 25.0,
+        "levelPercent": 100.0,
+        "status": 2,
+        "updatesStopped": false
+      },
+      "thermal": {
+        "status": 0,
+        "halReady": true,
+        "overridden": false
+      },
+      "memory": {
+        "pssKb": 62492,
+        "rssKb": 170408,
+        "swapPssKb": 133
+      },
+      "queryDurationSeconds": 0.103
+    },
+    {
+      "elapsedSeconds": 30.69,
+      "atUtc": "2026-09-24T06:48:08.455770+00:00",
+      "sessionIndex": 1,
+      "service": {
+        "state": "COLLAPSED",
+        "capturing": false,
+        "surfaceAttached": false,
+        "clarityEnabled": true,
+        "gpuOpen": false,
+        "copyAttempts": 334,
+        "renderedFrames": 334,
+        "enhancedFrames": 329,
+        "clarityFailures": 0,
+        "gpuCleanupFailures": 0,
+        "virtualDisplayCreates": 1,
+        "progress": null,
+        "scale": 2.0,
+        "viewport": [
+          0,
+          0
+        ],
+        "enhancedBitmap": [
+          0,
+          0
+        ],
+        "bitmap": [
+          0,
+          0
+        ]
+      },
+      "battery": {
+        "externalPower": true,
+        "temperatureC": 25.0,
+        "levelPercent": 100.0,
+        "status": 2,
+        "updatesStopped": false
+      },
+      "thermal": {
+        "status": 0,
+        "halReady": true,
+        "overridden": false
+      },
+      "memory": {
+        "pssKb": 62492,
+        "rssKb": 170408,
+        "swapPssKb": 133
+      },
+      "queryDurationSeconds": 0.101
+    },
+    {
+      "elapsedSeconds": 35.799,
+      "atUtc": "2026-09-24T06:48:13.554761+00:00",
+      "sessionIndex": 1,
+      "service": {
+        "state": "COLLAPSED",
+        "capturing": false,
+        "surfaceAttached": false,
+        "clarityEnabled": true,
+        "gpuOpen": false,
+        "copyAttempts": 334,
+        "renderedFrames": 334,
+        "enhancedFrames": 329,
+        "clarityFailures": 0,
+        "gpuCleanupFailures": 0,
+        "virtualDisplayCreates": 1,
+        "progress": null,
+        "scale": 2.0,
+        "viewport": [
+          0,
+          0
+        ],
+        "enhancedBitmap": [
+          0,
+          0
+        ],
+        "bitmap": [
+          0,
+          0
+        ]
+      },
+      "battery": {
+        "externalPower": true,
+        "temperatureC": 25.0,
+        "levelPercent": 100.0,
+        "status": 2,
+        "updatesStopped": false
+      },
+      "thermal": {
+        "status": 0,
+        "halReady": true,
+        "overridden": false
+      },
+      "memory": {
+        "pssKb": 62494,
+        "rssKb": 170408,
+        "swapPssKb": 133
+      },
+      "queryDurationSeconds": 0.09
+    },
+    {
+      "elapsedSeconds": 40.899,
+      "atUtc": "2026-09-24T06:48:18.672145+00:00",
+      "sessionIndex": 1,
+      "service": {
+        "state": "COLLAPSED",
+        "capturing": false,
+        "surfaceAttached": false,
+        "clarityEnabled": true,
+        "gpuOpen": false,
+        "copyAttempts": 334,
+        "renderedFrames": 334,
+        "enhancedFrames": 329,
+        "clarityFailures": 0,
+        "gpuCleanupFailures": 0,
+        "virtualDisplayCreates": 1,
+        "progress": null,
+        "scale": 2.0,
+        "viewport": [
+          0,
+          0
+        ],
+        "enhancedBitmap": [
+          0,
+          0
+        ],
+        "bitmap": [
+          0,
+          0
+        ]
+      },
+      "battery": {
+        "externalPower": true,
+        "temperatureC": 25.0,
+        "levelPercent": 100.0,
+        "status": 2,
+        "updatesStopped": false
+      },
+      "thermal": {
+        "status": 0,
+        "halReady": true,
+        "overridden": false
+      },
+      "memory": {
+        "pssKb": 62494,
+        "rssKb": 170408,
+        "swapPssKb": 133
+      },
+      "queryDurationSeconds": 0.109
+    },
+    {
+      "elapsedSeconds": 46.019,
+      "atUtc": "2026-09-24T06:48:23.781825+00:00",
+      "sessionIndex": 1,
+      "service": {
+        "state": "COLLAPSED",
+        "capturing": false,
+        "surfaceAttached": false,
+        "clarityEnabled": true,
+        "gpuOpen": false,
+        "copyAttempts": 334,
+        "renderedFrames": 334,
+        "enhancedFrames": 329,
+        "clarityFailures": 0,
+        "gpuCleanupFailures": 0,
+        "virtualDisplayCreates": 1,
+        "progress": null,
+        "scale": 2.0,
+        "viewport": [
+          0,
+          0
+        ],
+        "enhancedBitmap": [
+          0,
+          0
+        ],
+        "bitmap": [
+          0,
+          0
+        ]
+      },
+      "battery": {
+        "externalPower": true,
+        "temperatureC": 25.0,
+        "levelPercent": 100.0,
+        "status": 2,
+        "updatesStopped": false
+      },
+      "thermal": {
+        "status": 0,
+        "halReady": true,
+        "overridden": false
+      },
+      "memory": {
+        "pssKb": 62494,
+        "rssKb": 170408,
+        "swapPssKb": 133
+      },
+      "queryDurationSeconds": 0.098
+    },
+    {
+      "elapsedSeconds": 51.128,
+      "atUtc": "2026-09-24T06:48:28.897968+00:00",
+      "sessionIndex": 1,
+      "service": {
+        "state": "COLLAPSED",
+        "capturing": false,
+        "surfaceAttached": false,
+        "clarityEnabled": true,
+        "gpuOpen": false,
+        "copyAttempts": 334,
+        "renderedFrames": 334,
+        "enhancedFrames": 329,
+        "clarityFailures": 0,
+        "gpuCleanupFailures": 0,
+        "virtualDisplayCreates": 1,
+        "progress": null,
+        "scale": 2.0,
+        "viewport": [
+          0,
+          0
+        ],
+        "enhancedBitmap": [
+          0,
+          0
+        ],
+        "bitmap": [
+          0,
+          0
+        ]
+      },
+      "battery": {
+        "externalPower": true,
+        "temperatureC": 25.0,
+        "levelPercent": 100.0,
+        "status": 2,
+        "updatesStopped": false
+      },
+      "thermal": {
+        "status": 0,
+        "halReady": true,
+        "overridden": false
+      },
+      "memory": {
+        "pssKb": 62494,
+        "rssKb": 170408,
+        "swapPssKb": 133
+      },
+      "queryDurationSeconds": 0.107
+    },
+    {
+      "elapsedSeconds": 56.243,
+      "atUtc": "2026-09-24T06:48:34.005356+00:00",
+      "sessionIndex": 1,
+      "service": {
+        "state": "COLLAPSED",
+        "capturing": false,
+        "surfaceAttached": false,
+        "clarityEnabled": true,
+        "gpuOpen": false,
+        "copyAttempts": 334,
+        "renderedFrames": 334,
+        "enhancedFrames": 329,
+        "clarityFailures": 0,
+        "gpuCleanupFailures": 0,
+        "virtualDisplayCreates": 1,
+        "progress": null,
+        "scale": 2.0,
+        "viewport": [
+          0,
+          0
+        ],
+        "enhancedBitmap": [
+          0,
+          0
+        ],
+        "bitmap": [
+          0,
+          0
+        ]
+      },
+      "battery": {
+        "externalPower": true,
+        "temperatureC": 25.0,
+        "levelPercent": 100.0,
+        "status": 2,
+        "updatesStopped": false
+      },
+      "thermal": {
+        "status": 0,
+        "halReady": true,
+        "overridden": false
+      },
+      "memory": {
+        "pssKb": 62494,
+        "rssKb": 170408,
+        "swapPssKb": 133
+      },
+      "queryDurationSeconds": 0.099
+    },
+    {
+      "elapsedSeconds": 60.005,
+      "atUtc": "2026-09-24T06:48:37.766062+00:00",
+      "sessionIndex": 1,
+      "service": {
+        "state": "COLLAPSED",
+        "capturing": false,
+        "surfaceAttached": false,
+        "clarityEnabled": true,
+        "gpuOpen": false,
+        "copyAttempts": 334,
+        "renderedFrames": 334,
+        "enhancedFrames": 329,
+        "clarityFailures": 0,
+        "gpuCleanupFailures": 0,
+        "virtualDisplayCreates": 1,
+        "progress": null,
+        "scale": 2.0,
+        "viewport": [
+          0,
+          0
+        ],
+        "enhancedBitmap": [
+          0,
+          0
+        ],
+        "bitmap": [
+          0,
+          0
+        ]
+      },
+      "battery": {
+        "externalPower": true,
+        "temperatureC": 25.0,
+        "levelPercent": 100.0,
+        "status": 2,
+        "updatesStopped": false
+      },
+      "thermal": {
+        "status": 0,
+        "halReady": true,
+        "overridden": false
+      },
+      "memory": {
+        "pssKb": 62494,
+        "rssKb": 170408,
+        "swapPssKb": 133
+      },
+      "queryDurationSeconds": 0.1
+    }
+  ],
+  "limits": [
+    "Observer overhead; sparse samples cannot prove absence of all crashes or leaks",
+    "Battery temperature is not skin temperature or app-attributed heat",
+    "Frame counter differences are not display FPS or capture-to-display latency",
+    "No energy/power estimate; external charging and other apps are confounders",
+    "No phone interaction, screen capture, UI text, raw dump, serial, or settings changes"
+  ],
+  "summary": {
+    "sampleCount": 13,
+    "activeObservedSeconds": 0.0,
+    "activeSamples": 0,
+    "unavailableServiceSamples": 0,
+    "newRenderOrCleanupErrors": 0,
+    "counterRegressionsWithinSession": 0,
+    "pausedIntervals": 12,
+    "pausedEndpointsWithActivityBetween": 0,
+    "pausedSnapshotsWithGpuOpen": 0,
+    "activeIntervalsWithoutNewEnhancedFrame": 0,
+    "batteryTemperatureC": {
+      "first": 25.0,
+      "last": 25.0,
+      "min": 25.0,
+      "max": 25.0
+    },
+    "pssKb": {
+      "first": 66374,
+      "last": 62494,
+      "min": 62492,
+      "max": 66374
+    },
+    "maxReportedThermalStatus": 0,
+    "externalPowerSamples": 13,
+    "levelPercent": {
+      "first": 100.0,
+      "last": 100.0,
+      "min": 100.0,
+      "max": 100.0
+    },
+    "energyVerdict": "not_measured_no_app_energy_attribution",
+    "observedSessions": 1
+  },
+  "finishedAtUtc": "2026-09-24T06:48:37.840268+00:00"
+}

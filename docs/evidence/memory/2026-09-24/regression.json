@@ -1,0 +1,20 @@
+{
+  "baseline": "e416be3",
+  "preFixTests": 5,
+  "preFixFailures": 4,
+  "failureCases": [
+    "slowUiKeepsOnlyNewestUndeliveredFrameAndOneCallback",
+    "pauseDropsUndeliveredPixelsWithoutWaitingForUiCallback",
+    "closeDropsUndeliveredPixelsExactlyOnce",
+    "renderFailureReplacesOlderFrameButIsNotHiddenByLaterSuccess"
+  ],
+  "finalDeliveryTests": 10,
+  "finalDeliveryFailures": 0,
+  "originalWorkerTests": 5,
+  "originalWorkerFailures": 0,
+  "notes": [
+    "The first temporary Gradle init attempt had a project-reference error, fixed before the valid failing test run.",
+    "Failure priority now pauses rendering until delivery, so a later successful request does not hide the error.",
+    "Observed queue defects and allocation churn do not establish the cause of the earlier Huawei PSS increase."
+  ]
+}
