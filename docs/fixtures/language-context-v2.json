@@ -1,0 +1,1138 @@
+{
+  "schema": 1,
+  "scope": "44 authored synthetic pages, manual card membership, frozen before model inference; no screenshots or real app content",
+  "cases": [
+    {
+      "id": "short-1",
+      "category": "short",
+      "pageId": "7ca0f2065cc2f9c88bcc9874fb02051344f7e05f78fa22a5f685293ca1ca5bb2",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Check the passenger details before proceeding to the next step.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Continue",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "Les offres de ce restaurant sont valables uniquement le vendredi.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "short-2",
+      "category": "short",
+      "pageId": "44c69e691911daddf3feea743d1007ddd4c9c9982665a7cb400442cbd3579b9d",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Vous pouvez encore annuler cette commande sans aucun frais.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Annuler",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "This advertisement applies only to members of the sports club.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "short-3",
+      "category": "short",
+      "pageId": "913e14f2f48e14543f51fceb262564afe6d1a61c7d09c4130788e209c8b94d48",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Confirm your seat selection before the timer expires.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Confirm",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "Les offres de ce restaurant sont valables uniquement le vendredi.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "short-4",
+      "category": "short",
+      "pageId": "c01befefba4c5fcbaa5f1137dce4f2ba082ede65cd16462daa94189ee864aa5b",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Vous pouvez modifier la date de votre rendez-vous.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Modifier",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "This advertisement applies only to members of the sports club.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "short-5",
+      "category": "short",
+      "pageId": "e416b283f49d3ed2cc67b1a000488645e8dc4a5bdf0442ab215e80934ec54cd4",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Return to the previous step to correct your address.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Back",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "Les offres de ce restaurant sont valables uniquement le vendredi.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "short-6",
+      "category": "short",
+      "pageId": "d6ad0d1cca0c014c993631e19f220693510ae6c807bfdd798ced00ed1d2b5eff",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Revenez à la page précédente pour corriger votre adresse.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Retour",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "This advertisement applies only to members of the sports club.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "short-7",
+      "category": "short",
+      "pageId": "1e75b6d48d3bd391f0540c9d54c23758af624656cae3a547a3b6adca436a0fb6",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "The amount below includes breakfast and local taxes.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Total",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "Les offres de ce restaurant sont valables uniquement le vendredi.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "short-8",
+      "category": "short",
+      "pageId": "f48a20acfa493a84ff710429c33e1573057dc3189f252e40a4d37ea9da080c57",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Le montant indiqué comprend le petit déjeuner et les taxes locales.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Total",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "This advertisement applies only to members of the sports club.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "short-9",
+      "category": "short",
+      "pageId": "dd0727998684ea7f6565683ef67e9d0b81131639b1bf2ba4fa7f00998862ffe6",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Souhaitez-vous recevoir une copie de la facture par courrier ?",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Non",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "This advertisement applies only to members of the sports club.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "short-10",
+      "category": "short",
+      "pageId": "f87a9ba01fb8dfdf41320c65ee07ff08e8a141f3906a0c69ff41c7a0a3af6e6d",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "请核对乘车人的姓名和证件号码后再进行下一步。",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "继续",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "This advertisement applies only to members of the sports club.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "short-11",
+      "category": "short",
+      "pageId": "afdc180a87891a1deffe1a725b2a6375bccda2710b95721ace0e21d3aebc1f75",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "本次预约尚未付款，可以取消且不会收取费用。",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "取消",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "This advertisement applies only to members of the sports club.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "short-12",
+      "category": "short",
+      "pageId": "c484db5419e2415f3ead34ecf8269393359ccd3222d688978b3b43163bd16664",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "請返回上一個步驟，重新填寫您的聯絡地址。",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "返回",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "This advertisement applies only to members of the sports club.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "pure-1",
+      "category": "pure",
+      "pageId": "4006f337e6e8faadab66a6afb124e323a3db128df0bea5a21944b7101aa4c3cb",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Your ticket remains valid until midnight on Saturday.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "Veuillez vérifier le numéro de votre chambre avant de continuer.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "pure-2",
+      "category": "pure",
+      "pageId": "b30b926752230243f88a2bfc4d9d4903851cded01d660948c2de1a6efebdaa44",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "A deposit of 63.25 euros is required at check-in.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "Veuillez vérifier le numéro de votre chambre avant de continuer.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "pure-3",
+      "category": "pure",
+      "pageId": "45bd072165ecccc790dc517081dec7278340e89caae17906c233a5063f3a1be3",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "The shuttle to Lyon does not operate on public holidays.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "Veuillez vérifier le numéro de votre chambre avant de continuer.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "pure-4",
+      "category": "pure",
+      "pageId": "afb6ce28c1d4e3a8127f4075260fc2ede47f69dd3a145d36a772810fd8c4caa2",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Children under twelve may travel without a separate booking.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "Veuillez vérifier le numéro de votre chambre avant de continuer.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "pure-5",
+      "category": "pure",
+      "pageId": "24c87d3e8ba9d486d3b288696ff67b19370d9b7a749c1c59871edc6b966e8017",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Votre billet reste valable jusqu’à minuit le samedi.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "Please review the delivery address before placing your order.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "pure-6",
+      "category": "pure",
+      "pageId": "7d30b39321fb3308c21cf446d5790203e27cc9f3ca8499871bc323134be02eea",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Une caution de 63,25 euros est demandée à votre arrivée.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "Please review the delivery address before placing your order.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "pure-7",
+      "category": "pure",
+      "pageId": "293176d7258c188376ec41438bb0453d19490571e4ca406af8f28e2b583cbed3",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "La navette pour Nantes ne circule pas les jours fériés.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "Please review the delivery address before placing your order.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "pure-8",
+      "category": "pure",
+      "pageId": "2473cb3a7d3d2e3c701c64500124fe7f99ab700f3f93cac8f616232a66612505",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Les enfants de moins de douze ans voyagent gratuitement.",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "Please review the delivery address before placing your order.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "pure-9",
+      "category": "pure",
+      "pageId": "552d5dee551968cc6f226563a4e51b69bb936702bd260fdd29a413341df79e0c",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "这张车票在星期六午夜之前仍然有效。",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "Please review the delivery address before placing your order.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "pure-10",
+      "category": "pure",
+      "pageId": "cc0c3f34eb1e6b5920165f38ea05151899419a2510ffa463f58172d52e441c2a",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "入住时需要支付六十三欧元的押金。",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "Please review the delivery address before placing your order.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "pure-11",
+      "category": "pure",
+      "pageId": "3eb0d658e312b1f0c7bf252d7db6e36a8e176268df24463e82f528fbed5919d9",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "這班接駁車在公眾假期不提供服務。",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "Please review the delivery address before placing your order.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "pure-12",
+      "category": "pure",
+      "pageId": "73d69172f1f05baa2f8d064356cf14755304ad1a209d213bb32bb0df9915de62",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "未滿十二歲的兒童可免費搭乘這班列車。",
+          "ocrConflict": false
+        },
+        {
+          "id": "other-1",
+          "groupId": "card-b",
+          "text": "Please review the delivery address before placing your order.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "mixed-1",
+      "category": "mixed",
+      "pageId": "eb44872c056ae4cd67bac1c30639fc0877f598ce156f682a6c27e0229e284db7",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Your parcel will be delivered on the next working day.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Please confirmer votre adresse before delivery.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "mixed-2",
+      "category": "mixed",
+      "pageId": "07d988f2f284dfd61e44c3648959c1848a7dc929bc19869c3da2716480ece54e",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Les conditions de réservation sont affichées ci-dessous.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Votre booking cannot be changed après validation.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "mixed-3",
+      "category": "mixed",
+      "pageId": "477d10e03fb58b03b475b2fa713713a0b9467624c1bb057c9ff66c616bd61647",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Your refund request must be submitted before the deadline.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Refund available uniquement avant midi.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "mixed-4",
+      "category": "mixed",
+      "pageId": "b359796431ba8e3414a1c5e46a5d4fc1043f3f6def3dc6d8ace8298879898a2b",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Cette règle concerne les réservations de groupe.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Ne pas cancel after check-in.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "mixed-5",
+      "category": "mixed",
+      "pageId": "116b41a940da06b7f0f3801240f6a16daa2d6a9794dc1544bcaa927dbbe227a1",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "The room includes the services listed below.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Breakfast compris for two adults.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "mixed-6",
+      "category": "mixed",
+      "pageId": "55224e558b2c4b23d1b6b7786ccb971e2b9be46b6a8d956ba48b6671926d94f2",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Veuillez lire les consignes avant de prendre le train.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Les bags must remain avec vous.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "mixed-7",
+      "category": "mixed",
+      "pageId": "db275b0e0cbaf90175727e164283dbf4076c49dc9a550a264a34434c61d08965",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "请按照车票上的时间前往指定站台候车。",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "请在 departure 前十分钟到达。",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "mixed-8",
+      "category": "mixed",
+      "pageId": "6be676d2538a71ab50e34cf3bae7852f48502747f44525cea95e2b8db8405f2d",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "入住时可能需要另外支付当地规定的税费。",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "此订单不包含 taxe de séjour。",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "conflicting-1",
+      "category": "conflicting",
+      "pageId": "a225b29c8d4db72220b5c6b030b08da1821023d89f7aa00af4e44f5c02a9244c",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Please check your booking details carefully.",
+          "ocrConflict": false
+        },
+        {
+          "id": "context-2",
+          "groupId": "card-a",
+          "text": "Veuillez vérifier les détails de votre réservation.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Continue",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "conflicting-2",
+      "category": "conflicting",
+      "pageId": "88503658af156c29e37937575a13a41775a78949c2ec8aff331ded7b3a8a0f72",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "The amount below excludes delivery charges.",
+          "ocrConflict": false
+        },
+        {
+          "id": "context-2",
+          "groupId": "card-a",
+          "text": "Le montant ci-dessous comprend tous les frais de livraison.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Total",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "conflicting-3",
+      "category": "conflicting",
+      "pageId": "4da1e14254eb583d2bd8a3baed7d0274ceb375db5ab55fe179c030740d01e251",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Please read the instructions shown below.",
+          "ocrConflict": false
+        },
+        {
+          "id": "context-2",
+          "groupId": "card-a",
+          "text": "请认真阅读下面的说明之后再确认。",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "OK",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "conflicting-4",
+      "category": "conflicting",
+      "pageId": "fc9bbe246872b43a4a4e03eb15184a6ab4762f541d7da56d0d59bf28b7348b52",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "The following information is available in English.",
+          "ocrConflict": false
+        },
+        {
+          "id": "context-2",
+          "groupId": "card-a",
+          "text": "Les informations suivantes sont disponibles en français.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Retour",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "unsupported-1",
+      "category": "unsupported",
+      "pageId": "d540ecf52fc72db7762778a5c466e6c3c2b20615b815518792ae877502534af1",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "This card describes the rules for visitors.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "La entrada no incluye el acceso a las exposiciones temporales.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "unsupported-2",
+      "category": "unsupported",
+      "pageId": "1754e0be362d9a6d87bed7e67a753aee357f7496f9d462ba18654a3aaeb281f0",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Please read the hotel conditions before paying.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "朝食は宿泊料金に含まれていません。",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "unsupported-3",
+      "category": "unsupported",
+      "pageId": "ba05822ed8bd1dea72547dfa146232c536f928416f3294991f170acac3ba1d17",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "The baggage allowance is displayed below.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "수하물은 한 사람당 하나만 허용됩니다.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "unsupported-4",
+      "category": "unsupported",
+      "pageId": "4fb9716cc06d242023f3a132963522ec65b5b1af7e7425e38d690e96551be867",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "This card explains the cancellation conditions.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Возврат билета после отправления невозможен.",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "literal-conflict-1",
+      "category": "literal-conflict",
+      "pageId": "e32143fa62c063bc5d94419e2e8b2e8cf8fa82fe060a1b1dee03d82fd5cad48d",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Please check every field before proceeding.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "€83.60",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "keep-literal"
+      }
+    },
+    {
+      "id": "literal-conflict-2",
+      "category": "literal-conflict",
+      "pageId": "1f91611a7c24eda112394891b189710bb4e683ecd2bcfbcc2a4ef1800e7fafe3",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Please check every field before proceeding.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "07:25",
+          "ocrConflict": false
+        }
+      ],
+      "expected": {
+        "action": "keep-literal"
+      }
+    },
+    {
+      "id": "literal-conflict-3",
+      "category": "literal-conflict",
+      "pageId": "222faf2062dc83c3ebea79eeeef9c6f1df29c8d457a358027be2f30549f46f58",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Please check every field before proceeding.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "Do not pay this invoice twice.",
+          "ocrConflict": true
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "literal-conflict-4",
+      "category": "literal-conflict",
+      "pageId": "00945b29d39640365a941d1192f4bae1578c4caae82748e96eb1184455210286",
+      "targetId": "target",
+      "blocks": [
+        {
+          "id": "context-1",
+          "groupId": "card-a",
+          "text": "Please check every field before proceeding.",
+          "ocrConflict": false
+        },
+        {
+          "id": "target",
+          "groupId": "card-a",
+          "text": "此处文字识别存在冲突。",
+          "ocrConflict": true
+        }
+      ],
+      "expected": {
+        "action": "review"
+      }
+    }
+  ]
+}
