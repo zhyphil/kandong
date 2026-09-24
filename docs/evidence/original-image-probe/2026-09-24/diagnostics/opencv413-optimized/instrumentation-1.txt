@@ -1,0 +1,126 @@
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidDetectorProbeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+com.kandong.modelprobe.AndroidDetectorProbeTest:
+INSTRUMENTATION_STATUS: test=sameResizedPixelsDetectorNumericParity
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidDetectorProbeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=sameResizedPixelsDetectorNumericParity
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidDetectorProbeTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=deliberateFailureAfterNativeCreationClosesEveryOwnedResource
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidDetectorProbeTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=deliberateFailureAfterNativeCreationClosesEveryOwnedResource
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidDetectorProbeTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=boundedInflationRejectsBombsTruncationHashAndInvalidFloats
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidDetectorProbeTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=boundedInflationRejectsBombsTruncationHashAndInvalidFloats
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidDetectorProbeTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=loaderRejectsCorruptTruncatedOversizedAndMalformedAssets
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidDetectorProbeTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=loaderRejectsCorruptTruncatedOversizedAndMalformedAssets
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.OriginalImageProbeTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+com.kandong.modelprobe.OriginalImageProbeTest:
+INSTRUMENTATION_STATUS: test=resizeKeepsBgrChannelsAndInterpolatesAtPixelCenters
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.OriginalImageProbeTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=resizeKeepsBgrChannelsAndInterpolatesAtPixelCenters
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.OriginalImageProbeTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=compareOriginalPngThroughBothResizersAndDetector
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.OriginalImageProbeTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: OpenCV original-image numeric parity failed; goldens remain unchanged
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.kandong.modelprobe.OriginalImageProbeTest.compareOriginalPngThroughBothResizersAndDetector(OriginalImageProbeTest.kt:227)
+
+INSTRUMENTATION_STATUS: stream=
+Error in compareOriginalPngThroughBothResizersAndDetector(com.kandong.modelprobe.OriginalImageProbeTest):
+java.lang.AssertionError: OpenCV original-image numeric parity failed; goldens remain unchanged
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.kandong.modelprobe.OriginalImageProbeTest.compareOriginalPngThroughBothResizersAndDetector(OriginalImageProbeTest.kt:227)
+
+INSTRUMENTATION_STATUS: test=compareOriginalPngThroughBothResizersAndDetector
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.OriginalImageProbeTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=resizeValidatesBeforeAllocationAndReleasesOnFailure
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.OriginalImageProbeTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=7
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=resizeValidatesBeforeAllocationAndReleasesOnFailure
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 4.287
+There was 1 failure:
+1) compareOriginalPngThroughBothResizersAndDetector(com.kandong.modelprobe.OriginalImageProbeTest)
+java.lang.AssertionError: OpenCV original-image numeric parity failed; goldens remain unchanged
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.kandong.modelprobe.OriginalImageProbeTest.compareOriginalPngThroughBothResizersAndDetector(OriginalImageProbeTest.kt:227)
+
+FAILURES!!!
+Tests run: 7,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

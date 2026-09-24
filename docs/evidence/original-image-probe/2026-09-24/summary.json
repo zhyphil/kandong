@@ -1,0 +1,46 @@
+{
+  "scope": "target Huawei original PNG -> OpenCV 4.14 BGR INTER_LINEAR -> detector numeric parity only",
+  "huawei": {
+    "api": 31,
+    "model": "LIO-AN00",
+    "runs": 2,
+    "testsPerRun": 7,
+    "repeatCaseResultsEqualIgnoringTiming": true,
+    "elapsedMs": [
+      3335,
+      3295
+    ],
+    "openCvPixelAndInputExactCases": 10,
+    "openCvMaxAbsoluteProbabilityError": 1.4662742614746094e-05,
+    "openCvMaskFlips": 0,
+    "bitmapChangedChannels": 1120572,
+    "bitmapMaskFlips": 68,
+    "bitmapsRecycledPerRun": 20,
+    "matBuffersReleasedPerRun": 20,
+    "ortResourcesClosedPerRun": 42,
+    "priorSameInputResultsUnchanged": true
+  },
+  "emulator": {
+    "api": 36,
+    "status": "not accepted: OpenCV 4.14 SIGILL on load before new tests; prior detector 4 tests pass",
+    "staleReportExcluded": true,
+    "cpuFeatureDiagnosis": "SVE2 advertised without SVE; fault at rdvl, likely virtual CPU/library dispatch mismatch; not an upstream-confirmed root fix"
+  },
+  "unchangedGate": {
+    "pixelChannels": 0,
+    "inputBits": 0,
+    "atol": 1e-05,
+    "rtol": 0.0001,
+    "meanAbsoluteMax": 1e-06,
+    "maskFlips": 0
+  },
+  "notAccepted": [
+    "all-device compatibility",
+    "boxes/unclip/perspective crops",
+    "OCR quality",
+    "real screens",
+    "production library adoption",
+    "battery or memory endurance",
+    "redistribution notice completeness"
+  ]
+}

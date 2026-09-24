@@ -1,0 +1,8 @@
+KanDong original-image preprocessing experiment, instrumentation APK only.
+OpenCV 4.14.0 is linked unmodified from org.opencv:opencv:4.14.0.
+Source: https://github.com/opencv/opencv/tree/4.14.0
+License source: https://raw.githubusercontent.com/opencv/opencv/4.14.0/LICENSE
+AAR SHA-256: 6d11b40f6a54113dafe8540b1237b637193cb21e83deb11bc53d6757d35d494d
+This test is not a product distribution or a completed third-party notice audit.
+The prebuilt archive includes native third-party components; review their notices
+and package-size options before considering any product integration or release.

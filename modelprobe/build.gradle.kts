@@ -36,6 +36,7 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test:runner:1.6.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    androidTestImplementation("org.opencv:opencv:4.14.0")
 }
 
 // This is deliberately task-time validation, never a configuration-time download.
@@ -200,3 +201,20 @@ tasks.matching { it.name == "assembleDebugAndroidTest" }.configureEach {
         }
     }
 }
+
+// Official publication has stale .module size/hash metadata. Pin the actual AAR
+// whose SHA-256 matches Maven Central's separate checksum; test configuration only.
+val verifyOpenCvTestArtifact by tasks.registering {
+    doLast {
+        val artifacts = configurations.getByName("debugAndroidTestRuntimeClasspath").resolvedConfiguration.resolvedArtifacts
+        val artifact = artifacts.single { it.moduleVersion.id.group == "org.opencv" && it.name == "opencv" }
+        check(artifact.moduleVersion.id.version == "4.14.0" && artifact.file.length() == 123_380_341L)
+        val digest = MessageDigest.getInstance("SHA-256")
+        artifact.file.inputStream().use { input ->
+            val buffer = ByteArray(8192)
+            while (true) { val n = input.read(buffer); if (n < 0) break; digest.update(buffer, 0, n) }
+        }
+        check(digest.digest().joinToString("") { "%02x".format(it) } == "6d11b40f6a54113dafe8540b1237b637193cb21e83deb11bc53d6757d35d494d")
+    }
+}
+tasks.matching { it.name == "preDebugAndroidTestBuild" }.configureEach { dependsOn(verifyOpenCvTestArtifact) }

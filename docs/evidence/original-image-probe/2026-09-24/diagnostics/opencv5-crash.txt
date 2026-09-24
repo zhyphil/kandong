@@ -1,0 +1,58 @@
+--------- beginning of crash
+09-24 13:28:39.441  3355  3368 F libc    : Fatal signal 4 (SIGILL), code 1 (ILL_ILLOPC), fault addr 0x720afe0a7c in tid 3368 (roidJUnitRunner), pid 3355 (dong.modelprobe)
+09-24 13:28:39.628  3388  3388 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+09-24 13:28:39.628  3388  3388 F DEBUG   : Build fingerprint: 'google/sdk_gphone64_arm64/emu64a:16/BE2A.250530.026.F3/13894323:userdebug/dev-keys'
+09-24 13:28:39.628  3388  3388 F DEBUG   : Revision: '0'
+09-24 13:28:39.628  3388  3388 F DEBUG   : ABI: 'arm64'
+09-24 13:28:39.628  3388  3388 F DEBUG   : Timestamp: 2026-09-24 13:28:39.486467801+0200
+09-24 13:28:39.628  3388  3388 F DEBUG   : Process uptime: 2s
+09-24 13:28:39.628  3388  3388 F DEBUG   : Cmdline: com.kandong.modelprobe
+09-24 13:28:39.628  3388  3388 F DEBUG   : pid: 3355, tid: 3368, name: roidJUnitRunner  >>> com.kandong.modelprobe <<<
+09-24 13:28:39.628  3388  3388 F DEBUG   : uid: 10218
+09-24 13:28:39.628  3388  3388 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+09-24 13:28:39.628  3388  3388 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+09-24 13:28:39.628  3388  3388 F DEBUG   : signal 4 (SIGILL), code 1 (ILL_ILLOPC), fault addr 0x000000720afe0a7c
+09-24 13:28:39.628  3388  3388 F DEBUG   :     x0  0000000000105383  x1  0000007fc8ff4e78  x2  0000007fc8ff4eb0  x3  0000000000000000
+09-24 13:28:39.628  3388  3388 F DEBUG   :     x4  0000000000000007  x5  b4000072b4fbf568  x6  0000000000000010  x7  7f7f7f7f7f7f7f7f
+09-24 13:28:39.628  3388  3388 F DEBUG   :     x8  0000007fc8ff5068  x9  000000000000001a  x10 b400007454fd3a88  x11 ffffffffffffffe5
+09-24 13:28:39.628  3388  3388 F DEBUG   :     x12 000000000000001b  x13 b4000073e500ca5b  x14 00000000ffffffe5  x15 000000720950e9c5
+09-24 13:28:39.628  3388  3388 F DEBUG   :     x16 0000007549f411a0  x17 000000756a304538  x18 0000007211470000  x19 000000720950e9c5
+09-24 13:28:39.628  3388  3388 F DEBUG   :     x20 00000075690bc400  x21 000000720b0bec00  x22 0000000000000042  x23 000000720afda590
+09-24 13:28:39.628  3388  3388 F DEBUG   :     x24 000000756a424000  x25 0000000000000045  x26 000000756a424000  x27 000000756a424000
+09-24 13:28:39.628  3388  3388 F DEBUG   :     x28 000000756a424000  x29 000000729e6887c0
+09-24 13:28:39.628  3388  3388 F DEBUG   :     lr  000000720afda5f4  sp  000000729e688760  pc  000000720afe0a7c  pst 0000000060000000
+09-24 13:28:39.628  3388  3388 F DEBUG   : 210 total frames
+09-24 13:28:39.628  3388  3388 F DEBUG   : backtrace:
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #00 pc 0000000001eb3a7c  /data/app/~~uqJgLVTMC3btElvXRvDHmA==/com.kandong.modelprobe.test-K8V2nrIRFSBsSeWrnyHUmA==/base.apk!libopencv_java5.so (offset 0xce0000) (BuildId: 725ef2df0308068262c96eabc5b51be6e6858aaa)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #01 pc 0000000001ead5f0  /data/app/~~uqJgLVTMC3btElvXRvDHmA==/com.kandong.modelprobe.test-K8V2nrIRFSBsSeWrnyHUmA==/base.apk!libopencv_java5.so (offset 0xce0000) (BuildId: 725ef2df0308068262c96eabc5b51be6e6858aaa)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #02 pc 0000000000056964  /apex/com.android.runtime/bin/linker64 (__dl__ZN6soinfo17call_constructorsEv+528) (BuildId: 717ce046edb7c77f86d26f7045d50158)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #03 pc 0000000000055ba4  /apex/com.android.runtime/bin/linker64 (__dl__Z9do_dlopenPKciPK17android_dlextinfoPKv+1348) (BuildId: 717ce046edb7c77f86d26f7045d50158)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #04 pc 00000000000555bc  /apex/com.android.runtime/bin/linker64 (__dl__ZL10dlopen_extPKciPK17android_dlextinfoPKv.__uniq.234527301065430621646263515731762262959+72) (BuildId: 717ce046edb7c77f86d26f7045d50158)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #05 pc 00000000000040c8  /apex/com.android.runtime/lib64/bionic/libdl.so (android_dlopen_ext+16) (BuildId: 91d690d037cefb642f331d30aeb5dceb)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #06 pc 000000000001dae0  /apex/com.android.art/lib64/libnativeloader.so (android::NativeLoaderNamespace::Load(char const*) const+140) (BuildId: b6e77688d559c566e6ab929caf51bee3)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #07 pc 000000000000c880  /apex/com.android.art/lib64/libnativeloader.so (OpenNativeLibrary+916) (BuildId: b6e77688d559c566e6ab929caf51bee3)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #08 pc 0000000000580734  /apex/com.android.art/lib64/libart.so (art::JavaVMExt::LoadNativeLibrary(_JNIEnv*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, _jobject*, _jclass*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>*)+736) (BuildId: b229f9d1b6196afaae086f29f029f907)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #09 pc 000000000000575c  /apex/com.android.art/lib64/libopenjdkjvm.so (JVM_NativeLoad+368) (BuildId: 59b6fc99630ea9ddc24ff84c08f7c890)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #10 pc 000000000033f500  /apex/com.android.art/lib64/libart.so (art_quick_generic_jni_trampoline+144) (BuildId: b229f9d1b6196afaae086f29f029f907)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #11 pc 00000000000224e8  [anon_shmem:dalvik-jit-code-cache] (offset 0x2000000) (java.lang.Runtime.loadLibrary0+408)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #12 pc 0000000000021c30  [anon_shmem:dalvik-jit-code-cache] (offset 0x2000000) (java.lang.Runtime.loadLibrary0+160)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #13 pc 00000000000219c0  [anon_shmem:dalvik-jit-code-cache] (offset 0x2000000) (java.lang.System.loadLibrary+160)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #14 pc 0000000000328460  /apex/com.android.art/lib64/libart.so (art_quick_invoke_static_stub+640) (BuildId: b229f9d1b6196afaae086f29f029f907)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #15 pc 00000000006795d0  /apex/com.android.art/lib64/libart.so (bool art::interpreter::DoCall<false>(art::ArtMethod*, art::Thread*, art::ShadowFrame&, art::Instruction const*, unsigned short, bool, art::JValue*)+2088) (BuildId: b229f9d1b6196afaae086f29f029f907)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #16 pc 00000000005c8690  /apex/com.android.art/lib64/libart.so (void art::interpreter::ExecuteSwitchImplCpp<false>(art::interpreter::SwitchImplContext*)+1280) (BuildId: b229f9d1b6196afaae086f29f029f907)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #17 pc 0000000000317a88  /apex/com.android.art/lib64/libart.so (ExecuteSwitchImplAsm+8) (BuildId: b229f9d1b6196afaae086f29f029f907)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #18 pc 00000000000f7704  /data/app/~~uqJgLVTMC3btElvXRvDHmA==/com.kandong.modelprobe.test-K8V2nrIRFSBsSeWrnyHUmA==/base.apk (offset 0xa22000) (org.opencv.android.StaticHelper.loadLibrary+0)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #19 pc 0000000000317488  /apex/com.android.art/lib64/libart.so (art::interpreter::ArtInterpreterToInterpreterBridge(art::Thread*, art::CodeItemDataAccessor const&, art::ShadowFrame*, art::JValue*)+412) (BuildId: b229f9d1b6196afaae086f29f029f907)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #20 pc 00000000006795bc  /apex/com.android.art/lib64/libart.so (bool art::interpreter::DoCall<false>(art::ArtMethod*, art::Thread*, art::ShadowFrame&, art::Instruction const*, unsigned short, bool, art::JValue*)+2068) (BuildId: b229f9d1b6196afaae086f29f029f907)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #21 pc 00000000005c8690  /apex/com.android.art/lib64/libart.so (void art::interpreter::ExecuteSwitchImplCpp<false>(art::interpreter::SwitchImplContext*)+1280) (BuildId: b229f9d1b6196afaae086f29f029f907)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #22 pc 0000000000317a88  /apex/com.android.art/lib64/libart.so (ExecuteSwitchImplAsm+8) (BuildId: b229f9d1b6196afaae086f29f029f907)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #23 pc 00000000000f7674  /data/app/~~uqJgLVTMC3btElvXRvDHmA==/com.kandong.modelprobe.test-K8V2nrIRFSBsSeWrnyHUmA==/base.apk (offset 0xa22000) (org.opencv.android.StaticHelper.initOpenCV+0)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #24 pc 0000000000317488  /apex/com.android.art/lib64/libart.so (art::interpreter::ArtInterpreterToInterpreterBridge(art::Thread*, art::CodeItemDataAccessor const&, art::ShadowFrame*, art::JValue*)+412) (BuildId: b229f9d1b6196afaae086f29f029f907)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #25 pc 00000000006795bc  /apex/com.android.art/lib64/libart.so (bool art::interpreter::DoCall<false>(art::ArtMethod*, art::Thread*, art::ShadowFrame&, art::Instruction const*, unsigned short, bool, art::JValue*)+2068) (BuildId: b229f9d1b6196afaae086f29f029f907)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #26 pc 00000000005c8690  /apex/com.android.art/lib64/libart.so (void art::interpreter::ExecuteSwitchImplCpp<false>(art::interpreter::SwitchImplContext*)+1280) (BuildId: b229f9d1b6196afaae086f29f029f907)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #27 pc 0000000000317a88  /apex/com.android.art/lib64/libart.so (ExecuteSwitchImplAsm+8) (BuildId: b229f9d1b6196afaae086f29f029f907)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #28 pc 00000000000f7640  /data/app/~~uqJgLVTMC3btElvXRvDHmA==/com.kandong.modelprobe.test-K8V2nrIRFSBsSeWrnyHUmA==/base.apk (offset 0xa22000) (org.opencv.android.OpenCVLoader.initLocal+0)
+09-24 13:28:39.628  3388  3388 F DEBUG   :       #29 pc 0000000000317488  /apex/com.android.art/lib64/libart.so (art::interpreter::ArtInterpreterToInterpreterBridge(art::Thread*, art::CodeItemDataAccessor const&, art::ShadowFrame*, art::JValue*)+412) (BuildId: b229f9d1b6196afaae086f29f029f907)
+09-24 13:28:39.629  3388  3388 F DEBUG   :       #30 pc 00000000006795bc  /apex/com.android.art/lib64/libart.so (bool art::interpreter::DoCall<false>(art::ArtMethod*, art::Thread*, art::ShadowFrame&, art::Instruction const*, unsigned short, bool, art::JValue*)+2068) (BuildId: b229f9d1b6196afaae086f29f029f907)
+09-24 13:28:39.629  3388  3388 F DEBUG   :       #31 pc 00000000005c8690  /apex/com.android.art/lib64/libart.so (void art::interpreter::ExecuteSwitchImplCpp<false>(art::interpreter::SwitchImplContext*)+1280) (BuildId: b229f9d1b6196afaae086f29f029f907)
+09-24 13:28:39.629  3388  3388 F DEBUG   :       #32 pc 0000000000317a88  /apex/com.android.art/lib64/libart.so (ExecuteSwitchImplAsm+8) (BuildId: b229f9d1b6196afaae086f29f029f907)

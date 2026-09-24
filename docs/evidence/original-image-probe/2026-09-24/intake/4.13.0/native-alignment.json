@@ -1,0 +1,86 @@
+[
+  {
+    "path": "jni/x86_64/libc++_shared.so",
+    "bytes": 1252080,
+    "loadAlignment": [
+      16384,
+      16384,
+      16384,
+      16384
+    ],
+    "16KiBCompatible": true
+  },
+  {
+    "path": "jni/x86_64/libopencv_java4.so",
+    "bytes": 59292616,
+    "loadAlignment": [
+      16384,
+      16384,
+      16384
+    ],
+    "16KiBCompatible": true
+  },
+  {
+    "path": "jni/x86/libc++_shared.so",
+    "bytes": 1254988,
+    "loadAlignment": [
+      4096,
+      4096,
+      4096,
+      4096
+    ],
+    "16KiBCompatible": false
+  },
+  {
+    "path": "jni/x86/libopencv_java4.so",
+    "bytes": 43553832,
+    "loadAlignment": [
+      4096,
+      4096,
+      4096
+    ],
+    "16KiBCompatible": false
+  },
+  {
+    "path": "jni/arm64-v8a/libc++_shared.so",
+    "bytes": 1292904,
+    "loadAlignment": [
+      16384,
+      16384,
+      16384,
+      16384
+    ],
+    "16KiBCompatible": true
+  },
+  {
+    "path": "jni/arm64-v8a/libopencv_java4.so",
+    "bytes": 23972544,
+    "loadAlignment": [
+      16384,
+      16384,
+      16384
+    ],
+    "16KiBCompatible": true
+  },
+  {
+    "path": "jni/armeabi-v7a/libc++_shared.so",
+    "bytes": 872872,
+    "loadAlignment": [
+      4096,
+      4096,
+      4096,
+      4096
+    ],
+    "16KiBCompatible": false
+  },
+  {
+    "path": "jni/armeabi-v7a/libopencv_java4.so",
+    "bytes": 15811024,
+    "loadAlignment": [
+      4096,
+      4096,
+      4096
+    ],
+    "16KiBCompatible": false
+  }
+]

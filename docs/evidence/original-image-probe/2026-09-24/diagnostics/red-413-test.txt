@@ -1,0 +1,38 @@
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.OriginalImageProbeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.kandong.modelprobe.OriginalImageProbeTest:
+INSTRUMENTATION_STATUS: test=resizeKeepsBgrChannelsAndInterpolatesAtPixelCenters
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.OriginalImageProbeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.UnsupportedOperationException: original-image OpenCV resize not implemented
+	at com.kandong.modelprobe.OriginalImageProbeTest.resizeOpenCv(OriginalImageProbeTest.kt:12)
+	at com.kandong.modelprobe.OriginalImageProbeTest.resizeKeepsBgrChannelsAndInterpolatesAtPixelCenters(OriginalImageProbeTest.kt:19)
+
+INSTRUMENTATION_STATUS: stream=
+Error in resizeKeepsBgrChannelsAndInterpolatesAtPixelCenters(com.kandong.modelprobe.OriginalImageProbeTest):
+java.lang.UnsupportedOperationException: original-image OpenCV resize not implemented
+	at com.kandong.modelprobe.OriginalImageProbeTest.resizeOpenCv(OriginalImageProbeTest.kt:12)
+	at com.kandong.modelprobe.OriginalImageProbeTest.resizeKeepsBgrChannelsAndInterpolatesAtPixelCenters(OriginalImageProbeTest.kt:19)
+
+INSTRUMENTATION_STATUS: test=resizeKeepsBgrChannelsAndInterpolatesAtPixelCenters
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 0.021
+There was 1 failure:
+1) resizeKeepsBgrChannelsAndInterpolatesAtPixelCenters(com.kandong.modelprobe.OriginalImageProbeTest)
+java.lang.UnsupportedOperationException: original-image OpenCV resize not implemented
+	at com.kandong.modelprobe.OriginalImageProbeTest.resizeOpenCv(OriginalImageProbeTest.kt:12)
+	at com.kandong.modelprobe.OriginalImageProbeTest.resizeKeepsBgrChannelsAndInterpolatesAtPixelCenters(OriginalImageProbeTest.kt:19)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

@@ -1,0 +1,325 @@
+{
+  "cvVersion": "5.0.0",
+  "rows": [
+    {
+      "id": "en-quality-16",
+      "optimized": true,
+      "method": "linear",
+      "sha256": "88e341dfd3c8b4d5dea92c00b0b8262c1fe57f09791a13eeb8bc47e063cc1285",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "en-quality-16",
+      "optimized": true,
+      "method": "linear_exact",
+      "sha256": "f5ef52f8e46ada098c6680db1830fa9cdd2a5b79716a323b318e06d4b9119fe8",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    },
+    {
+      "id": "en-quality-16",
+      "optimized": false,
+      "method": "linear",
+      "sha256": "88e341dfd3c8b4d5dea92c00b0b8262c1fe57f09791a13eeb8bc47e063cc1285",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "en-quality-16",
+      "optimized": false,
+      "method": "linear_exact",
+      "sha256": "f5ef52f8e46ada098c6680db1830fa9cdd2a5b79716a323b318e06d4b9119fe8",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    },
+    {
+      "id": "fr-nonrefundable-16",
+      "optimized": true,
+      "method": "linear",
+      "sha256": "e402e19c8049141174cc3129b2d32551ac4c45efe2fbf88cde839ad9db5d7fa2",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "fr-nonrefundable-16",
+      "optimized": true,
+      "method": "linear_exact",
+      "sha256": "231c31793200083766d9460b65c57e7ef435a5c125174c4e42e923b66a2ae410",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    },
+    {
+      "id": "fr-nonrefundable-16",
+      "optimized": false,
+      "method": "linear",
+      "sha256": "e402e19c8049141174cc3129b2d32551ac4c45efe2fbf88cde839ad9db5d7fa2",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "fr-nonrefundable-16",
+      "optimized": false,
+      "method": "linear_exact",
+      "sha256": "231c31793200083766d9460b65c57e7ef435a5c125174c4e42e923b66a2ae410",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    },
+    {
+      "id": "zh-hans-quality-16",
+      "optimized": true,
+      "method": "linear",
+      "sha256": "199ea15f05c157c69b13bcfa175d44e144e96f52f3daf07035e2b0194f284757",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "zh-hans-quality-16",
+      "optimized": true,
+      "method": "linear_exact",
+      "sha256": "945062fc2de393f185a86d65912ad552e0f41172b2b3da7e0b127ae391c20b9a",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    },
+    {
+      "id": "zh-hans-quality-16",
+      "optimized": false,
+      "method": "linear",
+      "sha256": "199ea15f05c157c69b13bcfa175d44e144e96f52f3daf07035e2b0194f284757",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "zh-hans-quality-16",
+      "optimized": false,
+      "method": "linear_exact",
+      "sha256": "945062fc2de393f185a86d65912ad552e0f41172b2b3da7e0b127ae391c20b9a",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    },
+    {
+      "id": "zh-hant-quality-16",
+      "optimized": true,
+      "method": "linear",
+      "sha256": "6679d11cfb94614ef72527ef408820bd4a8140e008d7021f3044db8aab50bdc9",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "zh-hant-quality-16",
+      "optimized": true,
+      "method": "linear_exact",
+      "sha256": "d2ce19d403a61e1d436926b2d9af4fa1b49bea7f70a86b1806303eac01752a88",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    },
+    {
+      "id": "zh-hant-quality-16",
+      "optimized": false,
+      "method": "linear",
+      "sha256": "6679d11cfb94614ef72527ef408820bd4a8140e008d7021f3044db8aab50bdc9",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "zh-hant-quality-16",
+      "optimized": false,
+      "method": "linear_exact",
+      "sha256": "d2ce19d403a61e1d436926b2d9af4fa1b49bea7f70a86b1806303eac01752a88",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    },
+    {
+      "id": "mixed-quality-16",
+      "optimized": true,
+      "method": "linear",
+      "sha256": "e465d9b7067a6417915580b72bafe9cc7ea9348c176071b5f1aff5cf5b5aa404",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "mixed-quality-16",
+      "optimized": true,
+      "method": "linear_exact",
+      "sha256": "034a09e4223683b3872b2eab53a39403e02a0fdcd89267d3ab9a5a2dd5330c51",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    },
+    {
+      "id": "mixed-quality-16",
+      "optimized": false,
+      "method": "linear",
+      "sha256": "e465d9b7067a6417915580b72bafe9cc7ea9348c176071b5f1aff5cf5b5aa404",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "mixed-quality-16",
+      "optimized": false,
+      "method": "linear_exact",
+      "sha256": "034a09e4223683b3872b2eab53a39403e02a0fdcd89267d3ab9a5a2dd5330c51",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    },
+    {
+      "id": "blank-negative-24",
+      "optimized": true,
+      "method": "linear",
+      "sha256": "f9a486630f80d54d5f935ebcc08235bed18e8d9f6786729b6ed368527f9174d2",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "blank-negative-24",
+      "optimized": true,
+      "method": "linear_exact",
+      "sha256": "f9a486630f80d54d5f935ebcc08235bed18e8d9f6786729b6ed368527f9174d2",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "blank-negative-24",
+      "optimized": false,
+      "method": "linear",
+      "sha256": "f9a486630f80d54d5f935ebcc08235bed18e8d9f6786729b6ed368527f9174d2",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "blank-negative-24",
+      "optimized": false,
+      "method": "linear_exact",
+      "sha256": "f9a486630f80d54d5f935ebcc08235bed18e8d9f6786729b6ed368527f9174d2",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "color-control",
+      "optimized": true,
+      "method": "linear",
+      "sha256": "67f23faffbc96368713b976cecff6666f1ae3c2f1eb5d9bae569490a3f22d6b0",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "color-control",
+      "optimized": true,
+      "method": "linear_exact",
+      "sha256": "b1c3d4ff39d9f01ea7b3a1dc6e87ce763e9e644efbfb16413d01b8f9369c8c53",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    },
+    {
+      "id": "color-control",
+      "optimized": false,
+      "method": "linear",
+      "sha256": "67f23faffbc96368713b976cecff6666f1ae3c2f1eb5d9bae569490a3f22d6b0",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "color-control",
+      "optimized": false,
+      "method": "linear_exact",
+      "sha256": "b1c3d4ff39d9f01ea7b3a1dc6e87ce763e9e644efbfb16413d01b8f9369c8c53",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    },
+    {
+      "id": "wide-959",
+      "optimized": true,
+      "method": "linear",
+      "sha256": "2907377b93162f6536267fd1833bcc5679bf1d12862cc51e14c7fd20abbf5043",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "wide-959",
+      "optimized": true,
+      "method": "linear_exact",
+      "sha256": "e7767db87ee4e72a9dca8731a90b9614b55e65a031db083870728954d7ff809f",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    },
+    {
+      "id": "wide-959",
+      "optimized": false,
+      "method": "linear",
+      "sha256": "2907377b93162f6536267fd1833bcc5679bf1d12862cc51e14c7fd20abbf5043",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "wide-959",
+      "optimized": false,
+      "method": "linear_exact",
+      "sha256": "e7767db87ee4e72a9dca8731a90b9614b55e65a031db083870728954d7ff809f",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    },
+    {
+      "id": "wide-1499",
+      "optimized": true,
+      "method": "linear",
+      "sha256": "33f7acd8206fa250a1905bad018c21ab996be708388ed4e7e45609e8caf0713c",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "wide-1499",
+      "optimized": true,
+      "method": "linear_exact",
+      "sha256": "1817aa041c9f8e8a5630de2351e1ad2922edb0f0941886c569f7bc587d11cd03",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    },
+    {
+      "id": "wide-1499",
+      "optimized": false,
+      "method": "linear",
+      "sha256": "33f7acd8206fa250a1905bad018c21ab996be708388ed4e7e45609e8caf0713c",
+      "matchesFrozen": true,
+      "matchesAndroid": true
+    },
+    {
+      "id": "wide-1499",
+      "optimized": false,
+      "method": "linear_exact",
+      "sha256": "1817aa041c9f8e8a5630de2351e1ad2922edb0f0941886c569f7bc587d11cd03",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    },
+    {
+      "id": "wide-2001",
+      "optimized": true,
+      "method": "linear",
+      "sha256": "6e8ced17da17888d264581f5c2f644757fc5a0cd6e76bcc3f61cc797d92665b1",
+      "matchesFrozen": true,
+      "matchesAndroid": false
+    },
+    {
+      "id": "wide-2001",
+      "optimized": true,
+      "method": "linear_exact",
+      "sha256": "51166068590bac76ad385017a2cd76cf041b45161ea9c615f98aa2496cdb4eb1",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    },
+    {
+      "id": "wide-2001",
+      "optimized": false,
+      "method": "linear",
+      "sha256": "6e8ced17da17888d264581f5c2f644757fc5a0cd6e76bcc3f61cc797d92665b1",
+      "matchesFrozen": true,
+      "matchesAndroid": false
+    },
+    {
+      "id": "wide-2001",
+      "optimized": false,
+      "method": "linear_exact",
+      "sha256": "51166068590bac76ad385017a2cd76cf041b45161ea9c615f98aa2496cdb4eb1",
+      "matchesFrozen": false,
+      "matchesAndroid": false
+    }
+  ]
+}

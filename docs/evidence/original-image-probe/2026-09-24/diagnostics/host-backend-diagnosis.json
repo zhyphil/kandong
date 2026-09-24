@@ -1,0 +1,87 @@
+{
+  "opencv": "5.0.0",
+  "numpy": "2.5.3",
+  "scope": "same original pixels, INTER_LINEAR, original three lanes vs five lanes with two zeros; compare first three output lanes",
+  "rows": [
+    {
+      "id": "en-quality-16",
+      "sourceBgrSha256": "e042c3241f4642b12bd4a8076ebf695e8902cdcb5b4a2ab5f9314c2d189c67e1",
+      "native3": "88e341dfd3c8b4d5dea92c00b0b8262c1fe57f09791a13eeb8bc47e063cc1285",
+      "generic5": "88e341dfd3c8b4d5dea92c00b0b8262c1fe57f09791a13eeb8bc47e063cc1285",
+      "frozen": "88e341dfd3c8b4d5dea92c00b0b8262c1fe57f09791a13eeb8bc47e063cc1285",
+      "android413": "88e341dfd3c8b4d5dea92c00b0b8262c1fe57f09791a13eeb8bc47e063cc1285"
+    },
+    {
+      "id": "fr-nonrefundable-16",
+      "sourceBgrSha256": "1291a8592d4f17cfda4e2d0a668e9c25306f12e491239dec9f0795c022f10c43",
+      "native3": "e402e19c8049141174cc3129b2d32551ac4c45efe2fbf88cde839ad9db5d7fa2",
+      "generic5": "e402e19c8049141174cc3129b2d32551ac4c45efe2fbf88cde839ad9db5d7fa2",
+      "frozen": "e402e19c8049141174cc3129b2d32551ac4c45efe2fbf88cde839ad9db5d7fa2",
+      "android413": "e402e19c8049141174cc3129b2d32551ac4c45efe2fbf88cde839ad9db5d7fa2"
+    },
+    {
+      "id": "zh-hans-quality-16",
+      "sourceBgrSha256": "66eef5fb3d7c0138b91860a9abd7d64d00f7887fd1964f52abbc2c029aaf0687",
+      "native3": "199ea15f05c157c69b13bcfa175d44e144e96f52f3daf07035e2b0194f284757",
+      "generic5": "199ea15f05c157c69b13bcfa175d44e144e96f52f3daf07035e2b0194f284757",
+      "frozen": "199ea15f05c157c69b13bcfa175d44e144e96f52f3daf07035e2b0194f284757",
+      "android413": "199ea15f05c157c69b13bcfa175d44e144e96f52f3daf07035e2b0194f284757"
+    },
+    {
+      "id": "zh-hant-quality-16",
+      "sourceBgrSha256": "ecdd63a178b3d1abbfe74f37bef28fb81de8ae9dd6fc082086f82339f8510c3d",
+      "native3": "6679d11cfb94614ef72527ef408820bd4a8140e008d7021f3044db8aab50bdc9",
+      "generic5": "6679d11cfb94614ef72527ef408820bd4a8140e008d7021f3044db8aab50bdc9",
+      "frozen": "6679d11cfb94614ef72527ef408820bd4a8140e008d7021f3044db8aab50bdc9",
+      "android413": "6679d11cfb94614ef72527ef408820bd4a8140e008d7021f3044db8aab50bdc9"
+    },
+    {
+      "id": "mixed-quality-16",
+      "sourceBgrSha256": "5a6a5d9c8fafe8b8637a573481983a14b16f200256d34b0dabd6b70d2847ee21",
+      "native3": "e465d9b7067a6417915580b72bafe9cc7ea9348c176071b5f1aff5cf5b5aa404",
+      "generic5": "e465d9b7067a6417915580b72bafe9cc7ea9348c176071b5f1aff5cf5b5aa404",
+      "frozen": "e465d9b7067a6417915580b72bafe9cc7ea9348c176071b5f1aff5cf5b5aa404",
+      "android413": "e465d9b7067a6417915580b72bafe9cc7ea9348c176071b5f1aff5cf5b5aa404"
+    },
+    {
+      "id": "blank-negative-24",
+      "sourceBgrSha256": "c27113404b82277ff377ad614d0c4bcef5fb456f57c90341fe04bc99116692c5",
+      "native3": "f9a486630f80d54d5f935ebcc08235bed18e8d9f6786729b6ed368527f9174d2",
+      "generic5": "f9a486630f80d54d5f935ebcc08235bed18e8d9f6786729b6ed368527f9174d2",
+      "frozen": "f9a486630f80d54d5f935ebcc08235bed18e8d9f6786729b6ed368527f9174d2",
+      "android413": "f9a486630f80d54d5f935ebcc08235bed18e8d9f6786729b6ed368527f9174d2"
+    },
+    {
+      "id": "color-control",
+      "sourceBgrSha256": "14dac98b86eafdb8aeb9c0ec933bc6ab21f48817801f8a42ce5aeecf71576844",
+      "native3": "67f23faffbc96368713b976cecff6666f1ae3c2f1eb5d9bae569490a3f22d6b0",
+      "generic5": "67f23faffbc96368713b976cecff6666f1ae3c2f1eb5d9bae569490a3f22d6b0",
+      "frozen": "67f23faffbc96368713b976cecff6666f1ae3c2f1eb5d9bae569490a3f22d6b0",
+      "android413": "67f23faffbc96368713b976cecff6666f1ae3c2f1eb5d9bae569490a3f22d6b0"
+    },
+    {
+      "id": "wide-959",
+      "sourceBgrSha256": "da51bb7c816de84d478f0c8aad6a8f1592cf90024903f78cbd7ed89057e107e4",
+      "native3": "2907377b93162f6536267fd1833bcc5679bf1d12862cc51e14c7fd20abbf5043",
+      "generic5": "2907377b93162f6536267fd1833bcc5679bf1d12862cc51e14c7fd20abbf5043",
+      "frozen": "2907377b93162f6536267fd1833bcc5679bf1d12862cc51e14c7fd20abbf5043",
+      "android413": "2907377b93162f6536267fd1833bcc5679bf1d12862cc51e14c7fd20abbf5043"
+    },
+    {
+      "id": "wide-1499",
+      "sourceBgrSha256": "e4dec6d638d65b0c5cb7e26dc4038f90e82f09de4a7724222d5bd9f451c1009d",
+      "native3": "33f7acd8206fa250a1905bad018c21ab996be708388ed4e7e45609e8caf0713c",
+      "generic5": "33f7acd8206fa250a1905bad018c21ab996be708388ed4e7e45609e8caf0713c",
+      "frozen": "33f7acd8206fa250a1905bad018c21ab996be708388ed4e7e45609e8caf0713c",
+      "android413": "33f7acd8206fa250a1905bad018c21ab996be708388ed4e7e45609e8caf0713c"
+    },
+    {
+      "id": "wide-2001",
+      "sourceBgrSha256": "7fb17ed1439db926b8027d90697e99b9fb1cf68b369d30df4fc14911ce8a72fa",
+      "native3": "6e8ced17da17888d264581f5c2f644757fc5a0cd6e76bcc3f61cc797d92665b1",
+      "generic5": "22f9f997d57d00ce2818e9568df0ea131cc045ea52472a19da7b88f875f88bf8",
+      "frozen": "6e8ced17da17888d264581f5c2f644757fc5a0cd6e76bcc3f61cc797d92665b1",
+      "android413": "22f9f997d57d00ce2818e9568df0ea131cc045ea52472a19da7b88f875f88bf8"
+    }
+  ]
+}

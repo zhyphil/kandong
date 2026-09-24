@@ -1,0 +1,23 @@
+{
+  ".pom": {
+    "url": "https://repo.maven.apache.org/maven2/org/opencv/opencv/4.14.0/opencv-4.14.0.pom",
+    "bytes": 1795,
+    "sha256": "84229e927bea328a98e3f883ccd39bd1f7f86c4902160dbeef0e405a895f1bcd"
+  },
+  ".module": {
+    "url": "https://repo.maven.apache.org/maven2/org/opencv/opencv/4.14.0/opencv-4.14.0.module",
+    "bytes": 3872,
+    "sha256": "617acd67e7771e0ea6de9eb5f87bc7d2b240698dc9b2d410f1baa37ff3951236"
+  },
+  ".aar": {
+    "url": "https://repo.maven.apache.org/maven2/org/opencv/opencv/4.14.0/opencv-4.14.0.aar",
+    "bytes": 123380341,
+    "sha256": "6d11b40f6a54113dafe8540b1237b637193cb21e83deb11bc53d6757d35d494d"
+  },
+  ".aar.sha256": {
+    "url": "https://repo.maven.apache.org/maven2/org/opencv/opencv/4.14.0/opencv-4.14.0.aar.sha256",
+    "bytes": 64,
+    "sha256": "c43e76fa6cbf026999f8ea2ac7646f0e62930c93fd9c84fcac374796518abcfa"
+  },
+  "moduleConsistent": false
+}
