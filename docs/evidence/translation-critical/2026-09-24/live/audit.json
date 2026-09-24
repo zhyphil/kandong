@@ -1,0 +1,18 @@
+{
+  "completedCalls": 112,
+  "billedCharacters": 2244,
+  "frozenPlanAndHashesMatch": true,
+  "completeSourceBindingMatches": true,
+  "v1GateReplayMatches": true,
+  "chineseTargetsLocalOnly": 6,
+  "oldTargets": 48,
+  "newTargets": 8,
+  "rounds": 2,
+  "v1DisplayStates": {
+    "candidate-unverified": 82,
+    "original-with-warning": 30
+  },
+  "qualityAccepted": false,
+  "phoneUpdated": false,
+  "realScreenTransferred": false
+}

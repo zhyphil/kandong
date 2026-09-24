@@ -1,0 +1,5604 @@
+{
+  "version": "critical-facts-v1",
+  "syntheticOnly": true,
+  "networkCalls": 0,
+  "scope": "first-round complete source-bound targets only",
+  "semanticAcceptance": false,
+  "inputHashes": {
+    "docs/evidence/deepl-translation/2026-09-24/json-context-run1/responses.jsonl.gz": "5112529780e5ce07e236aa2196736b27849c978303d9c9920e825828e753f47d",
+    "docs/evidence/deepl-translation/2026-09-24/json-context-run1/semantic-review.json": "2413832d8a42d318488e147fdabf61dfe817a23506ad88004f2f9f75c8ecfaa5",
+    "docs/evidence/deepl-translation/2026-09-24/plain-context-run1/responses.jsonl.gz": "7786675cf418fa2b986cc2b0dd7fc6efe32f2d445ac8808efa890a2da55d3cb5",
+    "docs/evidence/deepl-translation/2026-09-24/plain-context-run1/semantic-review.json": "5a061892990a70b07a7f176683c47987fe827be45f3398092a8762a43f39c39f",
+    "docs/evidence/translation-next/2026-09-24/C/responses.jsonl.gz": "c21ec99b8de97baeaf5822fa0f36eac727823a017a212befa1c5e8ebc36ed33e",
+    "docs/evidence/translation-next/2026-09-24/C/manual-review.json": "253f1ceba7170465387caa4801bcf3c988b8f7db292116bf2302af36670d506d",
+    "docs/evidence/translation-next/2026-09-24/D/responses.jsonl.gz": "4dd0edfe390cbfa089258a33835cadb9c7fcfa99df8d6d40a90914471e1cb833",
+    "docs/evidence/translation-next/2026-09-24/D/manual-review.json": "0d3522cea6f98f778fe5ae855ac467519616fd4cf16a4e2c80fa03cedcdeb803",
+    "scripts/translation_critical_checks.py": "4b00a000254f2d639c3835a2565bab020c7426487cf7c84fc1c5b590400c1aed"
+  },
+  "summary": {
+    "deepl-json": {
+      "targets": 37,
+      "matrix": {
+        "fail/candidate-unverified": 7,
+        "pass/candidate-unverified": 24,
+        "fail/original-with-warning": 4,
+        "needs-review/original-with-warning": 1,
+        "needs-review/candidate-unverified": 1
+      }
+    },
+    "deepl-plain": {
+      "targets": 14,
+      "matrix": {
+        "pass/candidate-unverified": 12,
+        "fail/original-with-warning": 2
+      }
+    },
+    "local-C": {
+      "targets": 48,
+      "matrix": {
+        "pass/candidate-unverified": 33,
+        "pass/original-with-warning": 5,
+        "needs-review/original-with-warning": 1,
+        "fail/candidate-unverified": 4,
+        "fail/original-with-warning": 5
+      }
+    },
+    "local-D": {
+      "targets": 48,
+      "matrix": {
+        "pass/candidate-unverified": 40,
+        "pass/original-with-warning": 4,
+        "fail/original-with-warning": 1,
+        "fail/candidate-unverified": 1,
+        "needs-review/original-with-warning": 2
+      }
+    }
+  },
+  "rows": [
+    {
+      "run": "deepl-json",
+      "page": "p001",
+      "target": "b005",
+      "source": "Book",
+      "translation": "书籍",
+      "previousJudgment": "fail",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p001",
+        "source": {
+          "id": "b005",
+          "text": "Book",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "书籍",
+        "translation": "书籍",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p002",
+      "target": "b004",
+      "source": "Book",
+      "translation": "图书",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p002",
+        "source": {
+          "id": "b004",
+          "text": "Book",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "图书",
+        "translation": "图书",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p003",
+      "target": "b004",
+      "source": "$120.00 per night",
+      "translation": "每晚 120.00",
+      "previousJudgment": "fail",
+      "state": "original-with-warning",
+      "reasons": [
+        "currency-amount-unverified"
+      ],
+      "display": {
+        "id": "b004",
+        "pageId": "p003",
+        "source": {
+          "id": "b004",
+          "text": "$120.00 per night",
+          "role": "value",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "original-with-warning",
+        "displayText": "$120.00 per night",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "currency-amount-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p003",
+      "target": "b005",
+      "source": "$240.00 for 2 nights",
+      "translation": "2晚共$240.00",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p003",
+        "source": {
+          "id": "b005",
+          "text": "$240.00 for 2 nights",
+          "role": "value",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "2晚共$240.00",
+        "translation": "2晚共$240.00",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p003",
+      "target": "b006",
+      "source": "Taxes included",
+      "translation": "含税",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b006",
+        "pageId": "p003",
+        "source": {
+          "id": "b006",
+          "text": "Taxes included",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            735,
+            1040,
+            835
+          ],
+          "readingOrder": 6
+        },
+        "state": "candidate-unverified",
+        "displayText": "含税",
+        "translation": "含税",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p003",
+      "target": "b007",
+      "source": "Free cancellation before 18:00 on 10 October 2026.",
+      "translation": "2026年10月10日18:00前可免费取消。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b007",
+        "pageId": "p003",
+        "source": {
+          "id": "b007",
+          "text": "Free cancellation before 18:00 on 10 October 2026.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            870,
+            1040,
+            970
+          ],
+          "readingOrder": 7
+        },
+        "state": "candidate-unverified",
+        "displayText": "2026年10月10日18:00前可免费取消。",
+        "translation": "2026年10月10日18:00前可免费取消。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p003",
+      "target": "b009",
+      "source": "$210.00 for 2 nights",
+      "translation": "2晚共$210.00",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b009",
+        "pageId": "p003",
+        "source": {
+          "id": "b009",
+          "text": "$210.00 for 2 nights",
+          "role": "value",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            1140,
+            1040,
+            1240
+          ],
+          "readingOrder": 9
+        },
+        "state": "candidate-unverified",
+        "displayText": "2晚共$210.00",
+        "translation": "2晚共$210.00",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p003",
+      "target": "b010",
+      "source": "Taxes not included",
+      "translation": "不含税",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b010",
+        "pageId": "p003",
+        "source": {
+          "id": "b010",
+          "text": "Taxes not included",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            1275,
+            1040,
+            1375
+          ],
+          "readingOrder": 10
+        },
+        "state": "candidate-unverified",
+        "displayText": "不含税",
+        "translation": "不含税",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p003",
+      "target": "b011",
+      "source": "Non-refundable. Payment required now.",
+      "translation": "不可退款。请立即付款。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b011",
+        "pageId": "p003",
+        "source": {
+          "id": "b011",
+          "text": "Non-refundable. Payment required now.",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            1410,
+            1040,
+            1510
+          ],
+          "readingOrder": 11
+        },
+        "state": "candidate-unverified",
+        "displayText": "不可退款。请立即付款。",
+        "translation": "不可退款。请立即付款。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p004",
+      "target": "b004",
+      "source": "Vol",
+      "translation": "航班",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p004",
+        "source": {
+          "id": "b004",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "航班",
+        "translation": "航班",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p005",
+      "target": "b004",
+      "source": "Vol",
+      "translation": "航班",
+      "previousJudgment": "fail",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p005",
+        "source": {
+          "id": "b004",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "航班",
+        "translation": "航班",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p006",
+      "target": "b003",
+      "source": "Non échangeable et non remboursable.",
+      "translation": "不可兑换，不可退款。",
+      "previousJudgment": "needs-review",
+      "state": "original-with-warning",
+      "reasons": [
+        "exchange-condition-unverified"
+      ],
+      "display": {
+        "id": "b003",
+        "pageId": "p006",
+        "source": {
+          "id": "b003",
+          "text": "Non échangeable et non remboursable.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "original-with-warning",
+        "displayText": "Non échangeable et non remboursable.",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "exchange-condition-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p006",
+      "target": "b005",
+      "source": "1 bagage, 8 kg maximum.",
+      "translation": "1件行李，重量不超过8公斤。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p006",
+        "source": {
+          "id": "b005",
+          "text": "1 bagage, 8 kg maximum.",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "1件行李，重量不超过8公斤。",
+        "translation": "1件行李，重量不超过8公斤。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p101",
+      "target": "b003",
+      "source": "Book",
+      "translation": "图书",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p101",
+        "source": {
+          "id": "b003",
+          "text": "Book",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "图书",
+        "translation": "图书",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p102",
+      "target": "b004",
+      "source": "Book",
+      "translation": "书籍",
+      "previousJudgment": "fail",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p102",
+        "source": {
+          "id": "b004",
+          "text": "Book",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "书籍",
+        "translation": "书籍",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p103",
+      "target": "b003",
+      "source": "Vol",
+      "translation": "飞行",
+      "previousJudgment": "needs-review",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p103",
+        "source": {
+          "id": "b003",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "飞行",
+        "translation": "飞行",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p104",
+      "target": "b004",
+      "source": "Vol",
+      "translation": "飞行",
+      "previousJudgment": "fail",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p104",
+        "source": {
+          "id": "b004",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "飞行",
+        "translation": "飞行",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p105",
+      "target": "b003",
+      "source": "$19.50 per month",
+      "translation": "每月 $19.50",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p105",
+        "source": {
+          "id": "b003",
+          "text": "$19.50 per month",
+          "role": "value",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "每月 $19.50",
+        "translation": "每月 $19.50",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p105",
+      "target": "b004",
+      "source": "Tax not included",
+      "translation": "不含税",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p105",
+        "source": {
+          "id": "b004",
+          "text": "Tax not included",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "不含税",
+        "translation": "不含税",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p105",
+      "target": "b005",
+      "source": "Cancel before 09:15 on 6 November 2026. No refund after renewal.",
+      "translation": "请于 2026 年 11 月 6 日 09:15 之前取消。续订后不予退款。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p105",
+        "source": {
+          "id": "b005",
+          "text": "Cancel before 09:15 on 6 November 2026. No refund after renewal.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "请于 2026 年 11 月 6 日 09:15 之前取消。续订后不予退款。",
+        "translation": "请于 2026 年 11 月 6 日 09:15 之前取消。续订后不予退款。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p105",
+      "target": "b007",
+      "source": "$195.00 per year",
+      "translation": "每年 195.00 美元",
+      "previousJudgment": "fail",
+      "state": "original-with-warning",
+      "reasons": [
+        "currency-amount-unverified"
+      ],
+      "display": {
+        "id": "b007",
+        "pageId": "p105",
+        "source": {
+          "id": "b007",
+          "text": "$195.00 per year",
+          "role": "value",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            870,
+            1040,
+            970
+          ],
+          "readingOrder": 7
+        },
+        "state": "original-with-warning",
+        "displayText": "$195.00 per year",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "currency-amount-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p105",
+      "target": "b008",
+      "source": "Tax included",
+      "translation": "含税",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b008",
+        "pageId": "p105",
+        "source": {
+          "id": "b008",
+          "text": "Tax included",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            1005,
+            1040,
+            1105
+          ],
+          "readingOrder": 8
+        },
+        "state": "candidate-unverified",
+        "displayText": "含税",
+        "translation": "含税",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p106",
+      "target": "b003",
+      "source": "Prix total : 37,80 €",
+      "translation": "总价：37.80 欧元",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p106",
+        "source": {
+          "id": "b003",
+          "text": "Prix total : 37,80 €",
+          "role": "value",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "总价：37.80 欧元",
+        "translation": "总价：37.80 欧元",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p106",
+      "target": "b004",
+      "source": "Valable le 5 décembre 2026",
+      "translation": "有效期至2026年12月5日",
+      "previousJudgment": "fail",
+      "state": "original-with-warning",
+      "reasons": [
+        "date-relation-unverified"
+      ],
+      "display": {
+        "id": "b004",
+        "pageId": "p106",
+        "source": {
+          "id": "b004",
+          "text": "Valable le 5 décembre 2026",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "original-with-warning",
+        "displayText": "Valable le 5 décembre 2026",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "date-relation-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p106",
+      "target": "b005",
+      "source": "Aucun remboursement après le départ.",
+      "translation": "出发后不予退款。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p106",
+        "source": {
+          "id": "b005",
+          "text": "Aucun remboursement après le départ.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "出发后不予退款。",
+        "translation": "出发后不予退款。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p106",
+      "target": "b006",
+      "source": "2 bagages, 6 kg maximum chacun.",
+      "translation": "2件行李，每件最多6公斤。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b006",
+        "pageId": "p106",
+        "source": {
+          "id": "b006",
+          "text": "2 bagages, 6 kg maximum chacun.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            735,
+            1040,
+            835
+          ],
+          "readingOrder": 6
+        },
+        "state": "candidate-unverified",
+        "displayText": "2件行李，每件最多6公斤。",
+        "translation": "2件行李，每件最多6公斤。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p201",
+      "target": "b004",
+      "source": "Return",
+      "translation": "返回",
+      "previousJudgment": "fail",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p201",
+        "source": {
+          "id": "b004",
+          "text": "Return",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "返回",
+        "translation": "返回",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p202",
+      "target": "b003",
+      "source": "Return",
+      "translation": "返回",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p202",
+        "source": {
+          "id": "b003",
+          "text": "Return",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "返回",
+        "translation": "返回",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p203",
+      "target": "b003",
+      "source": "Note",
+      "translation": "注",
+      "previousJudgment": "fail",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p203",
+        "source": {
+          "id": "b003",
+          "text": "Note",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "注",
+        "translation": "注",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p204",
+      "target": "b003",
+      "source": "Note",
+      "translation": "注",
+      "previousJudgment": "fail",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p204",
+        "source": {
+          "id": "b003",
+          "text": "Note",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "注",
+        "translation": "注",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p205",
+      "target": "b003",
+      "source": "$48.90 total for 2 people",
+      "translation": "2人共计$48.90",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p205",
+        "source": {
+          "id": "b003",
+          "text": "$48.90 total for 2 people",
+          "role": "value",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "2人共计$48.90",
+        "translation": "2人共计$48.90",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p205",
+      "target": "b004",
+      "source": "Only valid on 21 November 2026.",
+      "translation": "仅在2026年11月21日有效。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p205",
+        "source": {
+          "id": "b004",
+          "text": "Only valid on 21 November 2026.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "仅在2026年11月21日有效。",
+        "translation": "仅在2026年11月21日有效。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p205",
+      "target": "b005",
+      "source": "No changes or refunds after departure.",
+      "translation": "出发后恕不接受任何更改或退款。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p205",
+        "source": {
+          "id": "b005",
+          "text": "No changes or refunds after departure.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "出发后恕不接受任何更改或退款。",
+        "translation": "出发后恕不接受任何更改或退款。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p205",
+      "target": "b007",
+      "source": "$12.45 per child",
+      "translation": "每个孩子 12.45 美元",
+      "previousJudgment": "fail",
+      "state": "original-with-warning",
+      "reasons": [
+        "currency-amount-unverified"
+      ],
+      "display": {
+        "id": "b007",
+        "pageId": "p205",
+        "source": {
+          "id": "b007",
+          "text": "$12.45 per child",
+          "role": "value",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            870,
+            1040,
+            970
+          ],
+          "readingOrder": 7
+        },
+        "state": "original-with-warning",
+        "displayText": "$12.45 per child",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "currency-amount-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p205",
+      "target": "b008",
+      "source": "Free cancellation until 07:05 on 20 November 2026.",
+      "translation": "可在2026年11月20日07:05之前免费取消。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b008",
+        "pageId": "p205",
+        "source": {
+          "id": "b008",
+          "text": "Free cancellation until 07:05 on 20 November 2026.",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            1005,
+            1040,
+            1105
+          ],
+          "readingOrder": 8
+        },
+        "state": "candidate-unverified",
+        "displayText": "可在2026年11月20日07:05之前免费取消。",
+        "translation": "可在2026年11月20日07:05之前免费取消。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p206",
+      "target": "b003",
+      "source": "1 bagage, 7 kg au maximum.",
+      "translation": "1件行李，重量不超过7公斤。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p206",
+        "source": {
+          "id": "b003",
+          "text": "1 bagage, 7 kg au maximum.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "1件行李，重量不超过7公斤。",
+        "translation": "1件行李，重量不超过7公斤。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-json",
+      "page": "p206",
+      "target": "b005",
+      "source": "Poids minimum : 9 kg.",
+      "translation": "最低重量：9 公斤。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p206",
+        "source": {
+          "id": "b005",
+          "text": "Poids minimum : 9 kg.",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "最低重量：9 公斤。",
+        "translation": "最低重量：9 公斤。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-plain",
+      "page": "p001",
+      "target": "b005",
+      "source": "Book",
+      "translation": "预订",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p001",
+        "source": {
+          "id": "b005",
+          "text": "Book",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "预订",
+        "translation": "预订",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-plain",
+      "page": "p002",
+      "target": "b004",
+      "source": "Book",
+      "translation": "图书",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p002",
+        "source": {
+          "id": "b004",
+          "text": "Book",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "图书",
+        "translation": "图书",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-plain",
+      "page": "p101",
+      "target": "b003",
+      "source": "Book",
+      "translation": "图书",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p101",
+        "source": {
+          "id": "b003",
+          "text": "Book",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "图书",
+        "translation": "图书",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-plain",
+      "page": "p102",
+      "target": "b004",
+      "source": "Book",
+      "translation": "预订",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p102",
+        "source": {
+          "id": "b004",
+          "text": "Book",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "预订",
+        "translation": "预订",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-plain",
+      "page": "p004",
+      "target": "b004",
+      "source": "Vol",
+      "translation": "航班",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p004",
+        "source": {
+          "id": "b004",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "航班",
+        "translation": "航班",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-plain",
+      "page": "p005",
+      "target": "b004",
+      "source": "Vol",
+      "translation": "盗窃",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p005",
+        "source": {
+          "id": "b004",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "盗窃",
+        "translation": "盗窃",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-plain",
+      "page": "p103",
+      "target": "b003",
+      "source": "Vol",
+      "translation": "航班",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p103",
+        "source": {
+          "id": "b003",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "航班",
+        "translation": "航班",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-plain",
+      "page": "p104",
+      "target": "b004",
+      "source": "Vol",
+      "translation": "盗窃",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p104",
+        "source": {
+          "id": "b004",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "盗窃",
+        "translation": "盗窃",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-plain",
+      "page": "p201",
+      "target": "b004",
+      "source": "Return",
+      "translation": "退货",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p201",
+        "source": {
+          "id": "b004",
+          "text": "Return",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "退货",
+        "translation": "退货",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-plain",
+      "page": "p202",
+      "target": "b003",
+      "source": "Return",
+      "translation": "返回",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p202",
+        "source": {
+          "id": "b003",
+          "text": "Return",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "返回",
+        "translation": "返回",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-plain",
+      "page": "p203",
+      "target": "b003",
+      "source": "Note",
+      "translation": "账单",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p203",
+        "source": {
+          "id": "b003",
+          "text": "Note",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "账单",
+        "translation": "账单",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-plain",
+      "page": "p204",
+      "target": "b003",
+      "source": "Note",
+      "translation": "评分",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p204",
+        "source": {
+          "id": "b003",
+          "text": "Note",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "评分",
+        "translation": "评分",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-plain",
+      "page": "p106",
+      "target": "b004",
+      "source": "Valable le 5 décembre 2026",
+      "translation": "有效期至2026年12月5日",
+      "previousJudgment": "fail",
+      "state": "original-with-warning",
+      "reasons": [
+        "date-relation-unverified"
+      ],
+      "display": {
+        "id": "b004",
+        "pageId": "p106",
+        "source": {
+          "id": "b004",
+          "text": "Valable le 5 décembre 2026",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "original-with-warning",
+        "displayText": "Valable le 5 décembre 2026",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "date-relation-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "deepl-plain",
+      "page": "p003",
+      "target": "b004",
+      "source": "$120.00 per night",
+      "translation": "每晚 120.00 美元",
+      "previousJudgment": "fail",
+      "state": "original-with-warning",
+      "reasons": [
+        "currency-amount-unverified"
+      ],
+      "display": {
+        "id": "b004",
+        "pageId": "p003",
+        "source": {
+          "id": "b004",
+          "text": "$120.00 per night",
+          "role": "value",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "original-with-warning",
+        "displayText": "$120.00 per night",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "currency-amount-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p001",
+      "target": "b005",
+      "source": "Book",
+      "translation": "预订",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p001",
+        "source": {
+          "id": "b005",
+          "text": "Book",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "预订",
+        "translation": "预订",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p002",
+      "target": "b004",
+      "source": "Book",
+      "translation": "图书",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p002",
+        "source": {
+          "id": "b004",
+          "text": "Book",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "图书",
+        "translation": "图书",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p003",
+      "target": "b004",
+      "source": "$120.00 per night",
+      "translation": "每晚$120.00",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p003",
+        "source": {
+          "id": "b004",
+          "text": "$120.00 per night",
+          "role": "value",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "每晚$120.00",
+        "translation": "每晚$120.00",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p003",
+      "target": "b005",
+      "source": "$240.00 for 2 nights",
+      "translation": "2 晚$240.00",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p003",
+        "source": {
+          "id": "b005",
+          "text": "$240.00 for 2 nights",
+          "role": "value",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "2 晚$240.00",
+        "translation": "2 晚$240.00",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p003",
+      "target": "b006",
+      "source": "Taxes included",
+      "translation": "税费包含",
+      "previousJudgment": "pass",
+      "state": "original-with-warning",
+      "reasons": [
+        "tax-condition-unverified"
+      ],
+      "display": {
+        "id": "b006",
+        "pageId": "p003",
+        "source": {
+          "id": "b006",
+          "text": "Taxes included",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            735,
+            1040,
+            835
+          ],
+          "readingOrder": 6
+        },
+        "state": "original-with-warning",
+        "displayText": "Taxes included",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "tax-condition-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p003",
+      "target": "b007",
+      "source": "Free cancellation before 18:00 on 10 October 2026.",
+      "translation": "免费取消，于 2026 年 10 月 10 日 18:00 前。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b007",
+        "pageId": "p003",
+        "source": {
+          "id": "b007",
+          "text": "Free cancellation before 18:00 on 10 October 2026.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            870,
+            1040,
+            970
+          ],
+          "readingOrder": 7
+        },
+        "state": "candidate-unverified",
+        "displayText": "免费取消，于 2026 年 10 月 10 日 18:00 前。",
+        "translation": "免费取消，于 2026 年 10 月 10 日 18:00 前。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p003",
+      "target": "b009",
+      "source": "$210.00 for 2 nights",
+      "translation": "2 晚$210.00",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b009",
+        "pageId": "p003",
+        "source": {
+          "id": "b009",
+          "text": "$210.00 for 2 nights",
+          "role": "value",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            1140,
+            1040,
+            1240
+          ],
+          "readingOrder": 9
+        },
+        "state": "candidate-unverified",
+        "displayText": "2 晚$210.00",
+        "translation": "2 晚$210.00",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p003",
+      "target": "b010",
+      "source": "Taxes not included",
+      "translation": "税费不包含",
+      "previousJudgment": "pass",
+      "state": "original-with-warning",
+      "reasons": [
+        "tax-condition-unverified"
+      ],
+      "display": {
+        "id": "b010",
+        "pageId": "p003",
+        "source": {
+          "id": "b010",
+          "text": "Taxes not included",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            1275,
+            1040,
+            1375
+          ],
+          "readingOrder": 10
+        },
+        "state": "original-with-warning",
+        "displayText": "Taxes not included",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "tax-condition-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p003",
+      "target": "b011",
+      "source": "Non-refundable. Payment required now.",
+      "translation": "不可退款。现需付款。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b011",
+        "pageId": "p003",
+        "source": {
+          "id": "b011",
+          "text": "Non-refundable. Payment required now.",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            1410,
+            1040,
+            1510
+          ],
+          "readingOrder": 11
+        },
+        "state": "candidate-unverified",
+        "displayText": "不可退款。现需付款。",
+        "translation": "不可退款。现需付款。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p004",
+      "target": "b004",
+      "source": "Vol",
+      "translation": "航班",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p004",
+        "source": {
+          "id": "b004",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "航班",
+        "translation": "航班",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p005",
+      "target": "b004",
+      "source": "Vol",
+      "translation": "盗窃",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p005",
+        "source": {
+          "id": "b004",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "盗窃",
+        "translation": "盗窃",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p006",
+      "target": "b003",
+      "source": "Non échangeable et non remboursable.",
+      "translation": "不可兑换且不可退还。",
+      "previousJudgment": "needs-review",
+      "state": "original-with-warning",
+      "reasons": [
+        "exchange-condition-unverified"
+      ],
+      "display": {
+        "id": "b003",
+        "pageId": "p006",
+        "source": {
+          "id": "b003",
+          "text": "Non échangeable et non remboursable.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "original-with-warning",
+        "displayText": "Non échangeable et non remboursable.",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "exchange-condition-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p006",
+      "target": "b005",
+      "source": "1 bagage, 8 kg maximum.",
+      "translation": "1 个行李，最大重量 8 公斤。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p006",
+        "source": {
+          "id": "b005",
+          "text": "1 bagage, 8 kg maximum.",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "1 个行李，最大重量 8 公斤。",
+        "translation": "1 个行李，最大重量 8 公斤。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p101",
+      "target": "b003",
+      "source": "Book",
+      "translation": "书籍",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p101",
+        "source": {
+          "id": "b003",
+          "text": "Book",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "书籍",
+        "translation": "书籍",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p102",
+      "target": "b004",
+      "source": "Book",
+      "translation": "预订",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p102",
+        "source": {
+          "id": "b004",
+          "text": "Book",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "预订",
+        "translation": "预订",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p103",
+      "target": "b003",
+      "source": "Vol",
+      "translation": "航班",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p103",
+        "source": {
+          "id": "b003",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "航班",
+        "translation": "航班",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p104",
+      "target": "b004",
+      "source": "Vol",
+      "translation": "被盗物品",
+      "previousJudgment": "fail",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p104",
+        "source": {
+          "id": "b004",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "被盗物品",
+        "translation": "被盗物品",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p105",
+      "target": "b003",
+      "source": "$19.50 per month",
+      "translation": "每月$19.50",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p105",
+        "source": {
+          "id": "b003",
+          "text": "$19.50 per month",
+          "role": "value",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "每月$19.50",
+        "translation": "每月$19.50",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p105",
+      "target": "b004",
+      "source": "Tax not included",
+      "translation": "不含税",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p105",
+        "source": {
+          "id": "b004",
+          "text": "Tax not included",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "不含税",
+        "translation": "不含税",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p105",
+      "target": "b005",
+      "source": "Cancel before 09:15 on 6 November 2026. No refund after renewal.",
+      "translation": "在2026年11月6日09:15之前取消。续费后无退款。",
+      "previousJudgment": "pass",
+      "state": "original-with-warning",
+      "reasons": [
+        "refund-negation-unverified",
+        "refund-condition-unverified"
+      ],
+      "display": {
+        "id": "b005",
+        "pageId": "p105",
+        "source": {
+          "id": "b005",
+          "text": "Cancel before 09:15 on 6 November 2026. No refund after renewal.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "original-with-warning",
+        "displayText": "Cancel before 09:15 on 6 November 2026. No refund after renewal.",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "refund-negation-unverified",
+            "refund-condition-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p105",
+      "target": "b007",
+      "source": "$195.00 per year",
+      "translation": "每年$195.00",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b007",
+        "pageId": "p105",
+        "source": {
+          "id": "b007",
+          "text": "$195.00 per year",
+          "role": "value",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            870,
+            1040,
+            970
+          ],
+          "readingOrder": 7
+        },
+        "state": "candidate-unverified",
+        "displayText": "每年$195.00",
+        "translation": "每年$195.00",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p105",
+      "target": "b008",
+      "source": "Tax included",
+      "translation": "含税",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b008",
+        "pageId": "p105",
+        "source": {
+          "id": "b008",
+          "text": "Tax included",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            1005,
+            1040,
+            1105
+          ],
+          "readingOrder": 8
+        },
+        "state": "candidate-unverified",
+        "displayText": "含税",
+        "translation": "含税",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p106",
+      "target": "b003",
+      "source": "Prix total : 37,80 €",
+      "translation": "总价：37.80 欧元",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p106",
+        "source": {
+          "id": "b003",
+          "text": "Prix total : 37,80 €",
+          "role": "value",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "总价：37.80 欧元",
+        "translation": "总价：37.80 欧元",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p106",
+      "target": "b004",
+      "source": "Valable le 5 décembre 2026",
+      "translation": "有效期至 2026 年 12 月 5 日",
+      "previousJudgment": "fail",
+      "state": "original-with-warning",
+      "reasons": [
+        "date-relation-unverified"
+      ],
+      "display": {
+        "id": "b004",
+        "pageId": "p106",
+        "source": {
+          "id": "b004",
+          "text": "Valable le 5 décembre 2026",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "original-with-warning",
+        "displayText": "Valable le 5 décembre 2026",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "date-relation-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p106",
+      "target": "b005",
+      "source": "Aucun remboursement après le départ.",
+      "translation": "离境后不予退款。",
+      "previousJudgment": "fail",
+      "state": "original-with-warning",
+      "reasons": [
+        "refund-condition-unverified"
+      ],
+      "display": {
+        "id": "b005",
+        "pageId": "p106",
+        "source": {
+          "id": "b005",
+          "text": "Aucun remboursement après le départ.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "original-with-warning",
+        "displayText": "Aucun remboursement après le départ.",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "refund-condition-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p106",
+      "target": "b006",
+      "source": "2 bagages, 6 kg maximum chacun.",
+      "translation": "每件行李最多 2 件，每件重量上限 6 公斤。",
+      "previousJudgment": "fail",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b006",
+        "pageId": "p106",
+        "source": {
+          "id": "b006",
+          "text": "2 bagages, 6 kg maximum chacun.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            735,
+            1040,
+            835
+          ],
+          "readingOrder": 6
+        },
+        "state": "candidate-unverified",
+        "displayText": "每件行李最多 2 件，每件重量上限 6 公斤。",
+        "translation": "每件行李最多 2 件，每件重量上限 6 公斤。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p201",
+      "target": "b004",
+      "source": "Return",
+      "translation": "退货",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p201",
+        "source": {
+          "id": "b004",
+          "text": "Return",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "退货",
+        "translation": "退货",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p202",
+      "target": "b003",
+      "source": "Return",
+      "translation": "返回",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p202",
+        "source": {
+          "id": "b003",
+          "text": "Return",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "返回",
+        "translation": "返回",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p203",
+      "target": "b003",
+      "source": "Note",
+      "translation": "备注",
+      "previousJudgment": "fail",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p203",
+        "source": {
+          "id": "b003",
+          "text": "Note",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "备注",
+        "translation": "备注",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p204",
+      "target": "b003",
+      "source": "Note",
+      "translation": "评分",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p204",
+        "source": {
+          "id": "b003",
+          "text": "Note",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "评分",
+        "translation": "评分",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p205",
+      "target": "b003",
+      "source": "$48.90 total for 2 people",
+      "translation": "2 人总价$48.90",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p205",
+        "source": {
+          "id": "b003",
+          "text": "$48.90 total for 2 people",
+          "role": "value",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "2 人总价$48.90",
+        "translation": "2 人总价$48.90",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p205",
+      "target": "b004",
+      "source": "Only valid on 21 November 2026.",
+      "translation": "仅限 2026 年 11 月 21 日有效。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p205",
+        "source": {
+          "id": "b004",
+          "text": "Only valid on 21 November 2026.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "仅限 2026 年 11 月 21 日有效。",
+        "translation": "仅限 2026 年 11 月 21 日有效。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p205",
+      "target": "b005",
+      "source": "No changes or refunds after departure.",
+      "translation": "离站后无更改或退款。",
+      "previousJudgment": "pass",
+      "state": "original-with-warning",
+      "reasons": [
+        "refund-negation-unverified",
+        "refund-condition-unverified",
+        "change-negation-unverified"
+      ],
+      "display": {
+        "id": "b005",
+        "pageId": "p205",
+        "source": {
+          "id": "b005",
+          "text": "No changes or refunds after departure.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "original-with-warning",
+        "displayText": "No changes or refunds after departure.",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "refund-negation-unverified",
+            "refund-condition-unverified",
+            "change-negation-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p205",
+      "target": "b007",
+      "source": "$12.45 per child",
+      "translation": "每名儿童$12.45",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b007",
+        "pageId": "p205",
+        "source": {
+          "id": "b007",
+          "text": "$12.45 per child",
+          "role": "value",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            870,
+            1040,
+            970
+          ],
+          "readingOrder": 7
+        },
+        "state": "candidate-unverified",
+        "displayText": "每名儿童$12.45",
+        "translation": "每名儿童$12.45",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p205",
+      "target": "b008",
+      "source": "Free cancellation until 07:05 on 20 November 2026.",
+      "translation": "免费取消至 2026 年 11 月 20 日 07:05。",
+      "previousJudgment": "pass",
+      "state": "original-with-warning",
+      "reasons": [
+        "date-relation-unverified"
+      ],
+      "display": {
+        "id": "b008",
+        "pageId": "p205",
+        "source": {
+          "id": "b008",
+          "text": "Free cancellation until 07:05 on 20 November 2026.",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            1005,
+            1040,
+            1105
+          ],
+          "readingOrder": 8
+        },
+        "state": "original-with-warning",
+        "displayText": "Free cancellation until 07:05 on 20 November 2026.",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "date-relation-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p206",
+      "target": "b003",
+      "source": "1 bagage, 7 kg au maximum.",
+      "translation": "1 个行李，最大重量 7 公斤。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p206",
+        "source": {
+          "id": "b003",
+          "text": "1 bagage, 7 kg au maximum.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "1 个行李，最大重量 7 公斤。",
+        "translation": "1 个行李，最大重量 7 公斤。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p206",
+      "target": "b005",
+      "source": "Poids minimum : 9 kg.",
+      "translation": "最低重量：9 公斤。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p206",
+        "source": {
+          "id": "b005",
+          "text": "Poids minimum : 9 kg.",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "最低重量：9 公斤。",
+        "translation": "最低重量：9 公斤。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p206",
+      "target": "b006",
+      "source": "Heure limite : 06:40",
+      "translation": "截止时间：06:40",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b006",
+        "pageId": "p206",
+        "source": {
+          "id": "b006",
+          "text": "Heure limite : 06:40",
+          "role": "value",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            735,
+            1040,
+            835
+          ],
+          "readingOrder": 6
+        },
+        "state": "candidate-unverified",
+        "displayText": "截止时间：06:40",
+        "translation": "截止时间：06:40",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p206",
+      "target": "b007",
+      "source": "Valable jusqu'au 3 janvier 2027 inclus.",
+      "translation": "有效期至 2027 年 1 月 3 日（含）。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b007",
+        "pageId": "p206",
+        "source": {
+          "id": "b007",
+          "text": "Valable jusqu'au 3 janvier 2027 inclus.",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            870,
+            1040,
+            970
+          ],
+          "readingOrder": 7
+        },
+        "state": "candidate-unverified",
+        "displayText": "有效期至 2027 年 1 月 3 日（含）。",
+        "translation": "有效期至 2027 年 1 月 3 日（含）。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p301",
+      "target": "b003",
+      "source": "Standing",
+      "translation": "站立",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p301",
+        "source": {
+          "id": "b003",
+          "text": "Standing",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "站立",
+        "translation": "站立",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p302",
+      "target": "b003",
+      "source": "Location",
+      "translation": "位置",
+      "previousJudgment": "fail",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p302",
+        "source": {
+          "id": "b003",
+          "text": "Location",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "位置",
+        "translation": "位置",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p303",
+      "target": "b002",
+      "source": "£18.75 per hour",
+      "translation": "每小时£18.75",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b002",
+        "pageId": "p303",
+        "source": {
+          "id": "b002",
+          "text": "£18.75 per hour",
+          "role": "value",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            195,
+            1040,
+            295
+          ],
+          "readingOrder": 2
+        },
+        "state": "candidate-unverified",
+        "displayText": "每小时£18.75",
+        "translation": "每小时£18.75",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p303",
+      "target": "b003",
+      "source": "Minimum age: 18 years",
+      "translation": "最低年龄：18 岁",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p303",
+        "source": {
+          "id": "b003",
+          "text": "Minimum age: 18 years",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "最低年龄：18 岁",
+        "translation": "最低年龄：18 岁",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p303",
+      "target": "b004",
+      "source": "Valid only on 14 February 2027.",
+      "translation": "仅限 2027 年 2 月 14 日有效。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p303",
+        "source": {
+          "id": "b004",
+          "text": "Valid only on 14 February 2027.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "仅限 2027 年 2 月 14 日有效。",
+        "translation": "仅限 2027 年 2 月 14 日有效。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p303",
+      "target": "b005",
+      "source": "No refund if cancelled less than 24 hours before pickup.",
+      "translation": "提前少于 24 小时取消将不予退款。",
+      "previousJudgment": "fail",
+      "state": "original-with-warning",
+      "reasons": [
+        "refund-condition-unverified"
+      ],
+      "display": {
+        "id": "b005",
+        "pageId": "p303",
+        "source": {
+          "id": "b005",
+          "text": "No refund if cancelled less than 24 hours before pickup.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "original-with-warning",
+        "displayText": "No refund if cancelled less than 24 hours before pickup.",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "refund-condition-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p304",
+      "target": "b002",
+      "source": "3 bagages, 5 kg maximum chacun.",
+      "translation": "每件行李最多5公斤。",
+      "previousJudgment": "fail",
+      "state": "original-with-warning",
+      "reasons": [
+        "missing-source-number"
+      ],
+      "display": {
+        "id": "b002",
+        "pageId": "p304",
+        "source": {
+          "id": "b002",
+          "text": "3 bagages, 5 kg maximum chacun.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            195,
+            1040,
+            295
+          ],
+          "readingOrder": 2
+        },
+        "state": "original-with-warning",
+        "displayText": "3 bagages, 5 kg maximum chacun.",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "missing-source-number"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p304",
+      "target": "b003",
+      "source": "Valable jusqu'au 9 mars 2027 inclus.",
+      "translation": "有效期至2027年3月9日（含）。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p304",
+        "source": {
+          "id": "b003",
+          "text": "Valable jusqu'au 9 mars 2027 inclus.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "有效期至2027年3月9日（含）。",
+        "translation": "有效期至2027年3月9日（含）。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-C",
+      "page": "p304",
+      "target": "b004",
+      "source": "Ni échangeable ni remboursable.",
+      "translation": "不可转售或退款。",
+      "previousJudgment": "fail",
+      "state": "original-with-warning",
+      "reasons": [
+        "exchange-condition-unverified"
+      ],
+      "display": {
+        "id": "b004",
+        "pageId": "p304",
+        "source": {
+          "id": "b004",
+          "text": "Ni échangeable ni remboursable.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "original-with-warning",
+        "displayText": "Ni échangeable ni remboursable.",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "exchange-condition-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p001",
+      "target": "b005",
+      "source": "Book",
+      "translation": "预订",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p001",
+        "source": {
+          "id": "b005",
+          "text": "Book",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "预订",
+        "translation": "预订",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p002",
+      "target": "b004",
+      "source": "Book",
+      "translation": "书籍",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p002",
+        "source": {
+          "id": "b004",
+          "text": "Book",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "书籍",
+        "translation": "书籍",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p003",
+      "target": "b004",
+      "source": "$120.00 per night",
+      "translation": "每晚$120.00",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p003",
+        "source": {
+          "id": "b004",
+          "text": "$120.00 per night",
+          "role": "value",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "每晚$120.00",
+        "translation": "每晚$120.00",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p003",
+      "target": "b005",
+      "source": "$240.00 for 2 nights",
+      "translation": "两晚$240.00",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p003",
+        "source": {
+          "id": "b005",
+          "text": "$240.00 for 2 nights",
+          "role": "value",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "两晚$240.00",
+        "translation": "两晚$240.00",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p003",
+      "target": "b006",
+      "source": "Taxes included",
+      "translation": "税费已包含",
+      "previousJudgment": "pass",
+      "state": "original-with-warning",
+      "reasons": [
+        "tax-condition-unverified"
+      ],
+      "display": {
+        "id": "b006",
+        "pageId": "p003",
+        "source": {
+          "id": "b006",
+          "text": "Taxes included",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            735,
+            1040,
+            835
+          ],
+          "readingOrder": 6
+        },
+        "state": "original-with-warning",
+        "displayText": "Taxes included",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "tax-condition-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p003",
+      "target": "b007",
+      "source": "Free cancellation before 18:00 on 10 October 2026.",
+      "translation": "可在2026年10月10日18:00前免费取消。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b007",
+        "pageId": "p003",
+        "source": {
+          "id": "b007",
+          "text": "Free cancellation before 18:00 on 10 October 2026.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            870,
+            1040,
+            970
+          ],
+          "readingOrder": 7
+        },
+        "state": "candidate-unverified",
+        "displayText": "可在2026年10月10日18:00前免费取消。",
+        "translation": "可在2026年10月10日18:00前免费取消。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p003",
+      "target": "b009",
+      "source": "$210.00 for 2 nights",
+      "translation": "两晚$210.00",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b009",
+        "pageId": "p003",
+        "source": {
+          "id": "b009",
+          "text": "$210.00 for 2 nights",
+          "role": "value",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            1140,
+            1040,
+            1240
+          ],
+          "readingOrder": 9
+        },
+        "state": "candidate-unverified",
+        "displayText": "两晚$210.00",
+        "translation": "两晚$210.00",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p003",
+      "target": "b010",
+      "source": "Taxes not included",
+      "translation": "税费未包含",
+      "previousJudgment": "pass",
+      "state": "original-with-warning",
+      "reasons": [
+        "tax-condition-unverified"
+      ],
+      "display": {
+        "id": "b010",
+        "pageId": "p003",
+        "source": {
+          "id": "b010",
+          "text": "Taxes not included",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            1275,
+            1040,
+            1375
+          ],
+          "readingOrder": 10
+        },
+        "state": "original-with-warning",
+        "displayText": "Taxes not included",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "tax-condition-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p003",
+      "target": "b011",
+      "source": "Non-refundable. Payment required now.",
+      "translation": "不可退款。需立即付款。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b011",
+        "pageId": "p003",
+        "source": {
+          "id": "b011",
+          "text": "Non-refundable. Payment required now.",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            1410,
+            1040,
+            1510
+          ],
+          "readingOrder": 11
+        },
+        "state": "candidate-unverified",
+        "displayText": "不可退款。需立即付款。",
+        "translation": "不可退款。需立即付款。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p004",
+      "target": "b004",
+      "source": "Vol",
+      "translation": "航班",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p004",
+        "source": {
+          "id": "b004",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "航班",
+        "translation": "航班",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p005",
+      "target": "b004",
+      "source": "Vol",
+      "translation": "盗窃",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p005",
+        "source": {
+          "id": "b004",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "盗窃",
+        "translation": "盗窃",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p006",
+      "target": "b003",
+      "source": "Non échangeable et non remboursable.",
+      "translation": "不可退换。",
+      "previousJudgment": "pass",
+      "state": "original-with-warning",
+      "reasons": [
+        "refund-negation-unverified"
+      ],
+      "display": {
+        "id": "b003",
+        "pageId": "p006",
+        "source": {
+          "id": "b003",
+          "text": "Non échangeable et non remboursable.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "original-with-warning",
+        "displayText": "Non échangeable et non remboursable.",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "refund-negation-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p006",
+      "target": "b005",
+      "source": "1 bagage, 8 kg maximum.",
+      "translation": "允许携带 1 件行李，最大重量为 8 公斤。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p006",
+        "source": {
+          "id": "b005",
+          "text": "1 bagage, 8 kg maximum.",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "允许携带 1 件行李，最大重量为 8 公斤。",
+        "translation": "允许携带 1 件行李，最大重量为 8 公斤。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p101",
+      "target": "b003",
+      "source": "Book",
+      "translation": "书籍",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p101",
+        "source": {
+          "id": "b003",
+          "text": "Book",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "书籍",
+        "translation": "书籍",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p102",
+      "target": "b004",
+      "source": "Book",
+      "translation": "预订",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p102",
+        "source": {
+          "id": "b004",
+          "text": "Book",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "预订",
+        "translation": "预订",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p103",
+      "target": "b003",
+      "source": "Vol",
+      "translation": "航班",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p103",
+        "source": {
+          "id": "b003",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "航班",
+        "translation": "航班",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p104",
+      "target": "b004",
+      "source": "Vol",
+      "translation": "盗窃",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p104",
+        "source": {
+          "id": "b004",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "盗窃",
+        "translation": "盗窃",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p105",
+      "target": "b003",
+      "source": "$19.50 per month",
+      "translation": "每月$19.50",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p105",
+        "source": {
+          "id": "b003",
+          "text": "$19.50 per month",
+          "role": "value",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "每月$19.50",
+        "translation": "每月$19.50",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p105",
+      "target": "b004",
+      "source": "Tax not included",
+      "translation": "不含税",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p105",
+        "source": {
+          "id": "b004",
+          "text": "Tax not included",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "不含税",
+        "translation": "不含税",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p105",
+      "target": "b005",
+      "source": "Cancel before 09:15 on 6 November 2026. No refund after renewal.",
+      "translation": "2026年11月6日09:15前取消。续订后不予退款。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p105",
+        "source": {
+          "id": "b005",
+          "text": "Cancel before 09:15 on 6 November 2026. No refund after renewal.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "2026年11月6日09:15前取消。续订后不予退款。",
+        "translation": "2026年11月6日09:15前取消。续订后不予退款。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p105",
+      "target": "b007",
+      "source": "$195.00 per year",
+      "translation": "每年$195.00",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b007",
+        "pageId": "p105",
+        "source": {
+          "id": "b007",
+          "text": "$195.00 per year",
+          "role": "value",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            870,
+            1040,
+            970
+          ],
+          "readingOrder": 7
+        },
+        "state": "candidate-unverified",
+        "displayText": "每年$195.00",
+        "translation": "每年$195.00",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p105",
+      "target": "b008",
+      "source": "Tax included",
+      "translation": "含税",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b008",
+        "pageId": "p105",
+        "source": {
+          "id": "b008",
+          "text": "Tax included",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            1005,
+            1040,
+            1105
+          ],
+          "readingOrder": 8
+        },
+        "state": "candidate-unverified",
+        "displayText": "含税",
+        "translation": "含税",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p106",
+      "target": "b003",
+      "source": "Prix total : 37,80 €",
+      "translation": "总价：37.80 欧元",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p106",
+        "source": {
+          "id": "b003",
+          "text": "Prix total : 37,80 €",
+          "role": "value",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "总价：37.80 欧元",
+        "translation": "总价：37.80 欧元",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p106",
+      "target": "b004",
+      "source": "Valable le 5 décembre 2026",
+      "translation": "有效期至 2026 年 12 月 5 日",
+      "previousJudgment": "fail",
+      "state": "original-with-warning",
+      "reasons": [
+        "date-relation-unverified"
+      ],
+      "display": {
+        "id": "b004",
+        "pageId": "p106",
+        "source": {
+          "id": "b004",
+          "text": "Valable le 5 décembre 2026",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "original-with-warning",
+        "displayText": "Valable le 5 décembre 2026",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "date-relation-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p106",
+      "target": "b005",
+      "source": "Aucun remboursement après le départ.",
+      "translation": "出发后不予退款。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p106",
+        "source": {
+          "id": "b005",
+          "text": "Aucun remboursement après le départ.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "出发后不予退款。",
+        "translation": "出发后不予退款。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p106",
+      "target": "b006",
+      "source": "2 bagages, 6 kg maximum chacun.",
+      "translation": "2 件行李，每件最多 6 公斤。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b006",
+        "pageId": "p106",
+        "source": {
+          "id": "b006",
+          "text": "2 bagages, 6 kg maximum chacun.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            735,
+            1040,
+            835
+          ],
+          "readingOrder": 6
+        },
+        "state": "candidate-unverified",
+        "displayText": "2 件行李，每件最多 6 公斤。",
+        "translation": "2 件行李，每件最多 6 公斤。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p201",
+      "target": "b004",
+      "source": "Return",
+      "translation": "退货",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p201",
+        "source": {
+          "id": "b004",
+          "text": "Return",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "退货",
+        "translation": "退货",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p202",
+      "target": "b003",
+      "source": "Return",
+      "translation": "返回",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p202",
+        "source": {
+          "id": "b003",
+          "text": "Return",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "返回",
+        "translation": "返回",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p203",
+      "target": "b003",
+      "source": "Note",
+      "translation": "备注",
+      "previousJudgment": "fail",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p203",
+        "source": {
+          "id": "b003",
+          "text": "Note",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "备注",
+        "translation": "备注",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p204",
+      "target": "b003",
+      "source": "Note",
+      "translation": "评分",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p204",
+        "source": {
+          "id": "b003",
+          "text": "Note",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "评分",
+        "translation": "评分",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p205",
+      "target": "b003",
+      "source": "$48.90 total for 2 people",
+      "translation": "2人总价$48.90",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p205",
+        "source": {
+          "id": "b003",
+          "text": "$48.90 total for 2 people",
+          "role": "value",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "2人总价$48.90",
+        "translation": "2人总价$48.90",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p205",
+      "target": "b004",
+      "source": "Only valid on 21 November 2026.",
+      "translation": "仅限2026年11月21日使用。",
+      "previousJudgment": "pass",
+      "state": "original-with-warning",
+      "reasons": [
+        "date-relation-unverified"
+      ],
+      "display": {
+        "id": "b004",
+        "pageId": "p205",
+        "source": {
+          "id": "b004",
+          "text": "Only valid on 21 November 2026.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "original-with-warning",
+        "displayText": "Only valid on 21 November 2026.",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "date-relation-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p205",
+      "target": "b005",
+      "source": "No changes or refunds after departure.",
+      "translation": "出发后不可更改或退款。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p205",
+        "source": {
+          "id": "b005",
+          "text": "No changes or refunds after departure.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "出发后不可更改或退款。",
+        "translation": "出发后不可更改或退款。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p205",
+      "target": "b007",
+      "source": "$12.45 per child",
+      "translation": "每儿童$12.45",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b007",
+        "pageId": "p205",
+        "source": {
+          "id": "b007",
+          "text": "$12.45 per child",
+          "role": "value",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            870,
+            1040,
+            970
+          ],
+          "readingOrder": 7
+        },
+        "state": "candidate-unverified",
+        "displayText": "每儿童$12.45",
+        "translation": "每儿童$12.45",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p205",
+      "target": "b008",
+      "source": "Free cancellation until 07:05 on 20 November 2026.",
+      "translation": "可在2026年11月20日07:05前免费取消。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b008",
+        "pageId": "p205",
+        "source": {
+          "id": "b008",
+          "text": "Free cancellation until 07:05 on 20 November 2026.",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            1005,
+            1040,
+            1105
+          ],
+          "readingOrder": 8
+        },
+        "state": "candidate-unverified",
+        "displayText": "可在2026年11月20日07:05前免费取消。",
+        "translation": "可在2026年11月20日07:05前免费取消。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p206",
+      "target": "b003",
+      "source": "1 bagage, 7 kg au maximum.",
+      "translation": "1 件行李，最多 7 公斤。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p206",
+        "source": {
+          "id": "b003",
+          "text": "1 bagage, 7 kg au maximum.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "1 件行李，最多 7 公斤。",
+        "translation": "1 件行李，最多 7 公斤。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p206",
+      "target": "b005",
+      "source": "Poids minimum : 9 kg.",
+      "translation": "最低重量：9 公斤。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b005",
+        "pageId": "p206",
+        "source": {
+          "id": "b005",
+          "text": "Poids minimum : 9 kg.",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "candidate-unverified",
+        "displayText": "最低重量：9 公斤。",
+        "translation": "最低重量：9 公斤。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p206",
+      "target": "b006",
+      "source": "Heure limite : 06:40",
+      "translation": "截止时间：06:40",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b006",
+        "pageId": "p206",
+        "source": {
+          "id": "b006",
+          "text": "Heure limite : 06:40",
+          "role": "value",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            735,
+            1040,
+            835
+          ],
+          "readingOrder": 6
+        },
+        "state": "candidate-unverified",
+        "displayText": "截止时间：06:40",
+        "translation": "截止时间：06:40",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p206",
+      "target": "b007",
+      "source": "Valable jusqu'au 3 janvier 2027 inclus.",
+      "translation": "有效期至 2027 年 1 月 3 日（含）。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b007",
+        "pageId": "p206",
+        "source": {
+          "id": "b007",
+          "text": "Valable jusqu'au 3 janvier 2027 inclus.",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            870,
+            1040,
+            970
+          ],
+          "readingOrder": 7
+        },
+        "state": "candidate-unverified",
+        "displayText": "有效期至 2027 年 1 月 3 日（含）。",
+        "translation": "有效期至 2027 年 1 月 3 日（含）。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p301",
+      "target": "b003",
+      "source": "Standing",
+      "translation": "站票",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p301",
+        "source": {
+          "id": "b003",
+          "text": "Standing",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "站票",
+        "translation": "站票",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p302",
+      "target": "b003",
+      "source": "Location",
+      "translation": "租赁",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p302",
+        "source": {
+          "id": "b003",
+          "text": "Location",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "租赁",
+        "translation": "租赁",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p303",
+      "target": "b002",
+      "source": "£18.75 per hour",
+      "translation": "每小时18.75英镑",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b002",
+        "pageId": "p303",
+        "source": {
+          "id": "b002",
+          "text": "£18.75 per hour",
+          "role": "value",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            195,
+            1040,
+            295
+          ],
+          "readingOrder": 2
+        },
+        "state": "candidate-unverified",
+        "displayText": "每小时18.75英镑",
+        "translation": "每小时18.75英镑",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p303",
+      "target": "b003",
+      "source": "Minimum age: 18 years",
+      "translation": "最低年龄：18岁",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p303",
+        "source": {
+          "id": "b003",
+          "text": "Minimum age: 18 years",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "最低年龄：18岁",
+        "translation": "最低年龄：18岁",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p303",
+      "target": "b004",
+      "source": "Valid only on 14 February 2027.",
+      "translation": "仅限2027年2月14日有效。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b004",
+        "pageId": "p303",
+        "source": {
+          "id": "b004",
+          "text": "Valid only on 14 February 2027.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "candidate-unverified",
+        "displayText": "仅限2027年2月14日有效。",
+        "translation": "仅限2027年2月14日有效。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p303",
+      "target": "b005",
+      "source": "No refund if cancelled less than 24 hours before pickup.",
+      "translation": "若提前少于24小时取消，不予退款。",
+      "previousJudgment": "needs-review",
+      "state": "original-with-warning",
+      "reasons": [
+        "refund-condition-unverified"
+      ],
+      "display": {
+        "id": "b005",
+        "pageId": "p303",
+        "source": {
+          "id": "b005",
+          "text": "No refund if cancelled less than 24 hours before pickup.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        "state": "original-with-warning",
+        "displayText": "No refund if cancelled less than 24 hours before pickup.",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "refund-condition-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p304",
+      "target": "b002",
+      "source": "3 bagages, 5 kg maximum chacun.",
+      "translation": "3 件行李，每件最多 5 公斤。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b002",
+        "pageId": "p304",
+        "source": {
+          "id": "b002",
+          "text": "3 bagages, 5 kg maximum chacun.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            195,
+            1040,
+            295
+          ],
+          "readingOrder": 2
+        },
+        "state": "candidate-unverified",
+        "displayText": "3 件行李，每件最多 5 公斤。",
+        "translation": "3 件行李，每件最多 5 公斤。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p304",
+      "target": "b003",
+      "source": "Valable jusqu'au 9 mars 2027 inclus.",
+      "translation": "有效期至 2027 年 3 月 9 日（含）。",
+      "previousJudgment": "pass",
+      "state": "candidate-unverified",
+      "reasons": [],
+      "display": {
+        "id": "b003",
+        "pageId": "p304",
+        "source": {
+          "id": "b003",
+          "text": "Valable jusqu'au 9 mars 2027 inclus.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        "state": "candidate-unverified",
+        "displayText": "有效期至 2027 年 3 月 9 日（含）。",
+        "translation": "有效期至 2027 年 3 月 9 日（含）。",
+        "message": "",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "candidate-unverified",
+          "reasons": [],
+          "semanticVerified": false
+        }
+      }
+    },
+    {
+      "run": "local-D",
+      "page": "p304",
+      "target": "b004",
+      "source": "Ni échangeable ni remboursable.",
+      "translation": "不可兑换或退款。",
+      "previousJudgment": "needs-review",
+      "state": "original-with-warning",
+      "reasons": [
+        "exchange-condition-unverified"
+      ],
+      "display": {
+        "id": "b004",
+        "pageId": "p304",
+        "source": {
+          "id": "b004",
+          "text": "Ni échangeable ni remboursable.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        "state": "original-with-warning",
+        "displayText": "Ni échangeable ni remboursable.",
+        "translation": null,
+        "message": "这段翻译暂时无法核对，请先看原文。",
+        "check": {
+          "version": "critical-facts-v1",
+          "status": "withheld",
+          "reasons": [
+            "exchange-condition-unverified"
+          ],
+          "semanticVerified": false
+        }
+      }
+    }
+  ]
+}

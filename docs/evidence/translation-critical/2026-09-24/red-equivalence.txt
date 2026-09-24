@@ -1,0 +1,151 @@
+FFFFFFFFF.
+======================================================================
+FAIL: test_reviewed_equivalent_wording_is_not_withheld (test_translation_critical_equivalence.EquivalentWordingTest.test_reviewed_equivalent_wording_is_not_withheld) (source='Taxes included', target='税费包含')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-critical-checks/v2/test_translation_critical_equivalence.py", line 20, in test_reviewed_equivalent_wording_is_not_withheld
+    self.assertEqual([],evaluate(source,target,lang)['reasons'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [] != ['tax-condition-unverified']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'tax-condition-unverified'
+
+- []
++ ['tax-condition-unverified']
+
+======================================================================
+FAIL: test_reviewed_equivalent_wording_is_not_withheld (test_translation_critical_equivalence.EquivalentWordingTest.test_reviewed_equivalent_wording_is_not_withheld) (source='Taxes included', target='税费已包含')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-critical-checks/v2/test_translation_critical_equivalence.py", line 20, in test_reviewed_equivalent_wording_is_not_withheld
+    self.assertEqual([],evaluate(source,target,lang)['reasons'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [] != ['tax-condition-unverified']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'tax-condition-unverified'
+
+- []
++ ['tax-condition-unverified']
+
+======================================================================
+FAIL: test_reviewed_equivalent_wording_is_not_withheld (test_translation_critical_equivalence.EquivalentWordingTest.test_reviewed_equivalent_wording_is_not_withheld) (source='Taxes not included', target='税费不包含')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-critical-checks/v2/test_translation_critical_equivalence.py", line 20, in test_reviewed_equivalent_wording_is_not_withheld
+    self.assertEqual([],evaluate(source,target,lang)['reasons'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [] != ['tax-condition-unverified']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'tax-condition-unverified'
+
+- []
++ ['tax-condition-unverified']
+
+======================================================================
+FAIL: test_reviewed_equivalent_wording_is_not_withheld (test_translation_critical_equivalence.EquivalentWordingTest.test_reviewed_equivalent_wording_is_not_withheld) (source='Taxes not included', target='税费未包含')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-critical-checks/v2/test_translation_critical_equivalence.py", line 20, in test_reviewed_equivalent_wording_is_not_withheld
+    self.assertEqual([],evaluate(source,target,lang)['reasons'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [] != ['tax-condition-unverified']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'tax-condition-unverified'
+
+- []
++ ['tax-condition-unverified']
+
+======================================================================
+FAIL: test_reviewed_equivalent_wording_is_not_withheld (test_translation_critical_equivalence.EquivalentWordingTest.test_reviewed_equivalent_wording_is_not_withheld) (source='Cancel before 09:15 on 6 November 2026. No refund after renewal.', target='在2026年11月6日09:15之前取消。续费后无退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-critical-checks/v2/test_translation_critical_equivalence.py", line 20, in test_reviewed_equivalent_wording_is_not_withheld
+    self.assertEqual([],evaluate(source,target,lang)['reasons'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [] != ['refund-negation-unverified', 'refund-condition-unverified']
+
+Second list contains 2 additional elements.
+First extra element 0:
+'refund-negation-unverified'
+
+- []
++ ['refund-negation-unverified', 'refund-condition-unverified']
+
+======================================================================
+FAIL: test_reviewed_equivalent_wording_is_not_withheld (test_translation_critical_equivalence.EquivalentWordingTest.test_reviewed_equivalent_wording_is_not_withheld) (source='No changes or refunds after departure.', target='离站后无更改或退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-critical-checks/v2/test_translation_critical_equivalence.py", line 20, in test_reviewed_equivalent_wording_is_not_withheld
+    self.assertEqual([],evaluate(source,target,lang)['reasons'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [] != ['refund-negation-unverified', 'refund-con[44 chars]ied']
+
+Second list contains 3 additional elements.
+First extra element 0:
+'refund-negation-unverified'
+
+- []
++ ['refund-negation-unverified',
++  'refund-condition-unverified',
++  'change-negation-unverified']
+
+======================================================================
+FAIL: test_reviewed_equivalent_wording_is_not_withheld (test_translation_critical_equivalence.EquivalentWordingTest.test_reviewed_equivalent_wording_is_not_withheld) (source='Free cancellation until 07:05 on 20 November 2026.', target='免费取消至 2026 年 11 月 20 日 07:05。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-critical-checks/v2/test_translation_critical_equivalence.py", line 20, in test_reviewed_equivalent_wording_is_not_withheld
+    self.assertEqual([],evaluate(source,target,lang)['reasons'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [] != ['date-relation-unverified']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'date-relation-unverified'
+
+- []
++ ['date-relation-unverified']
+
+======================================================================
+FAIL: test_reviewed_equivalent_wording_is_not_withheld (test_translation_critical_equivalence.EquivalentWordingTest.test_reviewed_equivalent_wording_is_not_withheld) (source='Non échangeable et non remboursable.', target='不可退换。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-critical-checks/v2/test_translation_critical_equivalence.py", line 20, in test_reviewed_equivalent_wording_is_not_withheld
+    self.assertEqual([],evaluate(source,target,lang)['reasons'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [] != ['refund-negation-unverified']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'refund-negation-unverified'
+
+- []
++ ['refund-negation-unverified']
+
+======================================================================
+FAIL: test_reviewed_equivalent_wording_is_not_withheld (test_translation_critical_equivalence.EquivalentWordingTest.test_reviewed_equivalent_wording_is_not_withheld) (source='Only valid on 21 November 2026.', target='仅限2026年11月21日使用。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/kandong-critical-checks/v2/test_translation_critical_equivalence.py", line 20, in test_reviewed_equivalent_wording_is_not_withheld
+    self.assertEqual([],evaluate(source,target,lang)['reasons'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [] != ['date-relation-unverified']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'date-relation-unverified'
+
+- []
++ ['date-relation-unverified']
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.004s
+
+FAILED (failures=9)

@@ -11,7 +11,7 @@ from datetime import date
 from decimal import Decimal, InvalidOperation
 from translation_fact_checks import number_tokens
 
-VERSION = 'critical-facts-v2'
+VERSION = 'critical-facts-v1'
 NUMBER = r'\d+(?:[.,]\d+)*'
 MONTH_NAMES = [
     ('january','janvier'), ('february','fevrier'), ('march','mars'), ('april','avril'),
@@ -98,12 +98,11 @@ def date_checks(source, translated):
     until = bool(re.search(r"\buntil\b|\bvalable jusqu'(?:au|a)\b", clause))
     prior = bool(re.search(r'\bbefore\b|\bavant\b', clause))
     after = bool(re.search(r'\bafter\b|\bapres\b', clause))
-    dest_until = bool(re.search(r'(?:有效期?至|有效到|截至|截止|取消至)', before) or re.search(r'前.*有效', tail))
+    dest_until = bool(re.search(r'(?:有效期?至|有效到|截至|截止)', before) or re.search(r'前.*有效', tail))
     dest_before = bool(re.search(r'前|之前|以前', tail) or re.search(r'截至|截止', before))
     dest_after = bool(re.search(r'后|之后|以后|起', tail))
     if on:
-        valid_day = '有效' in dest_clause or ('仅限' in before and '使用' in tail)
-        ok = valid_day and not re.search(r'无效|不.*有效|不可使用', dest_clause) and not (
+        ok = '有效' in dest_clause and not re.search(r'无效|不.*有效', dest_clause) and not (
             dest_until or dest_before or dest_after or '从' in before or '自' in before)
     elif until: ok = (dest_until or dest_before) and not dest_after
     elif prior: ok = dest_before and not dest_after
@@ -133,8 +132,8 @@ def conditional_checks(source, translated, language):
     upper = bool(re.search(r'\bmaximum\b|\bat most\b|\bno more than\b',source))
     lower = bool(re.search(r'\bminimum\b|\bat least\b',source))
     if upper or lower:
-        top = bool(re.search(r'最多|至多|不超过|上限|最大|最高|最长', translated))
-        bottom = bool(re.search(r'至少|最少|不低于|最低|最小|下限|及以上|最短', translated))
+        top = bool(re.search(r'最多|至多|不超过|上限|最大|最高', translated))
+        bottom = bool(re.search(r'至少|最少|不低于|最低|最小|下限|及以上', translated))
         if (upper and lower) or (top, bottom) != (upper, lower): errors.append('quantity-limit-unverified')
     if re.search(r'\beach\b|\bchacun\b',source):
         if not re.search(r'每件|每个|各',translated) or re.search(r'总共|合计|总计',translated):
@@ -148,26 +147,26 @@ def conditional_checks(source, translated, language):
         errors.append('price-period-unverified')
     tax = re.search(r'\btax(?:es)? (not )?included\b',source)
     if tax:
-        negative_tax = bool(re.search(r'不含税|未含税|不包括税|未包括税|税费[不未]包含',translated))
-        positive_tax = bool(re.search(r'(?<!不)(?<!未)含税|已包括税|已包含税|税费(?:已)?包含',translated))
+        negative_tax = bool(re.search(r'不含税|未含税|不包括税|未包括税',translated))
+        positive_tax = bool(re.search(r'(?<!不)(?<!未)含税|已包括税|已包含税',translated))
         if (negative_tax,positive_tax) != (bool(tax[1]),not bool(tax[1])):
             errors.append('tax-condition-unverified')
 
-    negative = re.search(r'(?:不|无法|不能|不可)[^。！？；\n，,]{0,20}(?:退款|退还|退费|退换|退票)|无(?:更改或)?退款',translated)
+    negative = re.search(r'(?:不|无法|不能|不可)[^。！？；\n]{0,20}(?:退款|退还|退费)',translated)
     no_refund = bool(re.search(r'\bno (?:changes? or )?refunds?\b|\bnon[- ]refundable\b|\b(?:non|ni) remboursable\b|\baucun remboursement\b', source))
     refundable = bool(re.search(r'\brefundable\b|\bremboursable\b',source)) and not no_refund
     if refundable and negative: errors.append('refund-negation-unverified')
     if no_refund:
-        positive = re.search(r'(?<!不)(?<!无)(?:可以|可予|能够|允许)(?:退款|退票)',translated)
+        positive = re.search(r'(?<!不)(?<!无)(?:可以|可予|能够|允许)退款',translated)
         if not negative or positive: errors.append('refund-negation-unverified')
         if re.search(r'\b(?:after|before|apres|avant|if)\b',source):
             matched = False
-            for src, dest in ((r'after departure|apres le depart',r'(?:出发|启程|离开|离站|发车)后'),
+            for src, dest in ((r'after departure|apres le depart',r'(?:出发|启程|离开)后'),
                               (r'after renewal',r'(?:续订|续费)后')):
                 if re.search(src,source):
-                    matched = bool(re.search(dest+r'[^。！？；\n]*(?:不[^。！？；\n]*退款|无(?:更改或)?退款)',translated))
+                    matched = bool(re.search(dest+r'[^。！？；\n]*不[^。！？；\n]*退款',translated))
             if not matched: errors.append('refund-condition-unverified')
-    if re.search(r'\bno changes?\b',source) and not re.search(r'不[^。！？；\n]{0,12}(?:更改|变更|改签)|无更改',translated):
+    if re.search(r'\bno changes?\b',source) and not re.search(r'不[^。！？；\n]{0,12}(?:更改|变更|改签)',translated):
         errors.append('change-negation-unverified')
     if re.search(r'\b(?:non|ni) echangeable\b|\bno exchanges?\b',source):
         if not re.search(r'(?:不|无法)[^。！？；\n]{0,8}(?:换票|换货|改签|更换|退换)',translated):

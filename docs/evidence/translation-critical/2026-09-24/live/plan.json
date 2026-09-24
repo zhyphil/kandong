@@ -1,0 +1,1581 @@
+{
+  "syntheticOnly": true,
+  "qualityAccepted": false,
+  "guardVersion": "critical-facts-v1",
+  "oldTargets": 48,
+  "newTargets": 8,
+  "calls": 112,
+  "sourceCharacters": 2244,
+  "paceSeconds": 2,
+  "retries": 0,
+  "rows": [
+    {
+      "round": 1,
+      "page": "p001",
+      "target": "b005",
+      "request": {
+        "text": [
+          "Book"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Reserve a room\nSelect your dates\n12–14 October 2026\n2 adults · 1 room\nBook"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p002",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Book"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Bookshop\nCategories\nBooks and magazines\nBook\nMagazine\nBrowse categories"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p003",
+      "target": "b004",
+      "request": {
+        "text": [
+          "$120.00 per night"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p003",
+      "target": "b005",
+      "request": {
+        "text": [
+          "$240.00 for 2 nights"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p003",
+      "target": "b006",
+      "request": {
+        "text": [
+          "Taxes included"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p003",
+      "target": "b007",
+      "request": {
+        "text": [
+          "Free cancellation before 18:00 on 10 October 2026."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p003",
+      "target": "b009",
+      "request": {
+        "text": [
+          "$210.00 for 2 nights"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p003",
+      "target": "b010",
+      "request": {
+        "text": [
+          "Taxes not included"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p003",
+      "target": "b011",
+      "request": {
+        "text": [
+          "Non-refundable. Payment required now."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p004",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Vol"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Informations sur votre voyage\nDépart : Paris\nArrivée : Nice\nVol\nDurée : 1 h 30"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p005",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Vol"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Déclaration à la police\nObjet dérobé : vélo\nLieu des faits\nVol\nDécrire les circonstances"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p006",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Non échangeable et non remboursable."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Votre billet de train\n\nConditions du billet\nNon échangeable et non remboursable.\n\nBagages autorisés\n1 bagage, 8 kg maximum."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p006",
+      "target": "b005",
+      "request": {
+        "text": [
+          "1 bagage, 8 kg maximum."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Votre billet de train\n\nConditions du billet\nNon échangeable et non remboursable.\n\nBagages autorisés\n1 bagage, 8 kg maximum."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p101",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Book"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Library catalogue\nChoose a type of publication\nBook\nJournal"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p102",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Book"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Restaurant reservations\nChoose a table for tonight\n4 guests at 19:30\nBook"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p103",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Vol"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Votre départ\nEmbarquement à la porte 12\nVol\nDestination : Lyon"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p104",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Vol"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Assurance habitation\nDéclarer un sinistre\nObjets disparus\nVol"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p105",
+      "target": "b003",
+      "request": {
+        "text": [
+          "$19.50 per month"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your plan\n\nMonthly plan\n$19.50 per month\nTax not included\nCancel before 09:15 on 6 November 2026. No refund after renewal.\n\nAnnual plan\n$195.00 per year\nTax included"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p105",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Tax not included"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your plan\n\nMonthly plan\n$19.50 per month\nTax not included\nCancel before 09:15 on 6 November 2026. No refund after renewal.\n\nAnnual plan\n$195.00 per year\nTax included"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p105",
+      "target": "b005",
+      "request": {
+        "text": [
+          "Cancel before 09:15 on 6 November 2026. No refund after renewal."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your plan\n\nMonthly plan\n$19.50 per month\nTax not included\nCancel before 09:15 on 6 November 2026. No refund after renewal.\n\nAnnual plan\n$195.00 per year\nTax included"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p105",
+      "target": "b007",
+      "request": {
+        "text": [
+          "$195.00 per year"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your plan\n\nMonthly plan\n$19.50 per month\nTax not included\nCancel before 09:15 on 6 November 2026. No refund after renewal.\n\nAnnual plan\n$195.00 per year\nTax included"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p105",
+      "target": "b008",
+      "request": {
+        "text": [
+          "Tax included"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your plan\n\nMonthly plan\n$19.50 per month\nTax not included\nCancel before 09:15 on 6 November 2026. No refund after renewal.\n\nAnnual plan\n$195.00 per year\nTax included"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p106",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Prix total : 37,80 €"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Votre réservation\nTarif réduit\nPrix total : 37,80 €\nValable le 5 décembre 2026\nAucun remboursement après le départ.\n2 bagages, 6 kg maximum chacun."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p106",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Valable le 5 décembre 2026"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Votre réservation\nTarif réduit\nPrix total : 37,80 €\nValable le 5 décembre 2026\nAucun remboursement après le départ.\n2 bagages, 6 kg maximum chacun."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p106",
+      "target": "b005",
+      "request": {
+        "text": [
+          "Aucun remboursement après le départ."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Votre réservation\nTarif réduit\nPrix total : 37,80 €\nValable le 5 décembre 2026\nAucun remboursement après le départ.\n2 bagages, 6 kg maximum chacun."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p106",
+      "target": "b006",
+      "request": {
+        "text": [
+          "2 bagages, 6 kg maximum chacun."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Votre réservation\nTarif réduit\nPrix total : 37,80 €\nValable le 5 décembre 2026\nAucun remboursement après le départ.\n2 bagages, 6 kg maximum chacun."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p201",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Return"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Returns and refunds\nUnopened products only\nSelect an item from your order\nReturn"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p202",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Return"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Account settings\nReturn to the previous screen\nReturn"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p203",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Note"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Au restaurant\nDétail des consommations\nNote\nPayer à la caisse"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p204",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Note"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Avis des clients\nÉvaluation sur 5 étoiles\nNote\nDonner votre avis"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p205",
+      "target": "b003",
+      "request": {
+        "text": [
+          "$48.90 total for 2 people"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Train tickets\n\nStandard fare\n$48.90 total for 2 people\nOnly valid on 21 November 2026.\nNo changes or refunds after departure.\n\nChild fare\n$12.45 per child\nFree cancellation until 07:05 on 20 November 2026."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p205",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Only valid on 21 November 2026."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Train tickets\n\nStandard fare\n$48.90 total for 2 people\nOnly valid on 21 November 2026.\nNo changes or refunds after departure.\n\nChild fare\n$12.45 per child\nFree cancellation until 07:05 on 20 November 2026."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p205",
+      "target": "b005",
+      "request": {
+        "text": [
+          "No changes or refunds after departure."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Train tickets\n\nStandard fare\n$48.90 total for 2 people\nOnly valid on 21 November 2026.\nNo changes or refunds after departure.\n\nChild fare\n$12.45 per child\nFree cancellation until 07:05 on 20 November 2026."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p205",
+      "target": "b007",
+      "request": {
+        "text": [
+          "$12.45 per child"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Train tickets\n\nStandard fare\n$48.90 total for 2 people\nOnly valid on 21 November 2026.\nNo changes or refunds after departure.\n\nChild fare\n$12.45 per child\nFree cancellation until 07:05 on 20 November 2026."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p205",
+      "target": "b008",
+      "request": {
+        "text": [
+          "Free cancellation until 07:05 on 20 November 2026."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Train tickets\n\nStandard fare\n$48.90 total for 2 people\nOnly valid on 21 November 2026.\nNo changes or refunds after departure.\n\nChild fare\n$12.45 per child\nFree cancellation until 07:05 on 20 November 2026."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p206",
+      "target": "b003",
+      "request": {
+        "text": [
+          "1 bagage, 7 kg au maximum."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Transport des bagages\n\nTarif léger\n1 bagage, 7 kg au maximum.\n\nTarif cargo\nPoids minimum : 9 kg.\nHeure limite : 06:40\nValable jusqu'au 3 janvier 2027 inclus."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p206",
+      "target": "b005",
+      "request": {
+        "text": [
+          "Poids minimum : 9 kg."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Transport des bagages\n\nTarif léger\n1 bagage, 7 kg au maximum.\n\nTarif cargo\nPoids minimum : 9 kg.\nHeure limite : 06:40\nValable jusqu'au 3 janvier 2027 inclus."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p206",
+      "target": "b006",
+      "request": {
+        "text": [
+          "Heure limite : 06:40"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Transport des bagages\n\nTarif léger\n1 bagage, 7 kg au maximum.\n\nTarif cargo\nPoids minimum : 9 kg.\nHeure limite : 06:40\nValable jusqu'au 3 janvier 2027 inclus."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p206",
+      "target": "b007",
+      "request": {
+        "text": [
+          "Valable jusqu'au 3 janvier 2027 inclus."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Transport des bagages\n\nTarif léger\n1 bagage, 7 kg au maximum.\n\nTarif cargo\nPoids minimum : 9 kg.\nHeure limite : 06:40\nValable jusqu'au 3 janvier 2027 inclus."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p301",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Standing"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Concert tickets\nChoose your ticket type\nStanding\nSeated"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p302",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Location"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Location d'un appartement\nLoyer mensuel\nLocation\nContacter le propriétaire"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p303",
+      "target": "b002",
+      "request": {
+        "text": [
+          "£18.75 per hour"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Scooter hire conditions\n£18.75 per hour\nMinimum age: 18 years\nValid only on 14 February 2027.\nNo refund if cancelled less than 24 hours before pickup."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p303",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Minimum age: 18 years"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Scooter hire conditions\n£18.75 per hour\nMinimum age: 18 years\nValid only on 14 February 2027.\nNo refund if cancelled less than 24 hours before pickup."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p303",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Valid only on 14 February 2027."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Scooter hire conditions\n£18.75 per hour\nMinimum age: 18 years\nValid only on 14 February 2027.\nNo refund if cancelled less than 24 hours before pickup."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p303",
+      "target": "b005",
+      "request": {
+        "text": [
+          "No refund if cancelled less than 24 hours before pickup."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Scooter hire conditions\n£18.75 per hour\nMinimum age: 18 years\nValid only on 14 February 2027.\nNo refund if cancelled less than 24 hours before pickup."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p304",
+      "target": "b002",
+      "request": {
+        "text": [
+          "3 bagages, 5 kg maximum chacun."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Conditions du voyage\n3 bagages, 5 kg maximum chacun.\nValable jusqu'au 9 mars 2027 inclus.\nNi échangeable ni remboursable."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p304",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Valable jusqu'au 9 mars 2027 inclus."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Conditions du voyage\n3 bagages, 5 kg maximum chacun.\nValable jusqu'au 9 mars 2027 inclus.\nNi échangeable ni remboursable."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p304",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Ni échangeable ni remboursable."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Conditions du voyage\n3 bagages, 5 kg maximum chacun.\nValable jusqu'au 9 mars 2027 inclus.\nNi échangeable ni remboursable."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p401",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Platform"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Railway station\nYour train departs from this track.\nPlatform\nDeparture: 08:35"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p401",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Departure: 08:35"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Railway station\nYour train departs from this track.\nPlatform\nDeparture: 08:35"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p402",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Platform"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Developer console\nChoose the operating system for your application.\nPlatform\n£24.80 per month"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p402",
+      "target": "b004",
+      "request": {
+        "text": [
+          "£24.80 per month"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Developer console\nChoose the operating system for your application.\nPlatform\n£24.80 per month"
+      }
+    },
+    {
+      "round": 1,
+      "page": "p403",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Place"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Réservation de parking\nChoisissez où garer votre voiture.\nPlace\n2 heures maximum."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p403",
+      "target": "b004",
+      "request": {
+        "text": [
+          "2 heures maximum."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Réservation de parking\nChoisissez où garer votre voiture.\nPlace\n2 heures maximum."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p404",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Place"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Billetterie du théâtre\nChoisissez votre siège dans la salle.\nPlace\nValable le 11 juin 2028."
+      }
+    },
+    {
+      "round": 1,
+      "page": "p404",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Valable le 11 juin 2028."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Billetterie du théâtre\nChoisissez votre siège dans la salle.\nPlace\nValable le 11 juin 2028."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p001",
+      "target": "b005",
+      "request": {
+        "text": [
+          "Book"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Reserve a room\nSelect your dates\n12–14 October 2026\n2 adults · 1 room\nBook"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p002",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Book"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Bookshop\nCategories\nBooks and magazines\nBook\nMagazine\nBrowse categories"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "target": "b004",
+      "request": {
+        "text": [
+          "$120.00 per night"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "target": "b005",
+      "request": {
+        "text": [
+          "$240.00 for 2 nights"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "target": "b006",
+      "request": {
+        "text": [
+          "Taxes included"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "target": "b007",
+      "request": {
+        "text": [
+          "Free cancellation before 18:00 on 10 October 2026."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "target": "b009",
+      "request": {
+        "text": [
+          "$210.00 for 2 nights"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "target": "b010",
+      "request": {
+        "text": [
+          "Taxes not included"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "target": "b011",
+      "request": {
+        "text": [
+          "Non-refundable. Payment required now."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your room rate\n12–14 October 2026 · 2 nights\n\nFlexible rate\n$120.00 per night\n$240.00 for 2 nights\nTaxes included\nFree cancellation before 18:00 on 10 October 2026.\n\nAdvance purchase\n$210.00 for 2 nights\nTaxes not included\nNon-refundable. Payment required now."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p004",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Vol"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Informations sur votre voyage\nDépart : Paris\nArrivée : Nice\nVol\nDurée : 1 h 30"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p005",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Vol"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Déclaration à la police\nObjet dérobé : vélo\nLieu des faits\nVol\nDécrire les circonstances"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p006",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Non échangeable et non remboursable."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Votre billet de train\n\nConditions du billet\nNon échangeable et non remboursable.\n\nBagages autorisés\n1 bagage, 8 kg maximum."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p006",
+      "target": "b005",
+      "request": {
+        "text": [
+          "1 bagage, 8 kg maximum."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Votre billet de train\n\nConditions du billet\nNon échangeable et non remboursable.\n\nBagages autorisés\n1 bagage, 8 kg maximum."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p101",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Book"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Library catalogue\nChoose a type of publication\nBook\nJournal"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p102",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Book"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Restaurant reservations\nChoose a table for tonight\n4 guests at 19:30\nBook"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p103",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Vol"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Votre départ\nEmbarquement à la porte 12\nVol\nDestination : Lyon"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p104",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Vol"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Assurance habitation\nDéclarer un sinistre\nObjets disparus\nVol"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p105",
+      "target": "b003",
+      "request": {
+        "text": [
+          "$19.50 per month"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your plan\n\nMonthly plan\n$19.50 per month\nTax not included\nCancel before 09:15 on 6 November 2026. No refund after renewal.\n\nAnnual plan\n$195.00 per year\nTax included"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p105",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Tax not included"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your plan\n\nMonthly plan\n$19.50 per month\nTax not included\nCancel before 09:15 on 6 November 2026. No refund after renewal.\n\nAnnual plan\n$195.00 per year\nTax included"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p105",
+      "target": "b005",
+      "request": {
+        "text": [
+          "Cancel before 09:15 on 6 November 2026. No refund after renewal."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your plan\n\nMonthly plan\n$19.50 per month\nTax not included\nCancel before 09:15 on 6 November 2026. No refund after renewal.\n\nAnnual plan\n$195.00 per year\nTax included"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p105",
+      "target": "b007",
+      "request": {
+        "text": [
+          "$195.00 per year"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your plan\n\nMonthly plan\n$19.50 per month\nTax not included\nCancel before 09:15 on 6 November 2026. No refund after renewal.\n\nAnnual plan\n$195.00 per year\nTax included"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p105",
+      "target": "b008",
+      "request": {
+        "text": [
+          "Tax included"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Choose your plan\n\nMonthly plan\n$19.50 per month\nTax not included\nCancel before 09:15 on 6 November 2026. No refund after renewal.\n\nAnnual plan\n$195.00 per year\nTax included"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p106",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Prix total : 37,80 €"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Votre réservation\nTarif réduit\nPrix total : 37,80 €\nValable le 5 décembre 2026\nAucun remboursement après le départ.\n2 bagages, 6 kg maximum chacun."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p106",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Valable le 5 décembre 2026"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Votre réservation\nTarif réduit\nPrix total : 37,80 €\nValable le 5 décembre 2026\nAucun remboursement après le départ.\n2 bagages, 6 kg maximum chacun."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p106",
+      "target": "b005",
+      "request": {
+        "text": [
+          "Aucun remboursement après le départ."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Votre réservation\nTarif réduit\nPrix total : 37,80 €\nValable le 5 décembre 2026\nAucun remboursement après le départ.\n2 bagages, 6 kg maximum chacun."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p106",
+      "target": "b006",
+      "request": {
+        "text": [
+          "2 bagages, 6 kg maximum chacun."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Votre réservation\nTarif réduit\nPrix total : 37,80 €\nValable le 5 décembre 2026\nAucun remboursement après le départ.\n2 bagages, 6 kg maximum chacun."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p201",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Return"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Returns and refunds\nUnopened products only\nSelect an item from your order\nReturn"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p202",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Return"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Account settings\nReturn to the previous screen\nReturn"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p203",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Note"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Au restaurant\nDétail des consommations\nNote\nPayer à la caisse"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p204",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Note"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Avis des clients\nÉvaluation sur 5 étoiles\nNote\nDonner votre avis"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p205",
+      "target": "b003",
+      "request": {
+        "text": [
+          "$48.90 total for 2 people"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Train tickets\n\nStandard fare\n$48.90 total for 2 people\nOnly valid on 21 November 2026.\nNo changes or refunds after departure.\n\nChild fare\n$12.45 per child\nFree cancellation until 07:05 on 20 November 2026."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p205",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Only valid on 21 November 2026."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Train tickets\n\nStandard fare\n$48.90 total for 2 people\nOnly valid on 21 November 2026.\nNo changes or refunds after departure.\n\nChild fare\n$12.45 per child\nFree cancellation until 07:05 on 20 November 2026."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p205",
+      "target": "b005",
+      "request": {
+        "text": [
+          "No changes or refunds after departure."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Train tickets\n\nStandard fare\n$48.90 total for 2 people\nOnly valid on 21 November 2026.\nNo changes or refunds after departure.\n\nChild fare\n$12.45 per child\nFree cancellation until 07:05 on 20 November 2026."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p205",
+      "target": "b007",
+      "request": {
+        "text": [
+          "$12.45 per child"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Train tickets\n\nStandard fare\n$48.90 total for 2 people\nOnly valid on 21 November 2026.\nNo changes or refunds after departure.\n\nChild fare\n$12.45 per child\nFree cancellation until 07:05 on 20 November 2026."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p205",
+      "target": "b008",
+      "request": {
+        "text": [
+          "Free cancellation until 07:05 on 20 November 2026."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Train tickets\n\nStandard fare\n$48.90 total for 2 people\nOnly valid on 21 November 2026.\nNo changes or refunds after departure.\n\nChild fare\n$12.45 per child\nFree cancellation until 07:05 on 20 November 2026."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p206",
+      "target": "b003",
+      "request": {
+        "text": [
+          "1 bagage, 7 kg au maximum."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Transport des bagages\n\nTarif léger\n1 bagage, 7 kg au maximum.\n\nTarif cargo\nPoids minimum : 9 kg.\nHeure limite : 06:40\nValable jusqu'au 3 janvier 2027 inclus."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p206",
+      "target": "b005",
+      "request": {
+        "text": [
+          "Poids minimum : 9 kg."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Transport des bagages\n\nTarif léger\n1 bagage, 7 kg au maximum.\n\nTarif cargo\nPoids minimum : 9 kg.\nHeure limite : 06:40\nValable jusqu'au 3 janvier 2027 inclus."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p206",
+      "target": "b006",
+      "request": {
+        "text": [
+          "Heure limite : 06:40"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Transport des bagages\n\nTarif léger\n1 bagage, 7 kg au maximum.\n\nTarif cargo\nPoids minimum : 9 kg.\nHeure limite : 06:40\nValable jusqu'au 3 janvier 2027 inclus."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p206",
+      "target": "b007",
+      "request": {
+        "text": [
+          "Valable jusqu'au 3 janvier 2027 inclus."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Transport des bagages\n\nTarif léger\n1 bagage, 7 kg au maximum.\n\nTarif cargo\nPoids minimum : 9 kg.\nHeure limite : 06:40\nValable jusqu'au 3 janvier 2027 inclus."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p301",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Standing"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Concert tickets\nChoose your ticket type\nStanding\nSeated"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p302",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Location"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Location d'un appartement\nLoyer mensuel\nLocation\nContacter le propriétaire"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p303",
+      "target": "b002",
+      "request": {
+        "text": [
+          "£18.75 per hour"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Scooter hire conditions\n£18.75 per hour\nMinimum age: 18 years\nValid only on 14 February 2027.\nNo refund if cancelled less than 24 hours before pickup."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p303",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Minimum age: 18 years"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Scooter hire conditions\n£18.75 per hour\nMinimum age: 18 years\nValid only on 14 February 2027.\nNo refund if cancelled less than 24 hours before pickup."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p303",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Valid only on 14 February 2027."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Scooter hire conditions\n£18.75 per hour\nMinimum age: 18 years\nValid only on 14 February 2027.\nNo refund if cancelled less than 24 hours before pickup."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p303",
+      "target": "b005",
+      "request": {
+        "text": [
+          "No refund if cancelled less than 24 hours before pickup."
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Scooter hire conditions\n£18.75 per hour\nMinimum age: 18 years\nValid only on 14 February 2027.\nNo refund if cancelled less than 24 hours before pickup."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p304",
+      "target": "b002",
+      "request": {
+        "text": [
+          "3 bagages, 5 kg maximum chacun."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Conditions du voyage\n3 bagages, 5 kg maximum chacun.\nValable jusqu'au 9 mars 2027 inclus.\nNi échangeable ni remboursable."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p304",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Valable jusqu'au 9 mars 2027 inclus."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Conditions du voyage\n3 bagages, 5 kg maximum chacun.\nValable jusqu'au 9 mars 2027 inclus.\nNi échangeable ni remboursable."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p304",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Ni échangeable ni remboursable."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Conditions du voyage\n3 bagages, 5 kg maximum chacun.\nValable jusqu'au 9 mars 2027 inclus.\nNi échangeable ni remboursable."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p401",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Platform"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Railway station\nYour train departs from this track.\nPlatform\nDeparture: 08:35"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p401",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Departure: 08:35"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Railway station\nYour train departs from this track.\nPlatform\nDeparture: 08:35"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p402",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Platform"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Developer console\nChoose the operating system for your application.\nPlatform\n£24.80 per month"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p402",
+      "target": "b004",
+      "request": {
+        "text": [
+          "£24.80 per month"
+        ],
+        "source_lang": "EN",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Developer console\nChoose the operating system for your application.\nPlatform\n£24.80 per month"
+      }
+    },
+    {
+      "round": 2,
+      "page": "p403",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Place"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Réservation de parking\nChoisissez où garer votre voiture.\nPlace\n2 heures maximum."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p403",
+      "target": "b004",
+      "request": {
+        "text": [
+          "2 heures maximum."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Réservation de parking\nChoisissez où garer votre voiture.\nPlace\n2 heures maximum."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p404",
+      "target": "b003",
+      "request": {
+        "text": [
+          "Place"
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Billetterie du théâtre\nChoisissez votre siège dans la salle.\nPlace\nValable le 11 juin 2028."
+      }
+    },
+    {
+      "round": 2,
+      "page": "p404",
+      "target": "b004",
+      "request": {
+        "text": [
+          "Valable le 11 juin 2028."
+        ],
+        "source_lang": "FR",
+        "target_lang": "ZH-HANS",
+        "show_billed_characters": true,
+        "context": "Billetterie du théâtre\nChoisissez votre siège dans la salle.\nPlace\nValable le 11 juin 2028."
+      }
+    }
+  ]
+}

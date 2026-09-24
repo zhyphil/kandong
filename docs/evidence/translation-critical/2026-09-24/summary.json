@@ -1,0 +1,74 @@
+{
+  "gateVersion": "critical-facts-v2",
+  "completedCalls": 112,
+  "billedSourceCharacters": 2244,
+  "rounds": 2,
+  "rawSemanticCounts": {
+    "pass": 92,
+    "fail": 18,
+    "needs-review": 2
+  },
+  "displayStates": {
+    "candidate-unverified": 90,
+    "original-with-warning": 22
+  },
+  "matrix": {
+    "pass/candidate-unverified": 90,
+    "fail/original-with-warning": 18,
+    "pass/original-with-warning": 2,
+    "needs-review/original-with-warning": 2
+  },
+  "qualityAccepted": false,
+  "unitTests": 86,
+  "realScreenTransferred": false,
+  "phoneUpdated": false,
+  "perRound": {
+    "1": {
+      "semanticCounts": {
+        "pass": 46,
+        "fail": 9,
+        "needs-review": 1
+      },
+      "states": {
+        "candidate-unverified": 45,
+        "original-with-warning": 11
+      },
+      "old48": {
+        "pass": 39,
+        "fail": 8,
+        "needs-review": 1
+      },
+      "new8": {
+        "pass": 7,
+        "fail": 1
+      }
+    },
+    "2": {
+      "semanticCounts": {
+        "pass": 46,
+        "fail": 9,
+        "needs-review": 1
+      },
+      "states": {
+        "candidate-unverified": 45,
+        "original-with-warning": 11
+      },
+      "old48": {
+        "pass": 39,
+        "fail": 8,
+        "needs-review": 1
+      },
+      "new8": {
+        "pass": 7,
+        "fail": 1
+      }
+    }
+  },
+  "identicalTranslationPairs": 54,
+  "sameJudgmentPairs": 56,
+  "sameDisplayStatePairs": 56,
+  "usageAfter": {
+    "character_count": 4859,
+    "character_limit": 1000000
+  }
+}
