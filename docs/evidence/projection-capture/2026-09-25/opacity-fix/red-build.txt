@@ -1,0 +1,62 @@
+> Task :capturelab:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :capturelab:preBuild UP-TO-DATE
+> Task :capturelab:preDebugBuild UP-TO-DATE
+> Task :capturelab:checkDebugAarMetadata UP-TO-DATE
+> Task :capturelab:processDebugNavigationResources UP-TO-DATE
+> Task :capturelab:compileDebugNavigationResources UP-TO-DATE
+> Task :capturelab:generateDebugResValues UP-TO-DATE
+> Task :capturelab:mapDebugSourceSetPaths UP-TO-DATE
+> Task :capturelab:generateDebugResources UP-TO-DATE
+> Task :capturelab:mergeDebugResources UP-TO-DATE
+> Task :capturelab:packageDebugResources UP-TO-DATE
+> Task :capturelab:parseDebugLocalResources UP-TO-DATE
+> Task :capturelab:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :capturelab:extractDeepLinksDebug UP-TO-DATE
+> Task :capturelab:processDebugMainManifest UP-TO-DATE
+> Task :capturelab:processDebugManifest UP-TO-DATE
+> Task :capturelab:processDebugManifestForPackage UP-TO-DATE
+> Task :capturelab:processDebugResources UP-TO-DATE
+> Task :capturelab:compileDebugKotlin UP-TO-DATE
+> Task :capturelab:javaPreCompileDebug UP-TO-DATE
+> Task :capturelab:compileDebugJavaWithJavac NO-SOURCE
+> Task :capturelab:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :capturelab:preDebugAndroidTestBuild SKIPPED
+> Task :capturelab:checkDebugAndroidTestAarMetadata UP-TO-DATE
+> Task :capturelab:processDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :capturelab:compileDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :capturelab:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :capturelab:mapDebugAndroidTestSourceSetPaths UP-TO-DATE
+> Task :capturelab:generateDebugAndroidTestResources UP-TO-DATE
+> Task :capturelab:mergeDebugAndroidTestResources UP-TO-DATE
+> Task :capturelab:processDebugAndroidTestManifest UP-TO-DATE
+> Task :capturelab:processDebugAndroidTestResources UP-TO-DATE
+> Task :capturelab:javaPreCompileDebugAndroidTest UP-TO-DATE
+> Task :capturelab:mergeDebugAndroidTestShaders UP-TO-DATE
+> Task :capturelab:compileDebugAndroidTestShaders NO-SOURCE
+> Task :capturelab:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :capturelab:mergeDebugAndroidTestAssets UP-TO-DATE
+> Task :capturelab:compressDebugAndroidTestAssets UP-TO-DATE
+> Task :capturelab:desugarDebugAndroidTestFileDependencies UP-TO-DATE
+> Task :capturelab:checkDebugAndroidTestDuplicateClasses UP-TO-DATE
+> Task :capturelab:mergeExtDexDebugAndroidTest UP-TO-DATE
+> Task :capturelab:mergeLibDexDebugAndroidTest UP-TO-DATE
+> Task :capturelab:mergeDebugAndroidTestJniLibFolders UP-TO-DATE
+> Task :capturelab:mergeDebugJniLibFolders UP-TO-DATE
+> Task :capturelab:mergeDebugNativeLibs NO-SOURCE
+> Task :capturelab:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :capturelab:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :capturelab:validateSigningDebugAndroidTest UP-TO-DATE
+> Task :capturelab:writeDebugAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :capturelab:compileDebugAndroidTestKotlin
+> Task :capturelab:compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :capturelab:dexBuilderDebugAndroidTest
+> Task :capturelab:mergeDebugAndroidTestGlobalSynthetics UP-TO-DATE
+> Task :capturelab:processDebugAndroidTestJavaRes UP-TO-DATE
+> Task :capturelab:mergeDebugAndroidTestJavaResource UP-TO-DATE
+> Task :capturelab:mergeProjectDexDebugAndroidTest
+> Task :capturelab:packageDebugAndroidTest
+> Task :capturelab:createDebugAndroidTestApkListingFileRedirect UP-TO-DATE
+> Task :capturelab:assembleDebugAndroidTest
+
+BUILD SUCCESSFUL in 721ms
+47 actionable tasks: 4 executed, 43 up-to-date

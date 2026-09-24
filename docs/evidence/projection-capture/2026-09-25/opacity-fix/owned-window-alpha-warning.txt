@@ -1,0 +1,1 @@
+W/WindowManager(  645): App com.kandong.capturelab has a system alert window (type = 2038) with FLAG_NOT_TOUCHABLE and LayoutParams.alpha = 1.00 > 0.80, setting alpha to 0.80 to let touches pass through (if this is isn't desirable, remove flag FLAG_NOT_TOUCHABLE).

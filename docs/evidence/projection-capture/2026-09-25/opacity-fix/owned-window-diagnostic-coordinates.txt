@@ -1,0 +1,4 @@
+--------- beginning of main
+I/KDOwnedOverlay( 4760): PATCH 112 1635 590 2103
+I/KDOwnedOverlay( 4760): WITNESS 723 1593 987 2117
+I/KDOwnedOverlay( 4760): READY directViewDrawMatched=true

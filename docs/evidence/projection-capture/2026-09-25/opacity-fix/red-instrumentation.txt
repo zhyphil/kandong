@@ -1,0 +1,113 @@
+INSTRUMENTATION_STATUS: class=com.kandong.capturelab.OwnedFixtureInstrumentedTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+com.kandong.capturelab.OwnedFixtureInstrumentedTest:
+INSTRUMENTATION_STATUS: test=explicitStopCancelsArmedGateDropsLateResultAndClearsOwnedSecureFlag
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.capturelab.OwnedFixtureInstrumentedTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=explicitStopCancelsArmedGateDropsLateResultAndClearsOwnedSecureFlag
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.capturelab.OwnedFixtureInstrumentedTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=realActivityDepartureAndReturnNeverResumeAnArmedSession
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.capturelab.OwnedFixtureInstrumentedTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=realActivityDepartureAndReturnNeverResumeAnArmedSession
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.capturelab.OwnedFixtureInstrumentedTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=stoppedConsentPromptCannotBecomeAStartWhenAnOldResultArrives
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.capturelab.OwnedFixtureInstrumentedTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=stoppedConsentPromptCannotBecomeAStartWhenAnOldResultArrives
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.capturelab.OwnedFixtureInstrumentedTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=measuresActualOwnedViewAndStartsWithoutCaptureOrPermissionRequests
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.capturelab.OwnedFixtureInstrumentedTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=measuresActualOwnedViewAndStartsWithoutCaptureOrPermissionRequests
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest:
+INSTRUMENTATION_STATUS: test=statusChangesDoNotMoveTheFrozenCaptureGeometry
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=statusChangesDoNotMoveTheFrozenCaptureGeometry
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.capturelab.OwnedOverlayInstrumentedTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+com.kandong.capturelab.OwnedOverlayInstrumentedTest:
+INSTRUMENTATION_STATUS: test=fixedOwnedWindowsKeepOpaqueMarkerColors
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.capturelab.OwnedOverlayInstrumentedTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Actual owned overlay colors were blended or missing
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.kandong.capturelab.OwnedOverlayInstrumentedTest.fixedOwnedWindowsKeepOpaqueMarkerColors(OwnedOverlayInstrumentedTest.kt:95)
+
+INSTRUMENTATION_STATUS: stream=
+Error in fixedOwnedWindowsKeepOpaqueMarkerColors(com.kandong.capturelab.OwnedOverlayInstrumentedTest):
+java.lang.AssertionError: Actual owned overlay colors were blended or missing
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.kandong.capturelab.OwnedOverlayInstrumentedTest.fixedOwnedWindowsKeepOpaqueMarkerColors(OwnedOverlayInstrumentedTest.kt:95)
+
+INSTRUMENTATION_STATUS: test=fixedOwnedWindowsKeepOpaqueMarkerColors
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 15.502
+There was 1 failure:
+1) fixedOwnedWindowsKeepOpaqueMarkerColors(com.kandong.capturelab.OwnedOverlayInstrumentedTest)
+java.lang.AssertionError: Actual owned overlay colors were blended or missing
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.kandong.capturelab.OwnedOverlayInstrumentedTest.fixedOwnedWindowsKeepOpaqueMarkerColors(OwnedOverlayInstrumentedTest.kt:95)
+
+FAILURES!!!
+Tests run: 6,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

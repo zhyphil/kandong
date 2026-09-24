@@ -1,0 +1,65 @@
+{
+  "date": "2026-09-25",
+  "starting_commit": "71f3971",
+  "failed_projection_runs": [
+    {
+      "pid": 4337,
+      "acquired": 177,
+      "closed": 177
+    },
+    {
+      "pid": 4527,
+      "acquired": 179,
+      "closed": 179
+    }
+  ],
+  "failed_phases": [
+    "COVER",
+    "RESTORE",
+    "SECURE_ACTIVITY"
+  ],
+  "format_only_candidate": "TRANSLUCENT did not fix the failure; restored OPAQUE",
+  "cause": "System caps FLAG_NOT_TOUCHABLE application-overlay alpha to 0.8. Actual owned screenshot cover exactly equals 0.8*cover+0.2*base; package-specific WindowManager warning confirms.",
+  "fix": "Remove FLAG_NOT_TOUCHABLE only on inert nonfocusable fixed-fixture windows. No system setting or permission bypass.",
+  "compositor_regression": {
+    "red": "6 run, 1 failure: owned overlay colors blended",
+    "green": "6 passed, 12.894 seconds",
+    "scope": "Existing user overlay grant; test-only developer screenshot of foreground fixed owned page, recycled in memory. Not MediaProjection evidence."
+  },
+  "jvm_suites": [
+    {
+      "name": "com.kandong.capturelab.CaptureProofTest",
+      "tests": "12",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.kandong.capturelab.FixturePixelsTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.kandong.capturelab.ProtectionControlsTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "lint": {
+    "errors": 0,
+    "warnings": 10
+  },
+  "source_sha256": {
+    "capturelab/src/main/java/com/kandong/capturelab/CaptureLabService.kt": "fe90d1aad029547e738f98068381a96c36f4944908bff519d97025210d07d4c6",
+    "capturelab/src/androidTest/java/com/kandong/capturelab/OwnedOverlayInstrumentedTest.kt": "5d2ba557ff0a00f98552f750a17341136d903d4be8180cfbae779797545e21d6"
+  },
+  "corrected_projection_status": "AWAITING_NEW_USER_SYSTEM_CONSENT",
+  "production_modules_changed": false,
+  "huawei_operated": false,
+  "push_or_release": false,
+  "source_reference": "https://android.googlesource.com/platform/frameworks/base/+/a451d5bae2e2fb1e75152c596a6f476d6f7ac1ec%5E!/"
+}

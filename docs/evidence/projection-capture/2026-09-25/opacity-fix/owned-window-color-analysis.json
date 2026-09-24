@@ -1,0 +1,34 @@
+{
+  "scope": "Developer screenshot of fixed owned capturelab page, not MediaProjection evidence",
+  "cover_requested_rgb": [
+    228,
+    82,
+    53
+  ],
+  "underlying_rgb": [
+    41,
+    124,
+    201
+  ],
+  "actual_cover_rgb": [
+    191,
+    90,
+    83
+  ],
+  "expected_at_alpha_0_8": [
+    191,
+    90,
+    83
+  ],
+  "max_channel_error": 0,
+  "witness_expected_first_rgb": [
+    61,
+    40,
+    50
+  ],
+  "witness_actual_first_rgb": [
+    93,
+    76,
+    84
+  ]
+}

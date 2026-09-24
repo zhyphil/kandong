@@ -58,7 +58,7 @@ JAVA_HOME=/Users/haoyuzuo/Library/Java/JavaVirtualMachines/temurin-17.0.20.1/Con
   :capturelab:assembleDebugAndroidTest :capturelab:testDebugUnitTest :capturelab:lintDebug
 ```
 
-JVM 测试覆盖同帧匹配、来源时间基、版本、重复时间戳、取消／迟到帧、阶段／总超时、保护观察分类及缓冲区边界。Android instrumentation 只测自有 View 的真实位置和 Activity 生命周期取消，**不申请或授予投屏／悬浮窗权限**，不构成实际 MediaProjection 验收。
+JVM 测试覆盖同帧匹配、来源时间基、版本、重复时间戳、取消／迟到帧、阶段／总超时、保护观察分类及缓冲区边界。Android instrumentation 的前5项测自有 View 位置和 Activity 生命周期取消，不需要投屏／悬浮窗权限。新增第6项必须已有用户亲自授予的悬浮窗权限，建立自有固定色块窗口，用仅测试包的 UiAutomation 开发截图在内存核对实际合成色，随后回收；没有屏幕共享，不保存截图、不读取第三方页面，不构成 MediaProjection 验收。所有测试都不申请或授予系统权限。
 
 2026-09-24 至 25 日实际验证：
 
@@ -67,7 +67,10 @@ JVM 测试覆盖同帧匹配、来源时间基、版本、重复时间戳、取�
 - 首版真实授权后在 BASELINE 因坐标变化取消：Image 取得／关闭均 1，服务和投屏已停止；保留 3 次旧包相同取消的固定标签日志。新增不需要授权的布局测试先失败，复现状态文字从单行变成两行导致首个色块 top 1040→1047；固定状态区域高度后七阶段坐标回归通过，没有放宽几何一致性门槛。
 - 独立只读审查 2 项 P2 已修正：无效旧启动按 `startId` 拒绝，不将整个实例标记 closing；安全窗口观察增加前后控制阶段评估及 5 项回归。排队启动 A/B 的实际 Android 交错尚未单独复现，此项依代码路径／平台 stopSelfResult 语义检查，不冒称设备覆盖。
 - AO 实现步骤写入源码后到达 600 秒时限，未成功结束；主任务独立完成实际构建、修复与验证。只读审查完成且项目指纹未改变。没有把委派状态当作代码验收。
-- 修正版实际投屏仍等待本次系统共享确认；未通过前不能把华为兼容采集或按需 OCR 标为完成。
+- 首次布局修正版及仅换 TRANSLUCENT 的对照版均经用户确认实际投屏：7阶段结束，但 COVER／RESTORE／SECURE_ACTIVITY 超时，保护前后对照均 INSUFFICIENT；分别取得／关闭177/177与179/179帧。不能把 COMPLETED 当通过。格式对照无效，已恢复 OPAQUE。
+- 已定位为系统对 FLAG_NOT_TOUCHABLE 应用悬浮层的 alpha 0.8 限制：自有色块实际RGB191/90/83恰为指定色228/82/53与底色41/124/201按0.8/0.2混合；WindowManager 明确记录该包降透明度。开发截图只用于定位自有窗口绘制，不冒充投屏验收。
+- 修复只移除固定实验窗口的 FLAG_NOT_TOUCHABLE，保留不可聚焦，窗口仍局限于色块、不覆盖停止按钮、无点击动作；未改系统安全设置和正式放大镜。实际合成回归先失败（6项中此1项失败），修正后6项12.894秒全部通过；22 JVM及构建、Lint0错误10警告通过，安装指纹一致。采集色容差、同帧新鲜度和安全判断均未放宽。
+- 透明度修正版实际投屏等待新会话确认；未通过前不能把华为兼容采集或按需 OCR 标为完成。失败及修复证据见[透明度回归](evidence/projection-capture/2026-09-25/opacity-fix/summary.json)。系统策略依据[AOSP透明度限制实现](https://android.googlesource.com/platform/frameworks/base/+/a451d5bae2e2fb1e75152c596a6f476d6f7ac1ec%5E!/)。
 
 构件／原始失败／测试／只读审查记录见 [证据](evidence/projection-capture/2026-09-25/summary.json)。
 

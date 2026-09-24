@@ -229,9 +229,12 @@ class CaptureLabService : Service() {
         catch (_: OutOfMemoryError) { endSession(EndReason.SETUP_FAILURE) }
     }
 
+    // These inert windows cover only fixture patches. They must not pass touches through:
+    // Android caps NOT_TOUCHABLE application-overlay alpha (normally at 0.8), blending
+    // the marker with its background. Nonfocusable keeps the Activity/stop button usable.
     private fun overlayParams(box: Box, secure: Boolean) = WindowManager.LayoutParams(
         box.width, box.height, WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY,
-        WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE or
+        WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
             WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN or (if (secure) WindowManager.LayoutParams.FLAG_SECURE else 0),
         PixelFormat.OPAQUE
     ).apply {
