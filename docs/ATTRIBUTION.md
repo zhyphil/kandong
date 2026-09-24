@@ -67,8 +67,10 @@ modelprobe使用Microsoft ONNX Runtime Android1.30.0（MIT及其ThirdPartyNotice
 
 独立modelprobe instrumentation包现使用[OpenCV官方Android构件](https://repo.maven.apache.org/maven2/org/opencv/opencv/5.0.0.1/)5.0.0.1候选（先前4.14.0结果按原版本保留），Apache-2.0许可和来源随测试包保存；未加入主应用。候选加载/数值差异、元数据不一致、体积及尚未完成的第三方notice审核见[原图探针](ORIGINAL_IMAGE_PROBE.md)。
 
-[几何参考生成器](../scripts/export-detector-geometry-fixtures.py)调用固定RapidOCR3.9.2的DBPostProcess与get_rotate_crop_image，并依据其排序规则将框/索引/分数一起排序。该上游检测入口保留Copyright (c) 2020 PaddlePaddle Authors、Apache-2.0归属；许可文本已有modelprobe/src/main/assets/legal/RapidOCR-LICENSE.txt和PaddleOCR-LICENSE.txt。新输入和裁剪均来自本项目合成数据，没有复制用户屏幕或字体文件，也未复制整个上游项目。Pyclipper与Shapely仅用于既有宿主参考环境，尚未选择或引入Android polygon实现。
+[几何参考生成器](../scripts/export-detector-geometry-fixtures.py)调用固定RapidOCR3.9.2的DBPostProcess与get_rotate_crop_image，并依据其排序规则将框/索引/分数一起排序。该上游检测入口保留Copyright (c) 2020 PaddlePaddle Authors、Apache-2.0归属；许可文本已有modelprobe/src/main/assets/legal/RapidOCR-LICENSE.txt和PaddleOCR-LICENSE.txt。新输入和裁剪均来自本项目合成数据，没有复制用户屏幕或字体文件，也未复制整个上游项目。Pyclipper与Shapely仅用于既有宿主参考环境；后续Android测试候选单独记录于下。
 
-- Android几何基础探针：`GeometryProbeContract`及`GeometryOpenCvProbe`按前述RapidOCR3.9.2规则实现阈值、裁剪尺寸、透视与旋转；仅测试源集，关联原ID/分数。本项目的预算、认证与异常验证为新增代码。原Apache-2.0许可/版权记录仍随测试资产保留。`lightbringer/clipper-java`仅宿主候选初筛，未加入Android依赖，来源及Boost许可记录见`docs/POLYGON_OFFSET_INTAKE.md`。
+- Android几何基础探针：`GeometryProbeContract`及`GeometryOpenCvProbe`按前述RapidOCR3.9.2规则实现阈值、裁剪尺寸、透视与旋转；仅测试源集，关联原ID/分数。本项目的预算、认证与异常验证为新增代码。原Apache-2.0许可/版权记录仍随测试资产保留。该阶段的`lightbringer/clipper-java`仅为宿主初筛；后续独立测试采用状态见下。来源及Boost许可记录见`docs/POLYGON_OFFSET_INTAKE.md`。
 
 - 几何测试的OpenCV5版本对齐原因、官方源码与候选构件证据见[Android几何探针](DETECTOR_GEOMETRY_PROBE.md)。只调用官方API，没有移植上游插值实现或修改固定参考。
+
+- Android polygon offset独立探针实施：仅testShared/androidTest使用固定lightbringer/clipper-java测试候选（提交5ef8c0a467023c495e44e582e9cbd8ca7308a590，Boost Software License1.0）。11源文件与35处舍入修改均有前后指纹，测试包提供LICENSE/NOTICE/provenance；见[探针范围](POLYGON_OFFSET_PROBE.md)。目标华为两轮有界合成用例已通过；尚未接入产品，不代表通用库或完整OCR验收。

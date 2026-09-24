@@ -1,0 +1,23 @@
+Threads: 18 total,   0 running,  18 sleeping,   0 stopped,   0 zombie
+  Mem:  7647596K total,  7360600K used,   286996K free,     4676K buffers
+ Swap:  4194300K total,  3559548K used,   634752K free,  2180676K cached
+800%cpu  89%user   0%nice  44%sys 652%idle  11%iow   4%irq   0%sirq   0%host
+  TID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ THREAD          PROCESS
+ 6290 u0_a512      20   0 6.6G 126M  87M S  0.0   1.6   0:00.00 Instrumentation com.kandong.modelprobe
+ 6288 u0_a512      30  10 6.6G 126M  87M D  0.0   1.6   0:00.00 queued-work-loo com.kandong.modelprobe
+ 6289 u0_a512      12  -8 6.6G 126M  87M D  0.0   1.6   0:06.74 roidJUnitRunner com.kandong.modelprobe
+ 6287 u0_a512      29   9 6.6G 126M  87M S  0.0   1.6   0:00.02 Profile Saver   com.kandong.modelprobe
+ 6285 u0_a512      20   0 6.6G 126M  87M S  0.0   1.6   0:00.00 Binder:6267_3   com.kandong.modelprobe
+ 6286 u0_a512      20   0 6.6G 126M  87M S  0.0   1.6   0:00.00 Binder:6267_4   com.kandong.modelprobe
+ 6284 u0_a512      30  10 6.6G 126M  87M D  0.0   1.6   0:00.01 queued-work-loo com.kandong.modelprobe
+ 6279 u0_a512      24   4 6.6G 126M  87M D  0.0   1.6   0:00.00 FinalizerWatchd com.kandong.modelprobe
+ 6281 u0_a512      20   0 6.6G 126M  87M S  0.0   1.6   0:00.00 Binder:6267_2   com.kandong.modelprobe
+ 6280 u0_a512      20   0 6.6G 126M  87M S  0.0   1.6   0:00.00 Binder:6267_1   com.kandong.modelprobe
+ 6273 u0_a512       0 -20 6.6G 126M  87M D  0.0   1.6   0:00.00 perfetto_hprof_ com.kandong.modelprobe
+ 6274 u0_a512       0 -20 6.6G 126M  87M D  0.0   1.6   0:00.00 ADB-JDWP Connec com.kandong.modelprobe
+ 6275 u0_a512      29   9 6.6G 126M  87M S  0.0   1.6   0:01.14 Jit thread pool com.kandong.modelprobe
+ 6276 u0_a512      24   4 6.6G 126M  87M D  0.0   1.6   0:00.57 HeapTaskDaemon  com.kandong.modelprobe
+ 6277 u0_a512      24   4 6.6G 126M  87M S  0.0   1.6   0:00.09 ReferenceQueueD com.kandong.modelprobe
+ 6278 u0_a512      24   4 6.6G 126M  87M S  0.0   1.6   0:00.03 FinalizerDaemon com.kandong.modelprobe
+ 6272 u0_a512       0 -20 6.6G 126M  87M S  0.0   1.6   0:00.00 Signal Catcher  com.kandong.modelprobe
+ 6267 u0_a512      20   0 6.6G 126M  87M S  0.0   1.6   0:00.19 dong.modelprobe com.kandong.modelprobe

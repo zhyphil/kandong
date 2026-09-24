@@ -27,6 +27,7 @@ android {
     sourceSets.getByName("androidTest").assets.srcDir(rootProject.file("docs/fixtures/recognition-prep-v1"))
     sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("detector-assets"))
     sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("geometry-assets"))
+    sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("polygon-offset-assets"))
     sourceSets.getByName("test").resources {
         srcDir(rootProject.file("docs/fixtures/recognition-prep-v1"))
         srcDir("src/androidTest/assets")
@@ -307,6 +308,125 @@ tasks.matching { it.name == "assembleDebugAndroidTest" }.configureEach {
                 val entry = apk.getEntry("assets/detector-geometry-v1/$name"); check(entry.size == spec.bytes.toLong())
                 val delivered = apk.getInputStream(entry).use { it.readNBytes(spec.bytes + 1) }
                 check(delivered.contentEquals(detectorRead(spec))) { "Packaged geometry bytes changed: $name" }
+            }
+        }
+    }
+}
+
+
+// Pinned synthetic polygon probe: these Java sources compile in test/testShared ONLY.
+// This check never validates models, geometry fixtures or downloaded dependencies.
+val polygonSourceIdentity = mapOf(
+    "Clipper.java" to (1301 to "d463987032c73c6dcc982a90ecb768c594214f05dd800262950e9d64c98fa28f"),
+    "ClipperBase.java" to (23027 to "145907a66fc1438256070603877d2fdc16409bc7289b3029e24f3ef5d0eccdeb"),
+    "ClipperOffset.java" to (19358 to "c19ec2bc4ff28d97498d7a6ff11b7ad3beee9f52ee7e2ec7e64c30bfcbf25db8"),
+    "DefaultClipper.java" to (95075 to "27c89abdbe193bfb62ca1ca2076d153f1ce4051dfb4d35e5c186f11f3e913273"),
+    "Edge.java" to (10159 to "08b674ab34fe970f782d4c89ad6b2351b85f143e58ceadc3008e1c0b5fde7881"),
+    "LongRect.java" to (457 to "7ec0fa84decb6d15e525ffdc872429de031f385a409ededb10a9a4b32c790f4c"),
+    "Path.java" to (13090 to "ab5e1a63707e2a21cb8309e451048007bce730864f21bf2cf9fabf50cdd6ae7a"),
+    "Paths.java" to (3436 to "5d4757692ea0fdd33904efc424383d0cd5d48799bf76180a9e085784d542c3c7"),
+    "Point.java" to (6543 to "4d399a9fac02d3d9403c6b8aad1b2630e6257fb176222ff950055d1f465e9c78"),
+    "PolyNode.java" to (2386 to "f5e15da1395b5f1af4d82340b0ad9108e7b2cdbad6bc2bf69d421eb759ecfe5b"),
+    "PolyTree.java" to (789 to "7c2c7af75e347acebe24afbd7e1e58d193177fba70b8939fac2d96e7e9db15a1"))
+val polygonLegalIdentity = mapOf(
+    "LICENSE.txt" to (1338 to "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"),
+    "NOTICE.txt" to (1241 to "6912a835b4057a4ad3f39daa0e6feff0a1a38d8474e99e95353f4825a65e1c2c"),
+    "provenance.json" to (6431 to "b555bf04f526ef853787ff306e0e814999106c5360d02ae5767a0092f285ee5d"))
+val polygonPatchSha = "8c913466b38a9d7d2dc44a95bcc84d04088dc3d7c9ecc0559c2bcdf7dd5613cb"
+val polygonFixtureIdentity = mapOf(
+    "manifest.json" to (1086 to "e4415247a09d954501e0c5f87a2e5a6e35cdeef9ffc5ff5349aaf0a1a0f9e8ea"),
+    "cases.json" to (1225517 to "972e5c809dfaea5744caa05ceb7920383a99dca1d923e2bf69c950a707c09576"))
+fun polygonRead(root: java.io.File, name: String, identity: Pair<Int, String>): ByteArray {
+    val f = root.resolve(name)
+    check(f.isFile && f.length() == identity.first.toLong()) { "Polygon file length: $name" }
+    val bytes = f.inputStream().use { it.readNBytes(identity.first + 1) }
+    check(bytes.size == identity.first && detectorDigest(bytes) == identity.second) { "Polygon file fingerprint: $name" }
+    return bytes
+}
+fun polygonFileSet(root: java.io.File, names: Set<String>) {
+    check(root.isDirectory && root.walkTopDown().filter { it.isFile }
+        .map { it.relativeTo(root).invariantSeparatorsPath }.toSet() == names) { "Polygon exact file set: $root" }
+}
+val verifyPolygonProbeVendor by tasks.registering {
+    doLast {
+        val source = file("src/testShared/java/de/lighti/clipper")
+        val legal = file("src/androidTest/assets/polygon-offset-legal")
+        check(polygonSourceIdentity.size == 11 && polygonSourceIdentity.values.sumOf { it.first } == 175621)
+        polygonFileSet(source, polygonSourceIdentity.keys); polygonFileSet(legal, polygonLegalIdentity.keys)
+        polygonSourceIdentity.forEach { (name, identity) -> polygonRead(source, name, identity) }
+        polygonLegalIdentity.forEach { (name, identity) -> polygonRead(legal, name, identity) }
+        val provenance = groovy.json.JsonSlurper().parseText(String(
+            polygonRead(legal, "provenance.json", polygonLegalIdentity.getValue("provenance.json")), Charsets.UTF_8)) as Map<*, *>
+        check(provenance["sourceCommit"] == "5ef8c0a467023c495e44e582e9cbd8ca7308a590")
+        check((provenance["patch"] as Map<*, *>)["sha256"] == polygonPatchSha)
+        check((provenance["sources"] as List<*>).size == 11)
+    }
+}
+tasks.matching { it.name in setOf("compileDebugUnitTestKotlin", "compileDebugUnitTestJavaWithJavac",
+    "compileDebugAndroidTestKotlin", "compileDebugAndroidTestJavaWithJavac",
+    "compileReleaseUnitTestKotlin", "compileReleaseUnitTestJavaWithJavac") }.configureEach {
+    dependsOn(verifyPolygonProbeVendor)
+}
+val polygonFixtureRoot = rootProject.file("docs/fixtures/polygon-offset-v1")
+val stagePolygonOffsetProbeAssets by tasks.registering(Sync::class) {
+    from(polygonFixtureRoot) {
+        include("manifest.json", "cases.json")
+        into("polygon-offset-v1")
+    }
+    into(layout.buildDirectory.dir("polygon-offset-assets"))
+    inputs.dir(polygonFixtureRoot)
+    inputs.property("frozenPolygonIdentity", polygonFixtureIdentity.toString())
+    doFirst {
+        polygonFileSet(polygonFixtureRoot, polygonFixtureIdentity.keys)
+        polygonFixtureIdentity.forEach { (name, identity) -> polygonRead(polygonFixtureRoot, name, identity) }
+    }
+}
+val validatePolygonOffsetProbeAssets by tasks.registering {
+    dependsOn(stagePolygonOffsetProbeAssets, verifyPolygonProbeVendor)
+    doLast {
+        val stage = layout.buildDirectory.dir("polygon-offset-assets").get().asFile
+        polygonFileSet(polygonFixtureRoot, polygonFixtureIdentity.keys)
+        polygonFileSet(stage, polygonFixtureIdentity.keys.map { "polygon-offset-v1/$it" }.toSet())
+        polygonFixtureIdentity.forEach { (name, identity) ->
+            val source = polygonRead(polygonFixtureRoot, name, identity)
+            check(polygonRead(stage, "polygon-offset-v1/$name", identity).contentEquals(source))
+        }
+    }
+}
+// Only instrumentation merge/package/lint consume these fixtures. Never preBuild/main/JVM/compat.
+tasks.matching { it.name in setOf("mergeDebugAndroidTestAssets", "packageDebugAndroidTest",
+    "generateDebugAndroidTestLintModel", "lintAnalyzeDebugAndroidTest") }.configureEach {
+    dependsOn(validatePolygonOffsetProbeAssets)
+}
+// Check source-set isolation on a newly built main APK. Machine-specific signed APK
+// identity belongs to the parent acceptance record, not portable build configuration.
+tasks.matching { it.name == "assembleDebug" }.configureEach {
+    doLast {
+        ZipFile(layout.buildDirectory.file("outputs/apk/debug/modelprobe-debug.apk").get().asFile).use { apk ->
+            check(apk.entries().asSequence().none { it.name.startsWith("assets/polygon-offset-") })
+            apk.entries().asSequence().filter { it.name.matches(Regex("classes[0-9]*\\.dex")) }.forEach { entry ->
+                val strings = apk.getInputStream(entry).use { String(it.readBytes(), Charsets.ISO_8859_1) }
+                check(!strings.contains("Lde/lighti/clipper/")) { "Polygon vendor leaked into main DEX" }
+            }
+        }
+    }
+}
+tasks.matching { it.name == "assembleDebugAndroidTest" }.configureEach {
+    doLast {
+        val expected = polygonFixtureIdentity.mapKeys { "assets/polygon-offset-v1/${it.key}" } +
+            polygonLegalIdentity.mapKeys { "assets/polygon-offset-legal/${it.key}" }
+        val stage = layout.buildDirectory.dir("polygon-offset-assets/polygon-offset-v1").get().asFile
+        val legal = file("src/androidTest/assets/polygon-offset-legal")
+        polygonFileSet(stage, polygonFixtureIdentity.keys); polygonFileSet(legal, polygonLegalIdentity.keys)
+        ZipFile(layout.buildDirectory.file("outputs/apk/androidTest/debug/modelprobe-debug-androidTest.apk").get().asFile).use { apk ->
+            val entries = apk.entries().asSequence().filter { !it.isDirectory && it.name.startsWith("assets/polygon-offset-") }.toList()
+            check(entries.size == 5 && entries.map { it.name }.toSet() == expected.keys) { "Packaged polygon set/duplicates" }
+            expected.forEach { (name, identity) ->
+                val original = polygonRead(if (name.startsWith("assets/polygon-offset-v1/")) stage else legal,
+                    name.substringAfterLast('/'), identity)
+                val entry = apk.getEntry(name); check(entry.size == identity.first.toLong())
+                val packaged = apk.getInputStream(entry).use { it.readNBytes(identity.first + 1) }
+                check(packaged.contentEquals(original)) { "Packaged polygon bytes changed: $name" }
             }
         }
     }

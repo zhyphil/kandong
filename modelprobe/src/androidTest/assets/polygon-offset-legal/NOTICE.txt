@@ -1,0 +1,16 @@
+Test-only modified candidate from lightbringer/clipper-java (Boost Software License 1.0).
+Pinned upstream commit: 5ef8c0a467023c495e44e582e9cbd8ca7308a590
+https://github.com/lightbringer/clipper-java/tree/5ef8c0a467023c495e44e582e9cbd8ca7308a590
+Upstream is archived/unmaintained. This is NOT general Clipper adoption and is NOT production code.
+
+Local all-round candidate patch replaces 35 Math.round calls with half-away-from-zero
+rounding (ClipperOffset: 29, DefaultClipper: 5, Edge: 1) to match the frozen Pyclipper
+integer offset reference at negative half ties. No other source changes are included.
+The exact patch is tracked at docs/evidence/polygon-offset/2026-09-24/expanded/half-away-rounding.patch.
+
+KanDong maintains only this bounded synthetic positive ROUND/CLOSED_POLYGON test probe.
+No promise of general Boolean/offset equivalence, upstream support or security maintenance.
+Input and generated-vertex preflight limits do not bound all UNION internal allocations
+and do not provide hard interruption. Output caps are checked after the vendor returns.
+No full DB boxes or OCR claim; 13 frozen final quads are NOT actual pre-unclip boxes.
+See provenance.json for upstream and modified hashes; LICENSE.txt is copied unchanged.

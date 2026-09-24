@@ -1,0 +1,69 @@
+> Task :modelprobe:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :modelprobe:validateProbeAssets
+> Task :modelprobe:preBuild
+> Task :modelprobe:preDebugBuild
+> Task :modelprobe:checkDebugAarMetadata UP-TO-DATE
+> Task :modelprobe:processDebugNavigationResources UP-TO-DATE
+> Task :modelprobe:compileDebugNavigationResources UP-TO-DATE
+> Task :modelprobe:generateDebugResValues UP-TO-DATE
+> Task :modelprobe:mapDebugSourceSetPaths UP-TO-DATE
+> Task :modelprobe:generateDebugResources UP-TO-DATE
+> Task :modelprobe:mergeDebugResources UP-TO-DATE
+> Task :modelprobe:packageDebugResources UP-TO-DATE
+> Task :modelprobe:parseDebugLocalResources UP-TO-DATE
+> Task :modelprobe:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :modelprobe:extractDeepLinksDebug UP-TO-DATE
+> Task :modelprobe:processDebugMainManifest UP-TO-DATE
+> Task :modelprobe:processDebugManifest UP-TO-DATE
+> Task :modelprobe:processDebugManifestForPackage UP-TO-DATE
+> Task :modelprobe:processDebugResources UP-TO-DATE
+> Task :modelprobe:compileDebugKotlin UP-TO-DATE
+> Task :modelprobe:javaPreCompileDebug UP-TO-DATE
+> Task :modelprobe:compileDebugJavaWithJavac NO-SOURCE
+> Task :modelprobe:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :modelprobe:verifyOpenCvTestArtifact
+> Task :modelprobe:preDebugAndroidTestBuild SKIPPED
+> Task :modelprobe:checkDebugAndroidTestAarMetadata UP-TO-DATE
+> Task :modelprobe:processDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :modelprobe:compileDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :modelprobe:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :modelprobe:mapDebugAndroidTestSourceSetPaths UP-TO-DATE
+> Task :modelprobe:generateDebugAndroidTestResources UP-TO-DATE
+> Task :modelprobe:mergeDebugAndroidTestResources UP-TO-DATE
+> Task :modelprobe:processDebugAndroidTestManifest UP-TO-DATE
+> Task :modelprobe:processDebugAndroidTestResources UP-TO-DATE
+> Task :modelprobe:verifyPolygonProbeVendor
+> Task :modelprobe:compileDebugAndroidTestKotlin UP-TO-DATE
+> Task :modelprobe:javaPreCompileDebugAndroidTest UP-TO-DATE
+> Task :modelprobe:compileDebugAndroidTestJavaWithJavac UP-TO-DATE
+> Task :modelprobe:mergeDebugAndroidTestShaders UP-TO-DATE
+> Task :modelprobe:compileDebugAndroidTestShaders NO-SOURCE
+> Task :modelprobe:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :modelprobe:stageGeometryProbeAssets UP-TO-DATE
+> Task :modelprobe:validateDetectorProbeAssets
+> Task :modelprobe:stagePolygonOffsetProbeAssets UP-TO-DATE
+> Task :modelprobe:validatePolygonOffsetProbeAssets
+> Task :modelprobe:mergeDebugAndroidTestAssets UP-TO-DATE
+> Task :modelprobe:compressDebugAndroidTestAssets UP-TO-DATE
+> Task :modelprobe:desugarDebugAndroidTestFileDependencies UP-TO-DATE
+> Task :modelprobe:dexBuilderDebugAndroidTest UP-TO-DATE
+> Task :modelprobe:mergeDebugAndroidTestGlobalSynthetics UP-TO-DATE
+> Task :modelprobe:processDebugAndroidTestJavaRes UP-TO-DATE
+> Task :modelprobe:mergeDebugAndroidTestJavaResource UP-TO-DATE
+> Task :modelprobe:checkDebugAndroidTestDuplicateClasses UP-TO-DATE
+> Task :modelprobe:mergeExtDexDebugAndroidTest UP-TO-DATE
+> Task :modelprobe:mergeLibDexDebugAndroidTest UP-TO-DATE
+> Task :modelprobe:mergeProjectDexDebugAndroidTest UP-TO-DATE
+> Task :modelprobe:mergeDebugAndroidTestJniLibFolders UP-TO-DATE
+> Task :modelprobe:mergeDebugJniLibFolders UP-TO-DATE
+> Task :modelprobe:mergeDebugNativeLibs UP-TO-DATE
+> Task :modelprobe:mergeDebugAndroidTestNativeLibs UP-TO-DATE
+> Task :modelprobe:stripDebugAndroidTestDebugSymbols UP-TO-DATE
+> Task :modelprobe:validateSigningDebugAndroidTest UP-TO-DATE
+> Task :modelprobe:writeDebugAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :modelprobe:packageDebugAndroidTest UP-TO-DATE
+> Task :modelprobe:createDebugAndroidTestApkListingFileRedirect UP-TO-DATE
+> Task :modelprobe:assembleDebugAndroidTest
+
+BUILD SUCCESSFUL in 1s
+59 actionable tasks: 6 executed, 53 up-to-date
