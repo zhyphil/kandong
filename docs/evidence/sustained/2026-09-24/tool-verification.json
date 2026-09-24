@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "normal",
+    "thermal",
+    "wrong",
+    "reject_overwrite",
+    "read_only_command_whitelist"
+  ],
+  "passed": true,
+  "scope": "Synthetic adb command fixture; no physical device commands issued",
+  "scriptSha256": "f4f3c395e513554afa47d6675b84e21be3a463ba2a571d09bbba0d52f21587d2",
+  "selfTestChecksPassed": 15
+}

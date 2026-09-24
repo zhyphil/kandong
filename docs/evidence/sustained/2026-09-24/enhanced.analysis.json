@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "rawReport": "enhanced.raw.json",
+  "rawSha256": "6976521311a9cb21974758c90d39a90622b034382f4b149e0a03e663f6e72185",
+  "collectorAtStartSha256": "42fff7dedc63d9bbb46bffe5d73b21633576cf6aa9933ddb45f70c23d673bfb9",
+  "analysisScriptSha256": "f4f3c395e513554afa47d6675b84e21be3a463ba2a571d09bbba0d52f21587d2",
+  "appSourceCommit": "ab1f4e0",
+  "correctedSummary": {
+    "sampleCount": 60,
+    "activeObservedSeconds": 853.91,
+    "activeSamples": 58,
+    "unavailableServiceSamples": 0,
+    "newRenderOrCleanupErrors": 0,
+    "counterRegressionsWithinSession": 0,
+    "pausedIntervals": 1,
+    "pausedEndpointsWithActivityBetween": 1,
+    "pausedSnapshotsWithGpuOpen": 0,
+    "activeIntervalsWithoutNewEnhancedFrame": 0,
+    "batteryTemperatureC": {
+      "first": 29.0,
+      "last": 31.0,
+      "min": 29.0,
+      "max": 31.0
+    },
+    "pssKb": {
+      "first": 62281,
+      "last": 82194,
+      "min": 49336,
+      "max": 86275
+    },
+    "maxReportedThermalStatus": 0,
+    "externalPowerSamples": 60,
+    "levelPercent": {
+      "first": 87.0,
+      "last": 93.0,
+      "min": 87.0,
+      "max": 93.0
+    },
+    "energyVerdict": "not_measured_no_app_energy_attribution",
+    "observedSessions": 1
+  },
+  "sampleSpanSeconds": 900.005,
+  "maxQueryDurationSeconds": 0.401,
+  "enhancedFramesDelta": 4136,
+  "activePssFirstQuarterMedianKiB": 65111,
+  "activePssLastQuarterMedianKiB": 78080.5,
+  "thermalSamplesValid": true,
+  "absoluteErrorCountersMax": {
+    "clarityFailures": 0,
+    "gpuCleanupFailures": 0
+  },
+  "interpretation": [
+    "The raw report is unchanged. Its legacy pauseInvariantViolations=1 label is superseded by pausedEndpointsWithActivityBetween=1; equal paused endpoints do not establish uninterrupted pause.",
+    "60 samples cover 900.005 seconds of mixed use. Estimated active endpoint coverage is 853.91 seconds, not 15 uninterrupted active minutes.",
+    "One observed session and increasing enhanced output, with zero sampled render/cleanup error counters; no claim about every unsampled instant.",
+    "PSS increased during this finite run; long-run bounded memory is unresolved.",
+    "All samples externally powered; no battery-drain or app energy conclusion."
+  ]
+}
