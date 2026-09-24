@@ -1,0 +1,28 @@
+{"round": 1, "page": "p001", "mode": "full", "seconds": 1.476, "error": null, "output": [["b005", "预订房间"]]}
+{"round": 1, "page": "p001", "mode": "target-only", "seconds": 0.194, "error": null, "output": [["b005", "书"]]}
+{"round": 1, "page": "p002", "mode": "full", "seconds": 0.274, "error": null, "output": [["b004", "书"]]}
+{"round": 1, "page": "p002", "mode": "target-only", "seconds": 0.193, "error": null, "output": [["b004", "书"]]}
+{"round": 1, "page": "p003", "mode": "full", "seconds": 1.087, "error": null, "output": [["b004", "每晚120.00元"], ["b005", "2晚240.00元"], ["b006", "包含税费"], ["b007", "免费取消，10月10日18:00前"], ["b009", "2晚210.00元"], ["b010", "税费不包含"], ["b011", "不可退款。现支付"]]}
+{"round": 1, "page": "p003", "mode": "target-only", "seconds": 1.083, "error": null, "output": [["b004", "每晚120.00元"], ["b005", "2晚240.00元"], ["b006", "含税"], ["b007", "2026年10月10日18:00前可免费取消"], ["b009", "每晚210.00元"], ["b010", "不含税"], ["b011", "不可退款。现需付款"]]}
+{"round": 1, "page": "p004", "mode": "full", "seconds": 0.261, "error": null, "output": [["b004", "航班"]]}
+{"round": 1, "page": "p004", "mode": "target-only", "seconds": 0.196, "error": null, "output": [["b004", "Vol"]]}
+{"round": 1, "page": "p005", "mode": "full", "seconds": 0.261, "error": null, "output": [["b004", "描述事件经过"]]}
+{"round": 1, "page": "p005", "mode": "target-only", "seconds": 0.199, "error": null, "output": [["b004", "Vol"]]}
+{"round": 1, "page": "p006", "mode": "full", "seconds": 0.391, "error": null, "output": [["b003", "票的条件"], ["b005", "允许的行李数量：1件，重量不超过8公斤。"]]}
+{"round": 1, "page": "p006", "mode": "target-only", "seconds": 0.352, "error": null, "output": [["b003", "不可交换且不可退款。"], ["b005", "1件行李，总重量不得超过8公斤。"]]}
+{"round": 1, "page": "p007", "mode": "original", "seconds": 0, "error": null, "output": [["b003", "08:30"], ["b004", "每月费用：¥12.50"], ["b005", "关闭自动续费"]]}
+{"round": 1, "page": "p008", "mode": "original", "seconds": 0, "error": null, "output": [["b003", "20:45"], ["b004", "每月費用：NT$120.50"], ["b005", "關閉自動續訂"]]}
+{"round": 2, "page": "p001", "mode": "full", "seconds": 0.855, "error": null, "output": [["b005", "预订房间"]]}
+{"round": 2, "page": "p001", "mode": "target-only", "seconds": 0.195, "error": null, "output": [["b005", "书"]]}
+{"round": 2, "page": "p002", "mode": "full", "seconds": 0.273, "error": null, "output": [["b004", "书"]]}
+{"round": 2, "page": "p002", "mode": "target-only", "seconds": 0.195, "error": null, "output": [["b004", "书"]]}
+{"round": 2, "page": "p003", "mode": "full", "seconds": 1.096, "error": null, "output": [["b004", "每晚120.00元"], ["b005", "2晚240.00元"], ["b006", "包含税费"], ["b007", "免费取消，10月10日18:00前"], ["b009", "2晚210.00元"], ["b010", "税费不包含"], ["b011", "不可退款。现支付"]]}
+{"round": 2, "page": "p003", "mode": "target-only", "seconds": 1.032, "error": null, "output": [["b004", "每晚120.00元"], ["b005", "2晚240.00元"], ["b006", "含税"], ["b007", "2026年10月10日18:00前可免费取消"], ["b009", "每晚210.00元"], ["b010", "不含税"], ["b011", "不可退款。现需付款"]]}
+{"round": 2, "page": "p004", "mode": "full", "seconds": 0.257, "error": null, "output": [["b004", "航班"]]}
+{"round": 2, "page": "p004", "mode": "target-only", "seconds": 0.196, "error": null, "output": [["b004", "Vol"]]}
+{"round": 2, "page": "p005", "mode": "full", "seconds": 0.261, "error": null, "output": [["b004", "描述事件经过"]]}
+{"round": 2, "page": "p005", "mode": "target-only", "seconds": 0.198, "error": null, "output": [["b004", "Vol"]]}
+{"round": 2, "page": "p006", "mode": "full", "seconds": 0.396, "error": null, "output": [["b003", "票的条件"], ["b005", "允许的行李数量：1件，重量不超过8公斤。"]]}
+{"round": 2, "page": "p006", "mode": "target-only", "seconds": 0.355, "error": null, "output": [["b003", "不可交换且不可退款。"], ["b005", "1件行李，总重量不得超过8公斤。"]]}
+{"round": 2, "page": "p007", "mode": "original", "seconds": 0, "error": null, "output": [["b003", "08:30"], ["b004", "每月费用：¥12.50"], ["b005", "关闭自动续费"]]}
+{"round": 2, "page": "p008", "mode": "original", "seconds": 0, "error": null, "output": [["b003", "20:45"], ["b004", "每月費用：NT$120.50"], ["b005", "關閉自動續訂"]]}

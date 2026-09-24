@@ -1,0 +1,67 @@
+{
+  "round": 1,
+  "page": "p008",
+  "mode": "original",
+  "sourceLanguage": "zh-TW",
+  "modelCalled": false,
+  "bound": [
+    {
+      "id": "b003",
+      "text": "20:45",
+      "source": {
+        "id": "b003",
+        "text": "20:45",
+        "role": "value",
+        "groupId": "g001",
+        "bounds": [
+          40,
+          330,
+          1040,
+          430
+        ],
+        "readingOrder": 3
+      },
+      "pageId": "p008",
+      "status": "original"
+    },
+    {
+      "id": "b004",
+      "text": "每月費用：NT$120.50",
+      "source": {
+        "id": "b004",
+        "text": "每月費用：NT$120.50",
+        "role": "paragraph",
+        "groupId": "g001",
+        "bounds": [
+          40,
+          465,
+          1040,
+          565
+        ],
+        "readingOrder": 4
+      },
+      "pageId": "p008",
+      "status": "original"
+    },
+    {
+      "id": "b005",
+      "text": "關閉自動續訂",
+      "source": {
+        "id": "b005",
+        "text": "關閉自動續訂",
+        "role": "button",
+        "groupId": "g001",
+        "bounds": [
+          40,
+          600,
+          1040,
+          700
+        ],
+        "readingOrder": 5
+      },
+      "pageId": "p008",
+      "status": "original"
+    }
+  ],
+  "elapsedSeconds": 0
+}

@@ -1,0 +1,611 @@
+{
+  "schema": 1,
+  "synthetic": true,
+  "cases": [
+    {
+      "id": "p101",
+      "sourceLanguage": "en",
+      "viewport": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "blocks": [
+        {
+          "id": "b001",
+          "text": "Library catalogue",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            60,
+            1040,
+            160
+          ],
+          "readingOrder": 1
+        },
+        {
+          "id": "b002",
+          "text": "Choose a type of publication",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            195,
+            1040,
+            295
+          ],
+          "readingOrder": 2
+        },
+        {
+          "id": "b003",
+          "text": "Book",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        {
+          "id": "b004",
+          "text": "Journal",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        }
+      ],
+      "groups": [
+        {
+          "id": "g001",
+          "blockIds": [
+            "b001",
+            "b002",
+            "b003",
+            "b004"
+          ]
+        }
+      ],
+      "targetIds": [
+        "b003"
+      ],
+      "roi": [
+        40,
+        330,
+        1040,
+        430
+      ]
+    },
+    {
+      "id": "p102",
+      "sourceLanguage": "en",
+      "viewport": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "blocks": [
+        {
+          "id": "b001",
+          "text": "Restaurant reservations",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            60,
+            1040,
+            160
+          ],
+          "readingOrder": 1
+        },
+        {
+          "id": "b002",
+          "text": "Choose a table for tonight",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            195,
+            1040,
+            295
+          ],
+          "readingOrder": 2
+        },
+        {
+          "id": "b003",
+          "text": "4 guests at 19:30",
+          "role": "value",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        {
+          "id": "b004",
+          "text": "Book",
+          "role": "button",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        }
+      ],
+      "groups": [
+        {
+          "id": "g001",
+          "blockIds": [
+            "b001",
+            "b002",
+            "b003",
+            "b004"
+          ]
+        }
+      ],
+      "targetIds": [
+        "b004"
+      ],
+      "roi": [
+        40,
+        465,
+        1040,
+        565
+      ]
+    },
+    {
+      "id": "p103",
+      "sourceLanguage": "fr",
+      "viewport": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "blocks": [
+        {
+          "id": "b001",
+          "text": "Votre départ",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            60,
+            1040,
+            160
+          ],
+          "readingOrder": 1
+        },
+        {
+          "id": "b002",
+          "text": "Embarquement à la porte 12",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            195,
+            1040,
+            295
+          ],
+          "readingOrder": 2
+        },
+        {
+          "id": "b003",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        {
+          "id": "b004",
+          "text": "Destination : Lyon",
+          "role": "value",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        }
+      ],
+      "groups": [
+        {
+          "id": "g001",
+          "blockIds": [
+            "b001",
+            "b002",
+            "b003",
+            "b004"
+          ]
+        }
+      ],
+      "targetIds": [
+        "b003"
+      ],
+      "roi": [
+        40,
+        330,
+        1040,
+        430
+      ]
+    },
+    {
+      "id": "p104",
+      "sourceLanguage": "fr",
+      "viewport": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "blocks": [
+        {
+          "id": "b001",
+          "text": "Assurance habitation",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            60,
+            1040,
+            160
+          ],
+          "readingOrder": 1
+        },
+        {
+          "id": "b002",
+          "text": "Déclarer un sinistre",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            195,
+            1040,
+            295
+          ],
+          "readingOrder": 2
+        },
+        {
+          "id": "b003",
+          "text": "Objets disparus",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        {
+          "id": "b004",
+          "text": "Vol",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        }
+      ],
+      "groups": [
+        {
+          "id": "g001",
+          "blockIds": [
+            "b001",
+            "b002",
+            "b003",
+            "b004"
+          ]
+        }
+      ],
+      "targetIds": [
+        "b004"
+      ],
+      "roi": [
+        40,
+        465,
+        1040,
+        565
+      ]
+    },
+    {
+      "id": "p105",
+      "sourceLanguage": "en",
+      "viewport": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "blocks": [
+        {
+          "id": "b001",
+          "text": "Choose your plan",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            60,
+            1040,
+            160
+          ],
+          "readingOrder": 1
+        },
+        {
+          "id": "b002",
+          "text": "Monthly plan",
+          "role": "heading",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            195,
+            1040,
+            295
+          ],
+          "readingOrder": 2
+        },
+        {
+          "id": "b003",
+          "text": "$19.50 per month",
+          "role": "value",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        {
+          "id": "b004",
+          "text": "Tax not included",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        {
+          "id": "b005",
+          "text": "Cancel before 09:15 on 6 November 2026. No refund after renewal.",
+          "role": "paragraph",
+          "groupId": "g002",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        {
+          "id": "b006",
+          "text": "Annual plan",
+          "role": "heading",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            735,
+            1040,
+            835
+          ],
+          "readingOrder": 6
+        },
+        {
+          "id": "b007",
+          "text": "$195.00 per year",
+          "role": "value",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            870,
+            1040,
+            970
+          ],
+          "readingOrder": 7
+        },
+        {
+          "id": "b008",
+          "text": "Tax included",
+          "role": "paragraph",
+          "groupId": "g003",
+          "bounds": [
+            40,
+            1005,
+            1040,
+            1105
+          ],
+          "readingOrder": 8
+        }
+      ],
+      "groups": [
+        {
+          "id": "g001",
+          "blockIds": [
+            "b001"
+          ]
+        },
+        {
+          "id": "g002",
+          "blockIds": [
+            "b002",
+            "b003",
+            "b004",
+            "b005"
+          ]
+        },
+        {
+          "id": "g003",
+          "blockIds": [
+            "b006",
+            "b007",
+            "b008"
+          ]
+        }
+      ],
+      "targetIds": [
+        "b003",
+        "b004",
+        "b005",
+        "b007",
+        "b008"
+      ],
+      "roi": [
+        40,
+        330,
+        1040,
+        430
+      ]
+    },
+    {
+      "id": "p106",
+      "sourceLanguage": "fr",
+      "viewport": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "blocks": [
+        {
+          "id": "b001",
+          "text": "Votre réservation",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            60,
+            1040,
+            160
+          ],
+          "readingOrder": 1
+        },
+        {
+          "id": "b002",
+          "text": "Tarif réduit",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            195,
+            1040,
+            295
+          ],
+          "readingOrder": 2
+        },
+        {
+          "id": "b003",
+          "text": "Prix total : 37,80 €",
+          "role": "value",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            330,
+            1040,
+            430
+          ],
+          "readingOrder": 3
+        },
+        {
+          "id": "b004",
+          "text": "Valable le 5 décembre 2026",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            465,
+            1040,
+            565
+          ],
+          "readingOrder": 4
+        },
+        {
+          "id": "b005",
+          "text": "Aucun remboursement après le départ.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 5
+        },
+        {
+          "id": "b006",
+          "text": "2 bagages, 6 kg maximum chacun.",
+          "role": "paragraph",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            735,
+            1040,
+            835
+          ],
+          "readingOrder": 6
+        }
+      ],
+      "groups": [
+        {
+          "id": "g001",
+          "blockIds": [
+            "b001",
+            "b002",
+            "b003",
+            "b004",
+            "b005",
+            "b006"
+          ]
+        }
+      ],
+      "targetIds": [
+        "b003",
+        "b004",
+        "b005",
+        "b006"
+      ],
+      "roi": [
+        40,
+        330,
+        1040,
+        430
+      ]
+    }
+  ]
+}
