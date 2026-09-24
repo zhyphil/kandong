@@ -74,3 +74,5 @@ modelprobe使用Microsoft ONNX Runtime Android1.30.0（MIT及其ThirdPartyNotice
 - 几何测试的OpenCV5版本对齐原因、官方源码与候选构件证据见[Android几何探针](DETECTOR_GEOMETRY_PROBE.md)。只调用官方API，没有移植上游插值实现或修改固定参考。
 
 - Android polygon offset独立探针实施：仅testShared/androidTest使用固定lightbringer/clipper-java测试候选（提交5ef8c0a467023c495e44e582e9cbd8ca7308a590，Boost Software License1.0）。11源文件与35处舍入修改均有前后指纹，测试包提供LICENSE/NOTICE/provenance；见[探针范围](POLYGON_OFFSET_PROBE.md)。目标华为两轮有界合成用例已通过；尚未接入产品，不代表通用库或完整OCR验收。
+
+- 完整框中间参考生成器同样调用固定RapidOCR3.9.2的DBPostProcess方法，仅以派生类记录合成中间数值；保留上述PaddlePaddle/RapidOCR的Apache-2.0归属。不复制整套推理项目，未引入新产品依赖，见[中间参考](DETECTOR_BOX_TRACE.md)。
