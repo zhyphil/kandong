@@ -1,0 +1,1553 @@
+{
+  "schema": 1,
+  "scope": "quality_audit_of_fixed_synthetic_evidence_not_production_acceptance",
+  "normalization": "NFC + Unicode White_Space folding and trim only; punctuation and internal spacing remain significant",
+  "policy": "No best-per-input model selection, no correction, no language label fed to inference; literal phrase presence is not a semantic guarantee",
+  "scriptSha256": "2f484fc0218c266f359e57b9c17cf6c8394576c8d57c40d736207c3c74b1a583",
+  "sourceSha256": {
+    "ocrlab/src/main/assets/trilingual-v1/manifest.json": "2341dff63bd10d41867351ddff0e4145daa2d9d3493bc8cdc88ea289c1a076a8",
+    "docs/evidence/end-to-end-ocr-probe/2026-09-24/huawei/acceptance-summary.json": "a349c39d3d6b9006b538362aacc946a6fdd5e2038ee6bed7ceebb6a88b993891",
+    "docs/evidence/end-to-end-ocr-probe/2026-09-24/huawei/e2e-1-report.json": "b285c1022da75dc51bb0fb7e4a47c6924d92cf1a248569a797580ec825acde1e",
+    "docs/evidence/end-to-end-ocr-probe/2026-09-24/huawei/e2e-2-report.json": "d4404781ba76d628926cf840f56921fb724780821daa1fc352fa5bf83a3b7af2"
+  },
+  "phone": {
+    "device": "LIO-AN00/API31",
+    "originalTextImages": 5,
+    "fontPx": 16,
+    "repeatsAgree": true,
+    "summary": {
+      "ch": {
+        "textPages": 5,
+        "exactPages": 3,
+        "textLines": 9,
+        "exactLines": 6,
+        "literalPhrases": 18,
+        "literalPhrasesPresent": 16
+      },
+      "latin": {
+        "textPages": 5,
+        "exactPages": 2,
+        "textLines": 9,
+        "exactLines": 3,
+        "literalPhrases": 18,
+        "literalPhrasesPresent": 7
+      }
+    },
+    "rows": [
+      {
+        "id": "en-quality-16",
+        "recognizer": "ch",
+        "language": "en",
+        "fontPx": 16,
+        "source": "The total is 39.90 €, tax not included.",
+        "raw": "The total is 39.90 €, tax not included.",
+        "exactNormalized": true,
+        "lines": [
+          {
+            "boxId": "en-quality-16.box-0",
+            "quad": [
+              [
+                30,
+                27
+              ],
+              [
+                295,
+                27
+              ],
+              [
+                295,
+                48
+              ],
+              [
+                30,
+                48
+              ]
+            ],
+            "source": "The total is 39.90 €, tax not included.",
+            "raw": "The total is 39.90 €, tax not included.",
+            "exactNormalized": true
+          }
+        ],
+        "literalPhraseChecks": [
+          {
+            "sourcePhrase": "39.90 €",
+            "literalPresent": true
+          },
+          {
+            "sourcePhrase": "not included",
+            "literalPresent": true
+          }
+        ],
+        "edits": []
+      },
+      {
+        "id": "fr-nonrefundable-16",
+        "recognizer": "ch",
+        "language": "fr",
+        "fontPx": 16,
+        "source": "Ce billet n'est ni échangeable ni remboursable.",
+        "raw": "Ce bilet n'est ni éechangeable ni remboursable.",
+        "exactNormalized": false,
+        "lines": [
+          {
+            "boxId": "fr-nonrefundable-16.box-0",
+            "quad": [
+              [
+                30,
+                27
+              ],
+              [
+                366,
+                27
+              ],
+              [
+                366,
+                51
+              ],
+              [
+                30,
+                51
+              ]
+            ],
+            "source": "Ce billet n'est ni échangeable ni remboursable.",
+            "raw": "Ce bilet n'est ni éechangeable ni remboursable.",
+            "exactNormalized": false
+          }
+        ],
+        "literalPhraseChecks": [
+          {
+            "sourcePhrase": "n'est",
+            "literalPresent": true
+          },
+          {
+            "sourcePhrase": "ni échangeable",
+            "literalPresent": false
+          },
+          {
+            "sourcePhrase": "ni remboursable",
+            "literalPresent": true
+          }
+        ],
+        "edits": [
+          {
+            "kind": "delete",
+            "expected": "l",
+            "actual": "",
+            "expectedRange": [
+              5,
+              6
+            ],
+            "actualRange": [
+              5,
+              5
+            ]
+          },
+          {
+            "kind": "insert",
+            "expected": "",
+            "actual": "e",
+            "expectedRange": [
+              20,
+              20
+            ],
+            "actualRange": [
+              19,
+              20
+            ]
+          }
+        ]
+      },
+      {
+        "id": "zh-hans-quality-16",
+        "recognizer": "ch",
+        "language": "zh-Hans",
+        "fontPx": 16,
+        "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+        "raw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+        "exactNormalized": true,
+        "lines": [
+          {
+            "boxId": "zh-hans-quality-16.box-1",
+            "quad": [
+              [
+                29,
+                30
+              ],
+              [
+                212,
+                30
+              ],
+              [
+                212,
+                51
+              ],
+              [
+                29,
+                51
+              ]
+            ],
+            "source": "总计1234.50元，不含税。",
+            "raw": "总计1234.50元，不含税。",
+            "exactNormalized": true
+          },
+          {
+            "boxId": "zh-hans-quality-16.box-0",
+            "quad": [
+              [
+                30,
+                56
+              ],
+              [
+                228,
+                56
+              ],
+              [
+                228,
+                77
+              ],
+              [
+                30,
+                77
+              ]
+            ],
+            "source": "行李最多8公斤，不可退款。",
+            "raw": "行李最多8公斤，不可退款。",
+            "exactNormalized": true
+          }
+        ],
+        "literalPhraseChecks": [
+          {
+            "sourcePhrase": "1234.50元",
+            "literalPresent": true
+          },
+          {
+            "sourcePhrase": "不含税",
+            "literalPresent": true
+          },
+          {
+            "sourcePhrase": "8公斤",
+            "literalPresent": true
+          },
+          {
+            "sourcePhrase": "不可退款",
+            "literalPresent": true
+          }
+        ],
+        "edits": []
+      },
+      {
+        "id": "zh-hant-quality-16",
+        "recognizer": "ch",
+        "language": "zh-Hant",
+        "fontPx": 16,
+        "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+        "raw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+        "exactNormalized": true,
+        "lines": [
+          {
+            "boxId": "zh-hant-quality-16.box-1",
+            "quad": [
+              [
+                29,
+                27
+              ],
+              [
+                212,
+                29
+              ],
+              [
+                212,
+                51
+              ],
+              [
+                29,
+                49
+              ]
+            ],
+            "source": "總計1234.50元，不含稅。",
+            "raw": "總計1234.50元，不含稅。",
+            "exactNormalized": true
+          },
+          {
+            "boxId": "zh-hant-quality-16.box-0",
+            "quad": [
+              [
+                30,
+                56
+              ],
+              [
+                228,
+                56
+              ],
+              [
+                228,
+                77
+              ],
+              [
+                30,
+                77
+              ]
+            ],
+            "source": "行李最多8公斤，不可退款。",
+            "raw": "行李最多8公斤，不可退款。",
+            "exactNormalized": true
+          }
+        ],
+        "literalPhraseChecks": [
+          {
+            "sourcePhrase": "1234.50元",
+            "literalPresent": true
+          },
+          {
+            "sourcePhrase": "不含稅",
+            "literalPresent": true
+          },
+          {
+            "sourcePhrase": "8公斤",
+            "literalPresent": true
+          },
+          {
+            "sourcePhrase": "不可退款",
+            "literalPresent": true
+          }
+        ],
+        "edits": []
+      },
+      {
+        "id": "mixed-quality-16",
+        "recognizer": "ch",
+        "language": "mixed",
+        "fontPx": 16,
+        "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+        "raw": "房间A/Room A\nChambre A : 120 € / night\n不含税/不含税",
+        "exactNormalized": false,
+        "lines": [
+          {
+            "boxId": "mixed-quality-16.box-2",
+            "quad": [
+              [
+                29,
+                29
+              ],
+              [
+                150,
+                29
+              ],
+              [
+                150,
+                50
+              ],
+              [
+                29,
+                50
+              ]
+            ],
+            "source": "房间A / Room A",
+            "raw": "房间A/Room A",
+            "exactNormalized": false
+          },
+          {
+            "boxId": "mixed-quality-16.box-1",
+            "quad": [
+              [
+                29,
+                54
+              ],
+              [
+                219,
+                54
+              ],
+              [
+                219,
+                75
+              ],
+              [
+                29,
+                75
+              ]
+            ],
+            "source": "Chambre A : 120 € / night",
+            "raw": "Chambre A : 120 € / night",
+            "exactNormalized": true
+          },
+          {
+            "boxId": "mixed-quality-16.box-0",
+            "quad": [
+              [
+                29,
+                83
+              ],
+              [
+                145,
+                83
+              ],
+              [
+                145,
+                105
+              ],
+              [
+                29,
+                105
+              ]
+            ],
+            "source": "不含税 / 不含稅",
+            "raw": "不含税/不含税",
+            "exactNormalized": false
+          }
+        ],
+        "literalPhraseChecks": [
+          {
+            "sourcePhrase": "房间A",
+            "literalPresent": true
+          },
+          {
+            "sourcePhrase": "Room A",
+            "literalPresent": true
+          },
+          {
+            "sourcePhrase": "120 € / night",
+            "literalPresent": true
+          },
+          {
+            "sourcePhrase": "不含税",
+            "literalPresent": true
+          },
+          {
+            "sourcePhrase": "不含稅",
+            "literalPresent": false
+          }
+        ],
+        "edits": [
+          {
+            "kind": "delete",
+            "expected": " ",
+            "actual": "",
+            "expectedRange": [
+              3,
+              4
+            ],
+            "actualRange": [
+              3,
+              3
+            ]
+          },
+          {
+            "kind": "delete",
+            "expected": " ",
+            "actual": "",
+            "expectedRange": [
+              5,
+              6
+            ],
+            "actualRange": [
+              4,
+              4
+            ]
+          },
+          {
+            "kind": "delete",
+            "expected": " ",
+            "actual": "",
+            "expectedRange": [
+              42,
+              43
+            ],
+            "actualRange": [
+              40,
+              40
+            ]
+          },
+          {
+            "kind": "delete",
+            "expected": " ",
+            "actual": "",
+            "expectedRange": [
+              44,
+              45
+            ],
+            "actualRange": [
+              41,
+              41
+            ]
+          },
+          {
+            "kind": "replace",
+            "expected": "稅",
+            "actual": "税",
+            "expectedRange": [
+              47,
+              48
+            ],
+            "actualRange": [
+              43,
+              44
+            ]
+          }
+        ]
+      },
+      {
+        "id": "en-quality-16",
+        "recognizer": "latin",
+        "language": "en",
+        "fontPx": 16,
+        "source": "The total is 39.90 €, tax not included.",
+        "raw": "The total is 39.90 €, tax not included.",
+        "exactNormalized": true,
+        "lines": [
+          {
+            "boxId": "en-quality-16.box-0",
+            "quad": [
+              [
+                30,
+                27
+              ],
+              [
+                295,
+                27
+              ],
+              [
+                295,
+                48
+              ],
+              [
+                30,
+                48
+              ]
+            ],
+            "source": "The total is 39.90 €, tax not included.",
+            "raw": "The total is 39.90 €, tax not included.",
+            "exactNormalized": true
+          }
+        ],
+        "literalPhraseChecks": [
+          {
+            "sourcePhrase": "39.90 €",
+            "literalPresent": true
+          },
+          {
+            "sourcePhrase": "not included",
+            "literalPresent": true
+          }
+        ],
+        "edits": []
+      },
+      {
+        "id": "fr-nonrefundable-16",
+        "recognizer": "latin",
+        "language": "fr",
+        "fontPx": 16,
+        "source": "Ce billet n'est ni échangeable ni remboursable.",
+        "raw": "Ce billet n'est ni échangeable ni remboursable.",
+        "exactNormalized": true,
+        "lines": [
+          {
+            "boxId": "fr-nonrefundable-16.box-0",
+            "quad": [
+              [
+                30,
+                27
+              ],
+              [
+                366,
+                27
+              ],
+              [
+                366,
+                51
+              ],
+              [
+                30,
+                51
+              ]
+            ],
+            "source": "Ce billet n'est ni échangeable ni remboursable.",
+            "raw": "Ce billet n'est ni échangeable ni remboursable.",
+            "exactNormalized": true
+          }
+        ],
+        "literalPhraseChecks": [
+          {
+            "sourcePhrase": "n'est",
+            "literalPresent": true
+          },
+          {
+            "sourcePhrase": "ni échangeable",
+            "literalPresent": true
+          },
+          {
+            "sourcePhrase": "ni remboursable",
+            "literalPresent": true
+          }
+        ],
+        "edits": []
+      },
+      {
+        "id": "zh-hans-quality-16",
+        "recognizer": "latin",
+        "language": "zh-Hans",
+        "fontPx": 16,
+        "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+        "raw": "1234.50\n8",
+        "exactNormalized": false,
+        "lines": [
+          {
+            "boxId": "zh-hans-quality-16.box-1",
+            "quad": [
+              [
+                29,
+                30
+              ],
+              [
+                212,
+                30
+              ],
+              [
+                212,
+                51
+              ],
+              [
+                29,
+                51
+              ]
+            ],
+            "source": "总计1234.50元，不含税。",
+            "raw": "1234.50",
+            "exactNormalized": false
+          },
+          {
+            "boxId": "zh-hans-quality-16.box-0",
+            "quad": [
+              [
+                30,
+                56
+              ],
+              [
+                228,
+                56
+              ],
+              [
+                228,
+                77
+              ],
+              [
+                30,
+                77
+              ]
+            ],
+            "source": "行李最多8公斤，不可退款。",
+            "raw": "8",
+            "exactNormalized": false
+          }
+        ],
+        "literalPhraseChecks": [
+          {
+            "sourcePhrase": "1234.50元",
+            "literalPresent": false
+          },
+          {
+            "sourcePhrase": "不含税",
+            "literalPresent": false
+          },
+          {
+            "sourcePhrase": "8公斤",
+            "literalPresent": false
+          },
+          {
+            "sourcePhrase": "不可退款",
+            "literalPresent": false
+          }
+        ],
+        "edits": [
+          {
+            "kind": "delete",
+            "expected": "总计",
+            "actual": "",
+            "expectedRange": [
+              0,
+              2
+            ],
+            "actualRange": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "delete",
+            "expected": "元，不含税。",
+            "actual": "",
+            "expectedRange": [
+              9,
+              15
+            ],
+            "actualRange": [
+              7,
+              7
+            ]
+          },
+          {
+            "kind": "delete",
+            "expected": "行李最多",
+            "actual": "",
+            "expectedRange": [
+              16,
+              20
+            ],
+            "actualRange": [
+              8,
+              8
+            ]
+          },
+          {
+            "kind": "delete",
+            "expected": "公斤，不可退款。",
+            "actual": "",
+            "expectedRange": [
+              21,
+              29
+            ],
+            "actualRange": [
+              9,
+              9
+            ]
+          }
+        ]
+      },
+      {
+        "id": "zh-hant-quality-16",
+        "recognizer": "latin",
+        "language": "zh-Hant",
+        "fontPx": 16,
+        "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+        "raw": "1234.50\n8",
+        "exactNormalized": false,
+        "lines": [
+          {
+            "boxId": "zh-hant-quality-16.box-1",
+            "quad": [
+              [
+                29,
+                27
+              ],
+              [
+                212,
+                29
+              ],
+              [
+                212,
+                51
+              ],
+              [
+                29,
+                49
+              ]
+            ],
+            "source": "總計1234.50元，不含稅。",
+            "raw": "1234.50",
+            "exactNormalized": false
+          },
+          {
+            "boxId": "zh-hant-quality-16.box-0",
+            "quad": [
+              [
+                30,
+                56
+              ],
+              [
+                228,
+                56
+              ],
+              [
+                228,
+                77
+              ],
+              [
+                30,
+                77
+              ]
+            ],
+            "source": "行李最多8公斤，不可退款。",
+            "raw": "8",
+            "exactNormalized": false
+          }
+        ],
+        "literalPhraseChecks": [
+          {
+            "sourcePhrase": "1234.50元",
+            "literalPresent": false
+          },
+          {
+            "sourcePhrase": "不含稅",
+            "literalPresent": false
+          },
+          {
+            "sourcePhrase": "8公斤",
+            "literalPresent": false
+          },
+          {
+            "sourcePhrase": "不可退款",
+            "literalPresent": false
+          }
+        ],
+        "edits": [
+          {
+            "kind": "delete",
+            "expected": "總計",
+            "actual": "",
+            "expectedRange": [
+              0,
+              2
+            ],
+            "actualRange": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "delete",
+            "expected": "元，不含稅。",
+            "actual": "",
+            "expectedRange": [
+              9,
+              15
+            ],
+            "actualRange": [
+              7,
+              7
+            ]
+          },
+          {
+            "kind": "delete",
+            "expected": "行李最多",
+            "actual": "",
+            "expectedRange": [
+              16,
+              20
+            ],
+            "actualRange": [
+              8,
+              8
+            ]
+          },
+          {
+            "kind": "delete",
+            "expected": "公斤，不可退款。",
+            "actual": "",
+            "expectedRange": [
+              21,
+              29
+            ],
+            "actualRange": [
+              9,
+              9
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mixed-quality-16",
+        "recognizer": "latin",
+        "language": "mixed",
+        "fontPx": 16,
+        "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+        "raw": "A / Room A\nChambre A : 120 € / night\n/",
+        "exactNormalized": false,
+        "lines": [
+          {
+            "boxId": "mixed-quality-16.box-2",
+            "quad": [
+              [
+                29,
+                29
+              ],
+              [
+                150,
+                29
+              ],
+              [
+                150,
+                50
+              ],
+              [
+                29,
+                50
+              ]
+            ],
+            "source": "房间A / Room A",
+            "raw": "A / Room A",
+            "exactNormalized": false
+          },
+          {
+            "boxId": "mixed-quality-16.box-1",
+            "quad": [
+              [
+                29,
+                54
+              ],
+              [
+                219,
+                54
+              ],
+              [
+                219,
+                75
+              ],
+              [
+                29,
+                75
+              ]
+            ],
+            "source": "Chambre A : 120 € / night",
+            "raw": "Chambre A : 120 € / night",
+            "exactNormalized": true
+          },
+          {
+            "boxId": "mixed-quality-16.box-0",
+            "quad": [
+              [
+                29,
+                83
+              ],
+              [
+                145,
+                83
+              ],
+              [
+                145,
+                105
+              ],
+              [
+                29,
+                105
+              ]
+            ],
+            "source": "不含税 / 不含稅",
+            "raw": "/",
+            "exactNormalized": false
+          }
+        ],
+        "literalPhraseChecks": [
+          {
+            "sourcePhrase": "房间A",
+            "literalPresent": false
+          },
+          {
+            "sourcePhrase": "Room A",
+            "literalPresent": true
+          },
+          {
+            "sourcePhrase": "120 € / night",
+            "literalPresent": true
+          },
+          {
+            "sourcePhrase": "不含税",
+            "literalPresent": false
+          },
+          {
+            "sourcePhrase": "不含稅",
+            "literalPresent": false
+          }
+        ],
+        "edits": [
+          {
+            "kind": "delete",
+            "expected": "房间",
+            "actual": "",
+            "expectedRange": [
+              0,
+              2
+            ],
+            "actualRange": [
+              0,
+              0
+            ]
+          },
+          {
+            "kind": "delete",
+            "expected": "不含税 ",
+            "actual": "",
+            "expectedRange": [
+              39,
+              43
+            ],
+            "actualRange": [
+              37,
+              37
+            ]
+          },
+          {
+            "kind": "delete",
+            "expected": " 不含稅",
+            "actual": "",
+            "expectedRange": [
+              44,
+              48
+            ],
+            "actualRange": [
+              38,
+              38
+            ]
+          }
+        ]
+      }
+    ],
+    "emptyControls": 5,
+    "emptyControlsNoRecognition": true
+  },
+  "historicalHost": [
+    {
+      "name": "baseline72",
+      "reportSha256": "fe2ee51156b4fca67744efaa62eee68c4dead0be58a69321cfe891892b78da29",
+      "observations": 72,
+      "provenance": "Previously recorded Mac CPU synthetic screening, no new inference or Android coverage claim",
+      "groups": [
+        {
+          "recognizer": "ch",
+          "scale": 1,
+          "language": "en",
+          "isText": true,
+          "inputs": 2,
+          "exact": 2,
+          "failures": []
+        },
+        {
+          "recognizer": "ch",
+          "scale": 1,
+          "language": "fr",
+          "isText": true,
+          "inputs": 9,
+          "exact": 5,
+          "failures": [
+            "fr-total-16",
+            "fr-total-24",
+            "fr-total-32",
+            "fr-nonrefundable-16"
+          ]
+        },
+        {
+          "recognizer": "ch",
+          "scale": 1,
+          "language": "mixed",
+          "isText": true,
+          "inputs": 2,
+          "exact": 0,
+          "failures": [
+            "mixed-quality-16",
+            "mixed-quality-32"
+          ]
+        },
+        {
+          "recognizer": "ch",
+          "scale": 1,
+          "language": "none",
+          "isText": false,
+          "inputs": 1,
+          "exact": 1,
+          "failures": []
+        },
+        {
+          "recognizer": "ch",
+          "scale": 1,
+          "language": "zh-Hans",
+          "isText": true,
+          "inputs": 2,
+          "exact": 2,
+          "failures": []
+        },
+        {
+          "recognizer": "ch",
+          "scale": 1,
+          "language": "zh-Hant",
+          "isText": true,
+          "inputs": 2,
+          "exact": 2,
+          "failures": []
+        },
+        {
+          "recognizer": "ch",
+          "scale": 2,
+          "language": "en",
+          "isText": true,
+          "inputs": 2,
+          "exact": 2,
+          "failures": []
+        },
+        {
+          "recognizer": "ch",
+          "scale": 2,
+          "language": "fr",
+          "isText": true,
+          "inputs": 9,
+          "exact": 6,
+          "failures": [
+            "fr-total-16",
+            "fr-total-24",
+            "fr-total-32"
+          ]
+        },
+        {
+          "recognizer": "ch",
+          "scale": 2,
+          "language": "mixed",
+          "isText": true,
+          "inputs": 2,
+          "exact": 0,
+          "failures": [
+            "mixed-quality-16",
+            "mixed-quality-32"
+          ]
+        },
+        {
+          "recognizer": "ch",
+          "scale": 2,
+          "language": "none",
+          "isText": false,
+          "inputs": 1,
+          "exact": 1,
+          "failures": []
+        },
+        {
+          "recognizer": "ch",
+          "scale": 2,
+          "language": "zh-Hans",
+          "isText": true,
+          "inputs": 2,
+          "exact": 2,
+          "failures": []
+        },
+        {
+          "recognizer": "ch",
+          "scale": 2,
+          "language": "zh-Hant",
+          "isText": true,
+          "inputs": 2,
+          "exact": 2,
+          "failures": []
+        },
+        {
+          "recognizer": "latin",
+          "scale": 1,
+          "language": "en",
+          "isText": true,
+          "inputs": 2,
+          "exact": 2,
+          "failures": []
+        },
+        {
+          "recognizer": "latin",
+          "scale": 1,
+          "language": "fr",
+          "isText": true,
+          "inputs": 9,
+          "exact": 8,
+          "failures": [
+            "fr-total-16"
+          ]
+        },
+        {
+          "recognizer": "latin",
+          "scale": 1,
+          "language": "mixed",
+          "isText": true,
+          "inputs": 2,
+          "exact": 0,
+          "failures": [
+            "mixed-quality-16",
+            "mixed-quality-32"
+          ]
+        },
+        {
+          "recognizer": "latin",
+          "scale": 1,
+          "language": "none",
+          "isText": false,
+          "inputs": 1,
+          "exact": 1,
+          "failures": []
+        },
+        {
+          "recognizer": "latin",
+          "scale": 1,
+          "language": "zh-Hans",
+          "isText": true,
+          "inputs": 2,
+          "exact": 0,
+          "failures": [
+            "zh-hans-quality-16",
+            "zh-hans-quality-32"
+          ]
+        },
+        {
+          "recognizer": "latin",
+          "scale": 1,
+          "language": "zh-Hant",
+          "isText": true,
+          "inputs": 2,
+          "exact": 0,
+          "failures": [
+            "zh-hant-quality-16",
+            "zh-hant-quality-32"
+          ]
+        },
+        {
+          "recognizer": "latin",
+          "scale": 2,
+          "language": "en",
+          "isText": true,
+          "inputs": 2,
+          "exact": 2,
+          "failures": []
+        },
+        {
+          "recognizer": "latin",
+          "scale": 2,
+          "language": "fr",
+          "isText": true,
+          "inputs": 9,
+          "exact": 8,
+          "failures": [
+            "fr-total-16"
+          ]
+        },
+        {
+          "recognizer": "latin",
+          "scale": 2,
+          "language": "mixed",
+          "isText": true,
+          "inputs": 2,
+          "exact": 0,
+          "failures": [
+            "mixed-quality-16",
+            "mixed-quality-32"
+          ]
+        },
+        {
+          "recognizer": "latin",
+          "scale": 2,
+          "language": "none",
+          "isText": false,
+          "inputs": 1,
+          "exact": 1,
+          "failures": []
+        },
+        {
+          "recognizer": "latin",
+          "scale": 2,
+          "language": "zh-Hans",
+          "isText": true,
+          "inputs": 2,
+          "exact": 0,
+          "failures": [
+            "zh-hans-quality-16",
+            "zh-hans-quality-32"
+          ]
+        },
+        {
+          "recognizer": "latin",
+          "scale": 2,
+          "language": "zh-Hant",
+          "isText": true,
+          "inputs": 2,
+          "exact": 0,
+          "failures": [
+            "zh-hant-quality-16",
+            "zh-hant-quality-32"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "holdout124",
+      "reportSha256": "64c37cf7b2595cc1fed7f28563f497b4adb20ae1659696a23266da8a20ee6757",
+      "observations": 124,
+      "provenance": "Previously recorded Mac CPU synthetic screening, no new inference or Android coverage claim",
+      "groups": [
+        {
+          "recognizer": "ch",
+          "scale": 1,
+          "language": "en",
+          "isText": true,
+          "inputs": 6,
+          "exact": 6,
+          "failures": []
+        },
+        {
+          "recognizer": "ch",
+          "scale": 1,
+          "language": "fr",
+          "isText": true,
+          "inputs": 6,
+          "exact": 5,
+          "failures": [
+            "fr-departure-24"
+          ]
+        },
+        {
+          "recognizer": "ch",
+          "scale": 1,
+          "language": "mixed",
+          "isText": true,
+          "inputs": 6,
+          "exact": 0,
+          "failures": [
+            "mixed-room-16",
+            "mixed-room-24",
+            "mixed-room-32",
+            "mixed-exit-16",
+            "mixed-exit-24",
+            "mixed-exit-32"
+          ]
+        },
+        {
+          "recognizer": "ch",
+          "scale": 1,
+          "language": "none",
+          "isText": false,
+          "inputs": 1,
+          "exact": 1,
+          "failures": []
+        },
+        {
+          "recognizer": "ch",
+          "scale": 1,
+          "language": "zh-Hans",
+          "isText": true,
+          "inputs": 6,
+          "exact": 6,
+          "failures": []
+        },
+        {
+          "recognizer": "ch",
+          "scale": 1,
+          "language": "zh-Hant",
+          "isText": true,
+          "inputs": 6,
+          "exact": 5,
+          "failures": [
+            "hant-order-16"
+          ]
+        },
+        {
+          "recognizer": "ch",
+          "scale": 2,
+          "language": "en",
+          "isText": true,
+          "inputs": 6,
+          "exact": 6,
+          "failures": []
+        },
+        {
+          "recognizer": "ch",
+          "scale": 2,
+          "language": "fr",
+          "isText": true,
+          "inputs": 6,
+          "exact": 5,
+          "failures": [
+            "fr-departure-32"
+          ]
+        },
+        {
+          "recognizer": "ch",
+          "scale": 2,
+          "language": "mixed",
+          "isText": true,
+          "inputs": 6,
+          "exact": 0,
+          "failures": [
+            "mixed-room-16",
+            "mixed-room-24",
+            "mixed-room-32",
+            "mixed-exit-16",
+            "mixed-exit-24",
+            "mixed-exit-32"
+          ]
+        },
+        {
+          "recognizer": "ch",
+          "scale": 2,
+          "language": "none",
+          "isText": false,
+          "inputs": 1,
+          "exact": 1,
+          "failures": []
+        },
+        {
+          "recognizer": "ch",
+          "scale": 2,
+          "language": "zh-Hans",
+          "isText": true,
+          "inputs": 6,
+          "exact": 6,
+          "failures": []
+        },
+        {
+          "recognizer": "ch",
+          "scale": 2,
+          "language": "zh-Hant",
+          "isText": true,
+          "inputs": 6,
+          "exact": 5,
+          "failures": [
+            "hant-order-16"
+          ]
+        },
+        {
+          "recognizer": "latin",
+          "scale": 1,
+          "language": "en",
+          "isText": true,
+          "inputs": 6,
+          "exact": 6,
+          "failures": []
+        },
+        {
+          "recognizer": "latin",
+          "scale": 1,
+          "language": "fr",
+          "isText": true,
+          "inputs": 6,
+          "exact": 6,
+          "failures": []
+        },
+        {
+          "recognizer": "latin",
+          "scale": 1,
+          "language": "mixed",
+          "isText": true,
+          "inputs": 6,
+          "exact": 0,
+          "failures": [
+            "mixed-room-16",
+            "mixed-room-24",
+            "mixed-room-32",
+            "mixed-exit-16",
+            "mixed-exit-24",
+            "mixed-exit-32"
+          ]
+        },
+        {
+          "recognizer": "latin",
+          "scale": 1,
+          "language": "none",
+          "isText": false,
+          "inputs": 1,
+          "exact": 1,
+          "failures": []
+        },
+        {
+          "recognizer": "latin",
+          "scale": 1,
+          "language": "zh-Hans",
+          "isText": true,
+          "inputs": 6,
+          "exact": 0,
+          "failures": [
+            "hans-order-16",
+            "hans-order-24",
+            "hans-order-32",
+            "hans-luggage-16",
+            "hans-luggage-24",
+            "hans-luggage-32"
+          ]
+        },
+        {
+          "recognizer": "latin",
+          "scale": 1,
+          "language": "zh-Hant",
+          "isText": true,
+          "inputs": 6,
+          "exact": 0,
+          "failures": [
+            "hant-order-16",
+            "hant-order-24",
+            "hant-order-32",
+            "hant-luggage-16",
+            "hant-luggage-24",
+            "hant-luggage-32"
+          ]
+        },
+        {
+          "recognizer": "latin",
+          "scale": 2,
+          "language": "en",
+          "isText": true,
+          "inputs": 6,
+          "exact": 6,
+          "failures": []
+        },
+        {
+          "recognizer": "latin",
+          "scale": 2,
+          "language": "fr",
+          "isText": true,
+          "inputs": 6,
+          "exact": 6,
+          "failures": []
+        },
+        {
+          "recognizer": "latin",
+          "scale": 2,
+          "language": "mixed",
+          "isText": true,
+          "inputs": 6,
+          "exact": 0,
+          "failures": [
+            "mixed-room-16",
+            "mixed-room-24",
+            "mixed-room-32",
+            "mixed-exit-16",
+            "mixed-exit-24",
+            "mixed-exit-32"
+          ]
+        },
+        {
+          "recognizer": "latin",
+          "scale": 2,
+          "language": "none",
+          "isText": false,
+          "inputs": 1,
+          "exact": 1,
+          "failures": []
+        },
+        {
+          "recognizer": "latin",
+          "scale": 2,
+          "language": "zh-Hans",
+          "isText": true,
+          "inputs": 6,
+          "exact": 0,
+          "failures": [
+            "hans-order-16",
+            "hans-order-24",
+            "hans-order-32",
+            "hans-luggage-16",
+            "hans-luggage-24",
+            "hans-luggage-32"
+          ]
+        },
+        {
+          "recognizer": "latin",
+          "scale": 2,
+          "language": "zh-Hant",
+          "isText": true,
+          "inputs": 6,
+          "exact": 0,
+          "failures": [
+            "hant-order-16",
+            "hant-order-24",
+            "hant-order-32",
+            "hant-luggage-16",
+            "hant-luggage-24",
+            "hant-luggage-32"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Only five 16px text images on this complete Android chain",
+    "49 historical host images are not 49 new Android tests",
+    "Not a general accuracy estimate; no semantic translation evaluation",
+    "No real screens, model routing, confidence policy, or translation integration"
+  ]
+}
