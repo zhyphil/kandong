@@ -15,12 +15,14 @@ android {
         targetSdk = 36
         versionCode = 1
         versionName = "0.0.1-synthetic-model-probe"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions { jvmTarget = "17" }
+    sourceSets.getByName("androidTest").assets.srcDir(rootProject.file("docs/fixtures/recognition-prep-v1"))
     sourceSets.getByName("test").resources {
         srcDir(rootProject.file("docs/fixtures/recognition-prep-v1"))
     }
@@ -28,6 +30,8 @@ android {
 dependencies {
     implementation("com.microsoft.onnxruntime:onnxruntime-android:1.30.0")
     testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test:runner:1.6.2")
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
 }
 
 // This is deliberately task-time validation, never a configuration-time download.

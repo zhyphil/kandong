@@ -1,0 +1,75 @@
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidResizeProbeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+com.kandong.modelprobe.AndroidResizeProbeTest:
+INSTRUMENTATION_STATUS: test=extremeDimensionsKeepConstantColorAndSameSizeOwnership
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidResizeProbeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: expected same:<android.graphics.Bitmap@8681767> was not:<android.graphics.Bitmap@1cfa5bd>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotSame(Assert.java:829)
+	at org.junit.Assert.assertSame(Assert.java:772)
+	at org.junit.Assert.assertSame(Assert.java:783)
+	at com.kandong.modelprobe.AndroidResizeProbeTest.extremeDimensionsKeepConstantColorAndSameSizeOwnership(AndroidResizeProbeTest.kt:113)
+
+INSTRUMENTATION_STATUS: stream=
+Error in extremeDimensionsKeepConstantColorAndSameSizeOwnership(com.kandong.modelprobe.AndroidResizeProbeTest):
+java.lang.AssertionError: expected same:<android.graphics.Bitmap@8681767> was not:<android.graphics.Bitmap@1cfa5bd>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotSame(Assert.java:829)
+	at org.junit.Assert.assertSame(Assert.java:772)
+	at org.junit.Assert.assertSame(Assert.java:783)
+	at com.kandong.modelprobe.AndroidResizeProbeTest.extremeDimensionsKeepConstantColorAndSameSizeOwnership(AndroidResizeProbeTest.kt:113)
+
+INSTRUMENTATION_STATUS: test=extremeDimensionsKeepConstantColorAndSameSizeOwnership
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidResizeProbeTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=compareBitmapResizeAndBothRecognizersOnFixedCrops
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidResizeProbeTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=compareBitmapResizeAndBothRecognizersOnFixedCrops
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidResizeProbeTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=comparisonMetricsDistinguishChannelsBitsAndMagnitude
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidResizeProbeTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=comparisonMetricsDistinguishChannelsBitsAndMagnitude
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 3.017
+There was 1 failure:
+1) extremeDimensionsKeepConstantColorAndSameSizeOwnership(com.kandong.modelprobe.AndroidResizeProbeTest)
+java.lang.AssertionError: expected same:<android.graphics.Bitmap@8681767> was not:<android.graphics.Bitmap@1cfa5bd>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotSame(Assert.java:829)
+	at org.junit.Assert.assertSame(Assert.java:772)
+	at org.junit.Assert.assertSame(Assert.java:783)
+	at com.kandong.modelprobe.AndroidResizeProbeTest.extremeDimensionsKeepConstantColorAndSameSizeOwnership(AndroidResizeProbeTest.kt:113)
+
+FAILURES!!!
+Tests run: 3,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

@@ -1,0 +1,439 @@
+{
+  "schema": 1,
+  "runId": "c0b82148-ddf9-472a-83c8-29013ba8032f",
+  "scope": "Android_Bitmap_scaling_of_fixed_host_crops_not_full_OCR_or_quality_acceptance",
+  "operationalStatus": "completed",
+  "fixtureManifestSha256": "dd09f0b5d98e5cd2d00f0fc61bf65c89321815eb528cb63aac9e4ff73100b3be",
+  "api": 36,
+  "model": "sdk_gphone64_arm64",
+  "abis": [
+    "arm64-v8a"
+  ],
+  "runtime": "1.30.0",
+  "elapsedMs": 2676,
+  "scaler": "Bitmap.createScaledBitmap(filter=true); software_ARGB8888_sRGB; inScaled=false",
+  "cases": [
+    {
+      "comparedFloats": 98928,
+      "changedFloatBits": 34476,
+      "maxAbsFloatError": 0.07058829069137573,
+      "meanAbsFloatError": 0.005611924538619306,
+      "id": "en-quality-16",
+      "shape": [
+        1,
+        3,
+        48,
+        687
+      ],
+      "actualTensorSha256": "cfb5eeb853b462a6cc3168ba36b8526c59b583a7d307436ddae47a797a89f40a",
+      "referenceTensorSha256": "c38e4acf235db1c1d58188313602f0f68de5378e392e1b6a9f1c90e87c2410ba",
+      "tensorRowToInput": [
+        0
+      ],
+      "pixels": [
+        {
+          "comparedRgbChannels": 98928,
+          "changedRgbChannels": 34476,
+          "maxAbsChannelError": 9,
+          "meanAbsChannelError": 0.7155203784570596,
+          "originalIndex": 0,
+          "sourceWidth": 530,
+          "sourceHeight": 37,
+          "resizedWidth": 687,
+          "actualBgrSha256": "a4901fcef1e38a485ac98eaa9cb7ab75ca8c37df6110f203410210b1037ac17f"
+        }
+      ]
+    },
+    {
+      "comparedFloats": 122112,
+      "changedFloatBits": 40728,
+      "maxAbsFloatError": 0.0627450942993164,
+      "meanAbsFloatError": 0.0051233582813644185,
+      "id": "fr-nonrefundable-16",
+      "shape": [
+        1,
+        3,
+        48,
+        848
+      ],
+      "actualTensorSha256": "e55a70992846c32435d1a49682a79ca9dc356c53576ced573ff8dc9ec9afcbde",
+      "referenceTensorSha256": "7beea7cc2ee27e74b3c4f409586d8aafdcedfed6da6634119d1808f27af6eecf",
+      "tensorRowToInput": [
+        0
+      ],
+      "pixels": [
+        {
+          "comparedRgbChannels": 122112,
+          "changedRgbChannels": 40728,
+          "maxAbsChannelError": 8,
+          "meanAbsChannelError": 0.6532281839622641,
+          "originalIndex": 0,
+          "sourceWidth": 672,
+          "sourceHeight": 38,
+          "resizedWidth": 848,
+          "actualBgrSha256": "a4683a8ce179673c379622f38679eb6e556a98bd157eaf458a7584433486ac5d"
+        }
+      ]
+    },
+    {
+      "comparedFloats": 126144,
+      "changedFloatBits": 45549,
+      "maxAbsFloatError": 0.0627450942993164,
+      "meanAbsFloatError": 0.00611066345913588,
+      "id": "zh-hans-quality-16",
+      "shape": [
+        2,
+        3,
+        48,
+        438
+      ],
+      "actualTensorSha256": "6788de7a74527df6e5d393c6add451c51636484e29d6edad91f71406019e3499",
+      "referenceTensorSha256": "61b20c3a683cd10bf1c51a11e8c580645e7833db23aa25bd7c4a42c3250c8dca",
+      "tensorRowToInput": [
+        1,
+        0
+      ],
+      "pixels": [
+        {
+          "comparedRgbChannels": 63072,
+          "changedRgbChannels": 22284,
+          "maxAbsChannelError": 8,
+          "meanAbsChannelError": 0.7387271689497716,
+          "originalIndex": 0,
+          "sourceWidth": 356,
+          "sourceHeight": 39,
+          "resizedWidth": 438,
+          "actualBgrSha256": "33f0749e704abac64767d6075fac9ffdc4a3e7b9ba7479534b24303e710c5d07"
+        },
+        {
+          "comparedRgbChannels": 62640,
+          "changedRgbChannels": 23265,
+          "maxAbsChannelError": 8,
+          "meanAbsChannelError": 0.8251436781609195,
+          "originalIndex": 1,
+          "sourceWidth": 389,
+          "sourceHeight": 43,
+          "resizedWidth": 435,
+          "actualBgrSha256": "cc6311d3aba375c8666a01403317958f3cb6aa86a46a9d074f9e9eb7971beec4"
+        }
+      ]
+    },
+    {
+      "comparedFloats": 131040,
+      "changedFloatBits": 49590,
+      "maxAbsFloatError": 0.0627450942993164,
+      "meanAbsFloatError": 0.006359800355229186,
+      "id": "zh-hant-quality-16",
+      "shape": [
+        2,
+        3,
+        48,
+        455
+      ],
+      "actualTensorSha256": "b64ab3ba768614f9e9098e7ac29188a75e4f6766e6fc04d7142415cee3ca9270",
+      "referenceTensorSha256": "d7a70d977447790855d9a876a02d0748b63756ab0fa946b59b661923f46f0644",
+      "tensorRowToInput": [
+        0,
+        1
+      ],
+      "pixels": [
+        {
+          "comparedRgbChannels": 63360,
+          "changedRgbChannels": 24219,
+          "maxAbsChannelError": 8,
+          "meanAbsChannelError": 0.8085227272727272,
+          "originalIndex": 0,
+          "sourceWidth": 357,
+          "sourceHeight": 39,
+          "resizedWidth": 440,
+          "actualBgrSha256": "0e72e34e577935fe2a971561978b0604f79b385487dce93afb560241a2a0f1be"
+        },
+        {
+          "comparedRgbChannels": 65520,
+          "changedRgbChannels": 25371,
+          "maxAbsChannelError": 8,
+          "meanAbsChannelError": 0.8398809523809524,
+          "originalIndex": 1,
+          "sourceWidth": 389,
+          "sourceHeight": 41,
+          "resizedWidth": 455,
+          "actualBgrSha256": "dc4d2c818a6cb732876b1937c7e3253973814b4a164b918cb4312117428d1ea1"
+        }
+      ]
+    },
+    {
+      "comparedFloats": 199152,
+      "changedFloatBits": 50154,
+      "maxAbsFloatError": 0.07058823108673096,
+      "meanAbsFloatError": 0.0042515560027474985,
+      "id": "mixed-quality-16",
+      "shape": [
+        3,
+        3,
+        48,
+        461
+      ],
+      "actualTensorSha256": "77dd8d24a083eb527fa13630fac0a58c291d9c73577f472f5b16812c9f9b8395",
+      "referenceTensorSha256": "6263116acb788ad713f70f6eb8cdcc5e6d941ea59f24ab7cfb9ba769e1e1869c",
+      "tensorRowToInput": [
+        2,
+        0,
+        1
+      ],
+      "pixels": [
+        {
+          "comparedRgbChannels": 42768,
+          "changedRgbChannels": 15087,
+          "maxAbsChannelError": 9,
+          "meanAbsChannelError": 0.7182940516273849,
+          "originalIndex": 0,
+          "sourceWidth": 235,
+          "sourceHeight": 38,
+          "resizedWidth": 297,
+          "actualBgrSha256": "0261f29e177f1969536b281854908940f26b3ee5ca3599b5a8417e7871618885"
+        },
+        {
+          "comparedRgbChannels": 66384,
+          "changedRgbChannels": 21927,
+          "maxAbsChannelError": 8,
+          "meanAbsChannelError": 0.6928778018799711,
+          "originalIndex": 1,
+          "sourceWidth": 375,
+          "sourceHeight": 39,
+          "resizedWidth": 461,
+          "actualBgrSha256": "7f0e1d65e9a85999eb7bbe163264a0fbd3deb4dfcb1cb94e3934f452ed470942"
+        },
+        {
+          "comparedRgbChannels": 36576,
+          "changedRgbChannels": 13140,
+          "maxAbsChannelError": 8,
+          "meanAbsChannelError": 0.8540846456692913,
+          "originalIndex": 2,
+          "sourceWidth": 227,
+          "sourceHeight": 43,
+          "resizedWidth": 254,
+          "actualBgrSha256": "6cb5a556212fe3afd4ef4e9ac149729e6474471a743dcfea4fa5c63ccff98342"
+        }
+      ]
+    },
+    {
+      "comparedFloats": 138240,
+      "changedFloatBits": 49357,
+      "maxAbsFloatError": 0.20392155647277832,
+      "meanAbsFloatError": 0.0046975422866159565,
+      "id": "color-controls",
+      "shape": [
+        3,
+        3,
+        48,
+        320
+      ],
+      "actualTensorSha256": "b938a02952ddc4630d3890d70a696680e0fd3d971095e944fb01ab64d4ccfd03",
+      "referenceTensorSha256": "d2c8291a1d44549b9a0006ad4b58a5f2e0c411a4540b027ff29f38758741643a",
+      "tensorRowToInput": [
+        1,
+        2,
+        0
+      ],
+      "pixels": [
+        {
+          "comparedRgbChannels": 25776,
+          "changedRgbChannels": 21938,
+          "maxAbsChannelError": 26,
+          "meanAbsChannelError": 1.5263035381750465,
+          "originalIndex": 0,
+          "sourceWidth": 41,
+          "sourceHeight": 11,
+          "resizedWidth": 179,
+          "actualBgrSha256": "19238ba5ef23fc528e9aefd6a2a379ff821ff14fd01eb4735fe8540aa88a8558"
+        },
+        {
+          "comparedRgbChannels": 16848,
+          "changedRgbChannels": 13892,
+          "maxAbsChannelError": 24,
+          "meanAbsChannelError": 1.2443613485280152,
+          "originalIndex": 1,
+          "sourceWidth": 17,
+          "sourceHeight": 7,
+          "resizedWidth": 117,
+          "actualBgrSha256": "ba6bbf842bebf8ff8b15d7bd27c6b38143454ca45d5d0b97e1aa5060cf4d7cf9"
+        },
+        {
+          "comparedRgbChannels": 16848,
+          "changedRgbChannels": 13527,
+          "maxAbsChannelError": 20,
+          "meanAbsChannelError": 1.3348765432098766,
+          "originalIndex": 2,
+          "sourceWidth": 34,
+          "sourceHeight": 14,
+          "resizedWidth": 117,
+          "actualBgrSha256": "ad07dd3402c6fa7abf8d8fe2bbf6120913753c3a127394f3ea634dc6f33c7a70"
+        }
+      ]
+    }
+  ],
+  "models": [
+    {
+      "id": "ch/en-quality-16",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "baselineRaw": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "resizedRaw": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "rawMatchesBaseline": true,
+      "baselineArgmaxSha256": "237c9af180dd22b74bd48825bff6801fa16a71bda40cb176acaff29933467ccf",
+      "resizedArgmaxSha256": "5b26e529b876453ffa301bade9f6ec4c879cec6122877efa6f0ce8c1880b9be3",
+      "argmaxMatchesBaseline": false
+    },
+    {
+      "id": "ch/fr-nonrefundable-16",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "baselineRaw": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "resizedRaw": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "rawMatchesBaseline": true,
+      "baselineArgmaxSha256": "2ccfcac66b7b74d81508e29d8696a4cfef65f73cf45f9a0690fb206aac0a72b1",
+      "resizedArgmaxSha256": "211c60fd2994fd6d1ffb56f9270d2ab83f2d0ba9f2c0a4a09ecf7cf1d1e2911a",
+      "argmaxMatchesBaseline": false
+    },
+    {
+      "id": "ch/zh-hans-quality-16",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "baselineRaw": [
+        "行李最多8公斤，不可退款。",
+        "总计1234.50元，不含税。"
+      ],
+      "resizedRaw": [
+        "行李最多8公斤，不可退款。",
+        "总计1234.50元，不含税。"
+      ],
+      "rawMatchesBaseline": true,
+      "baselineArgmaxSha256": "9c35dd35e33890ced6de474e3c79f3431e8cbf01d1cfd678ebe4c83a59f950c5",
+      "resizedArgmaxSha256": "9c35dd35e33890ced6de474e3c79f3431e8cbf01d1cfd678ebe4c83a59f950c5",
+      "argmaxMatchesBaseline": true
+    },
+    {
+      "id": "ch/zh-hant-quality-16",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "baselineRaw": [
+        "總計1234.50元，不含稅。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "resizedRaw": [
+        "總計1234.50元，不含稅。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "rawMatchesBaseline": true,
+      "baselineArgmaxSha256": "eeacc9158d7b3c544e9dbea4e0f55faff2cf08373f6926257ee4ae9efa39e06e",
+      "resizedArgmaxSha256": "eeacc9158d7b3c544e9dbea4e0f55faff2cf08373f6926257ee4ae9efa39e06e",
+      "argmaxMatchesBaseline": true
+    },
+    {
+      "id": "ch/mixed-quality-16",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "baselineRaw": [
+        "不含税/不含税",
+        "房间A/Room A",
+        "Chambre A : 120 € / night"
+      ],
+      "resizedRaw": [
+        "不含税/不含税",
+        "房间A/Room A",
+        "Chambre A : 120 € / night"
+      ],
+      "rawMatchesBaseline": true,
+      "baselineArgmaxSha256": "7a5f72e49b49794401ee8610e4aa7e1df794f86c5f378d652300c669ec741b89",
+      "resizedArgmaxSha256": "b1de7c9cada7490c5a7e6ea85677bbbe437251f00cf72309b9dc4065044fb9b1",
+      "argmaxMatchesBaseline": false
+    },
+    {
+      "id": "latin/en-quality-16",
+      "modelSha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+      "baselineRaw": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "resizedRaw": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "rawMatchesBaseline": true,
+      "baselineArgmaxSha256": "9936931c39be1a41e03e43963329cdff8664b8edcf8f272c926ae38bb7c05b31",
+      "resizedArgmaxSha256": "9936931c39be1a41e03e43963329cdff8664b8edcf8f272c926ae38bb7c05b31",
+      "argmaxMatchesBaseline": true
+    },
+    {
+      "id": "latin/fr-nonrefundable-16",
+      "modelSha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+      "baselineRaw": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "resizedRaw": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "rawMatchesBaseline": true,
+      "baselineArgmaxSha256": "c796705a4149cf0d95e046fabafe30263a418503cbc991618d3993af64af5e97",
+      "resizedArgmaxSha256": "c796705a4149cf0d95e046fabafe30263a418503cbc991618d3993af64af5e97",
+      "argmaxMatchesBaseline": true
+    },
+    {
+      "id": "latin/zh-hans-quality-16",
+      "modelSha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+      "baselineRaw": [
+        "8",
+        "1234.50"
+      ],
+      "resizedRaw": [
+        "8",
+        "1234.50"
+      ],
+      "rawMatchesBaseline": true,
+      "baselineArgmaxSha256": "8776d81317997565f93a73e0ae9bb9da8c5f16d4d2fe52bc85f550026788bd2b",
+      "resizedArgmaxSha256": "8776d81317997565f93a73e0ae9bb9da8c5f16d4d2fe52bc85f550026788bd2b",
+      "argmaxMatchesBaseline": true
+    },
+    {
+      "id": "latin/zh-hant-quality-16",
+      "modelSha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+      "baselineRaw": [
+        "1234.50",
+        "8"
+      ],
+      "resizedRaw": [
+        "1234.50",
+        "8"
+      ],
+      "rawMatchesBaseline": true,
+      "baselineArgmaxSha256": "8e0fa3c72df8c9dd3feeded71c249ec62d8a566a61a369d71fba0716b345101d",
+      "resizedArgmaxSha256": "8e0fa3c72df8c9dd3feeded71c249ec62d8a566a61a369d71fba0716b345101d",
+      "argmaxMatchesBaseline": true
+    },
+    {
+      "id": "latin/mixed-quality-16",
+      "modelSha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+      "baselineRaw": [
+        "/",
+        "A / Room A",
+        "Chambre A : 120 € / night"
+      ],
+      "resizedRaw": [
+        "/",
+        "A / Room A",
+        "Chambre A : 120 € / night"
+      ],
+      "rawMatchesBaseline": true,
+      "baselineArgmaxSha256": "61d7e9e9480e8c7047b1b343de5eb1d1b19c3aeaf6813215f3499940b3f3ff79",
+      "resizedArgmaxSha256": "61d7e9e9480e8c7047b1b343de5eb1d1b19c3aeaf6813215f3499940b3f3ff79",
+      "argmaxMatchesBaseline": true
+    }
+  ],
+  "bitmapOpened": 36,
+  "bitmapRecycled": 36,
+  "nativeOpened": 44,
+  "nativeClosed": 44,
+  "allTenRawMatch": true,
+  "allTenArgmaxMatch": false
+}

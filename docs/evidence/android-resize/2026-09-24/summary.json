@@ -1,0 +1,112 @@
+{
+  "scope": "Android_bitmap_resize_comparison_not_full_OCR_quality_acceptance",
+  "appApkSha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+  "testApkSha256": "299344075cb6348f6a717ca56ca80410c2b2131a2d7a48d8ae63696651ed018a",
+  "unitTests": [
+    {
+      "name": "com.kandong.modelprobe.ProbeInputsTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.kandong.modelprobe.CtcDecoderTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.kandong.modelprobe.RecognitionPackingTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.kandong.modelprobe.ProbeGateTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "emulator": {
+    "api": 36,
+    "runs": 2,
+    "instrumentedTestsPerRun": 3,
+    "decodedSourceAndReferencePngBgrAllMatchPinnedHashes": true,
+    "rawTextMatchCount": 10,
+    "argmaxMatchCount": 7,
+    "modelComparisonsPerRun": 10,
+    "baselineAndResizedInferenceCallsPerRun": 20,
+    "firstElapsedMs": 3023,
+    "restartElapsedMs": 2676,
+    "resultsIdenticalAcrossRuns": true,
+    "bitmapsOpenedAndRecycled": 36,
+    "nativeOpenedAndClosed": 44,
+    "caseMetrics": [
+      {
+        "case": "en-quality-16",
+        "changedRgbChannels": 34476,
+        "totalRgbChannels": 98928,
+        "maxAbsChannelError": 9,
+        "changedFloatBits": 34476
+      },
+      {
+        "case": "fr-nonrefundable-16",
+        "changedRgbChannels": 40728,
+        "totalRgbChannels": 122112,
+        "maxAbsChannelError": 8,
+        "changedFloatBits": 40728
+      },
+      {
+        "case": "zh-hans-quality-16",
+        "changedRgbChannels": 45549,
+        "totalRgbChannels": 125712,
+        "maxAbsChannelError": 8,
+        "changedFloatBits": 45549
+      },
+      {
+        "case": "zh-hant-quality-16",
+        "changedRgbChannels": 49590,
+        "totalRgbChannels": 128880,
+        "maxAbsChannelError": 8,
+        "changedFloatBits": 49590
+      },
+      {
+        "case": "mixed-quality-16",
+        "changedRgbChannels": 50154,
+        "totalRgbChannels": 145728,
+        "maxAbsChannelError": 9,
+        "changedFloatBits": 50154
+      },
+      {
+        "case": "color-controls",
+        "changedRgbChannels": 49357,
+        "totalRgbChannels": 59472,
+        "maxAbsChannelError": 26,
+        "changedFloatBits": 49357
+      }
+    ]
+  },
+  "huawei": {
+    "status": "pending_user_system_install_confirmation",
+    "adbInstallTimedOutSeconds": 90,
+    "noCurrentDeviceResults": true
+  },
+  "initialFailure": {
+    "test": "extremeDimensionsKeepConstantColorAndSameSizeOwnership",
+    "cause": "asserted identity for mutable same-size source; actual returned a copy",
+    "resolution": "validate pixel/dimension behavior for both mutable/immutable sources and recycle distinct results by identity; never assume alias",
+    "notProductionBug": true
+  },
+  "limitations": [
+    "Different pixels and 3 changed argmax sequences; 10 exact decoded texts do not establish general OCR quality",
+    "No fresh holdout corpus or complete Android detector/perspective crop in this test",
+    "Await target phone run before accepting this phase",
+    "No real page, screen-sharing or network access",
+    "No sustained performance or power measurement"
+  ]
+}

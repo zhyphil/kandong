@@ -1,0 +1,42 @@
+{
+  "app": {
+    "sha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+    "bytes": 160758072,
+    "permissions": [],
+    "components": [
+      {
+        "type": "activity",
+        "name": "com.kandong.modelprobe.ModelProbeActivity",
+        "exported": "true"
+      }
+    ],
+    "signatureAndAlignment": true
+  },
+  "test": {
+    "sha256": "299344075cb6348f6a717ca56ca80410c2b2131a2d7a48d8ae63696651ed018a",
+    "bytes": 3072158,
+    "permissions": [],
+    "components": [],
+    "signatureAndAlignment": true,
+    "all44FixtureFilesIdentical": true,
+    "instrumentation": [
+      {
+        "{http://schemas.android.com/apk/res/android}label": "Tests for com.kandong.modelprobe",
+        "{http://schemas.android.com/apk/res/android}name": "androidx.test.runner.AndroidJUnitRunner",
+        "{http://schemas.android.com/apk/res/android}targetPackage": "com.kandong.modelprobe",
+        "{http://schemas.android.com/apk/res/android}handleProfiling": "false",
+        "{http://schemas.android.com/apk/res/android}functionalTest": "false"
+      }
+    ],
+    "libraryDeclarations": [
+      "android.test.runner"
+    ]
+  },
+  "protectedFileCount": 129,
+  "protectedFilesUnchanged": true,
+  "sourceFiles": {
+    "modelprobe/build.gradle.kts": "1897bb11e5cedcb003471c0b83e314cb8d07bc0ea0d030d8ff9049dce3b563aa",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/AndroidResizeProbeTest.kt": "a4208d0be6c6d52ab804774d274bddb444bf42273165b126b341090a33fb1eb2",
+    "modelprobe/src/androidTest/AndroidManifest.xml": "30a6f2c347487b7e4e18086e104ac0aad131bef30c760e04f4992b9c5c1c92b4"
+  }
+}
