@@ -1,0 +1,109 @@
+
+> Configure project :ocrlab
+w: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/build.gradle.kts:21:21: 'jvmTarget: String' is deprecated. Please migrate to the compilerOptions DSL. More details are here: https://kotl.in/u1r8ln
+
+> Task :ocrlab:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :ocrlab:preBuild UP-TO-DATE
+> Task :ocrlab:preDebugBuild UP-TO-DATE
+> Task :ocrlab:checkDebugAarMetadata UP-TO-DATE
+> Task :ocrlab:processDebugNavigationResources UP-TO-DATE
+> Task :ocrlab:compileDebugNavigationResources UP-TO-DATE
+> Task :ocrlab:generateDebugResValues UP-TO-DATE
+> Task :ocrlab:mapDebugSourceSetPaths UP-TO-DATE
+> Task :ocrlab:generateDebugResources UP-TO-DATE
+> Task :ocrlab:mergeDebugResources UP-TO-DATE
+> Task :ocrlab:packageDebugResources UP-TO-DATE
+> Task :ocrlab:parseDebugLocalResources UP-TO-DATE
+> Task :ocrlab:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :ocrlab:extractDeepLinksDebug UP-TO-DATE
+> Task :ocrlab:processDebugMainManifest UP-TO-DATE
+> Task :ocrlab:processDebugManifest UP-TO-DATE
+> Task :ocrlab:processDebugManifestForPackage UP-TO-DATE
+> Task :ocrlab:processDebugResources UP-TO-DATE
+> Task :ocrlab:javaPreCompileDebug UP-TO-DATE
+> Task :ocrlab:preDebugUnitTestBuild UP-TO-DATE
+> Task :ocrlab:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :ocrlab:compileDebugKotlin
+> Task :ocrlab:compileDebugJavaWithJavac NO-SOURCE
+> Task :ocrlab:processDebugJavaRes
+> Task :ocrlab:bundleDebugClassesToRuntimeJar
+> Task :ocrlab:bundleDebugClassesToCompileJar
+> Task :ocrlab:compileDebugUnitTestKotlin
+> Task :ocrlab:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :ocrlab:processDebugUnitTestJavaRes
+
+> Task :ocrlab:testDebugUnitTest FAILED
+
+LocalCapturePrivacyTest > incompleteNodeEnumerationPreservesUsableTextAndMissingEvidence FAILED
+    java.util.NoSuchElementException at LocalCapturePrivacyTest.kt:162
+
+LocalCapturePrivacyTest > sensitiveOrUnknownWindowPreventsAnyLabelRead FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:85
+
+LocalCapturePrivacyTest > incompleteWindowListMissingOrAmbiguousTargetRejectsBeforeReading FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:108
+
+LocalCapturePrivacyTest > totalTextBudgetStopsFurtherFetchesAndReportsGaps FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:199
+
+LocalCapturePrivacyTest > pauseOrPageChangeDuringReadDiscardsEvenAlreadyReadText FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:223
+
+LocalCapturePrivacyTest > readerExceptionKeepsOnlyGenericGapAndContinuesWithOtherEligibleNode FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:191
+
+LocalCapturePrivacyTest > frenchAndChinesePagesRemainSeparateAndUnmodified FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:50
+
+LocalCapturePrivacyTest > inputCollectionMutationCannotAlterSnapshotDuringRead FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:245
+
+LocalCapturePrivacyTest > excludedAncestorsTaintDescendantsButNotUnrelatedSiblings FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:117
+
+LocalCapturePrivacyTest > emptyTreeStaysUnverifiedAndDoesNotAcquireLabels FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:258
+
+LocalCapturePrivacyTest > passwordAndSensitiveAndEditableLabelsAreNeverFetched FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:28
+
+LocalCapturePrivacyTest > wholePageKeepsHeadingButtonAndOutsideSelectionConditionInSourceOrder FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:37
+
+LocalCapturePrivacyTest > staleInactiveFutureExpiredOrDifferentVersionNeverReads FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:210
+
+LocalCapturePrivacyTest > visibilityFlagAloneDoesNotAuthorizeOffscreenPartialOccludedOrTruncatedText FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:28
+
+LocalCapturePrivacyTest > parentAggregationAndUnknownChildrenCannotLeakSensitiveDescendantText FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:28
+
+LocalCapturePrivacyTest > unknownAndUnavailablePrivacyDoNotBecomeFalse FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:28
+
+LocalCapturePrivacyTest > conflictingEmptyInvalidAndOversizedLabelsDoNotGetGuessedOrTruncated FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:181
+
+LocalCapturePrivacyTest > descriptionOnlyAndIdenticalLabelsKeepProvenanceWithoutDuplication FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:170
+
+LocalCapturePrivacyTest > clockRollbackExpiryAndCheckpointFailureDiscardTheWholeRead FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:235
+
+LocalCapturePrivacyTest > ownOverlayOtherAppSystemAndKeyboardAreExcludedWithoutReadingLabels FAILED
+    java.lang.AssertionError at LocalCapturePrivacyTest.kt:97
+
+23 tests completed, 20 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':ocrlab:testDebugUnitTest'.
+> There were failing tests. See the report at: file:///Users/haoyuzuo/Projects/KanDong/ocrlab/build/reports/tests/testDebugUnitTest/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 1s
+24 actionable tasks: 7 executed, 17 up-to-date

@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "date": "2026-09-24",
+  "baseline": "af5848e",
+  "scope": "metadata-only local capture privacy contract; synthetic inputs only",
+  "origin": "SYNTHETIC_METADATA",
+  "coverage": "UNVERIFIED",
+  "red": {
+    "tests": 23,
+    "failures": 20,
+    "implementation": "empty result stub"
+  },
+  "firstGreen": {
+    "tests": 23,
+    "failures": 0
+  },
+  "finalNewTests": 25,
+  "jvm": {
+    "modelprobe": {
+      "tests": 116,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "ocrlab": {
+      "tests": 74,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "instrumentation": {
+    "initialTests": 24,
+    "finalTests": 26,
+    "failed": 0,
+    "newContractTests": 25,
+    "existingBindingRegressionTests": 1,
+    "avd": "KanDong_OCR_API37_16K",
+    "api": 37,
+    "pageBytes": 16384
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 26,
+    "identicalToPriorEvidence": true
+  },
+  "realCapture": false,
+  "realScreenUpload": false,
+  "credentialsRead": false,
+  "networkCalls": 0,
+  "physicalDeviceUpdated": false,
+  "productionMagnifierChanged": false,
+  "limitations": [
+    "Android metadata adapter not implemented",
+    "Privacy and protection classification supplied by synthetic fixtures only",
+    "API31 sensitivity signal unavailable; no default-false fallback",
+    "No pixel occlusion recovery, semantic grouping or completeness proof",
+    "Caller must revoke active ticket and discard returned text on invalidation"
+  ]
+}

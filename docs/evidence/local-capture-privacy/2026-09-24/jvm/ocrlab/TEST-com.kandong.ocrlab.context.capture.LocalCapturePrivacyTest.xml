@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" tests="25" skipped="0" failures="0" errors="0" timestamp="2026-09-24T21:05:45.232Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.024">
+  <properties/>
+  <testcase name="validAccentsWhitespaceAndSupplementaryCharactersAreNotRewritten" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.005"/>
+  <testcase name="invalidGeometrySizeTimeAndBoundsAreRejectedBeforeReading" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.001"/>
+  <testcase name="resultsAreImmutableAndDefaultDiagnosticsDoNotRevealLabels" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.003"/>
+  <testcase name="incompleteNodeEnumerationPreservesUsableTextAndMissingEvidence" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.001"/>
+  <testcase name="sensitiveOrUnknownWindowPreventsAnyLabelRead" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.001"/>
+  <testcase name="incompleteWindowListMissingOrAmbiguousTargetRejectsBeforeReading" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.0"/>
+  <testcase name="totalTextBudgetStopsFurtherFetchesAndReportsGaps" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.002"/>
+  <testcase name="pauseOrPageChangeDuringReadDiscardsEvenAlreadyReadText" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.002"/>
+  <testcase name="readerExceptionKeepsOnlyGenericGapAndContinuesWithOtherEligibleNode" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.0"/>
+  <testcase name="frenchAndChinesePagesRemainSeparateAndUnmodified" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.001"/>
+  <testcase name="inputCollectionMutationCannotAlterSnapshotDuringRead" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.0"/>
+  <testcase name="excludedAncestorsTaintDescendantsButNotUnrelatedSiblings" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.001"/>
+  <testcase name="emptyTreeStaysUnverifiedAndDoesNotAcquireLabels" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.0"/>
+  <testcase name="passwordAndSensitiveAndEditableLabelsAreNeverFetched" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.0"/>
+  <testcase name="wholePageKeepsHeadingButtonAndOutsideSelectionConditionInSourceOrder" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.0"/>
+  <testcase name="duplicateMissingCyclicAndCrossWindowMetadataRejectsAtomically" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.0"/>
+  <testcase name="staleInactiveFutureExpiredOrDifferentVersionNeverReads" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.0"/>
+  <testcase name="visibilityFlagAloneDoesNotAuthorizeOffscreenPartialOccludedOrTruncatedText" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.0"/>
+  <testcase name="parentAggregationAndUnknownChildrenCannotLeakSensitiveDescendantText" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.001"/>
+  <testcase name="unknownAndUnavailablePrivacyDoNotBecomeFalse" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.0"/>
+  <testcase name="conflictingEmptyInvalidAndOversizedLabelsDoNotGetGuessedOrTruncated" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.0"/>
+  <testcase name="descriptionOnlyAndIdenticalLabelsKeepProvenanceWithoutDuplication" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.001"/>
+  <testcase name="clockRollbackExpiryAndCheckpointFailureDiscardTheWholeRead" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.002"/>
+  <testcase name="removingOwnOverlayNodesDoesNotRevealTextOccludedBehindThem" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.0"/>
+  <testcase name="ownOverlayOtherAppSystemAndKeyboardAreExcludedWithoutReadingLabels" classname="com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

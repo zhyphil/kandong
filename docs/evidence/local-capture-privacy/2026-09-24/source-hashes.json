@@ -1,0 +1,6 @@
+{
+  "ocrlab/build.gradle.kts": "84e237fd824a30a0deb40a4a49c68228f7b731abb40257bf349d22094d1c8d8a",
+  "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/capture/LocalCapturePrivacy.kt": "fb33abfe73ecb5c6bcd4c4d8a881f9c46c4ee6a221461123e425a61c50c3cf60",
+  "ocrlab/src/captureTest/java/com/kandong/ocrlab/context/capture/LocalCapturePrivacyTest.kt": "0cef902f19326f93291a6025ba3bc9c3cb2b1c651f0d4f0572ce4e7b48b6c2bd",
+  "ocrlab/src/main/AndroidManifest.xml": "5c27a4bac06cfea4b14274e3d7de532ee65debb8030d6b03c5b6b36512067881"
+}

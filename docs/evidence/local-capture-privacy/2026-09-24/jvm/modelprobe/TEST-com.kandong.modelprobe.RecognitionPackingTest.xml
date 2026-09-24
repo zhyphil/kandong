@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.RecognitionPackingTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-09-24T21:04:01.578Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.03">
+  <properties/>
+  <testcase name="batchFloorCropCeilClampAndStableTies" classname="com.kandong.modelprobe.RecognitionPackingTest" time="0.0"/>
+  <testcase name="rejectInvalidDimensionsAndBoundAllocation" classname="com.kandong.modelprobe.RecognitionPackingTest" time="0.0"/>
+  <testcase name="rejectWrongCountShapeLengthAndUncompositedAlpha" classname="com.kandong.modelprobe.RecognitionPackingTest" time="0.001"/>
+  <testcase name="bgrPlanesAndZeroPaddingHaveDistinctMeaning" classname="com.kandong.modelprobe.RecognitionPackingTest" time="0.002"/>
+  <testcase name="frozenUpstreamCropsMatchEveryFloatBitAndRowOrder" classname="com.kandong.modelprobe.RecognitionPackingTest" time="0.027"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
