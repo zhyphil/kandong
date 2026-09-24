@@ -1,0 +1,1328 @@
+{
+  "schema": 1,
+  "scope": "project_authored_synthetic_only",
+  "ruleFrozenAt": "d267f63",
+  "specSha256": "043c4a00094372164b15a987b88b6cebb7371f492dec12ff522e54c0f08149ae",
+  "generatorSha256": "6c458e7350ee7c89cec69c20e38287cb46583dff655a389213444620f458118b",
+  "pillow": "12.3.0",
+  "fonts": {
+    "arial-unicode": {
+      "name": [
+        "Arial Unicode MS",
+        "Regular"
+      ],
+      "sha256": "876af2cd4854644e7f3e7feb2f688997fdb3343c6df6693611209c9dfb47ccec",
+      "index": 0,
+      "fontRedistributed": false
+    },
+    "heiti-medium": {
+      "name": [
+        "Heiti TC",
+        "Medium"
+      ],
+      "sha256": "f8fa4a63e2cf500e98e64d4c73260daaba049306cf85dec9e3729bc285b7d645",
+      "index": 0,
+      "fontRedistributed": false
+    }
+  },
+  "images": [
+    {
+      "id": "en-payment",
+      "language": "en",
+      "source": "Pay €47.60 today.\nDo not pay again.",
+      "critical": [
+        "€47.60",
+        "Do not pay again"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 16,
+      "asset": "arial-unicode-en-payment-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "f92518f61345f88479786a86851a9d59220f9743f92695aedb5121da619bcf10",
+      "pixelSha256": "f34b01cf6360d7886198d0a1b850d8eccd738e8359ff1c22a0360ae67eccc386",
+      "renderedLines": [
+        "Pay €47.60 today.",
+        "Do not pay again."
+      ]
+    },
+    {
+      "id": "en-payment",
+      "language": "en",
+      "source": "Pay €47.60 today.\nDo not pay again.",
+      "critical": [
+        "€47.60",
+        "Do not pay again"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 24,
+      "asset": "arial-unicode-en-payment-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "c5f8ee55b06c71278b4ac4ab1eb5f02077d84e0eff0ddd0c2ac70c573be077ea",
+      "pixelSha256": "5ad2ef0cde1ab0e87c31560c75466ae11ba71ea939bccb194c984afcbf8d1678",
+      "renderedLines": [
+        "Pay €47.60 today.",
+        "Do not pay again."
+      ]
+    },
+    {
+      "id": "en-payment",
+      "language": "en",
+      "source": "Pay €47.60 today.\nDo not pay again.",
+      "critical": [
+        "€47.60",
+        "Do not pay again"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 32,
+      "asset": "arial-unicode-en-payment-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "e7793affab6f9f6ca8bb9fc86e380c3e4bcfeac38f00f5def082389551c4b4d0",
+      "pixelSha256": "f49b0da2ed5d55023a377ed59c9d50603c2338b639def0709a8e0f93f515425b",
+      "renderedLines": [
+        "Pay €47.60 today.",
+        "Do not pay again."
+      ]
+    },
+    {
+      "id": "en-platform",
+      "language": "en",
+      "source": "Platform 6, departure 07:45.\nThis ticket is not refundable.",
+      "critical": [
+        "Platform 6",
+        "07:45",
+        "not refundable"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 16,
+      "asset": "arial-unicode-en-platform-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "81f2e8185003c2e7b757f1a68ec05d433719a5320e28d1d26f5a730415806267",
+      "pixelSha256": "1d49da5244eecaa99c8622ee0ee6d500140b8740980b9b348ebf2c74596e29f8",
+      "renderedLines": [
+        "Platform 6, departure 07:45.",
+        "This ticket is not refundable."
+      ]
+    },
+    {
+      "id": "en-platform",
+      "language": "en",
+      "source": "Platform 6, departure 07:45.\nThis ticket is not refundable.",
+      "critical": [
+        "Platform 6",
+        "07:45",
+        "not refundable"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 24,
+      "asset": "arial-unicode-en-platform-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "6d503bcb5a9f8b887864233910ece4679b50a4e4d2b9911040f0777d004da6fd",
+      "pixelSha256": "cab468f39cec3b073f84861ca1925017d3422c3e7c95dfb902db966cefc649f2",
+      "renderedLines": [
+        "Platform 6, departure 07:45.",
+        "This ticket is not refundable."
+      ]
+    },
+    {
+      "id": "en-platform",
+      "language": "en",
+      "source": "Platform 6, departure 07:45.\nThis ticket is not refundable.",
+      "critical": [
+        "Platform 6",
+        "07:45",
+        "not refundable"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 32,
+      "asset": "arial-unicode-en-platform-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "6d7d869924311f9f114760b68a71ba19e2b772f5ccd4457ca408012db57d3f9f",
+      "pixelSha256": "33db83a5e3c25f70b06c7c8554dff7a9b2efba63c7774367835beee480f9f200",
+      "renderedLines": [
+        "Platform 6, departure 07:45.",
+        "This ticket is not refundable."
+      ]
+    },
+    {
+      "id": "fr-deadline",
+      "language": "fr",
+      "source": "Aucun paiement aujourd’hui.\nÉchéance : 21/11 à 09:15.",
+      "critical": [
+        "Aucun paiement",
+        "21/11",
+        "09:15"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 16,
+      "asset": "arial-unicode-fr-deadline-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "8042c0db95b99a6b2c89db5d6dd77fd57ba75ba2a293282132e49f51d54d614e",
+      "pixelSha256": "5c50a30ea77329289ee13b43967f8fdf1138e074616f4b5d9bad1468a5796687",
+      "renderedLines": [
+        "Aucun paiement aujourd’hui.",
+        "Échéance : 21/11 à 09:15."
+      ]
+    },
+    {
+      "id": "fr-deadline",
+      "language": "fr",
+      "source": "Aucun paiement aujourd’hui.\nÉchéance : 21/11 à 09:15.",
+      "critical": [
+        "Aucun paiement",
+        "21/11",
+        "09:15"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 24,
+      "asset": "arial-unicode-fr-deadline-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "6a690555589477510797563b89ffff23810bbccd34c1c8279f4c1909795f753f",
+      "pixelSha256": "20b3bf265c2e3b7f864f5b8df088873ffa755ea898303c05f9ddefc42cf0b77a",
+      "renderedLines": [
+        "Aucun paiement aujourd’hui.",
+        "Échéance : 21/11 à 09:15."
+      ]
+    },
+    {
+      "id": "fr-deadline",
+      "language": "fr",
+      "source": "Aucun paiement aujourd’hui.\nÉchéance : 21/11 à 09:15.",
+      "critical": [
+        "Aucun paiement",
+        "21/11",
+        "09:15"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 32,
+      "asset": "arial-unicode-fr-deadline-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "a8c42f6a4138acec0b324709b0ed42724a714a2696a3d8042552aa5c87caa4f0",
+      "pixelSha256": "ecef8f374c9dbaf65a58542f5cc986b66db4453745094cf3b459b2f7cc41c4ce",
+      "renderedLines": [
+        "Aucun paiement aujourd’hui.",
+        "Échéance : 21/11 à 09:15."
+      ]
+    },
+    {
+      "id": "fr-cancellation",
+      "language": "fr",
+      "source": "Annulation gratuite avant 18:30.\nAprès cette heure : 12,50 €.",
+      "critical": [
+        "gratuite avant 18:30",
+        "12,50 €"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 16,
+      "asset": "arial-unicode-fr-cancellation-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "446f7d4b964e55db6ce85bf844ec31e8910957e6db64050114fee13c72c1f9eb",
+      "pixelSha256": "ddb2fb0fe4f12b8c329c7f2a214cb420e2bb99aa7738c312380d0f7b867df0c7",
+      "renderedLines": [
+        "Annulation gratuite avant 18:30.",
+        "Après cette heure : 12,50 €."
+      ]
+    },
+    {
+      "id": "fr-cancellation",
+      "language": "fr",
+      "source": "Annulation gratuite avant 18:30.\nAprès cette heure : 12,50 €.",
+      "critical": [
+        "gratuite avant 18:30",
+        "12,50 €"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 24,
+      "asset": "arial-unicode-fr-cancellation-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "1718c2e18aa74d29d526e1de2d77b1bd366a7bfc2bc74ba08b945d510d0ee1f4",
+      "pixelSha256": "8dd4a05844205cb0bc10ba897d1a9ca69c6ddb19858787f153c4b676ecb3a692",
+      "renderedLines": [
+        "Annulation gratuite avant 18:30.",
+        "Après cette heure : 12,50 €."
+      ]
+    },
+    {
+      "id": "fr-cancellation",
+      "language": "fr",
+      "source": "Annulation gratuite avant 18:30.\nAprès cette heure : 12,50 €.",
+      "critical": [
+        "gratuite avant 18:30",
+        "12,50 €"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 32,
+      "asset": "arial-unicode-fr-cancellation-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "3061b84b31724aa2d81ee24f7a16a0735e82e9e8c2de97583914d6adbd3ca205",
+      "pixelSha256": "38fc241d8dae584d79b6d577a3b972a29df54ba908ec46965d1546e5b57afed2",
+      "renderedLines": [
+        "Annulation gratuite avant 18:30.",
+        "Après cette heure : 12,50 €."
+      ]
+    },
+    {
+      "id": "hans-payment",
+      "language": "zh-Hans",
+      "source": "应付36.80元，已含服务费。\n请勿重复付款。",
+      "critical": [
+        "36.80元",
+        "已含服务费",
+        "请勿重复付款"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 16,
+      "asset": "arial-unicode-hans-payment-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "2d369d8562d9b4b3aaeca6b0c8d1165344c0ead0ef066b29b705ee216f8d23c8",
+      "pixelSha256": "44344b8779f1b31a2bd128d0646ad7c19ec071b29d25a495c8554b7b0b391bd5",
+      "renderedLines": [
+        "应付36.80元，已含服务费。",
+        "请勿重复付款。"
+      ]
+    },
+    {
+      "id": "hans-payment",
+      "language": "zh-Hans",
+      "source": "应付36.80元，已含服务费。\n请勿重复付款。",
+      "critical": [
+        "36.80元",
+        "已含服务费",
+        "请勿重复付款"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 24,
+      "asset": "arial-unicode-hans-payment-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "c73f0b13b938240e39347611fd7b28016dab7e42f5c0a0382f424f7c931808a9",
+      "pixelSha256": "ea6da8732e06ff7841c1d5917387789c5ea3f37102f5ef85f6a837c69f2b3385",
+      "renderedLines": [
+        "应付36.80元，已含服务费。",
+        "请勿重复付款。"
+      ]
+    },
+    {
+      "id": "hans-payment",
+      "language": "zh-Hans",
+      "source": "应付36.80元，已含服务费。\n请勿重复付款。",
+      "critical": [
+        "36.80元",
+        "已含服务费",
+        "请勿重复付款"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 32,
+      "asset": "arial-unicode-hans-payment-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "8f2dce099e3ff3349d01c79a8133753b9e2123645d0ecefcfd172209e8d9ee01",
+      "pixelSha256": "1dc98253b7bba2f7ee16ed456ff4df6f0dd7eab0a74cc38abc75e6e6377bed40",
+      "renderedLines": [
+        "应付36.80元，已含服务费。",
+        "请勿重复付款。"
+      ]
+    },
+    {
+      "id": "hans-pickup",
+      "language": "zh-Hans",
+      "source": "取件码407216，有效至19:20。\n请不要把取件码告诉陌生人。",
+      "critical": [
+        "407216",
+        "19:20",
+        "不要"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 16,
+      "asset": "arial-unicode-hans-pickup-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "c7ac40414a1c4c8c3cdc2a928c9c9eb2c8d05e4facf35a441ea7453fd5f878e7",
+      "pixelSha256": "da0f463624826a49016368c63ab02c583cb23deb227267c8507ac41b275f9790",
+      "renderedLines": [
+        "取件码407216，有效至19:20。",
+        "请不要把取件码告诉陌生人。"
+      ]
+    },
+    {
+      "id": "hans-pickup",
+      "language": "zh-Hans",
+      "source": "取件码407216，有效至19:20。\n请不要把取件码告诉陌生人。",
+      "critical": [
+        "407216",
+        "19:20",
+        "不要"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 24,
+      "asset": "arial-unicode-hans-pickup-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "7c6f8a8a344723bf104249bd51ef357a3e77b638f365105d8dd2d0069b953532",
+      "pixelSha256": "1db9c4adea983f8c6ca69d6a3afc36c31504c7a46b6289d40e9625afd23397d1",
+      "renderedLines": [
+        "取件码407216，有效至19:20。",
+        "请不要把取件码告诉陌生人。"
+      ]
+    },
+    {
+      "id": "hans-pickup",
+      "language": "zh-Hans",
+      "source": "取件码407216，有效至19:20。\n请不要把取件码告诉陌生人。",
+      "critical": [
+        "407216",
+        "19:20",
+        "不要"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 32,
+      "asset": "arial-unicode-hans-pickup-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "9fec8a3e323ba170512d28b7df67dad70bac3faa6c3b201ca426c93943a5afc7",
+      "pixelSha256": "a8823a29116f7b87d941712bce9fdbef995360206841dfe049e0c12b8b9e5c7a",
+      "renderedLines": [
+        "取件码407216，有效至19:20。",
+        "请不要把取件码告诉陌生人。"
+      ]
+    },
+    {
+      "id": "hant-payment",
+      "language": "zh-Hant",
+      "source": "應付59.40元，未含城市稅。\n訂單確認後不可取消。",
+      "critical": [
+        "59.40元",
+        "未含城市稅",
+        "不可取消"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 16,
+      "asset": "arial-unicode-hant-payment-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "b7f0c28d2a6643c52e80039745ff2598e82b08e18b2001b79ffa25d4d7716e15",
+      "pixelSha256": "6013b451e501874383d680880d1b8a145bf6f776824591bfe3f2cc3b7d465bb3",
+      "renderedLines": [
+        "應付59.40元，未含城市稅。",
+        "訂單確認後不可取消。"
+      ]
+    },
+    {
+      "id": "hant-payment",
+      "language": "zh-Hant",
+      "source": "應付59.40元，未含城市稅。\n訂單確認後不可取消。",
+      "critical": [
+        "59.40元",
+        "未含城市稅",
+        "不可取消"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 24,
+      "asset": "arial-unicode-hant-payment-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "c9447047345df6c6d45a4c21ee48a8e93f809f910d1fea8b1958a818c7c8efb9",
+      "pixelSha256": "51c43f6329aab959dba596ffe018bec2750d08a42c05da1a043e0cbc9f0b9a91",
+      "renderedLines": [
+        "應付59.40元，未含城市稅。",
+        "訂單確認後不可取消。"
+      ]
+    },
+    {
+      "id": "hant-payment",
+      "language": "zh-Hant",
+      "source": "應付59.40元，未含城市稅。\n訂單確認後不可取消。",
+      "critical": [
+        "59.40元",
+        "未含城市稅",
+        "不可取消"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 32,
+      "asset": "arial-unicode-hant-payment-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "76ea21bc067c048d8ab60a41339dca8b541e928e9f045e02f13e6ec62eecb6ac",
+      "pixelSha256": "a809444f69a15ef66a948ea4c88d3ca4cd34496cb6e8c5ab6eb05b3bdbddcd68",
+      "renderedLines": [
+        "應付59.40元，未含城市稅。",
+        "訂單確認後不可取消。"
+      ]
+    },
+    {
+      "id": "hant-baggage",
+      "language": "zh-Hant",
+      "source": "手提行李限重6公斤。\n充電器不可放入託運行李。",
+      "critical": [
+        "6公斤",
+        "不可放入託運行李"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 16,
+      "asset": "arial-unicode-hant-baggage-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "90ec897858a0f21e95b0a4ebd2e51d0594e49f7f1613d6969dce7b55bff3e632",
+      "pixelSha256": "6cf06d8824b6a69feb0f0f5bac8aec44191d11126238566c99adf2d770161e3b",
+      "renderedLines": [
+        "手提行李限重6公斤。",
+        "充電器不可放入託運行李。"
+      ]
+    },
+    {
+      "id": "hant-baggage",
+      "language": "zh-Hant",
+      "source": "手提行李限重6公斤。\n充電器不可放入託運行李。",
+      "critical": [
+        "6公斤",
+        "不可放入託運行李"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 24,
+      "asset": "arial-unicode-hant-baggage-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "c60a24fb17d2b67e38275365582910c7a4d5535dfda311627f57dfa39b083c2b",
+      "pixelSha256": "23b466fba6d171ca3a18ea1f4f533ac1d39043ad4ef252eb804d7b856ef2ccfb",
+      "renderedLines": [
+        "手提行李限重6公斤。",
+        "充電器不可放入託運行李。"
+      ]
+    },
+    {
+      "id": "hant-baggage",
+      "language": "zh-Hant",
+      "source": "手提行李限重6公斤。\n充電器不可放入託運行李。",
+      "critical": [
+        "6公斤",
+        "不可放入託運行李"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 32,
+      "asset": "arial-unicode-hant-baggage-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "cac74d618dd36a7b674b0014eb5856298466c58cf18ca1b52babcf310e832837",
+      "pixelSha256": "9a0d908e611d5e0b11f0f9c79b519b9c1847dffd0c64f08ecc96550673d12ed5",
+      "renderedLines": [
+        "手提行李限重6公斤。",
+        "充電器不可放入託運行李。"
+      ]
+    },
+    {
+      "id": "mixed-breakfast",
+      "language": "mixed",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "critical": [
+        "Room C",
+        "房间C",
+        "Chambre C",
+        "not included",
+        "不含早餐"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 16,
+      "asset": "arial-unicode-mixed-breakfast-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "8d0d721bffe63c9a6ad89cea409d9fa20f9f32a16aa29734739a7535f78198ef",
+      "pixelSha256": "929acde4d6a91a77ac0301646933659ad29c424e34fd2231e0075e322065e179",
+      "renderedLines": [
+        "Room C / 房间C / Chambre C",
+        "Breakfast not included / 不含早餐"
+      ]
+    },
+    {
+      "id": "mixed-breakfast",
+      "language": "mixed",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "critical": [
+        "Room C",
+        "房间C",
+        "Chambre C",
+        "not included",
+        "不含早餐"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 24,
+      "asset": "arial-unicode-mixed-breakfast-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "71ee71ef0d03d119706283a59ac7778447e5c0e054213739e317407c38e8d88a",
+      "pixelSha256": "fdaa7f10a3f6fd44de411fbbd78a91aac8f315ae0a7852d688663d863d349577",
+      "renderedLines": [
+        "Room C / 房间C / Chambre C",
+        "Breakfast not included / 不含早餐"
+      ]
+    },
+    {
+      "id": "mixed-breakfast",
+      "language": "mixed",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "critical": [
+        "Room C",
+        "房间C",
+        "Chambre C",
+        "not included",
+        "不含早餐"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 32,
+      "asset": "arial-unicode-mixed-breakfast-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "5b26ee3a9dc371fb428e0f647a5e5da6a29cf35910d587a11bf2e20fbb9c6d05",
+      "pixelSha256": "95844ba73f69b45a28eb43e8fcd4a98e087d2a3c332a749f3378388f1ee387cd",
+      "renderedLines": [
+        "Room C / 房间C / Chambre C",
+        "Breakfast not included / 不含早餐"
+      ]
+    },
+    {
+      "id": "mixed-exit",
+      "language": "mixed",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "critical": [
+        "Exit 4",
+        "出口4",
+        "Sortie 4",
+        "Do not enter",
+        "請勿進入"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 16,
+      "asset": "arial-unicode-mixed-exit-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "650d987de66958021ac7a30e7ead1fcbb11340ed121580f362967edcb1132b32",
+      "pixelSha256": "18288198ba9af45f6b8f549348b0ffb31288cb04b0ee4bc66292293a0c3069b2",
+      "renderedLines": [
+        "Exit 4 / 出口4 / Sortie 4",
+        "Do not enter / 請勿進入"
+      ]
+    },
+    {
+      "id": "mixed-exit",
+      "language": "mixed",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "critical": [
+        "Exit 4",
+        "出口4",
+        "Sortie 4",
+        "Do not enter",
+        "請勿進入"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 24,
+      "asset": "arial-unicode-mixed-exit-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "d82621c4b4425c2c3b6eca02b2d8223a4edd2cb38c0575b87cbae1966c753b71",
+      "pixelSha256": "e84f2af1c4c7c5addd7c5b674b21bb1d35f7abe36a9ce55f362c4c945621744b",
+      "renderedLines": [
+        "Exit 4 / 出口4 / Sortie 4",
+        "Do not enter / 請勿進入"
+      ]
+    },
+    {
+      "id": "mixed-exit",
+      "language": "mixed",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "critical": [
+        "Exit 4",
+        "出口4",
+        "Sortie 4",
+        "Do not enter",
+        "請勿進入"
+      ],
+      "font": "arial-unicode",
+      "fontPx": 32,
+      "asset": "arial-unicode-mixed-exit-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "0232c4fdf29df4526666468da82abaff7dc685c50adf955dced4473a05317f29",
+      "pixelSha256": "aa69aa7bb7ddc5a6fb4e8508af16ef9fb8066767ba9547db1c33e559fdff3fba",
+      "renderedLines": [
+        "Exit 4 / 出口4 / Sortie 4",
+        "Do not enter / 請勿進入"
+      ]
+    },
+    {
+      "id": "blank",
+      "language": "none",
+      "source": "",
+      "critical": [],
+      "font": "arial-unicode",
+      "fontPx": 24,
+      "asset": "arial-unicode-blank-24.png",
+      "width": 640,
+      "height": 101,
+      "pngSha256": "70c16b377a047c59ba1dee54ba2250e2d88749c0c3fbad700ddaf6b80b6a16bf",
+      "pixelSha256": "cb5d15f46063e0e36d09f0cc85ea65f95918fd5c9bd1aa701c212a7d78c3b728",
+      "renderedLines": [
+        ""
+      ]
+    },
+    {
+      "id": "en-payment",
+      "language": "en",
+      "source": "Pay €47.60 today.\nDo not pay again.",
+      "critical": [
+        "€47.60",
+        "Do not pay again"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 16,
+      "asset": "heiti-medium-en-payment-16.png",
+      "width": 640,
+      "height": 106,
+      "pngSha256": "b2cfaf57421a63051f5b7bc2ab1937358dfaf3176ac67345d88671326e2dc402",
+      "pixelSha256": "4344c96ea28cae978dfaa88fb22ef2af3465f6058f8694d1d6aa975af155bcd5",
+      "renderedLines": [
+        "Pay €47.60 today.",
+        "Do not pay again."
+      ]
+    },
+    {
+      "id": "en-payment",
+      "language": "en",
+      "source": "Pay €47.60 today.\nDo not pay again.",
+      "critical": [
+        "€47.60",
+        "Do not pay again"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 24,
+      "asset": "heiti-medium-en-payment-24.png",
+      "width": 640,
+      "height": 122,
+      "pngSha256": "21ccd15f3ce29aff7d48194e870cc21c39d6f5220a43c8674ffd8cf54b153814",
+      "pixelSha256": "0bfbf180635e693f35923d9c3bef78fed732e42c47ee2eab64f0312317612a12",
+      "renderedLines": [
+        "Pay €47.60 today.",
+        "Do not pay again."
+      ]
+    },
+    {
+      "id": "en-payment",
+      "language": "en",
+      "source": "Pay €47.60 today.\nDo not pay again.",
+      "critical": [
+        "€47.60",
+        "Do not pay again"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 32,
+      "asset": "heiti-medium-en-payment-32.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "9458f34bf4384c7048abfcde8e10bc3ec23f5370b2f89fd58a153022eef0ef67",
+      "pixelSha256": "fae9974ee111f6300e247b60720d07f64be2982e7cc451735aacb6344b1fd9fe",
+      "renderedLines": [
+        "Pay €47.60 today.",
+        "Do not pay again."
+      ]
+    },
+    {
+      "id": "en-platform",
+      "language": "en",
+      "source": "Platform 6, departure 07:45.\nThis ticket is not refundable.",
+      "critical": [
+        "Platform 6",
+        "07:45",
+        "not refundable"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 16,
+      "asset": "heiti-medium-en-platform-16.png",
+      "width": 640,
+      "height": 106,
+      "pngSha256": "589bef1302abe5f5fb5d24e9c8d251c9277923ce8a46c6203f5c8e9ac621b215",
+      "pixelSha256": "6d6f236ddd9d059634feef38874cb81dbc2b59ae9a8ffc6db9a37f100dbe02f1",
+      "renderedLines": [
+        "Platform 6, departure 07:45.",
+        "This ticket is not refundable."
+      ]
+    },
+    {
+      "id": "en-platform",
+      "language": "en",
+      "source": "Platform 6, departure 07:45.\nThis ticket is not refundable.",
+      "critical": [
+        "Platform 6",
+        "07:45",
+        "not refundable"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 24,
+      "asset": "heiti-medium-en-platform-24.png",
+      "width": 640,
+      "height": 122,
+      "pngSha256": "fb10a56596b141e943fbe0dc180625af5c29297e36ee5e0606d0794f3f7981b9",
+      "pixelSha256": "4542c75a58faf74f9c909cb3e7aed6fac16fd1c902d45e17e035f6bb46ede480",
+      "renderedLines": [
+        "Platform 6, departure 07:45.",
+        "This ticket is not refundable."
+      ]
+    },
+    {
+      "id": "en-platform",
+      "language": "en",
+      "source": "Platform 6, departure 07:45.\nThis ticket is not refundable.",
+      "critical": [
+        "Platform 6",
+        "07:45",
+        "not refundable"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 32,
+      "asset": "heiti-medium-en-platform-32.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "54f3db52f664e8c0aee4eff7431bf79bc0a05ca2d4fc149dc50b1bbbb7119b06",
+      "pixelSha256": "82d2a7167d3feb82ae53f5d1fed0c5d0e787d707324578957a3a27208ac15c93",
+      "renderedLines": [
+        "Platform 6, departure 07:45.",
+        "This ticket is not refundable."
+      ]
+    },
+    {
+      "id": "fr-deadline",
+      "language": "fr",
+      "source": "Aucun paiement aujourd’hui.\nÉchéance : 21/11 à 09:15.",
+      "critical": [
+        "Aucun paiement",
+        "21/11",
+        "09:15"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 16,
+      "asset": "heiti-medium-fr-deadline-16.png",
+      "width": 640,
+      "height": 106,
+      "pngSha256": "bf0857a0dc367cd4f9857f15c7b17fe10e34124c6561c7a3868153348a9d2fde",
+      "pixelSha256": "2ef2bf372a4645067da2eb637444f07bfb2143477d3a812fcc39c4d340f933ac",
+      "renderedLines": [
+        "Aucun paiement aujourd’hui.",
+        "Échéance : 21/11 à 09:15."
+      ]
+    },
+    {
+      "id": "fr-deadline",
+      "language": "fr",
+      "source": "Aucun paiement aujourd’hui.\nÉchéance : 21/11 à 09:15.",
+      "critical": [
+        "Aucun paiement",
+        "21/11",
+        "09:15"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 24,
+      "asset": "heiti-medium-fr-deadline-24.png",
+      "width": 640,
+      "height": 122,
+      "pngSha256": "71af5dc85576b72b889152ecd3c266b14b686251da841c4689edd8dfa5291cff",
+      "pixelSha256": "d7c458a545b573a3b4ecb45e3c1652175a7f6cb93c6c7e86f29fb90cd6a0a519",
+      "renderedLines": [
+        "Aucun paiement aujourd’hui.",
+        "Échéance : 21/11 à 09:15."
+      ]
+    },
+    {
+      "id": "fr-deadline",
+      "language": "fr",
+      "source": "Aucun paiement aujourd’hui.\nÉchéance : 21/11 à 09:15.",
+      "critical": [
+        "Aucun paiement",
+        "21/11",
+        "09:15"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 32,
+      "asset": "heiti-medium-fr-deadline-32.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "8b0cab13efa6cbba76a38f982bc07227e1d9ec241eb23108314e756ab122de3b",
+      "pixelSha256": "42b5c4f4a80ad40dbbecb280fca7ce4e8af03b42d2e3b90fe737597df3d9bbf2",
+      "renderedLines": [
+        "Aucun paiement aujourd’hui.",
+        "Échéance : 21/11 à 09:15."
+      ]
+    },
+    {
+      "id": "fr-cancellation",
+      "language": "fr",
+      "source": "Annulation gratuite avant 18:30.\nAprès cette heure : 12,50 €.",
+      "critical": [
+        "gratuite avant 18:30",
+        "12,50 €"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 16,
+      "asset": "heiti-medium-fr-cancellation-16.png",
+      "width": 640,
+      "height": 106,
+      "pngSha256": "95e47226657e4c765fc0aabfddf959ccc3c0a8729a555a692d583d87629a644a",
+      "pixelSha256": "da185dc260130ca917d63a89abac943cd871215acc5196f388c499ccab120cc5",
+      "renderedLines": [
+        "Annulation gratuite avant 18:30.",
+        "Après cette heure : 12,50 €."
+      ]
+    },
+    {
+      "id": "fr-cancellation",
+      "language": "fr",
+      "source": "Annulation gratuite avant 18:30.\nAprès cette heure : 12,50 €.",
+      "critical": [
+        "gratuite avant 18:30",
+        "12,50 €"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 24,
+      "asset": "heiti-medium-fr-cancellation-24.png",
+      "width": 640,
+      "height": 122,
+      "pngSha256": "02c3652e90a0efef64c568570baeaa0cb93a962f92b3572c4480c8bf35173432",
+      "pixelSha256": "90d06b816256c62781178fcf1e067f35c3c5cd60227d9a2b6d8a410ab72bc5e0",
+      "renderedLines": [
+        "Annulation gratuite avant 18:30.",
+        "Après cette heure : 12,50 €."
+      ]
+    },
+    {
+      "id": "fr-cancellation",
+      "language": "fr",
+      "source": "Annulation gratuite avant 18:30.\nAprès cette heure : 12,50 €.",
+      "critical": [
+        "gratuite avant 18:30",
+        "12,50 €"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 32,
+      "asset": "heiti-medium-fr-cancellation-32.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "9394876c146b376d9077244a4d7db15c9d089762bb244325963c43d5c5bf47d0",
+      "pixelSha256": "5ec03daea80e812795b6fbbdf65491930c45ac167a1b442b214f9bdf1befd5df",
+      "renderedLines": [
+        "Annulation gratuite avant 18:30.",
+        "Après cette heure : 12,50 €."
+      ]
+    },
+    {
+      "id": "hans-payment",
+      "language": "zh-Hans",
+      "source": "应付36.80元，已含服务费。\n请勿重复付款。",
+      "critical": [
+        "36.80元",
+        "已含服务费",
+        "请勿重复付款"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 16,
+      "asset": "heiti-medium-hans-payment-16.png",
+      "width": 640,
+      "height": 106,
+      "pngSha256": "740a5aae2bc38909bb178345d862f75fca53bed787276f1136e3138ca188c0cd",
+      "pixelSha256": "020e439e2adbeee940c81bdc98f84d1bf2222f300777f777af93d7e35170fac5",
+      "renderedLines": [
+        "应付36.80元，已含服务费。",
+        "请勿重复付款。"
+      ]
+    },
+    {
+      "id": "hans-payment",
+      "language": "zh-Hans",
+      "source": "应付36.80元，已含服务费。\n请勿重复付款。",
+      "critical": [
+        "36.80元",
+        "已含服务费",
+        "请勿重复付款"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 24,
+      "asset": "heiti-medium-hans-payment-24.png",
+      "width": 640,
+      "height": 122,
+      "pngSha256": "bdcecfe24e47effb975ee2b1bbc143d2ec9d5ea8d2d4d06ad688c99def42fdff",
+      "pixelSha256": "23e5456e7440f0c0a416c694c1b2338183ab626c08d354f110f4a52a45e102c2",
+      "renderedLines": [
+        "应付36.80元，已含服务费。",
+        "请勿重复付款。"
+      ]
+    },
+    {
+      "id": "hans-payment",
+      "language": "zh-Hans",
+      "source": "应付36.80元，已含服务费。\n请勿重复付款。",
+      "critical": [
+        "36.80元",
+        "已含服务费",
+        "请勿重复付款"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 32,
+      "asset": "heiti-medium-hans-payment-32.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "c92e941c0c5b347a98627b2f1bec917d4359f62689241dafb31725f4e1c24379",
+      "pixelSha256": "35229401ca56876da360a1bc468a1f276cc6f31646cc5b6e52e775c4bf63af30",
+      "renderedLines": [
+        "应付36.80元，已含服务费。",
+        "请勿重复付款。"
+      ]
+    },
+    {
+      "id": "hans-pickup",
+      "language": "zh-Hans",
+      "source": "取件码407216，有效至19:20。\n请不要把取件码告诉陌生人。",
+      "critical": [
+        "407216",
+        "19:20",
+        "不要"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 16,
+      "asset": "heiti-medium-hans-pickup-16.png",
+      "width": 640,
+      "height": 106,
+      "pngSha256": "3e6d3d8cf951031e5c4ca0488152e05df04aced19a6672757b5eae634e378746",
+      "pixelSha256": "08400cfb557f60d0817c3f535ec8ed33849ba220c49be58cc0e26e89a757226d",
+      "renderedLines": [
+        "取件码407216，有效至19:20。",
+        "请不要把取件码告诉陌生人。"
+      ]
+    },
+    {
+      "id": "hans-pickup",
+      "language": "zh-Hans",
+      "source": "取件码407216，有效至19:20。\n请不要把取件码告诉陌生人。",
+      "critical": [
+        "407216",
+        "19:20",
+        "不要"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 24,
+      "asset": "heiti-medium-hans-pickup-24.png",
+      "width": 640,
+      "height": 122,
+      "pngSha256": "e573581b052401ad6fed5b5e775aacf8aba8f4235003e7ff81f5af855e6d71fb",
+      "pixelSha256": "d64c3c7818ce123cf918969e93401122c930b7f1c4f82b99c073729e76cacda7",
+      "renderedLines": [
+        "取件码407216，有效至19:20。",
+        "请不要把取件码告诉陌生人。"
+      ]
+    },
+    {
+      "id": "hans-pickup",
+      "language": "zh-Hans",
+      "source": "取件码407216，有效至19:20。\n请不要把取件码告诉陌生人。",
+      "critical": [
+        "407216",
+        "19:20",
+        "不要"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 32,
+      "asset": "heiti-medium-hans-pickup-32.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "2b0b1e24bbf7e0d86ecd0a0a3bf43b96d18b258cd1bc2eba724b3904acc4dbd6",
+      "pixelSha256": "9fd2ce6e60c6a8240163abffb61b2f90e8d0d87dc86ed51d537191fc89664cbb",
+      "renderedLines": [
+        "取件码407216，有效至19:20。",
+        "请不要把取件码告诉陌生人。"
+      ]
+    },
+    {
+      "id": "hant-payment",
+      "language": "zh-Hant",
+      "source": "應付59.40元，未含城市稅。\n訂單確認後不可取消。",
+      "critical": [
+        "59.40元",
+        "未含城市稅",
+        "不可取消"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 16,
+      "asset": "heiti-medium-hant-payment-16.png",
+      "width": 640,
+      "height": 106,
+      "pngSha256": "0fbf226314f88a2855668ac56af7a18ca9511edd2eada20e4fe9040e7d90aa20",
+      "pixelSha256": "3ebf592af4586f725a9548c7d61ed6273709d66e5decc953bcbbfa4ffc4f5e7b",
+      "renderedLines": [
+        "應付59.40元，未含城市稅。",
+        "訂單確認後不可取消。"
+      ]
+    },
+    {
+      "id": "hant-payment",
+      "language": "zh-Hant",
+      "source": "應付59.40元，未含城市稅。\n訂單確認後不可取消。",
+      "critical": [
+        "59.40元",
+        "未含城市稅",
+        "不可取消"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 24,
+      "asset": "heiti-medium-hant-payment-24.png",
+      "width": 640,
+      "height": 122,
+      "pngSha256": "f3450e1a1d929296d6fb50809318810dc99f1f4f84c66b30d26846d96749b723",
+      "pixelSha256": "0ecca75b243f1dd12b6904afe5969821aadd1ac9b7e342fdb22f7061dca0fbb0",
+      "renderedLines": [
+        "應付59.40元，未含城市稅。",
+        "訂單確認後不可取消。"
+      ]
+    },
+    {
+      "id": "hant-payment",
+      "language": "zh-Hant",
+      "source": "應付59.40元，未含城市稅。\n訂單確認後不可取消。",
+      "critical": [
+        "59.40元",
+        "未含城市稅",
+        "不可取消"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 32,
+      "asset": "heiti-medium-hant-payment-32.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "f542dfb60886d89d294d4a9439431d90dc93d29406f9df7f75587ae31bb64bc9",
+      "pixelSha256": "e4d9edecded62ba8a52bc9482a308a0b816674305dda7e48b12eab0c54a920fb",
+      "renderedLines": [
+        "應付59.40元，未含城市稅。",
+        "訂單確認後不可取消。"
+      ]
+    },
+    {
+      "id": "hant-baggage",
+      "language": "zh-Hant",
+      "source": "手提行李限重6公斤。\n充電器不可放入託運行李。",
+      "critical": [
+        "6公斤",
+        "不可放入託運行李"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 16,
+      "asset": "heiti-medium-hant-baggage-16.png",
+      "width": 640,
+      "height": 106,
+      "pngSha256": "272382ab4a52e8a8588a36f50121cd5c2000bbd9e3e661c4d13f3a520b08a1e4",
+      "pixelSha256": "2f823338447e26f4e4551fd7c6c1e71263680a2097ddbf421839e22724059efd",
+      "renderedLines": [
+        "手提行李限重6公斤。",
+        "充電器不可放入託運行李。"
+      ]
+    },
+    {
+      "id": "hant-baggage",
+      "language": "zh-Hant",
+      "source": "手提行李限重6公斤。\n充電器不可放入託運行李。",
+      "critical": [
+        "6公斤",
+        "不可放入託運行李"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 24,
+      "asset": "heiti-medium-hant-baggage-24.png",
+      "width": 640,
+      "height": 122,
+      "pngSha256": "54393994b231a1272b8626ccfa026c3a27736be54f2b74f1dda3da468ad8a745",
+      "pixelSha256": "1e48a659cee4aaabc9bf60be0198c0c5e1054ddf2f1e97f6e0d88683a6f9a581",
+      "renderedLines": [
+        "手提行李限重6公斤。",
+        "充電器不可放入託運行李。"
+      ]
+    },
+    {
+      "id": "hant-baggage",
+      "language": "zh-Hant",
+      "source": "手提行李限重6公斤。\n充電器不可放入託運行李。",
+      "critical": [
+        "6公斤",
+        "不可放入託運行李"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 32,
+      "asset": "heiti-medium-hant-baggage-32.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "ec28041062930f929eb486377c3cb983461b7c463fa10c8e39ca470375bc433b",
+      "pixelSha256": "4609c51800d38cb02634d0e09ec353e8e9264f34414915b58bc13e4e88cdff96",
+      "renderedLines": [
+        "手提行李限重6公斤。",
+        "充電器不可放入託運行李。"
+      ]
+    },
+    {
+      "id": "mixed-breakfast",
+      "language": "mixed",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "critical": [
+        "Room C",
+        "房间C",
+        "Chambre C",
+        "not included",
+        "不含早餐"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 16,
+      "asset": "heiti-medium-mixed-breakfast-16.png",
+      "width": 640,
+      "height": 106,
+      "pngSha256": "e4633018b305c1cdac6d384aafd14dd1a923e4975691159fc4a45372e6c64fdf",
+      "pixelSha256": "e1e630e03654aff998bc732bfbed23109f2d9e9b096e35726549c5bc630d943a",
+      "renderedLines": [
+        "Room C / 房间C / Chambre C",
+        "Breakfast not included / 不含早餐"
+      ]
+    },
+    {
+      "id": "mixed-breakfast",
+      "language": "mixed",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "critical": [
+        "Room C",
+        "房间C",
+        "Chambre C",
+        "not included",
+        "不含早餐"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 24,
+      "asset": "heiti-medium-mixed-breakfast-24.png",
+      "width": 640,
+      "height": 122,
+      "pngSha256": "f4ec54cb050c0bb01b58ee95cb5611d132fa9bae8547c2a2c5791e5634b53932",
+      "pixelSha256": "63ade48a016de89844d9af949ef8b5180f65ac87ac00ddb9921f82dc96160e42",
+      "renderedLines": [
+        "Room C / 房间C / Chambre C",
+        "Breakfast not included / 不含早餐"
+      ]
+    },
+    {
+      "id": "mixed-breakfast",
+      "language": "mixed",
+      "source": "Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐",
+      "critical": [
+        "Room C",
+        "房间C",
+        "Chambre C",
+        "not included",
+        "不含早餐"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 32,
+      "asset": "heiti-medium-mixed-breakfast-32.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "7e20fe94d4f6eb4e5d2a49fa19b3eb0d52aa3aae1414f6a4de2c3ea175ae43e2",
+      "pixelSha256": "ad0d4e989b4b7c8357ab5be50b96402d618d2e445de534eca47a0ac5d1c52a8c",
+      "renderedLines": [
+        "Room C / 房间C / Chambre C",
+        "Breakfast not included / 不含早餐"
+      ]
+    },
+    {
+      "id": "mixed-exit",
+      "language": "mixed",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "critical": [
+        "Exit 4",
+        "出口4",
+        "Sortie 4",
+        "Do not enter",
+        "請勿進入"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 16,
+      "asset": "heiti-medium-mixed-exit-16.png",
+      "width": 640,
+      "height": 106,
+      "pngSha256": "af13cdba98c50004e593cf87a52817b365f3566255dbf74078cf0ccf59f035cf",
+      "pixelSha256": "71cc64e5f25c1ad5a9e77c1e47bed349caa371f9143ac6441e257721d2d4840c",
+      "renderedLines": [
+        "Exit 4 / 出口4 / Sortie 4",
+        "Do not enter / 請勿進入"
+      ]
+    },
+    {
+      "id": "mixed-exit",
+      "language": "mixed",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "critical": [
+        "Exit 4",
+        "出口4",
+        "Sortie 4",
+        "Do not enter",
+        "請勿進入"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 24,
+      "asset": "heiti-medium-mixed-exit-24.png",
+      "width": 640,
+      "height": 122,
+      "pngSha256": "ac46d2d30a584a6cf1c05665d831d928a3e173ae64e12056ea57eecdf4620988",
+      "pixelSha256": "2d72de4188fb95e57028e213782d8dfdde2b5c391826a6fc5e83221bf3c86929",
+      "renderedLines": [
+        "Exit 4 / 出口4 / Sortie 4",
+        "Do not enter / 請勿進入"
+      ]
+    },
+    {
+      "id": "mixed-exit",
+      "language": "mixed",
+      "source": "Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入",
+      "critical": [
+        "Exit 4",
+        "出口4",
+        "Sortie 4",
+        "Do not enter",
+        "請勿進入"
+      ],
+      "font": "heiti-medium",
+      "fontPx": 32,
+      "asset": "heiti-medium-mixed-exit-32.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "f5e018cacf3b3897f444918bba1aeacb60c4cbd17d4e7c8b6c3e7a5e825e3faa",
+      "pixelSha256": "4aaf44fa24cef70b59c78693f667879ac3c7cb2e74ccf1743aef9764d36f5cc4",
+      "renderedLines": [
+        "Exit 4 / 出口4 / Sortie 4",
+        "Do not enter / 請勿進入"
+      ]
+    },
+    {
+      "id": "blank",
+      "language": "none",
+      "source": "",
+      "critical": [],
+      "font": "heiti-medium",
+      "fontPx": 24,
+      "asset": "heiti-medium-blank-24.png",
+      "width": 640,
+      "height": 93,
+      "pngSha256": "7dd6a16b1fef1d436f6a91735156f06489b5a4662ce2e23aa082cb811d9bd247",
+      "pixelSha256": "8de45d7bb30212fc1a229c52595222b1f4060596d5a93a2bc7181142e7b627e9",
+      "renderedLines": [
+        ""
+      ]
+    }
+  ]
+}

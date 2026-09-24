@@ -1,0 +1,12 @@
+{"schema":1,"fixtureVersion":"candidate-holdout-v2","scope":"project_authored_synthetic_only","cases":[
+{"id":"en-payment","language":"en","source":"Pay €47.60 today.\nDo not pay again.","critical":["€47.60","Do not pay again"]},
+{"id":"en-platform","language":"en","source":"Platform 6, departure 07:45.\nThis ticket is not refundable.","critical":["Platform 6","07:45","not refundable"]},
+{"id":"fr-deadline","language":"fr","source":"Aucun paiement aujourd’hui.\nÉchéance : 21/11 à 09:15.","critical":["Aucun paiement","21/11","09:15"]},
+{"id":"fr-cancellation","language":"fr","source":"Annulation gratuite avant 18:30.\nAprès cette heure : 12,50 €.","critical":["gratuite avant 18:30","12,50 €"]},
+{"id":"hans-payment","language":"zh-Hans","source":"应付36.80元，已含服务费。\n请勿重复付款。","critical":["36.80元","已含服务费","请勿重复付款"]},
+{"id":"hans-pickup","language":"zh-Hans","source":"取件码407216，有效至19:20。\n请不要把取件码告诉陌生人。","critical":["407216","19:20","不要"]},
+{"id":"hant-payment","language":"zh-Hant","source":"應付59.40元，未含城市稅。\n訂單確認後不可取消。","critical":["59.40元","未含城市稅","不可取消"]},
+{"id":"hant-baggage","language":"zh-Hant","source":"手提行李限重6公斤。\n充電器不可放入託運行李。","critical":["6公斤","不可放入託運行李"]},
+{"id":"mixed-breakfast","language":"mixed","source":"Room C / 房间C / Chambre C\nBreakfast not included / 不含早餐","critical":["Room C","房间C","Chambre C","not included","不含早餐"]},
+{"id":"mixed-exit","language":"mixed","source":"Exit 4 / 出口4 / Sortie 4\nDo not enter / 請勿進入","critical":["Exit 4","出口4","Sortie 4","Do not enter","請勿進入"]}
+]}
