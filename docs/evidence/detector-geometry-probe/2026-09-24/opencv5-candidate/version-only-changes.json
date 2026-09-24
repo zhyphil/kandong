@@ -1,0 +1,18 @@
+{
+  "modelprobe/build.gradle.kts": {
+    "beforeSha256": "29c9c509f5d3e85a393f9dccac6a9e56c624c2b95ed16d7d473b0240478f3ab6",
+    "afterSha256": "5dd671b064115d52a72b35285b634c8150e8a1a8fbc387eb1e6cb5434d722390"
+  },
+  "modelprobe/src/androidTest/java/com/kandong/modelprobe/OriginalImageProbeTest.kt": {
+    "beforeSha256": "ff450c2fb23e362144576f2ad54eab4a2e4862b811aee2e7fec4780bd77b0785",
+    "afterSha256": "c1b027401a044790b92b6e0f88147fc1ace8f5bb4012c59f769750407f261966"
+  },
+  "modelprobe/src/androidTest/java/com/kandong/modelprobe/DetectorGeometryProbeTest.kt": {
+    "beforeSha256": "b04821e10b3e487113d8f4e624d3de56c48bf515408578c63484f11f68a6d52a",
+    "afterSha256": "6968b7baf1c2c32d5356969985e470f9f858fe217f6b941f7b587a6c5795d78b"
+  },
+  "modelprobe/src/androidTest/assets/opencv-legal/NOTICE.txt": {
+    "beforeSha256": "acf24263609a93f9a44c8353627c3e1638b4bf48b3dccec18161a0c3296b6401",
+    "afterSha256": "f7b2dac35bcb96ac55e5b88efa0b434ec8a8a66b6e9cf281eda86eac4e4fc405"
+  }
+}

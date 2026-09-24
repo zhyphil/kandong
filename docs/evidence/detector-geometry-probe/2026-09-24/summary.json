@@ -1,0 +1,43 @@
+{
+  "scope": "Target Huawei synthetic masks/contour counts and reference-quadrilateral crops only; NOT detected boxes, unclip, recognition or real screens",
+  "testApkSha256": "0d6d524983ae57c922e40799c7e9c7000412d85dc49443686e7a2217f6d109e0",
+  "openCvArtifact": "org.opencv:opencv:5.0.0.1",
+  "deviceModel": "LIO-AN00",
+  "api": 31,
+  "runs": 2,
+  "testsPerRun": {
+    "regression": 7,
+    "geometry": 1
+  },
+  "repeatNonTimingReportsEqual": true,
+  "priorFourteenDetectorAndOriginalCaseResultsUnchangedIgnoringTiming": true,
+  "geometryCounts": {
+    "maskCases": 16,
+    "maskValues": 979968,
+    "dilationCases": 16,
+    "dilationValues": 979968,
+    "contourCounts": 16,
+    "crops": 13,
+    "cropBgrChannels": 139875,
+    "normalizedMatrices": 13,
+    "inverseMatrices": 13,
+    "frozenAssociations": 13,
+    "dimensionsAndRotation": 13,
+    "coordinateCases": 13,
+    "coordinateScalars": 832,
+    "guards": 16
+  },
+  "cropChangedChannels": 0,
+  "matBuffersReleasedPerGeometryRun": 2233,
+  "bitmapsRecycledPerGeometryRun": 31,
+  "geometryElapsedMs": [
+    1161,
+    1321
+  ],
+  "knownLimits": [
+    "API36 emulator native-load SIGILL unresolved; no dual-device acceptance",
+    "First combined eight-test run with 4.14 timed out at 180 seconds, unexplained; later split runs passed",
+    "Mat header lifetime and memory endurance untested",
+    "Full dependency notice review and APK size reduction pending; no product inclusion"
+  ]
+}

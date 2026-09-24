@@ -26,6 +26,7 @@ android {
     sourceSets.getByName("androidTest").java.srcDir("src/testShared/java")
     sourceSets.getByName("androidTest").assets.srcDir(rootProject.file("docs/fixtures/recognition-prep-v1"))
     sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("detector-assets"))
+    sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("geometry-assets"))
     sourceSets.getByName("test").resources {
         srcDir(rootProject.file("docs/fixtures/recognition-prep-v1"))
         srcDir("src/androidTest/assets")
@@ -36,7 +37,7 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test:runner:1.6.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
-    androidTestImplementation("org.opencv:opencv:4.14.0")
+    androidTestImplementation("org.opencv:opencv:5.0.0.1")
 }
 
 // This is deliberately task-time validation, never a configuration-time download.
@@ -208,13 +209,105 @@ val verifyOpenCvTestArtifact by tasks.registering {
     doLast {
         val artifacts = configurations.getByName("debugAndroidTestRuntimeClasspath").resolvedConfiguration.resolvedArtifacts
         val artifact = artifacts.single { it.moduleVersion.id.group == "org.opencv" && it.name == "opencv" }
-        check(artifact.moduleVersion.id.version == "4.14.0" && artifact.file.length() == 123_380_341L)
+        check(artifact.moduleVersion.id.version == "5.0.0.1" && artifact.file.length() == 153_027_846L)
         val digest = MessageDigest.getInstance("SHA-256")
         artifact.file.inputStream().use { input ->
             val buffer = ByteArray(8192)
             while (true) { val n = input.read(buffer); if (n < 0) break; digest.update(buffer, 0, n) }
         }
-        check(digest.digest().joinToString("") { "%02x".format(it) } == "6d11b40f6a54113dafe8540b1237b637193cb21e83deb11bc53d6757d35d494d")
+        check(digest.digest().joinToString("") { "%02x".format(it) } == "edb1406a223d2820460b8366a790238b400f5d5c9ea2e98d44b889f0f3c66849")
     }
 }
 tasks.matching { it.name == "preDebugAndroidTestBuild" }.configureEach { dependsOn(verifyOpenCvTestArtifact) }
+
+// Geometry is an independent androidTest namespace. Do NOT apply an include filter
+// to the shared assets SourceDirectorySet: doing so would remove older probe assets.
+val geometryManifestSha = "1aa14f2efb50e62c5a2d95b45b7d5b5044d4ec90afa47a976e8dea50bbe466a6"
+val geometryIds = listOf("en-quality-16", "fr-nonrefundable-16", "zh-hans-quality-16", "zh-hant-quality-16", "mixed-quality-16",
+    "blank-negative-24", "color-control", "wide-959", "wide-1499", "wide-2001", "threshold-equal", "below-box-score",
+    "tiny-negative", "two-blocks", "edge-touching", "vertical")
+val geometryCropCounts = listOf(1, 1, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 1)
+val geometryNames = geometryIds.flatMapIndexed { i, id ->
+    listOf("$id-source.png", "$id-probability.f32z", "$id-mask.u8z", "$id-dilated.u8z") +
+        List(geometryCropCounts[i]) { "$id-crop-${it.toString().padStart(2, '0')}.png" }
+}.toSet()
+val geometryRoot = rootProject.file("docs/fixtures/detector-geometry-v1")
+fun geometryAssetSpecs(): Map<String, DetectorAssetSpec> {
+    check(geometryNames.size == 77)
+    val manifestFile = geometryRoot.resolve("manifest.json")
+    check(manifestFile.isFile && manifestFile.length() in 1..131072L)
+    val manifest = DetectorAssetSpec(manifestFile, manifestFile.length().toInt(), geometryManifestSha, 131072)
+    val m = groovy.json.JsonSlurper().parseText(String(detectorRead(manifest), Charsets.UTF_8)) as Map<*, *>
+    check((m["schema"] as Number).toInt() == 1 && m["parentManifestSha256"] == detectorManifestSha)
+    val files = m["files"] as Map<*, *>; check(files.keys == geometryNames)
+    val cases = m["cases"] as List<*>; check(cases.size == 16)
+    cases.forEachIndexed { i, entry ->
+        val c = entry as Map<*, *>; val id = geometryIds[i]; check(c["id"] == id)
+        check(c["source"] == "$id-source.png" && c["probability"] == "$id-probability.f32z" &&
+            c["mask"] == "$id-mask.u8z" && c["dilatedMask"] == "$id-dilated.u8z")
+        val shape = (c["probabilityShape"] as List<*>).map { (it as Number).toLong() }
+        check(shape.size == 4 && shape[0] == 1L && shape[1] == 1L && shape[2] in 1..4096L && shape[3] in 1..4096L)
+        val pixels = shape[2] * shape[3]; check(pixels in 1..1_048_576L)
+        mapOf("$id-probability.f32z" to pixels * 4, "$id-mask.u8z" to pixels, "$id-dilated.u8z" to pixels).forEach { (name, size) ->
+            check(((files[name] as Map<*, *>)["decodedBytes"] as Number).toLong() == size)
+        }
+        val rows = c["boxes"] as List<*>; check(rows.size == geometryCropCounts[i])
+        rows.forEachIndexed { rank, row ->
+            val r = row as Map<*, *>
+            check(r["crop"] == "$id-crop-${rank.toString().padStart(2, '0')}.png" && (r["readingOrder"] as Number).toInt() == rank)
+        }
+    }
+    val specs = linkedMapOf("manifest.json" to manifest)
+    geometryNames.forEach { name ->
+        val f = files[name] as Map<*, *>; val size = (f["bytes"] as Number).toLong()
+        check(size in 1..2_097_152L && (f["sha256"] as String).matches(Regex("[0-9a-f]{64}")))
+        if (name.endsWith(".png")) {
+            val w = (f["width"] as Number).toLong(); val h = (f["height"] as Number).toLong()
+            check(w in 1..4096L && h in 1..4096L && w * h <= 1_048_576L)
+            check((f["rawBgrSha256"] as String).matches(Regex("[0-9a-f]{64}")))
+        } else {
+            check((f["decodedBytes"] as Number).toLong() in 1..4_194_304L &&
+                (f["decodedSha256"] as String).matches(Regex("[0-9a-f]{64}")))
+        }
+        specs[name] = DetectorAssetSpec(geometryRoot.resolve(name), size.toInt(), f["sha256"] as String, 2_097_152)
+    }
+    check(geometryRoot.walkTopDown().filter { it.isFile }.map { it.relativeTo(geometryRoot).invariantSeparatorsPath }.toSet() == specs.keys)
+    return specs
+}
+val stageGeometryProbeAssets by tasks.registering(Sync::class) {
+    // Local copies exist ONLY under build/, and never in a committed assets directory.
+    from(rootProject.file("docs/fixtures")) {
+        include((geometryNames + "manifest.json").map { "detector-geometry-v1/$it" })
+    }
+    into(layout.buildDirectory.dir("geometry-assets"))
+    inputs.dir(geometryRoot) // Extra/missing files invalidate the task too.
+    inputs.property("frozenManifestSha256", geometryManifestSha)
+    doFirst { geometryAssetSpecs().values.forEach { detectorRead(it) } }
+    doLast {
+        val stagedRoot = layout.buildDirectory.dir("geometry-assets").get().asFile
+        val specs = geometryAssetSpecs()
+        check(stagedRoot.walkTopDown().filter { it.isFile }.map { it.relativeTo(stagedRoot).invariantSeparatorsPath }.toSet() ==
+            specs.keys.map { "detector-geometry-v1/$it" }.toSet())
+        specs.forEach { (name, spec) -> detectorRead(spec.copy(file = stagedRoot.resolve("detector-geometry-v1/$name"))) }
+    }
+}
+// Lint also reads androidTest asset outputs; declare the same producer dependency.
+// This remains limited to test-variant consumers, never preBuild/main/JVM tasks.
+tasks.matching { it.name in setOf("mergeDebugAndroidTestAssets", "packageDebugAndroidTest",
+    "generateDebugAndroidTestLintModel", "lintAnalyzeDebugAndroidTest") }.configureEach {
+    dependsOn(stageGeometryProbeAssets)
+}
+tasks.matching { it.name == "assembleDebugAndroidTest" }.configureEach {
+    doLast {
+        val expected = geometryAssetSpecs()
+        ZipFile(layout.buildDirectory.file("outputs/apk/androidTest/debug/modelprobe-debug-androidTest.apk").get().asFile).use { apk ->
+            val entries = apk.entries().asSequence().filter { !it.isDirectory && it.name.startsWith("assets/detector-geometry-v1/") }.toList()
+            check(entries.size == 78 && entries.map { it.name }.toSet() == expected.keys.map { "assets/detector-geometry-v1/$it" }.toSet())
+            expected.forEach { (name, spec) ->
+                val entry = apk.getEntry("assets/detector-geometry-v1/$name"); check(entry.size == spec.bytes.toLong())
+                val delivered = apk.getInputStream(entry).use { it.readNBytes(spec.bytes + 1) }
+                check(delivered.contentEquals(detectorRead(spec))) { "Packaged geometry bytes changed: $name" }
+            }
+        }
+    }
+}

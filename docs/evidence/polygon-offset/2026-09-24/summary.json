@@ -1,0 +1,13 @@
+{
+  "scope": "host diagnostic only; no dependency adoption or Android acceptance",
+  "unmodifiedCandidateCases": 11,
+  "unmodifiedMatches": 10,
+  "diagnosticModifiedCases": 11,
+  "diagnosticModifiedMatches": 11,
+  "diagnosticPatch": "ClipperOffset.java only: replace Math.round(x) with (long)(x < 0 ? x - 0.5 : x + 0.5)",
+  "unmodifiedOffsetSha256": "cdade5cae7ea70cfd230d9134ce4f2e4407b864359c9f9ba9d0ae6de0ef6cf0e",
+  "diagnosticOffsetSha256": "6333a414dec1bd8bce787d6e8f7c7b0faa6a94bee29e8da2e0e53bba695fc8aa",
+  "javaTarget": "Java 8 bytecode, compiled/run on Temurin17 host",
+  "comparison": "polygon vertices exact up to cyclic rotation and reversed orientation; does not erase vertex differences",
+  "harnessSha256": "5a25bf881e5b7e7a3d1bb8f824f50e6985fcba1629cdb05111db886411424de0"
+}

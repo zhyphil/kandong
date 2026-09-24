@@ -110,7 +110,7 @@ internal class OriginalImageProbeTest : DetectorProbeTestSupport() {
     }
     private fun <T> withOpenCv(block: () -> T): T {
         check(OpenCVLoader.initLocal()) { "OPENCV_LOAD" }
-        check(Core.getVersionString() == "4.14.0") { "OPENCV_VERSION" }
+        check(Core.getVersionString() == "5.0.0") { "OPENCV_VERSION" }
         val previous = Core.getNumThreads()
         try { Core.setNumThreads(1); check(Core.getNumThreads() == 1); return block() }
         finally { Core.setNumThreads(previous) }
@@ -151,8 +151,8 @@ internal class OriginalImageProbeTest : DetectorProbeTestSupport() {
             .put("scope", "synthetic_original_PNG_resize_pack_detector_only_not_boxes_crops_OCR_quality_or_real_screens")
             .put("fixtureManifestSha256", DetectorProbeInputs.MANIFEST_SHA).put("modelSha256", DetectorProbeInputs.MODEL_SHA)
             .put("api", Build.VERSION.SDK_INT).put("deviceModel", Build.MODEL).put("abis", JSONArray(Build.SUPPORTED_ABIS.toList()))
-            .put("openCvArtifact", "org.opencv:opencv:4.14.0")
-            .put("openCvAarSha256", "6d11b40f6a54113dafe8540b1237b637193cb21e83deb11bc53d6757d35d494d")
+            .put("openCvArtifact", "org.opencv:opencv:5.0.0.1")
+            .put("openCvAarSha256", "edb1406a223d2820460b8366a790238b400f5d5c9ea2e98d44b889f0f3c66849")
             .put("sourceDecode", "BitmapFactory ARGB_8888 sRGB inScaled=false; raw BGR hash authenticated")
             .put("acceptance", JSONObject().put("openCvPixelDifferences", 0).put("openCvInputBitDifferences", 0)
                 .put("absoluteTolerance", DetectorComparison.ATOL).put("relativeTolerance", DetectorComparison.RTOL)

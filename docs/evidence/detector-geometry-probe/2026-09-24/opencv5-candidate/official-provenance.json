@@ -1,0 +1,39 @@
+{
+  "artifact": "org.opencv:opencv:5.0.0.1",
+  "bytes": 153027846,
+  "sha256": "edb1406a223d2820460b8366a790238b400f5d5c9ea2e98d44b889f0f3c66849",
+  "publishedChecksum": "edb1406a223d2820460b8366a790238b400f5d5c9ea2e98d44b889f0f3c66849",
+  "checksumUrl": "https://repo.maven.apache.org/maven2/org/opencv/opencv/5.0.0.1/opencv-5.0.0.1.aar.sha256",
+  "sources": [
+    {
+      "file": "5.0.0-warp_kernels.simd.hpp",
+      "sha256": "c309d7f941ae6cdb232597787f71ab4f014f6371b2caf94aba49d04b61ed690e",
+      "url": "https://raw.githubusercontent.com/opencv/opencv/5.0.0/modules/imgproc/src/warp_kernels.simd.hpp"
+    },
+    {
+      "file": "4.14.0-imgwarp.simd.hpp",
+      "sha256": "7598a72e79718402d9fc4c44c2ac621a6335a1a68315aba157174efb401c2fcb",
+      "url": "https://raw.githubusercontent.com/opencv/opencv/4.14.0/modules/imgproc/src/imgwarp.simd.hpp"
+    },
+    {
+      "file": "diff.txt",
+      "sha256": "49b0af98742c689341d78517724363a61ef5350217aa9a5ba7259c1d89c3bb81",
+      "origin": "local unified diff, not an upstream source"
+    },
+    {
+      "file": "5.0.0-imgwarp.cpp",
+      "sha256": "f1c72130bbd23635e08176b8936339713372e115ffd3d30800aa81f13415329f",
+      "url": "https://raw.githubusercontent.com/opencv/opencv/5.0.0/modules/imgproc/src/imgwarp.cpp"
+    },
+    {
+      "file": "4.14.0-imgwarp.cpp",
+      "sha256": "d953cdd11db1bf7b562ba7cfb8b36f2aba3198f15714e5deb40840b01ae77912",
+      "url": "https://raw.githubusercontent.com/opencv/opencv/4.14.0/modules/imgproc/src/imgwarp.cpp"
+    },
+    {
+      "file": "opencv5-LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "url": "https://raw.githubusercontent.com/opencv/opencv/5.0.0/LICENSE"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+
+> Configure project :modelprobe
+w: file:///Users/haoyuzuo/Projects/KanDong/modelprobe/build.gradle.kts:24:21: 'jvmTarget: String' is deprecated. Please migrate to the compilerOptions DSL. More details are here: https://kotl.in/u1r8ln
+
+> Task :modelprobe:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :modelprobe:validateProbeAssets
+> Task :modelprobe:preBuild
+> Task :modelprobe:preDebugBuild
+> Task :modelprobe:checkDebugAarMetadata UP-TO-DATE
+> Task :modelprobe:processDebugNavigationResources UP-TO-DATE
+> Task :modelprobe:compileDebugNavigationResources UP-TO-DATE
+> Task :modelprobe:generateDebugResValues UP-TO-DATE
+> Task :modelprobe:mapDebugSourceSetPaths UP-TO-DATE
+> Task :modelprobe:generateDebugResources UP-TO-DATE
+> Task :modelprobe:mergeDebugResources UP-TO-DATE
+> Task :modelprobe:packageDebugResources UP-TO-DATE
+> Task :modelprobe:parseDebugLocalResources UP-TO-DATE
+> Task :modelprobe:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :modelprobe:extractDeepLinksDebug UP-TO-DATE
+> Task :modelprobe:processDebugMainManifest UP-TO-DATE
+> Task :modelprobe:processDebugManifest UP-TO-DATE
+> Task :modelprobe:processDebugManifestForPackage UP-TO-DATE
+> Task :modelprobe:processDebugResources UP-TO-DATE
+> Task :modelprobe:compileDebugKotlin UP-TO-DATE
+> Task :modelprobe:javaPreCompileDebug UP-TO-DATE
+> Task :modelprobe:compileDebugJavaWithJavac NO-SOURCE
+> Task :modelprobe:bundleDebugClassesToRuntimeJar UP-TO-DATE
+> Task :modelprobe:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :modelprobe:compileDebugUnitTestKotlin UP-TO-DATE
+> Task :modelprobe:preDebugUnitTestBuild
+> Task :modelprobe:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :modelprobe:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :modelprobe:processDebugJavaRes UP-TO-DATE
+> Task :modelprobe:processDebugUnitTestJavaRes
+> Task :modelprobe:testDebugUnitTest
+> Task :modelprobe:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :modelprobe:mergeDebugShaders UP-TO-DATE
+> Task :modelprobe:compileDebugShaders NO-SOURCE
+> Task :modelprobe:generateDebugAssets UP-TO-DATE
+> Task :modelprobe:mergeDebugAssets UP-TO-DATE
+> Task :modelprobe:compressDebugAssets UP-TO-DATE
+> Task :modelprobe:desugarDebugFileDependencies UP-TO-DATE
+> Task :modelprobe:dexBuilderDebug UP-TO-DATE
+> Task :modelprobe:mergeDebugGlobalSynthetics UP-TO-DATE
+> Task :modelprobe:mergeDebugJavaResource UP-TO-DATE
+> Task :modelprobe:checkDebugDuplicateClasses UP-TO-DATE
+> Task :modelprobe:mergeExtDexDebug UP-TO-DATE
+> Task :modelprobe:mergeLibDexDebug UP-TO-DATE
+> Task :modelprobe:mergeProjectDexDebug UP-TO-DATE
+> Task :modelprobe:mergeDebugJniLibFolders UP-TO-DATE
+> Task :modelprobe:mergeDebugNativeLibs UP-TO-DATE
+> Task :modelprobe:stripDebugDebugSymbols UP-TO-DATE
+> Task :modelprobe:validateSigningDebug UP-TO-DATE
+> Task :modelprobe:writeDebugAppMetadata UP-TO-DATE
+> Task :modelprobe:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :modelprobe:packageDebug UP-TO-DATE
+> Task :modelprobe:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :modelprobe:assembleDebug
+> Task :modelprobe:verifyOpenCvTestArtifact
+> Task :modelprobe:preDebugAndroidTestBuild SKIPPED
+> Task :modelprobe:checkDebugAndroidTestAarMetadata UP-TO-DATE
+> Task :modelprobe:processDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :modelprobe:compileDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :modelprobe:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :modelprobe:mapDebugAndroidTestSourceSetPaths UP-TO-DATE
+> Task :modelprobe:generateDebugAndroidTestResources UP-TO-DATE
+> Task :modelprobe:mergeDebugAndroidTestResources UP-TO-DATE
+> Task :modelprobe:processDebugAndroidTestManifest UP-TO-DATE
+> Task :modelprobe:processDebugAndroidTestResources UP-TO-DATE
+> Task :modelprobe:javaPreCompileDebugAndroidTest UP-TO-DATE
+> Task :modelprobe:mergeDebugAndroidTestShaders UP-TO-DATE
+> Task :modelprobe:compileDebugAndroidTestShaders NO-SOURCE
+> Task :modelprobe:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :modelprobe:stageGeometryProbeAssets
+> Task :modelprobe:validateDetectorProbeAssets
+> Task :modelprobe:mergeDebugAndroidTestAssets
+> Task :modelprobe:desugarDebugAndroidTestFileDependencies UP-TO-DATE
+> Task :modelprobe:compressDebugAndroidTestAssets
+> Task :modelprobe:mergeDebugAndroidTestJniLibFolders UP-TO-DATE
+> Task :modelprobe:validateSigningDebugAndroidTest UP-TO-DATE
+> Task :modelprobe:writeDebugAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :modelprobe:checkDebugAndroidTestDuplicateClasses
+
+> Task :modelprobe:compileDebugAndroidTestKotlin FAILED
+e: file:///Users/haoyuzuo/Projects/KanDong/modelprobe/src/androidTest/java/com/kandong/modelprobe/GeometryOpenCvProbe.kt:110:31 Cannot infer type for type parameter 'T'. Specify it explicitly.
+e: file:///Users/haoyuzuo/Projects/KanDong/modelprobe/src/androidTest/java/com/kandong/modelprobe/GeometryOpenCvProbe.kt:110:57 Unresolved reference 'getPerspectiveTransform'.
+e: file:///Users/haoyuzuo/Projects/KanDong/modelprobe/src/androidTest/java/com/kandong/modelprobe/GeometryOpenCvProbe.kt:112:26 Unresolved reference 'rows'.
+e: file:///Users/haoyuzuo/Projects/KanDong/modelprobe/src/androidTest/java/com/kandong/modelprobe/GeometryOpenCvProbe.kt:112:48 Unresolved reference 'cols'.
+e: file:///Users/haoyuzuo/Projects/KanDong/modelprobe/src/androidTest/java/com/kandong/modelprobe/GeometryOpenCvProbe.kt:112:70 Unresolved reference 'type'.
+e: file:///Users/haoyuzuo/Projects/KanDong/modelprobe/src/androidTest/java/com/kandong/modelprobe/GeometryOpenCvProbe.kt:113:48 Operator '==' cannot be applied to 'MatchGroup?' and 'Int'.
+e: file:///Users/haoyuzuo/Projects/KanDong/modelprobe/src/androidTest/java/com/kandong/modelprobe/GeometryOpenCvProbe.kt:113:59 Argument type mismatch: actual type is 'Int', but 'String' was expected.
+e: file:///Users/haoyuzuo/Projects/KanDong/modelprobe/src/androidTest/java/com/kandong/modelprobe/GeometryOpenCvProbe.kt:113:62 Too many arguments for 'fun MatchGroupCollection.get(name: String): MatchGroup?'.
+e: file:///Users/haoyuzuo/Projects/KanDong/modelprobe/src/androidTest/java/com/kandong/modelprobe/GeometryOpenCvProbe.kt:113:65 Too many arguments for 'fun MatchGroupCollection.get(name: String): MatchGroup?'.
+
+> Task :modelprobe:mergeDebugAndroidTestNativeLibs
+> Task :modelprobe:generateDebugAndroidTestLintModel
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':modelprobe:compileDebugAndroidTestKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 4s
+69 actionable tasks: 13 executed, 56 up-to-date

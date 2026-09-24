@@ -1,0 +1,7 @@
+{
+  "timeoutSeconds": 180,
+  "scope": "first combined8test attempt",
+  "accepted": false,
+  "observed": "detector report generated, original and geometry reports absent at progress check; process stopped by harness finally",
+  "cause": "unresolved; subsequent separate old7 completed and new1 produced detailed parity failure; do not claim underlying cause"
+}

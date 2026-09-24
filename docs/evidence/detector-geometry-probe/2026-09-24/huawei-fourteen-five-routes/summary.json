@@ -1,0 +1,115 @@
+{
+  "runs": [
+    {
+      "route": "DEFAULT",
+      "runId": "3401a56a-2df8-4c18-9950-2e58de436f31",
+      "fullComparisonCounts": true,
+      "guardsPassed": true,
+      "cleanupBalanced": true,
+      "passed": false,
+      "failure": {
+        "comparedValues": 12078,
+        "actualValues": 12078,
+        "referenceValues": 12078,
+        "changedValues": 2067,
+        "lengthDifference": 0,
+        "maxAbs": 5,
+        "meanAbs": 0.3042722305017387,
+        "passed": false,
+        "changedBgrChannels": 2067,
+        "actualBgrSha256": "da65d706c42d2488f8e4118b002d4e6b9922a19499f71c19cb03e3c0df85b4dd",
+        "referenceBgrSha256": "a9273c2cb3b7b1df4e2c56d7f2ad2359a8777407dd594c82d781254561beea6b"
+      },
+      "elapsedMs": 1156
+    },
+    {
+      "route": "UNOPTIMIZED",
+      "runId": "82d5c1c3-34a8-4d66-a0f0-761810d9c7c0",
+      "fullComparisonCounts": true,
+      "guardsPassed": true,
+      "cleanupBalanced": true,
+      "passed": false,
+      "failure": {
+        "comparedValues": 12078,
+        "actualValues": 12078,
+        "referenceValues": 12078,
+        "changedValues": 2067,
+        "lengthDifference": 0,
+        "maxAbs": 5,
+        "meanAbs": 0.3042722305017387,
+        "passed": false,
+        "changedBgrChannels": 2067,
+        "actualBgrSha256": "da65d706c42d2488f8e4118b002d4e6b9922a19499f71c19cb03e3c0df85b4dd",
+        "referenceBgrSha256": "a9273c2cb3b7b1df4e2c56d7f2ad2359a8777407dd594c82d781254561beea6b"
+      },
+      "elapsedMs": 1179
+    },
+    {
+      "route": "FOUR_CHANNEL",
+      "runId": "fd466982-cc76-48e3-8a53-9a9262b98a74",
+      "fullComparisonCounts": true,
+      "guardsPassed": true,
+      "cleanupBalanced": true,
+      "passed": false,
+      "failure": {
+        "comparedValues": 12078,
+        "actualValues": 12078,
+        "referenceValues": 12078,
+        "changedValues": 2067,
+        "lengthDifference": 0,
+        "maxAbs": 5,
+        "meanAbs": 0.3042722305017387,
+        "passed": false,
+        "changedBgrChannels": 2067,
+        "actualBgrSha256": "da65d706c42d2488f8e4118b002d4e6b9922a19499f71c19cb03e3c0df85b4dd",
+        "referenceBgrSha256": "a9273c2cb3b7b1df4e2c56d7f2ad2359a8777407dd594c82d781254561beea6b"
+      },
+      "elapsedMs": 1204
+    },
+    {
+      "route": "EXPLICIT_INVERSE",
+      "runId": "c8bf8cc6-7683-44c7-8eec-51760dd88b74",
+      "fullComparisonCounts": true,
+      "guardsPassed": true,
+      "cleanupBalanced": true,
+      "passed": false,
+      "failure": {
+        "comparedValues": 12078,
+        "actualValues": 12078,
+        "referenceValues": 12078,
+        "changedValues": 2067,
+        "lengthDifference": 0,
+        "maxAbs": 5,
+        "meanAbs": 0.3042722305017387,
+        "passed": false,
+        "changedBgrChannels": 2067,
+        "actualBgrSha256": "da65d706c42d2488f8e4118b002d4e6b9922a19499f71c19cb03e3c0df85b4dd",
+        "referenceBgrSha256": "a9273c2cb3b7b1df4e2c56d7f2ad2359a8777407dd594c82d781254561beea6b"
+      },
+      "elapsedMs": 1508
+    },
+    {
+      "route": "REMAP_FLOAT",
+      "runId": "cdca2539-8256-4ee2-8d5d-2c70714e0c19",
+      "fullComparisonCounts": true,
+      "guardsPassed": true,
+      "cleanupBalanced": true,
+      "passed": false,
+      "failure": {
+        "comparedValues": 12078,
+        "actualValues": 12078,
+        "referenceValues": 12078,
+        "changedValues": 2067,
+        "lengthDifference": 0,
+        "maxAbs": 5,
+        "meanAbs": 0.3042722305017387,
+        "passed": false,
+        "changedBgrChannels": 2067,
+        "actualBgrSha256": "da65d706c42d2488f8e4118b002d4e6b9922a19499f71c19cb03e3c0df85b4dd",
+        "referenceBgrSha256": "a9273c2cb3b7b1df4e2c56d7f2ad2359a8777407dd594c82d781254561beea6b"
+      },
+      "elapsedMs": 1188
+    }
+  ],
+  "sameFailingCropHash": true
+}

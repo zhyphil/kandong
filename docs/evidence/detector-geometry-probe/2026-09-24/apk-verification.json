@@ -1,0 +1,101 @@
+{
+  "mainApkSha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+  "testApkSha256": "d8ae5fc259b951c0cc63e755263cad83811997b559ae46e62e832bf226e04478",
+  "testApkBytes": 186885557,
+  "testManifest": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    android:compileSdkVersion=\"36\"\n    android:compileSdkVersionCodename=\"16\"\n    package=\"com.kandong.modelprobe.test\"\n    platformBuildVersionCode=\"36\"\n    platformBuildVersionName=\"16\">\n\n    <uses-sdk\n        android:minSdkVersion=\"29\"\n        android:targetSdkVersion=\"36\" />\n\n    <instrumentation\n        android:label=\"Tests for com.kandong.modelprobe\"\n        android:name=\"androidx.test.runner.AndroidJUnitRunner\"\n        android:targetPackage=\"com.kandong.modelprobe\"\n        android:handleProfiling=\"false\"\n        android:functionalTest=\"false\" />\n\n    <queries>\n\n        <package\n            android:name=\"androidx.test.orchestrator\" />\n\n        <package\n            android:name=\"androidx.test.services\" />\n\n        <package\n            android:name=\"com.google.android.apps.common.testing.services\" />\n    </queries>\n\n    <application\n        android:label=\"看懂缩放验证\"\n        android:debuggable=\"true\"\n        android:extractNativeLibs=\"false\">\n\n        <uses-library\n            android:name=\"android.test.runner\" />\n    </application>\n</manifest>\n",
+  "priorDetectorAndLegalFilesVerified": 72,
+  "priorResizeAssetsVerified": 44,
+  "geometryAssetsVerified": 78,
+  "openCvNativeEntries": [
+    {
+      "path": "lib/arm64-v8a/libc++_shared.so",
+      "bytes": 1292904,
+      "sha256": "4397241b4bd20a8e579bfb41d21107857e12985f6a01ca0c2a5f83380d1270b4"
+    },
+    {
+      "path": "lib/armeabi-v7a/libc++_shared.so",
+      "bytes": 872872,
+      "sha256": "91b49f121b3120538faff020fcf535ade1d945e65ccd793fc0b815b5799bbdf0"
+    },
+    {
+      "path": "lib/x86/libc++_shared.so",
+      "bytes": 1254988,
+      "sha256": "318e833e6f7ec76cc73303da68004ebd63a1bbedd754e30440c78a90d80504d3"
+    },
+    {
+      "path": "lib/x86_64/libc++_shared.so",
+      "bytes": 1252080,
+      "sha256": "db9609240e60ca18b816a5e95a6bbc784e799261efbd5b30c8e2e03b540b3fa8"
+    },
+    {
+      "path": "lib/arm64-v8a/libopencv_java4.so",
+      "bytes": 24657160,
+      "sha256": "b5c79265a2634aee120d78fd0aebf39b53906d12bb9b87fa5e2d61818ca98af7"
+    },
+    {
+      "path": "lib/armeabi-v7a/libopencv_java4.so",
+      "bytes": 16050808,
+      "sha256": "abe97377c384ad7a8f9d1775e6ebbb47f54d64b3bd4f1d5637a07d4758406c1b"
+    },
+    {
+      "path": "lib/x86/libopencv_java4.so",
+      "bytes": 45338344,
+      "sha256": "2013d64781ba224cfcfcd0241d4858054e1614769327935870af97a0956fb8bd"
+    },
+    {
+      "path": "lib/x86_64/libopencv_java4.so",
+      "bytes": 60525192,
+      "sha256": "672945874e20bdffcf5b0bf88fe6546bf528a54277912feb102a14ab1a4a6cfc"
+    }
+  ],
+  "mainNoOpenCv": true,
+  "protectedFilesUnchanged": 382,
+  "unitTests": [
+    {
+      "name": "com.kandong.modelprobe.ProbeInputsTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.kandong.modelprobe.CtcDecoderTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.kandong.modelprobe.RecognitionPackingTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.kandong.modelprobe.DetectorPackingTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.kandong.modelprobe.GeometryProbeGuardTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.kandong.modelprobe.ProbeGateTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "lint": {
+    "errors": 0,
+    "warnings": 7
+  }
+}

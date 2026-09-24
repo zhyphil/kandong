@@ -1,0 +1,590 @@
+{
+  "hostOpenCv": "5.0.0",
+  "cases": [
+    {
+      "id": "en-quality-16.box-0",
+      "referenceHash": "cf447df56859abe0a361a7072d022f2abb5058d9ab9fe9fc1e3efae49df96e3a",
+      "routes": [
+        {
+          "route": "default",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "cf447df56859abe0a361a7072d022f2abb5058d9ab9fe9fc1e3efae49df96e3a"
+        },
+        {
+          "route": "no-optimized",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "cf447df56859abe0a361a7072d022f2abb5058d9ab9fe9fc1e3efae49df96e3a"
+        },
+        {
+          "route": "four-channels",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "cf447df56859abe0a361a7072d022f2abb5058d9ab9fe9fc1e3efae49df96e3a"
+        },
+        {
+          "route": "five-channels",
+          "error": "OpenCV(5.0.0) /Users/xperience/GHA-OpenCV-Python/_work/opencv-python/opencv-python/opencv/modules/imgproc/src/imgwarp.cpp:1643: error: (-5:Bad argument) Unknown interpolation method in function 'remap'\n"
+        },
+        {
+          "route": "inverse-explicit",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "cf447df56859abe0a361a7072d022f2abb5058d9ab9fe9fc1e3efae49df96e3a"
+        },
+        {
+          "route": "remap-f32",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "cf447df56859abe0a361a7072d022f2abb5058d9ab9fe9fc1e3efae49df96e3a"
+        }
+      ]
+    },
+    {
+      "id": "fr-nonrefundable-16.box-0",
+      "referenceHash": "21d6f4ce136f5b3d1f31f2c82eee7051d1243ad46de91a343745314634b42088",
+      "routes": [
+        {
+          "route": "default",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "21d6f4ce136f5b3d1f31f2c82eee7051d1243ad46de91a343745314634b42088"
+        },
+        {
+          "route": "no-optimized",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "21d6f4ce136f5b3d1f31f2c82eee7051d1243ad46de91a343745314634b42088"
+        },
+        {
+          "route": "four-channels",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "21d6f4ce136f5b3d1f31f2c82eee7051d1243ad46de91a343745314634b42088"
+        },
+        {
+          "route": "five-channels",
+          "error": "OpenCV(5.0.0) /Users/xperience/GHA-OpenCV-Python/_work/opencv-python/opencv-python/opencv/modules/imgproc/src/imgwarp.cpp:1643: error: (-5:Bad argument) Unknown interpolation method in function 'remap'\n"
+        },
+        {
+          "route": "inverse-explicit",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "21d6f4ce136f5b3d1f31f2c82eee7051d1243ad46de91a343745314634b42088"
+        },
+        {
+          "route": "remap-f32",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "21d6f4ce136f5b3d1f31f2c82eee7051d1243ad46de91a343745314634b42088"
+        }
+      ]
+    },
+    {
+      "id": "zh-hans-quality-16.box-1",
+      "referenceHash": "10d4b67dd0458cc12c0528ce8059dc5662cee51c81465832ff3710440ff56b0b",
+      "routes": [
+        {
+          "route": "default",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "10d4b67dd0458cc12c0528ce8059dc5662cee51c81465832ff3710440ff56b0b"
+        },
+        {
+          "route": "no-optimized",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "10d4b67dd0458cc12c0528ce8059dc5662cee51c81465832ff3710440ff56b0b"
+        },
+        {
+          "route": "four-channels",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "10d4b67dd0458cc12c0528ce8059dc5662cee51c81465832ff3710440ff56b0b"
+        },
+        {
+          "route": "five-channels",
+          "error": "OpenCV(5.0.0) /Users/xperience/GHA-OpenCV-Python/_work/opencv-python/opencv-python/opencv/modules/imgproc/src/imgwarp.cpp:1643: error: (-5:Bad argument) Unknown interpolation method in function 'remap'\n"
+        },
+        {
+          "route": "inverse-explicit",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "10d4b67dd0458cc12c0528ce8059dc5662cee51c81465832ff3710440ff56b0b"
+        },
+        {
+          "route": "remap-f32",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "10d4b67dd0458cc12c0528ce8059dc5662cee51c81465832ff3710440ff56b0b"
+        }
+      ]
+    },
+    {
+      "id": "zh-hans-quality-16.box-0",
+      "referenceHash": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335",
+      "routes": [
+        {
+          "route": "default",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335"
+        },
+        {
+          "route": "no-optimized",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335"
+        },
+        {
+          "route": "four-channels",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335"
+        },
+        {
+          "route": "five-channels",
+          "error": "OpenCV(5.0.0) /Users/xperience/GHA-OpenCV-Python/_work/opencv-python/opencv-python/opencv/modules/imgproc/src/imgwarp.cpp:1643: error: (-5:Bad argument) Unknown interpolation method in function 'remap'\n"
+        },
+        {
+          "route": "inverse-explicit",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335"
+        },
+        {
+          "route": "remap-f32",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335"
+        }
+      ]
+    },
+    {
+      "id": "zh-hant-quality-16.box-1",
+      "referenceHash": "a9273c2cb3b7b1df4e2c56d7f2ad2359a8777407dd594c82d781254561beea6b",
+      "routes": [
+        {
+          "route": "default",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "a9273c2cb3b7b1df4e2c56d7f2ad2359a8777407dd594c82d781254561beea6b"
+        },
+        {
+          "route": "no-optimized",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "a9273c2cb3b7b1df4e2c56d7f2ad2359a8777407dd594c82d781254561beea6b"
+        },
+        {
+          "route": "four-channels",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "a9273c2cb3b7b1df4e2c56d7f2ad2359a8777407dd594c82d781254561beea6b"
+        },
+        {
+          "route": "five-channels",
+          "error": "OpenCV(5.0.0) /Users/xperience/GHA-OpenCV-Python/_work/opencv-python/opencv-python/opencv/modules/imgproc/src/imgwarp.cpp:1643: error: (-5:Bad argument) Unknown interpolation method in function 'remap'\n"
+        },
+        {
+          "route": "inverse-explicit",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "a9273c2cb3b7b1df4e2c56d7f2ad2359a8777407dd594c82d781254561beea6b"
+        },
+        {
+          "route": "remap-f32",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "a9273c2cb3b7b1df4e2c56d7f2ad2359a8777407dd594c82d781254561beea6b"
+        }
+      ]
+    },
+    {
+      "id": "zh-hant-quality-16.box-0",
+      "referenceHash": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335",
+      "routes": [
+        {
+          "route": "default",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335"
+        },
+        {
+          "route": "no-optimized",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335"
+        },
+        {
+          "route": "four-channels",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335"
+        },
+        {
+          "route": "five-channels",
+          "error": "OpenCV(5.0.0) /Users/xperience/GHA-OpenCV-Python/_work/opencv-python/opencv-python/opencv/modules/imgproc/src/imgwarp.cpp:1643: error: (-5:Bad argument) Unknown interpolation method in function 'remap'\n"
+        },
+        {
+          "route": "inverse-explicit",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335"
+        },
+        {
+          "route": "remap-f32",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335"
+        }
+      ]
+    },
+    {
+      "id": "mixed-quality-16.box-2",
+      "referenceHash": "ca53b4fc5f377c96bbd6e02f7b846cb324fffe20720ebede9b4dd74a13963422",
+      "routes": [
+        {
+          "route": "default",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "ca53b4fc5f377c96bbd6e02f7b846cb324fffe20720ebede9b4dd74a13963422"
+        },
+        {
+          "route": "no-optimized",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "ca53b4fc5f377c96bbd6e02f7b846cb324fffe20720ebede9b4dd74a13963422"
+        },
+        {
+          "route": "four-channels",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "ca53b4fc5f377c96bbd6e02f7b846cb324fffe20720ebede9b4dd74a13963422"
+        },
+        {
+          "route": "five-channels",
+          "error": "OpenCV(5.0.0) /Users/xperience/GHA-OpenCV-Python/_work/opencv-python/opencv-python/opencv/modules/imgproc/src/imgwarp.cpp:1643: error: (-5:Bad argument) Unknown interpolation method in function 'remap'\n"
+        },
+        {
+          "route": "inverse-explicit",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "ca53b4fc5f377c96bbd6e02f7b846cb324fffe20720ebede9b4dd74a13963422"
+        },
+        {
+          "route": "remap-f32",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "ca53b4fc5f377c96bbd6e02f7b846cb324fffe20720ebede9b4dd74a13963422"
+        }
+      ]
+    },
+    {
+      "id": "mixed-quality-16.box-1",
+      "referenceHash": "fee25a7dd0410e67b4210c9100ae043bd8b3e237d03574401d7110e0cb284911",
+      "routes": [
+        {
+          "route": "default",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "fee25a7dd0410e67b4210c9100ae043bd8b3e237d03574401d7110e0cb284911"
+        },
+        {
+          "route": "no-optimized",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "fee25a7dd0410e67b4210c9100ae043bd8b3e237d03574401d7110e0cb284911"
+        },
+        {
+          "route": "four-channels",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "fee25a7dd0410e67b4210c9100ae043bd8b3e237d03574401d7110e0cb284911"
+        },
+        {
+          "route": "five-channels",
+          "error": "OpenCV(5.0.0) /Users/xperience/GHA-OpenCV-Python/_work/opencv-python/opencv-python/opencv/modules/imgproc/src/imgwarp.cpp:1643: error: (-5:Bad argument) Unknown interpolation method in function 'remap'\n"
+        },
+        {
+          "route": "inverse-explicit",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "fee25a7dd0410e67b4210c9100ae043bd8b3e237d03574401d7110e0cb284911"
+        },
+        {
+          "route": "remap-f32",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "fee25a7dd0410e67b4210c9100ae043bd8b3e237d03574401d7110e0cb284911"
+        }
+      ]
+    },
+    {
+      "id": "mixed-quality-16.box-0",
+      "referenceHash": "3590e94e4f545491b33a76e8c06a4a819c2cc970dd77a49c10416afd61840e5a",
+      "routes": [
+        {
+          "route": "default",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "3590e94e4f545491b33a76e8c06a4a819c2cc970dd77a49c10416afd61840e5a"
+        },
+        {
+          "route": "no-optimized",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "3590e94e4f545491b33a76e8c06a4a819c2cc970dd77a49c10416afd61840e5a"
+        },
+        {
+          "route": "four-channels",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "3590e94e4f545491b33a76e8c06a4a819c2cc970dd77a49c10416afd61840e5a"
+        },
+        {
+          "route": "five-channels",
+          "error": "OpenCV(5.0.0) /Users/xperience/GHA-OpenCV-Python/_work/opencv-python/opencv-python/opencv/modules/imgproc/src/imgwarp.cpp:1643: error: (-5:Bad argument) Unknown interpolation method in function 'remap'\n"
+        },
+        {
+          "route": "inverse-explicit",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "3590e94e4f545491b33a76e8c06a4a819c2cc970dd77a49c10416afd61840e5a"
+        },
+        {
+          "route": "remap-f32",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "3590e94e4f545491b33a76e8c06a4a819c2cc970dd77a49c10416afd61840e5a"
+        }
+      ]
+    },
+    {
+      "id": "two-blocks.box-1",
+      "referenceHash": "4c0a6f00526c49d5beaa29582c84829478e2cd0b4e84128620ef07015bc0e9c8",
+      "routes": [
+        {
+          "route": "default",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "4c0a6f00526c49d5beaa29582c84829478e2cd0b4e84128620ef07015bc0e9c8"
+        },
+        {
+          "route": "no-optimized",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "4c0a6f00526c49d5beaa29582c84829478e2cd0b4e84128620ef07015bc0e9c8"
+        },
+        {
+          "route": "four-channels",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "4c0a6f00526c49d5beaa29582c84829478e2cd0b4e84128620ef07015bc0e9c8"
+        },
+        {
+          "route": "five-channels",
+          "error": "OpenCV(5.0.0) /Users/xperience/GHA-OpenCV-Python/_work/opencv-python/opencv-python/opencv/modules/imgproc/src/imgwarp.cpp:1643: error: (-5:Bad argument) Unknown interpolation method in function 'remap'\n"
+        },
+        {
+          "route": "inverse-explicit",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "4c0a6f00526c49d5beaa29582c84829478e2cd0b4e84128620ef07015bc0e9c8"
+        },
+        {
+          "route": "remap-f32",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "4c0a6f00526c49d5beaa29582c84829478e2cd0b4e84128620ef07015bc0e9c8"
+        }
+      ]
+    },
+    {
+      "id": "two-blocks.box-0",
+      "referenceHash": "b2b821c2fd2fc084d2b76c20a7f54e3c47a02c5f12a1b10af3fd0a97d35c1c26",
+      "routes": [
+        {
+          "route": "default",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "b2b821c2fd2fc084d2b76c20a7f54e3c47a02c5f12a1b10af3fd0a97d35c1c26"
+        },
+        {
+          "route": "no-optimized",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "b2b821c2fd2fc084d2b76c20a7f54e3c47a02c5f12a1b10af3fd0a97d35c1c26"
+        },
+        {
+          "route": "four-channels",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "b2b821c2fd2fc084d2b76c20a7f54e3c47a02c5f12a1b10af3fd0a97d35c1c26"
+        },
+        {
+          "route": "five-channels",
+          "error": "OpenCV(5.0.0) /Users/xperience/GHA-OpenCV-Python/_work/opencv-python/opencv-python/opencv/modules/imgproc/src/imgwarp.cpp:1643: error: (-5:Bad argument) Unknown interpolation method in function 'remap'\n"
+        },
+        {
+          "route": "inverse-explicit",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "b2b821c2fd2fc084d2b76c20a7f54e3c47a02c5f12a1b10af3fd0a97d35c1c26"
+        },
+        {
+          "route": "remap-f32",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "b2b821c2fd2fc084d2b76c20a7f54e3c47a02c5f12a1b10af3fd0a97d35c1c26"
+        }
+      ]
+    },
+    {
+      "id": "edge-touching.box-0",
+      "referenceHash": "741ccb954e9d216b348558d30849437903d75e1c30aa5fd0cf8017dd72f87bb1",
+      "routes": [
+        {
+          "route": "default",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "741ccb954e9d216b348558d30849437903d75e1c30aa5fd0cf8017dd72f87bb1"
+        },
+        {
+          "route": "no-optimized",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "741ccb954e9d216b348558d30849437903d75e1c30aa5fd0cf8017dd72f87bb1"
+        },
+        {
+          "route": "four-channels",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "741ccb954e9d216b348558d30849437903d75e1c30aa5fd0cf8017dd72f87bb1"
+        },
+        {
+          "route": "five-channels",
+          "error": "OpenCV(5.0.0) /Users/xperience/GHA-OpenCV-Python/_work/opencv-python/opencv-python/opencv/modules/imgproc/src/imgwarp.cpp:1643: error: (-5:Bad argument) Unknown interpolation method in function 'remap'\n"
+        },
+        {
+          "route": "inverse-explicit",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "741ccb954e9d216b348558d30849437903d75e1c30aa5fd0cf8017dd72f87bb1"
+        },
+        {
+          "route": "remap-f32",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "741ccb954e9d216b348558d30849437903d75e1c30aa5fd0cf8017dd72f87bb1"
+        }
+      ]
+    },
+    {
+      "id": "vertical.box-0",
+      "referenceHash": "ac143c02b735563d41ff269664afd1ca579f15444336cdd775175db7717197de",
+      "routes": [
+        {
+          "route": "default",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "ac143c02b735563d41ff269664afd1ca579f15444336cdd775175db7717197de"
+        },
+        {
+          "route": "no-optimized",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "ac143c02b735563d41ff269664afd1ca579f15444336cdd775175db7717197de"
+        },
+        {
+          "route": "four-channels",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "ac143c02b735563d41ff269664afd1ca579f15444336cdd775175db7717197de"
+        },
+        {
+          "route": "five-channels",
+          "error": "OpenCV(5.0.0) /Users/xperience/GHA-OpenCV-Python/_work/opencv-python/opencv-python/opencv/modules/imgproc/src/imgwarp.cpp:1643: error: (-5:Bad argument) Unknown interpolation method in function 'remap'\n"
+        },
+        {
+          "route": "inverse-explicit",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "ac143c02b735563d41ff269664afd1ca579f15444336cdd775175db7717197de"
+        },
+        {
+          "route": "remap-f32",
+          "changedChannels": 0,
+          "maxError": 0,
+          "meanError": 0.0,
+          "rawBgrSha256": "ac143c02b735563d41ff269664afd1ca579f15444336cdd775175db7717197de"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.DetectorGeometryProbeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.kandong.modelprobe.DetectorGeometryProbeTest:
+INSTRUMENTATION_STATUS: test=compareFrozenProbabilityMasksAndReferenceQuadCropsAndGuards
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.DetectorGeometryProbeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Fixed geometry gates failed; metrics saved in detector-geometry-probe-report.json
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.kandong.modelprobe.DetectorGeometryProbeTest.compareFrozenProbabilityMasksAndReferenceQuadCropsAndGuards(DetectorGeometryProbeTest.kt:305)
+
+INSTRUMENTATION_STATUS: stream=
+Error in compareFrozenProbabilityMasksAndReferenceQuadCropsAndGuards(com.kandong.modelprobe.DetectorGeometryProbeTest):
+java.lang.AssertionError: Fixed geometry gates failed; metrics saved in detector-geometry-probe-report.json
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.kandong.modelprobe.DetectorGeometryProbeTest.compareFrozenProbabilityMasksAndReferenceQuadCropsAndGuards(DetectorGeometryProbeTest.kt:305)
+
+INSTRUMENTATION_STATUS: test=compareFrozenProbabilityMasksAndReferenceQuadCropsAndGuards
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 1.147
+There was 1 failure:
+1) compareFrozenProbabilityMasksAndReferenceQuadCropsAndGuards(com.kandong.modelprobe.DetectorGeometryProbeTest)
+java.lang.AssertionError: Fixed geometry gates failed; metrics saved in detector-geometry-probe-report.json
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.kandong.modelprobe.DetectorGeometryProbeTest.compareFrozenProbabilityMasksAndReferenceQuadCropsAndGuards(DetectorGeometryProbeTest.kt:305)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

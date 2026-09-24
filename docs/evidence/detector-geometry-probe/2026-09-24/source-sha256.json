@@ -1,0 +1,8 @@
+{
+  "modelprobe/build.gradle.kts": "29c9c509f5d3e85a393f9dccac6a9e56c624c2b95ed16d7d473b0240478f3ab6",
+  "modelprobe/src/testShared/java/com/kandong/modelprobe/GeometryProbeContract.kt": "73d922e80f0fe6272ca4116c6c03d8bb218e04b3ccd34312147a5f56483d626b",
+  "modelprobe/src/test/java/com/kandong/modelprobe/GeometryProbeGuardTest.kt": "baed33e50f456fdf88ebd85aef7e85199f05bb4985b97bfb74a386ce1ab755b8",
+  "modelprobe/src/androidTest/java/com/kandong/modelprobe/GeometryFixtureInputs.kt": "06a66fce77f3f74c7c2f45d75adc777beb2ad71ebd2cb55023adf4c8665afffb",
+  "modelprobe/src/androidTest/java/com/kandong/modelprobe/GeometryOpenCvProbe.kt": "99ce1b89b18064e93451ebdc0af900949e279c8bd1edd7f41396d04a90ccc0a9",
+  "modelprobe/src/androidTest/java/com/kandong/modelprobe/DetectorGeometryProbeTest.kt": "412a046a0c4106a863a8ef54425870f8d49c5359d7c67fb46adf54fe13b599bc"
+}
