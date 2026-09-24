@@ -1,0 +1,32 @@
+{
+  "scope": "packaged_synthetic_model_feasibility",
+  "checks": [
+    {
+      "check": "explicit_cancel_final_report_frozen",
+      "completedCount": 0,
+      "cleanup": {
+        "state": "pending_at_cancellation_frozen"
+      }
+    },
+    {
+      "check": "background_cancels_no_return_autorun",
+      "completedCount": 4
+    },
+    {
+      "check": "rotation_cancels_and_freezes",
+      "completedCount": 0
+    },
+    {
+      "check": "manual_restart_after_native_cleanup",
+      "completedCount": 10,
+      "cleanup": {
+        "state": "closed",
+        "opened": 24,
+        "closeAttempts": 24,
+        "closed": 24
+      }
+    }
+  ],
+  "phoneLockTest": false,
+  "rotationSettingsRestored": true
+}

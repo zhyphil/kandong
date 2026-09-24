@@ -1,0 +1,192 @@
+{
+  "schema": 1,
+  "runId": "69cf81ed-86af-4a13-858a-5a85a30ec695",
+  "scope": "packaged_synthetic_same_tensor_feasibility_not_full_OCR_or_translation",
+  "operationalStatus": "cancelled",
+  "plannedCount": 10,
+  "completedCount": 4,
+  "manifestSha256": "126d8d3860d5a4ea098f0875838dbed51a55d8a321f50d409805d394a460061c",
+  "elapsedMs": 1117,
+  "runtime": "1.30.0",
+  "api": 36,
+  "model": "sdk_gphone64_arm64",
+  "abis": [
+    "arm64-v8a"
+  ],
+  "execution": "CPU_SEQUENTIAL_intra1_inter1_ALL_OPT_arenaOff_telemetryOff",
+  "environmentLifetime": "process_singleton_OrtEnvironment_close_is_no_op",
+  "rowOrder": "crop_aspect_ratio_tensor_batch_order_not_page_reading_order",
+  "comparisonRule": "exact_raw_strings_no_NFC_or_whitespace_changes; argmax_int32LE_full_N_T",
+  "qualityCaveat": "Matching Latin Chinese garbage references is not Chinese OCR correctness",
+  "hostConsistency": {
+    "comparedCount": 4,
+    "rawMatchingCount": 4,
+    "argmaxMatchingCount": 4,
+    "allTenRawMatch": false,
+    "allTenArgmaxMatch": false
+  },
+  "errorCode": "CANCELLED",
+  "cleanup": {
+    "state": "pending_at_cancellation_frozen"
+  },
+  "results": [
+    {
+      "id": "ch/en-quality-16",
+      "sourceInputId": "en-quality-16",
+      "sourcePixelSha256": "337f10d89ab199d2c681c42446c3a9cc2b9be1f106bfd60c75cb1dfa50bce998",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "modelBytes": 16631306,
+      "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+      "vocabulary": 18385,
+      "compressedSha256": "477e72886ae2c88a7809c60581c23e6b7d89f8a4b4f85a2630a707566ac094c5",
+      "inputSha256": "c38e4acf235db1c1d58188313602f0f68de5378e392e1b6a9f1c90e87c2410ba",
+      "inputShape": [
+        1,
+        3,
+        48,
+        687
+      ],
+      "inputDtype": "float32LE",
+      "outputShape": [
+        1,
+        86,
+        18385
+      ],
+      "outputDtype": "FLOAT",
+      "rawDecoded": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "argmaxSha256": "237c9af180dd22b74bd48825bff6801fa16a71bda40cb176acaff29933467ccf",
+      "rawMatchesHost": true,
+      "argmaxMatchesHost": true,
+      "expectedHostRaw": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "expectedHostArgmaxSha256": "237c9af180dd22b74bd48825bff6801fa16a71bda40cb176acaff29933467ccf",
+      "hostPipelineLinesReadingOrder": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "elapsedMs": 203
+    },
+    {
+      "id": "ch/fr-nonrefundable-16",
+      "sourceInputId": "fr-nonrefundable-16",
+      "sourcePixelSha256": "9985a578b4188dffd534ec3ab308a787f3500a06bb3143e8ec3a8ad63f8b1c98",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "modelBytes": 16631306,
+      "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+      "vocabulary": 18385,
+      "compressedSha256": "b31282cfb6b8773089fd68b076a7d2fce7e80096d90f5419751706682d9dfe56",
+      "inputSha256": "7beea7cc2ee27e74b3c4f409586d8aafdcedfed6da6634119d1808f27af6eecf",
+      "inputShape": [
+        1,
+        3,
+        48,
+        848
+      ],
+      "inputDtype": "float32LE",
+      "outputShape": [
+        1,
+        106,
+        18385
+      ],
+      "outputDtype": "FLOAT",
+      "rawDecoded": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "argmaxSha256": "2ccfcac66b7b74d81508e29d8696a4cfef65f73cf45f9a0690fb206aac0a72b1",
+      "rawMatchesHost": true,
+      "argmaxMatchesHost": true,
+      "expectedHostRaw": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "expectedHostArgmaxSha256": "2ccfcac66b7b74d81508e29d8696a4cfef65f73cf45f9a0690fb206aac0a72b1",
+      "hostPipelineLinesReadingOrder": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "elapsedMs": 174
+    },
+    {
+      "id": "ch/zh-hans-quality-16",
+      "sourceInputId": "zh-hans-quality-16",
+      "sourcePixelSha256": "5f6e960dc9f1b165969695ba5efc0cd91166123b0d9eaf6516fcd150080d9d50",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "modelBytes": 16631306,
+      "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+      "vocabulary": 18385,
+      "compressedSha256": "4c57f6be9e4d52b8f8de17a42f375a782c15d07be1ed1578aa05d418f47eb441",
+      "inputSha256": "61b20c3a683cd10bf1c51a11e8c580645e7833db23aa25bd7c4a42c3250c8dca",
+      "inputShape": [
+        2,
+        3,
+        48,
+        438
+      ],
+      "inputDtype": "float32LE",
+      "outputShape": [
+        2,
+        55,
+        18385
+      ],
+      "outputDtype": "FLOAT",
+      "rawDecoded": [
+        "行李最多8公斤，不可退款。",
+        "总计1234.50元，不含税。"
+      ],
+      "argmaxSha256": "9c35dd35e33890ced6de474e3c79f3431e8cbf01d1cfd678ebe4c83a59f950c5",
+      "rawMatchesHost": true,
+      "argmaxMatchesHost": true,
+      "expectedHostRaw": [
+        "行李最多8公斤，不可退款。",
+        "总计1234.50元，不含税。"
+      ],
+      "expectedHostArgmaxSha256": "9c35dd35e33890ced6de474e3c79f3431e8cbf01d1cfd678ebe4c83a59f950c5",
+      "hostPipelineLinesReadingOrder": [
+        "总计1234.50元，不含税。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "elapsedMs": 158
+    },
+    {
+      "id": "ch/zh-hant-quality-16",
+      "sourceInputId": "zh-hant-quality-16",
+      "sourcePixelSha256": "c5ecf16dc2a911db6dcc736e108cd87b2a97f468bbe3f938e4002a18613de6b6",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "modelBytes": 16631306,
+      "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+      "vocabulary": 18385,
+      "compressedSha256": "15f8a03b81f77b1644cca2a94002ff58ee5d8bf4809f7983ed598a7cd91b1ab7",
+      "inputSha256": "d7a70d977447790855d9a876a02d0748b63756ab0fa946b59b661923f46f0644",
+      "inputShape": [
+        2,
+        3,
+        48,
+        455
+      ],
+      "inputDtype": "float32LE",
+      "outputShape": [
+        2,
+        57,
+        18385
+      ],
+      "outputDtype": "FLOAT",
+      "rawDecoded": [
+        "總計1234.50元，不含稅。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "argmaxSha256": "eeacc9158d7b3c544e9dbea4e0f55faff2cf08373f6926257ee4ae9efa39e06e",
+      "rawMatchesHost": true,
+      "argmaxMatchesHost": true,
+      "expectedHostRaw": [
+        "總計1234.50元，不含稅。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "expectedHostArgmaxSha256": "eeacc9158d7b3c544e9dbea4e0f55faff2cf08373f6926257ee4ae9efa39e06e",
+      "hostPipelineLinesReadingOrder": [
+        "總計1234.50元，不含稅。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "elapsedMs": 167
+    }
+  ]
+}

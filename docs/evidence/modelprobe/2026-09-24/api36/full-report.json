@@ -1,0 +1,441 @@
+{
+  "schema": 1,
+  "runId": "170c517c-61ad-42a3-be3b-c5882424d880",
+  "scope": "packaged_synthetic_same_tensor_feasibility_not_full_OCR_or_translation",
+  "operationalStatus": "completed",
+  "plannedCount": 10,
+  "completedCount": 10,
+  "manifestSha256": "126d8d3860d5a4ea098f0875838dbed51a55d8a321f50d409805d394a460061c",
+  "elapsedMs": 1436,
+  "runtime": "1.30.0",
+  "api": 36,
+  "model": "sdk_gphone64_arm64",
+  "abis": [
+    "arm64-v8a"
+  ],
+  "execution": "CPU_SEQUENTIAL_intra1_inter1_ALL_OPT_arenaOff_telemetryOff",
+  "environmentLifetime": "process_singleton_OrtEnvironment_close_is_no_op",
+  "rowOrder": "crop_aspect_ratio_tensor_batch_order_not_page_reading_order",
+  "comparisonRule": "exact_raw_strings_no_NFC_or_whitespace_changes; argmax_int32LE_full_N_T",
+  "qualityCaveat": "Matching Latin Chinese garbage references is not Chinese OCR correctness",
+  "hostConsistency": {
+    "comparedCount": 10,
+    "rawMatchingCount": 10,
+    "argmaxMatchingCount": 10,
+    "allTenRawMatch": true,
+    "allTenArgmaxMatch": true
+  },
+  "errorCode": null,
+  "cleanup": {
+    "state": "closed",
+    "opened": 24,
+    "closeAttempts": 24,
+    "closed": 24
+  },
+  "results": [
+    {
+      "id": "ch/en-quality-16",
+      "sourceInputId": "en-quality-16",
+      "sourcePixelSha256": "337f10d89ab199d2c681c42446c3a9cc2b9be1f106bfd60c75cb1dfa50bce998",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "modelBytes": 16631306,
+      "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+      "vocabulary": 18385,
+      "compressedSha256": "477e72886ae2c88a7809c60581c23e6b7d89f8a4b4f85a2630a707566ac094c5",
+      "inputSha256": "c38e4acf235db1c1d58188313602f0f68de5378e392e1b6a9f1c90e87c2410ba",
+      "inputShape": [
+        1,
+        3,
+        48,
+        687
+      ],
+      "inputDtype": "float32LE",
+      "outputShape": [
+        1,
+        86,
+        18385
+      ],
+      "outputDtype": "FLOAT",
+      "rawDecoded": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "argmaxSha256": "237c9af180dd22b74bd48825bff6801fa16a71bda40cb176acaff29933467ccf",
+      "rawMatchesHost": true,
+      "argmaxMatchesHost": true,
+      "expectedHostRaw": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "expectedHostArgmaxSha256": "237c9af180dd22b74bd48825bff6801fa16a71bda40cb176acaff29933467ccf",
+      "hostPipelineLinesReadingOrder": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "elapsedMs": 146
+    },
+    {
+      "id": "ch/fr-nonrefundable-16",
+      "sourceInputId": "fr-nonrefundable-16",
+      "sourcePixelSha256": "9985a578b4188dffd534ec3ab308a787f3500a06bb3143e8ec3a8ad63f8b1c98",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "modelBytes": 16631306,
+      "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+      "vocabulary": 18385,
+      "compressedSha256": "b31282cfb6b8773089fd68b076a7d2fce7e80096d90f5419751706682d9dfe56",
+      "inputSha256": "7beea7cc2ee27e74b3c4f409586d8aafdcedfed6da6634119d1808f27af6eecf",
+      "inputShape": [
+        1,
+        3,
+        48,
+        848
+      ],
+      "inputDtype": "float32LE",
+      "outputShape": [
+        1,
+        106,
+        18385
+      ],
+      "outputDtype": "FLOAT",
+      "rawDecoded": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "argmaxSha256": "2ccfcac66b7b74d81508e29d8696a4cfef65f73cf45f9a0690fb206aac0a72b1",
+      "rawMatchesHost": true,
+      "argmaxMatchesHost": true,
+      "expectedHostRaw": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "expectedHostArgmaxSha256": "2ccfcac66b7b74d81508e29d8696a4cfef65f73cf45f9a0690fb206aac0a72b1",
+      "hostPipelineLinesReadingOrder": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "elapsedMs": 143
+    },
+    {
+      "id": "ch/zh-hans-quality-16",
+      "sourceInputId": "zh-hans-quality-16",
+      "sourcePixelSha256": "5f6e960dc9f1b165969695ba5efc0cd91166123b0d9eaf6516fcd150080d9d50",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "modelBytes": 16631306,
+      "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+      "vocabulary": 18385,
+      "compressedSha256": "4c57f6be9e4d52b8f8de17a42f375a782c15d07be1ed1578aa05d418f47eb441",
+      "inputSha256": "61b20c3a683cd10bf1c51a11e8c580645e7833db23aa25bd7c4a42c3250c8dca",
+      "inputShape": [
+        2,
+        3,
+        48,
+        438
+      ],
+      "inputDtype": "float32LE",
+      "outputShape": [
+        2,
+        55,
+        18385
+      ],
+      "outputDtype": "FLOAT",
+      "rawDecoded": [
+        "行李最多8公斤，不可退款。",
+        "总计1234.50元，不含税。"
+      ],
+      "argmaxSha256": "9c35dd35e33890ced6de474e3c79f3431e8cbf01d1cfd678ebe4c83a59f950c5",
+      "rawMatchesHost": true,
+      "argmaxMatchesHost": true,
+      "expectedHostRaw": [
+        "行李最多8公斤，不可退款。",
+        "总计1234.50元，不含税。"
+      ],
+      "expectedHostArgmaxSha256": "9c35dd35e33890ced6de474e3c79f3431e8cbf01d1cfd678ebe4c83a59f950c5",
+      "hostPipelineLinesReadingOrder": [
+        "总计1234.50元，不含税。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "elapsedMs": 139
+    },
+    {
+      "id": "ch/zh-hant-quality-16",
+      "sourceInputId": "zh-hant-quality-16",
+      "sourcePixelSha256": "c5ecf16dc2a911db6dcc736e108cd87b2a97f468bbe3f938e4002a18613de6b6",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "modelBytes": 16631306,
+      "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+      "vocabulary": 18385,
+      "compressedSha256": "15f8a03b81f77b1644cca2a94002ff58ee5d8bf4809f7983ed598a7cd91b1ab7",
+      "inputSha256": "d7a70d977447790855d9a876a02d0748b63756ab0fa946b59b661923f46f0644",
+      "inputShape": [
+        2,
+        3,
+        48,
+        455
+      ],
+      "inputDtype": "float32LE",
+      "outputShape": [
+        2,
+        57,
+        18385
+      ],
+      "outputDtype": "FLOAT",
+      "rawDecoded": [
+        "總計1234.50元，不含稅。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "argmaxSha256": "eeacc9158d7b3c544e9dbea4e0f55faff2cf08373f6926257ee4ae9efa39e06e",
+      "rawMatchesHost": true,
+      "argmaxMatchesHost": true,
+      "expectedHostRaw": [
+        "總計1234.50元，不含稅。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "expectedHostArgmaxSha256": "eeacc9158d7b3c544e9dbea4e0f55faff2cf08373f6926257ee4ae9efa39e06e",
+      "hostPipelineLinesReadingOrder": [
+        "總計1234.50元，不含稅。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "elapsedMs": 146
+    },
+    {
+      "id": "ch/mixed-quality-16",
+      "sourceInputId": "mixed-quality-16",
+      "sourcePixelSha256": "180bde248bb429d8ef4a5490f547cb495bc6231c6d1dc91b9d44840d2d61c2a8",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "modelBytes": 16631306,
+      "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+      "vocabulary": 18385,
+      "compressedSha256": "50dc7b1aa6d62843c7c29a26cc86ba9f8167b1988d1a5fc63c32d5804c3be711",
+      "inputSha256": "6263116acb788ad713f70f6eb8cdcc5e6d941ea59f24ab7cfb9ba769e1e1869c",
+      "inputShape": [
+        3,
+        3,
+        48,
+        461
+      ],
+      "inputDtype": "float32LE",
+      "outputShape": [
+        3,
+        58,
+        18385
+      ],
+      "outputDtype": "FLOAT",
+      "rawDecoded": [
+        "不含税/不含税",
+        "房间A/Room A",
+        "Chambre A : 120 € / night"
+      ],
+      "argmaxSha256": "7a5f72e49b49794401ee8610e4aa7e1df794f86c5f378d652300c669ec741b89",
+      "rawMatchesHost": true,
+      "argmaxMatchesHost": true,
+      "expectedHostRaw": [
+        "不含税/不含税",
+        "房间A/Room A",
+        "Chambre A : 120 € / night"
+      ],
+      "expectedHostArgmaxSha256": "7a5f72e49b49794401ee8610e4aa7e1df794f86c5f378d652300c669ec741b89",
+      "hostPipelineLinesReadingOrder": [
+        "房间A/Room A",
+        "Chambre A : 120 € / night",
+        "不含税/不含税"
+      ],
+      "elapsedMs": 222
+    },
+    {
+      "id": "latin/en-quality-16",
+      "sourceInputId": "en-quality-16",
+      "sourcePixelSha256": "337f10d89ab199d2c681c42446c3a9cc2b9be1f106bfd60c75cb1dfa50bce998",
+      "modelSha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+      "modelBytes": 7904513,
+      "dictionarySha256": "d80d308e9759b3ea3aaf6e57fa51b39ef0a2eeb3145a9b23df819f0f0279af44",
+      "vocabulary": 504,
+      "compressedSha256": "477e72886ae2c88a7809c60581c23e6b7d89f8a4b4f85a2630a707566ac094c5",
+      "inputSha256": "c38e4acf235db1c1d58188313602f0f68de5378e392e1b6a9f1c90e87c2410ba",
+      "inputShape": [
+        1,
+        3,
+        48,
+        687
+      ],
+      "inputDtype": "float32LE",
+      "outputShape": [
+        1,
+        86,
+        504
+      ],
+      "outputDtype": "FLOAT",
+      "rawDecoded": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "argmaxSha256": "9936931c39be1a41e03e43963329cdff8664b8edcf8f272c926ae38bb7c05b31",
+      "rawMatchesHost": true,
+      "argmaxMatchesHost": true,
+      "expectedHostRaw": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "expectedHostArgmaxSha256": "9936931c39be1a41e03e43963329cdff8664b8edcf8f272c926ae38bb7c05b31",
+      "hostPipelineLinesReadingOrder": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "elapsedMs": 56
+    },
+    {
+      "id": "latin/fr-nonrefundable-16",
+      "sourceInputId": "fr-nonrefundable-16",
+      "sourcePixelSha256": "9985a578b4188dffd534ec3ab308a787f3500a06bb3143e8ec3a8ad63f8b1c98",
+      "modelSha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+      "modelBytes": 7904513,
+      "dictionarySha256": "d80d308e9759b3ea3aaf6e57fa51b39ef0a2eeb3145a9b23df819f0f0279af44",
+      "vocabulary": 504,
+      "compressedSha256": "b31282cfb6b8773089fd68b076a7d2fce7e80096d90f5419751706682d9dfe56",
+      "inputSha256": "7beea7cc2ee27e74b3c4f409586d8aafdcedfed6da6634119d1808f27af6eecf",
+      "inputShape": [
+        1,
+        3,
+        48,
+        848
+      ],
+      "inputDtype": "float32LE",
+      "outputShape": [
+        1,
+        106,
+        504
+      ],
+      "outputDtype": "FLOAT",
+      "rawDecoded": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "argmaxSha256": "c796705a4149cf0d95e046fabafe30263a418503cbc991618d3993af64af5e97",
+      "rawMatchesHost": true,
+      "argmaxMatchesHost": true,
+      "expectedHostRaw": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "expectedHostArgmaxSha256": "c796705a4149cf0d95e046fabafe30263a418503cbc991618d3993af64af5e97",
+      "hostPipelineLinesReadingOrder": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "elapsedMs": 72
+    },
+    {
+      "id": "latin/zh-hans-quality-16",
+      "sourceInputId": "zh-hans-quality-16",
+      "sourcePixelSha256": "5f6e960dc9f1b165969695ba5efc0cd91166123b0d9eaf6516fcd150080d9d50",
+      "modelSha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+      "modelBytes": 7904513,
+      "dictionarySha256": "d80d308e9759b3ea3aaf6e57fa51b39ef0a2eeb3145a9b23df819f0f0279af44",
+      "vocabulary": 504,
+      "compressedSha256": "4c57f6be9e4d52b8f8de17a42f375a782c15d07be1ed1578aa05d418f47eb441",
+      "inputSha256": "61b20c3a683cd10bf1c51a11e8c580645e7833db23aa25bd7c4a42c3250c8dca",
+      "inputShape": [
+        2,
+        3,
+        48,
+        438
+      ],
+      "inputDtype": "float32LE",
+      "outputShape": [
+        2,
+        55,
+        504
+      ],
+      "outputDtype": "FLOAT",
+      "rawDecoded": [
+        "8",
+        "1234.50"
+      ],
+      "argmaxSha256": "8776d81317997565f93a73e0ae9bb9da8c5f16d4d2fe52bc85f550026788bd2b",
+      "rawMatchesHost": true,
+      "argmaxMatchesHost": true,
+      "expectedHostRaw": [
+        "8",
+        "1234.50"
+      ],
+      "expectedHostArgmaxSha256": "8776d81317997565f93a73e0ae9bb9da8c5f16d4d2fe52bc85f550026788bd2b",
+      "hostPipelineLinesReadingOrder": [
+        "1234.50",
+        "8"
+      ],
+      "elapsedMs": 76
+    },
+    {
+      "id": "latin/zh-hant-quality-16",
+      "sourceInputId": "zh-hant-quality-16",
+      "sourcePixelSha256": "c5ecf16dc2a911db6dcc736e108cd87b2a97f468bbe3f938e4002a18613de6b6",
+      "modelSha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+      "modelBytes": 7904513,
+      "dictionarySha256": "d80d308e9759b3ea3aaf6e57fa51b39ef0a2eeb3145a9b23df819f0f0279af44",
+      "vocabulary": 504,
+      "compressedSha256": "15f8a03b81f77b1644cca2a94002ff58ee5d8bf4809f7983ed598a7cd91b1ab7",
+      "inputSha256": "d7a70d977447790855d9a876a02d0748b63756ab0fa946b59b661923f46f0644",
+      "inputShape": [
+        2,
+        3,
+        48,
+        455
+      ],
+      "inputDtype": "float32LE",
+      "outputShape": [
+        2,
+        57,
+        504
+      ],
+      "outputDtype": "FLOAT",
+      "rawDecoded": [
+        "1234.50",
+        "8"
+      ],
+      "argmaxSha256": "8e0fa3c72df8c9dd3feeded71c249ec62d8a566a61a369d71fba0716b345101d",
+      "rawMatchesHost": true,
+      "argmaxMatchesHost": true,
+      "expectedHostRaw": [
+        "1234.50",
+        "8"
+      ],
+      "expectedHostArgmaxSha256": "8e0fa3c72df8c9dd3feeded71c249ec62d8a566a61a369d71fba0716b345101d",
+      "hostPipelineLinesReadingOrder": [
+        "1234.50",
+        "8"
+      ],
+      "elapsedMs": 78
+    },
+    {
+      "id": "latin/mixed-quality-16",
+      "sourceInputId": "mixed-quality-16",
+      "sourcePixelSha256": "180bde248bb429d8ef4a5490f547cb495bc6231c6d1dc91b9d44840d2d61c2a8",
+      "modelSha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+      "modelBytes": 7904513,
+      "dictionarySha256": "d80d308e9759b3ea3aaf6e57fa51b39ef0a2eeb3145a9b23df819f0f0279af44",
+      "vocabulary": 504,
+      "compressedSha256": "50dc7b1aa6d62843c7c29a26cc86ba9f8167b1988d1a5fc63c32d5804c3be711",
+      "inputSha256": "6263116acb788ad713f70f6eb8cdcc5e6d941ea59f24ab7cfb9ba769e1e1869c",
+      "inputShape": [
+        3,
+        3,
+        48,
+        461
+      ],
+      "inputDtype": "float32LE",
+      "outputShape": [
+        3,
+        58,
+        504
+      ],
+      "outputDtype": "FLOAT",
+      "rawDecoded": [
+        "/",
+        "A / Room A",
+        "Chambre A : 120 € / night"
+      ],
+      "argmaxSha256": "61d7e9e9480e8c7047b1b343de5eb1d1b19c3aeaf6813215f3499940b3f3ff79",
+      "rawMatchesHost": true,
+      "argmaxMatchesHost": true,
+      "expectedHostRaw": [
+        "/",
+        "A / Room A",
+        "Chambre A : 120 € / night"
+      ],
+      "expectedHostArgmaxSha256": "61d7e9e9480e8c7047b1b343de5eb1d1b19c3aeaf6813215f3499940b3f3ff79",
+      "hostPipelineLinesReadingOrder": [
+        "A / Room A",
+        "Chambre A : 120 € / night",
+        "/"
+      ],
+      "elapsedMs": 118
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import importlib.metadata
 import json
+import os
 import time
 import unicodedata
 from pathlib import Path
@@ -11,7 +12,6 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 from omegaconf import OmegaConf
-from rapidocr import LangRec, ModelType, OCRVersion, RapidOCR
 
 MODEL_HASHES = {
     'ch_PP-OCRv5_det_mobile.onnx': '4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae',
@@ -56,6 +56,16 @@ def main():
     parser.add_argument('--models', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
+    repo = Path(__file__).resolve().parents[1]
+    args.assets, args.models, args.output = args.assets.resolve(), args.models.resolve(), args.output.resolve()
+    assert args.output != repo and repo not in args.output.parents, 'Use an output directory outside the project'
+    args.output.mkdir(parents=True, exist_ok=True)
+    os.chdir(args.output)
+    # The SDK may create initialization state before its telemetry API is callable.
+    # Confine that state to this explicit host output directory, never the repository.
+    import onnxruntime as ort
+    ort.disable_telemetry_events()
+    from rapidocr import LangRec, ModelType, OCRVersion, RapidOCR
     manifest_bytes = (args.assets / 'manifest.json').read_bytes()
     assert sha(manifest_bytes) == args.manifest_sha256
     manifest = json.loads(manifest_bytes)

@@ -78,3 +78,5 @@ Phase0A 放大 → Phase0B 整屏上下文辅助、区域法语/英语译中文 
 2026-09-24资源管理候选：限制待显示结果并复用GPU临时缓冲，自动检查与待完成真机项目见[内存与生命周期记录](docs/MEMORY_STABILITY.md)。该候选随后已更新指定华为并完成[短时资源复验](docs/HUAWEI_RESOURCE_VALIDATION.md)，尚未发布。
 
 下一阶段已有独立[文字识别实验](docs/OCR_LAB.md)和[整屏上下文实验](docs/CONTEXT_LAB.md)：只用合成输入，验证框外上下文、元素对应、坐标与失效规则，中文为人工预置。区域翻译与真实整屏采集仍未接入。[华为OCR验证](docs/HUAWEI_OCR_VALIDATION.md)已能运行，但发现“8 kg → 8 g”等关键错误，质量门槛保持未通过；后续按[上下文设计](docs/TRANSLATION_CONTEXT.md)继续推进。
+
+独立[PaddleOCR候选模型探针](docs/MODEL_PROBE.md)已在目标华为和专用API36通过同输入张量核对；完整Android图片识别和翻译仍未完成。实验模块与正式放大镜分包，模型需要按文档显式准备。

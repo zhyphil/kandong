@@ -55,3 +55,10 @@ API29安全区使用官方[WindowInsets stable insets与DisplayCutout](https://d
 ## 独立OCR实验依赖
 
 ocrlab使用Google ML Kit随包Latin OCR 16.0.1及其传递依赖，模型和原生引擎通过Google官方Maven依赖构建，不把SDK/模型重新标成MIT或Apache开源项目。适用[ML Kit条款与隐私](https://developers.google.com/ml-kit/terms)；具体依赖清单和模型文件校验见[OCR实验记录](OCR_LAB.md)。实验输入是本项目自行编写的英法合成句，UI/运行器独立编写，API用法参考官方文档，未复制完整上游项目。正式选择、分发或新增模型前仍需逐项核对对应条款和归属。
+
+
+## 独立本机模型探针
+
+modelprobe使用Microsoft ONNX Runtime Android1.30.0（MIT及其ThirdPartyNotices）。PaddleOCR识别权重由RapidAI转换为ONNX，固定为ModelScope RapidAI/RapidOCR v3.9.2发布的两文件；模型卡声明Apache License 2.0。PaddleOCR、RapidOCR许可、模型卡、实际文件SHA与来源随包保存在modelprobe/src/main/assets/legal；未复制整个上游项目，CTC及Android生命周期代码独立实现。转换流程本身尚未独立审计，具体限制见[模型探针](MODEL_PROBE.md)。
+
+模型二进制不提交Git，只由明确运行的准备脚本下载并验证；编译不自动联网下载模型。所有输入来自本项目自编图片的真实宿主机检测/预处理张量，字典保持模型的原始索引，没有分发字体软件或用户页面。

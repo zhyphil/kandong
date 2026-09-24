@@ -17,3 +17,6 @@ include(":graphics")
 
 // Fixed synthetic OCR inputs only; independent from the product applications.
 include(":ocrlab")
+
+// Independent, packaged synthetic same-tensor feasibility probe.
+include(":modelprobe")

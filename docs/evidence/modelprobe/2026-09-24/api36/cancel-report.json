@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "runId": "18a9bf71-1c5c-4b8d-bf97-a50cf2744aa1",
+  "scope": "packaged_synthetic_same_tensor_feasibility_not_full_OCR_or_translation",
+  "operationalStatus": "cancelled",
+  "plannedCount": 10,
+  "completedCount": 0,
+  "manifestSha256": "126d8d3860d5a4ea098f0875838dbed51a55d8a321f50d409805d394a460061c",
+  "elapsedMs": 45,
+  "runtime": "not_initialized",
+  "api": 36,
+  "model": "sdk_gphone64_arm64",
+  "abis": [
+    "arm64-v8a"
+  ],
+  "execution": "CPU_SEQUENTIAL_intra1_inter1_ALL_OPT_arenaOff_telemetryOff",
+  "environmentLifetime": "process_singleton_OrtEnvironment_close_is_no_op",
+  "rowOrder": "crop_aspect_ratio_tensor_batch_order_not_page_reading_order",
+  "comparisonRule": "exact_raw_strings_no_NFC_or_whitespace_changes; argmax_int32LE_full_N_T",
+  "qualityCaveat": "Matching Latin Chinese garbage references is not Chinese OCR correctness",
+  "hostConsistency": {
+    "comparedCount": 0,
+    "rawMatchingCount": 0,
+    "argmaxMatchingCount": 0,
+    "allTenRawMatch": false,
+    "allTenArgmaxMatch": false
+  },
+  "errorCode": "CANCELLED",
+  "cleanup": {
+    "state": "pending_at_cancellation_frozen"
+  },
+  "results": []
+}

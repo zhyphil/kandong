@@ -1,0 +1,9 @@
+KanDong model probe: fixed synthetic tensors only, not full Android OCR.
+
+Recognition weights originate in PaddleOCR / Baidu and respective PaddleOCR rights holders; converted ONNX files are distributed by RapidAI/RapidOCR. The pinned ModelScope v3.9.2 model card declares Apache License 2.0. Model URLs, sizes and hashes are in provenance.json. Conversion recipes have not been independently audited. The model weights are unmodified.
+
+ONNX Runtime 1.30.0: Copyright (c) Microsoft Corporation. MIT License and ThirdPartyNotices are included. Android network permissions and the telemetry initializer are removed by this experiment; runtime telemetry is explicitly disabled.
+
+RapidOCR copyright RapidOCR Authors; portions originally Copyright (c) PaddlePaddle Authors. Apache License 2.0 copies are included. The Python reference pipeline is only used on the development Mac to create synthetic tensors; it is not bundled as Android code. CTC decoding is independently implemented from the standard blank/repetition rules and checked against that pipeline.
+
+The character dictionaries are exact ONNX metadata plus the blank token and trailing space required by the CTC index convention. They are not manually corrected. Input tensor bytes and expected reference output derive only from KanDong's authored synthetic fixtures. No font software or user screen data is bundled.

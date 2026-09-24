@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "runId": "91fc9025-034a-4d08-9805-54736937ffbc",
+  "scope": "packaged_synthetic_same_tensor_feasibility_not_full_OCR_or_translation",
+  "operationalStatus": "cancelled",
+  "plannedCount": 10,
+  "completedCount": 2,
+  "manifestSha256": "126d8d3860d5a4ea098f0875838dbed51a55d8a321f50d409805d394a460061c",
+  "elapsedMs": 1027,
+  "runtime": "1.30.0",
+  "api": 31,
+  "model": "LIO-AN00",
+  "abis": [
+    "arm64-v8a",
+    "armeabi-v7a",
+    "armeabi"
+  ],
+  "execution": "CPU_SEQUENTIAL_intra1_inter1_ALL_OPT_arenaOff_telemetryOff",
+  "environmentLifetime": "process_singleton_OrtEnvironment_close_is_no_op",
+  "rowOrder": "crop_aspect_ratio_tensor_batch_order_not_page_reading_order",
+  "comparisonRule": "exact_raw_strings_no_NFC_or_whitespace_changes; argmax_int32LE_full_N_T",
+  "qualityCaveat": "Matching Latin Chinese garbage references is not Chinese OCR correctness",
+  "hostConsistency": {
+    "comparedCount": 2,
+    "rawMatchingCount": 2,
+    "argmaxMatchingCount": 2,
+    "allTenRawMatch": false,
+    "allTenArgmaxMatch": false
+  },
+  "errorCode": "CANCELLED",
+  "cleanup": {
+    "state": "pending_at_cancellation_frozen"
+  },
+  "results": [
+    {
+      "id": "ch/en-quality-16",
+      "sourceInputId": "en-quality-16",
+      "sourcePixelSha256": "337f10d89ab199d2c681c42446c3a9cc2b9be1f106bfd60c75cb1dfa50bce998",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "modelBytes": 16631306,
+      "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+      "vocabulary": 18385,
+      "compressedSha256": "477e72886ae2c88a7809c60581c23e6b7d89f8a4b4f85a2630a707566ac094c5",
+      "inputSha256": "c38e4acf235db1c1d58188313602f0f68de5378e392e1b6a9f1c90e87c2410ba",
+      "inputShape": [
+        1,
+        3,
+        48,
+        687
+      ],
+      "inputDtype": "float32LE",
+      "outputShape": [
+        1,
+        86,
+        18385
+      ],
+      "outputDtype": "FLOAT",
+      "rawDecoded": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "argmaxSha256": "237c9af180dd22b74bd48825bff6801fa16a71bda40cb176acaff29933467ccf",
+      "rawMatchesHost": true,
+      "argmaxMatchesHost": true,
+      "expectedHostRaw": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "expectedHostArgmaxSha256": "237c9af180dd22b74bd48825bff6801fa16a71bda40cb176acaff29933467ccf",
+      "hostPipelineLinesReadingOrder": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "elapsedMs": 249
+    },
+    {
+      "id": "ch/fr-nonrefundable-16",
+      "sourceInputId": "fr-nonrefundable-16",
+      "sourcePixelSha256": "9985a578b4188dffd534ec3ab308a787f3500a06bb3143e8ec3a8ad63f8b1c98",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "modelBytes": 16631306,
+      "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+      "vocabulary": 18385,
+      "compressedSha256": "b31282cfb6b8773089fd68b076a7d2fce7e80096d90f5419751706682d9dfe56",
+      "inputSha256": "7beea7cc2ee27e74b3c4f409586d8aafdcedfed6da6634119d1808f27af6eecf",
+      "inputShape": [
+        1,
+        3,
+        48,
+        848
+      ],
+      "inputDtype": "float32LE",
+      "outputShape": [
+        1,
+        106,
+        18385
+      ],
+      "outputDtype": "FLOAT",
+      "rawDecoded": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "argmaxSha256": "2ccfcac66b7b74d81508e29d8696a4cfef65f73cf45f9a0690fb206aac0a72b1",
+      "rawMatchesHost": true,
+      "argmaxMatchesHost": true,
+      "expectedHostRaw": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "expectedHostArgmaxSha256": "2ccfcac66b7b74d81508e29d8696a4cfef65f73cf45f9a0690fb206aac0a72b1",
+      "hostPipelineLinesReadingOrder": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "elapsedMs": 264
+    }
+  ]
+}

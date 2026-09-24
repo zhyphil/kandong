@@ -1,0 +1,74 @@
+{
+  "scope": "same_tensor_model_probe_only_not_full_Android_OCR",
+  "apkSha256": "a1859b3b3cc9e6e176333af7ee28d4f0e28fa70f40b0c652488cff8084ce8157",
+  "manifestSha256": "126d8d3860d5a4ea098f0875838dbed51a55d8a321f50d409805d394a460061c",
+  "devices": {
+    "huawei": {
+      "api": 31,
+      "model": "LIO-AN00",
+      "elapsedMs": 3104,
+      "restartElapsedMs": 2941,
+      "sameTenRawAndArgmaxAcrossRestart": true,
+      "cleanup": {
+        "state": "closed",
+        "opened": 24,
+        "closeAttempts": 24,
+        "closed": 24
+      }
+    },
+    "api36": {
+      "api": 36,
+      "model": "sdk_gphone64_arm64",
+      "elapsedMs": 1436,
+      "restartElapsedMs": 1412,
+      "sameTenRawAndArgmaxAcrossRestart": true,
+      "cleanup": {
+        "state": "closed",
+        "opened": 24,
+        "closeAttempts": 24,
+        "closed": 24
+      }
+    }
+  },
+  "allTenRawAndArgmaxSameAcrossDevices": true,
+  "hostRecheck": {
+    "count": 72,
+    "unchangedRawBoxesPixels": true,
+    "scriptSha256": "b8e225b7848394d551646bda5d26fdb9878bb14830366c12d7bfb3c2d1f7f9bb",
+    "reportSha256": "8b9637461a8ac3bfa046d98b67f9164eefbb89b38cf572a68d28c43885b3d717"
+  },
+  "inputExport": {
+    "assetCount": 13,
+    "allRegeneratedBytesIdentical": true,
+    "scriptSha256": "083f48577e77b87733ee61ea90df04ca8a3c1d08e0a67418c7dbaa6db0a2b3b1"
+  },
+  "missingModelCheck": {
+    "compatTaskGraphDryRunSucceeded": true,
+    "probeValidationFailedWithoutDownload": true,
+    "originalModelRestored": true
+  },
+  "limitations": [
+    "No full Android detector/crop/resize/OCR pipeline",
+    "No actual phone offline test or network setting change",
+    "No phone lock test",
+    "Rapid reopen during native cleanup tested by unit gate; device manual reopen after cleanup only",
+    "Timing is not sustained performance or energy measurement",
+    "No production integration or publishing"
+  ],
+  "observedIssuesResolved": [
+    "Initial .gz APK assets were decompressed/renamed by packager; never installed; use .f32z and verify packaged bytes",
+    "Variable height progress moved cancel button on emulator; put actions before status and reran final APK"
+  ],
+  "review": {
+    "specialistSteps": 3,
+    "auditSeconds": 195.6,
+    "implementationSeconds": 413.4,
+    "reviewSeconds": 99.4,
+    "reviewConfirmedP1P2": 0,
+    "parentFixesAfterReview": [
+      "packaging extension and APK byte verification",
+      "stable action positions"
+    ],
+    "reviewDidNotRunGradleOrDevices": true
+  }
+}

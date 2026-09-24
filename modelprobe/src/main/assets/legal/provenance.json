@@ -1,0 +1,25 @@
+{
+  "rapidocr": "3.9.2",
+  "packageModelManifestSha256": "db47df9d6b071721f1633667b41cfef1e40b5d7f09be030aaea8be801ca2f2f5",
+  "files": {
+    "ch_PP-OCRv5_rec_mobile.onnx": {
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/onnx/PP-OCRv5/rec/ch_PP-OCRv5_rec_mobile.onnx",
+      "bytes": 16631306,
+      "sha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "matchedPackageManifest": true
+    },
+    "latin_PP-OCRv5_rec_mobile.onnx": {
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/onnx/PP-OCRv5/rec/latin_PP-OCRv5_rec_mobile.onnx",
+      "bytes": 7904513,
+      "sha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+      "matchedPackageManifest": true
+    }
+  },
+  "scope": "packaged_synthetic_inference_probe_only",
+  "modelLicenseDeclaration": {
+    "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/README.md",
+    "sha256": "3dc91bb3cb667df783178917d69b38bfabb8c935596f34243a1c9f0d36916b6e",
+    "license": "Apache License 2.0",
+    "conversionRecipeAudited": false
+  }
+}
