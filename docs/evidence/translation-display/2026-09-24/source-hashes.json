@@ -1,0 +1,17 @@
+{
+  "ocrlab/build.gradle.kts": "1b284d4f23a20870087817cab91d2bce8669a8d9a10698ad8c1b1c9444a0cee3",
+  "ocrlab/src/main/AndroidManifest.xml": "5c27a4bac06cfea4b14274e3d7de532ee65debb8030d6b03c5b6b36512067881",
+  "ocrlab/src/main/java/com/kandong/ocrlab/OcrLabActivity.kt": "4516b3fc4ac6d95fa1ff1f2a533d42b5d163b12a812d478051bdb12a3ea7581a",
+  "scripts/prepare-translation-display-fixture.py": "2b61b157457526f69a1c0898497294e3dc3777e235be57dd7a4daf095115b209",
+  "modelprobe/src/contextTest/java/com/kandong/modelprobe/ProtectedDisplayTest.kt": "a5f8c4a04dde8ab4f585683594d60e2264ee8dd5c513321d70914e7607c698e4",
+  "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/TranslationProviderChoice.kt": "c28111064dc583610c396eec2c547e3a57b95cfaf7cea48a3a0ff88ec9591215",
+  "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/OnDemandFixtures.kt": "41f428720e1b0ac4fe69dc0a972b25ef854c2487295ca52822307ed03460e991",
+  "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt": "e5a68f2b8cc5d00503a9509a54e425b2d1ffdf52d1b718e8d90538b10b0906e1",
+  "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextEngine.kt": "7cf7514a4a57ca93fea7f20caa32597065a833a9423c9426c48cde768a7fb2f8",
+  "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/OnDemandTranslation.kt": "38f6f877c46969bdff60f932faae10c420ec7e53a4e086f310fdf47e8de48824",
+  "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextGeometry.kt": "70dcc6ad5d1b8656616f001031439c81f61502d4e7084a0f9394cc3cb3f1a3b9",
+  "ocrlab/src/main/java/com/kandong/ocrlab/context/ProtectedTranslationLabActivity.kt": "19530053b14329ddebc7f219060168e25ac595115e84bfeae8b9d8807e498062",
+  "ocrlab/src/main/java/com/kandong/ocrlab/context/ProtectedDisplayFixtures.kt": "d2a387f612dcd830db5b62ad05c5342dd8d116ee7a1d4003357d7a220c5da851",
+  "ocrlab/src/androidTest/java/com/kandong/ocrlab/context/ProtectedDisplayInstrumentedTest.kt": "ad1360e8c6d51a8231af8cb4f31503226d75474887dc732e745be323fe74df39",
+  "ocrlab/src/main/assets/protected-translation-display.json": "aa3c331e08272c9b1134a53736c2715c9dfdff2064030b02238ebe726f997c1f"
+}

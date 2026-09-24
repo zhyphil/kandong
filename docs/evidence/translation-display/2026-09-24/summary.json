@@ -1,0 +1,45 @@
+{
+  "syntheticOnly": true,
+  "liveTranslation": false,
+  "realScreenCapture": false,
+  "phoneTested": false,
+  "unitTests": {
+    "modelprobe": {
+      "tests": 116,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "ocrlab": {
+      "tests": 49,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "instrumentationTests": 6,
+  "instrumentationSeconds": 71.034,
+  "lint": {
+    "errors": 0,
+    "warnings": 26
+  },
+  "fixture": {
+    "pages": 5,
+    "blocks": 25,
+    "selectableTargets": 17,
+    "candidate": 6,
+    "localDate": 3,
+    "original": 16,
+    "sha256": "aa3c331e08272c9b1134a53736c2715c9dfdff2064030b02238ebe726f997c1f"
+  },
+  "qualityAccepted": false,
+  "visualCheck": [
+    "money",
+    "date",
+    "original-warning"
+  ],
+  "failedBuildLog": {
+    "file": "build.txt.gz",
+    "uncompressedSha256": "1c730aeb6aa2c3491431d8aa483864494800d2840862eb75d3943ee8ae9e7a6a"
+  }
+}

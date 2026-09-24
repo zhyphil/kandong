@@ -1,0 +1,10 @@
+{
+  "ocrlab/build/outputs/apk/debug/ocrlab-debug.apk": {
+    "bytes": 53471547,
+    "sha256": "3ade4b9632e89c39d809bb5b6108644d20acde8a5b33bc5f279a816f0f407ff8"
+  },
+  "ocrlab/build/outputs/apk/androidTest/debug/ocrlab-debug-androidTest.apk": {
+    "bytes": 824977,
+    "sha256": "ee5a798f1ffff1f778db6ea29933b41bd7cf2431b451d56799b6ce27b4976a98"
+  }
+}
