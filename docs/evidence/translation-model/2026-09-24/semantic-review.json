@@ -1,0 +1,464 @@
+{
+  "reviewer": "Codex engineering review, not independent human acceptance",
+  "scope": "Full-context outputs; both rounds have identical raw responses. Errors retained.",
+  "revisions": {
+    "v1": {
+      "rows": [
+        {
+          "page": "p001",
+          "id": "b005",
+          "source": "Book",
+          "actual": "预订房间",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p002",
+          "id": "b004",
+          "source": "Book",
+          "actual": "书",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p003",
+          "id": "b004",
+          "source": "$120.00 per night",
+          "actual": "每晚120.00元",
+          "finding": "$币种未保留，变为元",
+          "semanticAcceptable": false,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": false
+        },
+        {
+          "page": "p003",
+          "id": "b005",
+          "source": "$240.00 for 2 nights",
+          "actual": "2晚240.00元",
+          "finding": "$币种未保留，变为元",
+          "semanticAcceptable": false,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": false
+        },
+        {
+          "page": "p003",
+          "id": "b006",
+          "source": "Taxes included",
+          "actual": "包含税费",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p003",
+          "id": "b007",
+          "source": "Free cancellation before 18:00 on 10 October 2026.",
+          "actual": "免费取消，10月10日18:00前",
+          "finding": "漏2026年份",
+          "semanticAcceptable": false,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": false
+        },
+        {
+          "page": "p003",
+          "id": "b009",
+          "source": "$210.00 for 2 nights",
+          "actual": "2晚210.00元",
+          "finding": "$币种未保留，变为元",
+          "semanticAcceptable": false,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": false
+        },
+        {
+          "page": "p003",
+          "id": "b010",
+          "source": "Taxes not included",
+          "actual": "税费不包含",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p003",
+          "id": "b011",
+          "source": "Non-refundable. Payment required now.",
+          "actual": "不可退款。现支付",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p004",
+          "id": "b004",
+          "source": "Vol",
+          "actual": "航班",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p005",
+          "id": "b004",
+          "source": "Vol",
+          "actual": "描述事件经过",
+          "finding": "Vol被换成邻近的描述事件经过",
+          "semanticAcceptable": false,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": false
+        },
+        {
+          "page": "p006",
+          "id": "b003",
+          "source": "Non échangeable et non remboursable.",
+          "actual": "票的条件",
+          "finding": "否定条件被替换为票的条件标题",
+          "semanticAcceptable": false,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": false
+        },
+        {
+          "page": "p006",
+          "id": "b005",
+          "source": "1 bagage, 8 kg maximum.",
+          "actual": "允许的行李数量：1件，重量不超过8公斤。",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        }
+      ],
+      "totalTargets": 13,
+      "semanticAcceptable": 7,
+      "displayEligibleAfterReview": 7,
+      "verdict": "REJECT_CANDIDATE"
+    },
+    "v2": {
+      "rows": [
+        {
+          "page": "p001",
+          "id": "b005",
+          "source": "Book",
+          "actual": "预订",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p002",
+          "id": "b004",
+          "source": "Book",
+          "actual": "书",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p003",
+          "id": "b004",
+          "source": "$120.00 per night",
+          "actual": "每晚120.00美元",
+          "finding": "未保留$符号，并自行具体化为美元；来源没有国家信息",
+          "semanticAcceptable": false,
+          "responseRejected": null,
+          "literalIssues": [
+            "missing-currency-symbol"
+          ],
+          "displayEligibleAfterReview": false
+        },
+        {
+          "page": "p003",
+          "id": "b005",
+          "source": "$240.00 for 2 nights",
+          "actual": "2晚240.00美元",
+          "finding": "未保留$符号，并自行具体化为美元",
+          "semanticAcceptable": false,
+          "responseRejected": null,
+          "literalIssues": [
+            "missing-currency-symbol"
+          ],
+          "displayEligibleAfterReview": false
+        },
+        {
+          "page": "p003",
+          "id": "b006",
+          "source": "Taxes included",
+          "actual": "税费包含",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p003",
+          "id": "b007",
+          "source": "Free cancellation before 18:00 on 10 October 2026.",
+          "actual": "在2026年10月10日18:00前免费取消",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p003",
+          "id": "b009",
+          "source": "$210.00 for 2 nights",
+          "actual": "2晚210.00美元",
+          "finding": "未保留$符号，并自行具体化为美元",
+          "semanticAcceptable": false,
+          "responseRejected": null,
+          "literalIssues": [
+            "missing-currency-symbol"
+          ],
+          "displayEligibleAfterReview": false
+        },
+        {
+          "page": "p003",
+          "id": "b010",
+          "source": "Taxes not included",
+          "actual": "税费不包含",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p003",
+          "id": "b011",
+          "source": "Non-refundable. Payment required now.",
+          "actual": "不可退款。现需付款",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p004",
+          "id": "b004",
+          "source": "Vol",
+          "actual": "航班",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p005",
+          "id": "b004",
+          "source": "Vol",
+          "actual": "抢劫",
+          "finding": "抢劫增加源文没有的暴力含义；应为盗窃",
+          "semanticAcceptable": false,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": false
+        },
+        {
+          "page": "p006",
+          "id": "b003",
+          "source": "Non échangeable et non remboursable.",
+          "actual": "不可兑换且不可退款。",
+          "finding": "原文echo被翻译，整响应拒绝；不可兑换的票务术语准确性也待核对",
+          "semanticAcceptable": false,
+          "responseRejected": "ValueError: Source echo mismatch",
+          "literalIssues": [],
+          "displayEligibleAfterReview": false
+        },
+        {
+          "page": "p006",
+          "id": "b005",
+          "source": "1 bagage, 8 kg maximum.",
+          "actual": "1件行李，最大8公斤。",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": "ValueError: Source echo mismatch",
+          "literalIssues": [],
+          "displayEligibleAfterReview": false
+        },
+        {
+          "page": "p101",
+          "id": "b003",
+          "source": "Book",
+          "actual": "书",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p102",
+          "id": "b004",
+          "source": "Book",
+          "actual": "预订",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p103",
+          "id": "b003",
+          "source": "Vol",
+          "actual": "航班",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p104",
+          "id": "b004",
+          "source": "Vol",
+          "actual": "盗窃",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p105",
+          "id": "b003",
+          "source": "$19.50 per month",
+          "actual": "每月19.50美元",
+          "finding": "未保留$符号，并自行具体化为美元",
+          "semanticAcceptable": false,
+          "responseRejected": null,
+          "literalIssues": [
+            "missing-currency-symbol"
+          ],
+          "displayEligibleAfterReview": false
+        },
+        {
+          "page": "p105",
+          "id": "b004",
+          "source": "Tax not included",
+          "actual": "税费不包含",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p105",
+          "id": "b005",
+          "source": "Cancel before 09:15 on 6 November 2026. No refund after renewal.",
+          "actual": "在2026年11月6日9:15之前取消，续费后无退款",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [
+            "missing-source-number"
+          ],
+          "displayEligibleAfterReview": false,
+          "guardFalsePositive": "09:15→9:15语义等价；保守数字原样检查误拒，未修改规则重算通过"
+        },
+        {
+          "page": "p105",
+          "id": "b007",
+          "source": "$195.00 per year",
+          "actual": "每年195.00美元",
+          "finding": "未保留$符号，并自行具体化为美元",
+          "semanticAcceptable": false,
+          "responseRejected": null,
+          "literalIssues": [
+            "missing-currency-symbol"
+          ],
+          "displayEligibleAfterReview": false
+        },
+        {
+          "page": "p105",
+          "id": "b008",
+          "source": "Tax included",
+          "actual": "税费包含",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": null,
+          "literalIssues": [],
+          "displayEligibleAfterReview": true
+        },
+        {
+          "page": "p106",
+          "id": "b003",
+          "source": "Prix total : 37,80 €",
+          "actual": "总价格：37.80 €",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": "ValueError: Source echo mismatch",
+          "literalIssues": [],
+          "displayEligibleAfterReview": false
+        },
+        {
+          "page": "p106",
+          "id": "b004",
+          "source": "Valable le 5 décembre 2026",
+          "actual": "有效期至2026年12月5日",
+          "finding": "仅在指定日期有效被改成有效期至，改变有效范围",
+          "semanticAcceptable": false,
+          "responseRejected": "ValueError: Source echo mismatch",
+          "literalIssues": [],
+          "displayEligibleAfterReview": false
+        },
+        {
+          "page": "p106",
+          "id": "b005",
+          "source": "Aucun remboursement après le départ.",
+          "actual": "出发后无退款",
+          "finding": "本条译文语义可接受",
+          "semanticAcceptable": true,
+          "responseRejected": "ValueError: Source echo mismatch",
+          "literalIssues": [],
+          "displayEligibleAfterReview": false
+        },
+        {
+          "page": "p106",
+          "id": "b006",
+          "source": "2 bagages, 6 kg maximum chacun.",
+          "actual": "2件行李，每件6公斤",
+          "finding": "丢失maximum上限，变成每件6公斤",
+          "semanticAcceptable": false,
+          "responseRejected": "ValueError: Source echo mismatch",
+          "literalIssues": [],
+          "displayEligibleAfterReview": false
+        }
+      ],
+      "totalTargets": 26,
+      "semanticAcceptable": 17,
+      "displayEligibleAfterReview": 13,
+      "verdict": "REJECT_CANDIDATE"
+    }
+  }
+}

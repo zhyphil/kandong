@@ -1,0 +1,18 @@
+test_binding_uses_source_geometry_even_when_response_reordered (test_translation_probe.TranslationProbeTest.test_binding_uses_source_geometry_even_when_response_reordered) ... ok
+test_chinese_is_exact_and_never_model_translation (test_translation_probe.TranslationProbeTest.test_chinese_is_exact_and_never_model_translation) ... ok
+test_duplicate_json_keys_and_model_geometry_rejected (test_translation_probe.TranslationProbeTest.test_duplicate_json_keys_and_model_geometry_rejected) ... ok
+test_duplicate_missing_extra_or_unknown_ids_rejected (test_translation_probe.TranslationProbeTest.test_duplicate_missing_extra_or_unknown_ids_rejected) ... ok
+test_full_page_and_target_only_differ_only_in_available_evidence (test_translation_probe.TranslationProbeTest.test_full_page_and_target_only_differ_only_in_available_evidence) ... ok
+test_no_expected_answers_case_name_or_roi_in_model_input (test_translation_probe.TranslationProbeTest.test_no_expected_answers_case_name_or_roi_in_model_input) ... ok
+test_payload_does_not_alias_source (test_translation_probe.TranslationProbeTest.test_payload_does_not_alias_source) ... ok
+test_uncertainty_preserved_invalid_text_rejected (test_translation_probe.TranslationProbeTest.test_uncertainty_preserved_invalid_text_rejected) ... ok
+test_currency_and_year_omission_flagged_not_repaired (test_translation_probe_v2.TranslationRevisionTest.test_currency_and_year_omission_flagged_not_repaired) ... ok
+test_guard_retains_raw_failed_output_and_binding (test_translation_probe_v2.TranslationRevisionTest.test_guard_retains_raw_failed_output_and_binding) ... ok
+test_literal_guard_does_not_claim_to_detect_wrong_meaning (test_translation_probe_v2.TranslationRevisionTest.test_literal_guard_does_not_claim_to_detect_wrong_meaning) ... ok
+test_targets_repeat_only_exact_source (test_translation_probe_v2.TranslationRevisionTest.test_targets_repeat_only_exact_source) ... ok
+test_wrong_source_echo_rejected (test_translation_probe_v2.TranslationRevisionTest.test_wrong_source_echo_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.003s
+
+OK

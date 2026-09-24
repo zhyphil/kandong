@@ -1,0 +1,19 @@
+{
+  "runtimeBinarySha256": "75b6b83ab9c06712c7097807c91d2bb86a3ef3dd143d59359a5fbb3314970c0a",
+  "runtimeVersion": "0.33.3",
+  "loadedModelBytes": 1485737819,
+  "loadedModelMetric": "Ollama /api/ps size_vram; not process RSS or peak",
+  "host": "Apple M4 Max, 64 GiB unified memory",
+  "sourceBaseCommit": "74d46fe",
+  "freezeV1Commit": "fc12696",
+  "freezeV2Commit": "e647aee",
+  "downloadedModelSha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+  "importedModelSha256": "098cb604ff3cc846891b7e8c00abe4f52f5c6fdc936e21e7e41f2eaf22c1c7cb",
+  "runtimeManifestSha256": "ac9d6012e30ad523bc692bddb21e3345e9657362b9b067d4186abb432d797054",
+  "tensorsSameIncludingPadding": 339,
+  "tensorOffsetsChanged": 338,
+  "cleanup": {
+    "localPortConnection": "ECONNREFUSED",
+    "errno": 61
+  }
+}

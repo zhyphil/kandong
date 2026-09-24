@@ -90,3 +90,7 @@ modelprobe仅androidTest使用Google `com.google.mlkit:language-id:17.0.6`（包
 ## Lingua 独立宿主筛选
 
 仅临时宿主虚拟环境使用[lingua-language-detector 2.2.0](https://pypi.org/project/lingua-language-detector/2.2.0/)，作者Peter M. Stahl，Apache-2.0；[Python上游](https://github.com/pemistahl/lingua-py)、[包内指向的Rust v1.8.0](https://github.com/pemistahl/lingua-rs/tree/77e94d1a2a8e49bed873a7c502bcb51ba803ef0f)。发布wheel所带[许可](evidence/lingua-screening/2026-09-24/LINGUA-LICENSE.txt)、[SBOM](evidence/lingua-screening/2026-09-24/sbom.json)和[实际元数据](evidence/lingua-screening/2026-09-24/wheel-METADATA.txt.gz)保留；模型crates版本1.3.0。未复制/fork上游项目，语料、规则、探针与审计由本项目编写；二进制未加入项目或Android包。元数据声明不替代完整依赖/训练数据审核，未验证可复现构建。[本轮筛选失败](LINGUA_SCREENING.md)，不作为正式依赖。
+
+## 单语整页真实翻译宿主候选
+
+独立Mac实验调用[Qwen作者GGUF](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/tree/91cad51170dc346986eccefdc2dd33a9da36ead9) Q4_K_M，Apache-2.0、Copyright 2024 Alibaba Cloud。模型卡/许可证/文件SHA归档于[evidence](evidence/translation-model/2026-09-24/)。复用已安装的[Ollama0.33.3](https://github.com/ollama/ollama/tree/v0.33.3)本地API，MIT许可证同时归档；没有分发模型/运行时二进制，未复制上游项目代码。合成页面、请求、回绑、检查与运行器为项目内实现。模型质量未通过，未加入Android依赖；上游许可证不替代训练数据/完整供应链审核。详见[实际结果](TRANSLATION_MODEL_PROBE.md)。

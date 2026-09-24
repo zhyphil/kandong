@@ -1,0 +1,368 @@
+{
+  "rows": [
+    {
+      "round": 1,
+      "page": "p001",
+      "mode": "full",
+      "error": null,
+      "seconds": 0.8547946250182576
+    },
+    {
+      "round": 1,
+      "page": "p001",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 0.20517608302179724
+    },
+    {
+      "round": 1,
+      "page": "p002",
+      "mode": "full",
+      "error": null,
+      "seconds": 0.30430316599085927
+    },
+    {
+      "round": 1,
+      "page": "p002",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 0.2038669579778798
+    },
+    {
+      "round": 1,
+      "page": "p003",
+      "mode": "full",
+      "error": null,
+      "seconds": 1.6933765420108102
+    },
+    {
+      "round": 1,
+      "page": "p003",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 1.536619124992285
+    },
+    {
+      "round": 1,
+      "page": "p004",
+      "mode": "full",
+      "error": null,
+      "seconds": 0.27802475000498816
+    },
+    {
+      "round": 1,
+      "page": "p004",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 0.20341704197926447
+    },
+    {
+      "round": 1,
+      "page": "p005",
+      "mode": "full",
+      "error": null,
+      "seconds": 0.26786833303049207
+    },
+    {
+      "round": 1,
+      "page": "p005",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 0.20475095900474116
+    },
+    {
+      "round": 1,
+      "page": "p006",
+      "mode": "full",
+      "error": "ValueError: Source echo mismatch",
+      "seconds": 0.4981766669661738
+    },
+    {
+      "round": 1,
+      "page": "p006",
+      "mode": "target-only",
+      "error": "ValueError: Source echo mismatch",
+      "seconds": 0.43736095901113003
+    },
+    {
+      "round": 1,
+      "page": "p007",
+      "mode": "original",
+      "error": null,
+      "seconds": 0
+    },
+    {
+      "round": 1,
+      "page": "p008",
+      "mode": "original",
+      "error": null,
+      "seconds": 0
+    },
+    {
+      "round": 1,
+      "page": "p101",
+      "mode": "full",
+      "error": null,
+      "seconds": 0.25123850000090897
+    },
+    {
+      "round": 1,
+      "page": "p101",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 0.20117575000040233
+    },
+    {
+      "round": 1,
+      "page": "p102",
+      "mode": "full",
+      "error": null,
+      "seconds": 0.25551316601922736
+    },
+    {
+      "round": 1,
+      "page": "p102",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 0.20255179097875953
+    },
+    {
+      "round": 1,
+      "page": "p103",
+      "mode": "full",
+      "error": null,
+      "seconds": 0.26113520801300183
+    },
+    {
+      "round": 1,
+      "page": "p103",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 0.20233787497272715
+    },
+    {
+      "round": 1,
+      "page": "p104",
+      "mode": "full",
+      "error": null,
+      "seconds": 0.24665366596309468
+    },
+    {
+      "round": 1,
+      "page": "p104",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 0.20350375003181398
+    },
+    {
+      "round": 1,
+      "page": "p105",
+      "mode": "full",
+      "error": null,
+      "seconds": 1.1797946249716915
+    },
+    {
+      "round": 1,
+      "page": "p105",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 1.1227476249914616
+    },
+    {
+      "round": 1,
+      "page": "p106",
+      "mode": "full",
+      "error": "ValueError: Source echo mismatch",
+      "seconds": 0.9708603750332259
+    },
+    {
+      "round": 1,
+      "page": "p106",
+      "mode": "target-only",
+      "error": "ValueError: Source echo mismatch",
+      "seconds": 0.9141330419806764
+    },
+    {
+      "round": 2,
+      "page": "p001",
+      "mode": "full",
+      "error": null,
+      "seconds": 0.8928994170273654
+    },
+    {
+      "round": 2,
+      "page": "p001",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 0.20340404199669138
+    },
+    {
+      "round": 2,
+      "page": "p002",
+      "mode": "full",
+      "error": null,
+      "seconds": 0.3030832079821266
+    },
+    {
+      "round": 2,
+      "page": "p002",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 0.20208733301842585
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "mode": "full",
+      "error": null,
+      "seconds": 1.606063791026827
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 1.5352722500101663
+    },
+    {
+      "round": 2,
+      "page": "p004",
+      "mode": "full",
+      "error": null,
+      "seconds": 0.28420079103671014
+    },
+    {
+      "round": 2,
+      "page": "p004",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 0.20420300000114366
+    },
+    {
+      "round": 2,
+      "page": "p005",
+      "mode": "full",
+      "error": null,
+      "seconds": 0.26967529096873477
+    },
+    {
+      "round": 2,
+      "page": "p005",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 0.20044195803347975
+    },
+    {
+      "round": 2,
+      "page": "p006",
+      "mode": "full",
+      "error": "ValueError: Source echo mismatch",
+      "seconds": 0.5874285830068402
+    },
+    {
+      "round": 2,
+      "page": "p006",
+      "mode": "target-only",
+      "error": "ValueError: Source echo mismatch",
+      "seconds": 0.4702817089855671
+    },
+    {
+      "round": 2,
+      "page": "p007",
+      "mode": "original",
+      "error": null,
+      "seconds": 0
+    },
+    {
+      "round": 2,
+      "page": "p008",
+      "mode": "original",
+      "error": null,
+      "seconds": 0
+    },
+    {
+      "round": 2,
+      "page": "p101",
+      "mode": "full",
+      "error": null,
+      "seconds": 0.2571399579755962
+    },
+    {
+      "round": 2,
+      "page": "p101",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 0.2084368329960853
+    },
+    {
+      "round": 2,
+      "page": "p102",
+      "mode": "full",
+      "error": null,
+      "seconds": 0.2647454999969341
+    },
+    {
+      "round": 2,
+      "page": "p102",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 0.20670854195486754
+    },
+    {
+      "round": 2,
+      "page": "p103",
+      "mode": "full",
+      "error": null,
+      "seconds": 0.2639621249982156
+    },
+    {
+      "round": 2,
+      "page": "p103",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 0.20732133398996666
+    },
+    {
+      "round": 2,
+      "page": "p104",
+      "mode": "full",
+      "error": null,
+      "seconds": 0.25303224998060614
+    },
+    {
+      "round": 2,
+      "page": "p104",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 0.2064464580034837
+    },
+    {
+      "round": 2,
+      "page": "p105",
+      "mode": "full",
+      "error": null,
+      "seconds": 1.2031902080052532
+    },
+    {
+      "round": 2,
+      "page": "p105",
+      "mode": "target-only",
+      "error": null,
+      "seconds": 1.126072250015568
+    },
+    {
+      "round": 2,
+      "page": "p106",
+      "mode": "full",
+      "error": "ValueError: Source echo mismatch",
+      "seconds": 0.9858798749628477
+    },
+    {
+      "round": 2,
+      "page": "p106",
+      "mode": "target-only",
+      "error": "ValueError: Source echo mismatch",
+      "seconds": 0.9243381660198793
+    }
+  ]
+}

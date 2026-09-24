@@ -1,0 +1,52 @@
+{"round": 1, "page": "p001", "mode": "full", "seconds": 0.855, "error": null, "output": [["b005", "预订"]]}
+{"round": 1, "page": "p001", "mode": "target-only", "seconds": 0.205, "error": null, "output": [["b005", "书"]]}
+{"round": 1, "page": "p002", "mode": "full", "seconds": 0.304, "error": null, "output": [["b004", "书"]]}
+{"round": 1, "page": "p002", "mode": "target-only", "seconds": 0.204, "error": null, "output": [["b004", "书"]]}
+{"round": 1, "page": "p003", "mode": "full", "seconds": 1.693, "error": null, "output": [["b004", "每晚120.00美元"], ["b005", "2晚240.00美元"], ["b006", "税费包含"], ["b007", "在2026年10月10日18:00前免费取消"], ["b009", "2晚210.00美元"], ["b010", "税费不包含"], ["b011", "不可退款。现需付款"]]}
+{"round": 1, "page": "p003", "mode": "target-only", "seconds": 1.537, "error": null, "output": [["b004", "每晚120.00美元"], ["b005", "2晚240.00美元"], ["b006", "税费包含"], ["b007", "在2026年10月10日18:00前免费取消"], ["b009", "2晚210.00美元"], ["b010", "税费不包含"], ["b011", "不可退款。现需支付"]]}
+{"round": 1, "page": "p004", "mode": "full", "seconds": 0.278, "error": null, "output": [["b004", "航班"]]}
+{"round": 1, "page": "p004", "mode": "target-only", "seconds": 0.203, "error": null, "output": [["b004", "Vol"]]}
+{"round": 1, "page": "p005", "mode": "full", "seconds": 0.268, "error": null, "output": [["b004", "抢劫"]]}
+{"round": 1, "page": "p005", "mode": "target-only", "seconds": 0.205, "error": null, "output": [["b004", "Vol"]]}
+{"round": 1, "page": "p006", "mode": "full", "seconds": 0.498, "error": "ValueError: Source echo mismatch", "output": []}
+{"round": 1, "page": "p006", "mode": "target-only", "seconds": 0.437, "error": "ValueError: Source echo mismatch", "output": []}
+{"round": 1, "page": "p007", "mode": "original", "seconds": 0, "error": null, "output": [["b003", "08:30"], ["b004", "每月费用：¥12.50"], ["b005", "关闭自动续费"]]}
+{"round": 1, "page": "p008", "mode": "original", "seconds": 0, "error": null, "output": [["b003", "20:45"], ["b004", "每月費用：NT$120.50"], ["b005", "關閉自動續訂"]]}
+{"round": 1, "page": "p101", "mode": "full", "seconds": 0.251, "error": null, "output": [["b003", "书"]]}
+{"round": 1, "page": "p101", "mode": "target-only", "seconds": 0.201, "error": null, "output": [["b003", "书"]]}
+{"round": 1, "page": "p102", "mode": "full", "seconds": 0.256, "error": null, "output": [["b004", "预订"]]}
+{"round": 1, "page": "p102", "mode": "target-only", "seconds": 0.203, "error": null, "output": [["b004", "书"]]}
+{"round": 1, "page": "p103", "mode": "full", "seconds": 0.261, "error": null, "output": [["b003", "航班"]]}
+{"round": 1, "page": "p103", "mode": "target-only", "seconds": 0.202, "error": null, "output": [["b003", "Vol"]]}
+{"round": 1, "page": "p104", "mode": "full", "seconds": 0.247, "error": null, "output": [["b004", "盗窃"]]}
+{"round": 1, "page": "p104", "mode": "target-only", "seconds": 0.204, "error": null, "output": [["b004", "Vol"]]}
+{"round": 1, "page": "p105", "mode": "full", "seconds": 1.18, "error": null, "output": [["b003", "每月19.50美元"], ["b004", "税费不包含"], ["b005", "在2026年11月6日9:15之前取消，续费后无退款"], ["b007", "每年195.00美元"], ["b008", "税费包含"]]}
+{"round": 1, "page": "p105", "mode": "target-only", "seconds": 1.123, "error": null, "output": [["b003", "每月19.50元"], ["b004", "不含税"], ["b005", "在2026年11月6日9:15之前取消，续费后无退款"], ["b007", "每年195.00元"], ["b008", "含税"]]}
+{"round": 1, "page": "p106", "mode": "full", "seconds": 0.971, "error": "ValueError: Source echo mismatch", "output": []}
+{"round": 1, "page": "p106", "mode": "target-only", "seconds": 0.914, "error": "ValueError: Source echo mismatch", "output": []}
+{"round": 2, "page": "p001", "mode": "full", "seconds": 0.893, "error": null, "output": [["b005", "预订"]]}
+{"round": 2, "page": "p001", "mode": "target-only", "seconds": 0.203, "error": null, "output": [["b005", "书"]]}
+{"round": 2, "page": "p002", "mode": "full", "seconds": 0.303, "error": null, "output": [["b004", "书"]]}
+{"round": 2, "page": "p002", "mode": "target-only", "seconds": 0.202, "error": null, "output": [["b004", "书"]]}
+{"round": 2, "page": "p003", "mode": "full", "seconds": 1.606, "error": null, "output": [["b004", "每晚120.00美元"], ["b005", "2晚240.00美元"], ["b006", "税费包含"], ["b007", "在2026年10月10日18:00前免费取消"], ["b009", "2晚210.00美元"], ["b010", "税费不包含"], ["b011", "不可退款。现需付款"]]}
+{"round": 2, "page": "p003", "mode": "target-only", "seconds": 1.535, "error": null, "output": [["b004", "每晚120.00美元"], ["b005", "2晚240.00美元"], ["b006", "税费包含"], ["b007", "在2026年10月10日18:00前免费取消"], ["b009", "2晚210.00美元"], ["b010", "税费不包含"], ["b011", "不可退款。现需支付"]]}
+{"round": 2, "page": "p004", "mode": "full", "seconds": 0.284, "error": null, "output": [["b004", "航班"]]}
+{"round": 2, "page": "p004", "mode": "target-only", "seconds": 0.204, "error": null, "output": [["b004", "Vol"]]}
+{"round": 2, "page": "p005", "mode": "full", "seconds": 0.27, "error": null, "output": [["b004", "抢劫"]]}
+{"round": 2, "page": "p005", "mode": "target-only", "seconds": 0.2, "error": null, "output": [["b004", "Vol"]]}
+{"round": 2, "page": "p006", "mode": "full", "seconds": 0.587, "error": "ValueError: Source echo mismatch", "output": []}
+{"round": 2, "page": "p006", "mode": "target-only", "seconds": 0.47, "error": "ValueError: Source echo mismatch", "output": []}
+{"round": 2, "page": "p007", "mode": "original", "seconds": 0, "error": null, "output": [["b003", "08:30"], ["b004", "每月费用：¥12.50"], ["b005", "关闭自动续费"]]}
+{"round": 2, "page": "p008", "mode": "original", "seconds": 0, "error": null, "output": [["b003", "20:45"], ["b004", "每月費用：NT$120.50"], ["b005", "關閉自動續訂"]]}
+{"round": 2, "page": "p101", "mode": "full", "seconds": 0.257, "error": null, "output": [["b003", "书"]]}
+{"round": 2, "page": "p101", "mode": "target-only", "seconds": 0.208, "error": null, "output": [["b003", "书"]]}
+{"round": 2, "page": "p102", "mode": "full", "seconds": 0.265, "error": null, "output": [["b004", "预订"]]}
+{"round": 2, "page": "p102", "mode": "target-only", "seconds": 0.207, "error": null, "output": [["b004", "书"]]}
+{"round": 2, "page": "p103", "mode": "full", "seconds": 0.264, "error": null, "output": [["b003", "航班"]]}
+{"round": 2, "page": "p103", "mode": "target-only", "seconds": 0.207, "error": null, "output": [["b003", "Vol"]]}
+{"round": 2, "page": "p104", "mode": "full", "seconds": 0.253, "error": null, "output": [["b004", "盗窃"]]}
+{"round": 2, "page": "p104", "mode": "target-only", "seconds": 0.206, "error": null, "output": [["b004", "Vol"]]}
+{"round": 2, "page": "p105", "mode": "full", "seconds": 1.203, "error": null, "output": [["b003", "每月19.50美元"], ["b004", "税费不包含"], ["b005", "在2026年11月6日9:15之前取消，续费后无退款"], ["b007", "每年195.00美元"], ["b008", "税费包含"]]}
+{"round": 2, "page": "p105", "mode": "target-only", "seconds": 1.126, "error": null, "output": [["b003", "每月19.50元"], ["b004", "不含税"], ["b005", "在2026年11月6日9:15之前取消，续费后无退款"], ["b007", "每年195.00元"], ["b008", "含税"]]}
+{"round": 2, "page": "p106", "mode": "full", "seconds": 0.986, "error": "ValueError: Source echo mismatch", "output": []}
+{"round": 2, "page": "p106", "mode": "target-only", "seconds": 0.924, "error": "ValueError: Source echo mismatch", "output": []}

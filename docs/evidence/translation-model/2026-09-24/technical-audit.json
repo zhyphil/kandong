@@ -1,0 +1,30 @@
+{
+  "v1": {
+    "pages": 8,
+    "modelCalls": 24,
+    "structurallyAcceptedResponses": 24,
+    "sourceEchoRejectedResponses": 0,
+    "literalRejectedTargetsAcrossModesAndRounds": 0,
+    "uncertainTargets": 0,
+    "chineseOriginalTargetsAcrossRounds": 12,
+    "responseTextIdenticalAcrossRounds": true,
+    "medianSeconds": 0.267241458495846,
+    "maxSeconds": 1.4761355409864336,
+    "unloaded": true,
+    "semanticVerdict": "See semantic-review.json; not inferred from technical checks"
+  },
+  "v2": {
+    "pages": 14,
+    "modelCalls": 48,
+    "structurallyAcceptedResponses": 40,
+    "sourceEchoRejectedResponses": 8,
+    "literalRejectedTargetsAcrossModesAndRounds": 24,
+    "uncertainTargets": 0,
+    "chineseOriginalTargetsAcrossRounds": 12,
+    "responseTextIdenticalAcrossRounds": true,
+    "medianSeconds": 0.2663069165137131,
+    "maxSeconds": 1.6933765420108102,
+    "unloaded": true,
+    "semanticVerdict": "See semantic-review.json; not inferred from technical checks"
+  }
+}
