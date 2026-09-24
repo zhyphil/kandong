@@ -1,0 +1,9 @@
+{
+  "modelprobe/build.gradle.kts": "87fb066705445ffa12c15114ff400dec8c0945e1b9d4b8346d7d0ca56a5eb58b",
+  "modelprobe/src/testShared/java/com/kandong/modelprobe/BoxPipelineContract.kt": "34bed7847c1db3ad9c814b4988aff068b572bbe9084ca1f0e777c9727ac9f2a2",
+  "modelprobe/src/test/java/com/kandong/modelprobe/BoxPipelineGuardTest.kt": "9e5a9b0eb57d41f2f92c33411a57a635d9b78d2abf1d1eee48d8b59af8fbcb81",
+  "modelprobe/src/androidTest/java/com/kandong/modelprobe/BoxTraceFixtureInputs.kt": "15f474e2c974c4251fad464457695bad286bcc00c1e680e578ed89f592605703",
+  "modelprobe/src/androidTest/java/com/kandong/modelprobe/BoxTraceComparison.kt": "cf32bd2c0b19e0cdb15a6f6e21bc79f6ee56e336560fbecd11d1242425b70a8d",
+  "modelprobe/src/androidTest/java/com/kandong/modelprobe/BoxPipelineProbeTest.kt": "720cf906364890a098281b603f00122b7b5bb5930e46584f885578e49cd5ec06",
+  "modelprobe/src/androidTest/java/com/kandong/modelprobe/BoxPipelineOpenCv.kt": "a274851b295f8c15f16b1734da209c07035fd4947697323fde2d445f90e848e5"
+}

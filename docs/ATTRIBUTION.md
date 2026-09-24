@@ -76,3 +76,6 @@ modelprobe使用Microsoft ONNX Runtime Android1.30.0（MIT及其ThirdPartyNotice
 - Android polygon offset独立探针实施：仅testShared/androidTest使用固定lightbringer/clipper-java测试候选（提交5ef8c0a467023c495e44e582e9cbd8ca7308a590，Boost Software License1.0）。11源文件与35处舍入修改均有前后指纹，测试包提供LICENSE/NOTICE/provenance；见[探针范围](POLYGON_OFFSET_PROBE.md)。目标华为两轮有界合成用例已通过；尚未接入产品，不代表通用库或完整OCR验收。
 
 - 完整框中间参考生成器同样调用固定RapidOCR3.9.2的DBPostProcess方法，仅以派生类记录合成中间数值；保留上述PaddlePaddle/RapidOCR的Apache-2.0归属。不复制整套推理项目，未引入新产品依赖，见[中间参考](DETECTOR_BOX_TRACE.md)。
+
+
+- Android完整框测试流程：`BoxPipelineContract`/`BoxPipelineOpenCv`按固定RapidOCR3.9.2的DBPostProcess与排序规则实现检测后处理，保留PaddlePaddle Authors/Apache-2.0归属；复用上述有修改记录的Boost许可polygon候选，仅测试源集。框/分数身份绑定、输入认证、预算与失败防护为本项目新增，未复制整套OCR产品。目标华为的有界合成验收见[完整框探针](BOX_PIPELINE_PROBE.md)。

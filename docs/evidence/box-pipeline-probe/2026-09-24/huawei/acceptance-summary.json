@@ -1,0 +1,114 @@
+{
+  "status": "accepted-bounded-synthetic-target-device",
+  "device": "HUAWEI LIO-AN00/API31",
+  "rounds": 2,
+  "junitTestsPerRound": 10,
+  "boxes": {
+    "completeCases": 22,
+    "budgetCases": 2,
+    "rows": 1020,
+    "contourVertices": 4229,
+    "scores": 17,
+    "distances": 15,
+    "expandedPaths": 15,
+    "expandedVertices": 232,
+    "postQuads": 15,
+    "rawBoxes": 15,
+    "finalBoxes": 14,
+    "maskCases": 16,
+    "crops": 13,
+    "cropChannels": 139875
+  },
+  "guards": 46,
+  "cropChangedChannels": 0,
+  "maximumFiniteAbsoluteDifferences": {
+    "topRawBox.x": 0,
+    "topRawBox.y": 0,
+    "topRawScore": 0,
+    "pairedBox.x": 0,
+    "pairedBox.y": 0,
+    "pairedScore": 0,
+    "preQuad.x": 0,
+    "preQuad.y": 0,
+    "minimumSide": 0,
+    "score": 0,
+    "distance": 0,
+    "postQuad.x": 0,
+    "postQuad.y": 0,
+    "expandedMinimumSide": 0,
+    "rawBox.x": 0,
+    "rawBox.y": 0,
+    "finalBox.x": 0,
+    "finalBox.y": 0,
+    "finalScore": 0,
+    "quad.x": 0,
+    "quad.y": 0,
+    "matrix": 0,
+    "inverseMatrix": 0,
+    "forward.x": 1.1368683772161603e-13,
+    "forward.y": 1.4210854715202004e-14,
+    "inverse.x": 5.684341886080802e-14,
+    "inverse.y": 2.842170943040401e-14,
+    "sourceRoundtrip.x": 5.684341886080802e-14,
+    "sourceRoundtrip.y": 1.4210854715202004e-14,
+    "rotatedForward.x": 1.1368683772161603e-13,
+    "rotatedForward.y": 1.4210854715202004e-14,
+    "rotatedInverse.x": 5.684341886080802e-14,
+    "rotatedInverse.y": 1.4210854715202004e-14,
+    "pixelRoundtrip.x": 5.684341886080802e-14,
+    "pixelRoundtrip.y": 1.4210854715202004e-14,
+    "pixelRotation.x": 5.684341886080802e-14,
+    "pixelRotation.y": 1.0658141036401503e-14,
+    "pixelRotationInverse.x": 5.684341886080802e-14,
+    "pixelRotationInverse.y": 1.4210854715202004e-14
+  },
+  "matBuffersPerRound": 5612,
+  "bitmapsPerRound": 25,
+  "nonTimingRoundsEqual": true,
+  "oldFourReportsMatchAcceptedBaseline": true,
+  "excludedComparisonFields": [
+    "elapsedMs",
+    "elapsedNanos",
+    "elapsedNanosObservational",
+    "resizeNs",
+    "runId"
+  ],
+  "runIds": [
+    "efdbd808-3a45-4cf7-be0c-7392897bfe0b",
+    "f5614e2d-8669-4e57-8074-ff60a51995cf",
+    "a743f9f8-8ea4-4c8b-b438-a54d665852d2",
+    "61588501-ab86-4dea-9229-eedd628737a7",
+    "935d9fae-73f4-4b43-b7ea-979608f79e74",
+    "ba8a324a-d85d-4570-99f0-0ba44c56782f",
+    "a2f69869-14a9-4877-85d8-038f22a8f651",
+    "9d45ea40-1a53-4ee3-bb5b-e13fe5b67888",
+    "3be620cb-450d-40f7-aae1-ee7bd53bd8c3",
+    "11b46bf8-3510-483a-a21b-82c01f9d1e44"
+  ],
+  "instrumentationSecondsObservational": {
+    "regression": [
+      5.919,
+      5.901
+    ],
+    "geometry": [
+      1.297,
+      1.19
+    ],
+    "polygon": [
+      16.366,
+      16.771
+    ],
+    "boxes": [
+      27.571,
+      28.141
+    ]
+  },
+  "sourceAndBuildFingerprintsUnchanged": true,
+  "protectedFiles": 907,
+  "limitations": [
+    "Synthetic frozen probabilities; not fresh detector-to-recognition inference",
+    "No EN/FR/ZH quality or real-screen acceptance",
+    "Only target Huawei; API36 native SIGILL unresolved",
+    "Mat headers finalizer-owned; UNION internals and long-term memory not bounded by these counts"
+  ]
+}

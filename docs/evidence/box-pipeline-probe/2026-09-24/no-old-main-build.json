@@ -1,0 +1,6 @@
+{
+  "mainSha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+  "testBuildWithMainApkAbsent": true,
+  "mainNotGenerated": true,
+  "mainRestoredWithSameHash": true
+}

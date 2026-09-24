@@ -1,5 +1,6 @@
 import java.security.MessageDigest
 import java.util.zip.ZipFile
+import java.util.zip.GZIPInputStream
 
 plugins {
     id("com.android.application")
@@ -28,6 +29,7 @@ android {
     sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("detector-assets"))
     sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("geometry-assets"))
     sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("polygon-offset-assets"))
+    sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("box-trace-assets"))
     sourceSets.getByName("test").resources {
         srcDir(rootProject.file("docs/fixtures/recognition-prep-v1"))
         srcDir("src/androidTest/assets")
@@ -427,6 +429,94 @@ tasks.matching { it.name == "assembleDebugAndroidTest" }.configureEach {
                 val entry = apk.getEntry(name); check(entry.size == identity.first.toLong())
                 val packaged = apk.getInputStream(entry).use { it.readNBytes(identity.first + 1) }
                 check(packaged.contentEquals(original)) { "Packaged polygon bytes changed: $name" }
+            }
+        }
+    }
+}
+
+// Frozen DB trace fixtures: logical .json.gz becomes ONLY physical .jsonz, because
+// AAPT rewrites gzip suffixes. The manifest remains byte-for-byte unchanged.
+val boxTraceManifestSha = "91cc2279377e8809ba3898bd31784f79df307dc0ad816a826fac139de7184118"
+val boxTraceExtraIds = listOf("candidate-count-1000", "candidate-count-1001", "candidate-count-4096", "score-equal",
+    "score-below", "final-size-three", "minimum-side-two", "collinear-height-one")
+val boxTraceIds = geometryIds + boxTraceExtraIds
+val boxTraceMapping = (boxTraceIds.map { "$it-trace.json.gz" } +
+    boxTraceExtraIds.map { "$it-probability.f32z" } + "manifest.json").associateWith {
+    if (it.endsWith(".json.gz")) it.removeSuffix(".json.gz") + ".jsonz" else it
+}
+val boxTraceRoot = rootProject.file("docs/fixtures/detector-box-trace-v1")
+fun boxTraceAssetSpecs(): Map<String, DetectorAssetSpec> {
+    polygonFileSet(boxTraceRoot, boxTraceMapping.keys)
+    val manifest = DetectorAssetSpec(boxTraceRoot.resolve("manifest.json"), 22930, boxTraceManifestSha, 128 * 1024)
+    val m = groovy.json.JsonSlurper().parseText(String(detectorRead(manifest), Charsets.UTF_8)) as Map<*, *>
+    check((m["schema"] as Number).toInt() == 1 && m["parentManifestSha256"] == geometryManifestSha)
+    check((m["cases"] as List<*>).map { (it as Map<*, *>)["id"] } == boxTraceIds)
+    val files = m["files"] as Map<*, *>; check(files.keys == boxTraceMapping.keys - "manifest.json")
+    val specs = linkedMapOf("manifest.json" to manifest)
+    files.forEach { (key, value) ->
+        val name = key as String; val meta = value as Map<*, *>
+        val bytes = (meta["bytes"] as Number).toLong(); check(bytes in 1..2_097_152L)
+        val spec = DetectorAssetSpec(boxTraceRoot.resolve(name), bytes.toInt(), meta["sha256"] as String, 2 * 1024 * 1024)
+        val raw = detectorRead(spec)
+        val cap = if (name.endsWith(".json.gz")) 1_048_576 else 4_194_304
+        val decodedBytes = (meta["decodedBytes"] as Number).toLong(); check(decodedBytes in 1..cap.toLong())
+        val decoded = GZIPInputStream(raw.inputStream()).use { it.readNBytes(decodedBytes.toInt() + 1) }
+        check(decoded.size.toLong() == decodedBytes && detectorDigest(decoded) == meta["decodedSha256"])
+        specs[name] = spec
+    }
+    check(specs.size == 33 && specs.values.sumOf { it.bytes } == 112533)
+    return specs
+}
+val stageBoxTraceProbeAssets by tasks.registering(Sync::class) {
+    from(boxTraceRoot) {
+        include(boxTraceMapping.keys)
+        rename { boxTraceMapping.getValue(it) }
+        into("detector-box-trace-v1")
+    }
+    into(layout.buildDirectory.dir("box-trace-assets"))
+    inputs.dir(boxTraceRoot)
+    inputs.property("frozenBoxTraceManifest", boxTraceManifestSha)
+    inputs.property("boxTraceLogicalToPhysical", boxTraceMapping.toString())
+    doFirst { boxTraceAssetSpecs() }
+}
+val validateBoxTraceProbeAssets by tasks.registering {
+    dependsOn(stageBoxTraceProbeAssets)
+    doLast {
+        val specs = boxTraceAssetSpecs()
+        val stage = layout.buildDirectory.dir("box-trace-assets").get().asFile
+        polygonFileSet(stage, boxTraceMapping.values.map { "detector-box-trace-v1/$it" }.toSet())
+        specs.forEach { (logical, spec) ->
+            detectorRead(spec.copy(file = stage.resolve("detector-box-trace-v1/${boxTraceMapping.getValue(logical)}")))
+        }
+    }
+}
+tasks.matching { it.name in setOf("mergeDebugAndroidTestAssets", "packageDebugAndroidTest",
+    "generateDebugAndroidTestLintModel", "lintAnalyzeDebugAndroidTest") }.configureEach {
+    dependsOn(validateBoxTraceProbeAssets)
+}
+tasks.matching { it.name == "assembleDebugAndroidTest" }.configureEach {
+    doLast {
+        val specs = boxTraceAssetSpecs()
+        ZipFile(layout.buildDirectory.file("outputs/apk/androidTest/debug/modelprobe-debug-androidTest.apk").get().asFile).use { apk ->
+            val entries = apk.entries().asSequence().filter { !it.isDirectory && it.name.startsWith("assets/detector-box-trace-v1/") }.toList()
+            val expected = boxTraceMapping.values.map { "assets/detector-box-trace-v1/$it" }.toSet()
+            check(entries.size == 33 && entries.map { it.name }.toSet() == expected)
+            specs.forEach { (logical, spec) ->
+                val entry = apk.getEntry("assets/detector-box-trace-v1/${boxTraceMapping.getValue(logical)}")
+                check(entry.size == spec.bytes.toLong())
+                val raw = apk.getInputStream(entry).use { it.readNBytes(spec.bytes + 1) }
+                check(raw.contentEquals(detectorRead(spec))) { "Packaged box trace identity: $logical" }
+            }
+        }
+    }
+}
+tasks.matching { it.name == "assembleDebug" }.configureEach {
+    doLast {
+        ZipFile(layout.buildDirectory.file("outputs/apk/debug/modelprobe-debug.apk").get().asFile).use { apk ->
+            check(apk.entries().asSequence().none { it.name.startsWith("assets/detector-box-trace-v1/") })
+            apk.entries().asSequence().filter { it.name.matches(Regex("classes[0-9]*\\.dex")) }.forEach { entry ->
+                val strings = apk.getInputStream(entry).use { String(it.readBytes(), Charsets.ISO_8859_1) }
+                check(listOf("BoxPipeline", "BoxTrace").none { strings.contains("Lcom/kandong/modelprobe/$it") })
             }
         }
     }

@@ -1,0 +1,3913 @@
+{
+  "schema": 1,
+  "runId": "ba8a324a-d85d-4570-99f0-0ba44c56782f",
+  "scope": "synthetic_probability_masks_and_reference_quad_crops_NOT_detected_boxes_OR_OCR",
+  "fixtureManifestSha256": "1aa14f2efb50e62c5a2d95b45b7d5b5044d4ec90afa47a976e8dea50bbe466a6",
+  "syntheticCaseIDs": [
+    "en-quality-16",
+    "fr-nonrefundable-16",
+    "zh-hans-quality-16",
+    "zh-hant-quality-16",
+    "mixed-quality-16",
+    "blank-negative-24",
+    "color-control",
+    "wide-959",
+    "wide-1499",
+    "wide-2001",
+    "threshold-equal",
+    "below-box-score",
+    "tiny-negative",
+    "two-blocks",
+    "edge-touching",
+    "vertical"
+  ],
+  "api": 31,
+  "manufacturer": "HUAWEI",
+  "deviceModel": "LIO-AN00",
+  "abis": [
+    "arm64-v8a",
+    "armeabi-v7a",
+    "armeabi"
+  ],
+  "openCvArtifact": "org.opencv:opencv:5.0.0.1",
+  "openCvAarSha256": "edb1406a223d2820460b8366a790238b400f5d5c9ea2e98d44b889f0f3c66849",
+  "sourceDecode": "BitmapFactory RGB8 to ARGB_8888 sRGB, inScaled=false; dimensions before Bitmap allocation; raw BGR hash after Bitmap allocation and before Mat",
+  "coordinateConvention": "homography target edges (0,0),(W,0),(W,H),(0,H); CCW pixel indices (x,y)->(y,W-1-x); inverse (u,v)->(W-1-v,u)",
+  "acceptance": {
+    "maskChangedValues": 0,
+    "dilatedChangedValues": 0,
+    "contourCountExact": true,
+    "cropChangedBgrChannels": 0,
+    "associationAndDimensionsExact": true,
+    "matrixAtol": 1e-09,
+    "matrixRtol": 1e-09,
+    "pointAtol": 1e-06,
+    "pointRtol": 1e-09,
+    "contourBudget": 8192,
+    "candidateLimit": 1000
+  },
+  "cropRoute": "DEFAULT",
+  "cases": [
+    {
+      "id": "en-quality-16",
+      "status": "COMPLETE",
+      "crops": [
+        {
+          "id": "en-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "detectorScore": 0.7848805975701127,
+          "cropAsset": "en-quality-16-crop-00.png",
+          "status": "completed",
+          "bgr": {
+            "comparedValues": 16695,
+            "actualValues": 16695,
+            "referenceValues": 16695,
+            "changedValues": 0,
+            "lengthDifference": 0,
+            "maxAbs": 0,
+            "meanAbs": 0,
+            "passed": true,
+            "changedBgrChannels": 0,
+            "actualBgrSha256": "cf447df56859abe0a361a7072d022f2abb5058d9ab9fe9fc1e3efae49df96e3a",
+            "referenceBgrSha256": "cf447df56859abe0a361a7072d022f2abb5058d9ab9fe9fc1e3efae49df96e3a"
+          },
+          "matrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "inverseMatrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "coordinates": {
+            "sourceToTargetCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 3.552713678800501e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "targetToSourceCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 3.552713678800501e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "sourceCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 0,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "cropPixelCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 3.552713678800501e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotation": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 3.552713678800501e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotationInverse": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 0,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "passed": true
+          },
+          "sourceToPreRotation": [
+            1,
+            1.2664502346178883e-17,
+            -29.999999999999996,
+            -1.2043097216272884e-17,
+            1,
+            -26.999999999999996,
+            0,
+            3.1920158839177906e-19,
+            1
+          ],
+          "preRotationToSource": [
+            1,
+            -2.2240549997932252e-17,
+            29.999999999999996,
+            1.2043097216272884e-17,
+            1,
+            26.999999999999996,
+            -3.844175760590917e-36,
+            -3.1920158839177906e-19,
+            1
+          ],
+          "associationExact": true,
+          "width": 265,
+          "height": 21,
+          "preRotationWidth": 265,
+          "preRotationHeight": 21,
+          "rotateCCW90": false,
+          "dimensionsAndRotationExact": true,
+          "passed": true
+        }
+      ],
+      "mask": {
+        "comparedValues": 61440,
+        "actualValues": 61440,
+        "referenceValues": 61440,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "rowRunBound": 118,
+      "dilation": {
+        "comparedValues": 61440,
+        "actualValues": 61440,
+        "referenceValues": 61440,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "contourCount": 1,
+      "referenceContourCount": 1,
+      "contourCountExact": true,
+      "candidateLimit": 1000,
+      "passed": true,
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 1,
+          "kernel": 1,
+          "dilated": 1,
+          "contourSource": 1,
+          "hierarchy": 1,
+          "contour": 1,
+          "sourceQuad": 1,
+          "targetQuad": 1,
+          "homography": 1,
+          "cropSource": 1,
+          "warpDestination": 1
+        },
+        "matReleaseAttempts": {
+          "contour": 1,
+          "hierarchy": 1,
+          "contourSource": 1,
+          "dilated": 1,
+          "kernel": 1,
+          "maskSource": 1,
+          "warpDestination": 1,
+          "cropSource": 1,
+          "homography": 1,
+          "targetQuad": 1,
+          "sourceQuad": 1
+        },
+        "matReleased": {
+          "contour": 1,
+          "hierarchy": 1,
+          "contourSource": 1,
+          "dilated": 1,
+          "kernel": 1,
+          "maskSource": 1,
+          "warpDestination": 1,
+          "cropSource": 1,
+          "homography": 1,
+          "targetQuad": 1,
+          "sourceQuad": 1
+        },
+        "matOpened": 11,
+        "findContoursCalls": 1,
+        "bitmapOpened": 2,
+        "bitmapRecycleAttempts": 2,
+        "bitmapRecycled": 2,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "fr-nonrefundable-16",
+      "status": "COMPLETE",
+      "crops": [
+        {
+          "id": "fr-nonrefundable-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "detectorScore": 0.7906220418996359,
+          "cropAsset": "fr-nonrefundable-16-crop-00.png",
+          "status": "completed",
+          "bgr": {
+            "comparedValues": 24192,
+            "actualValues": 24192,
+            "referenceValues": 24192,
+            "changedValues": 0,
+            "lengthDifference": 0,
+            "maxAbs": 0,
+            "meanAbs": 0,
+            "passed": true,
+            "changedBgrChannels": 0,
+            "actualBgrSha256": "21d6f4ce136f5b3d1f31f2c82eee7051d1243ad46de91a343745314634b42088",
+            "referenceBgrSha256": "21d6f4ce136f5b3d1f31f2c82eee7051d1243ad46de91a343745314634b42088"
+          },
+          "matrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "inverseMatrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "coordinates": {
+            "sourceToTargetCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 1.1368683772161603e-13,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "targetToSourceCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 5.684341886080802e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "sourceCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 5.684341886080802e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "cropPixelCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 5.684341886080802e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotation": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 1.1368683772161603e-13,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotationInverse": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 5.684341886080802e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "passed": true
+          },
+          "sourceToPreRotation": [
+            1.0000000000000002,
+            1.1147358328352937e-16,
+            -30.000000000000014,
+            0,
+            1.0000000000000002,
+            -27.000000000000007,
+            9.441940885629014e-19,
+            1.1902352574546464e-19,
+            1
+          ],
+          "preRotationToSource": [
+            0.9999999999999998,
+            -1.1504428905589325e-16,
+            30.000000000000004,
+            -2.5493240391198334e-17,
+            0.9999999999999998,
+            27,
+            -9.441940885629013e-19,
+            -1.1902352574546452e-19,
+            1
+          ],
+          "associationExact": true,
+          "width": 336,
+          "height": 24,
+          "preRotationWidth": 336,
+          "preRotationHeight": 24,
+          "rotateCCW90": false,
+          "dimensionsAndRotationExact": true,
+          "passed": true
+        }
+      ],
+      "mask": {
+        "comparedValues": 61440,
+        "actualValues": 61440,
+        "referenceValues": 61440,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "rowRunBound": 130,
+      "dilation": {
+        "comparedValues": 61440,
+        "actualValues": 61440,
+        "referenceValues": 61440,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "contourCount": 1,
+      "referenceContourCount": 1,
+      "contourCountExact": true,
+      "candidateLimit": 1000,
+      "passed": true,
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 2,
+          "kernel": 2,
+          "dilated": 2,
+          "contourSource": 2,
+          "hierarchy": 2,
+          "contour": 2,
+          "sourceQuad": 2,
+          "targetQuad": 2,
+          "homography": 2,
+          "cropSource": 2,
+          "warpDestination": 2
+        },
+        "matReleaseAttempts": {
+          "contour": 2,
+          "hierarchy": 2,
+          "contourSource": 2,
+          "dilated": 2,
+          "kernel": 2,
+          "maskSource": 2,
+          "warpDestination": 2,
+          "cropSource": 2,
+          "homography": 2,
+          "targetQuad": 2,
+          "sourceQuad": 2
+        },
+        "matReleased": {
+          "contour": 2,
+          "hierarchy": 2,
+          "contourSource": 2,
+          "dilated": 2,
+          "kernel": 2,
+          "maskSource": 2,
+          "warpDestination": 2,
+          "cropSource": 2,
+          "homography": 2,
+          "targetQuad": 2,
+          "sourceQuad": 2
+        },
+        "matOpened": 22,
+        "findContoursCalls": 2,
+        "bitmapOpened": 4,
+        "bitmapRecycleAttempts": 4,
+        "bitmapRecycled": 4,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "zh-hans-quality-16",
+      "status": "COMPLETE",
+      "crops": [
+        {
+          "id": "zh-hans-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "detectorScore": 0.7844004929065703,
+          "cropAsset": "zh-hans-quality-16-crop-00.png",
+          "status": "completed",
+          "bgr": {
+            "comparedValues": 11529,
+            "actualValues": 11529,
+            "referenceValues": 11529,
+            "changedValues": 0,
+            "lengthDifference": 0,
+            "maxAbs": 0,
+            "meanAbs": 0,
+            "passed": true,
+            "changedBgrChannels": 0,
+            "actualBgrSha256": "10d4b67dd0458cc12c0528ce8059dc5662cee51c81465832ff3710440ff56b0b",
+            "referenceBgrSha256": "10d4b67dd0458cc12c0528ce8059dc5662cee51c81465832ff3710440ff56b0b"
+          },
+          "matrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "inverseMatrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "coordinates": {
+            "sourceToTargetCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 3.552713678800501e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "targetToSourceCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 3.552713678800501e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "sourceCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 0,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "cropPixelCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 0,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotation": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 3.552713678800501e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotationInverse": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 0,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "passed": true
+          },
+          "sourceToPreRotation": [
+            1,
+            2.9582975211439065e-17,
+            -29.000000000000004,
+            0,
+            1,
+            -30,
+            -1.3674127656265582e-35,
+            4.622318083268932e-19,
+            1
+          ],
+          "preRotationToSource": [
+            1,
+            -4.2987697652918966e-17,
+            29.000000000000004,
+            4.102238296879674e-34,
+            1,
+            30,
+            1.3674127656265582e-35,
+            -4.622318083268932e-19,
+            1
+          ],
+          "associationExact": true,
+          "width": 183,
+          "height": 21,
+          "preRotationWidth": 183,
+          "preRotationHeight": 21,
+          "rotateCCW90": false,
+          "dimensionsAndRotationExact": true,
+          "passed": true
+        },
+        {
+          "id": "zh-hans-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "detectorScore": 0.7958953108336475,
+          "cropAsset": "zh-hans-quality-16-crop-01.png",
+          "status": "completed",
+          "bgr": {
+            "comparedValues": 12474,
+            "actualValues": 12474,
+            "referenceValues": 12474,
+            "changedValues": 0,
+            "lengthDifference": 0,
+            "maxAbs": 0,
+            "meanAbs": 0,
+            "passed": true,
+            "changedBgrChannels": 0,
+            "actualBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335",
+            "referenceBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335"
+          },
+          "matrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "inverseMatrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "coordinates": {
+            "sourceToTargetCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 3.552713678800501e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "targetToSourceCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "sourceCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "cropPixelCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotation": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotationInverse": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "passed": true
+          },
+          "sourceToPreRotation": [
+            1.0000000000000002,
+            1.782239027400998e-17,
+            -30.000000000000004,
+            0,
+            1.0000000000000002,
+            -56.000000000000014,
+            7.832261196650137e-19,
+            2.0597829770411068e-19,
+            1
+          ],
+          "preRotationToSource": [
+            0.9999999999999998,
+            -2.400173920513329e-17,
+            29.999999999999996,
+            -4.3860662701240756e-17,
+            0.9999999999999998,
+            56,
+            -7.832261196650135e-19,
+            -2.059782977041106e-19,
+            1
+          ],
+          "associationExact": true,
+          "width": 198,
+          "height": 21,
+          "preRotationWidth": 198,
+          "preRotationHeight": 21,
+          "rotateCCW90": false,
+          "dimensionsAndRotationExact": true,
+          "passed": true
+        }
+      ],
+      "mask": {
+        "comparedValues": 81920,
+        "actualValues": 81920,
+        "referenceValues": 81920,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "rowRunBound": 172,
+      "dilation": {
+        "comparedValues": 81920,
+        "actualValues": 81920,
+        "referenceValues": 81920,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "contourCount": 2,
+      "referenceContourCount": 2,
+      "contourCountExact": true,
+      "candidateLimit": 1000,
+      "passed": true,
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 3,
+          "kernel": 3,
+          "dilated": 3,
+          "contourSource": 3,
+          "hierarchy": 3,
+          "contour": 4,
+          "sourceQuad": 4,
+          "targetQuad": 4,
+          "homography": 4,
+          "cropSource": 4,
+          "warpDestination": 4
+        },
+        "matReleaseAttempts": {
+          "contour": 4,
+          "hierarchy": 3,
+          "contourSource": 3,
+          "dilated": 3,
+          "kernel": 3,
+          "maskSource": 3,
+          "warpDestination": 4,
+          "cropSource": 4,
+          "homography": 4,
+          "targetQuad": 4,
+          "sourceQuad": 4
+        },
+        "matReleased": {
+          "contour": 4,
+          "hierarchy": 3,
+          "contourSource": 3,
+          "dilated": 3,
+          "kernel": 3,
+          "maskSource": 3,
+          "warpDestination": 4,
+          "cropSource": 4,
+          "homography": 4,
+          "targetQuad": 4,
+          "sourceQuad": 4
+        },
+        "matOpened": 39,
+        "findContoursCalls": 3,
+        "bitmapOpened": 7,
+        "bitmapRecycleAttempts": 7,
+        "bitmapRecycled": 7,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "zh-hant-quality-16",
+      "status": "COMPLETE",
+      "crops": [
+        {
+          "id": "zh-hant-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "detectorScore": 0.7939277429647849,
+          "cropAsset": "zh-hant-quality-16-crop-00.png",
+          "status": "completed",
+          "bgr": {
+            "comparedValues": 12078,
+            "actualValues": 12078,
+            "referenceValues": 12078,
+            "changedValues": 0,
+            "lengthDifference": 0,
+            "maxAbs": 0,
+            "meanAbs": 0,
+            "passed": true,
+            "changedBgrChannels": 0,
+            "actualBgrSha256": "a9273c2cb3b7b1df4e2c56d7f2ad2359a8777407dd594c82d781254561beea6b",
+            "referenceBgrSha256": "a9273c2cb3b7b1df4e2c56d7f2ad2359a8777407dd594c82d781254561beea6b"
+          },
+          "matrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "inverseMatrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "coordinates": {
+            "sourceToTargetCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "targetToSourceCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "sourceCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 7.105427357601002e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "cropPixelCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotation": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotationInverse": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "passed": true
+          },
+          "sourceToPreRotation": [
+            1.0000000000000002,
+            2.7200429540982913e-17,
+            -29.000000000000014,
+            -0.010928961748633868,
+            1.0000000000000002,
+            -26.683060109289627,
+            1.811923544018469e-18,
+            1.2928263900695758e-19,
+            1
+          ],
+          "preRotationToSource": [
+            0.9999999999999998,
+            -3.094962607218467e-17,
+            29.000000000000007,
+            0.010928961748633816,
+            0.9999999999999998,
+            27.000000000000004,
+            -1.813336469034938e-18,
+            -1.292826390069575e-19,
+            1
+          ],
+          "associationExact": true,
+          "width": 183,
+          "height": 22,
+          "preRotationWidth": 183,
+          "preRotationHeight": 22,
+          "rotateCCW90": false,
+          "dimensionsAndRotationExact": true,
+          "passed": true
+        },
+        {
+          "id": "zh-hant-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "detectorScore": 0.8001764074048481,
+          "cropAsset": "zh-hant-quality-16-crop-01.png",
+          "status": "completed",
+          "bgr": {
+            "comparedValues": 12474,
+            "actualValues": 12474,
+            "referenceValues": 12474,
+            "changedValues": 0,
+            "lengthDifference": 0,
+            "maxAbs": 0,
+            "meanAbs": 0,
+            "passed": true,
+            "changedBgrChannels": 0,
+            "actualBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335",
+            "referenceBgrSha256": "20c0184511f794e0935f2ea795a0d896e421bd74d5e6830dec2babc5ff916335"
+          },
+          "matrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "inverseMatrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "coordinates": {
+            "sourceToTargetCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 3.552713678800501e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "targetToSourceCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "sourceCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "cropPixelCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotation": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotationInverse": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "passed": true
+          },
+          "sourceToPreRotation": [
+            1.0000000000000002,
+            1.782239027400998e-17,
+            -30.000000000000004,
+            0,
+            1.0000000000000002,
+            -56.000000000000014,
+            7.832261196650137e-19,
+            2.0597829770411068e-19,
+            1
+          ],
+          "preRotationToSource": [
+            0.9999999999999998,
+            -2.400173920513329e-17,
+            29.999999999999996,
+            -4.3860662701240756e-17,
+            0.9999999999999998,
+            56,
+            -7.832261196650135e-19,
+            -2.059782977041106e-19,
+            1
+          ],
+          "associationExact": true,
+          "width": 198,
+          "height": 21,
+          "preRotationWidth": 198,
+          "preRotationHeight": 21,
+          "rotateCCW90": false,
+          "dimensionsAndRotationExact": true,
+          "passed": true
+        }
+      ],
+      "mask": {
+        "comparedValues": 81920,
+        "actualValues": 81920,
+        "referenceValues": 81920,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "rowRunBound": 176,
+      "dilation": {
+        "comparedValues": 81920,
+        "actualValues": 81920,
+        "referenceValues": 81920,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "contourCount": 2,
+      "referenceContourCount": 2,
+      "contourCountExact": true,
+      "candidateLimit": 1000,
+      "passed": true,
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 4,
+          "kernel": 4,
+          "dilated": 4,
+          "contourSource": 4,
+          "hierarchy": 4,
+          "contour": 6,
+          "sourceQuad": 6,
+          "targetQuad": 6,
+          "homography": 6,
+          "cropSource": 6,
+          "warpDestination": 6
+        },
+        "matReleaseAttempts": {
+          "contour": 6,
+          "hierarchy": 4,
+          "contourSource": 4,
+          "dilated": 4,
+          "kernel": 4,
+          "maskSource": 4,
+          "warpDestination": 6,
+          "cropSource": 6,
+          "homography": 6,
+          "targetQuad": 6,
+          "sourceQuad": 6
+        },
+        "matReleased": {
+          "contour": 6,
+          "hierarchy": 4,
+          "contourSource": 4,
+          "dilated": 4,
+          "kernel": 4,
+          "maskSource": 4,
+          "warpDestination": 6,
+          "cropSource": 6,
+          "homography": 6,
+          "targetQuad": 6,
+          "sourceQuad": 6
+        },
+        "matOpened": 56,
+        "findContoursCalls": 4,
+        "bitmapOpened": 10,
+        "bitmapRecycleAttempts": 10,
+        "bitmapRecycled": 10,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "mixed-quality-16",
+      "status": "COMPLETE",
+      "crops": [
+        {
+          "id": "mixed-quality-16.box-2",
+          "originalIndex": 2,
+          "readingOrder": 0,
+          "detectorScore": 0.8009911834917687,
+          "cropAsset": "mixed-quality-16-crop-00.png",
+          "status": "completed",
+          "bgr": {
+            "comparedValues": 7623,
+            "actualValues": 7623,
+            "referenceValues": 7623,
+            "changedValues": 0,
+            "lengthDifference": 0,
+            "maxAbs": 0,
+            "meanAbs": 0,
+            "passed": true,
+            "changedBgrChannels": 0,
+            "actualBgrSha256": "ca53b4fc5f377c96bbd6e02f7b846cb324fffe20720ebede9b4dd74a13963422",
+            "referenceBgrSha256": "ca53b4fc5f377c96bbd6e02f7b846cb324fffe20720ebede9b4dd74a13963422"
+          },
+          "matrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "inverseMatrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "coordinates": {
+            "sourceToTargetCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 1.4210854715202004e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "targetToSourceCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 7.105427357601002e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "sourceCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 7.105427357601002e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "cropPixelCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 1.4210854715202004e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotation": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 1.4210854715202004e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotationInverse": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 7.105427357601002e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "passed": true
+          },
+          "sourceToPreRotation": [
+            1.0000000000000002,
+            1.307760543287234e-17,
+            -29.000000000000014,
+            0,
+            1.0000000000000002,
+            -29.000000000000007,
+            1.6660839473001336e-18,
+            -4.3114962932353906e-19,
+            1
+          ],
+          "preRotationToSource": [
+            0.9999999999999998,
+            -5.742661824897013e-19,
+            29.000000000000007,
+            -4.831643447170386e-17,
+            0.9999999999999998,
+            29,
+            -1.6660839473001332e-18,
+            4.3114962932353896e-19,
+            1
+          ],
+          "associationExact": true,
+          "width": 121,
+          "height": 21,
+          "preRotationWidth": 121,
+          "preRotationHeight": 21,
+          "rotateCCW90": false,
+          "dimensionsAndRotationExact": true,
+          "passed": true
+        },
+        {
+          "id": "mixed-quality-16.box-1",
+          "originalIndex": 1,
+          "readingOrder": 1,
+          "detectorScore": 0.7865341892181817,
+          "cropAsset": "mixed-quality-16-crop-01.png",
+          "status": "completed",
+          "bgr": {
+            "comparedValues": 11970,
+            "actualValues": 11970,
+            "referenceValues": 11970,
+            "changedValues": 0,
+            "lengthDifference": 0,
+            "maxAbs": 0,
+            "meanAbs": 0,
+            "passed": true,
+            "changedBgrChannels": 0,
+            "actualBgrSha256": "fee25a7dd0410e67b4210c9100ae043bd8b3e237d03574401d7110e0cb284911",
+            "referenceBgrSha256": "fee25a7dd0410e67b4210c9100ae043bd8b3e237d03574401d7110e0cb284911"
+          },
+          "matrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "inverseMatrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "coordinates": {
+            "sourceToTargetCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 1.4210854715202004e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "targetToSourceCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 7.105427357601002e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "sourceCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 1.4210854715202004e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "cropPixelCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 1.0658141036401503e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotation": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 1.4210854715202004e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotationInverse": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 1.4210854715202004e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "passed": true
+          },
+          "sourceToPreRotation": [
+            0.9999999999999993,
+            3.0207354079979485e-17,
+            -28.999999999999982,
+            -3.2444873779000007e-17,
+            0.9999999999999993,
+            -53.99999999999996,
+            -2.5042961685725707e-18,
+            2.4628590150708275e-19,
+            1
+          ],
+          "preRotationToSource": [
+            1.0000000000000004,
+            -3.7349645223684925e-17,
+            29,
+            1.6767686688191892e-16,
+            1.0000000000000004,
+            53.99999999999999,
+            2.5042961685725722e-18,
+            -2.46285901507083e-19,
+            1
+          ],
+          "associationExact": true,
+          "width": 190,
+          "height": 21,
+          "preRotationWidth": 190,
+          "preRotationHeight": 21,
+          "rotateCCW90": false,
+          "dimensionsAndRotationExact": true,
+          "passed": true
+        },
+        {
+          "id": "mixed-quality-16.box-0",
+          "originalIndex": 0,
+          "readingOrder": 2,
+          "detectorScore": 0.7981728689920976,
+          "cropAsset": "mixed-quality-16-crop-02.png",
+          "status": "completed",
+          "bgr": {
+            "comparedValues": 7656,
+            "actualValues": 7656,
+            "referenceValues": 7656,
+            "changedValues": 0,
+            "lengthDifference": 0,
+            "maxAbs": 0,
+            "meanAbs": 0,
+            "passed": true,
+            "changedBgrChannels": 0,
+            "actualBgrSha256": "3590e94e4f545491b33a76e8c06a4a819c2cc970dd77a49c10416afd61840e5a",
+            "referenceBgrSha256": "3590e94e4f545491b33a76e8c06a4a819c2cc970dd77a49c10416afd61840e5a"
+          },
+          "matrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "inverseMatrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "coordinates": {
+            "sourceToTargetCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 3.552713678800501e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "targetToSourceCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 3.552713678800501e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "sourceCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 0,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "cropPixelCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 0,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotation": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 3.552713678800501e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotationInverse": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 0,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "passed": true
+          },
+          "sourceToPreRotation": [
+            1,
+            1.4568537427207937e-17,
+            -29.000000000000004,
+            0,
+            0.9999999999999999,
+            -82.99999999999999,
+            0,
+            0,
+            1
+          ],
+          "preRotationToSource": [
+            1,
+            -1.456853742720794e-17,
+            29.000000000000004,
+            0,
+            1.0000000000000002,
+            83,
+            0,
+            0,
+            1
+          ],
+          "associationExact": true,
+          "width": 116,
+          "height": 22,
+          "preRotationWidth": 116,
+          "preRotationHeight": 22,
+          "rotateCCW90": false,
+          "dimensionsAndRotationExact": true,
+          "passed": true
+        }
+      ],
+      "mask": {
+        "comparedValues": 102400,
+        "actualValues": 102400,
+        "referenceValues": 102400,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "rowRunBound": 222,
+      "dilation": {
+        "comparedValues": 102400,
+        "actualValues": 102400,
+        "referenceValues": 102400,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "contourCount": 3,
+      "referenceContourCount": 3,
+      "contourCountExact": true,
+      "candidateLimit": 1000,
+      "passed": true,
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 5,
+          "kernel": 5,
+          "dilated": 5,
+          "contourSource": 5,
+          "hierarchy": 5,
+          "contour": 9,
+          "sourceQuad": 9,
+          "targetQuad": 9,
+          "homography": 9,
+          "cropSource": 9,
+          "warpDestination": 9
+        },
+        "matReleaseAttempts": {
+          "contour": 9,
+          "hierarchy": 5,
+          "contourSource": 5,
+          "dilated": 5,
+          "kernel": 5,
+          "maskSource": 5,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matReleased": {
+          "contour": 9,
+          "hierarchy": 5,
+          "contourSource": 5,
+          "dilated": 5,
+          "kernel": 5,
+          "maskSource": 5,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matOpened": 79,
+        "findContoursCalls": 5,
+        "bitmapOpened": 14,
+        "bitmapRecycleAttempts": 14,
+        "bitmapRecycled": 14,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "blank-negative-24",
+      "status": "COMPLETE",
+      "crops": [],
+      "mask": {
+        "comparedValues": 61440,
+        "actualValues": 61440,
+        "referenceValues": 61440,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "rowRunBound": 96,
+      "dilation": {
+        "comparedValues": 61440,
+        "actualValues": 61440,
+        "referenceValues": 61440,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "contourCount": 0,
+      "referenceContourCount": 0,
+      "contourCountExact": true,
+      "candidateLimit": 1000,
+      "passed": true,
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 6,
+          "kernel": 6,
+          "dilated": 6,
+          "contourSource": 6,
+          "hierarchy": 6,
+          "contour": 9,
+          "sourceQuad": 9,
+          "targetQuad": 9,
+          "homography": 9,
+          "cropSource": 9,
+          "warpDestination": 9
+        },
+        "matReleaseAttempts": {
+          "contour": 9,
+          "hierarchy": 6,
+          "contourSource": 6,
+          "dilated": 6,
+          "kernel": 6,
+          "maskSource": 6,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matReleased": {
+          "contour": 9,
+          "hierarchy": 6,
+          "contourSource": 6,
+          "dilated": 6,
+          "kernel": 6,
+          "maskSource": 6,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matOpened": 84,
+        "findContoursCalls": 6,
+        "bitmapOpened": 15,
+        "bitmapRecycleAttempts": 15,
+        "bitmapRecycled": 15,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "color-control",
+      "status": "COMPLETE",
+      "crops": [],
+      "mask": {
+        "comparedValues": 4096,
+        "actualValues": 4096,
+        "referenceValues": 4096,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "rowRunBound": 64,
+      "dilation": {
+        "comparedValues": 4096,
+        "actualValues": 4096,
+        "referenceValues": 4096,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "contourCount": 0,
+      "referenceContourCount": 0,
+      "contourCountExact": true,
+      "candidateLimit": 1000,
+      "passed": true,
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 7,
+          "kernel": 7,
+          "dilated": 7,
+          "contourSource": 7,
+          "hierarchy": 7,
+          "contour": 9,
+          "sourceQuad": 9,
+          "targetQuad": 9,
+          "homography": 9,
+          "cropSource": 9,
+          "warpDestination": 9
+        },
+        "matReleaseAttempts": {
+          "contour": 9,
+          "hierarchy": 7,
+          "contourSource": 7,
+          "dilated": 7,
+          "kernel": 7,
+          "maskSource": 7,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matReleased": {
+          "contour": 9,
+          "hierarchy": 7,
+          "contourSource": 7,
+          "dilated": 7,
+          "kernel": 7,
+          "maskSource": 7,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matOpened": 89,
+        "findContoursCalls": 7,
+        "bitmapOpened": 16,
+        "bitmapRecycleAttempts": 16,
+        "bitmapRecycled": 16,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "wide-959",
+      "status": "COMPLETE",
+      "crops": [],
+      "mask": {
+        "comparedValues": 92160,
+        "actualValues": 92160,
+        "referenceValues": 92160,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "rowRunBound": 96,
+      "dilation": {
+        "comparedValues": 92160,
+        "actualValues": 92160,
+        "referenceValues": 92160,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "contourCount": 0,
+      "referenceContourCount": 0,
+      "contourCountExact": true,
+      "candidateLimit": 1000,
+      "passed": true,
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 8,
+          "kernel": 8,
+          "dilated": 8,
+          "contourSource": 8,
+          "hierarchy": 8,
+          "contour": 9,
+          "sourceQuad": 9,
+          "targetQuad": 9,
+          "homography": 9,
+          "cropSource": 9,
+          "warpDestination": 9
+        },
+        "matReleaseAttempts": {
+          "contour": 9,
+          "hierarchy": 8,
+          "contourSource": 8,
+          "dilated": 8,
+          "kernel": 8,
+          "maskSource": 8,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matReleased": {
+          "contour": 9,
+          "hierarchy": 8,
+          "contourSource": 8,
+          "dilated": 8,
+          "kernel": 8,
+          "maskSource": 8,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matOpened": 94,
+        "findContoursCalls": 8,
+        "bitmapOpened": 17,
+        "bitmapRecycleAttempts": 17,
+        "bitmapRecycled": 17,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "wide-1499",
+      "status": "COMPLETE",
+      "crops": [],
+      "mask": {
+        "comparedValues": 144384,
+        "actualValues": 144384,
+        "referenceValues": 144384,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "rowRunBound": 96,
+      "dilation": {
+        "comparedValues": 144384,
+        "actualValues": 144384,
+        "referenceValues": 144384,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "contourCount": 0,
+      "referenceContourCount": 0,
+      "contourCountExact": true,
+      "candidateLimit": 1000,
+      "passed": true,
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 9,
+          "kernel": 9,
+          "dilated": 9,
+          "contourSource": 9,
+          "hierarchy": 9,
+          "contour": 9,
+          "sourceQuad": 9,
+          "targetQuad": 9,
+          "homography": 9,
+          "cropSource": 9,
+          "warpDestination": 9
+        },
+        "matReleaseAttempts": {
+          "contour": 9,
+          "hierarchy": 9,
+          "contourSource": 9,
+          "dilated": 9,
+          "kernel": 9,
+          "maskSource": 9,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matReleased": {
+          "contour": 9,
+          "hierarchy": 9,
+          "contourSource": 9,
+          "dilated": 9,
+          "kernel": 9,
+          "maskSource": 9,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matOpened": 99,
+        "findContoursCalls": 9,
+        "bitmapOpened": 18,
+        "bitmapRecycleAttempts": 18,
+        "bitmapRecycled": 18,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "wide-2001",
+      "status": "COMPLETE",
+      "crops": [],
+      "mask": {
+        "comparedValues": 190464,
+        "actualValues": 190464,
+        "referenceValues": 190464,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "rowRunBound": 96,
+      "dilation": {
+        "comparedValues": 190464,
+        "actualValues": 190464,
+        "referenceValues": 190464,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "contourCount": 0,
+      "referenceContourCount": 0,
+      "contourCountExact": true,
+      "candidateLimit": 1000,
+      "passed": true,
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 10,
+          "kernel": 10,
+          "dilated": 10,
+          "contourSource": 10,
+          "hierarchy": 10,
+          "contour": 9,
+          "sourceQuad": 9,
+          "targetQuad": 9,
+          "homography": 9,
+          "cropSource": 9,
+          "warpDestination": 9
+        },
+        "matReleaseAttempts": {
+          "contour": 9,
+          "hierarchy": 10,
+          "contourSource": 10,
+          "dilated": 10,
+          "kernel": 10,
+          "maskSource": 10,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matReleased": {
+          "contour": 9,
+          "hierarchy": 10,
+          "contourSource": 10,
+          "dilated": 10,
+          "kernel": 10,
+          "maskSource": 10,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matOpened": 104,
+        "findContoursCalls": 10,
+        "bitmapOpened": 19,
+        "bitmapRecycleAttempts": 19,
+        "bitmapRecycled": 19,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "threshold-equal",
+      "status": "COMPLETE",
+      "crops": [],
+      "mask": {
+        "comparedValues": 16384,
+        "actualValues": 16384,
+        "referenceValues": 16384,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "rowRunBound": 128,
+      "dilation": {
+        "comparedValues": 16384,
+        "actualValues": 16384,
+        "referenceValues": 16384,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "contourCount": 0,
+      "referenceContourCount": 0,
+      "contourCountExact": true,
+      "candidateLimit": 1000,
+      "passed": true,
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 11,
+          "kernel": 11,
+          "dilated": 11,
+          "contourSource": 11,
+          "hierarchy": 11,
+          "contour": 9,
+          "sourceQuad": 9,
+          "targetQuad": 9,
+          "homography": 9,
+          "cropSource": 9,
+          "warpDestination": 9
+        },
+        "matReleaseAttempts": {
+          "contour": 9,
+          "hierarchy": 11,
+          "contourSource": 11,
+          "dilated": 11,
+          "kernel": 11,
+          "maskSource": 11,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matReleased": {
+          "contour": 9,
+          "hierarchy": 11,
+          "contourSource": 11,
+          "dilated": 11,
+          "kernel": 11,
+          "maskSource": 11,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matOpened": 109,
+        "findContoursCalls": 11,
+        "bitmapOpened": 20,
+        "bitmapRecycleAttempts": 20,
+        "bitmapRecycled": 20,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "below-box-score",
+      "status": "COMPLETE",
+      "crops": [],
+      "mask": {
+        "comparedValues": 16384,
+        "actualValues": 16384,
+        "referenceValues": 16384,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "rowRunBound": 210,
+      "dilation": {
+        "comparedValues": 16384,
+        "actualValues": 16384,
+        "referenceValues": 16384,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "contourCount": 1,
+      "referenceContourCount": 1,
+      "contourCountExact": true,
+      "candidateLimit": 1000,
+      "passed": true,
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 12,
+          "kernel": 12,
+          "dilated": 12,
+          "contourSource": 12,
+          "hierarchy": 12,
+          "contour": 10,
+          "sourceQuad": 9,
+          "targetQuad": 9,
+          "homography": 9,
+          "cropSource": 9,
+          "warpDestination": 9
+        },
+        "matReleaseAttempts": {
+          "contour": 10,
+          "hierarchy": 12,
+          "contourSource": 12,
+          "dilated": 12,
+          "kernel": 12,
+          "maskSource": 12,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matReleased": {
+          "contour": 10,
+          "hierarchy": 12,
+          "contourSource": 12,
+          "dilated": 12,
+          "kernel": 12,
+          "maskSource": 12,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matOpened": 115,
+        "findContoursCalls": 12,
+        "bitmapOpened": 21,
+        "bitmapRecycleAttempts": 21,
+        "bitmapRecycled": 21,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "tiny-negative",
+      "status": "COMPLETE",
+      "crops": [],
+      "mask": {
+        "comparedValues": 16384,
+        "actualValues": 16384,
+        "referenceValues": 16384,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "rowRunBound": 132,
+      "dilation": {
+        "comparedValues": 16384,
+        "actualValues": 16384,
+        "referenceValues": 16384,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "contourCount": 1,
+      "referenceContourCount": 1,
+      "contourCountExact": true,
+      "candidateLimit": 1000,
+      "passed": true,
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 13,
+          "kernel": 13,
+          "dilated": 13,
+          "contourSource": 13,
+          "hierarchy": 13,
+          "contour": 11,
+          "sourceQuad": 9,
+          "targetQuad": 9,
+          "homography": 9,
+          "cropSource": 9,
+          "warpDestination": 9
+        },
+        "matReleaseAttempts": {
+          "contour": 11,
+          "hierarchy": 13,
+          "contourSource": 13,
+          "dilated": 13,
+          "kernel": 13,
+          "maskSource": 13,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matReleased": {
+          "contour": 11,
+          "hierarchy": 13,
+          "contourSource": 13,
+          "dilated": 13,
+          "kernel": 13,
+          "maskSource": 13,
+          "warpDestination": 9,
+          "cropSource": 9,
+          "homography": 9,
+          "targetQuad": 9,
+          "sourceQuad": 9
+        },
+        "matOpened": 121,
+        "findContoursCalls": 13,
+        "bitmapOpened": 22,
+        "bitmapRecycleAttempts": 22,
+        "bitmapRecycled": 22,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "two-blocks",
+      "status": "COMPLETE",
+      "crops": [
+        {
+          "id": "two-blocks.box-1",
+          "originalIndex": 1,
+          "readingOrder": 0,
+          "detectorScore": 0.7711693764694275,
+          "cropAsset": "two-blocks-crop-00.png",
+          "status": "completed",
+          "bgr": {
+            "comparedValues": 4278,
+            "actualValues": 4278,
+            "referenceValues": 4278,
+            "changedValues": 0,
+            "lengthDifference": 0,
+            "maxAbs": 0,
+            "meanAbs": 0,
+            "passed": true,
+            "changedBgrChannels": 0,
+            "actualBgrSha256": "4c0a6f00526c49d5beaa29582c84829478e2cd0b4e84128620ef07015bc0e9c8",
+            "referenceBgrSha256": "4c0a6f00526c49d5beaa29582c84829478e2cd0b4e84128620ef07015bc0e9c8"
+          },
+          "matrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "inverseMatrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "coordinates": {
+            "sourceToTargetCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 7.105427357601002e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "targetToSourceCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 7.105427357601002e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "sourceCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 7.105427357601002e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "cropPixelCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 7.105427357601002e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotation": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 7.105427357601002e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotationInverse": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 7.105427357601002e-15,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "passed": true
+          },
+          "sourceToPreRotation": [
+            1.0000000000000002,
+            5.863731883311994e-18,
+            -4.000000000000001,
+            3.552713678800501e-17,
+            1,
+            -12.000000000000002,
+            3.125193595286003e-18,
+            -1.0015316537467234e-19,
+            1
+          ],
+          "preRotationToSource": [
+            0.9999999999999998,
+            -5.4631192218133035e-18,
+            4,
+            -7.302945993143704e-17,
+            1,
+            12.000000000000002,
+            -3.125193595286002e-18,
+            1.0015316537467236e-19,
+            1
+          ],
+          "associationExact": true,
+          "width": 46,
+          "height": 31,
+          "preRotationWidth": 46,
+          "preRotationHeight": 31,
+          "rotateCCW90": false,
+          "dimensionsAndRotationExact": true,
+          "passed": true
+        },
+        {
+          "id": "two-blocks.box-0",
+          "originalIndex": 0,
+          "readingOrder": 1,
+          "detectorScore": 0.8618951504749637,
+          "cropAsset": "two-blocks-crop-01.png",
+          "status": "completed",
+          "bgr": {
+            "comparedValues": 4278,
+            "actualValues": 4278,
+            "referenceValues": 4278,
+            "changedValues": 0,
+            "lengthDifference": 0,
+            "maxAbs": 0,
+            "meanAbs": 0,
+            "passed": true,
+            "changedBgrChannels": 0,
+            "actualBgrSha256": "b2b821c2fd2fc084d2b76c20a7f54e3c47a02c5f12a1b10af3fd0a97d35c1c26",
+            "referenceBgrSha256": "b2b821c2fd2fc084d2b76c20a7f54e3c47a02c5f12a1b10af3fd0a97d35c1c26"
+          },
+          "matrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "inverseMatrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "coordinates": {
+            "sourceToTargetCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 2.1316282072803006e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "targetToSourceCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 1.4210854715202004e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "sourceCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "cropPixelCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 1.4210854715202e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotation": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 2.1316282072803006e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotationInverse": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "passed": true
+          },
+          "sourceToPreRotation": [
+            1.0000000000000007,
+            2.365915150223095e-16,
+            -72.00000000000006,
+            1.5053871520341106e-17,
+            1.0000000000000007,
+            -12.000000000000009,
+            1.8785982705560118e-18,
+            3.7974374238960244e-18,
+            1
+          ],
+          "preRotationToSource": [
+            0.9999999999999994,
+            -5.100070095428228e-16,
+            72.00000000000001,
+            -3.7597050767013216e-17,
+            0.9999999999999996,
+            11.999999999999998,
+            -1.8785982705560106e-18,
+            -3.797437423896021e-18,
+            1
+          ],
+          "associationExact": true,
+          "width": 46,
+          "height": 31,
+          "preRotationWidth": 46,
+          "preRotationHeight": 31,
+          "rotateCCW90": false,
+          "dimensionsAndRotationExact": true,
+          "passed": true
+        }
+      ],
+      "mask": {
+        "comparedValues": 16384,
+        "actualValues": 16384,
+        "referenceValues": 16384,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "rowRunBound": 192,
+      "dilation": {
+        "comparedValues": 16384,
+        "actualValues": 16384,
+        "referenceValues": 16384,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "contourCount": 2,
+      "referenceContourCount": 2,
+      "contourCountExact": true,
+      "candidateLimit": 1000,
+      "passed": true,
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 14,
+          "kernel": 14,
+          "dilated": 14,
+          "contourSource": 14,
+          "hierarchy": 14,
+          "contour": 13,
+          "sourceQuad": 11,
+          "targetQuad": 11,
+          "homography": 11,
+          "cropSource": 11,
+          "warpDestination": 11
+        },
+        "matReleaseAttempts": {
+          "contour": 13,
+          "hierarchy": 14,
+          "contourSource": 14,
+          "dilated": 14,
+          "kernel": 14,
+          "maskSource": 14,
+          "warpDestination": 11,
+          "cropSource": 11,
+          "homography": 11,
+          "targetQuad": 11,
+          "sourceQuad": 11
+        },
+        "matReleased": {
+          "contour": 13,
+          "hierarchy": 14,
+          "contourSource": 14,
+          "dilated": 14,
+          "kernel": 14,
+          "maskSource": 14,
+          "warpDestination": 11,
+          "cropSource": 11,
+          "homography": 11,
+          "targetQuad": 11,
+          "sourceQuad": 11
+        },
+        "matOpened": 138,
+        "findContoursCalls": 14,
+        "bitmapOpened": 25,
+        "bitmapRecycleAttempts": 25,
+        "bitmapRecycled": 25,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "edge-touching",
+      "status": "COMPLETE",
+      "crops": [
+        {
+          "id": "edge-touching.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "detectorScore": 0.8328029155147556,
+          "cropAsset": "edge-touching-crop-00.png",
+          "status": "completed",
+          "bgr": {
+            "comparedValues": 4368,
+            "actualValues": 4368,
+            "referenceValues": 4368,
+            "changedValues": 0,
+            "lengthDifference": 0,
+            "maxAbs": 0,
+            "meanAbs": 0,
+            "passed": true,
+            "changedBgrChannels": 0,
+            "actualBgrSha256": "741ccb954e9d216b348558d30849437903d75e1c30aa5fd0cf8017dd72f87bb1",
+            "referenceBgrSha256": "741ccb954e9d216b348558d30849437903d75e1c30aa5fd0cf8017dd72f87bb1"
+          },
+          "matrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "inverseMatrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "coordinates": {
+            "sourceToTargetCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 0,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "targetToSourceCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 0,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "sourceCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 0,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "cropPixelCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 0,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotation": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 0,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotationInverse": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 0,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "passed": true
+          },
+          "sourceToPreRotation": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "preRotationToSource": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "associationExact": true,
+          "width": 52,
+          "height": 28,
+          "preRotationWidth": 52,
+          "preRotationHeight": 28,
+          "rotateCCW90": false,
+          "dimensionsAndRotationExact": true,
+          "passed": true
+        }
+      ],
+      "mask": {
+        "comparedValues": 16384,
+        "actualValues": 16384,
+        "referenceValues": 16384,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "rowRunBound": 147,
+      "dilation": {
+        "comparedValues": 16384,
+        "actualValues": 16384,
+        "referenceValues": 16384,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "contourCount": 1,
+      "referenceContourCount": 1,
+      "contourCountExact": true,
+      "candidateLimit": 1000,
+      "passed": true,
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 15,
+          "kernel": 15,
+          "dilated": 15,
+          "contourSource": 15,
+          "hierarchy": 15,
+          "contour": 14,
+          "sourceQuad": 12,
+          "targetQuad": 12,
+          "homography": 12,
+          "cropSource": 12,
+          "warpDestination": 12
+        },
+        "matReleaseAttempts": {
+          "contour": 14,
+          "hierarchy": 15,
+          "contourSource": 15,
+          "dilated": 15,
+          "kernel": 15,
+          "maskSource": 15,
+          "warpDestination": 12,
+          "cropSource": 12,
+          "homography": 12,
+          "targetQuad": 12,
+          "sourceQuad": 12
+        },
+        "matReleased": {
+          "contour": 14,
+          "hierarchy": 15,
+          "contourSource": 15,
+          "dilated": 15,
+          "kernel": 15,
+          "maskSource": 15,
+          "warpDestination": 12,
+          "cropSource": 12,
+          "homography": 12,
+          "targetQuad": 12,
+          "sourceQuad": 12
+        },
+        "matOpened": 149,
+        "findContoursCalls": 15,
+        "bitmapOpened": 27,
+        "bitmapRecycleAttempts": 27,
+        "bitmapRecycled": 27,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "vertical",
+      "status": "COMPLETE",
+      "crops": [
+        {
+          "id": "vertical.box-0",
+          "originalIndex": 0,
+          "readingOrder": 0,
+          "detectorScore": 0.830769208761362,
+          "cropAsset": "vertical-crop-00.png",
+          "status": "completed",
+          "bgr": {
+            "comparedValues": 10260,
+            "actualValues": 10260,
+            "referenceValues": 10260,
+            "changedValues": 0,
+            "lengthDifference": 0,
+            "maxAbs": 0,
+            "meanAbs": 0,
+            "passed": true,
+            "changedBgrChannels": 0,
+            "actualBgrSha256": "ac143c02b735563d41ff269664afd1ca579f15444336cdd775175db7717197de",
+            "referenceBgrSha256": "ac143c02b735563d41ff269664afd1ca579f15444336cdd775175db7717197de"
+          },
+          "matrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "inverseMatrixComparison": {
+            "comparedScalars": 9,
+            "violations": 0,
+            "maxFiniteAbs": 0,
+            "absoluteTolerance": 1e-09,
+            "relativeTolerance": 1e-09,
+            "passed": true
+          },
+          "coordinates": {
+            "sourceToTargetCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 1.4210854715202004e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "targetToSourceCorners": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 2.842170943040401e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "sourceCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 1.4210854715202004e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "cropPixelCornerRoundtrip": {
+              "comparedScalars": 8,
+              "violations": 0,
+              "maxFiniteAbs": 1.4210854715202004e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotation": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 1.4210854715202004e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "afterPixelRotationInverse": {
+              "comparedScalars": 16,
+              "violations": 0,
+              "maxFiniteAbs": 1.4210854715202004e-14,
+              "absoluteTolerance": 1e-06,
+              "relativeTolerance": 1e-09,
+              "passed": true
+            },
+            "passed": true
+          },
+          "sourceToPreRotation": [
+            0.9999999999999998,
+            -2.7503385346187348e-18,
+            -45,
+            -1.1842378929335004e-17,
+            0.9999999999999997,
+            -5.999999999999997,
+            -5.346633822093055e-18,
+            -1.0575464996127997e-19,
+            1
+          ],
+          "preRotationToSource": [
+            1.0000000000000002,
+            7.509297782876337e-18,
+            45.00000000000001,
+            4.392218186189335e-17,
+            1.0000000000000002,
+            6,
+            5.3466338220930566e-18,
+            1.0575464996128003e-19,
+            1
+          ],
+          "associationExact": true,
+          "width": 114,
+          "height": 30,
+          "preRotationWidth": 30,
+          "preRotationHeight": 114,
+          "rotateCCW90": true,
+          "dimensionsAndRotationExact": true,
+          "passed": true
+        }
+      ],
+      "mask": {
+        "comparedValues": 16384,
+        "actualValues": 16384,
+        "referenceValues": 16384,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "rowRunBound": 324,
+      "dilation": {
+        "comparedValues": 16384,
+        "actualValues": 16384,
+        "referenceValues": 16384,
+        "changedValues": 0,
+        "lengthDifference": 0,
+        "maxAbs": 0,
+        "meanAbs": 0,
+        "passed": true
+      },
+      "contourCount": 1,
+      "referenceContourCount": 1,
+      "contourCountExact": true,
+      "candidateLimit": 1000,
+      "passed": true,
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 16,
+          "kernel": 16,
+          "dilated": 16,
+          "contourSource": 16,
+          "hierarchy": 16,
+          "contour": 15,
+          "sourceQuad": 13,
+          "targetQuad": 13,
+          "homography": 13,
+          "cropSource": 13,
+          "warpDestination": 13,
+          "rotationDestination": 1
+        },
+        "matReleaseAttempts": {
+          "contour": 15,
+          "hierarchy": 16,
+          "contourSource": 16,
+          "dilated": 16,
+          "kernel": 16,
+          "maskSource": 16,
+          "warpDestination": 13,
+          "cropSource": 13,
+          "homography": 13,
+          "targetQuad": 13,
+          "sourceQuad": 13,
+          "rotationDestination": 1
+        },
+        "matReleased": {
+          "contour": 15,
+          "hierarchy": 16,
+          "contourSource": 16,
+          "dilated": 16,
+          "kernel": 16,
+          "maskSource": 16,
+          "warpDestination": 13,
+          "cropSource": 13,
+          "homography": 13,
+          "targetQuad": 13,
+          "sourceQuad": 13,
+          "rotationDestination": 1
+        },
+        "matOpened": 161,
+        "findContoursCalls": 16,
+        "bitmapOpened": 29,
+        "bitmapRecycleAttempts": 29,
+        "bitmapRecycled": 29,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    }
+  ],
+  "guards": [
+    {
+      "id": "invalid-shape-and-NaN-before-Mat",
+      "status": "completed",
+      "metrics": {
+        "rejections": 4,
+        "matAllocations": 0,
+        "passed": true
+      },
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 16,
+          "kernel": 16,
+          "dilated": 16,
+          "contourSource": 16,
+          "hierarchy": 16,
+          "contour": 15,
+          "sourceQuad": 13,
+          "targetQuad": 13,
+          "homography": 13,
+          "cropSource": 13,
+          "warpDestination": 13,
+          "rotationDestination": 1
+        },
+        "matReleaseAttempts": {
+          "contour": 15,
+          "hierarchy": 16,
+          "contourSource": 16,
+          "dilated": 16,
+          "kernel": 16,
+          "maskSource": 16,
+          "warpDestination": 13,
+          "cropSource": 13,
+          "homography": 13,
+          "targetQuad": 13,
+          "sourceQuad": 13,
+          "rotationDestination": 1
+        },
+        "matReleased": {
+          "contour": 15,
+          "hierarchy": 16,
+          "contourSource": 16,
+          "dilated": 16,
+          "kernel": 16,
+          "maskSource": 16,
+          "warpDestination": 13,
+          "cropSource": 13,
+          "homography": 13,
+          "targetQuad": 13,
+          "sourceQuad": 13,
+          "rotationDestination": 1
+        },
+        "matOpened": 161,
+        "findContoursCalls": 16,
+        "bitmapOpened": 29,
+        "bitmapRecycleAttempts": 29,
+        "bitmapRecycled": 29,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "generated-1024-separate-blocks",
+      "status": "completed",
+      "metrics": {
+        "status": "INCOMPLETE_CANDIDATE_LIMIT",
+        "actualCount": 1024,
+        "limit": 1000,
+        "rowRunBound": 4224,
+        "contoursAcquired": 1024,
+        "contoursReleased": 1024,
+        "passed": true
+      },
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 17,
+          "kernel": 17,
+          "dilated": 17,
+          "contourSource": 17,
+          "hierarchy": 17,
+          "contour": 1039,
+          "sourceQuad": 13,
+          "targetQuad": 13,
+          "homography": 13,
+          "cropSource": 13,
+          "warpDestination": 13,
+          "rotationDestination": 1
+        },
+        "matReleaseAttempts": {
+          "contour": 1039,
+          "hierarchy": 17,
+          "contourSource": 17,
+          "dilated": 17,
+          "kernel": 17,
+          "maskSource": 17,
+          "warpDestination": 13,
+          "cropSource": 13,
+          "homography": 13,
+          "targetQuad": 13,
+          "sourceQuad": 13,
+          "rotationDestination": 1
+        },
+        "matReleased": {
+          "contour": 1039,
+          "hierarchy": 17,
+          "contourSource": 17,
+          "dilated": 17,
+          "kernel": 17,
+          "maskSource": 17,
+          "warpDestination": 13,
+          "cropSource": 13,
+          "homography": 13,
+          "targetQuad": 13,
+          "sourceQuad": 13,
+          "rotationDestination": 1
+        },
+        "matOpened": 1190,
+        "findContoursCalls": 17,
+        "bitmapOpened": 29,
+        "bitmapRecycleAttempts": 29,
+        "bitmapRecycled": 29,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "dense-checkerboard-before-contour-allocation",
+      "status": "completed",
+      "metrics": {
+        "status": "INCOMPLETE_CONTOUR_BUDGET",
+        "rowRunBound": 16384,
+        "limit": 8192,
+        "matAllocations": 0,
+        "findContoursCalls": 0,
+        "passed": true
+      },
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 17,
+          "kernel": 17,
+          "dilated": 17,
+          "contourSource": 17,
+          "hierarchy": 17,
+          "contour": 1039,
+          "sourceQuad": 13,
+          "targetQuad": 13,
+          "homography": 13,
+          "cropSource": 13,
+          "warpDestination": 13,
+          "rotationDestination": 1
+        },
+        "matReleaseAttempts": {
+          "contour": 1039,
+          "hierarchy": 17,
+          "contourSource": 17,
+          "dilated": 17,
+          "kernel": 17,
+          "maskSource": 17,
+          "warpDestination": 13,
+          "cropSource": 13,
+          "homography": 13,
+          "targetQuad": 13,
+          "sourceQuad": 13,
+          "rotationDestination": 1
+        },
+        "matReleased": {
+          "contour": 1039,
+          "hierarchy": 17,
+          "contourSource": 17,
+          "dilated": 17,
+          "kernel": 17,
+          "maskSource": 17,
+          "warpDestination": 13,
+          "cropSource": 13,
+          "homography": 13,
+          "targetQuad": 13,
+          "sourceQuad": 13,
+          "rotationDestination": 1
+        },
+        "matOpened": 1190,
+        "findContoursCalls": 17,
+        "bitmapOpened": 29,
+        "bitmapRecycleAttempts": 29,
+        "bitmapRecycled": 29,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "deliberate-failure-after-contours",
+      "status": "completed",
+      "metrics": {
+        "injectionReached": true,
+        "expectedFailureCaught": true,
+        "matAllocations": 1029,
+        "passed": true
+      },
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 18,
+          "kernel": 18,
+          "dilated": 18,
+          "contourSource": 18,
+          "hierarchy": 18,
+          "contour": 2063,
+          "sourceQuad": 13,
+          "targetQuad": 13,
+          "homography": 13,
+          "cropSource": 13,
+          "warpDestination": 13,
+          "rotationDestination": 1
+        },
+        "matReleaseAttempts": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 13,
+          "cropSource": 13,
+          "homography": 13,
+          "targetQuad": 13,
+          "sourceQuad": 13,
+          "rotationDestination": 1
+        },
+        "matReleased": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 13,
+          "cropSource": 13,
+          "homography": 13,
+          "targetQuad": 13,
+          "sourceQuad": 13,
+          "rotationDestination": 1
+        },
+        "matOpened": 2219,
+        "findContoursCalls": 18,
+        "bitmapOpened": 30,
+        "bitmapRecycleAttempts": 30,
+        "bitmapRecycled": 30,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "deliberate-failure-after-matrix",
+      "status": "completed",
+      "metrics": {
+        "injectionReached": true,
+        "expectedFailureCaught": true,
+        "matAllocations": 3,
+        "passed": true
+      },
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 18,
+          "kernel": 18,
+          "dilated": 18,
+          "contourSource": 18,
+          "hierarchy": 18,
+          "contour": 2063,
+          "sourceQuad": 14,
+          "targetQuad": 14,
+          "homography": 14,
+          "cropSource": 13,
+          "warpDestination": 13,
+          "rotationDestination": 1
+        },
+        "matReleaseAttempts": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 13,
+          "cropSource": 13,
+          "homography": 14,
+          "targetQuad": 14,
+          "sourceQuad": 14,
+          "rotationDestination": 1
+        },
+        "matReleased": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 13,
+          "cropSource": 13,
+          "homography": 14,
+          "targetQuad": 14,
+          "sourceQuad": 14,
+          "rotationDestination": 1
+        },
+        "matOpened": 2222,
+        "findContoursCalls": 18,
+        "bitmapOpened": 30,
+        "bitmapRecycleAttempts": 30,
+        "bitmapRecycled": 30,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "deliberate-failure-after-warp",
+      "status": "completed",
+      "metrics": {
+        "injectionReached": true,
+        "expectedFailureCaught": true,
+        "matAllocations": 5,
+        "passed": true
+      },
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 18,
+          "kernel": 18,
+          "dilated": 18,
+          "contourSource": 18,
+          "hierarchy": 18,
+          "contour": 2063,
+          "sourceQuad": 15,
+          "targetQuad": 15,
+          "homography": 15,
+          "cropSource": 14,
+          "warpDestination": 14,
+          "rotationDestination": 1
+        },
+        "matReleaseAttempts": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 14,
+          "cropSource": 14,
+          "homography": 15,
+          "targetQuad": 15,
+          "sourceQuad": 15,
+          "rotationDestination": 1
+        },
+        "matReleased": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 14,
+          "cropSource": 14,
+          "homography": 15,
+          "targetQuad": 15,
+          "sourceQuad": 15,
+          "rotationDestination": 1
+        },
+        "matOpened": 2227,
+        "findContoursCalls": 18,
+        "bitmapOpened": 30,
+        "bitmapRecycleAttempts": 30,
+        "bitmapRecycled": 30,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "deliberate-failure-after-rotate",
+      "status": "completed",
+      "metrics": {
+        "injectionReached": true,
+        "expectedFailureCaught": true,
+        "matAllocations": 6,
+        "passed": true
+      },
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 18,
+          "kernel": 18,
+          "dilated": 18,
+          "contourSource": 18,
+          "hierarchy": 18,
+          "contour": 2063,
+          "sourceQuad": 16,
+          "targetQuad": 16,
+          "homography": 16,
+          "cropSource": 15,
+          "warpDestination": 15,
+          "rotationDestination": 2
+        },
+        "matReleaseAttempts": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matReleased": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matOpened": 2233,
+        "findContoursCalls": 18,
+        "bitmapOpened": 30,
+        "bitmapRecycleAttempts": 30,
+        "bitmapRecycled": 30,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "singular-matrix-and-invalid-quad-before-Mat",
+      "status": "completed",
+      "metrics": {
+        "rejections": 3,
+        "matAllocations": 0,
+        "passed": true
+      },
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 18,
+          "kernel": 18,
+          "dilated": 18,
+          "contourSource": 18,
+          "hierarchy": 18,
+          "contour": 2063,
+          "sourceQuad": 16,
+          "targetQuad": 16,
+          "homography": 16,
+          "cropSource": 15,
+          "warpDestination": 15,
+          "rotationDestination": 2
+        },
+        "matReleaseAttempts": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matReleased": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matOpened": 2233,
+        "findContoursCalls": 18,
+        "bitmapOpened": 30,
+        "bitmapRecycleAttempts": 30,
+        "bitmapRecycled": 30,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "asset-corrupt-source",
+      "status": "completed",
+      "metrics": {
+        "rejected": true,
+        "matAllocations": 0,
+        "bitmapAllocations": 0,
+        "passed": true
+      },
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 18,
+          "kernel": 18,
+          "dilated": 18,
+          "contourSource": 18,
+          "hierarchy": 18,
+          "contour": 2063,
+          "sourceQuad": 16,
+          "targetQuad": 16,
+          "homography": 16,
+          "cropSource": 15,
+          "warpDestination": 15,
+          "rotationDestination": 2
+        },
+        "matReleaseAttempts": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matReleased": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matOpened": 2233,
+        "findContoursCalls": 18,
+        "bitmapOpened": 30,
+        "bitmapRecycleAttempts": 30,
+        "bitmapRecycled": 30,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "asset-truncated-source",
+      "status": "completed",
+      "metrics": {
+        "rejected": true,
+        "matAllocations": 0,
+        "bitmapAllocations": 0,
+        "passed": true
+      },
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 18,
+          "kernel": 18,
+          "dilated": 18,
+          "contourSource": 18,
+          "hierarchy": 18,
+          "contour": 2063,
+          "sourceQuad": 16,
+          "targetQuad": 16,
+          "homography": 16,
+          "cropSource": 15,
+          "warpDestination": 15,
+          "rotationDestination": 2
+        },
+        "matReleaseAttempts": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matReleased": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matOpened": 2233,
+        "findContoursCalls": 18,
+        "bitmapOpened": 30,
+        "bitmapRecycleAttempts": 30,
+        "bitmapRecycled": 30,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "asset-compressed-wrong-hash",
+      "status": "completed",
+      "metrics": {
+        "rejected": true,
+        "matAllocations": 0,
+        "bitmapAllocations": 0,
+        "passed": true
+      },
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 18,
+          "kernel": 18,
+          "dilated": 18,
+          "contourSource": 18,
+          "hierarchy": 18,
+          "contour": 2063,
+          "sourceQuad": 16,
+          "targetQuad": 16,
+          "homography": 16,
+          "cropSource": 15,
+          "warpDestination": 15,
+          "rotationDestination": 2
+        },
+        "matReleaseAttempts": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matReleased": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matOpened": 2233,
+        "findContoursCalls": 18,
+        "bitmapOpened": 30,
+        "bitmapRecycleAttempts": 30,
+        "bitmapRecycled": 30,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "asset-truncated-compressed",
+      "status": "completed",
+      "metrics": {
+        "rejected": true,
+        "matAllocations": 0,
+        "bitmapAllocations": 0,
+        "passed": true
+      },
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 18,
+          "kernel": 18,
+          "dilated": 18,
+          "contourSource": 18,
+          "hierarchy": 18,
+          "contour": 2063,
+          "sourceQuad": 16,
+          "targetQuad": 16,
+          "homography": 16,
+          "cropSource": 15,
+          "warpDestination": 15,
+          "rotationDestination": 2
+        },
+        "matReleaseAttempts": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matReleased": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matOpened": 2233,
+        "findContoursCalls": 18,
+        "bitmapOpened": 30,
+        "bitmapRecycleAttempts": 30,
+        "bitmapRecycled": 30,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "compressed-decoded-hash-and-length",
+      "status": "completed",
+      "metrics": {
+        "rejections": 2,
+        "passed": true
+      },
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 18,
+          "kernel": 18,
+          "dilated": 18,
+          "contourSource": 18,
+          "hierarchy": 18,
+          "contour": 2063,
+          "sourceQuad": 16,
+          "targetQuad": 16,
+          "homography": 16,
+          "cropSource": 15,
+          "warpDestination": 15,
+          "rotationDestination": 2
+        },
+        "matReleaseAttempts": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matReleased": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matOpened": 2233,
+        "findContoursCalls": 18,
+        "bitmapOpened": 30,
+        "bitmapRecycleAttempts": 30,
+        "bitmapRecycled": 30,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "PNG-dimension-cap-before-Bitmap-and-raw-hash-before-Mat",
+      "status": "completed",
+      "metrics": {
+        "boundsRejected": true,
+        "rawHashRejected": true,
+        "boundsBeforeBitmap": true,
+        "bitmapAllocationsForRawHashCheck": 1,
+        "matAllocations": 0,
+        "passed": true
+      },
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 18,
+          "kernel": 18,
+          "dilated": 18,
+          "contourSource": 18,
+          "hierarchy": 18,
+          "contour": 2063,
+          "sourceQuad": 16,
+          "targetQuad": 16,
+          "homography": 16,
+          "cropSource": 15,
+          "warpDestination": 15,
+          "rotationDestination": 2
+        },
+        "matReleaseAttempts": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matReleased": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matOpened": 2233,
+        "findContoursCalls": 18,
+        "bitmapOpened": 31,
+        "bitmapRecycleAttempts": 31,
+        "bitmapRecycled": 31,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "asset-set-missing",
+      "status": "completed",
+      "metrics": {
+        "passed": true
+      },
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 18,
+          "kernel": 18,
+          "dilated": 18,
+          "contourSource": 18,
+          "hierarchy": 18,
+          "contour": 2063,
+          "sourceQuad": 16,
+          "targetQuad": 16,
+          "homography": 16,
+          "cropSource": 15,
+          "warpDestination": 15,
+          "rotationDestination": 2
+        },
+        "matReleaseAttempts": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matReleased": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matOpened": 2233,
+        "findContoursCalls": 18,
+        "bitmapOpened": 31,
+        "bitmapRecycleAttempts": 31,
+        "bitmapRecycled": 31,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    },
+    {
+      "id": "asset-set-extra",
+      "status": "completed",
+      "metrics": {
+        "passed": true
+      },
+      "cleanup": {
+        "matAcquired": {
+          "maskSource": 18,
+          "kernel": 18,
+          "dilated": 18,
+          "contourSource": 18,
+          "hierarchy": 18,
+          "contour": 2063,
+          "sourceQuad": 16,
+          "targetQuad": 16,
+          "homography": 16,
+          "cropSource": 15,
+          "warpDestination": 15,
+          "rotationDestination": 2
+        },
+        "matReleaseAttempts": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matReleased": {
+          "contour": 2063,
+          "hierarchy": 18,
+          "contourSource": 18,
+          "dilated": 18,
+          "kernel": 18,
+          "maskSource": 18,
+          "warpDestination": 15,
+          "cropSource": 15,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "rotationDestination": 2
+        },
+        "matOpened": 2233,
+        "findContoursCalls": 18,
+        "bitmapOpened": 31,
+        "bitmapRecycleAttempts": 31,
+        "bitmapRecycled": 31,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      }
+    }
+  ],
+  "status": "passed",
+  "openCvRuntime": "5.0.0",
+  "openCvBuildInfoSha256": "decbb1fb99d7b99b096023e5a843eb1d5a44a17ec1f43ae7f70cd53d115274b9",
+  "openCvOptimized": true,
+  "effectiveOpenCvOptimized": true,
+  "openCvThreads": 1,
+  "comparisonCounts": {
+    "maskCases": 16,
+    "maskValues": 979968,
+    "dilationCases": 16,
+    "dilationValues": 979968,
+    "contourCounts": 16,
+    "crops": 13,
+    "cropBgrChannels": 139875,
+    "normalizedMatrices": 13,
+    "inverseMatrices": 13,
+    "frozenAssociations": 13,
+    "dimensionsAndRotation": 13,
+    "coordinateCases": 13,
+    "coordinateScalars": 832,
+    "guards": 16
+  },
+  "fullComparisonCounts": true,
+  "guardsPassed": true,
+  "cleanup": {
+    "matAcquired": {
+      "maskSource": 18,
+      "kernel": 18,
+      "dilated": 18,
+      "contourSource": 18,
+      "hierarchy": 18,
+      "contour": 2063,
+      "sourceQuad": 16,
+      "targetQuad": 16,
+      "homography": 16,
+      "cropSource": 15,
+      "warpDestination": 15,
+      "rotationDestination": 2
+    },
+    "matReleaseAttempts": {
+      "contour": 2063,
+      "hierarchy": 18,
+      "contourSource": 18,
+      "dilated": 18,
+      "kernel": 18,
+      "maskSource": 18,
+      "warpDestination": 15,
+      "cropSource": 15,
+      "homography": 16,
+      "targetQuad": 16,
+      "sourceQuad": 16,
+      "rotationDestination": 2
+    },
+    "matReleased": {
+      "contour": 2063,
+      "hierarchy": 18,
+      "contourSource": 18,
+      "dilated": 18,
+      "kernel": 18,
+      "maskSource": 18,
+      "warpDestination": 15,
+      "cropSource": 15,
+      "homography": 16,
+      "targetQuad": 16,
+      "sourceQuad": 16,
+      "rotationDestination": 2
+    },
+    "matOpened": 2233,
+    "findContoursCalls": 18,
+    "bitmapOpened": 31,
+    "bitmapRecycleAttempts": 31,
+    "bitmapRecycled": 31,
+    "balanced": true,
+    "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+  },
+  "elapsedMs": 1159,
+  "passed": true
+}

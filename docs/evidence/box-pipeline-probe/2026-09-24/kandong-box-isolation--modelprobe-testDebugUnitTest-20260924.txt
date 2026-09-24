@@ -1,0 +1,34 @@
+:modelprobe:checkKotlinGradlePluginConfigurationErrors SKIPPED
+:modelprobe:validateProbeAssets SKIPPED
+:modelprobe:preBuild SKIPPED
+:modelprobe:preDebugBuild SKIPPED
+:modelprobe:checkDebugAarMetadata SKIPPED
+:modelprobe:processDebugNavigationResources SKIPPED
+:modelprobe:compileDebugNavigationResources SKIPPED
+:modelprobe:generateDebugResValues SKIPPED
+:modelprobe:mapDebugSourceSetPaths SKIPPED
+:modelprobe:generateDebugResources SKIPPED
+:modelprobe:mergeDebugResources SKIPPED
+:modelprobe:packageDebugResources SKIPPED
+:modelprobe:parseDebugLocalResources SKIPPED
+:modelprobe:createDebugCompatibleScreenManifests SKIPPED
+:modelprobe:extractDeepLinksDebug SKIPPED
+:modelprobe:processDebugMainManifest SKIPPED
+:modelprobe:processDebugManifest SKIPPED
+:modelprobe:processDebugManifestForPackage SKIPPED
+:modelprobe:processDebugResources SKIPPED
+:modelprobe:compileDebugKotlin SKIPPED
+:modelprobe:javaPreCompileDebug SKIPPED
+:modelprobe:compileDebugJavaWithJavac SKIPPED
+:modelprobe:bundleDebugClassesToRuntimeJar SKIPPED
+:modelprobe:bundleDebugClassesToCompileJar SKIPPED
+:modelprobe:verifyPolygonProbeVendor SKIPPED
+:modelprobe:compileDebugUnitTestKotlin SKIPPED
+:modelprobe:preDebugUnitTestBuild SKIPPED
+:modelprobe:javaPreCompileDebugUnitTest SKIPPED
+:modelprobe:compileDebugUnitTestJavaWithJavac SKIPPED
+:modelprobe:processDebugJavaRes SKIPPED
+:modelprobe:processDebugUnitTestJavaRes SKIPPED
+:modelprobe:testDebugUnitTest SKIPPED
+
+BUILD SUCCESSFUL in 371ms

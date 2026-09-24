@@ -1,0 +1,113 @@
+{
+  "mainApkSha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+  "testApkSha256": "6d8e24d9ef74443d98c21f84fb2cf60753fb9ba4de66f366f1fce8be4f6e6813",
+  "testApkBytes": 247879768,
+  "testManifest": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    android:compileSdkVersion=\"36\"\n    android:compileSdkVersionCodename=\"16\"\n    package=\"com.kandong.modelprobe.test\"\n    platformBuildVersionCode=\"36\"\n    platformBuildVersionName=\"16\">\n\n    <uses-sdk\n        android:minSdkVersion=\"29\"\n        android:targetSdkVersion=\"36\" />\n\n    <instrumentation\n        android:label=\"Tests for com.kandong.modelprobe\"\n        android:name=\"androidx.test.runner.AndroidJUnitRunner\"\n        android:targetPackage=\"com.kandong.modelprobe\"\n        android:handleProfiling=\"false\"\n        android:functionalTest=\"false\" />\n\n    <queries>\n\n        <package\n            android:name=\"androidx.test.orchestrator\" />\n\n        <package\n            android:name=\"androidx.test.services\" />\n\n        <package\n            android:name=\"com.google.android.apps.common.testing.services\" />\n    </queries>\n\n    <application\n        android:label=\"看懂缩放验证\"\n        android:debuggable=\"true\"\n        android:extractNativeLibs=\"false\">\n\n        <uses-library\n            android:name=\"android.test.runner\" />\n    </application>\n</manifest>\n",
+  "nativeLibrariesUnchanged": [
+    {
+      "path": "lib/arm64-v8a/libc++_shared.so",
+      "bytes": 1292904,
+      "sha256": "4397241b4bd20a8e579bfb41d21107857e12985f6a01ca0c2a5f83380d1270b4"
+    },
+    {
+      "path": "lib/armeabi-v7a/libc++_shared.so",
+      "bytes": 872872,
+      "sha256": "91b49f121b3120538faff020fcf535ade1d945e65ccd793fc0b815b5799bbdf0"
+    },
+    {
+      "path": "lib/x86/libc++_shared.so",
+      "bytes": 1254988,
+      "sha256": "318e833e6f7ec76cc73303da68004ebd63a1bbedd754e30440c78a90d80504d3"
+    },
+    {
+      "path": "lib/x86_64/libc++_shared.so",
+      "bytes": 1252080,
+      "sha256": "db9609240e60ca18b816a5e95a6bbc784e799261efbd5b30c8e2e03b540b3fa8"
+    },
+    {
+      "path": "lib/arm64-v8a/libopencv_java5.so",
+      "bytes": 33382992,
+      "sha256": "c5f7d77b1d4c9d030f08061f40afc68289719fb2a30cd462239e184e307a2567"
+    },
+    {
+      "path": "lib/armeabi-v7a/libopencv_java5.so",
+      "bytes": 22293164,
+      "sha256": "d0ea39088c90b8d14b3525a8171db8e27b65ed1486bda1f2eccd0fa2e42b693d"
+    },
+    {
+      "path": "lib/x86/libopencv_java5.so",
+      "bytes": 53727072,
+      "sha256": "f9c7e2ca3ad81ee0f37f4b0a0bcb60a164bbc34c682faf9558c3af5e1c25f19b"
+    },
+    {
+      "path": "lib/x86_64/libopencv_java5.so",
+      "bytes": 67776008,
+      "sha256": "c7f44785a3d5d66c00b0eb55ff9b8d41f1890a134d82b9f1acab45ed746b80b9"
+    }
+  ],
+  "testAssetCount": 232,
+  "protectedFilesUnchanged": 907,
+  "vendorSourceFilesVerified": 11,
+  "unitTests": [
+    {
+      "name": "com.kandong.modelprobe.ProbeInputsTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.kandong.modelprobe.CtcDecoderTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.kandong.modelprobe.PolygonOffsetGuardTest",
+      "tests": "9",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.kandong.modelprobe.RecognitionPackingTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.kandong.modelprobe.DetectorPackingTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.kandong.modelprobe.GeometryProbeGuardTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.kandong.modelprobe.BoxPipelineGuardTest",
+      "tests": "9",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.kandong.modelprobe.ProbeGateTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "lint": {
+    "errors": 0,
+    "warnings": 6
+  }
+}
