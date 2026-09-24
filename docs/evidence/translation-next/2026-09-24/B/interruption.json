@@ -1,0 +1,8 @@
+{
+  "completedCalls": 2,
+  "interruptedCalls": 1,
+  "exitCode": 130,
+  "reason": "Stopped diagnostic after 18.13/45.37 second single-label calls; third was in flight, no inferred result",
+  "qualityGate": "NOT_COMPLETE",
+  "mobilePerformance": "NOT_MEASURED"
+}

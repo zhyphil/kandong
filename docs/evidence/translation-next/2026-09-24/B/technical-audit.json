@@ -1,0 +1,19 @@
+{
+  "complete": false,
+  "records": 2,
+  "expectedRecords": 40,
+  "modelCalls": 2,
+  "errors": {},
+  "unchangedForeignTargets": 0,
+  "literalFlags": 0,
+  "chineseOriginalTargets": 0,
+  "pairedResponses": 0,
+  "identicalResponsePairs": 0,
+  "thinkingReturnedCalls": 2,
+  "medianSeconds": 31.749831708497368,
+  "p95Seconds": 45.36541829199996,
+  "maxSeconds": 45.36541829199996,
+  "runtimeReportedLoadedBytes": 1704638544,
+  "modelUnloaded": true,
+  "semanticQuality": "Not inferred from structural/number checks; see manual-review.json"
+}
