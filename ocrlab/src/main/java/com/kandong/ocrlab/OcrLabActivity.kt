@@ -1,6 +1,8 @@
 package com.kandong.ocrlab
 
 import android.app.Activity
+import android.content.Intent
+import com.kandong.ocrlab.context.ContextLabActivity
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -40,8 +42,8 @@ class OcrLabActivity : Activity() {
             setPadding(dp(20), dp(20), dp(20), dp(24))
         }
         content.addView(label("看懂文字实验", 26f))
-        content.addView(label("仅用项目随包的合成法语、英语文字测试 OCR。12 句原文分别绘制为 16、24、32 像素字号，再加一张空白图片，共 37 项。", 18f))
-        content.addView(label("不会读取真实屏幕、照片、相机或外部传入文字。没有翻译、账号或模型下载入口。只有点击下面的开始按钮才会运行；返回页面不会自动运行。", 17f))
+        content.addView(label("OCR 实验仅用项目随包的合成法语、英语文字。12 句原文分别绘制为 16、24、32 像素字号，再加一张空白图片，共 37 项。", 18f))
+        content.addView(label("不会读取真实屏幕、照片、相机或外部传入文字。没有翻译模型、账号或模型下载入口。下方另有人工预置中文的合成上下文实验。各实验仅在明确点击后运行；返回页面不会自动运行。", 17f))
         start = Button(this).apply {
             text = "开始 37 项合成文字实验"
             minHeight = dp(48)
@@ -68,6 +70,12 @@ class OcrLabActivity : Activity() {
         }
         content.addView(start)
         content.addView(cancel)
+        content.addView(Button(this).apply {
+            text = "合成上下文与映射实验"
+            minHeight = dp(48)
+            minWidth = dp(48)
+            setOnClickListener { startActivity(Intent(this@OcrLabActivity, ContextLabActivity::class.java)) }
+        })
         status = label("尚未运行。点击开始后才会创建私有合成报告。", 17f).apply {
             accessibilityLiveRegion = View.ACCESSIBILITY_LIVE_REGION_POLITE
         }

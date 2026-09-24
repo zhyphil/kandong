@@ -75,4 +75,4 @@ Phase0A 放大 → Phase0B 整屏上下文辅助、区域法语/英语译中文 
 
 2026-09-24资源管理候选：限制待显示结果并复用GPU临时缓冲，自动检查与待完成真机项目见[内存与生命周期记录](docs/MEMORY_STABILITY.md)。该候选随后已更新指定华为并完成[短时资源复验](docs/HUAWEI_RESOURCE_VALIDATION.md)，尚未发布。
 
-下一阶段已有独立[文字识别实验](docs/OCR_LAB.md)：仅随包合成英法文字，无真实屏幕输入；区域翻译仍未接入。按用户最新方向，先理解当前页面整屏可见内容及关系，再在放大区域对应显示译文；[上下文与元素映射设计](docs/TRANSLATION_CONTEXT.md)明确输入范围、刷新和验收，尚未实现整屏文本采集。
+下一阶段已有独立[文字识别实验](docs/OCR_LAB.md)和[整屏上下文实验](docs/CONTEXT_LAB.md)：只用合成输入，验证框外上下文、元素对应、坐标与失效规则，中文为人工预置。区域翻译与真实整屏采集仍未接入。[华为OCR验证](docs/HUAWEI_OCR_VALIDATION.md)已能运行，但发现“8 kg → 8 g”等关键错误，质量门槛保持未通过；后续按[上下文设计](docs/TRANSLATION_CONTEXT.md)继续推进。

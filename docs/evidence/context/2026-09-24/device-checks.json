@@ -1,0 +1,26 @@
+{
+  "device": "dedicated_API36_emulator",
+  "scope": "synthetic_only",
+  "checks": [
+    {
+      "check": "disclosure_and_no_auto_load",
+      "passed": true
+    },
+    {
+      "check": "late_a_result_keeps_b_untranslated",
+      "passed": true
+    },
+    {
+      "check": "same_page_move_reuses_a_cache_and_outside_roi_context",
+      "passed": true
+    },
+    {
+      "check": "menu_clear_removes_context_and_result",
+      "passed": true
+    },
+    {
+      "check": "background_task_return_keeps_cleared_context",
+      "passed": true
+    }
+  ]
+}

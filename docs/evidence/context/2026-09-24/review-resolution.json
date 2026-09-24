@@ -1,0 +1,41 @@
+{
+  "reviewFindings": [
+    {
+      "priority": "P2",
+      "problem": "onDraw could expire the snapshot while periodic refresh skipped cleared state, retaining old UI text",
+      "fix": "onDraw consumes displayedFrame without mutating engine; periodic refresh synchronizes all UI including empty state",
+      "validation": "30 JUnit + debug build + lint zero errors; actual experimental TTL expiry removes text and prevents restoring by delivery",
+      "oldRaceReproducedOnDevice": false,
+      "independentReviewRerunAfterFix": false
+    }
+  ],
+  "reviewedSourceSha256": "5081490a0f5eb2f3712051c6dcf33320dfe224b1b3fab59f51a1d0dd1ea575a4",
+  "finalSourceSha256": "2c297542d3d035aadc8d55c27cc40aa5cad1a4d4c17589d21abe5b7b4bdcb1a7",
+  "parentRegression": {
+    "name": "crossCardRelationRejectsSnapshotAndRevokesPreviousResults",
+    "beforeFix": "1 test, 1 AssertionError failure at expected rejection",
+    "afterFix": "included in 30 passing tests"
+  },
+  "harnessCorrections": [
+    "wait for Activity transition after tap",
+    "returning app task may resume internal activity, not launcher",
+    "wait for background lifecycle before returning"
+  ],
+  "specialistSteps": [
+    {
+      "phase": "audit",
+      "seconds": 196.6,
+      "tokens": 6287
+    },
+    {
+      "phase": "implement",
+      "seconds": 411.7,
+      "tokens": 5600
+    },
+    {
+      "phase": "review",
+      "seconds": 149.0,
+      "tokens": 5305
+    }
+  ]
+}

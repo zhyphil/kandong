@@ -1,0 +1,171 @@
+{
+  "scope": "synthetic_context_only_no_translation_model",
+  "baseCommit": "9dfd76b18b8ad6508cf7d8ee74a5de7d21dad6d9",
+  "sourceAggregateSha256": "2c297542d3d035aadc8d55c27cc40aa5cad1a4d4c17589d21abe5b7b4bdcb1a7",
+  "sourceFiles": {
+    "ocrlab/build.gradle.kts": "ca0226186d216fe45a4d31409d8b2b1baf4f54d1ac3404173ddee6190fa4d443",
+    "ocrlab/src/main/AndroidManifest.xml": "62a5f010fa0aa190d478be3c1caecca34510db5094dc12121c52063321e6b403",
+    "ocrlab/src/main/assets/translation-cases.json": "1f638fe9922fc979db040cb1d12cbee17dc66d950e62ec7b2872fe5544cf6553",
+    "ocrlab/src/main/java/com/kandong/ocrlab/OcrComparison.kt": "0f82e80af8ebdc73e83c40863f4cc3ee2d5dc490bc1dd2305f0f0efafcfe4e0a",
+    "ocrlab/src/main/java/com/kandong/ocrlab/OcrLabActivity.kt": "631d4f6ce9aef1d130bc9a61d2702f8e7638cfef5bb00068f971518780ee63cb",
+    "ocrlab/src/main/java/com/kandong/ocrlab/OcrReport.kt": "fddf0a80db23f7e1c38dffa514572522d9957964b80ca4f248b5c16b6d61e00e",
+    "ocrlab/src/main/java/com/kandong/ocrlab/OcrRunner.kt": "9b722c436ab7387017112b0c31abf81de1edb3f4b8ad154babf09264da5dac03",
+    "ocrlab/src/main/java/com/kandong/ocrlab/RunGate.kt": "37fcfd66d9517dbc623e1cc48509830f22c2b1aaf50e4e4572c2d6fea7c26dc8",
+    "ocrlab/src/main/java/com/kandong/ocrlab/SyntheticFixtures.kt": "7fe96c3e9875155a4521b084f5ce3289b55505198b886f6831fc029dc971a5dc",
+    "ocrlab/src/main/java/com/kandong/ocrlab/context/ContextContracts.kt": "17ad9d34b1f048eed27b5e5733545013de65dce69e8d0a807891bdb96b76668e",
+    "ocrlab/src/main/java/com/kandong/ocrlab/context/ContextEngine.kt": "ac98746ba4e23e00dcab5f22361642cbe75b0a74dcaed53b01cb6331799cff20",
+    "ocrlab/src/main/java/com/kandong/ocrlab/context/ContextFixtures.kt": "ac64ab8643061f96e0a8e88357c2242ec39921041b8b03db6a9c683fc8054c96",
+    "ocrlab/src/main/java/com/kandong/ocrlab/context/ContextGeometry.kt": "70dcc6ad5d1b8656616f001031439c81f61502d4e7084a0f9394cc3cb3f1a3b9",
+    "ocrlab/src/main/java/com/kandong/ocrlab/context/ContextLabActivity.kt": "391067e322d298547e87c9c877efdb3121dbba0eaf612038909f6ed7d58272b5",
+    "ocrlab/src/main/res/values/styles.xml": "a285d25609ed90e8ba20e23e7700f07505cc396c9a9ada56747c37c9a1185754",
+    "ocrlab/src/test/java/com/kandong/ocrlab/OcrComparisonTest.kt": "8764d3aedefa5b65f0ae678575e811f6cb97fe8f09d47b4dcd8729c0b7072298",
+    "ocrlab/src/test/java/com/kandong/ocrlab/RunGateTest.kt": "064cb497f313c94baad1e79593780e5cd7ef26d8ba7ce7842d804a38ff1a1765",
+    "ocrlab/src/test/java/com/kandong/ocrlab/context/ContextEngineTest.kt": "bb642c7196a4b058c09c5113275edb0524ef2b966f510813d248b0887bb4c109",
+    "ocrlab/src/test/java/com/kandong/ocrlab/context/ContextGeometryTest.kt": "56ea4fea69ef6e45663731822bb2ec663285abd9bca1df65218904faf8a9d793",
+    "ocrlab/src/test/java/com/kandong/ocrlab/context/ContextOwnershipTest.kt": "702347dfe5a9ae5b5801683de9448730cb276feabb6c36bdfa8c57986de15f29"
+  },
+  "originalOcrInputsUnchanged": true,
+  "apkSha256": "9de6f76494fbf535c3bc4ae73bad83a90d8e7ea498bd96be97607c7dd464a858",
+  "apkBytes": 52339927,
+  "permissions": [
+    "com.kandong.ocrlab.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "components": [
+    {
+      "type": "activity",
+      "name": "com.kandong.ocrlab.context.ContextLabActivity",
+      "exported": "false"
+    },
+    {
+      "type": "activity",
+      "name": "com.kandong.ocrlab.OcrLabActivity",
+      "exported": "true"
+    },
+    {
+      "type": "service",
+      "name": "com.google.mlkit.common.internal.MlKitComponentDiscoveryService",
+      "exported": "false"
+    },
+    {
+      "type": "provider",
+      "name": "com.google.mlkit.common.internal.MlKitInitProvider",
+      "exported": "false"
+    },
+    {
+      "type": "activity",
+      "name": "com.google.android.gms.common.api.GoogleApiActivity",
+      "exported": "false"
+    },
+    {
+      "type": "provider",
+      "name": "androidx.startup.InitializationProvider",
+      "exported": "false"
+    },
+    {
+      "type": "service",
+      "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+      "exported": "false"
+    },
+    {
+      "type": "service",
+      "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+      "exported": "false"
+    },
+    {
+      "type": "receiver",
+      "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+      "exported": "false"
+    }
+  ],
+  "testSuites": [
+    {
+      "name": "com.kandong.ocrlab.OcrComparisonTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.011"
+    },
+    {
+      "name": "com.kandong.ocrlab.RunGateTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.001"
+    },
+    {
+      "name": "com.kandong.ocrlab.context.ContextEngineTest",
+      "tests": "18",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.022"
+    },
+    {
+      "name": "com.kandong.ocrlab.context.ContextGeometryTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.001"
+    },
+    {
+      "name": "com.kandong.ocrlab.context.ContextOwnershipTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.0"
+    }
+  ],
+  "tests": 30,
+  "lint": [
+    {
+      "id": "OldTargetApi",
+      "severity": "Warning"
+    },
+    {
+      "id": "DataExtractionRules",
+      "severity": "Warning"
+    },
+    {
+      "id": "DrawAllocation",
+      "severity": "Warning"
+    },
+    {
+      "id": "DrawAllocation",
+      "severity": "Warning"
+    },
+    {
+      "id": "MissingApplicationIcon",
+      "severity": "Warning"
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning"
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning"
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning"
+    },
+    {
+      "id": "SetTextI18n",
+      "severity": "Warning"
+    },
+    {
+      "id": "SetTextI18n",
+      "severity": "Warning"
+    }
+  ],
+  "signatureVerification": "Verifies\nVerified using v1 scheme (JAR signing): false\nVerified using v2 scheme (APK Signature Scheme v2): true\nVerified using v3 scheme (APK Signature Scheme v3): false\nVerified using v3.1 scheme (APK Signature Scheme v3.1): false\nVerified using v4 scheme (APK Signature Scheme v4): false\nVerified for SourceStamp: false\nNumber of signers: 1\n",
+  "alignmentVerification": {
+    "exitCode": 0,
+    "output": ""
+  },
+  "newDependencyOrVersion": false
+}

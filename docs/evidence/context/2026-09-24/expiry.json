@@ -1,0 +1,11 @@
+{
+  "scope": "synthetic_activity_expiry_after_review_fix",
+  "experimentalTtlMs": 60000,
+  "observedElapsedSeconds": 86.605,
+  "presetVisibleBeforeExpiry": true,
+  "sourceAndPresetRemoved": true,
+  "snapshotAndPendingCleared": true,
+  "postExpiryDeliveryCannotRestore": true,
+  "oldOnDrawRaceReproducedOnDevice": false,
+  "note": "Original race found by independent static review. This verifies the repaired expiry path, not deterministic reproduction of the old frame-boundary timing."
+}

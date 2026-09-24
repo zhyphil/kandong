@@ -1,0 +1,25 @@
+{
+  "model": "LIO-AN00",
+  "api": 31,
+  "apkSha256": "13dc1af19c0eb99fa1ea077cece1a01deadf54f24fb60f76c8b3da0d2edeba47",
+  "inputScope": "packaged_synthetic_37_only",
+  "gmsInstalled": false,
+  "connectivityChanged": false,
+  "actualOfflineTest": false,
+  "fullRun": {
+    "textCases": 36,
+    "strictMatches": 29,
+    "blankEmpty": true,
+    "elapsedMs": 2987
+  },
+  "cancelRun": {
+    "status": "cancelled",
+    "processedCount": 0,
+    "frozenAfterMs": 1500,
+    "reportFrozen": true
+  },
+  "restartRun": {
+    "completed": 37,
+    "newRunId": true
+  }
+}

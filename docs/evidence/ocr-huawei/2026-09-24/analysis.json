@@ -1,0 +1,84 @@
+{
+  "scope": "12_fixed_synthetic_sentences_x_3_font_sizes_plus_blank",
+  "pipeline": "completed_on_target_huawei",
+  "qualityGate": "not_ready_for_product_translation",
+  "sameResultsAcrossTwoRuns": true,
+  "textCases": 36,
+  "strictMatches": 29,
+  "strictMismatches": 7,
+  "blankCorrect": true,
+  "failureClasses": [
+    {
+      "caseId": "fr-cancel",
+      "fontPx": 24,
+      "source": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "recognizedRaw": "Annulation gratuite jusqu'au 15 octobreà 18 h.",
+      "sourceNormalized": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "recognizedNormalized": "Annulation gratuite jusqu'au 15 octobreà 18 h.",
+      "classification": "word_boundary_space_missing"
+    },
+    {
+      "caseId": "fr-nonrefundable",
+      "fontPx": 16,
+      "source": "Ce billet n'est ni échangeable ni remboursable.",
+      "recognizedRaw": "Ce billet nest ni échangeable ni remboursable.",
+      "sourceNormalized": "Ce billet n'est ni échangeable ni remboursable.",
+      "recognizedNormalized": "Ce billet nest ni échangeable ni remboursable.",
+      "classification": "apostrophe_missing_in_negation"
+    },
+    {
+      "caseId": "fr-total",
+      "fontPx": 16,
+      "source": "Total : 1 234,50 €",
+      "recognizedRaw": "Total: 1 234,50 €",
+      "sourceNormalized": "Total : 1 234,50 €",
+      "recognizedNormalized": "Total: 1 234,50 €",
+      "classification": "spacing"
+    },
+    {
+      "caseId": "fr-total",
+      "fontPx": 24,
+      "source": "Total : 1 234,50 €",
+      "recognizedRaw": "Total:1 234,50€",
+      "sourceNormalized": "Total : 1 234,50 €",
+      "recognizedNormalized": "Total:1 234,50€",
+      "classification": "spacing"
+    },
+    {
+      "caseId": "fr-total",
+      "fontPx": 32,
+      "source": "Total : 1 234,50 €",
+      "recognizedRaw": "Total :1 234,50 €",
+      "sourceNormalized": "Total : 1 234,50 €",
+      "recognizedNormalized": "Total :1 234,50 €",
+      "classification": "spacing"
+    },
+    {
+      "caseId": "fr-access",
+      "fontPx": 24,
+      "source": "Accès sans marche, ascenseur indisponible.",
+      "recognizedRaw": "Accès sarns marche, ascenseur indisponible.",
+      "sourceNormalized": "Accès sans marche, ascenseur indisponible.",
+      "recognizedNormalized": "Accès sarns marche, ascenseur indisponible.",
+      "classification": "word_substitution"
+    },
+    {
+      "caseId": "fr-luggage",
+      "fontPx": 32,
+      "source": "Un bagage de 8 kg maximum est inclus.",
+      "recognizedRaw": "Un bagage de 8 g maximum est\ninclus.",
+      "sourceNormalized": "Un bagage de 8 kg maximum est inclus.",
+      "recognizedNormalized": "Un bagage de 8 g maximum est inclus.",
+      "classification": "critical_unit_loss_kg_to_g"
+    }
+  ],
+  "rootCause": "unconfirmed; no controlled identical-pixel cross-device comparison yet",
+  "translationModelTested": false,
+  "actualOfflineDeviceTest": false,
+  "sources": {
+    "full-report.json": "97d9bf997613abdc2d5d41a939f65997c4e6364b2f1e4ef282a7af9f0280dcb6",
+    "restart-report.json": "1dd2aa61ed1aedf7d487d9794265bbd35885c2cc5e292a3241d4f0bb1cc2b7c7",
+    "cancel-report.json": "2bb1154e0d1299c262aae19d0777963220490266698764b7849531cdd67534cf",
+    "verification.json": "e5969fea191091d71463a2be76f9ba48993593ce5053b991eabffa9772429356"
+  }
+}

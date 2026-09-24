@@ -1,6 +1,6 @@
 # 本机文字识别实验 · 2026-09-24
 
-状态：独立ocrlab实现、构建、单元测试和专用API36模拟器验证完成。它为区域翻译准备文字识别候选，**还没有翻译能力，也没有接入放大镜或读取真实页面**。华为上的OCR仍待验证；同日完成的[资源优化华为观察](HUAWEI_RESOURCE_VALIDATION.md)属于另一应用路径。
+状态：独立ocrlab实现、构建、单元测试和专用API36模拟器验证完成。它为区域翻译准备文字识别候选，**还没有翻译能力，也没有接入放大镜或读取真实页面**。随后完成[目标华为运行验证](HUAWEI_OCR_VALIDATION.md)，36张文字图29张严格匹配，包含关键单位错误，质量尚未达接入条件。同日完成的[资源优化华为观察](HUAWEI_RESOURCE_VALIDATION.md)属于另一应用路径。
 
 ## 输入与边界
 
@@ -58,6 +58,6 @@ adb -s emulator-5580 shell run-as com.kandong.ocrlab cat files/ocr-report.json
 
 这里只操作本项目专用AVD。原实验进程和模拟器已结束；网络/GMS/旋转设置均恢复。首次模拟器在安装前以137结束，原因未证实；以1536MiB/2核重新启动后完成验证，不将宿主环境退出归因为产品故障。
 
-下一步是目标华为的独立合成OCR兼容验证，以及独立的EN/FR→中文翻译模型验证；之后才考虑按用户主动请求的区域流程，继续优先Accessibility Tree、按需OCR。当前无新的真机OCR结果、云翻译、发布或正式功能开关。
+目标华为的运行/取消/重开已补验，关键识别质量失败见[华为OCR记录](HUAWEI_OCR_VALIDATION.md)。下一步定位小字、单位及否定结构的差异，再验证EN/FR→中文模型及上下文能力。新版独立[上下文实验](CONTEXT_LAB.md)已验证人工分组和预置中文的对应规则，未读取真实页面；正式路线仍为整屏可见上下文输入、区域元素输出，优先Accessibility Tree、按需OCR。没有云翻译、发布或正式功能开关。
 
 官方来源：[Android OCR API](https://developers.google.com/ml-kit/vision/text-recognition/v2/android)、[TextRecognizer资源释放](https://developers.google.com/android/reference/com/google/mlkit/vision/text/TextRecognizer)、[ML Kit条款与隐私](https://developers.google.com/ml-kit/terms)。SDK及模型按其官方条款核对，不以示例代码的Apache许可证代替SDK/模型许可。

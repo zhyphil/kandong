@@ -1,0 +1,19 @@
+{
+  "newContextEntryPreservesOriginalInputs": true,
+  "fullRun": {
+    "completed": 37,
+    "textCases": 36,
+    "strictMatches": 33,
+    "blankEmpty": true
+  },
+  "enterContextCancelsInFlightOcr": {
+    "status": "cancelled",
+    "completedBeforeCancel": 18,
+    "lateReportFrozen": true,
+    "backDoesNotAutoRun": true
+  },
+  "manualRestart": {
+    "completed": 37,
+    "newRunId": true
+  }
+}
