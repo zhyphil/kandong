@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "fixtureVersion": "trilingual-v1",
+  "scope": "project_authored_synthetic_only",
+  "cases": [
+    {
+      "id": "fr-cancel",
+      "language": "fr",
+      "source": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "fontSizesPx": [
+        24
+      ]
+    },
+    {
+      "id": "fr-total",
+      "language": "fr",
+      "source": "Total : 1 234,50 €",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ]
+    },
+    {
+      "id": "fr-nonrefundable",
+      "language": "fr",
+      "source": "Ce billet n'est ni échangeable ni remboursable.",
+      "fontSizesPx": [
+        16
+      ]
+    },
+    {
+      "id": "fr-access",
+      "language": "fr",
+      "source": "Accès sans marche, ascenseur indisponible.",
+      "fontSizesPx": [
+        24
+      ]
+    },
+    {
+      "id": "fr-luggage",
+      "language": "fr",
+      "source": "Un bagage de 8 kg maximum est inclus.",
+      "fontSizesPx": [
+        32
+      ]
+    },
+    {
+      "id": "en-quality",
+      "language": "en",
+      "source": "The total is 39.90 €, tax not included.",
+      "fontSizesPx": [
+        16,
+        32
+      ]
+    },
+    {
+      "id": "fr-quality",
+      "language": "fr",
+      "source": "Ne payez pas maintenant. Échéance : 18:00.",
+      "fontSizesPx": [
+        16,
+        32
+      ]
+    },
+    {
+      "id": "zh-hans-quality",
+      "language": "zh-Hans",
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "fontSizesPx": [
+        16,
+        32
+      ]
+    },
+    {
+      "id": "zh-hant-quality",
+      "language": "zh-Hant",
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "fontSizesPx": [
+        16,
+        32
+      ]
+    },
+    {
+      "id": "mixed-quality",
+      "language": "mixed",
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "fontSizesPx": [
+        16,
+        32
+      ]
+    }
+  ]
+}
