@@ -22,3 +22,8 @@ captures/
 # Explicitly prepared probe models; fetch pinned files with scripts/prepare-modelprobe-models.py.
 /modelprobe/src/main/assets/models/*.onnx
 /modelprobe/src/main/assets/models/*.onnx.part
+
+# Private local provider credentials; never bundled or committed.
+/.local/
+/.env
+/.env.*
