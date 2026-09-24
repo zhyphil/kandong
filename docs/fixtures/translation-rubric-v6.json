@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "synthetic": true,
+  "criteria": [
+    {
+      "page": "p501",
+      "target": "b003",
+      "criterion": "每月金额精确保留$9.95，不增加美元身份",
+      "expectedState": "candidate-unverified"
+    },
+    {
+      "page": "p501",
+      "target": "b004",
+      "criterion": "每人金额精确保留CAD 24.00",
+      "expectedState": "candidate-unverified"
+    },
+    {
+      "page": "p501",
+      "target": "b005",
+      "criterion": "每名儿童金额精确保留US$ 8.50",
+      "expectedState": "candidate-unverified"
+    },
+    {
+      "page": "p501",
+      "target": "b006",
+      "criterion": "范围从$12至$24，不换序、不增加币种身份",
+      "expectedState": "candidate-unverified"
+    },
+    {
+      "page": "p502",
+      "target": "b003",
+      "criterion": "价格精确保留18,40 €",
+      "expectedState": "candidate-unverified"
+    },
+    {
+      "page": "p502",
+      "target": "b004",
+      "criterion": "总价精确保留9,50 $，不猜测美元",
+      "expectedState": "candidate-unverified"
+    },
+    {
+      "page": "p502",
+      "target": "b005",
+      "criterion": "价格精确保留14,20 EUR",
+      "expectedState": "candidate-unverified"
+    },
+    {
+      "page": "p502",
+      "target": "b006",
+      "criterion": "价格精确保留12,00 GBP",
+      "expectedState": "candidate-unverified"
+    },
+    {
+      "page": "p503",
+      "target": "b003",
+      "criterion": "本地当天有效，不能变截止；不添加仅限",
+      "expectedState": "local-date-rendered"
+    },
+    {
+      "page": "p503",
+      "target": "b004",
+      "criterion": "本地截止日且含当日",
+      "expectedState": "local-date-rendered"
+    },
+    {
+      "page": "p503",
+      "target": "b005",
+      "criterion": "有例外条件，完整原文提示",
+      "expectedState": "original-with-warning"
+    },
+    {
+      "page": "p503",
+      "target": "b006",
+      "criterion": "歧义数字日期，完整原文提示",
+      "expectedState": "original-with-warning"
+    },
+    {
+      "page": "p504",
+      "target": "b003",
+      "criterion": "本地当天有效，不添加仅限",
+      "expectedState": "local-date-rendered"
+    },
+    {
+      "page": "p504",
+      "target": "b004",
+      "criterion": "本地截止日且含当日",
+      "expectedState": "local-date-rendered"
+    },
+    {
+      "page": "p504",
+      "target": "b005",
+      "criterion": "有例外条件，完整原文提示",
+      "expectedState": "original-with-warning"
+    },
+    {
+      "page": "p504",
+      "target": "b006",
+      "criterion": "非法日期，完整原文提示",
+      "expectedState": "original-with-warning"
+    }
+  ]
+}

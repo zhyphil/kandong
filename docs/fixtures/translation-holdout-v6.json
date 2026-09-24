@@ -1,0 +1,466 @@
+{
+  "schema": 1,
+  "synthetic": true,
+  "cases": [
+    {
+      "id": "p501",
+      "sourceLanguage": "en",
+      "viewport": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "blocks": [
+        {
+          "id": "b001",
+          "text": "Museum admission",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            60,
+            1040,
+            160
+          ],
+          "readingOrder": 1
+        },
+        {
+          "id": "b002",
+          "text": "Prices are shown in the original currency notation.",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            240,
+            1040,
+            340
+          ],
+          "readingOrder": 2
+        },
+        {
+          "id": "b003",
+          "text": "$9.95 per month",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            420,
+            1040,
+            520
+          ],
+          "readingOrder": 3
+        },
+        {
+          "id": "b004",
+          "text": "CAD 24.00 per person",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 4
+        },
+        {
+          "id": "b005",
+          "text": "US$ 8.50 per child",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            780,
+            1040,
+            880
+          ],
+          "readingOrder": 5
+        },
+        {
+          "id": "b006",
+          "text": "From $12 to $24",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            960,
+            1040,
+            1060
+          ],
+          "readingOrder": 6
+        }
+      ],
+      "groups": [
+        {
+          "id": "g001",
+          "blockIds": [
+            "b001",
+            "b002",
+            "b003",
+            "b004",
+            "b005",
+            "b006"
+          ]
+        }
+      ],
+      "targetIds": [
+        "b003",
+        "b004",
+        "b005",
+        "b006"
+      ],
+      "roi": [
+        40,
+        420,
+        1040,
+        1060
+      ]
+    },
+    {
+      "id": "p502",
+      "sourceLanguage": "fr",
+      "viewport": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "blocks": [
+        {
+          "id": "b001",
+          "text": "Billetterie du musée",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            60,
+            1040,
+            160
+          ],
+          "readingOrder": 1
+        },
+        {
+          "id": "b002",
+          "text": "Les montants utilisent la notation de devise affichée.",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            240,
+            1040,
+            340
+          ],
+          "readingOrder": 2
+        },
+        {
+          "id": "b003",
+          "text": "Tarif : 18,40 €",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            420,
+            1040,
+            520
+          ],
+          "readingOrder": 3
+        },
+        {
+          "id": "b004",
+          "text": "Prix total : 9,50 $",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 4
+        },
+        {
+          "id": "b005",
+          "text": "Prix : 14,20 EUR",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            780,
+            1040,
+            880
+          ],
+          "readingOrder": 5
+        },
+        {
+          "id": "b006",
+          "text": "Prix : 12,00 GBP",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            960,
+            1040,
+            1060
+          ],
+          "readingOrder": 6
+        }
+      ],
+      "groups": [
+        {
+          "id": "g001",
+          "blockIds": [
+            "b001",
+            "b002",
+            "b003",
+            "b004",
+            "b005",
+            "b006"
+          ]
+        }
+      ],
+      "targetIds": [
+        "b003",
+        "b004",
+        "b005",
+        "b006"
+      ],
+      "roi": [
+        40,
+        420,
+        1040,
+        1060
+      ]
+    },
+    {
+      "id": "p503",
+      "sourceLanguage": "en",
+      "viewport": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "blocks": [
+        {
+          "id": "b001",
+          "text": "Ticket validity",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            60,
+            1040,
+            160
+          ],
+          "readingOrder": 1
+        },
+        {
+          "id": "b002",
+          "text": "Read the conditions for each ticket.",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            240,
+            1040,
+            340
+          ],
+          "readingOrder": 2
+        },
+        {
+          "id": "b003",
+          "text": "Valid on April 8, 2029",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            420,
+            1040,
+            520
+          ],
+          "readingOrder": 3
+        },
+        {
+          "id": "b004",
+          "text": "Valid until 3 May 2031 inclusive.",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 4
+        },
+        {
+          "id": "b005",
+          "text": "Valid on 8 April 2029 except children",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            780,
+            1040,
+            880
+          ],
+          "readingOrder": 5
+        },
+        {
+          "id": "b006",
+          "text": "Valid on 04/08/2029",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            960,
+            1040,
+            1060
+          ],
+          "readingOrder": 6
+        }
+      ],
+      "groups": [
+        {
+          "id": "g001",
+          "blockIds": [
+            "b001",
+            "b002",
+            "b003",
+            "b004",
+            "b005",
+            "b006"
+          ]
+        }
+      ],
+      "targetIds": [
+        "b003",
+        "b004",
+        "b005",
+        "b006"
+      ],
+      "roi": [
+        40,
+        420,
+        1040,
+        1060
+      ]
+    },
+    {
+      "id": "p504",
+      "sourceLanguage": "fr",
+      "viewport": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "blocks": [
+        {
+          "id": "b001",
+          "text": "Validité du billet",
+          "role": "heading",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            60,
+            1040,
+            160
+          ],
+          "readingOrder": 1
+        },
+        {
+          "id": "b002",
+          "text": "Vérifiez les conditions de chaque billet.",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            240,
+            1040,
+            340
+          ],
+          "readingOrder": 2
+        },
+        {
+          "id": "b003",
+          "text": "Valable le 1er août 2030.",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            420,
+            1040,
+            520
+          ],
+          "readingOrder": 3
+        },
+        {
+          "id": "b004",
+          "text": "Valable jusqu’au 9 mars 2031 inclus.",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            600,
+            1040,
+            700
+          ],
+          "readingOrder": 4
+        },
+        {
+          "id": "b005",
+          "text": "Valable le 8 avril 2029 sauf le matin.",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            780,
+            1040,
+            880
+          ],
+          "readingOrder": 5
+        },
+        {
+          "id": "b006",
+          "text": "Valable le 29 février 2027",
+          "role": "label",
+          "groupId": "g001",
+          "bounds": [
+            40,
+            960,
+            1040,
+            1060
+          ],
+          "readingOrder": 6
+        }
+      ],
+      "groups": [
+        {
+          "id": "g001",
+          "blockIds": [
+            "b001",
+            "b002",
+            "b003",
+            "b004",
+            "b005",
+            "b006"
+          ]
+        }
+      ],
+      "targetIds": [
+        "b003",
+        "b004",
+        "b005",
+        "b006"
+      ],
+      "roi": [
+        40,
+        420,
+        1040,
+        1060
+      ]
+    }
+  ]
+}
