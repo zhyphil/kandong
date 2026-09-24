@@ -1,0 +1,157 @@
+{
+  "status": "accepted-bounded-synthetic-crop-recognition-on-target-Huawei",
+  "device": "HUAWEI LIO-AN00/API31",
+  "rounds": 2,
+  "junitTestsPerRound": 11,
+  "countsPerRound": {
+    "cases": 16,
+    "complete": 16,
+    "empty": 8,
+    "crops": 13,
+    "cropChannels": 139875,
+    "resizes": 13,
+    "resizedChannels": 631008,
+    "tensors": 8,
+    "floats": 816048,
+    "inferences": 16,
+    "rawRows": 26,
+    "bindings": 26
+  },
+  "guardsPerRound": 15,
+  "geometryCleanup": {
+    "matAcquired": {
+      "boxMask": 18,
+      "boxKernel": 18,
+      "boxDilated": 18,
+      "boxContourSource": 18,
+      "boxHierarchy": 18,
+      "boxContour": 17,
+      "boxProbability": 17,
+      "boxRectInput": 28,
+      "boxRectPoints": 28,
+      "boxScoreMask": 14,
+      "boxScorePolygon": 14,
+      "boxScoreRoi": 14,
+      "sourceQuad": 13,
+      "targetQuad": 13,
+      "homography": 13,
+      "cropSource": 13,
+      "warpDestination": 13,
+      "recognitionResizeSource": 14,
+      "recognitionResizeDestination": 14,
+      "rotationDestination": 1
+    },
+    "matReleaseAttempts": {
+      "boxScoreRoi": 14,
+      "boxScorePolygon": 14,
+      "boxScoreMask": 14,
+      "boxRectPoints": 28,
+      "boxRectInput": 28,
+      "boxProbability": 17,
+      "boxContour": 17,
+      "boxHierarchy": 18,
+      "boxContourSource": 18,
+      "boxDilated": 18,
+      "boxKernel": 18,
+      "boxMask": 18,
+      "warpDestination": 13,
+      "cropSource": 13,
+      "homography": 13,
+      "targetQuad": 13,
+      "sourceQuad": 13,
+      "recognitionResizeDestination": 14,
+      "recognitionResizeSource": 14,
+      "rotationDestination": 1
+    },
+    "matReleased": {
+      "boxScoreRoi": 14,
+      "boxScorePolygon": 14,
+      "boxScoreMask": 14,
+      "boxRectPoints": 28,
+      "boxRectInput": 28,
+      "boxProbability": 17,
+      "boxContour": 17,
+      "boxHierarchy": 18,
+      "boxContourSource": 18,
+      "boxDilated": 18,
+      "boxKernel": 18,
+      "boxMask": 18,
+      "warpDestination": 13,
+      "cropSource": 13,
+      "homography": 13,
+      "targetQuad": 13,
+      "sourceQuad": 13,
+      "recognitionResizeDestination": 14,
+      "recognitionResizeSource": 14,
+      "rotationDestination": 1
+    },
+    "matOpened": 316,
+    "findContoursCalls": 18,
+    "bitmapOpened": 62,
+    "bitmapRecycleAttempts": 62,
+    "bitmapRecycled": 62,
+    "balanced": true,
+    "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+  },
+  "ortCleanup": {
+    "opened": 38,
+    "closeAttempts": 38,
+    "closed": 38,
+    "uncertain": false
+  },
+  "allSixReportsNonTimingRepeat": true,
+  "oldFiveReportsMatchAcceptedBaseline": true,
+  "excludedComparisonFields": [
+    "elapsedMs",
+    "elapsedNanos",
+    "elapsedNanosObservational",
+    "resizeNs",
+    "runId"
+  ],
+  "runIds": [
+    "46b2adac-189f-4efc-930b-7d0fed740203",
+    "3bf3f85c-ccf6-4aab-940c-cff345e617df",
+    "7e3aa4da-0601-41fc-b37b-fb343a403858",
+    "3363181d-d2e4-407a-b7e3-5920d3d47d5c",
+    "c3691515-4f6f-434e-be56-193483aaa0a0",
+    "73036741-fa46-49cd-afaf-2e52c1a0d12c",
+    "2a5b8402-161a-48ff-9ca2-107704986370",
+    "19328d5f-23a8-4dfd-aee0-ef321eb1fcbb",
+    "397f2833-8b16-4cf8-bf58-23d7d4b5e2d8",
+    "c87b9269-4873-4010-8d59-96e39812d848",
+    "e6415682-a4c4-4a6e-8b24-c03f5d9a2772",
+    "a2579475-194f-41f1-a1eb-ed14af7aa230"
+  ],
+  "instrumentationSecondsObservational": {
+    "regression": [
+      6.128,
+      6.216
+    ],
+    "geometry": [
+      1.211,
+      1.361
+    ],
+    "polygon": [
+      16.381,
+      14.438
+    ],
+    "boxes": [
+      14.516,
+      10.892
+    ],
+    "recognition": [
+      6.798,
+      6.656
+    ]
+  },
+  "protectedFiles": 1018,
+  "sourceFingerprintsMatchBuildAndReview": true,
+  "installationNote": "adb command returned empty failure after waiting; device package hashes prove requested APK installed; no reinstall",
+  "limitations": [
+    "Fixed probability input; fresh detector inference not yet connected",
+    "Wrong raw text and nontext guesses retained; no trilingual quality acceptance",
+    "No real-screen collection or translation",
+    "Huawei only; API36 OpenCV SIGILL unresolved",
+    "Resource counts do not establish long-term native memory or battery performance"
+  ]
+}

@@ -1,0 +1,6 @@
+
+  KanDong crop recognition implementation
+
+执行计划:
+
+  第1层 → [implement_crop_recognition] engineering/engineering-mobile-app-builder

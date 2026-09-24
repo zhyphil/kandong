@@ -1,0 +1,20 @@
+{
+  "caseId": "mixed-quality-16",
+  "actualReferenceArrayOrder": "tensor row",
+  "tensorRows": [
+    0,
+    1,
+    2
+  ],
+  "readingOrders": [
+    2,
+    0,
+    1
+  ],
+  "boxIds": [
+    "mixed-quality-16.box-0",
+    "mixed-quality-16.box-2",
+    "mixed-quality-16.box-1"
+  ],
+  "mustComparePageOrderUsingExplicitReadingOrder": true
+}

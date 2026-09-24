@@ -30,6 +30,7 @@ android {
     sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("geometry-assets"))
     sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("polygon-offset-assets"))
     sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("box-trace-assets"))
+    sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("crop-recognition-assets"))
     sourceSets.getByName("test").resources {
         srcDir(rootProject.file("docs/fixtures/recognition-prep-v1"))
         srcDir("src/androidTest/assets")
@@ -517,6 +518,75 @@ tasks.matching { it.name == "assembleDebug" }.configureEach {
             apk.entries().asSequence().filter { it.name.matches(Regex("classes[0-9]*\\.dex")) }.forEach { entry ->
                 val strings = apk.getInputStream(entry).use { String(it.readBytes(), Charsets.ISO_8859_1) }
                 check(listOf("BoxPipeline", "BoxTrace").none { strings.contains("Lcom/kandong/modelprobe/$it") })
+            }
+        }
+    }
+}
+
+// Actual crop-to-recognition references: only instrumentation merge/package/lint consume them.
+val cropRecognitionRoot = rootProject.file("docs/fixtures/crop-recognition-v1")
+val cropRecognitionSha = "bbbfd058777e51e4fb7769764d2b49dac7618c784b8e0ef652af84d973f64f6a"
+val cropRecognitionNames = (listOf("manifest.json") + geometryIds.flatMapIndexed { i, id ->
+    val count = geometryCropCounts[i]
+    if (count == 0) emptyList() else List(count) { "$id-row-$it-resized.png" } +
+        List(count) { "$id-row-$it-resized.argbz" } + "$id.f32z" + listOf("ch", "latin").map { "$id-$it-argmax.i32z" }
+}).toSet()
+fun cropRecognitionSpecs(): Map<String, DetectorAssetSpec> {
+    polygonFileSet(cropRecognitionRoot, cropRecognitionNames)
+    val manifest = DetectorAssetSpec(cropRecognitionRoot.resolve("manifest.json"), 50281, cropRecognitionSha, 131072)
+    val m = groovy.json.JsonSlurper().parseText(String(detectorRead(manifest), Charsets.UTF_8)) as Map<*, *>
+    check(m["parentManifestSha256"] == geometryManifestSha && m["probeManifestSha256"] == "126d8d3860d5a4ea098f0875838dbed51a55d8a321f50d409805d394a460061c")
+    check((m["cases"] as List<*>).map { (it as Map<*, *>)["id"] } == geometryIds)
+    val files = m["files"] as Map<*, *>; check(files.keys == cropRecognitionNames - "manifest.json")
+    val result = linkedMapOf("manifest.json" to manifest)
+    files.forEach { (key, value) ->
+        val name = key as String; val f = value as Map<*, *>; val size = (f["bytes"] as Number).toLong()
+        check(size in 1..1_048_576)
+        val spec = DetectorAssetSpec(cropRecognitionRoot.resolve(name), size.toInt(), f["sha256"] as String, 1_048_576)
+        val raw = detectorRead(spec)
+        if (!name.endsWith(".png")) {
+            val bytes = (f["decodedBytes"] as Number).toLong(); check(bytes in 1..4_718_592)
+            val decoded = GZIPInputStream(raw.inputStream()).use { it.readNBytes(bytes.toInt() + 1) }
+            check(decoded.size.toLong() == bytes && detectorDigest(decoded) == f["decodedSha256"])
+        }
+        result[name] = spec
+    }
+    check(result.size == 51 && result.values.sumOf { it.bytes } == 682245); return result
+}
+val stageCropRecognitionProbeAssets by tasks.registering(Sync::class) {
+    from(cropRecognitionRoot) { include(cropRecognitionNames); into("crop-recognition-v1") }
+    into(layout.buildDirectory.dir("crop-recognition-assets"))
+    inputs.dir(cropRecognitionRoot); inputs.property("frozenManifest", cropRecognitionSha)
+    doFirst { cropRecognitionSpecs() }
+    doLast {
+        val root = layout.buildDirectory.dir("crop-recognition-assets").get().asFile
+        polygonFileSet(root, cropRecognitionNames.map { "crop-recognition-v1/$it" }.toSet())
+        cropRecognitionSpecs().forEach { (name, spec) -> detectorRead(spec.copy(file = root.resolve("crop-recognition-v1/$name"))) }
+    }
+}
+tasks.matching { it.name in setOf("mergeDebugAndroidTestAssets", "packageDebugAndroidTest", "generateDebugAndroidTestLintModel", "lintAnalyzeDebugAndroidTest") }.configureEach {
+    dependsOn(stageCropRecognitionProbeAssets)
+}
+tasks.matching { it.name == "assembleDebugAndroidTest" }.configureEach {
+    doLast {
+        val specs = cropRecognitionSpecs()
+        ZipFile(layout.buildDirectory.file("outputs/apk/androidTest/debug/modelprobe-debug-androidTest.apk").get().asFile).use { apk ->
+            val entries = apk.entries().asSequence().filter { !it.isDirectory && it.name.startsWith("assets/crop-recognition-v1/") }.toList()
+            check(entries.size == 51 && entries.map { it.name }.toSet() == cropRecognitionNames.map { "assets/crop-recognition-v1/$it" }.toSet())
+            specs.forEach { (name, spec) ->
+                val entry = apk.getEntry("assets/crop-recognition-v1/$name"); check(entry.size == spec.bytes.toLong())
+                check(apk.getInputStream(entry).use { it.readNBytes(spec.bytes + 1) }.contentEquals(detectorRead(spec)))
+            }
+        }
+    }
+}
+tasks.matching { it.name == "assembleDebug" }.configureEach {
+    doLast {
+        ZipFile(layout.buildDirectory.file("outputs/apk/debug/modelprobe-debug.apk").get().asFile).use { apk ->
+            check(apk.entries().asSequence().none { it.name.startsWith("assets/crop-recognition-v1/") })
+            apk.entries().asSequence().filter { it.name.matches(Regex("classes[0-9]*\\.dex")) }.forEach { entry ->
+                val strings = apk.getInputStream(entry).use { String(it.readBytes(), Charsets.ISO_8859_1) }
+                check(!strings.contains("Lcom/kandong/modelprobe/CropRecognition"))
             }
         }
     }

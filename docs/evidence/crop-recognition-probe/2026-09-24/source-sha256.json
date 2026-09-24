@@ -1,0 +1,8 @@
+{
+  "modelprobe/build.gradle.kts": "df8c6423247ed335a2c7174f4851b88526cc9d07bb5c52416def282ff252099a",
+  "modelprobe/src/testShared/java/com/kandong/modelprobe/CropRecognitionContract.kt": "42d3e236518c63e7e59913e2dfef69bf40371ae3969ef4ae1e8920c2e1e1c6b5",
+  "modelprobe/src/test/java/com/kandong/modelprobe/CropRecognitionContractTest.kt": "b29552ad609f5e3c558bf88c3734464c842ae93d2c7d09f3fbf7e0b4d017acfc",
+  "modelprobe/src/androidTest/java/com/kandong/modelprobe/CropRecognitionPipeline.kt": "93dcedc7cf59d62e0c37d798502c23e7b0e6248a487b71fafe947aeefc45f774",
+  "modelprobe/src/androidTest/java/com/kandong/modelprobe/CropRecognitionFixtures.kt": "cf607f82aa6312306b3dd2f8a7b0948370bc59c756ba002bedb76d617f2bcf6c",
+  "modelprobe/src/androidTest/java/com/kandong/modelprobe/CropRecognitionProbeTest.kt": "434ef077b4c2a78c720f2cb2dd5ea64b63f60b03187225a9829d3041d1d97e62"
+}
