@@ -1,0 +1,84 @@
+{
+  "scope": "Mac_only_fixed_synthetic_images",
+  "baselineImageCount": 18,
+  "newHoldoutImageCount": 31,
+  "qualityMatrixTasks": 196,
+  "repoScriptRecheckRawBoundsPixelsIdentical": true,
+  "groups": [
+    {
+      "dataset": "baseline72",
+      "recognizer": "ch",
+      "scale": 1,
+      "textExact": 11,
+      "textCount": 17,
+      "blankCorrect": true
+    },
+    {
+      "dataset": "baseline72",
+      "recognizer": "ch",
+      "scale": 2,
+      "textExact": 12,
+      "textCount": 17,
+      "blankCorrect": true
+    },
+    {
+      "dataset": "baseline72",
+      "recognizer": "latin",
+      "scale": 1,
+      "textExact": 10,
+      "textCount": 17,
+      "blankCorrect": true
+    },
+    {
+      "dataset": "baseline72",
+      "recognizer": "latin",
+      "scale": 2,
+      "textExact": 10,
+      "textCount": 17,
+      "blankCorrect": true
+    },
+    {
+      "dataset": "holdout124",
+      "recognizer": "ch",
+      "scale": 1,
+      "textExact": 22,
+      "textCount": 30,
+      "blankCorrect": true
+    },
+    {
+      "dataset": "holdout124",
+      "recognizer": "ch",
+      "scale": 2,
+      "textExact": 22,
+      "textCount": 30,
+      "blankCorrect": true
+    },
+    {
+      "dataset": "holdout124",
+      "recognizer": "latin",
+      "scale": 1,
+      "textExact": 12,
+      "textCount": 30,
+      "blankCorrect": true
+    },
+    {
+      "dataset": "holdout124",
+      "recognizer": "latin",
+      "scale": 2,
+      "textExact": 12,
+      "textCount": 30,
+      "blankCorrect": true
+    }
+  ],
+  "decision": "candidate_for_Android_model_feasibility_not_production_quality_pass",
+  "limitations": [
+    "French accents still vary",
+    "small traditional Chinese may output simplified character",
+    "mixed text whitespace/punctuation differ",
+    "Latin model loses Chinese",
+    "no automatic language routing or merging evaluated",
+    "no phone OCR performance/quality claim"
+  ],
+  "modelsBundledInAndroid": false,
+  "sourceScriptSha256": "b31f38770bec60059b11e20586e4e3c8b0a7a038094afe8467230b4aeb316137"
+}

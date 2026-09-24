@@ -1,0 +1,6032 @@
+{
+  "scope": "Mac_CPU_only_fixed_synthetic_quality_screening_not_Android",
+  "scriptSha256": "b31f38770bec60059b11e20586e4e3c8b0a7a038094afe8467230b4aeb316137",
+  "manifestSha256": "2341dff63bd10d41867351ddff0e4145daa2d9d3493bc8cdc88ea289c1a076a8",
+  "fixtureVersion": "trilingual-v1",
+  "models": {
+    "ch_PP-OCRv5_det_mobile.onnx": {
+      "sha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+      "bytes": 4819576
+    },
+    "ch_PP-OCRv5_rec_mobile.onnx": {
+      "sha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "bytes": 16631306
+    },
+    "latin_PP-OCRv5_rec_mobile.onnx": {
+      "sha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+      "bytes": 7904513
+    },
+    "ch_ppocr_mobile_v2.0_cls_mobile.onnx": {
+      "sha256": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c",
+      "bytes": 585532
+    }
+  },
+  "libraries": {
+    "rapidocr": "3.9.2",
+    "onnxruntime": "1.30.0",
+    "numpy": "2.5.3",
+    "Pillow": "12.3.0",
+    "opencv-python": "5.0.0.93"
+  },
+  "configuration": {
+    "ch": {
+      "Global": {
+        "text_score": 0.0,
+        "use_det": true,
+        "use_cls": false,
+        "use_rec": true,
+        "use_preprocess_img": true,
+        "min_side_len": 30,
+        "max_side_len": 2000,
+        "use_vertical_padding": true,
+        "min_height": 30,
+        "width_height_ratio": 8,
+        "return_word_box": false,
+        "return_single_char_box": false,
+        "font_path": null,
+        "log_level": "warning",
+        "model_root_dir": "/private/tmp/kandong-rapidocr-models-20260924"
+      },
+      "EngineConfig": {
+        "onnxruntime": {
+          "intra_op_num_threads": 1,
+          "inter_op_num_threads": 1,
+          "enable_cpu_mem_arena": false,
+          "cpu_ep_cfg": {
+            "arena_extend_strategy": "kSameAsRequested"
+          },
+          "use_cuda": false,
+          "cuda_ep_cfg": {
+            "device_id": 0,
+            "arena_extend_strategy": "kNextPowerOfTwo",
+            "cudnn_conv_algo_search": "EXHAUSTIVE",
+            "do_copy_in_default_stream": true
+          },
+          "use_dml": false,
+          "dml_ep_cfg": null,
+          "use_cann": false,
+          "cann_ep_cfg": {
+            "device_id": 0,
+            "arena_extend_strategy": "kNextPowerOfTwo",
+            "npu_mem_limit": 21474836480,
+            "op_select_impl_mode": "high_performance",
+            "optypelist_for_implmode": "Gelu",
+            "enable_cann_graph": true
+          },
+          "use_coreml": false,
+          "coreml_ep_cfg": {
+            "ModelFormat": "MLProgram",
+            "MLComputeUnits": "ALL",
+            "RequireStaticInputShapes": 0,
+            "EnableOnSubgraphs": 0,
+            "SpecializationStrategy": "FastPrediction",
+            "ProfileComputePlan": 0,
+            "AllowLowPrecisionAccumulationOnGPU": 0,
+            "ModelCacheDirectory": "/tmp/RapidOCR"
+          }
+        },
+        "openvino": {
+          "inference_num_threads": -1,
+          "performance_hint": null,
+          "performance_num_requests": -1,
+          "enable_cpu_pinning": null,
+          "num_streams": -1,
+          "enable_hyper_threading": null,
+          "scheduling_core_type": null
+        },
+        "paddle": {
+          "cpu_math_library_num_threads": -1,
+          "use_npu": false,
+          "npu_ep_cfg": {
+            "device_id": 0,
+            "envs": {
+              "FLAGS_npu_jit_compile": 0,
+              "FLAGS_use_stride_kernel": 0,
+              "FLAGS_allocator_strategy": "auto_growth",
+              "CUSTOM_DEVICE_BLACK_LIST": "pad3d,pad3d_grad,set_value,set_value_with_tensor",
+              "FLAGS_npu_scale_aclnn": "True",
+              "FLAGS_npu_split_aclnn": "True"
+            }
+          },
+          "use_cuda": false,
+          "cuda_ep_cfg": {
+            "device_id": 0,
+            "gpu_mem": 500
+          }
+        },
+        "torch": {
+          "use_cuda": false,
+          "cuda_ep_cfg": {
+            "device_id": 0
+          },
+          "use_npu": false,
+          "npu_ep_cfg": {
+            "device_id": 0
+          },
+          "use_mps": false
+        },
+        "tensorrt": {
+          "device_id": 0,
+          "use_fp16": true,
+          "use_int8": false,
+          "workspace_size": 1073741824,
+          "cache_dir": null,
+          "force_rebuild": false,
+          "det_profile": {
+            "min_shape": [
+              1,
+              3,
+              32,
+              32
+            ],
+            "opt_shape": [
+              1,
+              3,
+              736,
+              736
+            ],
+            "max_shape": [
+              1,
+              3,
+              2048,
+              2048
+            ]
+          },
+          "rec_profile": {
+            "min_shape": [
+              1,
+              3,
+              48,
+              32
+            ],
+            "opt_shape": [
+              6,
+              3,
+              48,
+              320
+            ],
+            "max_shape": [
+              6,
+              3,
+              48,
+              2048
+            ]
+          },
+          "cls_profile": {
+            "min_shape": [
+              1,
+              3,
+              48,
+              32
+            ],
+            "opt_shape": [
+              6,
+              3,
+              48,
+              192
+            ],
+            "max_shape": [
+              6,
+              3,
+              48,
+              192
+            ]
+          }
+        },
+        "mnn": {}
+      },
+      "Det": {
+        "engine_type": "ONNXRUNTIME",
+        "lang_type": "CH",
+        "model_type": "MOBILE",
+        "ocr_version": "PPOCRV5",
+        "task_type": "DET",
+        "model_path": "/private/tmp/kandong-rapidocr-models-20260924/ch_PP-OCRv5_det_mobile.onnx",
+        "model_dir": null,
+        "limit_side_len": 1280,
+        "limit_type": "max",
+        "std": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "thresh": 0.3,
+        "box_thresh": 0.5,
+        "max_candidates": 1000,
+        "unclip_ratio": 1.6,
+        "use_dilation": true,
+        "score_mode": "fast",
+        "engine_cfg": {
+          "intra_op_num_threads": 1,
+          "inter_op_num_threads": 1,
+          "enable_cpu_mem_arena": false,
+          "cpu_ep_cfg": {
+            "arena_extend_strategy": "kSameAsRequested"
+          },
+          "use_cuda": false,
+          "cuda_ep_cfg": {
+            "device_id": 0,
+            "arena_extend_strategy": "kNextPowerOfTwo",
+            "cudnn_conv_algo_search": "EXHAUSTIVE",
+            "do_copy_in_default_stream": true
+          },
+          "use_dml": false,
+          "dml_ep_cfg": null,
+          "use_cann": false,
+          "cann_ep_cfg": {
+            "device_id": 0,
+            "arena_extend_strategy": "kNextPowerOfTwo",
+            "npu_mem_limit": 21474836480,
+            "op_select_impl_mode": "high_performance",
+            "optypelist_for_implmode": "Gelu",
+            "enable_cann_graph": true
+          },
+          "use_coreml": false,
+          "coreml_ep_cfg": {
+            "ModelFormat": "MLProgram",
+            "MLComputeUnits": "ALL",
+            "RequireStaticInputShapes": 0,
+            "EnableOnSubgraphs": 0,
+            "SpecializationStrategy": "FastPrediction",
+            "ProfileComputePlan": 0,
+            "AllowLowPrecisionAccumulationOnGPU": 0,
+            "ModelCacheDirectory": "/tmp/RapidOCR"
+          }
+        },
+        "model_root_dir": "/private/tmp/kandong-rapidocr-models-20260924"
+      },
+      "Cls": {
+        "engine_type": "ONNXRUNTIME",
+        "lang_type": "CH",
+        "model_type": "MOBILE",
+        "ocr_version": "PPOCRV4",
+        "task_type": "CLS",
+        "model_path": "/private/tmp/kandong-rapidocr-models-20260924/ch_ppocr_mobile_v2.0_cls_mobile.onnx",
+        "model_dir": null,
+        "cls_image_shape": [
+          3,
+          48,
+          192
+        ],
+        "cls_batch_num": 6,
+        "cls_thresh": 0.9,
+        "label_list": [
+          "0",
+          "180"
+        ],
+        "engine_cfg": {
+          "intra_op_num_threads": 1,
+          "inter_op_num_threads": 1,
+          "enable_cpu_mem_arena": false,
+          "cpu_ep_cfg": {
+            "arena_extend_strategy": "kSameAsRequested"
+          },
+          "use_cuda": false,
+          "cuda_ep_cfg": {
+            "device_id": 0,
+            "arena_extend_strategy": "kNextPowerOfTwo",
+            "cudnn_conv_algo_search": "EXHAUSTIVE",
+            "do_copy_in_default_stream": true
+          },
+          "use_dml": false,
+          "dml_ep_cfg": null,
+          "use_cann": false,
+          "cann_ep_cfg": {
+            "device_id": 0,
+            "arena_extend_strategy": "kNextPowerOfTwo",
+            "npu_mem_limit": 21474836480,
+            "op_select_impl_mode": "high_performance",
+            "optypelist_for_implmode": "Gelu",
+            "enable_cann_graph": true
+          },
+          "use_coreml": false,
+          "coreml_ep_cfg": {
+            "ModelFormat": "MLProgram",
+            "MLComputeUnits": "ALL",
+            "RequireStaticInputShapes": 0,
+            "EnableOnSubgraphs": 0,
+            "SpecializationStrategy": "FastPrediction",
+            "ProfileComputePlan": 0,
+            "AllowLowPrecisionAccumulationOnGPU": 0,
+            "ModelCacheDirectory": "/tmp/RapidOCR"
+          }
+        },
+        "model_root_dir": "/private/tmp/kandong-rapidocr-models-20260924"
+      },
+      "Rec": {
+        "engine_type": "ONNXRUNTIME",
+        "lang_type": "CH",
+        "model_type": "MOBILE",
+        "ocr_version": "PPOCRV5",
+        "task_type": "REC",
+        "model_path": "/private/tmp/kandong-rapidocr-models-20260924/ch_PP-OCRv5_rec_mobile.onnx",
+        "model_dir": null,
+        "rec_keys_path": null,
+        "rec_img_shape": [
+          3,
+          48,
+          320
+        ],
+        "rec_batch_num": 6,
+        "engine_cfg": {
+          "intra_op_num_threads": 1,
+          "inter_op_num_threads": 1,
+          "enable_cpu_mem_arena": false,
+          "cpu_ep_cfg": {
+            "arena_extend_strategy": "kSameAsRequested"
+          },
+          "use_cuda": false,
+          "cuda_ep_cfg": {
+            "device_id": 0,
+            "arena_extend_strategy": "kNextPowerOfTwo",
+            "cudnn_conv_algo_search": "EXHAUSTIVE",
+            "do_copy_in_default_stream": true
+          },
+          "use_dml": false,
+          "dml_ep_cfg": null,
+          "use_cann": false,
+          "cann_ep_cfg": {
+            "device_id": 0,
+            "arena_extend_strategy": "kNextPowerOfTwo",
+            "npu_mem_limit": 21474836480,
+            "op_select_impl_mode": "high_performance",
+            "optypelist_for_implmode": "Gelu",
+            "enable_cann_graph": true
+          },
+          "use_coreml": false,
+          "coreml_ep_cfg": {
+            "ModelFormat": "MLProgram",
+            "MLComputeUnits": "ALL",
+            "RequireStaticInputShapes": 0,
+            "EnableOnSubgraphs": 0,
+            "SpecializationStrategy": "FastPrediction",
+            "ProfileComputePlan": 0,
+            "AllowLowPrecisionAccumulationOnGPU": 0,
+            "ModelCacheDirectory": "/tmp/RapidOCR"
+          }
+        },
+        "font_path": null,
+        "model_root_dir": "/private/tmp/kandong-rapidocr-models-20260924"
+      }
+    },
+    "latin": {
+      "Global": {
+        "text_score": 0.0,
+        "use_det": true,
+        "use_cls": false,
+        "use_rec": true,
+        "use_preprocess_img": true,
+        "min_side_len": 30,
+        "max_side_len": 2000,
+        "use_vertical_padding": true,
+        "min_height": 30,
+        "width_height_ratio": 8,
+        "return_word_box": false,
+        "return_single_char_box": false,
+        "font_path": null,
+        "log_level": "warning",
+        "model_root_dir": "/private/tmp/kandong-rapidocr-models-20260924"
+      },
+      "EngineConfig": {
+        "onnxruntime": {
+          "intra_op_num_threads": 1,
+          "inter_op_num_threads": 1,
+          "enable_cpu_mem_arena": false,
+          "cpu_ep_cfg": {
+            "arena_extend_strategy": "kSameAsRequested"
+          },
+          "use_cuda": false,
+          "cuda_ep_cfg": {
+            "device_id": 0,
+            "arena_extend_strategy": "kNextPowerOfTwo",
+            "cudnn_conv_algo_search": "EXHAUSTIVE",
+            "do_copy_in_default_stream": true
+          },
+          "use_dml": false,
+          "dml_ep_cfg": null,
+          "use_cann": false,
+          "cann_ep_cfg": {
+            "device_id": 0,
+            "arena_extend_strategy": "kNextPowerOfTwo",
+            "npu_mem_limit": 21474836480,
+            "op_select_impl_mode": "high_performance",
+            "optypelist_for_implmode": "Gelu",
+            "enable_cann_graph": true
+          },
+          "use_coreml": false,
+          "coreml_ep_cfg": {
+            "ModelFormat": "MLProgram",
+            "MLComputeUnits": "ALL",
+            "RequireStaticInputShapes": 0,
+            "EnableOnSubgraphs": 0,
+            "SpecializationStrategy": "FastPrediction",
+            "ProfileComputePlan": 0,
+            "AllowLowPrecisionAccumulationOnGPU": 0,
+            "ModelCacheDirectory": "/tmp/RapidOCR"
+          }
+        },
+        "openvino": {
+          "inference_num_threads": -1,
+          "performance_hint": null,
+          "performance_num_requests": -1,
+          "enable_cpu_pinning": null,
+          "num_streams": -1,
+          "enable_hyper_threading": null,
+          "scheduling_core_type": null
+        },
+        "paddle": {
+          "cpu_math_library_num_threads": -1,
+          "use_npu": false,
+          "npu_ep_cfg": {
+            "device_id": 0,
+            "envs": {
+              "FLAGS_npu_jit_compile": 0,
+              "FLAGS_use_stride_kernel": 0,
+              "FLAGS_allocator_strategy": "auto_growth",
+              "CUSTOM_DEVICE_BLACK_LIST": "pad3d,pad3d_grad,set_value,set_value_with_tensor",
+              "FLAGS_npu_scale_aclnn": "True",
+              "FLAGS_npu_split_aclnn": "True"
+            }
+          },
+          "use_cuda": false,
+          "cuda_ep_cfg": {
+            "device_id": 0,
+            "gpu_mem": 500
+          }
+        },
+        "torch": {
+          "use_cuda": false,
+          "cuda_ep_cfg": {
+            "device_id": 0
+          },
+          "use_npu": false,
+          "npu_ep_cfg": {
+            "device_id": 0
+          },
+          "use_mps": false
+        },
+        "tensorrt": {
+          "device_id": 0,
+          "use_fp16": true,
+          "use_int8": false,
+          "workspace_size": 1073741824,
+          "cache_dir": null,
+          "force_rebuild": false,
+          "det_profile": {
+            "min_shape": [
+              1,
+              3,
+              32,
+              32
+            ],
+            "opt_shape": [
+              1,
+              3,
+              736,
+              736
+            ],
+            "max_shape": [
+              1,
+              3,
+              2048,
+              2048
+            ]
+          },
+          "rec_profile": {
+            "min_shape": [
+              1,
+              3,
+              48,
+              32
+            ],
+            "opt_shape": [
+              6,
+              3,
+              48,
+              320
+            ],
+            "max_shape": [
+              6,
+              3,
+              48,
+              2048
+            ]
+          },
+          "cls_profile": {
+            "min_shape": [
+              1,
+              3,
+              48,
+              32
+            ],
+            "opt_shape": [
+              6,
+              3,
+              48,
+              192
+            ],
+            "max_shape": [
+              6,
+              3,
+              48,
+              192
+            ]
+          }
+        },
+        "mnn": {}
+      },
+      "Det": {
+        "engine_type": "ONNXRUNTIME",
+        "lang_type": "CH",
+        "model_type": "MOBILE",
+        "ocr_version": "PPOCRV5",
+        "task_type": "DET",
+        "model_path": "/private/tmp/kandong-rapidocr-models-20260924/ch_PP-OCRv5_det_mobile.onnx",
+        "model_dir": null,
+        "limit_side_len": 1280,
+        "limit_type": "max",
+        "std": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "thresh": 0.3,
+        "box_thresh": 0.5,
+        "max_candidates": 1000,
+        "unclip_ratio": 1.6,
+        "use_dilation": true,
+        "score_mode": "fast",
+        "engine_cfg": {
+          "intra_op_num_threads": 1,
+          "inter_op_num_threads": 1,
+          "enable_cpu_mem_arena": false,
+          "cpu_ep_cfg": {
+            "arena_extend_strategy": "kSameAsRequested"
+          },
+          "use_cuda": false,
+          "cuda_ep_cfg": {
+            "device_id": 0,
+            "arena_extend_strategy": "kNextPowerOfTwo",
+            "cudnn_conv_algo_search": "EXHAUSTIVE",
+            "do_copy_in_default_stream": true
+          },
+          "use_dml": false,
+          "dml_ep_cfg": null,
+          "use_cann": false,
+          "cann_ep_cfg": {
+            "device_id": 0,
+            "arena_extend_strategy": "kNextPowerOfTwo",
+            "npu_mem_limit": 21474836480,
+            "op_select_impl_mode": "high_performance",
+            "optypelist_for_implmode": "Gelu",
+            "enable_cann_graph": true
+          },
+          "use_coreml": false,
+          "coreml_ep_cfg": {
+            "ModelFormat": "MLProgram",
+            "MLComputeUnits": "ALL",
+            "RequireStaticInputShapes": 0,
+            "EnableOnSubgraphs": 0,
+            "SpecializationStrategy": "FastPrediction",
+            "ProfileComputePlan": 0,
+            "AllowLowPrecisionAccumulationOnGPU": 0,
+            "ModelCacheDirectory": "/tmp/RapidOCR"
+          }
+        },
+        "model_root_dir": "/private/tmp/kandong-rapidocr-models-20260924"
+      },
+      "Cls": {
+        "engine_type": "ONNXRUNTIME",
+        "lang_type": "CH",
+        "model_type": "MOBILE",
+        "ocr_version": "PPOCRV4",
+        "task_type": "CLS",
+        "model_path": "/private/tmp/kandong-rapidocr-models-20260924/ch_ppocr_mobile_v2.0_cls_mobile.onnx",
+        "model_dir": null,
+        "cls_image_shape": [
+          3,
+          48,
+          192
+        ],
+        "cls_batch_num": 6,
+        "cls_thresh": 0.9,
+        "label_list": [
+          "0",
+          "180"
+        ],
+        "engine_cfg": {
+          "intra_op_num_threads": 1,
+          "inter_op_num_threads": 1,
+          "enable_cpu_mem_arena": false,
+          "cpu_ep_cfg": {
+            "arena_extend_strategy": "kSameAsRequested"
+          },
+          "use_cuda": false,
+          "cuda_ep_cfg": {
+            "device_id": 0,
+            "arena_extend_strategy": "kNextPowerOfTwo",
+            "cudnn_conv_algo_search": "EXHAUSTIVE",
+            "do_copy_in_default_stream": true
+          },
+          "use_dml": false,
+          "dml_ep_cfg": null,
+          "use_cann": false,
+          "cann_ep_cfg": {
+            "device_id": 0,
+            "arena_extend_strategy": "kNextPowerOfTwo",
+            "npu_mem_limit": 21474836480,
+            "op_select_impl_mode": "high_performance",
+            "optypelist_for_implmode": "Gelu",
+            "enable_cann_graph": true
+          },
+          "use_coreml": false,
+          "coreml_ep_cfg": {
+            "ModelFormat": "MLProgram",
+            "MLComputeUnits": "ALL",
+            "RequireStaticInputShapes": 0,
+            "EnableOnSubgraphs": 0,
+            "SpecializationStrategy": "FastPrediction",
+            "ProfileComputePlan": 0,
+            "AllowLowPrecisionAccumulationOnGPU": 0,
+            "ModelCacheDirectory": "/tmp/RapidOCR"
+          }
+        },
+        "model_root_dir": "/private/tmp/kandong-rapidocr-models-20260924"
+      },
+      "Rec": {
+        "engine_type": "ONNXRUNTIME",
+        "lang_type": "LATIN",
+        "model_type": "MOBILE",
+        "ocr_version": "PPOCRV5",
+        "task_type": "REC",
+        "model_path": "/private/tmp/kandong-rapidocr-models-20260924/latin_PP-OCRv5_rec_mobile.onnx",
+        "model_dir": null,
+        "rec_keys_path": null,
+        "rec_img_shape": [
+          3,
+          48,
+          320
+        ],
+        "rec_batch_num": 6,
+        "engine_cfg": {
+          "intra_op_num_threads": 1,
+          "inter_op_num_threads": 1,
+          "enable_cpu_mem_arena": false,
+          "cpu_ep_cfg": {
+            "arena_extend_strategy": "kSameAsRequested"
+          },
+          "use_cuda": false,
+          "cuda_ep_cfg": {
+            "device_id": 0,
+            "arena_extend_strategy": "kNextPowerOfTwo",
+            "cudnn_conv_algo_search": "EXHAUSTIVE",
+            "do_copy_in_default_stream": true
+          },
+          "use_dml": false,
+          "dml_ep_cfg": null,
+          "use_cann": false,
+          "cann_ep_cfg": {
+            "device_id": 0,
+            "arena_extend_strategy": "kNextPowerOfTwo",
+            "npu_mem_limit": 21474836480,
+            "op_select_impl_mode": "high_performance",
+            "optypelist_for_implmode": "Gelu",
+            "enable_cann_graph": true
+          },
+          "use_coreml": false,
+          "coreml_ep_cfg": {
+            "ModelFormat": "MLProgram",
+            "MLComputeUnits": "ALL",
+            "RequireStaticInputShapes": 0,
+            "EnableOnSubgraphs": 0,
+            "SpecializationStrategy": "FastPrediction",
+            "ProfileComputePlan": 0,
+            "AllowLowPrecisionAccumulationOnGPU": 0,
+            "ModelCacheDirectory": "/tmp/RapidOCR"
+          }
+        },
+        "font_path": null,
+        "model_root_dir": "/private/tmp/kandong-rapidocr-models-20260924"
+      }
+    }
+  },
+  "textScoreThreshold": 0.0,
+  "inferencePolicy": "every input uses both recognizers and scales; source and language only score results; no best-per-input selection or correction",
+  "normalization": "NFC + Unicode White_Space folding and trim only",
+  "results": [
+    {
+      "inputId": "fr-cancel-24",
+      "fixtureLanguage": "fr",
+      "source": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "d613bfcaa3e8e6663163d2d54c822fcff23a183d2632f3f27e4242d9d1ad2415",
+      "recognizedRaw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "lines": [
+        "Annulation gratuite jusqu'au 15 octobre à 18 h."
+      ],
+      "boxesRaw": [
+        [
+          [
+            30.0,
+            26.0
+          ],
+          [
+            530.0,
+            26.0
+          ],
+          [
+            530.0,
+            58.0
+          ],
+          [
+            30.0,
+            58.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            26.0
+          ],
+          [
+            530.0,
+            26.0
+          ],
+          [
+            530.0,
+            58.0
+          ],
+          [
+            30.0,
+            58.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.97342
+      ],
+      "elapsedMs": 52.5,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-cancel-24",
+      "fixtureLanguage": "fr",
+      "source": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "c1d267125e0c637777924e8244125b3eaa01cd05188af09ad01b44aad950fa7e",
+      "recognizedRaw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "lines": [
+        "Annulation gratuite jusqu'au 15 octobre à 18 h."
+      ],
+      "boxesRaw": [
+        [
+          [
+            59.0,
+            54.0
+          ],
+          [
+            1059.0,
+            54.0
+          ],
+          [
+            1059.0,
+            113.0
+          ],
+          [
+            59.0,
+            113.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.5,
+            27.0
+          ],
+          [
+            529.5,
+            27.0
+          ],
+          [
+            529.5,
+            56.5
+          ],
+          [
+            29.5,
+            56.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.97598
+      ],
+      "elapsedMs": 92.94,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-total-16",
+      "fixtureLanguage": "fr",
+      "source": "Total : 1 234,50 €",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "f74b7ce2d2947770e3c68d42088a6d37949995348ffe1a10ac5aabaf9d643ca4",
+      "recognizedRaw": "Total: 1234,50 €",
+      "lines": [
+        "Total: 1234,50 €"
+      ],
+      "boxesRaw": [
+        [
+          [
+            29.0,
+            27.0
+          ],
+          [
+            158.0,
+            27.0
+          ],
+          [
+            158.0,
+            46.0
+          ],
+          [
+            29.0,
+            46.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.0,
+            27.0
+          ],
+          [
+            158.0,
+            27.0
+          ],
+          [
+            158.0,
+            46.0
+          ],
+          [
+            29.0,
+            46.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.95039
+      ],
+      "elapsedMs": 36.79,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "fr-total-16",
+      "fixtureLanguage": "fr",
+      "source": "Total : 1 234,50 €",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "26c22326dfaacaf956439fd6aadccb462ad4638387a565ca96465a2c40ec5b0a",
+      "recognizedRaw": "Total : 1234,50 €",
+      "lines": [
+        "Total : 1234,50 €"
+      ],
+      "boxesRaw": [
+        [
+          [
+            60.0,
+            56.0
+          ],
+          [
+            314.0,
+            56.0
+          ],
+          [
+            314.0,
+            91.0
+          ],
+          [
+            60.0,
+            91.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            28.0
+          ],
+          [
+            157.0,
+            28.0
+          ],
+          [
+            157.0,
+            45.5
+          ],
+          [
+            30.0,
+            45.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.95059
+      ],
+      "elapsedMs": 75.24,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "fr-total-24",
+      "fixtureLanguage": "fr",
+      "source": "Total : 1 234,50 €",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "5a5131721cc762ea36f4542bcfa7bbe4d4d91ac56f767fc9e107fb61ca31475a",
+      "recognizedRaw": "Total : 1234,50 €",
+      "lines": [
+        "Total : 1234,50 €"
+      ],
+      "boxesRaw": [
+        [
+          [
+            30.0,
+            26.0
+          ],
+          [
+            220.0,
+            26.0
+          ],
+          [
+            220.0,
+            55.0
+          ],
+          [
+            30.0,
+            55.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            26.0
+          ],
+          [
+            220.0,
+            26.0
+          ],
+          [
+            220.0,
+            55.0
+          ],
+          [
+            30.0,
+            55.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.94371
+      ],
+      "elapsedMs": 28.93,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "fr-total-24",
+      "fixtureLanguage": "fr",
+      "source": "Total : 1 234,50 €",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "d4a481d5cf59b049b9256694fce38b2d2b2071e3f400dff478ec891cc9465d6b",
+      "recognizedRaw": "Total : 1234,50 €",
+      "lines": [
+        "Total : 1234,50 €"
+      ],
+      "boxesRaw": [
+        [
+          [
+            60.0,
+            53.0
+          ],
+          [
+            437.0,
+            55.0
+          ],
+          [
+            437.0,
+            107.0
+          ],
+          [
+            60.0,
+            105.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            26.5
+          ],
+          [
+            218.5,
+            27.5
+          ],
+          [
+            218.5,
+            53.5
+          ],
+          [
+            30.0,
+            52.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.96542
+      ],
+      "elapsedMs": 69.58,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "fr-total-32",
+      "fixtureLanguage": "fr",
+      "source": "Total : 1 234,50 €",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "9210f42de196b2397ec74f2dfbc17b46a686f3be70b0a2d43530624e69a19bcf",
+      "recognizedRaw": "Total : 1234,50 €",
+      "lines": [
+        "Total : 1234,50 €"
+      ],
+      "boxesRaw": [
+        [
+          [
+            28.0,
+            27.0
+          ],
+          [
+            282.0,
+            27.0
+          ],
+          [
+            282.0,
+            62.0
+          ],
+          [
+            28.0,
+            62.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            28.0,
+            27.0
+          ],
+          [
+            282.0,
+            27.0
+          ],
+          [
+            282.0,
+            62.0
+          ],
+          [
+            28.0,
+            62.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.94898
+      ],
+      "elapsedMs": 35.27,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "fr-total-32",
+      "fixtureLanguage": "fr",
+      "source": "Total : 1 234,50 €",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "864a5bb5daae87ce0a3508f75f444a4bc30cca22f87815977c37e40cb917ea71",
+      "recognizedRaw": "Total : 1234,50 €",
+      "lines": [
+        "Total : 1234,50 €"
+      ],
+      "boxesRaw": [
+        [
+          [
+            58.0,
+            53.0
+          ],
+          [
+            562.0,
+            53.0
+          ],
+          [
+            562.0,
+            123.0
+          ],
+          [
+            58.0,
+            123.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.0,
+            26.5
+          ],
+          [
+            281.0,
+            26.5
+          ],
+          [
+            281.0,
+            61.5
+          ],
+          [
+            29.0,
+            61.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.96369
+      ],
+      "elapsedMs": 75.92,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "fr-nonrefundable-16",
+      "fixtureLanguage": "fr",
+      "source": "Ce billet n'est ni échangeable ni remboursable.",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "f828ff322b1ae2c397cfe000f1397d0a7c724459104a81c21b257ba23da4b1b1",
+      "recognizedRaw": "Ce bilet n'est ni éechangeable ni remboursable.",
+      "lines": [
+        "Ce bilet n'est ni éechangeable ni remboursable."
+      ],
+      "boxesRaw": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            366.0,
+            27.0
+          ],
+          [
+            366.0,
+            51.0
+          ],
+          [
+            30.0,
+            51.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            366.0,
+            27.0
+          ],
+          [
+            366.0,
+            51.0
+          ],
+          [
+            30.0,
+            51.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.96894
+      ],
+      "elapsedMs": 45.21,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "fr-nonrefundable-16",
+      "fixtureLanguage": "fr",
+      "source": "Ce billet n'est ni échangeable ni remboursable.",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "9985a578b4188dffd534ec3ab308a787f3500a06bb3143e8ec3a8ad63f8b1c98",
+      "recognizedRaw": "Ce billet n'est ni échangeable ni remboursable.",
+      "lines": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "boxesRaw": [
+        [
+          [
+            61.0,
+            59.0
+          ],
+          [
+            733.0,
+            59.0
+          ],
+          [
+            733.0,
+            97.0
+          ],
+          [
+            61.0,
+            97.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.5,
+            29.5
+          ],
+          [
+            366.5,
+            29.5
+          ],
+          [
+            366.5,
+            48.5
+          ],
+          [
+            30.5,
+            48.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.99309
+      ],
+      "elapsedMs": 89.43,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-access-24",
+      "fixtureLanguage": "fr",
+      "source": "Accès sans marche, ascenseur indisponible.",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "5da4714a1a077306061ff5bed2b02eb59254441e11702c02c8250cf268445a65",
+      "recognizedRaw": "Accès sans marche, ascenseur indisponible.",
+      "lines": [
+        "Accès sans marche, ascenseur indisponible."
+      ],
+      "boxesRaw": [
+        [
+          [
+            30.0,
+            26.0
+          ],
+          [
+            507.0,
+            26.0
+          ],
+          [
+            507.0,
+            58.0
+          ],
+          [
+            30.0,
+            58.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            26.0
+          ],
+          [
+            507.0,
+            26.0
+          ],
+          [
+            507.0,
+            58.0
+          ],
+          [
+            30.0,
+            58.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99305
+      ],
+      "elapsedMs": 46.33,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-access-24",
+      "fixtureLanguage": "fr",
+      "source": "Accès sans marche, ascenseur indisponible.",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "08e1c50b3c00d1e0a44900f29f4615a92d1a9c3b145036d7c49947ce29c96187",
+      "recognizedRaw": "Accès sans marche, ascenseur indisponible.",
+      "lines": [
+        "Accès sans marche, ascenseur indisponible."
+      ],
+      "boxesRaw": [
+        [
+          [
+            57.0,
+            52.0
+          ],
+          [
+            1017.0,
+            54.0
+          ],
+          [
+            1017.0,
+            116.0
+          ],
+          [
+            57.0,
+            114.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            28.5,
+            26.0
+          ],
+          [
+            508.5,
+            27.0
+          ],
+          [
+            508.5,
+            58.0
+          ],
+          [
+            28.5,
+            57.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99077
+      ],
+      "elapsedMs": 85.45,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-luggage-32",
+      "fixtureLanguage": "fr",
+      "source": "Un bagage de 8 kg maximum est inclus.",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "a0685671046d9cf94a3af3d7cb5e3fd7927b3a71c2696dcbcc8c198f73f70e72",
+      "recognizedRaw": "Un bagage de 8 kg maximum est inclus.",
+      "lines": [
+        "Un bagage de 8 kg maximum est inclus."
+      ],
+      "boxesRaw": [
+        [
+          [
+            31.0,
+            25.0
+          ],
+          [
+            604.0,
+            25.0
+          ],
+          [
+            604.0,
+            63.0
+          ],
+          [
+            31.0,
+            63.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            31.0,
+            25.0
+          ],
+          [
+            604.0,
+            25.0
+          ],
+          [
+            604.0,
+            63.0
+          ],
+          [
+            31.0,
+            63.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.97317
+      ],
+      "elapsedMs": 49.95,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-luggage-32",
+      "fixtureLanguage": "fr",
+      "source": "Un bagage de 8 kg maximum est inclus.",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "6be6a00845d560480b6ce73e08af5794c7cb93b8000ea05abb187504b4fea4aa",
+      "recognizedRaw": "Un bagage de 8 kg maximum est inclus.",
+      "lines": [
+        "Un bagage de 8 kg maximum est inclus."
+      ],
+      "boxesRaw": [
+        [
+          [
+            56.0,
+            47.0
+          ],
+          [
+            1212.0,
+            49.0
+          ],
+          [
+            1212.0,
+            135.0
+          ],
+          [
+            56.0,
+            133.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            28.0,
+            23.5
+          ],
+          [
+            606.0,
+            24.5
+          ],
+          [
+            606.0,
+            67.5
+          ],
+          [
+            28.0,
+            66.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.98694
+      ],
+      "elapsedMs": 95.14,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "en-quality-16",
+      "fixtureLanguage": "en",
+      "source": "The total is 39.90 €, tax not included.",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "14c6de2eaa55df85eb4e1618d5a971c3a01d860591cb884939facce93ce92d0e",
+      "recognizedRaw": "The total is 39.90 €, tax not included.",
+      "lines": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "boxesRaw": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            295.0,
+            27.0
+          ],
+          [
+            295.0,
+            48.0
+          ],
+          [
+            30.0,
+            48.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            295.0,
+            27.0
+          ],
+          [
+            295.0,
+            48.0
+          ],
+          [
+            30.0,
+            48.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.96971
+      ],
+      "elapsedMs": 40.6,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "en-quality-16",
+      "fixtureLanguage": "en",
+      "source": "The total is 39.90 €, tax not included.",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "337f10d89ab199d2c681c42446c3a9cc2b9be1f106bfd60c75cb1dfa50bce998",
+      "recognizedRaw": "The total is 39.90 €, tax not included.",
+      "lines": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "boxesRaw": [
+        [
+          [
+            61.0,
+            56.0
+          ],
+          [
+            591.0,
+            56.0
+          ],
+          [
+            591.0,
+            93.0
+          ],
+          [
+            61.0,
+            93.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.5,
+            28.0
+          ],
+          [
+            295.5,
+            28.0
+          ],
+          [
+            295.5,
+            46.5
+          ],
+          [
+            30.5,
+            46.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.99342
+      ],
+      "elapsedMs": 82.88,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "en-quality-32",
+      "fixtureLanguage": "en",
+      "source": "The total is 39.90 €, tax not included.",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "aa94285e724b2056520b43daaef47a8ab15c225fb02b7cdad2e784bc8ebcf0e3",
+      "recognizedRaw": "The total is 39.90 €, tax not included.",
+      "lines": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "boxesRaw": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            557.0,
+            27.0
+          ],
+          [
+            557.0,
+            61.0
+          ],
+          [
+            30.0,
+            61.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            557.0,
+            27.0
+          ],
+          [
+            557.0,
+            61.0
+          ],
+          [
+            30.0,
+            61.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99293
+      ],
+      "elapsedMs": 52.21,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "en-quality-32",
+      "fixtureLanguage": "en",
+      "source": "The total is 39.90 €, tax not included.",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "2730a3da9b19d44b3169f8ff2c06adee4313e8d687b420ab4e6fbdc89c06402b",
+      "recognizedRaw": "The total is 39.90 €, tax not included.",
+      "lines": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "boxesRaw": [
+        [
+          [
+            58.0,
+            51.0
+          ],
+          [
+            1115.0,
+            53.0
+          ],
+          [
+            1115.0,
+            122.0
+          ],
+          [
+            58.0,
+            120.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.0,
+            25.5
+          ],
+          [
+            557.5,
+            26.5
+          ],
+          [
+            557.5,
+            61.0
+          ],
+          [
+            29.0,
+            60.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.98575
+      ],
+      "elapsedMs": 93.81,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-quality-16",
+      "fixtureLanguage": "fr",
+      "source": "Ne payez pas maintenant. Échéance : 18:00.",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "c85c67a853799a774f0dec859c7d7e069be8c96fbf0637fe04f434399a8e3c59",
+      "recognizedRaw": "Ne payez pas maintenant. Échéance : 18:00.",
+      "lines": [
+        "Ne payez pas maintenant. Échéance : 18:00."
+      ],
+      "boxesRaw": [
+        [
+          [
+            28.0,
+            28.0
+          ],
+          [
+            353.0,
+            27.0
+          ],
+          [
+            353.0,
+            53.0
+          ],
+          [
+            28.0,
+            54.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            28.0,
+            28.0
+          ],
+          [
+            353.0,
+            27.0
+          ],
+          [
+            353.0,
+            53.0
+          ],
+          [
+            28.0,
+            54.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.96717
+      ],
+      "elapsedMs": 41.07,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-quality-16",
+      "fixtureLanguage": "fr",
+      "source": "Ne payez pas maintenant. Échéance : 18:00.",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "0c61d14f737499a00e8efdac162a49846a62b15023d6f6a3ce22a7ab2d94ff6a",
+      "recognizedRaw": "Ne payez pas maintenant. Échéance : 18:00.",
+      "lines": [
+        "Ne payez pas maintenant. Échéance : 18:00."
+      ],
+      "boxesRaw": [
+        [
+          [
+            57.0,
+            60.0
+          ],
+          [
+            709.0,
+            57.0
+          ],
+          [
+            709.0,
+            103.0
+          ],
+          [
+            57.0,
+            106.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            28.5,
+            30.0
+          ],
+          [
+            354.5,
+            28.5
+          ],
+          [
+            354.5,
+            51.5
+          ],
+          [
+            28.5,
+            53.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.96876
+      ],
+      "elapsedMs": 85.4,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-quality-32",
+      "fixtureLanguage": "fr",
+      "source": "Ne payez pas maintenant. Échéance : 18:00.",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "a78c810fa563904cfa41ee5babccc854685d61f908837bee3d6532b2c1b244f6",
+      "recognizedRaw": "Ne payez pas maintenant. Échéance :\n18:00.",
+      "lines": [
+        "Ne payez pas maintenant. Échéance :",
+        "18:00."
+      ],
+      "boxesRaw": [
+        [
+          [
+            27.0,
+            31.0
+          ],
+          [
+            578.0,
+            29.0
+          ],
+          [
+            578.0,
+            68.0
+          ],
+          [
+            27.0,
+            70.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            74.0
+          ],
+          [
+            125.0,
+            74.0
+          ],
+          [
+            125.0,
+            109.0
+          ],
+          [
+            29.0,
+            109.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            27.0,
+            31.0
+          ],
+          [
+            578.0,
+            29.0
+          ],
+          [
+            578.0,
+            68.0
+          ],
+          [
+            27.0,
+            70.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            74.0
+          ],
+          [
+            125.0,
+            74.0
+          ],
+          [
+            125.0,
+            109.0
+          ],
+          [
+            29.0,
+            109.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99389,
+        0.9794
+      ],
+      "elapsedMs": 130.79,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-quality-32",
+      "fixtureLanguage": "fr",
+      "source": "Ne payez pas maintenant. Échéance : 18:00.",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "6e5d7b6a355ec3f36a6ebbbf01622533507fa9b29288f35145d33bd84c669ddf",
+      "recognizedRaw": "Ne payez pas maintenant. Échéance :\n18:00.",
+      "lines": [
+        "Ne payez pas maintenant. Échéance :",
+        "18:00."
+      ],
+      "boxesRaw": [
+        [
+          [
+            53.0,
+            58.0
+          ],
+          [
+            1161.0,
+            55.0
+          ],
+          [
+            1161.0,
+            141.0
+          ],
+          [
+            53.0,
+            144.0
+          ]
+        ],
+        [
+          [
+            62.0,
+            151.0
+          ],
+          [
+            250.0,
+            151.0
+          ],
+          [
+            250.0,
+            217.0
+          ],
+          [
+            62.0,
+            217.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            26.5,
+            29.0
+          ],
+          [
+            580.5,
+            27.5
+          ],
+          [
+            580.5,
+            70.5
+          ],
+          [
+            26.5,
+            72.0
+          ]
+        ],
+        [
+          [
+            31.0,
+            75.5
+          ],
+          [
+            125.0,
+            75.5
+          ],
+          [
+            125.0,
+            108.5
+          ],
+          [
+            31.0,
+            108.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.98233,
+        0.9809
+      ],
+      "elapsedMs": 184.8,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "zh-hans-quality-16",
+      "fixtureLanguage": "zh-Hans",
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "3297c75597728431e21c6d2cb58636f845adec796a830734e36b7e914a50ca6b",
+      "recognizedRaw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "lines": [
+        "总计1234.50元，不含税。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "boxesRaw": [
+        [
+          [
+            29.0,
+            30.0
+          ],
+          [
+            212.0,
+            30.0
+          ],
+          [
+            212.0,
+            51.0
+          ],
+          [
+            29.0,
+            51.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            56.0
+          ],
+          [
+            228.0,
+            56.0
+          ],
+          [
+            228.0,
+            77.0
+          ],
+          [
+            30.0,
+            77.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.0,
+            30.0
+          ],
+          [
+            212.0,
+            30.0
+          ],
+          [
+            212.0,
+            51.0
+          ],
+          [
+            29.0,
+            51.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            56.0
+          ],
+          [
+            228.0,
+            56.0
+          ],
+          [
+            228.0,
+            77.0
+          ],
+          [
+            30.0,
+            77.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99913,
+        0.99895
+      ],
+      "elapsedMs": 88.97,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "zh-hans-quality-16",
+      "fixtureLanguage": "zh-Hans",
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "5f6e960dc9f1b165969695ba5efc0cd91166123b0d9eaf6516fcd150080d9d50",
+      "recognizedRaw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "lines": [
+        "总计1234.50元，不含税。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "boxesRaw": [
+        [
+          [
+            64.0,
+            60.0
+          ],
+          [
+            420.0,
+            60.0
+          ],
+          [
+            420.0,
+            99.0
+          ],
+          [
+            64.0,
+            99.0
+          ]
+        ],
+        [
+          [
+            62.0,
+            109.0
+          ],
+          [
+            451.0,
+            113.0
+          ],
+          [
+            451.0,
+            155.0
+          ],
+          [
+            62.0,
+            152.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            32.0,
+            30.0
+          ],
+          [
+            210.0,
+            30.0
+          ],
+          [
+            210.0,
+            49.5
+          ],
+          [
+            32.0,
+            49.5
+          ]
+        ],
+        [
+          [
+            31.0,
+            54.5
+          ],
+          [
+            225.5,
+            56.5
+          ],
+          [
+            225.5,
+            77.5
+          ],
+          [
+            31.0,
+            76.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99899,
+        0.99803
+      ],
+      "elapsedMs": 134.88,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "zh-hans-quality-32",
+      "fixtureLanguage": "zh-Hans",
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "51f2c73863b100ad84b19d5a7278ad9f7ca1aaecac5d7bf2b9c58101f7169983",
+      "recognizedRaw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "lines": [
+        "总计1234.50元，不含税。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "boxesRaw": [
+        [
+          [
+            30.0,
+            26.0
+          ],
+          [
+            389.0,
+            28.0
+          ],
+          [
+            389.0,
+            68.0
+          ],
+          [
+            30.0,
+            66.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            75.0
+          ],
+          [
+            419.0,
+            77.0
+          ],
+          [
+            419.0,
+            116.0
+          ],
+          [
+            30.0,
+            114.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            26.0
+          ],
+          [
+            389.0,
+            28.0
+          ],
+          [
+            389.0,
+            68.0
+          ],
+          [
+            30.0,
+            66.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            75.0
+          ],
+          [
+            419.0,
+            77.0
+          ],
+          [
+            419.0,
+            116.0
+          ],
+          [
+            30.0,
+            114.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99908,
+        0.99923
+      ],
+      "elapsedMs": 98.1,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "zh-hans-quality-32",
+      "fixtureLanguage": "zh-Hans",
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "9d2de832037c2348664487505ad8288236ed1a2de7a0c38a88b0efba9b40ce91",
+      "recognizedRaw": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "lines": [
+        "总计1234.50元，不含税。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "boxesRaw": [
+        [
+          [
+            59.0,
+            51.0
+          ],
+          [
+            777.0,
+            54.0
+          ],
+          [
+            777.0,
+            136.0
+          ],
+          [
+            59.0,
+            133.0
+          ]
+        ],
+        [
+          [
+            57.0,
+            148.0
+          ],
+          [
+            836.0,
+            152.0
+          ],
+          [
+            836.0,
+            232.0
+          ],
+          [
+            57.0,
+            228.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.5,
+            25.5
+          ],
+          [
+            388.5,
+            27.0
+          ],
+          [
+            388.5,
+            68.0
+          ],
+          [
+            29.5,
+            66.5
+          ]
+        ],
+        [
+          [
+            28.5,
+            74.0
+          ],
+          [
+            418.0,
+            76.0
+          ],
+          [
+            418.0,
+            116.0
+          ],
+          [
+            28.5,
+            114.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99929,
+        0.99904
+      ],
+      "elapsedMs": 166.8,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "zh-hant-quality-16",
+      "fixtureLanguage": "zh-Hant",
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "d635a5a6dfa0d907b212bafb574622a7b682613d6effe0facdd6f347cd93ccf7",
+      "recognizedRaw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "lines": [
+        "總計1234.50元，不含稅。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "boxesRaw": [
+        [
+          [
+            29.0,
+            27.0
+          ],
+          [
+            212.0,
+            29.0
+          ],
+          [
+            212.0,
+            51.0
+          ],
+          [
+            29.0,
+            49.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            56.0
+          ],
+          [
+            228.0,
+            56.0
+          ],
+          [
+            228.0,
+            77.0
+          ],
+          [
+            30.0,
+            77.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.0,
+            27.0
+          ],
+          [
+            212.0,
+            29.0
+          ],
+          [
+            212.0,
+            51.0
+          ],
+          [
+            29.0,
+            49.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            56.0
+          ],
+          [
+            228.0,
+            56.0
+          ],
+          [
+            228.0,
+            77.0
+          ],
+          [
+            30.0,
+            77.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.97585,
+        0.99895
+      ],
+      "elapsedMs": 88.13,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "zh-hant-quality-16",
+      "fixtureLanguage": "zh-Hant",
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "c5ecf16dc2a911db6dcc736e108cd87b2a97f468bbe3f938e4002a18613de6b6",
+      "recognizedRaw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "lines": [
+        "總計1234.50元，不含稅。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "boxesRaw": [
+        [
+          [
+            63.0,
+            60.0
+          ],
+          [
+            420.0,
+            60.0
+          ],
+          [
+            420.0,
+            99.0
+          ],
+          [
+            63.0,
+            99.0
+          ]
+        ],
+        [
+          [
+            62.0,
+            112.0
+          ],
+          [
+            451.0,
+            114.0
+          ],
+          [
+            451.0,
+            155.0
+          ],
+          [
+            62.0,
+            153.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            31.5,
+            30.0
+          ],
+          [
+            210.0,
+            30.0
+          ],
+          [
+            210.0,
+            49.5
+          ],
+          [
+            31.5,
+            49.5
+          ]
+        ],
+        [
+          [
+            31.0,
+            56.0
+          ],
+          [
+            225.5,
+            57.0
+          ],
+          [
+            225.5,
+            77.5
+          ],
+          [
+            31.0,
+            76.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.98939,
+        0.99773
+      ],
+      "elapsedMs": 131.63,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "zh-hant-quality-32",
+      "fixtureLanguage": "zh-Hant",
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "24b7418c31516032def1cbb08f6b29d616e9a02baa7eac4d75ab901e3a81c1f9",
+      "recognizedRaw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "lines": [
+        "總計1234.50元，不含稅。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "boxesRaw": [
+        [
+          [
+            29.0,
+            26.0
+          ],
+          [
+            389.0,
+            28.0
+          ],
+          [
+            389.0,
+            68.0
+          ],
+          [
+            29.0,
+            66.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            75.0
+          ],
+          [
+            418.0,
+            77.0
+          ],
+          [
+            418.0,
+            116.0
+          ],
+          [
+            30.0,
+            114.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.0,
+            26.0
+          ],
+          [
+            389.0,
+            28.0
+          ],
+          [
+            389.0,
+            68.0
+          ],
+          [
+            29.0,
+            66.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            75.0
+          ],
+          [
+            418.0,
+            77.0
+          ],
+          [
+            418.0,
+            116.0
+          ],
+          [
+            30.0,
+            114.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99855,
+        0.99926
+      ],
+      "elapsedMs": 106.4,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "zh-hant-quality-32",
+      "fixtureLanguage": "zh-Hant",
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "666dc0837370cb537261ac7c7ba19edd53adfe0742a29f54f2cea044b26bdacd",
+      "recognizedRaw": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "lines": [
+        "總計1234.50元，不含稅。",
+        "行李最多8公斤，不可退款。"
+      ],
+      "boxesRaw": [
+        [
+          [
+            56.0,
+            52.0
+          ],
+          [
+            775.0,
+            52.0
+          ],
+          [
+            775.0,
+            138.0
+          ],
+          [
+            56.0,
+            138.0
+          ]
+        ],
+        [
+          [
+            57.0,
+            148.0
+          ],
+          [
+            836.0,
+            152.0
+          ],
+          [
+            836.0,
+            232.0
+          ],
+          [
+            57.0,
+            228.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            28.0,
+            26.0
+          ],
+          [
+            387.5,
+            26.0
+          ],
+          [
+            387.5,
+            69.0
+          ],
+          [
+            28.0,
+            69.0
+          ]
+        ],
+        [
+          [
+            28.5,
+            74.0
+          ],
+          [
+            418.0,
+            76.0
+          ],
+          [
+            418.0,
+            116.0
+          ],
+          [
+            28.5,
+            114.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99793,
+        0.99904
+      ],
+      "elapsedMs": 159.93,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "mixed-quality-16",
+      "fixtureLanguage": "mixed",
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "ff45e417cc83f1b2e9d1fe958d579163024dd600141a49e40abe649007d2b5c7",
+      "recognizedRaw": "房间A/Room A\nChambre A : 120 € / night\n不含税/不含税",
+      "lines": [
+        "房间A/Room A",
+        "Chambre A : 120 € / night",
+        "不含税/不含税"
+      ],
+      "boxesRaw": [
+        [
+          [
+            29.0,
+            29.0
+          ],
+          [
+            150.0,
+            29.0
+          ],
+          [
+            150.0,
+            50.0
+          ],
+          [
+            29.0,
+            50.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            54.0
+          ],
+          [
+            219.0,
+            54.0
+          ],
+          [
+            219.0,
+            75.0
+          ],
+          [
+            29.0,
+            75.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            83.0
+          ],
+          [
+            145.0,
+            83.0
+          ],
+          [
+            145.0,
+            105.0
+          ],
+          [
+            29.0,
+            105.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.0,
+            29.0
+          ],
+          [
+            150.0,
+            29.0
+          ],
+          [
+            150.0,
+            50.0
+          ],
+          [
+            29.0,
+            50.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            54.0
+          ],
+          [
+            219.0,
+            54.0
+          ],
+          [
+            219.0,
+            75.0
+          ],
+          [
+            29.0,
+            75.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            83.0
+          ],
+          [
+            145.0,
+            83.0
+          ],
+          [
+            145.0,
+            105.0
+          ],
+          [
+            29.0,
+            105.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.97501,
+        0.93267,
+        0.89441
+      ],
+      "elapsedMs": 126.33,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "mixed-quality-16",
+      "fixtureLanguage": "mixed",
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "180bde248bb429d8ef4a5490f547cb495bc6231c6d1dc91b9d44840d2d61c2a8",
+      "recognizedRaw": "房间A/Room A\nChambre A : 120 € / night\n不含税/不含税",
+      "lines": [
+        "房间A/Room A",
+        "Chambre A : 120 € / night",
+        "不含税/不含税"
+      ],
+      "boxesRaw": [
+        [
+          [
+            62.0,
+            56.0
+          ],
+          [
+            297.0,
+            60.0
+          ],
+          [
+            297.0,
+            98.0
+          ],
+          [
+            62.0,
+            94.0
+          ]
+        ],
+        [
+          [
+            60.0,
+            109.0
+          ],
+          [
+            435.0,
+            111.0
+          ],
+          [
+            435.0,
+            150.0
+          ],
+          [
+            60.0,
+            148.0
+          ]
+        ],
+        [
+          [
+            60.0,
+            166.0
+          ],
+          [
+            287.0,
+            166.0
+          ],
+          [
+            287.0,
+            209.0
+          ],
+          [
+            60.0,
+            209.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            31.0,
+            28.0
+          ],
+          [
+            148.5,
+            30.0
+          ],
+          [
+            148.5,
+            49.0
+          ],
+          [
+            31.0,
+            47.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            54.5
+          ],
+          [
+            217.5,
+            55.5
+          ],
+          [
+            217.5,
+            75.0
+          ],
+          [
+            30.0,
+            74.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            83.0
+          ],
+          [
+            143.5,
+            83.0
+          ],
+          [
+            143.5,
+            104.5
+          ],
+          [
+            30.0,
+            104.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.95686,
+        0.95841,
+        0.90501
+      ],
+      "elapsedMs": 187.99,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "mixed-quality-32",
+      "fixtureLanguage": "mixed",
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "5c8a7787909f55ca2e70a76bc61897c5d520a8279dfdf01a0caa654c83d0d52b",
+      "recognizedRaw": "房间A/Room A\nChambre A : 120 € / night\n不含税／不含稅",
+      "lines": [
+        "房间A/Room A",
+        "Chambre A : 120 € / night",
+        "不含税／不含稅"
+      ],
+      "boxesRaw": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            263.0,
+            29.0
+          ],
+          [
+            263.0,
+            66.0
+          ],
+          [
+            30.0,
+            64.0
+          ]
+        ],
+        [
+          [
+            31.0,
+            75.0
+          ],
+          [
+            400.0,
+            75.0
+          ],
+          [
+            400.0,
+            110.0
+          ],
+          [
+            31.0,
+            110.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            121.0
+          ],
+          [
+            255.0,
+            124.0
+          ],
+          [
+            255.0,
+            164.0
+          ],
+          [
+            29.0,
+            161.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            263.0,
+            29.0
+          ],
+          [
+            263.0,
+            66.0
+          ],
+          [
+            30.0,
+            64.0
+          ]
+        ],
+        [
+          [
+            31.0,
+            75.0
+          ],
+          [
+            400.0,
+            75.0
+          ],
+          [
+            400.0,
+            110.0
+          ],
+          [
+            31.0,
+            110.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            121.0
+          ],
+          [
+            255.0,
+            124.0
+          ],
+          [
+            255.0,
+            164.0
+          ],
+          [
+            29.0,
+            161.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.94342,
+        0.92189,
+        0.92892
+      ],
+      "elapsedMs": 144.55,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "mixed-quality-32",
+      "fixtureLanguage": "mixed",
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "ec87458332edc44915ed4436976ad3f5b9a0289cff7dddede6d7b8540c9e1dc8",
+      "recognizedRaw": "房间A/Room A\nChambre A : 120 € / night\n不含税／不含稅",
+      "lines": [
+        "房间A/Room A",
+        "Chambre A : 120 € / night",
+        "不含税／不含稅"
+      ],
+      "boxesRaw": [
+        [
+          [
+            59.0,
+            55.0
+          ],
+          [
+            525.0,
+            55.0
+          ],
+          [
+            525.0,
+            129.0
+          ],
+          [
+            59.0,
+            129.0
+          ]
+        ],
+        [
+          [
+            58.0,
+            139.0
+          ],
+          [
+            804.0,
+            149.0
+          ],
+          [
+            803.0,
+            229.0
+          ],
+          [
+            57.0,
+            219.0
+          ]
+        ],
+        [
+          [
+            59.0,
+            247.0
+          ],
+          [
+            509.0,
+            249.0
+          ],
+          [
+            509.0,
+            324.0
+          ],
+          [
+            59.0,
+            322.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.5,
+            27.5
+          ],
+          [
+            262.5,
+            27.5
+          ],
+          [
+            262.5,
+            64.5
+          ],
+          [
+            29.5,
+            64.5
+          ]
+        ],
+        [
+          [
+            29.0,
+            69.5
+          ],
+          [
+            402.0,
+            74.5
+          ],
+          [
+            401.5,
+            114.5
+          ],
+          [
+            28.5,
+            109.5
+          ]
+        ],
+        [
+          [
+            29.5,
+            123.5
+          ],
+          [
+            254.5,
+            124.5
+          ],
+          [
+            254.5,
+            162.0
+          ],
+          [
+            29.5,
+            161.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.93398,
+        0.94425,
+        0.92494
+      ],
+      "elapsedMs": 223.14,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "blank-negative-24",
+      "fixtureLanguage": "none",
+      "source": "",
+      "recognizer": "ch",
+      "scale": 1,
+      "inputPixelSha256": "cb5d15f46063e0e36d09f0cc85ea65f95918fd5c9bd1aa701c212a7d78c3b728",
+      "recognizedRaw": "",
+      "lines": [],
+      "boxesRaw": [],
+      "boxesUnscaled": [],
+      "scores": [],
+      "elapsedMs": 14.8,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "blank-negative-24",
+      "fixtureLanguage": "none",
+      "source": "",
+      "recognizer": "ch",
+      "scale": 2,
+      "inputPixelSha256": "b3496b49cd5dde11c69c1ccfde173fb0e848e8faee693624e1515fe39de88279",
+      "recognizedRaw": "",
+      "lines": [],
+      "boxesRaw": [],
+      "boxesUnscaled": [],
+      "scores": [],
+      "elapsedMs": 53.08,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-cancel-24",
+      "fixtureLanguage": "fr",
+      "source": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "d613bfcaa3e8e6663163d2d54c822fcff23a183d2632f3f27e4242d9d1ad2415",
+      "recognizedRaw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "lines": [
+        "Annulation gratuite jusqu'au 15 octobre à 18 h."
+      ],
+      "boxesRaw": [
+        [
+          [
+            30.0,
+            26.0
+          ],
+          [
+            530.0,
+            26.0
+          ],
+          [
+            530.0,
+            58.0
+          ],
+          [
+            30.0,
+            58.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            26.0
+          ],
+          [
+            530.0,
+            26.0
+          ],
+          [
+            530.0,
+            58.0
+          ],
+          [
+            30.0,
+            58.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.98395
+      ],
+      "elapsedMs": 43.91,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-cancel-24",
+      "fixtureLanguage": "fr",
+      "source": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "c1d267125e0c637777924e8244125b3eaa01cd05188af09ad01b44aad950fa7e",
+      "recognizedRaw": "Annulation gratuite jusqu'au 15 octobre à 18 h.",
+      "lines": [
+        "Annulation gratuite jusqu'au 15 octobre à 18 h."
+      ],
+      "boxesRaw": [
+        [
+          [
+            59.0,
+            54.0
+          ],
+          [
+            1059.0,
+            54.0
+          ],
+          [
+            1059.0,
+            113.0
+          ],
+          [
+            59.0,
+            113.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.5,
+            27.0
+          ],
+          [
+            529.5,
+            27.0
+          ],
+          [
+            529.5,
+            56.5
+          ],
+          [
+            29.5,
+            56.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.98702
+      ],
+      "elapsedMs": 84.65,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-total-16",
+      "fixtureLanguage": "fr",
+      "source": "Total : 1 234,50 €",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "f74b7ce2d2947770e3c68d42088a6d37949995348ffe1a10ac5aabaf9d643ca4",
+      "recognizedRaw": "Total : 1234,50 €",
+      "lines": [
+        "Total : 1234,50 €"
+      ],
+      "boxesRaw": [
+        [
+          [
+            29.0,
+            27.0
+          ],
+          [
+            158.0,
+            27.0
+          ],
+          [
+            158.0,
+            46.0
+          ],
+          [
+            29.0,
+            46.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.0,
+            27.0
+          ],
+          [
+            158.0,
+            27.0
+          ],
+          [
+            158.0,
+            46.0
+          ],
+          [
+            29.0,
+            46.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99907
+      ],
+      "elapsedMs": 27.04,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "fr-total-16",
+      "fixtureLanguage": "fr",
+      "source": "Total : 1 234,50 €",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "26c22326dfaacaf956439fd6aadccb462ad4638387a565ca96465a2c40ec5b0a",
+      "recognizedRaw": "Total : 1234,50 €",
+      "lines": [
+        "Total : 1234,50 €"
+      ],
+      "boxesRaw": [
+        [
+          [
+            60.0,
+            56.0
+          ],
+          [
+            314.0,
+            56.0
+          ],
+          [
+            314.0,
+            91.0
+          ],
+          [
+            60.0,
+            91.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            28.0
+          ],
+          [
+            157.0,
+            28.0
+          ],
+          [
+            157.0,
+            45.5
+          ],
+          [
+            30.0,
+            45.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.99816
+      ],
+      "elapsedMs": 67.11,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "fr-total-24",
+      "fixtureLanguage": "fr",
+      "source": "Total : 1 234,50 €",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "5a5131721cc762ea36f4542bcfa7bbe4d4d91ac56f767fc9e107fb61ca31475a",
+      "recognizedRaw": "Total : 1 234,50 €",
+      "lines": [
+        "Total : 1 234,50 €"
+      ],
+      "boxesRaw": [
+        [
+          [
+            30.0,
+            26.0
+          ],
+          [
+            220.0,
+            26.0
+          ],
+          [
+            220.0,
+            55.0
+          ],
+          [
+            30.0,
+            55.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            26.0
+          ],
+          [
+            220.0,
+            26.0
+          ],
+          [
+            220.0,
+            55.0
+          ],
+          [
+            30.0,
+            55.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.9978
+      ],
+      "elapsedMs": 27.25,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-total-24",
+      "fixtureLanguage": "fr",
+      "source": "Total : 1 234,50 €",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "d4a481d5cf59b049b9256694fce38b2d2b2071e3f400dff478ec891cc9465d6b",
+      "recognizedRaw": "Total : 1 234,50 €",
+      "lines": [
+        "Total : 1 234,50 €"
+      ],
+      "boxesRaw": [
+        [
+          [
+            60.0,
+            53.0
+          ],
+          [
+            437.0,
+            55.0
+          ],
+          [
+            437.0,
+            107.0
+          ],
+          [
+            60.0,
+            105.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            26.5
+          ],
+          [
+            218.5,
+            27.5
+          ],
+          [
+            218.5,
+            53.5
+          ],
+          [
+            30.0,
+            52.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.98715
+      ],
+      "elapsedMs": 69.57,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-total-32",
+      "fixtureLanguage": "fr",
+      "source": "Total : 1 234,50 €",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "9210f42de196b2397ec74f2dfbc17b46a686f3be70b0a2d43530624e69a19bcf",
+      "recognizedRaw": "Total : 1 234,50 €",
+      "lines": [
+        "Total : 1 234,50 €"
+      ],
+      "boxesRaw": [
+        [
+          [
+            28.0,
+            27.0
+          ],
+          [
+            282.0,
+            27.0
+          ],
+          [
+            282.0,
+            62.0
+          ],
+          [
+            28.0,
+            62.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            28.0,
+            27.0
+          ],
+          [
+            282.0,
+            27.0
+          ],
+          [
+            282.0,
+            62.0
+          ],
+          [
+            28.0,
+            62.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.9965
+      ],
+      "elapsedMs": 32.75,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-total-32",
+      "fixtureLanguage": "fr",
+      "source": "Total : 1 234,50 €",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "864a5bb5daae87ce0a3508f75f444a4bc30cca22f87815977c37e40cb917ea71",
+      "recognizedRaw": "Total : 1 234,50 €",
+      "lines": [
+        "Total : 1 234,50 €"
+      ],
+      "boxesRaw": [
+        [
+          [
+            58.0,
+            53.0
+          ],
+          [
+            562.0,
+            53.0
+          ],
+          [
+            562.0,
+            123.0
+          ],
+          [
+            58.0,
+            123.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.0,
+            26.5
+          ],
+          [
+            281.0,
+            26.5
+          ],
+          [
+            281.0,
+            61.5
+          ],
+          [
+            29.0,
+            61.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.96397
+      ],
+      "elapsedMs": 75.34,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-nonrefundable-16",
+      "fixtureLanguage": "fr",
+      "source": "Ce billet n'est ni échangeable ni remboursable.",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "f828ff322b1ae2c397cfe000f1397d0a7c724459104a81c21b257ba23da4b1b1",
+      "recognizedRaw": "Ce billet n'est ni échangeable ni remboursable.",
+      "lines": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "boxesRaw": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            366.0,
+            27.0
+          ],
+          [
+            366.0,
+            51.0
+          ],
+          [
+            30.0,
+            51.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            366.0,
+            27.0
+          ],
+          [
+            366.0,
+            51.0
+          ],
+          [
+            30.0,
+            51.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99568
+      ],
+      "elapsedMs": 40.86,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-nonrefundable-16",
+      "fixtureLanguage": "fr",
+      "source": "Ce billet n'est ni échangeable ni remboursable.",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "9985a578b4188dffd534ec3ab308a787f3500a06bb3143e8ec3a8ad63f8b1c98",
+      "recognizedRaw": "Ce billet n'est ni échangeable ni remboursable.",
+      "lines": [
+        "Ce billet n'est ni échangeable ni remboursable."
+      ],
+      "boxesRaw": [
+        [
+          [
+            61.0,
+            59.0
+          ],
+          [
+            733.0,
+            59.0
+          ],
+          [
+            733.0,
+            97.0
+          ],
+          [
+            61.0,
+            97.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.5,
+            29.5
+          ],
+          [
+            366.5,
+            29.5
+          ],
+          [
+            366.5,
+            48.5
+          ],
+          [
+            30.5,
+            48.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.99939
+      ],
+      "elapsedMs": 83.64,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-access-24",
+      "fixtureLanguage": "fr",
+      "source": "Accès sans marche, ascenseur indisponible.",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "5da4714a1a077306061ff5bed2b02eb59254441e11702c02c8250cf268445a65",
+      "recognizedRaw": "Accès sans marche, ascenseur indisponible.",
+      "lines": [
+        "Accès sans marche, ascenseur indisponible."
+      ],
+      "boxesRaw": [
+        [
+          [
+            30.0,
+            26.0
+          ],
+          [
+            507.0,
+            26.0
+          ],
+          [
+            507.0,
+            58.0
+          ],
+          [
+            30.0,
+            58.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            26.0
+          ],
+          [
+            507.0,
+            26.0
+          ],
+          [
+            507.0,
+            58.0
+          ],
+          [
+            30.0,
+            58.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.98954
+      ],
+      "elapsedMs": 40.39,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-access-24",
+      "fixtureLanguage": "fr",
+      "source": "Accès sans marche, ascenseur indisponible.",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "08e1c50b3c00d1e0a44900f29f4615a92d1a9c3b145036d7c49947ce29c96187",
+      "recognizedRaw": "Accès sans marche, ascenseur indisponible.",
+      "lines": [
+        "Accès sans marche, ascenseur indisponible."
+      ],
+      "boxesRaw": [
+        [
+          [
+            57.0,
+            52.0
+          ],
+          [
+            1017.0,
+            54.0
+          ],
+          [
+            1017.0,
+            116.0
+          ],
+          [
+            57.0,
+            114.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            28.5,
+            26.0
+          ],
+          [
+            508.5,
+            27.0
+          ],
+          [
+            508.5,
+            58.0
+          ],
+          [
+            28.5,
+            57.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99981
+      ],
+      "elapsedMs": 83.96,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-luggage-32",
+      "fixtureLanguage": "fr",
+      "source": "Un bagage de 8 kg maximum est inclus.",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "a0685671046d9cf94a3af3d7cb5e3fd7927b3a71c2696dcbcc8c198f73f70e72",
+      "recognizedRaw": "Un bagage de 8 kg maximum est inclus.",
+      "lines": [
+        "Un bagage de 8 kg maximum est inclus."
+      ],
+      "boxesRaw": [
+        [
+          [
+            31.0,
+            25.0
+          ],
+          [
+            604.0,
+            25.0
+          ],
+          [
+            604.0,
+            63.0
+          ],
+          [
+            31.0,
+            63.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            31.0,
+            25.0
+          ],
+          [
+            604.0,
+            25.0
+          ],
+          [
+            604.0,
+            63.0
+          ],
+          [
+            31.0,
+            63.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99282
+      ],
+      "elapsedMs": 44.94,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-luggage-32",
+      "fixtureLanguage": "fr",
+      "source": "Un bagage de 8 kg maximum est inclus.",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "6be6a00845d560480b6ce73e08af5794c7cb93b8000ea05abb187504b4fea4aa",
+      "recognizedRaw": "Un bagage de 8 kg maximum est inclus.",
+      "lines": [
+        "Un bagage de 8 kg maximum est inclus."
+      ],
+      "boxesRaw": [
+        [
+          [
+            56.0,
+            47.0
+          ],
+          [
+            1212.0,
+            49.0
+          ],
+          [
+            1212.0,
+            135.0
+          ],
+          [
+            56.0,
+            133.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            28.0,
+            23.5
+          ],
+          [
+            606.0,
+            24.5
+          ],
+          [
+            606.0,
+            67.5
+          ],
+          [
+            28.0,
+            66.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.99867
+      ],
+      "elapsedMs": 89.74,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "en-quality-16",
+      "fixtureLanguage": "en",
+      "source": "The total is 39.90 €, tax not included.",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "14c6de2eaa55df85eb4e1618d5a971c3a01d860591cb884939facce93ce92d0e",
+      "recognizedRaw": "The total is 39.90 €, tax not included.",
+      "lines": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "boxesRaw": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            295.0,
+            27.0
+          ],
+          [
+            295.0,
+            48.0
+          ],
+          [
+            30.0,
+            48.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            295.0,
+            27.0
+          ],
+          [
+            295.0,
+            48.0
+          ],
+          [
+            30.0,
+            48.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.97796
+      ],
+      "elapsedMs": 37.25,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "en-quality-16",
+      "fixtureLanguage": "en",
+      "source": "The total is 39.90 €, tax not included.",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "337f10d89ab199d2c681c42446c3a9cc2b9be1f106bfd60c75cb1dfa50bce998",
+      "recognizedRaw": "The total is 39.90 €, tax not included.",
+      "lines": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "boxesRaw": [
+        [
+          [
+            61.0,
+            56.0
+          ],
+          [
+            591.0,
+            56.0
+          ],
+          [
+            591.0,
+            93.0
+          ],
+          [
+            61.0,
+            93.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.5,
+            28.0
+          ],
+          [
+            295.5,
+            28.0
+          ],
+          [
+            295.5,
+            46.5
+          ],
+          [
+            30.5,
+            46.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.9994
+      ],
+      "elapsedMs": 79.7,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "en-quality-32",
+      "fixtureLanguage": "en",
+      "source": "The total is 39.90 €, tax not included.",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "aa94285e724b2056520b43daaef47a8ab15c225fb02b7cdad2e784bc8ebcf0e3",
+      "recognizedRaw": "The total is 39.90 €, tax not included.",
+      "lines": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "boxesRaw": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            557.0,
+            27.0
+          ],
+          [
+            557.0,
+            61.0
+          ],
+          [
+            30.0,
+            61.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            557.0,
+            27.0
+          ],
+          [
+            557.0,
+            61.0
+          ],
+          [
+            30.0,
+            61.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99436
+      ],
+      "elapsedMs": 46.0,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "en-quality-32",
+      "fixtureLanguage": "en",
+      "source": "The total is 39.90 €, tax not included.",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "2730a3da9b19d44b3169f8ff2c06adee4313e8d687b420ab4e6fbdc89c06402b",
+      "recognizedRaw": "The total is 39.90 €, tax not included.",
+      "lines": [
+        "The total is 39.90 €, tax not included."
+      ],
+      "boxesRaw": [
+        [
+          [
+            58.0,
+            51.0
+          ],
+          [
+            1115.0,
+            53.0
+          ],
+          [
+            1115.0,
+            122.0
+          ],
+          [
+            58.0,
+            120.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.0,
+            25.5
+          ],
+          [
+            557.5,
+            26.5
+          ],
+          [
+            557.5,
+            61.0
+          ],
+          [
+            29.0,
+            60.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99488
+      ],
+      "elapsedMs": 88.63,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-quality-16",
+      "fixtureLanguage": "fr",
+      "source": "Ne payez pas maintenant. Échéance : 18:00.",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "c85c67a853799a774f0dec859c7d7e069be8c96fbf0637fe04f434399a8e3c59",
+      "recognizedRaw": "Ne payez pas maintenant. Échéance : 18:00.",
+      "lines": [
+        "Ne payez pas maintenant. Échéance : 18:00."
+      ],
+      "boxesRaw": [
+        [
+          [
+            28.0,
+            28.0
+          ],
+          [
+            353.0,
+            27.0
+          ],
+          [
+            353.0,
+            53.0
+          ],
+          [
+            28.0,
+            54.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            28.0,
+            28.0
+          ],
+          [
+            353.0,
+            27.0
+          ],
+          [
+            353.0,
+            53.0
+          ],
+          [
+            28.0,
+            54.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.9961
+      ],
+      "elapsedMs": 35.99,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-quality-16",
+      "fixtureLanguage": "fr",
+      "source": "Ne payez pas maintenant. Échéance : 18:00.",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "0c61d14f737499a00e8efdac162a49846a62b15023d6f6a3ce22a7ab2d94ff6a",
+      "recognizedRaw": "Ne payez pas maintenant. Échéance : 18:00.",
+      "lines": [
+        "Ne payez pas maintenant. Échéance : 18:00."
+      ],
+      "boxesRaw": [
+        [
+          [
+            57.0,
+            60.0
+          ],
+          [
+            709.0,
+            57.0
+          ],
+          [
+            709.0,
+            103.0
+          ],
+          [
+            57.0,
+            106.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            28.5,
+            30.0
+          ],
+          [
+            354.5,
+            28.5
+          ],
+          [
+            354.5,
+            51.5
+          ],
+          [
+            28.5,
+            53.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99315
+      ],
+      "elapsedMs": 76.43,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-quality-32",
+      "fixtureLanguage": "fr",
+      "source": "Ne payez pas maintenant. Échéance : 18:00.",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "a78c810fa563904cfa41ee5babccc854685d61f908837bee3d6532b2c1b244f6",
+      "recognizedRaw": "Ne payez pas maintenant. Échéance :\n18:00.",
+      "lines": [
+        "Ne payez pas maintenant. Échéance :",
+        "18:00."
+      ],
+      "boxesRaw": [
+        [
+          [
+            27.0,
+            31.0
+          ],
+          [
+            578.0,
+            29.0
+          ],
+          [
+            578.0,
+            68.0
+          ],
+          [
+            27.0,
+            70.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            74.0
+          ],
+          [
+            125.0,
+            74.0
+          ],
+          [
+            125.0,
+            109.0
+          ],
+          [
+            29.0,
+            109.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            27.0,
+            31.0
+          ],
+          [
+            578.0,
+            29.0
+          ],
+          [
+            578.0,
+            68.0
+          ],
+          [
+            27.0,
+            70.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            74.0
+          ],
+          [
+            125.0,
+            74.0
+          ],
+          [
+            125.0,
+            109.0
+          ],
+          [
+            29.0,
+            109.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99977,
+        0.99979
+      ],
+      "elapsedMs": 118.72,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "fr-quality-32",
+      "fixtureLanguage": "fr",
+      "source": "Ne payez pas maintenant. Échéance : 18:00.",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "6e5d7b6a355ec3f36a6ebbbf01622533507fa9b29288f35145d33bd84c669ddf",
+      "recognizedRaw": "Ne payez pas maintenant. Échéance :\n18:00.",
+      "lines": [
+        "Ne payez pas maintenant. Échéance :",
+        "18:00."
+      ],
+      "boxesRaw": [
+        [
+          [
+            53.0,
+            58.0
+          ],
+          [
+            1161.0,
+            55.0
+          ],
+          [
+            1161.0,
+            141.0
+          ],
+          [
+            53.0,
+            144.0
+          ]
+        ],
+        [
+          [
+            62.0,
+            151.0
+          ],
+          [
+            250.0,
+            151.0
+          ],
+          [
+            250.0,
+            217.0
+          ],
+          [
+            62.0,
+            217.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            26.5,
+            29.0
+          ],
+          [
+            580.5,
+            27.5
+          ],
+          [
+            580.5,
+            70.5
+          ],
+          [
+            26.5,
+            72.0
+          ]
+        ],
+        [
+          [
+            31.0,
+            75.5
+          ],
+          [
+            125.0,
+            75.5
+          ],
+          [
+            125.0,
+            108.5
+          ],
+          [
+            31.0,
+            108.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.97431,
+        0.99986
+      ],
+      "elapsedMs": 176.3,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "zh-hans-quality-16",
+      "fixtureLanguage": "zh-Hans",
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "3297c75597728431e21c6d2cb58636f845adec796a830734e36b7e914a50ca6b",
+      "recognizedRaw": "1234.50\n8",
+      "lines": [
+        "1234.50",
+        "8"
+      ],
+      "boxesRaw": [
+        [
+          [
+            29.0,
+            30.0
+          ],
+          [
+            212.0,
+            30.0
+          ],
+          [
+            212.0,
+            51.0
+          ],
+          [
+            29.0,
+            51.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            56.0
+          ],
+          [
+            228.0,
+            56.0
+          ],
+          [
+            228.0,
+            77.0
+          ],
+          [
+            30.0,
+            77.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.0,
+            30.0
+          ],
+          [
+            212.0,
+            30.0
+          ],
+          [
+            212.0,
+            51.0
+          ],
+          [
+            29.0,
+            51.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            56.0
+          ],
+          [
+            228.0,
+            56.0
+          ],
+          [
+            228.0,
+            77.0
+          ],
+          [
+            30.0,
+            77.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.97855,
+        0.99873
+      ],
+      "elapsedMs": 80.16,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "zh-hans-quality-16",
+      "fixtureLanguage": "zh-Hans",
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "5f6e960dc9f1b165969695ba5efc0cd91166123b0d9eaf6516fcd150080d9d50",
+      "recognizedRaw": "1234.50\n8",
+      "lines": [
+        "1234.50",
+        "8"
+      ],
+      "boxesRaw": [
+        [
+          [
+            64.0,
+            60.0
+          ],
+          [
+            420.0,
+            60.0
+          ],
+          [
+            420.0,
+            99.0
+          ],
+          [
+            64.0,
+            99.0
+          ]
+        ],
+        [
+          [
+            62.0,
+            109.0
+          ],
+          [
+            451.0,
+            113.0
+          ],
+          [
+            451.0,
+            155.0
+          ],
+          [
+            62.0,
+            152.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            32.0,
+            30.0
+          ],
+          [
+            210.0,
+            30.0
+          ],
+          [
+            210.0,
+            49.5
+          ],
+          [
+            32.0,
+            49.5
+          ]
+        ],
+        [
+          [
+            31.0,
+            54.5
+          ],
+          [
+            225.5,
+            56.5
+          ],
+          [
+            225.5,
+            77.5
+          ],
+          [
+            31.0,
+            76.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99969,
+        0.99918
+      ],
+      "elapsedMs": 125.87,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "zh-hans-quality-32",
+      "fixtureLanguage": "zh-Hans",
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "51f2c73863b100ad84b19d5a7278ad9f7ca1aaecac5d7bf2b9c58101f7169983",
+      "recognizedRaw": "1234.50\n8",
+      "lines": [
+        "1234.50",
+        "8"
+      ],
+      "boxesRaw": [
+        [
+          [
+            30.0,
+            26.0
+          ],
+          [
+            389.0,
+            28.0
+          ],
+          [
+            389.0,
+            68.0
+          ],
+          [
+            30.0,
+            66.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            75.0
+          ],
+          [
+            419.0,
+            77.0
+          ],
+          [
+            419.0,
+            116.0
+          ],
+          [
+            30.0,
+            114.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            26.0
+          ],
+          [
+            389.0,
+            28.0
+          ],
+          [
+            389.0,
+            68.0
+          ],
+          [
+            30.0,
+            66.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            75.0
+          ],
+          [
+            419.0,
+            77.0
+          ],
+          [
+            419.0,
+            116.0
+          ],
+          [
+            30.0,
+            114.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99972,
+        0.99409
+      ],
+      "elapsedMs": 92.16,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "zh-hans-quality-32",
+      "fixtureLanguage": "zh-Hans",
+      "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "9d2de832037c2348664487505ad8288236ed1a2de7a0c38a88b0efba9b40ce91",
+      "recognizedRaw": "1234.50\n8",
+      "lines": [
+        "1234.50",
+        "8"
+      ],
+      "boxesRaw": [
+        [
+          [
+            59.0,
+            51.0
+          ],
+          [
+            777.0,
+            54.0
+          ],
+          [
+            777.0,
+            136.0
+          ],
+          [
+            59.0,
+            133.0
+          ]
+        ],
+        [
+          [
+            57.0,
+            148.0
+          ],
+          [
+            836.0,
+            152.0
+          ],
+          [
+            836.0,
+            232.0
+          ],
+          [
+            57.0,
+            228.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.5,
+            25.5
+          ],
+          [
+            388.5,
+            27.0
+          ],
+          [
+            388.5,
+            68.0
+          ],
+          [
+            29.5,
+            66.5
+          ]
+        ],
+        [
+          [
+            28.5,
+            74.0
+          ],
+          [
+            418.0,
+            76.0
+          ],
+          [
+            418.0,
+            116.0
+          ],
+          [
+            28.5,
+            114.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99981,
+        0.98559
+      ],
+      "elapsedMs": 162.01,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "zh-hant-quality-16",
+      "fixtureLanguage": "zh-Hant",
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "d635a5a6dfa0d907b212bafb574622a7b682613d6effe0facdd6f347cd93ccf7",
+      "recognizedRaw": "1234.50\n8",
+      "lines": [
+        "1234.50",
+        "8"
+      ],
+      "boxesRaw": [
+        [
+          [
+            29.0,
+            27.0
+          ],
+          [
+            212.0,
+            29.0
+          ],
+          [
+            212.0,
+            51.0
+          ],
+          [
+            29.0,
+            49.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            56.0
+          ],
+          [
+            228.0,
+            56.0
+          ],
+          [
+            228.0,
+            77.0
+          ],
+          [
+            30.0,
+            77.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.0,
+            27.0
+          ],
+          [
+            212.0,
+            29.0
+          ],
+          [
+            212.0,
+            51.0
+          ],
+          [
+            29.0,
+            49.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            56.0
+          ],
+          [
+            228.0,
+            56.0
+          ],
+          [
+            228.0,
+            77.0
+          ],
+          [
+            30.0,
+            77.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99985,
+        0.99873
+      ],
+      "elapsedMs": 86.02,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "zh-hant-quality-16",
+      "fixtureLanguage": "zh-Hant",
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "c5ecf16dc2a911db6dcc736e108cd87b2a97f468bbe3f938e4002a18613de6b6",
+      "recognizedRaw": "1234.50\n8",
+      "lines": [
+        "1234.50",
+        "8"
+      ],
+      "boxesRaw": [
+        [
+          [
+            63.0,
+            60.0
+          ],
+          [
+            420.0,
+            60.0
+          ],
+          [
+            420.0,
+            99.0
+          ],
+          [
+            63.0,
+            99.0
+          ]
+        ],
+        [
+          [
+            62.0,
+            112.0
+          ],
+          [
+            451.0,
+            114.0
+          ],
+          [
+            451.0,
+            155.0
+          ],
+          [
+            62.0,
+            153.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            31.5,
+            30.0
+          ],
+          [
+            210.0,
+            30.0
+          ],
+          [
+            210.0,
+            49.5
+          ],
+          [
+            31.5,
+            49.5
+          ]
+        ],
+        [
+          [
+            31.0,
+            56.0
+          ],
+          [
+            225.5,
+            57.0
+          ],
+          [
+            225.5,
+            77.5
+          ],
+          [
+            31.0,
+            76.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.99964,
+        0.99735
+      ],
+      "elapsedMs": 133.12,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "zh-hant-quality-32",
+      "fixtureLanguage": "zh-Hant",
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "24b7418c31516032def1cbb08f6b29d616e9a02baa7eac4d75ab901e3a81c1f9",
+      "recognizedRaw": "1234.50\n8",
+      "lines": [
+        "1234.50",
+        "8"
+      ],
+      "boxesRaw": [
+        [
+          [
+            29.0,
+            26.0
+          ],
+          [
+            389.0,
+            28.0
+          ],
+          [
+            389.0,
+            68.0
+          ],
+          [
+            29.0,
+            66.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            75.0
+          ],
+          [
+            418.0,
+            77.0
+          ],
+          [
+            418.0,
+            116.0
+          ],
+          [
+            30.0,
+            114.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.0,
+            26.0
+          ],
+          [
+            389.0,
+            28.0
+          ],
+          [
+            389.0,
+            68.0
+          ],
+          [
+            29.0,
+            66.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            75.0
+          ],
+          [
+            418.0,
+            77.0
+          ],
+          [
+            418.0,
+            116.0
+          ],
+          [
+            30.0,
+            114.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99979,
+        0.99426
+      ],
+      "elapsedMs": 94.29,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "zh-hant-quality-32",
+      "fixtureLanguage": "zh-Hant",
+      "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "666dc0837370cb537261ac7c7ba19edd53adfe0742a29f54f2cea044b26bdacd",
+      "recognizedRaw": "1234.50\n8",
+      "lines": [
+        "1234.50",
+        "8"
+      ],
+      "boxesRaw": [
+        [
+          [
+            56.0,
+            52.0
+          ],
+          [
+            775.0,
+            52.0
+          ],
+          [
+            775.0,
+            138.0
+          ],
+          [
+            56.0,
+            138.0
+          ]
+        ],
+        [
+          [
+            57.0,
+            148.0
+          ],
+          [
+            836.0,
+            152.0
+          ],
+          [
+            836.0,
+            232.0
+          ],
+          [
+            57.0,
+            228.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            28.0,
+            26.0
+          ],
+          [
+            387.5,
+            26.0
+          ],
+          [
+            387.5,
+            69.0
+          ],
+          [
+            28.0,
+            69.0
+          ]
+        ],
+        [
+          [
+            28.5,
+            74.0
+          ],
+          [
+            418.0,
+            76.0
+          ],
+          [
+            418.0,
+            116.0
+          ],
+          [
+            28.5,
+            114.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.99982,
+        0.98559
+      ],
+      "elapsedMs": 154.84,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "mixed-quality-16",
+      "fixtureLanguage": "mixed",
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "ff45e417cc83f1b2e9d1fe958d579163024dd600141a49e40abe649007d2b5c7",
+      "recognizedRaw": "A / Room A\nChambre A : 120 € / night\n/",
+      "lines": [
+        "A / Room A",
+        "Chambre A : 120 € / night",
+        "/"
+      ],
+      "boxesRaw": [
+        [
+          [
+            29.0,
+            29.0
+          ],
+          [
+            150.0,
+            29.0
+          ],
+          [
+            150.0,
+            50.0
+          ],
+          [
+            29.0,
+            50.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            54.0
+          ],
+          [
+            219.0,
+            54.0
+          ],
+          [
+            219.0,
+            75.0
+          ],
+          [
+            29.0,
+            75.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            83.0
+          ],
+          [
+            145.0,
+            83.0
+          ],
+          [
+            145.0,
+            105.0
+          ],
+          [
+            29.0,
+            105.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.0,
+            29.0
+          ],
+          [
+            150.0,
+            29.0
+          ],
+          [
+            150.0,
+            50.0
+          ],
+          [
+            29.0,
+            50.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            54.0
+          ],
+          [
+            219.0,
+            54.0
+          ],
+          [
+            219.0,
+            75.0
+          ],
+          [
+            29.0,
+            75.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            83.0
+          ],
+          [
+            145.0,
+            83.0
+          ],
+          [
+            145.0,
+            105.0
+          ],
+          [
+            29.0,
+            105.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.98969,
+        0.98118,
+        0.98759
+      ],
+      "elapsedMs": 115.18,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "mixed-quality-16",
+      "fixtureLanguage": "mixed",
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "180bde248bb429d8ef4a5490f547cb495bc6231c6d1dc91b9d44840d2d61c2a8",
+      "recognizedRaw": "A / Room A\nChambre A : 120 € / night\n/",
+      "lines": [
+        "A / Room A",
+        "Chambre A : 120 € / night",
+        "/"
+      ],
+      "boxesRaw": [
+        [
+          [
+            62.0,
+            56.0
+          ],
+          [
+            297.0,
+            60.0
+          ],
+          [
+            297.0,
+            98.0
+          ],
+          [
+            62.0,
+            94.0
+          ]
+        ],
+        [
+          [
+            60.0,
+            109.0
+          ],
+          [
+            435.0,
+            111.0
+          ],
+          [
+            435.0,
+            150.0
+          ],
+          [
+            60.0,
+            148.0
+          ]
+        ],
+        [
+          [
+            60.0,
+            166.0
+          ],
+          [
+            287.0,
+            166.0
+          ],
+          [
+            287.0,
+            209.0
+          ],
+          [
+            60.0,
+            209.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            31.0,
+            28.0
+          ],
+          [
+            148.5,
+            30.0
+          ],
+          [
+            148.5,
+            49.0
+          ],
+          [
+            31.0,
+            47.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            54.5
+          ],
+          [
+            217.5,
+            55.5
+          ],
+          [
+            217.5,
+            75.0
+          ],
+          [
+            30.0,
+            74.0
+          ]
+        ],
+        [
+          [
+            30.0,
+            83.0
+          ],
+          [
+            143.5,
+            83.0
+          ],
+          [
+            143.5,
+            104.5
+          ],
+          [
+            30.0,
+            104.5
+          ]
+        ]
+      ],
+      "scores": [
+        0.98638,
+        0.97551,
+        0.98421
+      ],
+      "elapsedMs": 187.09,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "mixed-quality-32",
+      "fixtureLanguage": "mixed",
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "5c8a7787909f55ca2e70a76bc61897c5d520a8279dfdf01a0caa654c83d0d52b",
+      "recognizedRaw": "A / Room A\nChambre A : 120 € / night\n/ ",
+      "lines": [
+        "A / Room A",
+        "Chambre A : 120 € / night",
+        "/ "
+      ],
+      "boxesRaw": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            263.0,
+            29.0
+          ],
+          [
+            263.0,
+            66.0
+          ],
+          [
+            30.0,
+            64.0
+          ]
+        ],
+        [
+          [
+            31.0,
+            75.0
+          ],
+          [
+            400.0,
+            75.0
+          ],
+          [
+            400.0,
+            110.0
+          ],
+          [
+            31.0,
+            110.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            121.0
+          ],
+          [
+            255.0,
+            124.0
+          ],
+          [
+            255.0,
+            164.0
+          ],
+          [
+            29.0,
+            161.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            30.0,
+            27.0
+          ],
+          [
+            263.0,
+            29.0
+          ],
+          [
+            263.0,
+            66.0
+          ],
+          [
+            30.0,
+            64.0
+          ]
+        ],
+        [
+          [
+            31.0,
+            75.0
+          ],
+          [
+            400.0,
+            75.0
+          ],
+          [
+            400.0,
+            110.0
+          ],
+          [
+            31.0,
+            110.0
+          ]
+        ],
+        [
+          [
+            29.0,
+            121.0
+          ],
+          [
+            255.0,
+            124.0
+          ],
+          [
+            255.0,
+            164.0
+          ],
+          [
+            29.0,
+            161.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.9565,
+        0.97183,
+        0.7593
+      ],
+      "elapsedMs": 140.04,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "mixed-quality-32",
+      "fixtureLanguage": "mixed",
+      "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "ec87458332edc44915ed4436976ad3f5b9a0289cff7dddede6d7b8540c9e1dc8",
+      "recognizedRaw": "A / Room A\nChambre A : 120 € / night\n /",
+      "lines": [
+        "A / Room A",
+        "Chambre A : 120 € / night",
+        " /"
+      ],
+      "boxesRaw": [
+        [
+          [
+            59.0,
+            55.0
+          ],
+          [
+            525.0,
+            55.0
+          ],
+          [
+            525.0,
+            129.0
+          ],
+          [
+            59.0,
+            129.0
+          ]
+        ],
+        [
+          [
+            58.0,
+            139.0
+          ],
+          [
+            804.0,
+            149.0
+          ],
+          [
+            803.0,
+            229.0
+          ],
+          [
+            57.0,
+            219.0
+          ]
+        ],
+        [
+          [
+            59.0,
+            247.0
+          ],
+          [
+            509.0,
+            249.0
+          ],
+          [
+            509.0,
+            324.0
+          ],
+          [
+            59.0,
+            322.0
+          ]
+        ]
+      ],
+      "boxesUnscaled": [
+        [
+          [
+            29.5,
+            27.5
+          ],
+          [
+            262.5,
+            27.5
+          ],
+          [
+            262.5,
+            64.5
+          ],
+          [
+            29.5,
+            64.5
+          ]
+        ],
+        [
+          [
+            29.0,
+            69.5
+          ],
+          [
+            402.0,
+            74.5
+          ],
+          [
+            401.5,
+            114.5
+          ],
+          [
+            28.5,
+            109.5
+          ]
+        ],
+        [
+          [
+            29.5,
+            123.5
+          ],
+          [
+            254.5,
+            124.5
+          ],
+          [
+            254.5,
+            162.0
+          ],
+          [
+            29.5,
+            161.0
+          ]
+        ]
+      ],
+      "scores": [
+        0.92136,
+        0.97201,
+        0.73776
+      ],
+      "elapsedMs": 218.43,
+      "exactNormalizedMatch": false
+    },
+    {
+      "inputId": "blank-negative-24",
+      "fixtureLanguage": "none",
+      "source": "",
+      "recognizer": "latin",
+      "scale": 1,
+      "inputPixelSha256": "cb5d15f46063e0e36d09f0cc85ea65f95918fd5c9bd1aa701c212a7d78c3b728",
+      "recognizedRaw": "",
+      "lines": [],
+      "boxesRaw": [],
+      "boxesUnscaled": [],
+      "scores": [],
+      "elapsedMs": 14.29,
+      "exactNormalizedMatch": true
+    },
+    {
+      "inputId": "blank-negative-24",
+      "fixtureLanguage": "none",
+      "source": "",
+      "recognizer": "latin",
+      "scale": 2,
+      "inputPixelSha256": "b3496b49cd5dde11c69c1ccfde173fb0e848e8faee693624e1515fe39de88279",
+      "recognizedRaw": "",
+      "lines": [],
+      "boxesRaw": [],
+      "boxesUnscaled": [],
+      "scores": [],
+      "elapsedMs": 57.92,
+      "exactNormalizedMatch": true
+    }
+  ]
+}

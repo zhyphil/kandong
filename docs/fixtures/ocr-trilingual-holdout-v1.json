@@ -1,0 +1,17 @@
+{
+ "schema":1,
+ "fixtureVersion":"trilingual-holdout-v1",
+ "scope":"project_authored_synthetic_only",
+ "cases":[
+  {"id":"en-checkin","language":"en","source":"Check-in after 16:30.\nBreakfast is not included.","fontSizesPx":[16,24,32]},
+  {"id":"en-tickets","language":"en","source":"2 tickets: €27.40 total.\nFree cancellation before Monday.","fontSizesPx":[16,24,32]},
+  {"id":"fr-departure","language":"fr","source":"Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.","fontSizesPx":[16,24,32]},
+  {"id":"fr-price","language":"fr","source":"Prix total : 82,60 €.\nAucun remboursement après confirmation.","fontSizesPx":[16,24,32]},
+  {"id":"hans-order","language":"zh-Hans","source":"订单合计268.90元。\n含早餐，不含城市税。","fontSizesPx":[16,24,32]},
+  {"id":"hans-luggage","language":"zh-Hans","source":"每人限带7公斤行李。\n请勿重复付款。","fontSizesPx":[16,24,32]},
+  {"id":"hant-order","language":"zh-Hant","source":"訂單合計268.90元。\n含早餐，不含城市稅。","fontSizesPx":[16,24,32]},
+  {"id":"hant-luggage","language":"zh-Hant","source":"每人限帶7公斤行李。\n請勿重複付款。","fontSizesPx":[16,24,32]},
+  {"id":"mixed-room","language":"mixed","source":"Room B / 房间B\nChambre B : 95 €\n每晚，不含税。","fontSizesPx":[16,24,32]},
+  {"id":"mixed-exit","language":"mixed","source":"Sortie / Exit / 出口\nNe pas entrer / 禁止进入","fontSizesPx":[16,24,32]}
+ ]
+}

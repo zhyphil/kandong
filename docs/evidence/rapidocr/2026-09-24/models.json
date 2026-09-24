@@ -1,0 +1,31 @@
+{
+  "rapidocr": "3.9.2",
+  "packageModelManifestSha256": "db47df9d6b071721f1633667b41cfef1e40b5d7f09be030aaea8be801ca2f2f5",
+  "files": {
+    "ch_PP-OCRv5_det_mobile.onnx": {
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/onnx/PP-OCRv5/det/ch_PP-OCRv5_det_mobile.onnx",
+      "bytes": 4819576,
+      "sha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+      "matchedPackageManifest": true
+    },
+    "ch_PP-OCRv5_rec_mobile.onnx": {
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/onnx/PP-OCRv5/rec/ch_PP-OCRv5_rec_mobile.onnx",
+      "bytes": 16631306,
+      "sha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "matchedPackageManifest": true
+    },
+    "latin_PP-OCRv5_rec_mobile.onnx": {
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/onnx/PP-OCRv5/rec/latin_PP-OCRv5_rec_mobile.onnx",
+      "bytes": 7904513,
+      "sha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+      "matchedPackageManifest": true
+    },
+    "ch_ppocr_mobile_v2.0_cls_mobile.onnx": {
+      "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.9.2/onnx/PP-OCRv4/cls/ch_ppocr_mobile_v2.0_cls_mobile.onnx",
+      "bytes": 585532,
+      "sha256": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c",
+      "matchedPackageManifest": true
+    }
+  },
+  "scope": "local_host_synthetic_candidate_not_Android"
+}

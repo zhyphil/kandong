@@ -1,0 +1,636 @@
+{
+  "schema": 1,
+  "fixtureVersion": "trilingual-holdout-v1",
+  "scope": "project_authored_synthetic_only",
+  "pixelHashFormat": "row-major RGBA8888, no row padding, opaque alpha 255",
+  "specSha256": "03f6b2b96e1f04e14e48e6bdb66faaafbf36d50b1d9076167a2c8fd59a39c0c2",
+  "generator": {
+    "pillow": "12.1.1",
+    "fontFamily": "Arial Unicode MS Regular",
+    "fontSha256": "876af2cd4854644e7f3e7feb2f688997fdb3343c6df6693611209c9dfb47ccec",
+    "fontRedistributed": false,
+    "widthPx": 640,
+    "paddingPx": 32,
+    "note": "Fixed raster fixtures are generated once, bundled unchanged on both devices. They are not the original Android native render."
+  },
+  "images": [
+    {
+      "id": "en-checkin",
+      "language": "en",
+      "source": "Check-in after 16:30.\nBreakfast is not included.",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 16,
+      "asset": "en-checkin-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "4251763d26421f9a0197128c3650d0a939bc3af9a8b300dfc63d8d2148788250",
+      "pixelSha256": "4b531da34a62b2759d9da8849b21cb6ee5b1f31fef5872d582deeeeec46a4ffc",
+      "renderedLines": [
+        "Check-in after 16:30.",
+        "Breakfast is not included."
+      ]
+    },
+    {
+      "id": "en-checkin",
+      "language": "en",
+      "source": "Check-in after 16:30.\nBreakfast is not included.",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 24,
+      "asset": "en-checkin-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "ea3892a91d050c30411ef8a495584876a6c8f125b626d8ed1bb3716f9d62d966",
+      "pixelSha256": "a63d8354ceb5f21af14d55ea6663b67344f4a6600ea650d311e4a8f078b93695",
+      "renderedLines": [
+        "Check-in after 16:30.",
+        "Breakfast is not included."
+      ]
+    },
+    {
+      "id": "en-checkin",
+      "language": "en",
+      "source": "Check-in after 16:30.\nBreakfast is not included.",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 32,
+      "asset": "en-checkin-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "ccd5893b805296c6ce064bcfca4f180c46dd86e07183939ae407e236d93c689e",
+      "pixelSha256": "318596c5e7d45400d9384b151848ac247f8dd1e8d915987d65e29d042e94c968",
+      "renderedLines": [
+        "Check-in after 16:30.",
+        "Breakfast is not included."
+      ]
+    },
+    {
+      "id": "en-tickets",
+      "language": "en",
+      "source": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 16,
+      "asset": "en-tickets-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "bc131d2bd2d1e909e233a44c2926737be3f879519a23cc76d5002ab75ae391ff",
+      "pixelSha256": "bf481222cabff671970e41e7e05c1a525079fe523b215df8e8d7dd1ea0bbe7f5",
+      "renderedLines": [
+        "2 tickets: €27.40 total.",
+        "Free cancellation before Monday."
+      ]
+    },
+    {
+      "id": "en-tickets",
+      "language": "en",
+      "source": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 24,
+      "asset": "en-tickets-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "c6f3dd3113023aa8b8358efa742c20eb7f94fbb8fae3e0a3950807c6e593bc3a",
+      "pixelSha256": "baf5314914f1645b70f6adb7abfee4b7ee6e28abd5095314e4872358576c73ad",
+      "renderedLines": [
+        "2 tickets: €27.40 total.",
+        "Free cancellation before Monday."
+      ]
+    },
+    {
+      "id": "en-tickets",
+      "language": "en",
+      "source": "2 tickets: €27.40 total.\nFree cancellation before Monday.",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 32,
+      "asset": "en-tickets-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "0221b3088a74b09926446aec03e11ffd163452ab7dd6f7827960c78e751a2be0",
+      "pixelSha256": "f440aae277aa31ff45f57f6597b89a8771dddd7b08545033d9e300948bcd9e3b",
+      "renderedLines": [
+        "2 tickets: €27.40 total.",
+        "Free cancellation before Monday."
+      ]
+    },
+    {
+      "id": "fr-departure",
+      "language": "fr",
+      "source": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 16,
+      "asset": "fr-departure-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "7b6fa8da3fee04b04d62792f22945f5fba432e69e274fa452c2574c82234480e",
+      "pixelSha256": "0858e2f2d7737055c09b757a7a44e0b3dd2207bce9b098cdd98b1383ef5d4ee2",
+      "renderedLines": [
+        "Départ à 07:45, voie 6.",
+        "Ne prenez pas le train de 07:15."
+      ]
+    },
+    {
+      "id": "fr-departure",
+      "language": "fr",
+      "source": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 24,
+      "asset": "fr-departure-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "15f1f8013bd5843e9ea244cdb5f6f30852dab069161d1ec57a0c854069636471",
+      "pixelSha256": "8a3e388e70632a5fba836922ac4475e49b7b9814203baa49c1f8ec7d1151cb67",
+      "renderedLines": [
+        "Départ à 07:45, voie 6.",
+        "Ne prenez pas le train de 07:15."
+      ]
+    },
+    {
+      "id": "fr-departure",
+      "language": "fr",
+      "source": "Départ à 07:45, voie 6.\nNe prenez pas le train de 07:15.",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 32,
+      "asset": "fr-departure-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "3cb3a168a2c2855f5d4bb4dbe0a39239c14add0df6c4f517208fd0a36570754c",
+      "pixelSha256": "e5aae8b2c6606c521789fa9cbebe920846818f54d78dab6528378ec15227bed7",
+      "renderedLines": [
+        "Départ à 07:45, voie 6.",
+        "Ne prenez pas le train de 07:15."
+      ]
+    },
+    {
+      "id": "fr-price",
+      "language": "fr",
+      "source": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 16,
+      "asset": "fr-price-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "1f6ca19141a614edc1f34c5142dbfb718363a58cb490d9dc5223de350d2ae239",
+      "pixelSha256": "e80261e7e0f0009615d7383e1d10df8bec20917fa2fa8a282eb84117b2f62767",
+      "renderedLines": [
+        "Prix total : 82,60 €.",
+        "Aucun remboursement après confirmation."
+      ]
+    },
+    {
+      "id": "fr-price",
+      "language": "fr",
+      "source": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 24,
+      "asset": "fr-price-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "47f08e130b18832d7763e4b69b3558967b0b8280d1ac828dab8c331f5c5c8774",
+      "pixelSha256": "36c394df547c43f47444f0c98e2c8ad6e91528cd85c5063ba133316c44ca3b98",
+      "renderedLines": [
+        "Prix total : 82,60 €.",
+        "Aucun remboursement après confirmation."
+      ]
+    },
+    {
+      "id": "fr-price",
+      "language": "fr",
+      "source": "Prix total : 82,60 €.\nAucun remboursement après confirmation.",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 32,
+      "asset": "fr-price-32.png",
+      "width": 640,
+      "height": 208,
+      "pngSha256": "9ce765c5789867771deb14086b275bfc9903008038e2b0bee4e825c94595f6fe",
+      "pixelSha256": "7b27f722f6679e6209e391780c8de42dca83840ae7adff1ec86af7ffc96548a3",
+      "renderedLines": [
+        "Prix total : 82,60 €.",
+        "Aucun remboursement après",
+        "confirmation."
+      ]
+    },
+    {
+      "id": "hans-order",
+      "language": "zh-Hans",
+      "source": "订单合计268.90元。\n含早餐，不含城市税。",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 16,
+      "asset": "hans-order-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "5c87c4d138db1ced8204ca7ffa3a105428fe15b1d9e987b18ff20202aa325e22",
+      "pixelSha256": "f584ebb1536b51575d5b912e6072a9fdf37ab1a8fc0863c3f78c4730ad4000c8",
+      "renderedLines": [
+        "订单合计268.90元。",
+        "含早餐，不含城市税。"
+      ]
+    },
+    {
+      "id": "hans-order",
+      "language": "zh-Hans",
+      "source": "订单合计268.90元。\n含早餐，不含城市税。",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 24,
+      "asset": "hans-order-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "5f489289f3040d0d68e4c427ff405326522d124abc830df5503aaaa24ad0eae5",
+      "pixelSha256": "dba8d0f0bda59aa4f44f87df6bbda52f65ebc981e8b17f9539af5e8f3b7fcc56",
+      "renderedLines": [
+        "订单合计268.90元。",
+        "含早餐，不含城市税。"
+      ]
+    },
+    {
+      "id": "hans-order",
+      "language": "zh-Hans",
+      "source": "订单合计268.90元。\n含早餐，不含城市税。",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 32,
+      "asset": "hans-order-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "2264b994d0dbdc69f112a1929deb49a9392815a29e293299b9a479e0fc42e78b",
+      "pixelSha256": "bbd8c3531c74f429ba3b5c814ce693dc1068aeab21e78cb2dd1f0456de872765",
+      "renderedLines": [
+        "订单合计268.90元。",
+        "含早餐，不含城市税。"
+      ]
+    },
+    {
+      "id": "hans-luggage",
+      "language": "zh-Hans",
+      "source": "每人限带7公斤行李。\n请勿重复付款。",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 16,
+      "asset": "hans-luggage-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "f4d8d180aa5876f546f53fa0b6e1ba3582abc1480ed18801d742153428e19e1a",
+      "pixelSha256": "51c2b5fee2914ec2f9474ef76a90824fee8ba565fa51319a953a6f2359ec9435",
+      "renderedLines": [
+        "每人限带7公斤行李。",
+        "请勿重复付款。"
+      ]
+    },
+    {
+      "id": "hans-luggage",
+      "language": "zh-Hans",
+      "source": "每人限带7公斤行李。\n请勿重复付款。",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 24,
+      "asset": "hans-luggage-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "c9917faafb3e6772805b46a63d7a5f73b90898e1dc8e47a68ff74c06147f2ef5",
+      "pixelSha256": "739f5ad046ea7e8d02a1ec359a4f12c887117d37bb22a0f3263748deaf3a8ffa",
+      "renderedLines": [
+        "每人限带7公斤行李。",
+        "请勿重复付款。"
+      ]
+    },
+    {
+      "id": "hans-luggage",
+      "language": "zh-Hans",
+      "source": "每人限带7公斤行李。\n请勿重复付款。",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 32,
+      "asset": "hans-luggage-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "ff04e22b9a33b83fe03a7bb326d7b8b2be4920dfe5d06fc80506596f43abbceb",
+      "pixelSha256": "93f8f1dd50ab102a2ee3648b4207bd5550d23335d19c7b757f6340ec38e10fd3",
+      "renderedLines": [
+        "每人限带7公斤行李。",
+        "请勿重复付款。"
+      ]
+    },
+    {
+      "id": "hant-order",
+      "language": "zh-Hant",
+      "source": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 16,
+      "asset": "hant-order-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "a1399ef02018002666d90d5256dbcbc04dba9aa8812046bda0b761fbe1659476",
+      "pixelSha256": "0ab828f3dcc5dfd9b4ed9b8fe0fc60699dcb9e71558cb519920412b20738ef9d",
+      "renderedLines": [
+        "訂單合計268.90元。",
+        "含早餐，不含城市稅。"
+      ]
+    },
+    {
+      "id": "hant-order",
+      "language": "zh-Hant",
+      "source": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 24,
+      "asset": "hant-order-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "a4891da48b235509a9c7493ad31560db62d43139011b0a14e37282f2a646a654",
+      "pixelSha256": "74771f84bb2ed420ce01f6271b084022c2feefbd68c8349d625536ce8ee55162",
+      "renderedLines": [
+        "訂單合計268.90元。",
+        "含早餐，不含城市稅。"
+      ]
+    },
+    {
+      "id": "hant-order",
+      "language": "zh-Hant",
+      "source": "訂單合計268.90元。\n含早餐，不含城市稅。",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 32,
+      "asset": "hant-order-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "d2b2108a99d6b4d7c3395d73d9fe319a173af945ec4b6f1b64955e602953bcef",
+      "pixelSha256": "f6826aefe6eb61802a8031a773131a72bd84860bc7dc427340edd9063eea24b1",
+      "renderedLines": [
+        "訂單合計268.90元。",
+        "含早餐，不含城市稅。"
+      ]
+    },
+    {
+      "id": "hant-luggage",
+      "language": "zh-Hant",
+      "source": "每人限帶7公斤行李。\n請勿重複付款。",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 16,
+      "asset": "hant-luggage-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "1e42e94d0588ec9228f85b74e55ef885e4fb3cd75514900e55fc8b6078b33810",
+      "pixelSha256": "e529db28b996b2c415a213d330d9f8a2c849aa4a52e7a3c42b818b0b98876db2",
+      "renderedLines": [
+        "每人限帶7公斤行李。",
+        "請勿重複付款。"
+      ]
+    },
+    {
+      "id": "hant-luggage",
+      "language": "zh-Hant",
+      "source": "每人限帶7公斤行李。\n請勿重複付款。",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 24,
+      "asset": "hant-luggage-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "c6453a7127d004997f939c9565b551b90cd6f7f3b5acea2cac2bfe22d67ee8a2",
+      "pixelSha256": "a2f9cc384c368069ede9d69f25677dd6432601d69edf2fefe5065b483d74c63c",
+      "renderedLines": [
+        "每人限帶7公斤行李。",
+        "請勿重複付款。"
+      ]
+    },
+    {
+      "id": "hant-luggage",
+      "language": "zh-Hant",
+      "source": "每人限帶7公斤行李。\n請勿重複付款。",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 32,
+      "asset": "hant-luggage-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "0038332f6f16c5dd6a05f64c37cbefe033e141038a81d1aacde8ee485dc28de0",
+      "pixelSha256": "386cd9cd9872768878af3e063460d2e7c0e5dff1fa29f4de3c68e85f92249adb",
+      "renderedLines": [
+        "每人限帶7公斤行李。",
+        "請勿重複付款。"
+      ]
+    },
+    {
+      "id": "mixed-room",
+      "language": "mixed",
+      "source": "Room B / 房间B\nChambre B : 95 €\n每晚，不含税。",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 16,
+      "asset": "mixed-room-16.png",
+      "width": 640,
+      "height": 145,
+      "pngSha256": "ba7c09ac24b21673143d1313e14bc3bc115f83e6212c12575d1140dea3960b3e",
+      "pixelSha256": "06a7a5bc9df767bb841478055734851f78d9010e44c146b7f4122ffc0ced4f17",
+      "renderedLines": [
+        "Room B / 房间B",
+        "Chambre B : 95 €",
+        "每晚，不含税。"
+      ]
+    },
+    {
+      "id": "mixed-room",
+      "language": "mixed",
+      "source": "Room B / 房间B\nChambre B : 95 €\n每晚，不含税。",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 24,
+      "asset": "mixed-room-24.png",
+      "width": 640,
+      "height": 175,
+      "pngSha256": "f000c0a83e9734178b3a471f9d84bec668539dbcc3946ccd51203a40a72ed860",
+      "pixelSha256": "9f354598ab748f310850ffb92fe780d184a43f9343cfc6b27c597bad4c5f9fdc",
+      "renderedLines": [
+        "Room B / 房间B",
+        "Chambre B : 95 €",
+        "每晚，不含税。"
+      ]
+    },
+    {
+      "id": "mixed-room",
+      "language": "mixed",
+      "source": "Room B / 房间B\nChambre B : 95 €\n每晚，不含税。",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 32,
+      "asset": "mixed-room-32.png",
+      "width": 640,
+      "height": 208,
+      "pngSha256": "183ac8225b70525e44cb3ac374c4e82082ff3504ee1dff2350c50a7a712bc581",
+      "pixelSha256": "5ff1743caa5d2186fc8c299828dd1cb6f7fa5f1b2191a9269245c2665fe9500c",
+      "renderedLines": [
+        "Room B / 房间B",
+        "Chambre B : 95 €",
+        "每晚，不含税。"
+      ]
+    },
+    {
+      "id": "mixed-exit",
+      "language": "mixed",
+      "source": "Sortie / Exit / 出口\nNe pas entrer / 禁止进入",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 16,
+      "asset": "mixed-exit-16.png",
+      "width": 640,
+      "height": 118,
+      "pngSha256": "b56781f23580521c165dbdd3baf0cfc624c37930cd3a58e0e71e30096412bb24",
+      "pixelSha256": "bd2257eb348b8045bf170180e845376c979ab9f6cdb8173c44029099551e87eb",
+      "renderedLines": [
+        "Sortie / Exit / 出口",
+        "Ne pas entrer / 禁止进入"
+      ]
+    },
+    {
+      "id": "mixed-exit",
+      "language": "mixed",
+      "source": "Sortie / Exit / 出口\nNe pas entrer / 禁止进入",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 24,
+      "asset": "mixed-exit-24.png",
+      "width": 640,
+      "height": 138,
+      "pngSha256": "6dcda40a61e662788e80920557faec366d96dfa637b19ef57befeff5d88c6a44",
+      "pixelSha256": "489f7c93c2cb1efe8ed44be84da6db9f8e78093eb15ea9a46bfa45ddfa34a417",
+      "renderedLines": [
+        "Sortie / Exit / 出口",
+        "Ne pas entrer / 禁止进入"
+      ]
+    },
+    {
+      "id": "mixed-exit",
+      "language": "mixed",
+      "source": "Sortie / Exit / 出口\nNe pas entrer / 禁止进入",
+      "fontSizesPx": [
+        16,
+        24,
+        32
+      ],
+      "fontPx": 32,
+      "asset": "mixed-exit-32.png",
+      "width": 640,
+      "height": 160,
+      "pngSha256": "b9fc248571039d82d0a1f51bede8c35aef66c555159a87964b97e5aa75c06332",
+      "pixelSha256": "d9ed8f523d9e0542cb4bba6d9a12995ce6047bf6ee61b8a56725a5a7ba3cfeef",
+      "renderedLines": [
+        "Sortie / Exit / 出口",
+        "Ne pas entrer / 禁止进入"
+      ]
+    },
+    {
+      "id": "blank-negative",
+      "language": "none",
+      "source": "",
+      "fontPx": 24,
+      "asset": "blank-negative-24.png",
+      "width": 640,
+      "height": 101,
+      "pngSha256": "ae57633560626ae3902356aa31cf7afd1e67ee1c9aa289e12e177412f834e19f",
+      "pixelSha256": "cb5d15f46063e0e36d09f0cc85ea65f95918fd5c9bd1aa701c212a7d78c3b728",
+      "renderedLines": [
+        ""
+      ]
+    }
+  ]
+}
