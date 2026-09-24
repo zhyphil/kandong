@@ -1,0 +1,84 @@
+{
+  "scope": "Mac_only_synthetic_screening",
+  "initialPsmProbeTasks": 36,
+  "pairedMatrixTasks": 144,
+  "androidSmooth2PixelMatchesPerModelSet": 18,
+  "groups": [
+    {
+      "models": "existing",
+      "languageOrder": "eng+fra+chi_sim+chi_tra",
+      "scale": 1,
+      "textExact": 5,
+      "textCount": 17,
+      "blankCorrect": true
+    },
+    {
+      "models": "existing",
+      "languageOrder": "eng+fra+chi_sim+chi_tra",
+      "scale": 2,
+      "textExact": 4,
+      "textCount": 17,
+      "blankCorrect": true
+    },
+    {
+      "models": "existing",
+      "languageOrder": "chi_sim+chi_tra+eng+fra",
+      "scale": 1,
+      "textExact": 5,
+      "textCount": 17,
+      "blankCorrect": true
+    },
+    {
+      "models": "existing",
+      "languageOrder": "chi_sim+chi_tra+eng+fra",
+      "scale": 2,
+      "textExact": 3,
+      "textCount": 17,
+      "blankCorrect": true
+    },
+    {
+      "models": "best",
+      "languageOrder": "eng+fra+chi_sim+chi_tra",
+      "scale": 1,
+      "textExact": 7,
+      "textCount": 17,
+      "blankCorrect": true
+    },
+    {
+      "models": "best",
+      "languageOrder": "eng+fra+chi_sim+chi_tra",
+      "scale": 2,
+      "textExact": 6,
+      "textCount": 17,
+      "blankCorrect": true
+    },
+    {
+      "models": "best",
+      "languageOrder": "chi_sim+chi_tra+eng+fra",
+      "scale": 1,
+      "textExact": 5,
+      "textCount": 17,
+      "blankCorrect": true
+    },
+    {
+      "models": "best",
+      "languageOrder": "chi_sim+chi_tra+eng+fra",
+      "scale": 2,
+      "textExact": 3,
+      "textCount": 17,
+      "blankCorrect": true
+    }
+  ],
+  "decision": "do_not_integrate_current_four_language_Tesseract_pipeline",
+  "reason": "critical CJK/mixed errors remain; language order and larger models do not consistently preserve original text",
+  "scriptSha256": "b829581e45ff41f1b08d52410c2a9ec1f0b125ba305fe9238f729cad22dcec17",
+  "dependencies": {
+    "python": "3.14.3",
+    "numpy": "2.4.2",
+    "pillow": "12.1.1",
+    "tesseract": "5.5.2"
+  },
+  "modelBinariesCommitted": false,
+  "AndroidDependenciesChanged": false,
+  "repoScriptGzipInputRecheck72RawAndPixelIdentical": true
+}

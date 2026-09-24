@@ -1,0 +1,43 @@
+{
+  "repository": "tesseract-ocr/tessdata_best",
+  "commit": "e12c65a915945e4c28e237a9b52bc4a8f39a0cec",
+  "files": {
+    "eng.traineddata": {
+      "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_best/e12c65a915945e4c28e237a9b52bc4a8f39a0cec/eng.traineddata",
+      "bytes": 15400601,
+      "sha256": "8280aed0782fe27257a68ea10fe7ef324ca0f8d85bd2fd145d1c2b560bcb66ba",
+      "gitBlobSha1": "176dc3220de7db34d3b3aecbfa42043a6038348b"
+    },
+    "fra.traineddata": {
+      "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_best/e12c65a915945e4c28e237a9b52bc4a8f39a0cec/fra.traineddata",
+      "bytes": 3972885,
+      "sha256": "907743d98915c91a3906dfbf6e48b97598346698fe53aaa797e1a064ffcac913",
+      "gitBlobSha1": "f73e7dec0669dbac6443d8f83054b8b2a3146729"
+    },
+    "chi_sim.traineddata": {
+      "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_best/e12c65a915945e4c28e237a9b52bc4a8f39a0cec/chi_sim.traineddata",
+      "bytes": 13077423,
+      "sha256": "4fef2d1306c8e87616d4d3e4c6c67faf5d44be3342290cf8f2f0f6e3aa7e735b",
+      "gitBlobSha1": "da7fa49ded2895ebe974c6ea3a6cc1af8595f1af"
+    },
+    "chi_tra.traineddata": {
+      "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_best/e12c65a915945e4c28e237a9b52bc4a8f39a0cec/chi_tra.traineddata",
+      "bytes": 12985735,
+      "sha256": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028",
+      "gitBlobSha1": "c1dd109cd5bbec27381f578e9a425cef88466244"
+    },
+    "README.md": {
+      "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_best/e12c65a915945e4c28e237a9b52bc4a8f39a0cec/README.md",
+      "bytes": 470,
+      "sha256": "08c87523fb799c5bae6380f6ffa1a823494ab78f63906d7255dddd7671f94a5f",
+      "gitBlobSha1": "4b1345ed197d9d62b7cd9e5ac9043c1ed7df1a58"
+    },
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_best/e12c65a915945e4c28e237a9b52bc4a8f39a0cec/LICENSE",
+      "bytes": 10173,
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "gitBlobSha1": "d9a10c0d8e868ebf8da0b3dc95bb0be634c34bfe"
+    }
+  },
+  "scope": "temporary_host_synthetic_evaluation_only_no_Android_install"
+}
