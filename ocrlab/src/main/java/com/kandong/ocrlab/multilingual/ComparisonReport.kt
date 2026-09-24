@@ -12,7 +12,7 @@ import org.json.JSONObject
 import java.io.File
 import java.util.UUID
 
-internal class ComparisonReport {
+internal class ComparisonReport(profile: ComparisonProfile) {
     val runId = UUID.randomUUID().toString()
     private val started = SystemClock.elapsedRealtime()
     private val results = JSONArray()
@@ -22,7 +22,7 @@ internal class ComparisonReport {
     var operationalCompletedCount = 0; private set
     private val document = JSONObject()
         .put("schema", 1).put("runId", runId).put("scope", "fixed_packaged_synthetic_ocr_only")
-        .put("fixtureVersion", "trilingual-v1").put("manifestSha256", ComparisonPlan.MANIFEST_SHA256)
+        .put("processingProfile", profile.name).put("fixtureVersion", "trilingual-v1").put("manifestSha256", ComparisonPlan.MANIFEST_SHA256)
         .put("originalFixtureSha256", SyntheticFixtures.SHA256)
         .put("models", JSONObject().put("latin", "com.google.mlkit:text-recognition:16.0.1")
             .put("chinese", "com.google.mlkit:text-recognition-chinese:16.0.1"))
@@ -88,7 +88,7 @@ internal class ComparisonReport {
                 .put("processed", JSONObject().put("pixelSha256", image.processedPixelSha256)
                     .put("width", image.bitmap.width).put("height", image.bitmap.height)
                     .put("scaleX", image.scaleX.toDouble()).put("scaleY", image.scaleY.toDouble())
-                    .put("algorithm", if (task.scale == 1) "identity-v1" else "nearest-neighbor-exact-2x2-v1"))
+                    .put("algorithm", task.algorithm))
                 .put("recognizedRaw", raw ?: JSONObject.NULL).put("blocks", blocks)
                 .put("sdkRecognizedLanguage", JSONObject.NULL).put("sdkLanguageStatus", "not_available_at_document_level")
                 .put("sourceNormalized", OcrComparison.normalize(input.case.source))

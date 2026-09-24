@@ -1,0 +1,1791 @@
+{
+  "scope": "synthetic_diagnostic_not_general_accuracy_or_translation",
+  "device": {
+    "manufacturer": "HUAWEI",
+    "model": "LIO-AN00",
+    "api": 31,
+    "fingerprint": "HUAWEI/LIO-AN00/HWLIO:12/HUAWEILIO-AN00/104.2.0.136C00:user/release-keys"
+  },
+  "reportSha256": "bab0ba22ab601fbb8cbd1dc310dd50f717032a186bdafd8a9e741f27927aa90e",
+  "runId": "cda31043-10a2-4109-a066-df6f386b9eb8",
+  "processedCount": 144,
+  "elapsedMs": 49823,
+  "samePixelsAcrossEngines": true,
+  "fixedInputHashesVerified": true,
+  "coordinateUnscaleVerified": true,
+  "sdkLanguageNodeCounts": {
+    "und": 183,
+    "fr": 330,
+    "en": 221,
+    "zh": 244,
+    "nl": 32,
+    "la": 8,
+    "am": 16,
+    "mt": 3,
+    "da": 14,
+    "und-Latn": 33,
+    "sq": 3,
+    "sl": 3
+  },
+  "groups": [
+    {
+      "group": [
+        "fixed",
+        "chinese",
+        2
+      ],
+      "textInputs": 17,
+      "strictMatches": 6,
+      "blankEmpty": true,
+      "ocrMedianMs": 106.0,
+      "mismatches": [
+        {
+          "inputId": "fr-total-16",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234,50 €"
+        },
+        {
+          "inputId": "fr-total-24",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234,50€"
+        },
+        {
+          "inputId": "fr-total-32",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234,50 €"
+        },
+        {
+          "inputId": "en-quality-32",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The total is 39.90€, tax not included."
+        },
+        {
+          "inputId": "fr-quality-16",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Échéance: 18:00."
+        },
+        {
+          "inputId": "zh-hans-quality-16",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "总计1234.50元,不含税。\n行季最多8公斤,不可退款。"
+        },
+        {
+          "inputId": "zh-hans-quality-32",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "总计1234.50元,不舍税。\n行季最多8公斤,不可退款。"
+        },
+        {
+          "inputId": "zh-hant-quality-16",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "總計1234.50元,不含稅。\n行季最多8公斤,不可退款。"
+        },
+        {
+          "inputId": "zh-hant-quality-32",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "總計1234.50元,不含稅。\n行季最多8公斤,不可退款。"
+        },
+        {
+          "inputId": "mixed-quality-16",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "房间A/FRoom A\nChambreA: 120 €/night\n不含稅/不含税"
+        },
+        {
+          "inputId": "mixed-quality-32",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "房间A/Room A\nChambre A:120€/night\n不舍稅/不舍稅"
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "chinese",
+        3
+      ],
+      "textInputs": 17,
+      "strictMatches": 4,
+      "blankEmpty": true,
+      "ocrMedianMs": 126.5,
+      "mismatches": [
+        {
+          "inputId": "fr-total-16",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234,50 €"
+        },
+        {
+          "inputId": "fr-total-24",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234,50€"
+        },
+        {
+          "inputId": "fr-total-32",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234,50 €"
+        },
+        {
+          "inputId": "en-quality-16",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The total is 39.90€, tax not included."
+        },
+        {
+          "inputId": "en-quality-32",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The total is 39.90 €,taxnot included."
+        },
+        {
+          "inputId": "fr-quality-16",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Échéance: 18:00."
+        },
+        {
+          "inputId": "fr-quality-32",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Echéance :\n18:00."
+        },
+        {
+          "inputId": "zh-hans-quality-16",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "总计1234.50元,不含稅。\n行季最多8公斤,不可返敷。"
+        },
+        {
+          "inputId": "zh-hans-quality-32",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "总计1234.50元,不合税。\n行季最多8公斤,不可退款。"
+        },
+        {
+          "inputId": "zh-hant-quality-16",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "總計1234.50元,不含稅。\n行季最多8公斤,不可返款。"
+        },
+        {
+          "inputId": "zh-hant-quality-32",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "總計1234.50元,不含稅。\n行季最多8公斤,不可退款。"
+        },
+        {
+          "inputId": "mixed-quality-16",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "房间A/Room A\nChambre A:120€/night\n不含税/不含稅"
+        },
+        {
+          "inputId": "mixed-quality-32",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "房间A/Room A\nChambre A:120€/night\n不含税/不含稅"
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "latin",
+        2
+      ],
+      "textInputs": 17,
+      "strictMatches": 6,
+      "blankEmpty": true,
+      "ocrMedianMs": 71.5,
+      "mismatches": [
+        {
+          "inputId": "fr-total-16",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total : 1234,50 €"
+        },
+        {
+          "inputId": "fr-total-24",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total:1 234,50 €"
+        },
+        {
+          "inputId": "fr-total-32",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50 €"
+        },
+        {
+          "inputId": "en-quality-32",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The total is 39.90€, tax not included."
+        },
+        {
+          "inputId": "fr-quality-16",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Échéance: 18:00."
+        },
+        {
+          "inputId": "zh-hans-quality-16",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "it1234.50Jt, Fê.\nR84T,FJER."
+        },
+        {
+          "inputId": "zh-hans-quality-32",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "it1234.50Jt, F.\nT84F,F AjE."
+        },
+        {
+          "inputId": "zh-hant-quality-16",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "t1234.50 ,F.\nR84T,FJER."
+        },
+        {
+          "inputId": "zh-hant-quality-32",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "1234.50Jt , FâR.\nTR38AFT"
+        },
+        {
+          "inputId": "mixed-quality-16",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "BA/Room A\nChambre A: 120 €/ night"
+        },
+        {
+          "inputId": "mixed-quality-32",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "A Room A\nChambre A: 120€l night"
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "latin",
+        3
+      ],
+      "textInputs": 17,
+      "strictMatches": 5,
+      "blankEmpty": true,
+      "ocrMedianMs": 93.5,
+      "mismatches": [
+        {
+          "inputId": "fr-total-16",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total : 1234,50 €"
+        },
+        {
+          "inputId": "fr-total-24",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50 €E"
+        },
+        {
+          "inputId": "fr-total-32",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50 €"
+        },
+        {
+          "inputId": "en-quality-32",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The total is 39.90€, tax not included."
+        },
+        {
+          "inputId": "fr-quality-16",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Échéance: 18:00."
+        },
+        {
+          "inputId": "fr-quality-32",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Echéance :\n18:00."
+        },
+        {
+          "inputId": "zh-hans-quality-16",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "it1234.50t ,FB.\n584T,FJE."
+        },
+        {
+          "inputId": "zh-hans-quality-32",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "Ait1234.50t, TFB."
+        },
+        {
+          "inputId": "zh-hant-quality-16",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "t1234.50Jt, F$.\nGR8T,ai."
+        },
+        {
+          "inputId": "zh-hant-quality-32",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "t1234.50L , FRo"
+        },
+        {
+          "inputId": "mixed-quality-16",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "A Room A\nChambre A: 120€/ night"
+        },
+        {
+          "inputId": "mixed-quality-32",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "AI Room A\nChambre A: 120€/ night"
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "chinese",
+        2
+      ],
+      "textInputs": 17,
+      "strictMatches": 4,
+      "blankEmpty": true,
+      "ocrMedianMs": 109.5,
+      "mismatches": [
+        {
+          "inputId": "fr-total-16",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234,50 €"
+        },
+        {
+          "inputId": "fr-total-24",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50€"
+        },
+        {
+          "inputId": "fr-total-32",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234.50 €"
+        },
+        {
+          "inputId": "fr-nonrefundable-16",
+          "source": "Ce billet n'est ni échangeable ni remboursable.",
+          "recognizedRaw": "Ce billet nest ni échangeable ni remboursable."
+        },
+        {
+          "inputId": "en-quality-16",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The totalis 39.90 €, tax not included."
+        },
+        {
+          "inputId": "fr-quality-16",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Echéance: 18:00."
+        },
+        {
+          "inputId": "fr-quality-32",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Échéance:\n18:00."
+        },
+        {
+          "inputId": "zh-hans-quality-16",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "总计1234.50元,不含税。\n行李最多8公厅,不可退款。"
+        },
+        {
+          "inputId": "zh-hans-quality-32",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "总计1234.50元,不合税。\n行李最多8公斤,不可退款。"
+        },
+        {
+          "inputId": "zh-hant-quality-16",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "總計1234.50元,不含稅。\n行李最多8公厅,不可返歉。"
+        },
+        {
+          "inputId": "zh-hant-quality-32",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "總計1234.50元,不含稅。\n行李最多8公斤,不可退款。"
+        },
+        {
+          "inputId": "mixed-quality-16",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "|房间A/Room A\nChambreA: 120€/night\n不合稅/不合稅"
+        },
+        {
+          "inputId": "mixed-quality-32",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "|房间A/Room A\nChambre A:120 €/ night\n不合稅/不含稅"
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "chinese",
+        3
+      ],
+      "textInputs": 17,
+      "strictMatches": 3,
+      "blankEmpty": true,
+      "ocrMedianMs": 143.5,
+      "mismatches": [
+        {
+          "inputId": "fr-total-16",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total:1234.50 €"
+        },
+        {
+          "inputId": "fr-total-24",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50€"
+        },
+        {
+          "inputId": "fr-total-32",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234,50 €"
+        },
+        {
+          "inputId": "fr-nonrefundable-16",
+          "source": "Ce billet n'est ni échangeable ni remboursable.",
+          "recognizedRaw": "Ce billet nest ni échangeable ni remboursable."
+        },
+        {
+          "inputId": "en-quality-16",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The totalis 39.90 €, tax not included."
+        },
+        {
+          "inputId": "en-quality-32",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The total is 39.90€,tax not included."
+        },
+        {
+          "inputId": "fr-quality-16",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Échéance :18:00."
+        },
+        {
+          "inputId": "fr-quality-32",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Echéance\n18:00."
+        },
+        {
+          "inputId": "zh-hans-quality-16",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "总计1234.50元,不含稅。\n行季最多8公斤,不可返歉。"
+        },
+        {
+          "inputId": "zh-hans-quality-32",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "总计1234.50元,不含税。\n行季最多8公斤,不可退款。"
+        },
+        {
+          "inputId": "zh-hant-quality-16",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "總計1234.50元,不含稅。\n行李最多8公厅,不可退款。"
+        },
+        {
+          "inputId": "zh-hant-quality-32",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "總計1234.50元,不含稅。\n行季最多8公斤,不可退款。"
+        },
+        {
+          "inputId": "mixed-quality-16",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "房间A/Room A\nChambreA: 120 €/ night\n不合稅/不合稅"
+        },
+        {
+          "inputId": "mixed-quality-32",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "房间A/ Room A\nChambreA:120 €/ night\n不合稅/不合稅"
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "latin",
+        2
+      ],
+      "textInputs": 17,
+      "strictMatches": 5,
+      "blankEmpty": true,
+      "ocrMedianMs": 96.0,
+      "mismatches": [
+        {
+          "inputId": "fr-total-16",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total :1 234,50 €"
+        },
+        {
+          "inputId": "fr-total-24",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total:1 234,50€"
+        },
+        {
+          "inputId": "fr-total-32",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50 €"
+        },
+        {
+          "inputId": "fr-nonrefundable-16",
+          "source": "Ce billet n'est ni échangeable ni remboursable.",
+          "recognizedRaw": "Ce billet nest ni échangeable ni remboursable."
+        },
+        {
+          "inputId": "fr-quality-16",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Echéance: 18:00."
+        },
+        {
+          "inputId": "fr-quality-32",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Échéance:\n18:00."
+        },
+        {
+          "inputId": "zh-hans-quality-16",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "Rit1234.50Tt, Fa."
+        },
+        {
+          "inputId": "zh-hans-quality-32",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "&it1234.50JG, FA.\n(7R38AFT, FJE."
+        },
+        {
+          "inputId": "zh-hant-quality-16",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "i1234.50J., FâR.\n7R38/AFT, FaEM."
+        },
+        {
+          "inputId": "zh-hant-quality-32",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "ABšt1234.50JG, Fa4.\n(7R38FT, FJEK."
+        },
+        {
+          "inputId": "mixed-quality-16",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "$aA/ Room A\nChambre A:120 €/ night"
+        },
+        {
+          "inputId": "mixed-quality-32",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "EJA/Room A\nChambre A:120 € / night"
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "latin",
+        3
+      ],
+      "textInputs": 17,
+      "strictMatches": 4,
+      "blankEmpty": true,
+      "ocrMedianMs": 104.0,
+      "mismatches": [
+        {
+          "inputId": "fr-total-16",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234.50 €"
+        },
+        {
+          "inputId": "fr-total-24",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total:1 234,50 €"
+        },
+        {
+          "inputId": "fr-total-32",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total:1 234,50 €"
+        },
+        {
+          "inputId": "fr-nonrefundable-16",
+          "source": "Ce billet n'est ni échangeable ni remboursable.",
+          "recognizedRaw": "Ce billet nest ni échangeable ni remboursable."
+        },
+        {
+          "inputId": "en-quality-16",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The total is 39.90€, tax not included."
+        },
+        {
+          "inputId": "fr-quality-16",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Échéance :18:00."
+        },
+        {
+          "inputId": "fr-quality-32",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Echéance\n18:00."
+        },
+        {
+          "inputId": "zh-hans-quality-16",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "&it1234.50Tt, F&%.\n(7R38AFT, FaJiEM."
+        },
+        {
+          "inputId": "zh-hans-quality-32",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "ait1234.50J., Fa.\n(5RZ8AFT, FoJER."
+        },
+        {
+          "inputId": "zh-hant-quality-16",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "it1234.50Tt, Fâ.\n70884F, FajiER."
+        },
+        {
+          "inputId": "zh-hant-quality-32",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "1234.50Tt, F&R.\n(5RZ8AFT, FoJER."
+        },
+        {
+          "inputId": "mixed-quality-16",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "A/ Room A\nChambre A:120€/ night"
+        },
+        {
+          "inputId": "mixed-quality-32",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "JA/ Room A\nChambre A:120 €/ night"
+        }
+      ]
+    }
+  ],
+  "languageGroups": [
+    {
+      "group": [
+        "fixed",
+        "chinese",
+        2,
+        "en"
+      ],
+      "textInputs": 2,
+      "strictMatches": 1,
+      "blankEmpty": true,
+      "ocrMedianMs": 89.5,
+      "mismatches": [
+        {
+          "inputId": "en-quality-32",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The total is 39.90€, tax not included."
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "chinese",
+        2,
+        "fr"
+      ],
+      "textInputs": 9,
+      "strictMatches": 5,
+      "blankEmpty": true,
+      "ocrMedianMs": 103,
+      "mismatches": [
+        {
+          "inputId": "fr-total-16",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234,50 €"
+        },
+        {
+          "inputId": "fr-total-24",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234,50€"
+        },
+        {
+          "inputId": "fr-total-32",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234,50 €"
+        },
+        {
+          "inputId": "fr-quality-16",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Échéance: 18:00."
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "chinese",
+        2,
+        "mixed"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 111.5,
+      "mismatches": [
+        {
+          "inputId": "mixed-quality-16",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "房间A/FRoom A\nChambreA: 120 €/night\n不含稅/不含税"
+        },
+        {
+          "inputId": "mixed-quality-32",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "房间A/Room A\nChambre A:120€/night\n不舍稅/不舍稅"
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "chinese",
+        2,
+        "none"
+      ],
+      "textInputs": 0,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 24,
+      "mismatches": []
+    },
+    {
+      "group": [
+        "fixed",
+        "chinese",
+        2,
+        "zh-Hans"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 136.5,
+      "mismatches": [
+        {
+          "inputId": "zh-hans-quality-16",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "总计1234.50元,不含税。\n行季最多8公斤,不可退款。"
+        },
+        {
+          "inputId": "zh-hans-quality-32",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "总计1234.50元,不舍税。\n行季最多8公斤,不可退款。"
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "chinese",
+        2,
+        "zh-Hant"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 113.0,
+      "mismatches": [
+        {
+          "inputId": "zh-hant-quality-16",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "總計1234.50元,不含稅。\n行季最多8公斤,不可退款。"
+        },
+        {
+          "inputId": "zh-hant-quality-32",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "總計1234.50元,不含稅。\n行季最多8公斤,不可退款。"
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "chinese",
+        3,
+        "en"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 137.0,
+      "mismatches": [
+        {
+          "inputId": "en-quality-16",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The total is 39.90€, tax not included."
+        },
+        {
+          "inputId": "en-quality-32",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The total is 39.90 €,taxnot included."
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "chinese",
+        3,
+        "fr"
+      ],
+      "textInputs": 9,
+      "strictMatches": 4,
+      "blankEmpty": true,
+      "ocrMedianMs": 122,
+      "mismatches": [
+        {
+          "inputId": "fr-total-16",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234,50 €"
+        },
+        {
+          "inputId": "fr-total-24",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234,50€"
+        },
+        {
+          "inputId": "fr-total-32",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234,50 €"
+        },
+        {
+          "inputId": "fr-quality-16",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Échéance: 18:00."
+        },
+        {
+          "inputId": "fr-quality-32",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Echéance :\n18:00."
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "chinese",
+        3,
+        "mixed"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 145.5,
+      "mismatches": [
+        {
+          "inputId": "mixed-quality-16",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "房间A/Room A\nChambre A:120€/night\n不含税/不含稅"
+        },
+        {
+          "inputId": "mixed-quality-32",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "房间A/Room A\nChambre A:120€/night\n不含税/不含稅"
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "chinese",
+        3,
+        "none"
+      ],
+      "textInputs": 0,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 35,
+      "mismatches": []
+    },
+    {
+      "group": [
+        "fixed",
+        "chinese",
+        3,
+        "zh-Hans"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 130.0,
+      "mismatches": [
+        {
+          "inputId": "zh-hans-quality-16",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "总计1234.50元,不含稅。\n行季最多8公斤,不可返敷。"
+        },
+        {
+          "inputId": "zh-hans-quality-32",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "总计1234.50元,不合税。\n行季最多8公斤,不可退款。"
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "chinese",
+        3,
+        "zh-Hant"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 123.5,
+      "mismatches": [
+        {
+          "inputId": "zh-hant-quality-16",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "總計1234.50元,不含稅。\n行季最多8公斤,不可返款。"
+        },
+        {
+          "inputId": "zh-hant-quality-32",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "總計1234.50元,不含稅。\n行季最多8公斤,不可退款。"
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "latin",
+        2,
+        "en"
+      ],
+      "textInputs": 2,
+      "strictMatches": 1,
+      "blankEmpty": true,
+      "ocrMedianMs": 70.5,
+      "mismatches": [
+        {
+          "inputId": "en-quality-32",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The total is 39.90€, tax not included."
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "latin",
+        2,
+        "fr"
+      ],
+      "textInputs": 9,
+      "strictMatches": 5,
+      "blankEmpty": true,
+      "ocrMedianMs": 65,
+      "mismatches": [
+        {
+          "inputId": "fr-total-16",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total : 1234,50 €"
+        },
+        {
+          "inputId": "fr-total-24",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total:1 234,50 €"
+        },
+        {
+          "inputId": "fr-total-32",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50 €"
+        },
+        {
+          "inputId": "fr-quality-16",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Échéance: 18:00."
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "latin",
+        2,
+        "mixed"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 113.0,
+      "mismatches": [
+        {
+          "inputId": "mixed-quality-16",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "BA/Room A\nChambre A: 120 €/ night"
+        },
+        {
+          "inputId": "mixed-quality-32",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "A Room A\nChambre A: 120€l night"
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "latin",
+        2,
+        "none"
+      ],
+      "textInputs": 0,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 44,
+      "mismatches": []
+    },
+    {
+      "group": [
+        "fixed",
+        "latin",
+        2,
+        "zh-Hans"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 88.0,
+      "mismatches": [
+        {
+          "inputId": "zh-hans-quality-16",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "it1234.50Jt, Fê.\nR84T,FJER."
+        },
+        {
+          "inputId": "zh-hans-quality-32",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "it1234.50Jt, F.\nT84F,F AjE."
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "latin",
+        2,
+        "zh-Hant"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 90.5,
+      "mismatches": [
+        {
+          "inputId": "zh-hant-quality-16",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "t1234.50 ,F.\nR84T,FJER."
+        },
+        {
+          "inputId": "zh-hant-quality-32",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "1234.50Jt , FâR.\nTR38AFT"
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "latin",
+        3,
+        "en"
+      ],
+      "textInputs": 2,
+      "strictMatches": 1,
+      "blankEmpty": true,
+      "ocrMedianMs": 117.5,
+      "mismatches": [
+        {
+          "inputId": "en-quality-32",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The total is 39.90€, tax not included."
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "latin",
+        3,
+        "fr"
+      ],
+      "textInputs": 9,
+      "strictMatches": 4,
+      "blankEmpty": true,
+      "ocrMedianMs": 91,
+      "mismatches": [
+        {
+          "inputId": "fr-total-16",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total : 1234,50 €"
+        },
+        {
+          "inputId": "fr-total-24",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50 €E"
+        },
+        {
+          "inputId": "fr-total-32",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50 €"
+        },
+        {
+          "inputId": "fr-quality-16",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Échéance: 18:00."
+        },
+        {
+          "inputId": "fr-quality-32",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Echéance :\n18:00."
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "latin",
+        3,
+        "mixed"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 150.0,
+      "mismatches": [
+        {
+          "inputId": "mixed-quality-16",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "A Room A\nChambre A: 120€/ night"
+        },
+        {
+          "inputId": "mixed-quality-32",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "AI Room A\nChambre A: 120€/ night"
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "latin",
+        3,
+        "none"
+      ],
+      "textInputs": 0,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 47,
+      "mismatches": []
+    },
+    {
+      "group": [
+        "fixed",
+        "latin",
+        3,
+        "zh-Hans"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 116.0,
+      "mismatches": [
+        {
+          "inputId": "zh-hans-quality-16",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "it1234.50t ,FB.\n584T,FJE."
+        },
+        {
+          "inputId": "zh-hans-quality-32",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "Ait1234.50t, TFB."
+        }
+      ]
+    },
+    {
+      "group": [
+        "fixed",
+        "latin",
+        3,
+        "zh-Hant"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 116.0,
+      "mismatches": [
+        {
+          "inputId": "zh-hant-quality-16",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "t1234.50Jt, F$.\nGR8T,ai."
+        },
+        {
+          "inputId": "zh-hant-quality-32",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "t1234.50L , FRo"
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "chinese",
+        2,
+        "en"
+      ],
+      "textInputs": 2,
+      "strictMatches": 1,
+      "blankEmpty": true,
+      "ocrMedianMs": 142.0,
+      "mismatches": [
+        {
+          "inputId": "en-quality-16",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The totalis 39.90 €, tax not included."
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "chinese",
+        2,
+        "fr"
+      ],
+      "textInputs": 9,
+      "strictMatches": 3,
+      "blankEmpty": true,
+      "ocrMedianMs": 97,
+      "mismatches": [
+        {
+          "inputId": "fr-total-16",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234,50 €"
+        },
+        {
+          "inputId": "fr-total-24",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50€"
+        },
+        {
+          "inputId": "fr-total-32",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234.50 €"
+        },
+        {
+          "inputId": "fr-nonrefundable-16",
+          "source": "Ce billet n'est ni échangeable ni remboursable.",
+          "recognizedRaw": "Ce billet nest ni échangeable ni remboursable."
+        },
+        {
+          "inputId": "fr-quality-16",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Echéance: 18:00."
+        },
+        {
+          "inputId": "fr-quality-32",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Échéance:\n18:00."
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "chinese",
+        2,
+        "mixed"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 133.0,
+      "mismatches": [
+        {
+          "inputId": "mixed-quality-16",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "|房间A/Room A\nChambreA: 120€/night\n不合稅/不合稅"
+        },
+        {
+          "inputId": "mixed-quality-32",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "|房间A/Room A\nChambre A:120 €/ night\n不合稅/不含稅"
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "chinese",
+        2,
+        "none"
+      ],
+      "textInputs": 0,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 64,
+      "mismatches": []
+    },
+    {
+      "group": [
+        "native",
+        "chinese",
+        2,
+        "zh-Hans"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 160.0,
+      "mismatches": [
+        {
+          "inputId": "zh-hans-quality-16",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "总计1234.50元,不含税。\n行李最多8公厅,不可退款。"
+        },
+        {
+          "inputId": "zh-hans-quality-32",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "总计1234.50元,不合税。\n行李最多8公斤,不可退款。"
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "chinese",
+        2,
+        "zh-Hant"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 147.5,
+      "mismatches": [
+        {
+          "inputId": "zh-hant-quality-16",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "總計1234.50元,不含稅。\n行李最多8公厅,不可返歉。"
+        },
+        {
+          "inputId": "zh-hant-quality-32",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "總計1234.50元,不含稅。\n行李最多8公斤,不可退款。"
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "chinese",
+        3,
+        "en"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 154.5,
+      "mismatches": [
+        {
+          "inputId": "en-quality-16",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The totalis 39.90 €, tax not included."
+        },
+        {
+          "inputId": "en-quality-32",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The total is 39.90€,tax not included."
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "chinese",
+        3,
+        "fr"
+      ],
+      "textInputs": 9,
+      "strictMatches": 3,
+      "blankEmpty": true,
+      "ocrMedianMs": 137,
+      "mismatches": [
+        {
+          "inputId": "fr-total-16",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total:1234.50 €"
+        },
+        {
+          "inputId": "fr-total-24",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50€"
+        },
+        {
+          "inputId": "fr-total-32",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1234,50 €"
+        },
+        {
+          "inputId": "fr-nonrefundable-16",
+          "source": "Ce billet n'est ni échangeable ni remboursable.",
+          "recognizedRaw": "Ce billet nest ni échangeable ni remboursable."
+        },
+        {
+          "inputId": "fr-quality-16",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Échéance :18:00."
+        },
+        {
+          "inputId": "fr-quality-32",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Echéance\n18:00."
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "chinese",
+        3,
+        "mixed"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 167.5,
+      "mismatches": [
+        {
+          "inputId": "mixed-quality-16",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "房间A/Room A\nChambreA: 120 €/ night\n不合稅/不合稅"
+        },
+        {
+          "inputId": "mixed-quality-32",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "房间A/ Room A\nChambreA:120 €/ night\n不合稅/不合稅"
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "chinese",
+        3,
+        "none"
+      ],
+      "textInputs": 0,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 93,
+      "mismatches": []
+    },
+    {
+      "group": [
+        "native",
+        "chinese",
+        3,
+        "zh-Hans"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 172.0,
+      "mismatches": [
+        {
+          "inputId": "zh-hans-quality-16",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "总计1234.50元,不含稅。\n行季最多8公斤,不可返歉。"
+        },
+        {
+          "inputId": "zh-hans-quality-32",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "总计1234.50元,不含税。\n行季最多8公斤,不可退款。"
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "chinese",
+        3,
+        "zh-Hant"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 124.5,
+      "mismatches": [
+        {
+          "inputId": "zh-hant-quality-16",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "總計1234.50元,不含稅。\n行李最多8公厅,不可退款。"
+        },
+        {
+          "inputId": "zh-hant-quality-32",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "總計1234.50元,不含稅。\n行季最多8公斤,不可退款。"
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "latin",
+        2,
+        "en"
+      ],
+      "textInputs": 2,
+      "strictMatches": 2,
+      "blankEmpty": true,
+      "ocrMedianMs": 91.5,
+      "mismatches": []
+    },
+    {
+      "group": [
+        "native",
+        "latin",
+        2,
+        "fr"
+      ],
+      "textInputs": 9,
+      "strictMatches": 3,
+      "blankEmpty": true,
+      "ocrMedianMs": 104,
+      "mismatches": [
+        {
+          "inputId": "fr-total-16",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total :1 234,50 €"
+        },
+        {
+          "inputId": "fr-total-24",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total:1 234,50€"
+        },
+        {
+          "inputId": "fr-total-32",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234,50 €"
+        },
+        {
+          "inputId": "fr-nonrefundable-16",
+          "source": "Ce billet n'est ni échangeable ni remboursable.",
+          "recognizedRaw": "Ce billet nest ni échangeable ni remboursable."
+        },
+        {
+          "inputId": "fr-quality-16",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Echéance: 18:00."
+        },
+        {
+          "inputId": "fr-quality-32",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Échéance:\n18:00."
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "latin",
+        2,
+        "mixed"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 114.0,
+      "mismatches": [
+        {
+          "inputId": "mixed-quality-16",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "$aA/ Room A\nChambre A:120 €/ night"
+        },
+        {
+          "inputId": "mixed-quality-32",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "EJA/Room A\nChambre A:120 € / night"
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "latin",
+        2,
+        "none"
+      ],
+      "textInputs": 0,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 45,
+      "mismatches": []
+    },
+    {
+      "group": [
+        "native",
+        "latin",
+        2,
+        "zh-Hans"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 129.5,
+      "mismatches": [
+        {
+          "inputId": "zh-hans-quality-16",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "Rit1234.50Tt, Fa."
+        },
+        {
+          "inputId": "zh-hans-quality-32",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "&it1234.50JG, FA.\n(7R38AFT, FJE."
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "latin",
+        2,
+        "zh-Hant"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 68.0,
+      "mismatches": [
+        {
+          "inputId": "zh-hant-quality-16",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "i1234.50J., FâR.\n7R38/AFT, FaEM."
+        },
+        {
+          "inputId": "zh-hant-quality-32",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "ABšt1234.50JG, Fa4.\n(7R38FT, FJEK."
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "latin",
+        3,
+        "en"
+      ],
+      "textInputs": 2,
+      "strictMatches": 1,
+      "blankEmpty": true,
+      "ocrMedianMs": 125.5,
+      "mismatches": [
+        {
+          "inputId": "en-quality-16",
+          "source": "The total is 39.90 €, tax not included.",
+          "recognizedRaw": "The total is 39.90€, tax not included."
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "latin",
+        3,
+        "fr"
+      ],
+      "textInputs": 9,
+      "strictMatches": 3,
+      "blankEmpty": true,
+      "ocrMedianMs": 98,
+      "mismatches": [
+        {
+          "inputId": "fr-total-16",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total: 1 234.50 €"
+        },
+        {
+          "inputId": "fr-total-24",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total:1 234,50 €"
+        },
+        {
+          "inputId": "fr-total-32",
+          "source": "Total : 1 234,50 €",
+          "recognizedRaw": "Total:1 234,50 €"
+        },
+        {
+          "inputId": "fr-nonrefundable-16",
+          "source": "Ce billet n'est ni échangeable ni remboursable.",
+          "recognizedRaw": "Ce billet nest ni échangeable ni remboursable."
+        },
+        {
+          "inputId": "fr-quality-16",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Échéance :18:00."
+        },
+        {
+          "inputId": "fr-quality-32",
+          "source": "Ne payez pas maintenant. Échéance : 18:00.",
+          "recognizedRaw": "Ne payez pas maintenant. Echéance\n18:00."
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "latin",
+        3,
+        "mixed"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 134.0,
+      "mismatches": [
+        {
+          "inputId": "mixed-quality-16",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "A/ Room A\nChambre A:120€/ night"
+        },
+        {
+          "inputId": "mixed-quality-32",
+          "source": "房间A / Room A\nChambre A : 120 € / night\n不含税 / 不含稅",
+          "recognizedRaw": "JA/ Room A\nChambre A:120 €/ night"
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "latin",
+        3,
+        "none"
+      ],
+      "textInputs": 0,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 40,
+      "mismatches": []
+    },
+    {
+      "group": [
+        "native",
+        "latin",
+        3,
+        "zh-Hans"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 116.0,
+      "mismatches": [
+        {
+          "inputId": "zh-hans-quality-16",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "&it1234.50Tt, F&%.\n(7R38AFT, FaJiEM."
+        },
+        {
+          "inputId": "zh-hans-quality-32",
+          "source": "总计1234.50元，不含税。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "ait1234.50J., Fa.\n(5RZ8AFT, FoJER."
+        }
+      ]
+    },
+    {
+      "group": [
+        "native",
+        "latin",
+        3,
+        "zh-Hant"
+      ],
+      "textInputs": 2,
+      "strictMatches": 0,
+      "blankEmpty": true,
+      "ocrMedianMs": 121.0,
+      "mismatches": [
+        {
+          "inputId": "zh-hant-quality-16",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "it1234.50Tt, Fâ.\n70884F, FajiER."
+        },
+        {
+          "inputId": "zh-hant-quality-32",
+          "source": "總計1234.50元，不含稅。\n行李最多8公斤，不可退款。",
+          "recognizedRaw": "1234.50Tt, F&R.\n(5RZ8AFT, FoJER."
+        }
+      ]
+    }
+  ]
+}

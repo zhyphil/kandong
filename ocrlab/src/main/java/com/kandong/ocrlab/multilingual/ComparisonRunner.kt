@@ -24,9 +24,9 @@ internal object ComparisonRunner {
     private val executor = Executor { handler.post(it) }
     private val gate = RunGate()
     private var current: Run? = null
-    private class Run(val token: RunGate.Token, val owner: Any, val context: Context,
+    private class Run(val token: RunGate.Token, val owner: Any, val context: Context, val profile: ComparisonProfile,
                       var observer: ((String, Boolean) -> Unit)?) {
-        val report = ComparisonReport()
+        val report = ComparisonReport(profile)
         val store = ComparisonStore(context.filesDir)
         var inputs: Map<String, ComparisonInput> = emptyMap()
         var cursor = ComparisonCursor(emptyList())
@@ -39,11 +39,11 @@ internal object ComparisonRunner {
         var consumed = false
     }
     fun isBusy() = current != null
-    fun start(context: Context, owner: Any, observer: (String, Boolean) -> Unit): Boolean {
+    fun start(context: Context, owner: Any, profile: ComparisonProfile = ComparisonProfile.BASELINE, observer: (String, Boolean) -> Unit): Boolean {
         checkMain()
         if (!ComparisonPlan.canStart(OcrRunner.isBusy(), isBusy())) return false
         val token = gate.acquire() ?: return false
-        val run = try { Run(token, owner, context.applicationContext, observer) } catch (_: Throwable) {
+        val run = try { Run(token, owner, context.applicationContext, profile, observer) } catch (_: Throwable) {
             gate.release(token); observer("无法初始化三语实验；没有启动 OCR。", false); return true
         }
         current = run
@@ -53,7 +53,7 @@ internal object ComparisonRunner {
         try {
             val inputs = ComparisonInputs.load(run.context)
             run.inputs = inputs.associateBy { it.inputId }
-            run.cursor = ComparisonCursor(ComparisonPlan.matrix(inputs.map { it.inputId }))
+            run.cursor = ComparisonCursor(ComparisonPlan.matrix(inputs.map { it.inputId }, profile))
             run.recognizers["latin"] = OnceResource(TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)) { it.close() }
             run.recognizers["chinese"] = OnceResource(TextRecognition.getClient(ChineseTextRecognizerOptions.Builder().build())) { it.close() }
         } catch (_: Throwable) {
@@ -82,7 +82,7 @@ internal object ComparisonRunner {
         if (descriptor == null) { finish(run, "completed"); return }
         run.report.beginTask(descriptor)
         val input = run.inputs.getValue(descriptor.inputId)
-        val image = try { ComparisonInputs.render(run.context, input, descriptor.sourceKind, descriptor.scale) }
+        val image = try { ComparisonInputs.render(run.context, input, descriptor.sourceKind, descriptor.scale, descriptor.algorithm) }
         catch (_: Throwable) { finish(run, "failed", "input_validation_or_render_failed"); return }
         val flight = Flight(descriptor, input, image)
         if (!gate.beginTask(run.token)) { flight.bitmap.close(); return }

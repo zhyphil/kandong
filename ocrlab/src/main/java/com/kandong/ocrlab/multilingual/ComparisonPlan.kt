@@ -2,8 +2,11 @@ package com.kandong.ocrlab.multilingual
 
 import java.security.MessageDigest
 
-internal data class ComparisonTask(val inputId: String, val sourceKind: String, val scale: Int, val engine: String) {
-    val taskId = "$inputId/$sourceKind/${scale}x/$engine"
+internal enum class ComparisonProfile { BASELINE, SMOOTH }
+internal data class ComparisonTask(val inputId: String, val sourceKind: String, val scale: Int, val engine: String,
+    val algorithm: String = if (scale == 1) "identity-v1" else "nearest-neighbor-exact-2x2-v1") {
+    val taskId = if (algorithm == "bilinear-center-integer-v1") "$inputId/$sourceKind/smooth/${scale}x/$engine"
+        else "$inputId/$sourceKind/${scale}x/$engine"
 }
 
 /** No expected text or language participates in scheduling or image processing. */
@@ -12,11 +15,13 @@ internal object ComparisonPlan {
     const val TOTAL = 144
     const val MAX_PIXELS = 4_000_000
     fun canStart(originalBusy: Boolean, comparisonBusy: Boolean) = !originalBusy && !comparisonBusy
-    fun matrix(ids: List<String>): List<ComparisonTask> {
+    fun matrix(ids: List<String>, profile: ComparisonProfile = ComparisonProfile.BASELINE): List<ComparisonTask> {
         require(ids.size == 18 && ids.toSet().size == 18) { "input_count_or_identity_invalid" }
+        val scales = if (profile == ComparisonProfile.BASELINE) listOf(1, 2) else listOf(2, 3)
         return ids.flatMap { id -> listOf("native", "fixed").flatMap { source ->
-            listOf(1, 2).flatMap { scale -> listOf("latin", "chinese").map { engine ->
-                ComparisonTask(id, source, scale, engine)
+            scales.flatMap { scale -> listOf("latin", "chinese").map { engine ->
+                if (profile == ComparisonProfile.SMOOTH) ComparisonTask(id, source, scale, engine, "bilinear-center-integer-v1")
+                else ComparisonTask(id, source, scale, engine)
             } }
         } }.also { require(it.size == TOTAL) }
     }

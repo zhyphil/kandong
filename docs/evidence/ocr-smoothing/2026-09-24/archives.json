@@ -1,0 +1,107 @@
+{
+  "api36/analysis.json": {
+    "sha256": "82a7ffd4fb6c8c22abbbe5b7a9f6bb0d60f10f8f263da187d25153a09b5f7d7d",
+    "uncompressedSha256": "82a7ffd4fb6c8c22abbbe5b7a9f6bb0d60f10f8f263da187d25153a09b5f7d7d",
+    "uncompressedBytes": 51246
+  },
+  "api36/background-report.json": {
+    "sha256": "60d86cf3389393a9808324d552db75afe9f0d42c1b35f30156d1d63b2252e00a",
+    "uncompressedSha256": "60d86cf3389393a9808324d552db75afe9f0d42c1b35f30156d1d63b2252e00a",
+    "uncompressedBytes": 8960
+  },
+  "api36/cancel-report.json": {
+    "sha256": "81293f66bb2498e3f554c9544ea2f3bd6c4aa37876e161c3aab157964273ca3d",
+    "uncompressedSha256": "81293f66bb2498e3f554c9544ea2f3bd6c4aa37876e161c3aab157964273ca3d",
+    "uncompressedBytes": 1608
+  },
+  "api36/cross-entry-comparison-report.json": {
+    "sha256": "4249ec368c86c4ab06d35083158eb6c82fadef570c60ed6bb3f4928ff922c284",
+    "uncompressedSha256": "4249ec368c86c4ab06d35083158eb6c82fadef570c60ed6bb3f4928ff922c284",
+    "uncompressedBytes": 24000
+  },
+  "api36/cross-entry-original-report.json": {
+    "sha256": "5c87cead6ba07dfb0d8f792b0a5361c281180930c6870567a2136e65a111a4fa",
+    "uncompressedSha256": "5c87cead6ba07dfb0d8f792b0a5361c281180930c6870567a2136e65a111a4fa",
+    "uncompressedBytes": 1415
+  },
+  "api36/cross-entry-original-restart-report.json": {
+    "sha256": "9995e516d96db0105a727283345c924b52aedf30957893c0f983e6c87431a7a5",
+    "uncompressedSha256": "9995e516d96db0105a727283345c924b52aedf30957893c0f983e6c87431a7a5",
+    "uncompressedBytes": 22321
+  },
+  "api36/full-report.json.gz": {
+    "sha256": "e9b0a28e81c384828bb64a4c572ec10736f6f5ebb26eed93342cce3674661c2c",
+    "uncompressedSha256": "b95334dee44adcbd16692bf135ce4fd798d45e863e480aae589f773df23d8796",
+    "uncompressedBytes": 862558
+  },
+  "api36/lifecycle.json": {
+    "sha256": "65dcedeadbe2665dbb65170787f602bc9caade9c5f17a3cc47f40e3598a4004f",
+    "uncompressedSha256": "65dcedeadbe2665dbb65170787f602bc9caade9c5f17a3cc47f40e3598a4004f",
+    "uncompressedBytes": 636
+  },
+  "api36/restart-report.json.gz": {
+    "sha256": "dad64bf1af89a9793297ec134dfe7c01e8e08a9d1cc98bf9e9ed967cbd7cdf74",
+    "uncompressedSha256": "b360b8ca16f579f11b65badc67659a2a1a5b8e01c7bf6b59847afbbf562a917b",
+    "uncompressedBytes": 862554
+  },
+  "api36/rotation-report.json": {
+    "sha256": "673c3d41cf26e7ef33c2854c0ae29e2ae0e742cc52e5a8468716f4ed0d2745cd",
+    "uncompressedSha256": "673c3d41cf26e7ef33c2854c0ae29e2ae0e742cc52e5a8468716f4ed0d2745cd",
+    "uncompressedBytes": 1608
+  },
+  "huawei/analysis.json": {
+    "sha256": "56cf4f77b95c20e67c5f81878c1a26befe90b01ff3679612806cb1eb82e34d0c",
+    "uncompressedSha256": "56cf4f77b95c20e67c5f81878c1a26befe90b01ff3679612806cb1eb82e34d0c",
+    "uncompressedBytes": 54136
+  },
+  "huawei/background-report.json": {
+    "sha256": "98bea7cd327e641937546387ad9024bf72ac07fa31a3b0da7a7e1e4eed9af054",
+    "uncompressedSha256": "98bea7cd327e641937546387ad9024bf72ac07fa31a3b0da7a7e1e4eed9af054",
+    "uncompressedBytes": 23938
+  },
+  "huawei/cancel-report.json": {
+    "sha256": "a76a75869ebdfaf9907ac1395bf47d55dd56e51680bd01100572c19c4929551d",
+    "uncompressedSha256": "a76a75869ebdfaf9907ac1395bf47d55dd56e51680bd01100572c19c4929551d",
+    "uncompressedBytes": 1588
+  },
+  "huawei/cross-entry-comparison-report.json": {
+    "sha256": "bad50d400d2463e35d2f710bc37d76ce6cb674231cf6b18daad38d65dc5b0c07",
+    "uncompressedSha256": "bad50d400d2463e35d2f710bc37d76ce6cb674231cf6b18daad38d65dc5b0c07",
+    "uncompressedBytes": 16263
+  },
+  "huawei/cross-entry-original-report.json": {
+    "sha256": "50884bce9baef8559f70296206262d7eebe5512900e58dde5aba2fc707fe37fd",
+    "uncompressedSha256": "50884bce9baef8559f70296206262d7eebe5512900e58dde5aba2fc707fe37fd",
+    "uncompressedBytes": 1395
+  },
+  "huawei/cross-entry-original-restart-report.json": {
+    "sha256": "96113861a8296ec390156e52cc719f23a7a66f64ef3ba984eb22ce775d5caed9",
+    "uncompressedSha256": "96113861a8296ec390156e52cc719f23a7a66f64ef3ba984eb22ce775d5caed9",
+    "uncompressedBytes": 22314
+  },
+  "huawei/device.json": {
+    "sha256": "c9b218c4818ff3119af9fb94abb3faef4ccc8a08edfd1a7afaec4ee2cb5c0ad8",
+    "uncompressedSha256": "c9b218c4818ff3119af9fb94abb3faef4ccc8a08edfd1a7afaec4ee2cb5c0ad8",
+    "uncompressedBytes": 259
+  },
+  "huawei/full-report.json.gz": {
+    "sha256": "fb2c0ab17789735096952a840c7007752877620edd6f0b8fdbb9b14b6a19d032",
+    "uncompressedSha256": "bab0ba22ab601fbb8cbd1dc310dd50f717032a186bdafd8a9e741f27927aa90e",
+    "uncompressedBytes": 866411
+  },
+  "huawei/lifecycle.json": {
+    "sha256": "0f6205eea0fa0626a3556d426ff7ebfb05f8b6c3fdd26f96ec6485599a1521ef",
+    "uncompressedSha256": "0f6205eea0fa0626a3556d426ff7ebfb05f8b6c3fdd26f96ec6485599a1521ef",
+    "uncompressedBytes": 521
+  },
+  "huawei/restart-report.json.gz": {
+    "sha256": "4a96eacd45cf58e1435b42433fd5b2e4de306aa9e66fb9a1ff80b610bbf33c73",
+    "uncompressedSha256": "28d17f18fef3977dcd24f0f77f4a643102a7494097235e5deb76f7133ecb0414",
+    "uncompressedBytes": 866420
+  },
+  "api36/baseline-recheck-report.json.gz": {
+    "sha256": "0e44f2194bfe295fb5ecfba843fcca5cce8cb3f0eaa52ccf71e0d80d4e1de402",
+    "uncompressedSha256": "9f63b0dd742bba5f13e792db98029645663f4036684515727063716ebf626333",
+    "uncompressedBytes": 835436
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "scope": "synthetic_only",
+  "qualityDecision": "reject_universal_smoothing_preprocessor",
+  "tests": 44,
+  "redFirstFailures": 4,
+  "smoothPixelTests": 6,
+  "newMatrixTests": 1,
+  "lintErrors": 0,
+  "lintWarnings": 17,
+  "fixedCrossDeviceTasks": 72,
+  "fixedCrossDevicePixelAndRawIdentical": true,
+  "bothDevicesSmooth144RestartRawBoundsPixelsIdentical": true,
+  "bothDevicesOriginal37RawUnchanged": true,
+  "api36Baseline144RawBoundsPixelsUnchanged": true,
+  "productionModulesModified": false,
+  "review": "root_diff_and_tests_NORMAL_no_independent_review_of_smoothing"
+}

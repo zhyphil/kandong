@@ -18,6 +18,7 @@ class ComparisonLabActivity : Activity() {
     private lateinit var status: TextView
     private lateinit var start: Button
     private lateinit var cancel: Button
+    private lateinit var smooth: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val outer = LinearLayout(this).apply {
@@ -41,23 +42,23 @@ class ComparisonLabActivity : Activity() {
         content.addView(label("三语 OCR 对照实验", 26f))
         content.addView(label("仅使用 18 个随包合成输入：英语、法语、简体中文、繁体中文、混排及空白。每个输入分别用设备原生绘制与固定 PNG、原图与精确 2 倍像素复制、Latin 与 Chinese 两个模型识别，共 144 项。", 18f))
         content.addView(label("不会读取真实屏幕、截图、照片、相机或外部文字；没有翻译、自动点击、下载模型或上传。测试语言标签仅用于评分，不代表 SDK 自动判断出英语或法语。两个模型均处理全部输入，不合并或挑选答案。", 17f))
+        content.addView(label("另有平滑对照：同一批输入用精确整数双线性插值放大 2/3 倍，也各跑两个模型，共 144 项。它可能改善或恶化识别；不会替换原图/像素复制基线。", 17f))
         start = Button(this).apply {
             text = "开始 144 项三语对照"; minHeight = dp(48); minWidth = dp(48)
-            setOnClickListener {
-                val accepted = ComparisonRunner.start(applicationContext, owner) { message, busy ->
-                    status.text = message; start.isEnabled = !busy; cancel.isEnabled = busy
-                }
-                if (!accepted) status.text = "原实验或三语实验仍在处理或清理。请稍后手动重试；不会排队或自动开始。"
-            }
+            setOnClickListener { begin(ComparisonProfile.BASELINE) }
+        }
+        smooth = Button(this).apply {
+            text = "开始 144 项平滑对照"; minHeight = dp(48); minWidth = dp(48)
+            setOnClickListener { begin(ComparisonProfile.SMOOTH) }
         }
         cancel = Button(this).apply {
             text = "取消本次对照"; minHeight = dp(48); minWidth = dp(48); isEnabled = false
             setOnClickListener {
                 status.text = ComparisonRunner.cancel(owner) ?: "当前没有可取消的实验。"
-                start.isEnabled = true; isEnabled = false
+                start.isEnabled = true; smooth.isEnabled = true; isEnabled = false
             }
         }
-        content.addView(start); content.addView(cancel)
+        content.addView(start); content.addView(smooth); content.addView(cancel)
         status = label("尚未运行。", 17f).apply { accessibilityLiveRegion = View.ACCESSIBILITY_LIVE_REGION_POLITE }
         content.addView(status)
         content.addView(label("离开、锁屏或旋转会取消并丢弃迟到结果；在途图片由 SDK 完成后释放，清理结束前两个 OCR 实验均不能重开。返回不会自动运行。", 16f))
@@ -68,9 +69,16 @@ class ComparisonLabActivity : Activity() {
     }
     override fun onStart() {
         super.onStart()
-        start.isEnabled = true; cancel.isEnabled = false
+        start.isEnabled = true; smooth.isEnabled = true; cancel.isEnabled = false
         status.text = if (ComparisonRunner.isBusy() || OcrRunner.isBusy()) "上一轮正在处理或清理。结束后可手动开始；不会自动运行。"
         else "尚未开始本轮。已有私有报告可能属于之前的运行。"
+    }
+    private fun begin(profile: ComparisonProfile) {
+        val accepted = ComparisonRunner.start(applicationContext, owner, profile) { message, busy ->
+            status.text = "本轮：" + (if (profile == ComparisonProfile.BASELINE) "原图/像素复制" else "平滑 2/3 倍") + "\n" + message
+            start.isEnabled = !busy; smooth.isEnabled = !busy; cancel.isEnabled = busy
+        }
+        if (!accepted) status.text = "原实验或三语实验仍在处理或清理。请稍后手动重试；不会排队或自动开始。"
     }
     override fun onStop() { ComparisonRunner.cancel(owner); super.onStop() }
     private fun label(value: String, size: Float) = TextView(this).apply {

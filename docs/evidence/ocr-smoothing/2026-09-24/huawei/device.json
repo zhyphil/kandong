@@ -1,0 +1,9 @@
+{
+  "model": "LIO-AN00",
+  "api": 31,
+  "installedApkSha256": "947493917cab4f5f8325d79b004455be7518dc59a9a4c32c0bcb1c78f72ceb89",
+  "gmsInstalled": false,
+  "changedNetworkSettings": false,
+  "actualOfflineTest": false,
+  "scope": "packaged_synthetic_only"
+}

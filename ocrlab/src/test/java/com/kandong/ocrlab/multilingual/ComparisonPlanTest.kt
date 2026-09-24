@@ -16,6 +16,20 @@ class ComparisonPlanTest {
                 rows.map { "${it.sourceKind}/${it.scale}/${it.engine}" }.toSet())
         }
     }
+    @Test fun smoothProfileKeepsSeparateTaskIdentitiesAndBothEngines() {
+        val ids=(0 until 18).map { "input-$it" }
+        val baseline=ComparisonPlan.matrix(ids)
+        val smooth=ComparisonPlan.matrix(ids, ComparisonProfile.SMOOTH)
+        assertEquals(144, smooth.size)
+        assertTrue(baseline.map { it.taskId }.toSet().intersect(smooth.map { it.taskId }.toSet()).isEmpty())
+        smooth.groupBy { it.inputId }.values.forEach { rows ->
+            assertEquals(setOf("native/2/latin", "native/2/chinese", "native/3/latin", "native/3/chinese",
+                "fixed/2/latin", "fixed/2/chinese", "fixed/3/latin", "fixed/3/chinese"),
+                rows.map { "${it.sourceKind}/${it.scale}/${it.engine}" }.toSet())
+            assertTrue(rows.all { it.algorithm == "bilinear-center-integer-v1" })
+        }
+        assertEquals(setOf("identity-v1", "nearest-neighbor-exact-2x2-v1"), baseline.map { it.algorithm }.toSet())
+    }
     @Test fun matrixRejectsMissingAndDuplicateInputs() {
         rejects { ComparisonPlan.matrix(listOf("one")) }
         rejects { ComparisonPlan.matrix(List(18) { "same" }) }

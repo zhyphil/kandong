@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "runId": "df95bb61-0f9a-4391-a0f3-e52454c16a0d",
+  "scope": "fixed_packaged_synthetic_ocr_only",
+  "processingProfile": "SMOOTH",
+  "fixtureVersion": "trilingual-v1",
+  "manifestSha256": "2341dff63bd10d41867351ddff0e4145daa2d9d3493bc8cdc88ea289c1a076a8",
+  "originalFixtureSha256": "1f638fe9922fc979db040cb1d12cbee17dc66d950e62ec7b2872fe5544cf6553",
+  "models": {
+    "latin": "com.google.mlkit:text-recognition:16.0.1",
+    "chinese": "com.google.mlkit:text-recognition-chinese:16.0.1"
+  },
+  "device": {
+    "manufacturer": "HUAWEI",
+    "model": "LIO-AN00",
+    "api": 31,
+    "fingerprint": "HUAWEI/LIO-AN00/HWLIO:12/HUAWEILIO-AN00/104.2.0.136C00:user/release-keys"
+  },
+  "startedAtEpochMs": 1790242390942,
+  "expectedTotal": 144,
+  "expectedInputs": 18,
+  "expectedBaseInputs": 36,
+  "expectedProcessedInputs": 72,
+  "pixelHashFormat": "row-major RGBA8888, opaque alpha 255; dimensions separate",
+  "nativeRender": "unchanged SyntheticFixtures.render; sans-serif NORMAL; padding 32; width 640",
+  "normalization": "NFC + Unicode White_Space folding and trim only",
+  "languagePolicy": "fixture language is scoring metadata only; SDK unknown/und does not establish EN/FR support",
+  "lastAttemptedTask": "fr-cancel-24/native/smooth/2x/latin",
+  "results": [],
+  "status": "cancelled",
+  "completed": false,
+  "cancelled": true,
+  "processedCount": 0,
+  "operationalCompletedCount": 0,
+  "recognizedCount": 0,
+  "mismatchCount": 0,
+  "errorCount": 0,
+  "elapsedMs": 238,
+  "updatedAtEpochMs": 1790242391180,
+  "cleanupPendingAtPublication": true,
+  "error": null
+}

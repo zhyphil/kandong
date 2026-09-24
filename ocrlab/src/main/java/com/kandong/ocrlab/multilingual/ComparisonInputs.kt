@@ -51,8 +51,11 @@ internal object ComparisonInputs {
     }
 
     /** Only packaged, authenticated names enter this loader. One source is held at a time. */
-    fun render(context: Context, input: ComparisonInput, sourceKind: String, scale: Int): ComparisonImage {
-        require(scale in 1..2)
+    fun render(context: Context, input: ComparisonInput, sourceKind: String, scale: Int,
+               algorithm: String = if (scale == 1) "identity-v1" else "nearest-neighbor-exact-2x2-v1"): ComparisonImage {
+        require((algorithm == "identity-v1" && scale == 1) ||
+            (algorithm == "nearest-neighbor-exact-2x2-v1" && scale == 2) ||
+            (algorithm == "bilinear-center-integer-v1" && scale in 2..3))
         val base: Bitmap
         val lineCount: Int
         when (sourceKind) {
@@ -85,8 +88,10 @@ internal object ComparisonInputs {
                 pixels, input.pixelSha256)
             val baseHash = ComparisonPlan.pixelHash(pixels)
             if (scale == 1) return ComparisonImage(base, base.width, base.height, baseHash, baseHash, lineCount)
-            val doubled = ComparisonPlan.doublePixels(pixels, base.width, base.height)
-            val output = Bitmap.createBitmap(doubled, base.width * 2, base.height * 2, Bitmap.Config.ARGB_8888)
+            val resized = if (algorithm == "bilinear-center-integer-v1")
+                SmoothPixels.resize(pixels, base.width, base.height, scale)
+            else ComparisonPlan.doublePixels(pixels, base.width, base.height)
+            val output = Bitmap.createBitmap(resized, base.width * scale, base.height * scale, Bitmap.Config.ARGB_8888)
             processed = output
             output.density = Bitmap.DENSITY_NONE
             // Hash actual Bitmap pixels sent to the SDK, not the requested buffer or source text.
