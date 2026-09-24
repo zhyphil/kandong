@@ -1,0 +1,14 @@
+{
+  "settings.gradle.kts": "0522343e741526167f5419b121034abbc571e032f040dfd37f9a060f9f3028fe",
+  "capturelab/build.gradle.kts": "e00ac38c45465e7559b95b4574ffd0a9f952ee6b404cbc882d38cfcb7fe41781",
+  "capturelab/src/androidTest/java/com/kandong/capturelab/OwnedFixtureInstrumentedTest.kt": "0ad5225ed498dcf4df67930917aec21909751dee98c1ab301414022d4ee2ac7d",
+  "capturelab/src/main/AndroidManifest.xml": "a52670b988fb9270e42f76d88438a09de9f277cae25c926f666d851d707acea7",
+  "capturelab/src/main/java/com/kandong/capturelab/CaptureLabActivity.kt": "4036d8aec41761a5c160317ff220354df44134cb2a2a08be92329ed7f9db5f9f",
+  "capturelab/src/main/java/com/kandong/capturelab/CaptureLabService.kt": "1990a21a7c7d298bde0dec10ede8fdb5fcd3def09dd473b05b5cea909082df36",
+  "capturelab/src/main/java/com/kandong/capturelab/CaptureProof.kt": "8448c193d57cab8aa6b1c32505c177b3ad8afd187cf5ac391c86f933f956b691",
+  "capturelab/src/main/java/com/kandong/capturelab/FixturePixels.kt": "446b64433291e0675b64ae329967085d111091518a45a9bd954a238ba84ce8f9",
+  "capturelab/src/main/java/com/kandong/capturelab/FixtureView.kt": "40569127460cee4788ef2c1322f69020e729ab61fc73879e4a07e173fd8cfc3f",
+  "capturelab/src/main/res/xml/data_extraction_rules.xml": "00c3e2b0df10e1e87d6e065a4af3506f34584d4afc379ecffb860d5cbdf61157",
+  "capturelab/src/test/java/com/kandong/capturelab/CaptureProofTest.kt": "2da04bf3bd5fe9acd764f11ffd9b13611bfb5044b56fe88b53e02035f313b1f1",
+  "capturelab/src/test/java/com/kandong/capturelab/FixturePixelsTest.kt": "9b838a257ed8859ae422468e615e6651fd1a3d9728f5ec76ca6a2f95e4ea5490"
+}

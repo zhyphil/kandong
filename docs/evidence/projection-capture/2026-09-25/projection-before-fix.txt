@@ -1,0 +1,7 @@
+--------- beginning of main
+I/KDCaptureLab( 3776): {"event":"PHASE","session":1,"phase":"BASELINE","verdict":"CANCELLED","frames":0,"nonceFrames":0,"blackFrames":0,"baseFrames":0,"coverFrames":0,"mismatchFrames":0,"staleFrames":0,"nonMonotonicFrames":0,"streak":0,"elapsedMs":67}
+I/KDCaptureLab( 3776): {"event":"END","session":1,"reason":"DISPLAY_CHANGED","api":37,"width":1080,"height":2400,"rotation":0,"acquired":1,"closed":1,"drained":0,"displays":1,"phaseCount":1}
+I/KDCaptureLab( 3776): {"event":"PHASE","session":2,"phase":"BASELINE","verdict":"CANCELLED","frames":0,"nonceFrames":0,"blackFrames":0,"baseFrames":0,"coverFrames":0,"mismatchFrames":0,"staleFrames":0,"nonMonotonicFrames":0,"streak":0,"elapsedMs":27}
+I/KDCaptureLab( 3776): {"event":"END","session":2,"reason":"DISPLAY_CHANGED","api":37,"width":1080,"height":2400,"rotation":0,"acquired":1,"closed":1,"drained":0,"displays":1,"phaseCount":1}
+I/KDCaptureLab( 3776): {"event":"PHASE","session":3,"phase":"BASELINE","verdict":"CANCELLED","frames":0,"nonceFrames":0,"blackFrames":0,"baseFrames":0,"coverFrames":0,"mismatchFrames":0,"staleFrames":0,"nonMonotonicFrames":0,"streak":0,"elapsedMs":61}
+I/KDCaptureLab( 3776): {"event":"END","session":3,"reason":"DISPLAY_CHANGED","api":37,"width":1080,"height":2400,"rotation":0,"acquired":1,"closed":1,"drained":0,"displays":1,"phaseCount":1}

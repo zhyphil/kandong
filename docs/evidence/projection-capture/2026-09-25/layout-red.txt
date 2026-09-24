@@ -1,0 +1,95 @@
+INSTRUMENTATION_STATUS: class=com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest:
+INSTRUMENTATION_STATUS: test=statusChangesDoNotMoveTheFrozenCaptureGeometry
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Phase BASELINE moved fixed fixture geometry expected:<FixtureGeometry(first=Box(left=112, top=1040, right=346, bottom=1330), second=Box(left=417, top=1040, right=651, bottom=1330), patch=Box(left=112, top=1620, right=590, bottom=2098), witness=Box(left=723, top=1577, right=987, bottom=2113))> but was:<FixtureGeometry(first=Box(left=112, top=1047, right=346, bottom=1336), second=Box(left=417, top=1047, right=651, bottom=1336), patch=Box(left=112, top=1624, right=590, bottom=2099), witness=Box(left=723, top=1581, right=987, bottom=2114))>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest.statusChangesDoNotMoveTheFrozenCaptureGeometry$lambda$4(OwnedFixtureLayoutInstrumentedTest.kt:43)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest.$r8$lambda$6gtsw8heozGjL2lybwUBTDgTVv4(OwnedFixtureLayoutInstrumentedTest.kt:0)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest$$ExternalSyntheticLambda5.invoke(D8$$SyntheticClass:0)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest.ui$lambda$0(OwnedFixtureLayoutInstrumentedTest.kt:14)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest.$r8$lambda$MtlR9KZPXzkOwRjZqPprwljwMB8(OwnedFixtureLayoutInstrumentedTest.kt:0)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest$$ExternalSyntheticLambda8.run(D8$$SyntheticClass:0)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:520)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2675)
+	at android.os.Handler.handleCallback(Handler.java:1082)
+	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+	at android.os.Handler.dispatchMessage(Handler.java:126)
+	at android.os.Looper.loopOnce(Looper.java:295)
+	at android.os.Looper.loop(Looper.java:398)
+	at android.app.ActivityThread.main(ActivityThread.java:9569)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+
+INSTRUMENTATION_STATUS: stream=
+Error in statusChangesDoNotMoveTheFrozenCaptureGeometry(com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest):
+java.lang.AssertionError: Phase BASELINE moved fixed fixture geometry expected:<FixtureGeometry(first=Box(left=112, top=1040, right=346, bottom=1330), second=Box(left=417, top=1040, right=651, bottom=1330), patch=Box(left=112, top=1620, right=590, bottom=2098), witness=Box(left=723, top=1577, right=987, bottom=2113))> but was:<FixtureGeometry(first=Box(left=112, top=1047, right=346, bottom=1336), second=Box(left=417, top=1047, right=651, bottom=1336), patch=Box(left=112, top=1624, right=590, bottom=2099), witness=Box(left=723, top=1581, right=987, bottom=2114))>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest.statusChangesDoNotMoveTheFrozenCaptureGeometry$lambda$4(OwnedFixtureLayoutInstrumentedTest.kt:43)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest.$r8$lambda$6gtsw8heozGjL2lybwUBTDgTVv4(OwnedFixtureLayoutInstrumentedTest.kt:0)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest$$ExternalSyntheticLambda5.invoke(D8$$SyntheticClass:0)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest.ui$lambda$0(OwnedFixtureLayoutInstrumentedTest.kt:14)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest.$r8$lambda$MtlR9KZPXzkOwRjZqPprwljwMB8(OwnedFixtureLayoutInstrumentedTest.kt:0)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest$$ExternalSyntheticLambda8.run(D8$$SyntheticClass:0)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:520)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2675)
+	at android.os.Handler.handleCallback(Handler.java:1082)
+	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+	at android.os.Handler.dispatchMessage(Handler.java:126)
+	at android.os.Looper.loopOnce(Looper.java:295)
+	at android.os.Looper.loop(Looper.java:398)
+	at android.app.ActivityThread.main(ActivityThread.java:9569)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+
+INSTRUMENTATION_STATUS: test=statusChangesDoNotMoveTheFrozenCaptureGeometry
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 2.256
+There was 1 failure:
+1) statusChangesDoNotMoveTheFrozenCaptureGeometry(com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest)
+java.lang.AssertionError: Phase BASELINE moved fixed fixture geometry expected:<FixtureGeometry(first=Box(left=112, top=1040, right=346, bottom=1330), second=Box(left=417, top=1040, right=651, bottom=1330), patch=Box(left=112, top=1620, right=590, bottom=2098), witness=Box(left=723, top=1577, right=987, bottom=2113))> but was:<FixtureGeometry(first=Box(left=112, top=1047, right=346, bottom=1336), second=Box(left=417, top=1047, right=651, bottom=1336), patch=Box(left=112, top=1624, right=590, bottom=2099), witness=Box(left=723, top=1581, right=987, bottom=2114))>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest.statusChangesDoNotMoveTheFrozenCaptureGeometry$lambda$4(OwnedFixtureLayoutInstrumentedTest.kt:43)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest.$r8$lambda$6gtsw8heozGjL2lybwUBTDgTVv4(OwnedFixtureLayoutInstrumentedTest.kt:0)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest$$ExternalSyntheticLambda5.invoke(D8$$SyntheticClass:0)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest.ui$lambda$0(OwnedFixtureLayoutInstrumentedTest.kt:14)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest.$r8$lambda$MtlR9KZPXzkOwRjZqPprwljwMB8(OwnedFixtureLayoutInstrumentedTest.kt:0)
+	at com.kandong.capturelab.OwnedFixtureLayoutInstrumentedTest$$ExternalSyntheticLambda8.run(D8$$SyntheticClass:0)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:520)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2675)
+	at android.os.Handler.handleCallback(Handler.java:1082)
+	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+	at android.os.Handler.dispatchMessage(Handler.java:126)
+	at android.os.Looper.loopOnce(Looper.java:295)
+	at android.os.Looper.loop(Looper.java:398)
+	at android.app.ActivityThread.main(ActivityThread.java:9569)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

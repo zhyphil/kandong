@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.capturelab.CaptureProofTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-09-24T21:53:41.578Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.009">
+  <properties/>
+  <testcase name="duplicateOrBackwardsSourceTimestampCannotAccumulateMatches" classname="com.kandong.capturelab.CaptureProofTest" time="0.001"/>
+  <testcase name="cancellationAndLatePhaseTicketsNeverPublishEvidence" classname="com.kandong.capturelab.CaptureProofTest" time="0.002"/>
+  <testcase name="secureActivityNeedsCurrentIndependentWitnessInSameBlackFrame" classname="com.kandong.capturelab.CaptureProofTest" time="0.0"/>
+  <testcase name="frameArrivingOnOrAfterDeadlineCannotTurnTimeoutIntoSuccess" classname="com.kandong.capturelab.CaptureProofTest" time="0.0"/>
+  <testcase name="sourceTimestampIsNeverComparedWithHostClockForFreshness" classname="com.kandong.capturelab.CaptureProofTest" time="0.003"/>
+  <testcase name="matchingNonceAndPatchMustBeInTheSameImage" classname="com.kandong.capturelab.CaptureProofTest" time="0.0"/>
+  <testcase name="transitionsRequireUniquePhaseMarkers" classname="com.kandong.capturelab.CaptureProofTest" time="0.0"/>
+  <testcase name="overallDeadlineAlsoBoundsLaterPhases" classname="com.kandong.capturelab.CaptureProofTest" time="0.0"/>
+  <testcase name="blackUnderlyingAndVisibleSecureOverlayHaveDifferentOutcomes" classname="com.kandong.capturelab.CaptureProofTest" time="0.0"/>
+  <testcase name="witnessAloneAndGenericMissingMarkersDoNotProveSecureActivityRedaction" classname="com.kandong.capturelab.CaptureProofTest" time="0.0"/>
+  <testcase name="consentIsExplicitSingleUseAndRequiresResumedFocusedOwner" classname="com.kandong.capturelab.CaptureProofTest" time="0.0"/>
+  <testcase name="arbitraryMismatchIsNotSecureEvidenceEvenWhenNonceIsCurrent" classname="com.kandong.capturelab.CaptureProofTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

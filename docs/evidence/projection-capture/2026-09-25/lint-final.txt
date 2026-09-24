@@ -1,0 +1,122 @@
+/Users/haoyuzuo/Projects/KanDong/capturelab/build.gradle.kts:13: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk = 36
+        ~~~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application or sdk runs on a version of Android that is more
+   recent than your targetSdkVersion specifies that it has been tested with,
+   various compatibility modes kick in. This ensures that your application
+   continues to work, but it may look out of place. For example, if the
+   targetSdkVersion is less than 14, your app may get an option button in the
+   UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+/Users/haoyuzuo/Projects/KanDong/capturelab/src/main/AndroidManifest.xml:10: Warning: Expecting android:resizeableActivity="true" for this activity so the user can take advantage of the multi-window environment on all devices. NOTE: beginning with Android 12, all apps run in multi-window mode on large screen devices. [NonResizeableActivity]
+            android:resizeableActivity="false">
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NonResizeableActivity":
+   The <activity> element should be allowed to be resized to allow users to
+   take advantage of the multi-window environments available on larger screen
+   Android devices.
+
+   To fix the issue, consider declaring the corresponding activity element
+   with resizableActivity="true" attribute.
+
+   https://developer.android.com/topic/arc/window-management
+
+/Users/haoyuzuo/Projects/KanDong/capturelab/src/main/AndroidManifest.xml:10: Warning: Setting resizeableActivity to false will be ignored in most cases, starting from Android 16. Android is moving toward a model where apps are expected to adapt to various orientations, display sizes, and aspect ratios. [DiscouragedApi]
+            android:resizeableActivity="false">
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "DiscouragedApi":
+   Discouraged APIs are allowed and are not deprecated, but they may be unfit
+   for common use (e.g. due to slow performance or subtle behavior).
+
+/Users/haoyuzuo/Projects/KanDong/capturelab/src/main/AndroidManifest.xml:5: Warning: Should explicitly set android:icon, there is no default [MissingApplicationIcon]
+    <application android:label="看懂采集实验" android:allowBackup="false"
+     ~~~~~~~~~~~
+
+   Explanation for issues of type "MissingApplicationIcon":
+   You should set an icon for the application as whole because there is no
+   default. This attribute must be set as a reference to a drawable resource
+   containing the image (for example @drawable/icon).
+
+   https://developer.android.com/studio/publish/preparing#publishing-configure
+
+/Users/haoyuzuo/Projects/KanDong/capturelab/src/main/java/com/kandong/capturelab/FixtureView.kt:35: Warning: Custom view WitnessView is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int) [ViewConstructor]
+internal class WitnessView(context: Context, private val marker: Marker) : View(context) {
+               ~~~~~~~~~~~
+
+   Explanation for issues of type "ViewConstructor":
+   Some layout tools (such as the Android layout editor) need to find a
+   constructor with one of the following signatures:
+   * View(Context context)
+   * View(Context context, AttributeSet attrs)
+   * View(Context context, AttributeSet attrs, int defStyle)
+
+   If your custom view needs to perform initialization which does not apply
+   when used in a layout editor, you can surround the given code with a check
+   to see if View#isInEditMode() is false, since that method will return false
+   at runtime but true within a user interface editor.
+
+/Users/haoyuzuo/Projects/KanDong/capturelab/src/main/java/com/kandong/capturelab/CaptureLabActivity.kt:80: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            text = "每次授权后短暂采集整屏缓冲区，仅检查本页固定色块。不保存、不上传、不做 OCR。离开本页或停止即结束。只验证本次合成页面，不代表其他应用隐私验收。"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/haoyuzuo/Projects/KanDong/capturelab/src/main/java/com/kandong/capturelab/CaptureLabActivity.kt:176: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        status.text = "${phase.code}/7 ${phase.label}\n正在等待同帧标记证据（最多约 40 秒）"
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/haoyuzuo/Projects/KanDong/capturelab/src/main/java/com/kandong/capturelab/CaptureLabActivity.kt:176: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        status.text = "${phase.code}/7 ${phase.label}\n正在等待同帧标记证据（最多约 40 秒）"
+                                                       ~~~~~~~~~~~~~~~~~~~~
+/Users/haoyuzuo/Projects/KanDong/capturelab/src/main/java/com/kandong/capturelab/CaptureLabActivity.kt:184: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        status.text = "${value.reason.label}。只代表本次合成页／当前设备观察。"
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+/Users/haoyuzuo/Projects/KanDong/capturelab/src/main/java/com/kandong/capturelab/CaptureLabService.kt:238: Warning: Use "Gravity.START" instead of "Gravity.LEFT" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+        gravity = Gravity.TOP or Gravity.LEFT; x = box.left; y = box.top
+                                         ~~~~
+
+   Explanation for issues of type "RtlHardcoded":
+   Using Gravity#LEFT and Gravity#RIGHT can lead to problems when a layout is
+   rendered in locales where text flows from right to left. Use Gravity#START
+   and Gravity#END instead. Similarly, in XML gravity and layout_gravity
+   attributes, use start rather than left.
+
+   For XML attributes such as paddingLeft and layout_marginLeft, use
+   paddingStart and layout_marginStart. NOTE: If your minSdkVersion is less
+   than 17, you should add both the older left/right attributes as well as the
+   new start/end attributes. On older platforms, where RTL is not supported
+   and the start/end attributes are unknown and therefore ignored, you need
+   the older left/right attributes. There is a separate lint check which
+   catches that type of error.
+
+   (Note: For Gravity#LEFT and Gravity#START, you can use these constants even
+   when targeting older platforms, because the start bitmask is a superset of
+   the left bitmask. Therefore, you can use gravity="start" rather than
+   gravity="left|start".)
+
+0 errors, 10 warnings

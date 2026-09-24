@@ -1,0 +1,28 @@
+{
+  "baseline": "bb6370ddb5e080db1f7a8ac46568018ebf23d0dc",
+  "jvm": {
+    "tests": 17,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "instrumentation": {
+    "tests": 4,
+    "failures": 0,
+    "scope": "owned fixture geometry and ungranted gate lifecycle only"
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 10
+  },
+  "build": "passed",
+  "installed": "dedicated API37 emulator only",
+  "actual_projection": "pending manual system permissions",
+  "huawei": "not operated",
+  "production_changes": false,
+  "ocr": false,
+  "network": false,
+  "uploaded_screen": false,
+  "ao_implementation": "600 second timeout after files written; parent separately built/tested actual files",
+  "ao_review": "pending"
+}

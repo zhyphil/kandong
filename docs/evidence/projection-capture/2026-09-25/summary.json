@@ -1,0 +1,33 @@
+{
+  "baseline": "bb6370d",
+  "jvm": {
+    "tests": 22,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "instrumentation": {
+    "tests": 5,
+    "failures": 0,
+    "elapsed_seconds": 75.857,
+    "scope": "owned layout and ungranted lifecycle only"
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 10
+  },
+  "build": "passed",
+  "installed": "dedicated API37/16KiB emulator",
+  "actual_projection": "initial APK cancelled on layout shift; fixed APK awaits new user consent",
+  "huawei": "not operated",
+  "production_changes": false,
+  "ocr": false,
+  "network": false,
+  "initial_failure": "first acquired image closed, display and service ended; status text shifted geometry by 7px",
+  "layout_regression": "failed before fixed status band; passed in final 5-test run",
+  "ao": {
+    "implementation": "600-second timeout after writing source; no completion claim; parent build/test succeeded",
+    "review": "read-only completed, two P2 findings addressed by parent",
+    "remaining_validation": "stale Android start-delivery interleaving fixed by startId-scoped rejection and code review; not exercised on device"
+  }
+}

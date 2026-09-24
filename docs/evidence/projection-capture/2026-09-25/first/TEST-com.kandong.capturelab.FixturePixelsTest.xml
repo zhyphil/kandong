@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.capturelab.FixturePixelsTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-09-24T21:53:41.589Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.002">
+  <properties/>
+  <testcase name="fixtureAndWitnessStayInsideMeasuredViewBounds" classname="com.kandong.capturelab.FixturePixelsTest" time="0.0"/>
+  <testcase name="honorsLimitRatherThanCapacityAndAllowsMissingFinalRowPadding" classname="com.kandong.capturelab.FixturePixelsTest" time="0.0"/>
+  <testcase name="checksMultipleInteriorSamplesRatherThanOnlyOnePixel" classname="com.kandong.capturelab.FixturePixelsTest" time="0.001"/>
+  <testcase name="refusesInvalidStrideDimensionsOverflowAndOutOfBoundsCoordinates" classname="com.kandong.capturelab.FixturePixelsTest" time="0.0"/>
+  <testcase name="honorsRowPaddingPixelStrideAndBufferPositionWithoutReadingPadding" classname="com.kandong.capturelab.FixturePixelsTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

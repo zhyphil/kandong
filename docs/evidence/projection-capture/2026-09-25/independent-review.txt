@@ -1,0 +1,45 @@
+
+  工作流: kandong-capture-independent-review
+  步骤数: 1 | 并发: 1 | 模型: codex-cli
+  参与者: 👁️ Code Reviewer
+──────────────────────────────────────────────────
+
+  ⏳ 👁️ Code Reviewer 执行中 ...  ⏳ 👁️ Code Reviewer ... 10s  ⏳ 👁️ Code Reviewer ... 20s  ⏳ 👁️ Code Reviewer ... 30s  ⏳ 👁️ Code Reviewer ... 40s  ⏳ 👁️ Code Reviewer ... 50s  ⏳ 👁️ Code Reviewer ... 60s  ⏳ 👁️ Code Reviewer ... 70s  ⏳ 👁️ Code Reviewer ... 80s  ⏳ 👁️ Code Reviewer ... 90s  ⏳ 👁️ Code Reviewer ... 100s  ⏳ 👁️ Code Reviewer ... 110s  ⏳ 👁️ Code Reviewer ... 120s  ⏳ 👁️ Code Reviewer ... 130s  ⏳ 👁️ Code Reviewer ... 140s  ⏳ 👁️ Code Reviewer ... 150s  ⏳ 👁️ Code Reviewer ... 160s  ⏳ 👁️ Code Reviewer ... 170s  ⏳ 👁️ Code Reviewer ... 180s  📡 已接收 2.8KB...
+[K
+  ── [1/1] 👁️ Code Reviewer (review_capture) ──
+  完成 | 184.9s | 1664 tokens
+
+    发现 **2 项 P2 正确性问题**。模块隔离、同帧采样、来源内时间戳比较和独立释放资源的设计合理；以下问题均由源码路径推导，未做设备复现。
+    
+    1. 🟡 **P2：失效启动请求可能终止排队中的新请求**  
+       位置：[CaptureLabService.kt:120](/Users/haoyuzuo/Projects/KanDong/capturelab/src/main/java/com/kandong/capturelab/CaptureLabService.kt:120)，关联第 116、309、329 行。
+    
+       请求 A 在服务接收前因离页被撤销；用户重新授权并排入请求 B。若服务随后处理 A，`claim(A)` 失败会调用 `endSession()`，设置全局 `closing=true` 并无条件 `stopSelf()`。B 随后也被关闭分支丢弃，只能等 Activity 的启动超时收尾。第 113 行还允许无活动 proof 时的旧 STOP 关闭整个实例。
+    
+       建议将“拒绝单个失效请求”与“结束已认领会话”分开，按请求身份处理停止，避免污染新请求；补充 A 撤销、B 排队、A 迟到的回归用例。[Android 官方说明](https://developer.android.com/reference/android/app/Service#stopSelfResult(int))明确指出，按 `startId` 停止可避免终止尚未收到的新启动请求。
+    
+    2. 🟡 **P2：安全观察缺少前后控制阶段的有效性约束**  
+       位置：[CaptureProof.kt:102](/Users/haoyuzuo/Projects/KanDong/capturelab/src/main/java/com/kandong/capturelab/CaptureProof.kt:102)，关联 [CaptureLabService.kt:190](/Users/haoyuzuo/Projects/KanDong/capturelab/src/main/java/com/kandong/capturelab/CaptureLabService.kt:190)。
+    
+       阶段推进只检查结果数量。因此 BASELINE／COVER 超时后，SECURE_COVER 仍能输出 `UNDERLYING_OBSERVED` 或 `BLACK_OBSERVED`；随后 RESTORE 超时也不会使此前观察降为证据不足。SECURE_ACTIVITY 与 PUBLIC_RETURN 同样没有关联校验。这不满足验收第 4 项要求的公开观察及后续恢复证据链。
+    
+       建议保留原始分类，但增加证据链有效状态：前置公开／普通遮挡和后置恢复未确认时，安全结论标为不充分。补充控制阶段超时及恢复失败用例；无需扩大到任意应用检测。
+    
+    已有验证证据与限制：
+    
+    - 既有 JUnit XML 记录 **17 项测试、0 失败、0 错误**；lint 记录 **0 错误、10 警告**，主／测试 APK 均存在。本次没有运行检查。
+    - 未见 connected instrumentation 或真实投屏结果；人工授权、实际窗口表现、运行时资源释放及安装 APK 哈希仍未验证。
+    - 实际变更保持在授权范围；源码和合并 manifest 未发现文字导出、网络或 OCR 通路。
+    - [实验文档第 63 行](/Users/haoyuzuo/Projects/KanDong/docs/PROJECTION_CAPTURE_LAB.md:63)仍写 APK／lint 待重跑，需由父任务结合现有产物更新。真实投屏仍应保持“待人工授权”，不能标为通过。
+    
+    全程只读，未修改项目、连接设备或启动子代理。
+
+
+==================================================
+  完成: 1/1 步 | 184.9s | 1664 tokens
+  详细输出: /private/tmp/kandong-capture-review-20260924/results/kandong-capture-independent-review-2026-09-24T21-57-22
+
+  💡 想优化某一步？只重跑它即可（自动复用上游输出）/ Re-run one step:
+     ao run ../../../../private/tmp/kandong-capture-review-20260924/workflow.prepared.yaml --resume last --from <step-id>
+     可选步骤 / steps: review_capture
+==================================================

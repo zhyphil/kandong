@@ -1,0 +1,7 @@
+{
+  "serial": "emulator-5582",
+  "avd": "KanDong_OCR_API37_16K",
+  "sdk": "37",
+  "page_size": "16384",
+  "fingerprint": "google/sdk_gphone16k_arm64/emu64a16k:17/CP31.260623.012/16064790:user/dev-keys"
+}
