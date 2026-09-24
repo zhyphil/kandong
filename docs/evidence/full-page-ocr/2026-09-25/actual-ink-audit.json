@@ -1,0 +1,147 @@
+{
+  "scope": "Independent read-only pixel audit against all eight fixed PNGs; not model detection",
+  "files": [
+    {
+      "asset": "en-checkin-24.png",
+      "actualGlyphBounds": [
+        [
+          33,
+          32,
+          253,
+          49
+        ],
+        [
+          33,
+          69,
+          298,
+          86
+        ]
+      ]
+    },
+    {
+      "asset": "en-tickets-32.png",
+      "actualGlyphBounds": [
+        [
+          33,
+          32,
+          341,
+          55
+        ],
+        [
+          34,
+          80,
+          505,
+          109
+        ]
+      ]
+    },
+    {
+      "asset": "fr-departure-24.png",
+      "actualGlyphBounds": [
+        [
+          33,
+          32,
+          273,
+          54
+        ],
+        [
+          33,
+          69,
+          372,
+          91
+        ]
+      ]
+    },
+    {
+      "asset": "fr-price-32.png",
+      "actualGlyphBounds": [
+        [
+          34,
+          32,
+          297,
+          60
+        ],
+        [
+          32,
+          80,
+          444,
+          109
+        ],
+        [
+          33,
+          128,
+          213,
+          151
+        ]
+      ]
+    },
+    {
+      "asset": "hans-order-24.png",
+      "actualGlyphBounds": [
+        [
+          33,
+          32,
+          234,
+          55
+        ],
+        [
+          32,
+          69,
+          257,
+          93
+        ]
+      ]
+    },
+    {
+      "asset": "hans-luggage-32.png",
+      "actualGlyphBounds": [
+        [
+          34,
+          32,
+          318,
+          63
+        ],
+        [
+          33,
+          80,
+          236,
+          109
+        ]
+      ]
+    },
+    {
+      "asset": "hant-order-24.png",
+      "actualGlyphBounds": [
+        [
+          33,
+          32,
+          234,
+          54
+        ],
+        [
+          32,
+          69,
+          257,
+          93
+        ]
+      ]
+    },
+    {
+      "asset": "hant-luggage-32.png",
+      "actualGlyphBounds": [
+        [
+          34,
+          32,
+          318,
+          62
+        ],
+        [
+          33,
+          80,
+          236,
+          110
+        ]
+      ]
+    }
+  ]
+}

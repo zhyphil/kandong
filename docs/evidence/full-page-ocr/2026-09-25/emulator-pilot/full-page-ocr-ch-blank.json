@@ -1,0 +1,265 @@
+{
+  "schema": 1,
+  "runId": "67e3fc4a-0cd4-46e5-8ace-395f19d94b0b",
+  "pageFixtureId": "blank",
+  "fixtureSha256": "e95fa1bac48e0a32272a65cf4b85679705597b2bbe3ca69997f038fdf26345f1",
+  "modelId": "ch",
+  "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+  "vocabulary": 18385,
+  "detectorModelSha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+  "technicalPassed": true,
+  "status": "complete",
+  "rawCandidates": [],
+  "quality": {
+    "assessed": true,
+    "normalization": "none; exact raw text plus glyph-box intersection",
+    "lines": [],
+    "expectedLines": 0,
+    "linesWithoutExactCandidate": 0,
+    "extraExactCandidates": 0,
+    "emptyCandidates": 0,
+    "fragmentOrErrorOrExtraCandidateIds": [],
+    "strictExactPage": true,
+    "interpretation": "Diagnostic only. Inspect every raw candidate, including duplicates/fragments; no translation or semantic acceptance."
+  },
+  "elapsedMillis": 1425,
+  "layout": {
+    "id": "blank",
+    "language": "none",
+    "width": 1176,
+    "height": 2400,
+    "placements": []
+  },
+  "pageComplete": true,
+  "incompleteReason": null,
+  "transportAndShapePassed": true,
+  "actualStripWithMoreThanThreeCandidates": false,
+  "transportRejection": null,
+  "frameCloseAttempts": 1,
+  "frameClosed": 1,
+  "detectorInvocations": 4,
+  "recognitionInvocations": 0,
+  "strips": [
+    {
+      "index": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "detectorShape": [
+        1,
+        1,
+        672,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 0,
+      "boxes": 0
+    },
+    {
+      "index": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "detectorShape": [
+        1,
+        1,
+        736,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 0,
+      "boxes": 0
+    },
+    {
+      "index": 2,
+      "read": [
+        0,
+        1136,
+        1176,
+        1864
+      ],
+      "core": [
+        0,
+        1200,
+        1176,
+        1800
+      ],
+      "detectorShape": [
+        1,
+        1,
+        736,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 0,
+      "boxes": 0
+    },
+    {
+      "index": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "detectorShape": [
+        1,
+        1,
+        672,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 0,
+      "boxes": 0
+    }
+  ],
+  "geometryCleanupAfterPage": {
+    "matAcquired": {
+      "fullPageResizeSource": 39,
+      "fullPageResizeDestination": 39,
+      "boxMask": 39,
+      "boxKernel": 39,
+      "boxDilated": 39,
+      "boxContourSource": 39,
+      "boxHierarchy": 39,
+      "boxContour": 124,
+      "boxProbability": 39,
+      "boxRectInput": 242,
+      "boxRectPoints": 242,
+      "boxScoreMask": 119,
+      "boxScorePolygon": 119,
+      "boxScoreRoi": 119,
+      "sourceQuad": 118,
+      "targetQuad": 118,
+      "homography": 118,
+      "cropSource": 118,
+      "warpDestination": 118,
+      "recognitionResizeSource": 118,
+      "recognitionResizeDestination": 118
+    },
+    "matReleaseAttempts": {
+      "fullPageResizeDestination": 39,
+      "fullPageResizeSource": 39,
+      "boxScoreRoi": 119,
+      "boxScorePolygon": 119,
+      "boxScoreMask": 119,
+      "boxRectPoints": 242,
+      "boxRectInput": 242,
+      "boxProbability": 39,
+      "boxContour": 124,
+      "boxHierarchy": 39,
+      "boxContourSource": 39,
+      "boxDilated": 39,
+      "boxKernel": 39,
+      "boxMask": 39,
+      "warpDestination": 118,
+      "cropSource": 118,
+      "homography": 118,
+      "targetQuad": 118,
+      "sourceQuad": 118,
+      "recognitionResizeDestination": 118,
+      "recognitionResizeSource": 118
+    },
+    "matReleased": {
+      "fullPageResizeDestination": 39,
+      "fullPageResizeSource": 39,
+      "boxScoreRoi": 119,
+      "boxScorePolygon": 119,
+      "boxScoreMask": 119,
+      "boxRectPoints": 242,
+      "boxRectInput": 242,
+      "boxProbability": 39,
+      "boxContour": 124,
+      "boxHierarchy": 39,
+      "boxContourSource": 39,
+      "boxDilated": 39,
+      "boxKernel": 39,
+      "boxMask": 39,
+      "warpDestination": 118,
+      "cropSource": 118,
+      "homography": 118,
+      "targetQuad": 118,
+      "sourceQuad": 118,
+      "recognitionResizeDestination": 118,
+      "recognitionResizeSource": 118
+    },
+    "matOpened": 2103,
+    "findContoursCalls": 39,
+    "bitmapOpened": 45,
+    "bitmapRecycleAttempts": 45,
+    "bitmapRecycled": 45,
+    "balanced": true,
+    "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+  },
+  "transportCleanupAfterPage": {
+    "readersOpened": 10,
+    "readersClosed": 10,
+    "writersOpened": 10,
+    "writersClosed": 10,
+    "writerInputs": 10,
+    "writerInputsTransferred": 10,
+    "writerInputsClosed": 0,
+    "imagesAcquired": 10,
+    "imageCloseAttempts": 10,
+    "imagesClosed": 10
+  },
+  "pageResourcesBalanced": true,
+  "modelGroupSessions": {
+    "modelId": "ch",
+    "sha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+    "vocabulary": 18385,
+    "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+    "pageIds": [
+      "en-normal",
+      "en-seam",
+      "fr-normal",
+      "fr-seam",
+      "hans-normal",
+      "hans-seam",
+      "hant-normal",
+      "hant-seam",
+      "en-seam-1080",
+      "blank"
+    ],
+    "sessionsOpened": 2,
+    "sessionsClosed": 2,
+    "sessionCounts": {
+      "detectorAttempts": 1,
+      "detectorOpened": 1,
+      "detectorClosed": 1,
+      "recognizerAttempts": 1,
+      "recognizerOpened": 1,
+      "recognizerClosed": 1
+    },
+    "closedBeforeNextModel": true,
+    "ortOpened": 318,
+    "ortClosed": 318,
+    "ortCloseAttempts": 318,
+    "ortUncertain": false
+  },
+  "threadsRestored": true
+}

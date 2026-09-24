@@ -1,0 +1,215 @@
+{
+  "source": "Parent independent manifest bounds/hash/language/no-overlap and declared glyph seam audit before inference",
+  "pages": [
+    {
+      "id": "en-normal",
+      "placements": 4,
+      "glyphCrossings": []
+    },
+    {
+      "id": "en-seam",
+      "placements": 6,
+      "glyphCrossings": [
+        {
+          "placement": "p2",
+          "boundary": 600,
+          "glyphY": [
+            592,
+            609
+          ]
+        },
+        {
+          "placement": "p3",
+          "boundary": 1136,
+          "glyphY": [
+            1125,
+            1148
+          ]
+        },
+        {
+          "placement": "p3",
+          "boundary": 1200,
+          "glyphY": [
+            1173,
+            1202
+          ]
+        },
+        {
+          "placement": "p4",
+          "boundary": 1864,
+          "glyphY": [
+            1856,
+            1873
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-normal",
+      "placements": 4,
+      "glyphCrossings": [
+        {
+          "placement": "p2",
+          "boundary": 1136,
+          "glyphY": [
+            1119,
+            1141
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-seam",
+      "placements": 6,
+      "glyphCrossings": [
+        {
+          "placement": "p2",
+          "boundary": 600,
+          "glyphY": [
+            590,
+            612
+          ]
+        },
+        {
+          "placement": "p3",
+          "boundary": 1136,
+          "glyphY": [
+            1123,
+            1151
+          ]
+        },
+        {
+          "placement": "p4",
+          "boundary": 1864,
+          "glyphY": [
+            1854,
+            1876
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hans-normal",
+      "placements": 4,
+      "glyphCrossings": [
+        {
+          "placement": "p2",
+          "boundary": 1136,
+          "glyphY": [
+            1119,
+            1143
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hans-seam",
+      "placements": 6,
+      "glyphCrossings": [
+        {
+          "placement": "p2",
+          "boundary": 600,
+          "glyphY": [
+            589,
+            612
+          ]
+        },
+        {
+          "placement": "p3",
+          "boundary": 1136,
+          "glyphY": [
+            1121,
+            1152
+          ]
+        },
+        {
+          "placement": "p4",
+          "boundary": 1864,
+          "glyphY": [
+            1853,
+            1876
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hant-normal",
+      "placements": 4,
+      "glyphCrossings": [
+        {
+          "placement": "p2",
+          "boundary": 1136,
+          "glyphY": [
+            1119,
+            1143
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hant-seam",
+      "placements": 6,
+      "glyphCrossings": [
+        {
+          "placement": "p2",
+          "boundary": 600,
+          "glyphY": [
+            590,
+            612
+          ]
+        },
+        {
+          "placement": "p3",
+          "boundary": 1136,
+          "glyphY": [
+            1122,
+            1152
+          ]
+        },
+        {
+          "placement": "p4",
+          "boundary": 1864,
+          "glyphY": [
+            1854,
+            1876
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-seam-1080",
+      "placements": 5,
+      "glyphCrossings": [
+        {
+          "placement": "p2",
+          "boundary": 800,
+          "glyphY": [
+            792,
+            809
+          ]
+        },
+        {
+          "placement": "p3",
+          "boundary": 1536,
+          "glyphY": [
+            1525,
+            1548
+          ]
+        },
+        {
+          "placement": "p3",
+          "boundary": 1600,
+          "glyphY": [
+            1573,
+            1602
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blank",
+      "placements": 0,
+      "glyphCrossings": []
+    }
+  ]
+}

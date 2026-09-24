@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "passed": true,
+  "cases": [
+    {
+      "case": "inner-creation",
+      "outerEntered": true,
+      "innerEntered": false,
+      "failureType": "OrtException",
+      "opened": 3,
+      "closed": 3,
+      "closeAttempts": 3,
+      "balanced": true
+    },
+    {
+      "case": "inner-callback",
+      "outerEntered": true,
+      "innerEntered": true,
+      "failureType": "IllegalStateException",
+      "opened": 4,
+      "closed": 4,
+      "closeAttempts": 4,
+      "balanced": true
+    }
+  ],
+  "scope": "Actual inner ORT creation failure and injected inner callback exception, before any Image allocation."
+}

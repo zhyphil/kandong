@@ -1,0 +1,15 @@
+{
+  "device": "emulator-5582",
+  "api": "37",
+  "packages": {
+    "com.kandong.modelprobe": {
+      "local": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+      "installed": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea"
+    },
+    "com.kandong.modelprobe.test": {
+      "local": "3aec659e603c6619814033c317a49666a66e1647c0308d2e2e1e093c66b19e64",
+      "installed": "3aec659e603c6619814033c317a49666a66e1647c0308d2e2e1e093c66b19e64"
+    }
+  },
+  "fixtureSha256": "e95fa1bac48e0a32272a65cf4b85679705597b2bbe3ca69997f038fdf26345f1"
+}

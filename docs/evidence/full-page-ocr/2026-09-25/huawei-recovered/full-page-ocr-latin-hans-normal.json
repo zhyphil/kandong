@@ -1,0 +1,1211 @@
+{
+  "schema": 1,
+  "runId": "13283c28-e354-4354-92d3-be3779d3a649",
+  "pageFixtureId": "hans-normal",
+  "fixtureSha256": "e95fa1bac48e0a32272a65cf4b85679705597b2bbe3ca69997f038fdf26345f1",
+  "modelId": "latin",
+  "modelSha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+  "vocabulary": 504,
+  "detectorModelSha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+  "technicalPassed": true,
+  "status": "complete",
+  "rawCandidates": [
+    {
+      "id": "1591328456-15-4-1-0-0/hans-normal/s0/c3-r3-f3",
+      "modelId": "latin",
+      "rawText": "268.90",
+      "version": {
+        "session": 1591328456,
+        "snapshot": 15,
+        "page": 4,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-normal",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 3,
+      "rawBoxIndex": 3,
+      "finalBoxIndex": 3,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          70,
+          52
+        ],
+        [
+          278,
+          52
+        ],
+        [
+          278,
+          82
+        ],
+        [
+          70,
+          82
+        ]
+      ],
+      "pageQuad": [
+        [
+          70,
+          52
+        ],
+        [
+          278,
+          52
+        ],
+        [
+          278,
+          82
+        ],
+        [
+          70,
+          82
+        ]
+      ],
+      "detectorScore": 0.8492433724649497,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        332
+      ],
+      "recognitionOutputShape": [
+        1,
+        41,
+        504
+      ]
+    },
+    {
+      "id": "1591328456-15-4-1-0-0/hans-normal/s0/c2-r2-f2",
+      "modelId": "latin",
+      "rawText": "",
+      "version": {
+        "session": 1591328456,
+        "snapshot": 15,
+        "page": 4,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-normal",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 2,
+      "rawBoxIndex": 2,
+      "finalBoxIndex": 2,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          69,
+          88
+        ],
+        [
+          303,
+          88
+        ],
+        [
+          303,
+          121
+        ],
+        [
+          69,
+          121
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          88
+        ],
+        [
+          303,
+          88
+        ],
+        [
+          303,
+          121
+        ],
+        [
+          69,
+          121
+        ]
+      ],
+      "detectorScore": 0.7897143639118911,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        340
+      ],
+      "recognitionOutputShape": [
+        1,
+        42,
+        504
+      ]
+    },
+    {
+      "id": "1591328456-15-4-1-0-0/hans-normal/s0/c1-r1-f1",
+      "modelId": "latin",
+      "rawText": "7",
+      "version": {
+        "session": 1591328456,
+        "snapshot": 15,
+        "page": 4,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-normal",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 2,
+      "localQuad": [
+        [
+          71,
+          229
+        ],
+        [
+          362,
+          229
+        ],
+        [
+          362,
+          266
+        ],
+        [
+          71,
+          266
+        ]
+      ],
+      "pageQuad": [
+        [
+          71,
+          229
+        ],
+        [
+          362,
+          229
+        ],
+        [
+          362,
+          266
+        ],
+        [
+          71,
+          266
+        ]
+      ],
+      "detectorScore": 0.8618330676177078,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        377
+      ],
+      "recognitionOutputShape": [
+        1,
+        47,
+        504
+      ]
+    },
+    {
+      "id": "1591328456-15-4-1-0-0/hans-normal/s0/c0-r0-f0",
+      "modelId": "latin",
+      "rawText": "",
+      "version": {
+        "session": 1591328456,
+        "snapshot": 15,
+        "page": 4,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-normal",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 0,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 3,
+      "localQuad": [
+        [
+          70,
+          275
+        ],
+        [
+          281,
+          275
+        ],
+        [
+          281,
+          314
+        ],
+        [
+          70,
+          314
+        ]
+      ],
+      "pageQuad": [
+        [
+          70,
+          275
+        ],
+        [
+          281,
+          275
+        ],
+        [
+          281,
+          314
+        ],
+        [
+          70,
+          314
+        ]
+      ],
+      "detectorScore": 0.8650631543191225,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        504
+      ]
+    },
+    {
+      "id": "1591328456-15-4-1-0-0/hans-normal/s1/c1-r1-f1",
+      "modelId": "latin",
+      "rawText": "268.90",
+      "version": {
+        "session": 1591328456,
+        "snapshot": 15,
+        "page": 4,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-normal",
+      "stripIndex": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          70,
+          541
+        ],
+        [
+          278,
+          543
+        ],
+        [
+          278,
+          574
+        ],
+        [
+          69,
+          572
+        ]
+      ],
+      "pageQuad": [
+        [
+          70,
+          1077
+        ],
+        [
+          278,
+          1079
+        ],
+        [
+          278,
+          1110
+        ],
+        [
+          69,
+          1108
+        ]
+      ],
+      "detectorScore": 0.8128310009015374,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        323
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        504
+      ]
+    },
+    {
+      "id": "1591328456-15-4-1-0-0/hans-normal/s1/c0-r0-f0",
+      "modelId": "latin",
+      "rawText": ",",
+      "version": {
+        "session": 1591328456,
+        "snapshot": 15,
+        "page": 4,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-normal",
+      "stripIndex": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "contourIndex": 0,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          70,
+          579
+        ],
+        [
+          304,
+          579
+        ],
+        [
+          304,
+          608
+        ],
+        [
+          70,
+          608
+        ]
+      ],
+      "pageQuad": [
+        [
+          70,
+          1115
+        ],
+        [
+          304,
+          1115
+        ],
+        [
+          304,
+          1144
+        ],
+        [
+          70,
+          1144
+        ]
+      ],
+      "detectorScore": 0.824344946201701,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        387
+      ],
+      "recognitionOutputShape": [
+        1,
+        48,
+        504
+      ]
+    },
+    {
+      "id": "1591328456-15-4-1-0-0/hans-normal/s2/c1-r0-f0",
+      "modelId": "latin",
+      "rawText": "= 1 & , T Hx +p beo",
+      "version": {
+        "session": 1591328456,
+        "snapshot": 15,
+        "page": 4,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-normal",
+      "stripIndex": 2,
+      "read": [
+        0,
+        1136,
+        1176,
+        1864
+      ],
+      "core": [
+        0,
+        1200,
+        1176,
+        1800
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          70,
+          0
+        ],
+        [
+          312,
+          0
+        ],
+        [
+          312,
+          24
+        ],
+        [
+          70,
+          24
+        ]
+      ],
+      "pageQuad": [
+        [
+          70,
+          1136
+        ],
+        [
+          312,
+          1136
+        ],
+        [
+          312,
+          1160
+        ],
+        [
+          70,
+          1160
+        ]
+      ],
+      "detectorScore": 0.5874429184482212,
+      "ownsCoreCenter": false,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        484
+      ],
+      "recognitionOutputShape": [
+        1,
+        60,
+        504
+      ]
+    },
+    {
+      "id": "1591328456-15-4-1-0-0/hans-normal/s3/c1-r1-f1",
+      "modelId": "latin",
+      "rawText": "7",
+      "version": {
+        "session": 1591328456,
+        "snapshot": 15,
+        "page": 4,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-normal",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          71,
+          444
+        ],
+        [
+          363,
+          444
+        ],
+        [
+          363,
+          479
+        ],
+        [
+          71,
+          479
+        ]
+      ],
+      "pageQuad": [
+        [
+          71,
+          2180
+        ],
+        [
+          363,
+          2180
+        ],
+        [
+          363,
+          2215
+        ],
+        [
+          71,
+          2215
+        ]
+      ],
+      "detectorScore": 0.9209762188541147,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        400
+      ],
+      "recognitionOutputShape": [
+        1,
+        50,
+        504
+      ]
+    },
+    {
+      "id": "1591328456-15-4-1-0-0/hans-normal/s3/c0-r0-f0",
+      "modelId": "latin",
+      "rawText": "",
+      "version": {
+        "session": 1591328456,
+        "snapshot": 15,
+        "page": 4,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-normal",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 0,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          70,
+          490
+        ],
+        [
+          280,
+          490
+        ],
+        [
+          280,
+          527
+        ],
+        [
+          70,
+          527
+        ]
+      ],
+      "pageQuad": [
+        [
+          70,
+          2226
+        ],
+        [
+          280,
+          2226
+        ],
+        [
+          280,
+          2263
+        ],
+        [
+          70,
+          2263
+        ]
+      ],
+      "detectorScore": 0.8927225357808992,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        504
+      ]
+    }
+  ],
+  "quality": {
+    "assessed": true,
+    "normalization": "none; exact raw text plus glyph-box intersection",
+    "lines": [
+      {
+        "lineId": "p0/0",
+        "asset": "hans-order-24.png",
+        "pngSha256": "5f489289f3040d0d68e4c427ff405326522d124abc830df5503aaaa24ad0eae5",
+        "placement": {
+          "asset": "hans-order-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        "expectedRaw": "订单合计268.90元。",
+        "pageGlyphBounds": [
+          73,
+          56,
+          274,
+          79
+        ],
+        "touchingCandidateIds": [
+          "1591328456-15-4-1-0-0/hans-normal/s0/c3-r3-f3"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p0/1",
+        "asset": "hans-order-24.png",
+        "pngSha256": "5f489289f3040d0d68e4c427ff405326522d124abc830df5503aaaa24ad0eae5",
+        "placement": {
+          "asset": "hans-order-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        "expectedRaw": "含早餐，不含城市税。",
+        "pageGlyphBounds": [
+          72,
+          93,
+          297,
+          117
+        ],
+        "touchingCandidateIds": [
+          "1591328456-15-4-1-0-0/hans-normal/s0/c2-r2-f2"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p1/0",
+        "asset": "hans-luggage-32.png",
+        "pngSha256": "ff04e22b9a33b83fe03a7bb326d7b8b2be4920dfe5d06fc80506596f43abbceb",
+        "placement": {
+          "asset": "hans-luggage-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        "expectedRaw": "每人限带7公斤行李。",
+        "pageGlyphBounds": [
+          74,
+          232,
+          358,
+          263
+        ],
+        "touchingCandidateIds": [
+          "1591328456-15-4-1-0-0/hans-normal/s0/c1-r1-f1"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p1/1",
+        "asset": "hans-luggage-32.png",
+        "pngSha256": "ff04e22b9a33b83fe03a7bb326d7b8b2be4920dfe5d06fc80506596f43abbceb",
+        "placement": {
+          "asset": "hans-luggage-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        "expectedRaw": "请勿重复付款。",
+        "pageGlyphBounds": [
+          73,
+          280,
+          276,
+          309
+        ],
+        "touchingCandidateIds": [
+          "1591328456-15-4-1-0-0/hans-normal/s0/c0-r0-f0"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p2/0",
+        "asset": "hans-order-24.png",
+        "pngSha256": "5f489289f3040d0d68e4c427ff405326522d124abc830df5503aaaa24ad0eae5",
+        "placement": {
+          "asset": "hans-order-24.png",
+          "left": 40,
+          "top": 1050,
+          "label": "middle",
+          "id": "p2"
+        },
+        "expectedRaw": "订单合计268.90元。",
+        "pageGlyphBounds": [
+          73,
+          1082,
+          274,
+          1105
+        ],
+        "touchingCandidateIds": [
+          "1591328456-15-4-1-0-0/hans-normal/s1/c1-r1-f1"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p2/1",
+        "asset": "hans-order-24.png",
+        "pngSha256": "5f489289f3040d0d68e4c427ff405326522d124abc830df5503aaaa24ad0eae5",
+        "placement": {
+          "asset": "hans-order-24.png",
+          "left": 40,
+          "top": 1050,
+          "label": "middle",
+          "id": "p2"
+        },
+        "expectedRaw": "含早餐，不含城市税。",
+        "pageGlyphBounds": [
+          72,
+          1119,
+          297,
+          1143
+        ],
+        "touchingCandidateIds": [
+          "1591328456-15-4-1-0-0/hans-normal/s1/c0-r0-f0",
+          "1591328456-15-4-1-0-0/hans-normal/s2/c1-r0-f0"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p3/0",
+        "asset": "hans-luggage-32.png",
+        "pngSha256": "ff04e22b9a33b83fe03a7bb326d7b8b2be4920dfe5d06fc80506596f43abbceb",
+        "placement": {
+          "asset": "hans-luggage-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p3"
+        },
+        "expectedRaw": "每人限带7公斤行李。",
+        "pageGlyphBounds": [
+          74,
+          2182,
+          358,
+          2213
+        ],
+        "touchingCandidateIds": [
+          "1591328456-15-4-1-0-0/hans-normal/s3/c1-r1-f1"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p3/1",
+        "asset": "hans-luggage-32.png",
+        "pngSha256": "ff04e22b9a33b83fe03a7bb326d7b8b2be4920dfe5d06fc80506596f43abbceb",
+        "placement": {
+          "asset": "hans-luggage-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p3"
+        },
+        "expectedRaw": "请勿重复付款。",
+        "pageGlyphBounds": [
+          73,
+          2230,
+          276,
+          2259
+        ],
+        "touchingCandidateIds": [
+          "1591328456-15-4-1-0-0/hans-normal/s3/c0-r0-f0"
+        ],
+        "exactCandidateIds": []
+      }
+    ],
+    "expectedLines": 8,
+    "linesWithoutExactCandidate": 8,
+    "extraExactCandidates": 0,
+    "emptyCandidates": 3,
+    "fragmentOrErrorOrExtraCandidateIds": [
+      "1591328456-15-4-1-0-0/hans-normal/s0/c3-r3-f3",
+      "1591328456-15-4-1-0-0/hans-normal/s0/c2-r2-f2",
+      "1591328456-15-4-1-0-0/hans-normal/s0/c1-r1-f1",
+      "1591328456-15-4-1-0-0/hans-normal/s0/c0-r0-f0",
+      "1591328456-15-4-1-0-0/hans-normal/s1/c1-r1-f1",
+      "1591328456-15-4-1-0-0/hans-normal/s1/c0-r0-f0",
+      "1591328456-15-4-1-0-0/hans-normal/s2/c1-r0-f0",
+      "1591328456-15-4-1-0-0/hans-normal/s3/c1-r1-f1",
+      "1591328456-15-4-1-0-0/hans-normal/s3/c0-r0-f0"
+    ],
+    "strictExactPage": false,
+    "interpretation": "Diagnostic only. Inspect every raw candidate, including duplicates/fragments; no translation or semantic acceptance."
+  },
+  "elapsedMillis": 4542,
+  "layout": {
+    "id": "hans-normal",
+    "language": "zh-Hans",
+    "width": 1176,
+    "height": 2400,
+    "placements": [
+      {
+        "asset": "hans-order-24.png",
+        "left": 40,
+        "top": 24,
+        "label": "top",
+        "id": "p0"
+      },
+      {
+        "asset": "hans-luggage-32.png",
+        "left": 40,
+        "top": 200,
+        "label": "top-more-than-three-lines",
+        "id": "p1"
+      },
+      {
+        "asset": "hans-order-24.png",
+        "left": 40,
+        "top": 1050,
+        "label": "middle",
+        "id": "p2"
+      },
+      {
+        "asset": "hans-luggage-32.png",
+        "left": 40,
+        "top": 2150,
+        "label": "bottom",
+        "id": "p3"
+      }
+    ]
+  },
+  "pageComplete": true,
+  "incompleteReason": null,
+  "transportAndShapePassed": true,
+  "actualStripWithMoreThanThreeCandidates": true,
+  "transportRejection": null,
+  "frameCloseAttempts": 1,
+  "frameClosed": 1,
+  "detectorInvocations": 4,
+  "recognitionInvocations": 9,
+  "strips": [
+    {
+      "index": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "detectorShape": [
+        1,
+        1,
+        672,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 4,
+      "boxes": 4
+    },
+    {
+      "index": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "detectorShape": [
+        1,
+        1,
+        736,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 2,
+      "boxes": 2
+    },
+    {
+      "index": 2,
+      "read": [
+        0,
+        1136,
+        1176,
+        1864
+      ],
+      "core": [
+        0,
+        1200,
+        1176,
+        1800
+      ],
+      "detectorShape": [
+        1,
+        1,
+        736,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 2,
+      "boxes": 1
+    },
+    {
+      "index": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "detectorShape": [
+        1,
+        1,
+        672,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 2,
+      "boxes": 2
+    }
+  ],
+  "geometryCleanupAfterPage": {
+    "matAcquired": {
+      "fullPageResizeSource": 59,
+      "fullPageResizeDestination": 59,
+      "boxMask": 59,
+      "boxKernel": 59,
+      "boxDilated": 59,
+      "boxContourSource": 59,
+      "boxHierarchy": 59,
+      "boxContour": 188,
+      "boxProbability": 59,
+      "boxRectInput": 369,
+      "boxRectPoints": 369,
+      "boxScoreMask": 182,
+      "boxScorePolygon": 182,
+      "boxScoreRoi": 182,
+      "sourceQuad": 181,
+      "targetQuad": 181,
+      "homography": 181,
+      "cropSource": 181,
+      "warpDestination": 181,
+      "recognitionResizeSource": 181,
+      "recognitionResizeDestination": 181
+    },
+    "matReleaseAttempts": {
+      "fullPageResizeDestination": 59,
+      "fullPageResizeSource": 59,
+      "boxScoreRoi": 182,
+      "boxScorePolygon": 182,
+      "boxScoreMask": 182,
+      "boxRectPoints": 369,
+      "boxRectInput": 369,
+      "boxProbability": 59,
+      "boxContour": 188,
+      "boxHierarchy": 59,
+      "boxContourSource": 59,
+      "boxDilated": 59,
+      "boxKernel": 59,
+      "boxMask": 59,
+      "warpDestination": 181,
+      "cropSource": 181,
+      "homography": 181,
+      "targetQuad": 181,
+      "sourceQuad": 181,
+      "recognitionResizeDestination": 181,
+      "recognitionResizeSource": 181
+    },
+    "matReleased": {
+      "fullPageResizeDestination": 59,
+      "fullPageResizeSource": 59,
+      "boxScoreRoi": 182,
+      "boxScorePolygon": 182,
+      "boxScoreMask": 182,
+      "boxRectPoints": 369,
+      "boxRectInput": 369,
+      "boxProbability": 59,
+      "boxContour": 188,
+      "boxHierarchy": 59,
+      "boxContourSource": 59,
+      "boxDilated": 59,
+      "boxKernel": 59,
+      "boxMask": 59,
+      "warpDestination": 181,
+      "cropSource": 181,
+      "homography": 181,
+      "targetQuad": 181,
+      "sourceQuad": 181,
+      "recognitionResizeDestination": 181,
+      "recognitionResizeSource": 181
+    },
+    "matOpened": 3211,
+    "findContoursCalls": 59,
+    "bitmapOpened": 69,
+    "bitmapRecycleAttempts": 69,
+    "bitmapRecycled": 69,
+    "balanced": true,
+    "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+  },
+  "transportCleanupAfterPage": {
+    "readersOpened": 15,
+    "readersClosed": 15,
+    "writersOpened": 15,
+    "writersClosed": 15,
+    "writerInputs": 15,
+    "writerInputsTransferred": 15,
+    "writerInputsClosed": 0,
+    "imagesAcquired": 15,
+    "imageCloseAttempts": 15,
+    "imagesClosed": 15
+  },
+  "pageResourcesBalanced": true,
+  "modelGroupSessions": {
+    "modelId": "latin",
+    "sha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+    "vocabulary": 504,
+    "dictionarySha256": "d80d308e9759b3ea3aaf6e57fa51b39ef0a2eeb3145a9b23df819f0f0279af44",
+    "pageIds": [
+      "en-normal",
+      "en-seam",
+      "fr-normal",
+      "fr-seam",
+      "hans-normal",
+      "hans-seam",
+      "hant-normal",
+      "hant-seam",
+      "en-seam-1080",
+      "blank"
+    ],
+    "sessionsOpened": 2,
+    "sessionsClosed": 2,
+    "sessionCounts": {
+      "detectorAttempts": 1,
+      "detectorOpened": 1,
+      "detectorClosed": 1,
+      "recognizerAttempts": 1,
+      "recognizerOpened": 1,
+      "recognizerClosed": 1
+    },
+    "closedBeforeNextModel": true,
+    "ortOpened": 636,
+    "ortClosed": 636,
+    "ortCloseAttempts": 636,
+    "ortUncertain": false
+  },
+  "threadsRestored": true
+}

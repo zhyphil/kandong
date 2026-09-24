@@ -1,0 +1,1346 @@
+{
+  "schema": 1,
+  "runId": "a7c1cd0c-0464-4f87-ac2b-f8290800e106",
+  "pageFixtureId": "fr-normal",
+  "fixtureSha256": "e95fa1bac48e0a32272a65cf4b85679705597b2bbe3ca69997f038fdf26345f1",
+  "modelId": "latin",
+  "modelSha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+  "vocabulary": 504,
+  "detectorModelSha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+  "technicalPassed": true,
+  "status": "complete",
+  "rawCandidates": [
+    {
+      "id": "1919391-13-2-1-0-0/fr-normal/s0/c4-r4-f4",
+      "modelId": "latin",
+      "rawText": "Départ à 07:45, voie 6.",
+      "version": {
+        "session": 1919391,
+        "snapshot": 13,
+        "page": 2,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-normal",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 4,
+      "rawBoxIndex": 4,
+      "finalBoxIndex": 4,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          70,
+          50
+        ],
+        [
+          317,
+          50
+        ],
+        [
+          317,
+          80
+        ],
+        [
+          70,
+          80
+        ]
+      ],
+      "pageQuad": [
+        [
+          70,
+          50
+        ],
+        [
+          317,
+          50
+        ],
+        [
+          317,
+          80
+        ],
+        [
+          70,
+          80
+        ]
+      ],
+      "detectorScore": 0.8620607638509267,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        395
+      ],
+      "recognitionOutputShape": [
+        1,
+        49,
+        504
+      ]
+    },
+    {
+      "id": "1919391-13-2-1-0-0/fr-normal/s0/c3-r3-f3",
+      "modelId": "latin",
+      "rawText": "Ne prenez pas le train de 07:15.",
+      "version": {
+        "session": 1919391,
+        "snapshot": 13,
+        "page": 2,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-normal",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 3,
+      "rawBoxIndex": 3,
+      "finalBoxIndex": 3,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          67,
+          87
+        ],
+        [
+          417,
+          85
+        ],
+        [
+          417,
+          118
+        ],
+        [
+          68,
+          120
+        ]
+      ],
+      "pageQuad": [
+        [
+          67,
+          87
+        ],
+        [
+          417,
+          85
+        ],
+        [
+          417,
+          118
+        ],
+        [
+          68,
+          120
+        ]
+      ],
+      "detectorScore": 0.8242139690800717,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        509
+      ],
+      "recognitionOutputShape": [
+        1,
+        64,
+        504
+      ]
+    },
+    {
+      "id": "1919391-13-2-1-0-0/fr-normal/s0/c2-r2-f2",
+      "modelId": "latin",
+      "rawText": "Prix total : 82,60 €.",
+      "version": {
+        "session": 1919391,
+        "snapshot": 13,
+        "page": 2,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-normal",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 2,
+      "rawBoxIndex": 2,
+      "finalBoxIndex": 2,
+      "stripReadingOrder": 2,
+      "localQuad": [
+        [
+          69,
+          226
+        ],
+        [
+          343,
+          226
+        ],
+        [
+          343,
+          262
+        ],
+        [
+          69,
+          262
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          226
+        ],
+        [
+          343,
+          226
+        ],
+        [
+          343,
+          262
+        ],
+        [
+          69,
+          262
+        ]
+      ],
+      "detectorScore": 0.8300519851531859,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        365
+      ],
+      "recognitionOutputShape": [
+        1,
+        46,
+        504
+      ]
+    },
+    {
+      "id": "1919391-13-2-1-0-0/fr-normal/s0/c1-r1-f1",
+      "modelId": "latin",
+      "rawText": "Aucun remboursement après",
+      "version": {
+        "session": 1919391,
+        "snapshot": 13,
+        "page": 2,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-normal",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 3,
+      "localQuad": [
+        [
+          67,
+          272
+        ],
+        [
+          489,
+          275
+        ],
+        [
+          488,
+          314
+        ],
+        [
+          66,
+          311
+        ]
+      ],
+      "pageQuad": [
+        [
+          67,
+          272
+        ],
+        [
+          489,
+          275
+        ],
+        [
+          488,
+          314
+        ],
+        [
+          66,
+          311
+        ]
+      ],
+      "detectorScore": 0.7778659550233051,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        519
+      ],
+      "recognitionOutputShape": [
+        1,
+        65,
+        504
+      ]
+    },
+    {
+      "id": "1919391-13-2-1-0-0/fr-normal/s0/c0-r0-f0",
+      "modelId": "latin",
+      "rawText": "confirmation.",
+      "version": {
+        "session": 1919391,
+        "snapshot": 13,
+        "page": 2,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-normal",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 0,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 4,
+      "localQuad": [
+        [
+          69,
+          323
+        ],
+        [
+          258,
+          323
+        ],
+        [
+          258,
+          357
+        ],
+        [
+          69,
+          357
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          323
+        ],
+        [
+          258,
+          323
+        ],
+        [
+          258,
+          357
+        ],
+        [
+          69,
+          357
+        ]
+      ],
+      "detectorScore": 0.840841313930907,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        504
+      ]
+    },
+    {
+      "id": "1919391-13-2-1-0-0/fr-normal/s1/c1-r1-f1",
+      "modelId": "latin",
+      "rawText": "Départ à 07:45, voie 6.",
+      "version": {
+        "session": 1919391,
+        "snapshot": 13,
+        "page": 2,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-normal",
+      "stripIndex": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          71,
+          542
+        ],
+        [
+          316,
+          542
+        ],
+        [
+          316,
+          569
+        ],
+        [
+          71,
+          569
+        ]
+      ],
+      "pageQuad": [
+        [
+          71,
+          1078
+        ],
+        [
+          316,
+          1078
+        ],
+        [
+          316,
+          1105
+        ],
+        [
+          71,
+          1105
+        ]
+      ],
+      "detectorScore": 0.9033323699479987,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        435
+      ],
+      "recognitionOutputShape": [
+        1,
+        54,
+        504
+      ]
+    },
+    {
+      "id": "1919391-13-2-1-0-0/fr-normal/s1/c0-r0-f0",
+      "modelId": "latin",
+      "rawText": "Ne prenez pas le train de 07:15.",
+      "version": {
+        "session": 1919391,
+        "snapshot": 13,
+        "page": 2,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-normal",
+      "stripIndex": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "contourIndex": 0,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          67,
+          578
+        ],
+        [
+          417,
+          575
+        ],
+        [
+          417,
+          607
+        ],
+        [
+          68,
+          610
+        ]
+      ],
+      "pageQuad": [
+        [
+          67,
+          1114
+        ],
+        [
+          417,
+          1111
+        ],
+        [
+          417,
+          1143
+        ],
+        [
+          68,
+          1146
+        ]
+      ],
+      "detectorScore": 0.7828664241692959,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        525
+      ],
+      "recognitionOutputShape": [
+        1,
+        66,
+        504
+      ]
+    },
+    {
+      "id": "1919391-13-2-1-0-0/fr-normal/s3/c2-r2-f2",
+      "modelId": "latin",
+      "rawText": "Prix total : 82,60 €.",
+      "version": {
+        "session": 1919391,
+        "snapshot": 13,
+        "page": 2,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-normal",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 2,
+      "rawBoxIndex": 2,
+      "finalBoxIndex": 2,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          69,
+          440
+        ],
+        [
+          343,
+          440
+        ],
+        [
+          343,
+          475
+        ],
+        [
+          69,
+          475
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          2176
+        ],
+        [
+          343,
+          2176
+        ],
+        [
+          343,
+          2211
+        ],
+        [
+          69,
+          2211
+        ]
+      ],
+      "detectorScore": 0.896809973529741,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        375
+      ],
+      "recognitionOutputShape": [
+        1,
+        47,
+        504
+      ]
+    },
+    {
+      "id": "1919391-13-2-1-0-0/fr-normal/s3/c1-r1-f1",
+      "modelId": "latin",
+      "rawText": "Aucun remboursement après",
+      "version": {
+        "session": 1919391,
+        "snapshot": 13,
+        "page": 2,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-normal",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          68,
+          487
+        ],
+        [
+          489,
+          489
+        ],
+        [
+          489,
+          526
+        ],
+        [
+          67,
+          524
+        ]
+      ],
+      "pageQuad": [
+        [
+          68,
+          2223
+        ],
+        [
+          489,
+          2225
+        ],
+        [
+          489,
+          2262
+        ],
+        [
+          67,
+          2260
+        ]
+      ],
+      "detectorScore": 0.7982266763602127,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        547
+      ],
+      "recognitionOutputShape": [
+        1,
+        68,
+        504
+      ]
+    },
+    {
+      "id": "1919391-13-2-1-0-0/fr-normal/s3/c0-r0-f0",
+      "modelId": "latin",
+      "rawText": "confirmation.",
+      "version": {
+        "session": 1919391,
+        "snapshot": 13,
+        "page": 2,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-normal",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 0,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 2,
+      "localQuad": [
+        [
+          67,
+          535
+        ],
+        [
+          260,
+          535
+        ],
+        [
+          260,
+          574
+        ],
+        [
+          67,
+          574
+        ]
+      ],
+      "pageQuad": [
+        [
+          67,
+          2271
+        ],
+        [
+          260,
+          2271
+        ],
+        [
+          260,
+          2310
+        ],
+        [
+          67,
+          2310
+        ]
+      ],
+      "detectorScore": 0.8464009092073433,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        504
+      ]
+    }
+  ],
+  "quality": {
+    "assessed": true,
+    "normalization": "none; exact raw text plus glyph-box intersection",
+    "lines": [
+      {
+        "lineId": "p0/0",
+        "asset": "fr-departure-24.png",
+        "pngSha256": "15f1f8013bd5843e9ea244cdb5f6f30852dab069161d1ec57a0c854069636471",
+        "placement": {
+          "asset": "fr-departure-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        "expectedRaw": "Départ à 07:45, voie 6.",
+        "pageGlyphBounds": [
+          73,
+          56,
+          313,
+          78
+        ],
+        "touchingCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s0/c4-r4-f4"
+        ],
+        "exactCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s0/c4-r4-f4"
+        ]
+      },
+      {
+        "lineId": "p0/1",
+        "asset": "fr-departure-24.png",
+        "pngSha256": "15f1f8013bd5843e9ea244cdb5f6f30852dab069161d1ec57a0c854069636471",
+        "placement": {
+          "asset": "fr-departure-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        "expectedRaw": "Ne prenez pas le train de 07:15.",
+        "pageGlyphBounds": [
+          73,
+          93,
+          412,
+          115
+        ],
+        "touchingCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s0/c3-r3-f3"
+        ],
+        "exactCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s0/c3-r3-f3"
+        ]
+      },
+      {
+        "lineId": "p1/0",
+        "asset": "fr-price-32.png",
+        "pngSha256": "9ce765c5789867771deb14086b275bfc9903008038e2b0bee4e825c94595f6fe",
+        "placement": {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        "expectedRaw": "Prix total : 82,60 €.",
+        "pageGlyphBounds": [
+          74,
+          232,
+          337,
+          260
+        ],
+        "touchingCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s0/c2-r2-f2"
+        ],
+        "exactCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s0/c2-r2-f2"
+        ]
+      },
+      {
+        "lineId": "p1/1",
+        "asset": "fr-price-32.png",
+        "pngSha256": "9ce765c5789867771deb14086b275bfc9903008038e2b0bee4e825c94595f6fe",
+        "placement": {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        "expectedRaw": "Aucun remboursement après",
+        "pageGlyphBounds": [
+          72,
+          280,
+          484,
+          309
+        ],
+        "touchingCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s0/c1-r1-f1"
+        ],
+        "exactCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s0/c1-r1-f1"
+        ]
+      },
+      {
+        "lineId": "p1/2",
+        "asset": "fr-price-32.png",
+        "pngSha256": "9ce765c5789867771deb14086b275bfc9903008038e2b0bee4e825c94595f6fe",
+        "placement": {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        "expectedRaw": "confirmation.",
+        "pageGlyphBounds": [
+          73,
+          328,
+          253,
+          351
+        ],
+        "touchingCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s0/c0-r0-f0"
+        ],
+        "exactCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s0/c0-r0-f0"
+        ]
+      },
+      {
+        "lineId": "p2/0",
+        "asset": "fr-departure-24.png",
+        "pngSha256": "15f1f8013bd5843e9ea244cdb5f6f30852dab069161d1ec57a0c854069636471",
+        "placement": {
+          "asset": "fr-departure-24.png",
+          "left": 40,
+          "top": 1050,
+          "label": "middle",
+          "id": "p2"
+        },
+        "expectedRaw": "Départ à 07:45, voie 6.",
+        "pageGlyphBounds": [
+          73,
+          1082,
+          313,
+          1104
+        ],
+        "touchingCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s1/c1-r1-f1"
+        ],
+        "exactCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s1/c1-r1-f1"
+        ]
+      },
+      {
+        "lineId": "p2/1",
+        "asset": "fr-departure-24.png",
+        "pngSha256": "15f1f8013bd5843e9ea244cdb5f6f30852dab069161d1ec57a0c854069636471",
+        "placement": {
+          "asset": "fr-departure-24.png",
+          "left": 40,
+          "top": 1050,
+          "label": "middle",
+          "id": "p2"
+        },
+        "expectedRaw": "Ne prenez pas le train de 07:15.",
+        "pageGlyphBounds": [
+          73,
+          1119,
+          412,
+          1141
+        ],
+        "touchingCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s1/c0-r0-f0"
+        ],
+        "exactCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s1/c0-r0-f0"
+        ]
+      },
+      {
+        "lineId": "p3/0",
+        "asset": "fr-price-32.png",
+        "pngSha256": "9ce765c5789867771deb14086b275bfc9903008038e2b0bee4e825c94595f6fe",
+        "placement": {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p3"
+        },
+        "expectedRaw": "Prix total : 82,60 €.",
+        "pageGlyphBounds": [
+          74,
+          2182,
+          337,
+          2210
+        ],
+        "touchingCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s3/c2-r2-f2"
+        ],
+        "exactCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s3/c2-r2-f2"
+        ]
+      },
+      {
+        "lineId": "p3/1",
+        "asset": "fr-price-32.png",
+        "pngSha256": "9ce765c5789867771deb14086b275bfc9903008038e2b0bee4e825c94595f6fe",
+        "placement": {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p3"
+        },
+        "expectedRaw": "Aucun remboursement après",
+        "pageGlyphBounds": [
+          72,
+          2230,
+          484,
+          2259
+        ],
+        "touchingCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s3/c1-r1-f1"
+        ],
+        "exactCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s3/c1-r1-f1"
+        ]
+      },
+      {
+        "lineId": "p3/2",
+        "asset": "fr-price-32.png",
+        "pngSha256": "9ce765c5789867771deb14086b275bfc9903008038e2b0bee4e825c94595f6fe",
+        "placement": {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p3"
+        },
+        "expectedRaw": "confirmation.",
+        "pageGlyphBounds": [
+          73,
+          2278,
+          253,
+          2301
+        ],
+        "touchingCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s3/c0-r0-f0"
+        ],
+        "exactCandidateIds": [
+          "1919391-13-2-1-0-0/fr-normal/s3/c0-r0-f0"
+        ]
+      }
+    ],
+    "expectedLines": 10,
+    "linesWithoutExactCandidate": 0,
+    "extraExactCandidates": 0,
+    "emptyCandidates": 0,
+    "fragmentOrErrorOrExtraCandidateIds": [],
+    "strictExactPage": true,
+    "interpretation": "Diagnostic only. Inspect every raw candidate, including duplicates/fragments; no translation or semantic acceptance."
+  },
+  "elapsedMillis": 1786,
+  "layout": {
+    "id": "fr-normal",
+    "language": "fr",
+    "width": 1176,
+    "height": 2400,
+    "placements": [
+      {
+        "asset": "fr-departure-24.png",
+        "left": 40,
+        "top": 24,
+        "label": "top",
+        "id": "p0"
+      },
+      {
+        "asset": "fr-price-32.png",
+        "left": 40,
+        "top": 200,
+        "label": "top-more-than-three-lines",
+        "id": "p1"
+      },
+      {
+        "asset": "fr-departure-24.png",
+        "left": 40,
+        "top": 1050,
+        "label": "middle",
+        "id": "p2"
+      },
+      {
+        "asset": "fr-price-32.png",
+        "left": 40,
+        "top": 2150,
+        "label": "bottom",
+        "id": "p3"
+      }
+    ]
+  },
+  "pageComplete": true,
+  "incompleteReason": null,
+  "transportAndShapePassed": true,
+  "actualStripWithMoreThanThreeCandidates": true,
+  "transportRejection": null,
+  "frameCloseAttempts": 1,
+  "frameClosed": 1,
+  "detectorInvocations": 4,
+  "recognitionInvocations": 10,
+  "strips": [
+    {
+      "index": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "detectorShape": [
+        1,
+        1,
+        672,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 5,
+      "boxes": 5
+    },
+    {
+      "index": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "detectorShape": [
+        1,
+        1,
+        736,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 2,
+      "boxes": 2
+    },
+    {
+      "index": 2,
+      "read": [
+        0,
+        1136,
+        1176,
+        1864
+      ],
+      "core": [
+        0,
+        1200,
+        1176,
+        1800
+      ],
+      "detectorShape": [
+        1,
+        1,
+        736,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 0,
+      "boxes": 0
+    },
+    {
+      "index": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "detectorShape": [
+        1,
+        1,
+        672,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 3,
+      "boxes": 3
+    }
+  ],
+  "geometryCleanupAfterPage": {
+    "matAcquired": {
+      "fullPageResizeSource": 51,
+      "fullPageResizeDestination": 51,
+      "boxMask": 51,
+      "boxKernel": 51,
+      "boxDilated": 51,
+      "boxContourSource": 51,
+      "boxHierarchy": 51,
+      "boxContour": 158,
+      "boxProbability": 51,
+      "boxRectInput": 310,
+      "boxRectPoints": 310,
+      "boxScoreMask": 153,
+      "boxScorePolygon": 153,
+      "boxScoreRoi": 153,
+      "sourceQuad": 152,
+      "targetQuad": 152,
+      "homography": 152,
+      "cropSource": 152,
+      "warpDestination": 152,
+      "recognitionResizeSource": 152,
+      "recognitionResizeDestination": 152
+    },
+    "matReleaseAttempts": {
+      "fullPageResizeDestination": 51,
+      "fullPageResizeSource": 51,
+      "boxScoreRoi": 153,
+      "boxScorePolygon": 153,
+      "boxScoreMask": 153,
+      "boxRectPoints": 310,
+      "boxRectInput": 310,
+      "boxProbability": 51,
+      "boxContour": 158,
+      "boxHierarchy": 51,
+      "boxContourSource": 51,
+      "boxDilated": 51,
+      "boxKernel": 51,
+      "boxMask": 51,
+      "warpDestination": 152,
+      "cropSource": 152,
+      "homography": 152,
+      "targetQuad": 152,
+      "sourceQuad": 152,
+      "recognitionResizeDestination": 152,
+      "recognitionResizeSource": 152
+    },
+    "matReleased": {
+      "fullPageResizeDestination": 51,
+      "fullPageResizeSource": 51,
+      "boxScoreRoi": 153,
+      "boxScorePolygon": 153,
+      "boxScoreMask": 153,
+      "boxRectPoints": 310,
+      "boxRectInput": 310,
+      "boxProbability": 51,
+      "boxContour": 158,
+      "boxHierarchy": 51,
+      "boxContourSource": 51,
+      "boxDilated": 51,
+      "boxKernel": 51,
+      "boxMask": 51,
+      "warpDestination": 152,
+      "cropSource": 152,
+      "homography": 152,
+      "targetQuad": 152,
+      "sourceQuad": 152,
+      "recognitionResizeDestination": 152,
+      "recognitionResizeSource": 152
+    },
+    "matOpened": 2709,
+    "findContoursCalls": 51,
+    "bitmapOpened": 59,
+    "bitmapRecycleAttempts": 59,
+    "bitmapRecycled": 59,
+    "balanced": true,
+    "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+  },
+  "transportCleanupAfterPage": {
+    "readersOpened": 13,
+    "readersClosed": 13,
+    "writersOpened": 13,
+    "writersClosed": 13,
+    "writerInputs": 13,
+    "writerInputsTransferred": 13,
+    "writerInputsClosed": 0,
+    "imagesAcquired": 13,
+    "imageCloseAttempts": 13,
+    "imagesClosed": 13
+  },
+  "pageResourcesBalanced": true,
+  "modelGroupSessions": {
+    "modelId": "latin",
+    "sha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+    "vocabulary": 504,
+    "dictionarySha256": "d80d308e9759b3ea3aaf6e57fa51b39ef0a2eeb3145a9b23df819f0f0279af44",
+    "pageIds": [
+      "en-normal",
+      "en-seam",
+      "fr-normal",
+      "fr-seam",
+      "hans-normal",
+      "hans-seam",
+      "hant-normal",
+      "hant-seam",
+      "en-seam-1080",
+      "blank"
+    ],
+    "sessionsOpened": 2,
+    "sessionsClosed": 2,
+    "sessionCounts": {
+      "detectorAttempts": 1,
+      "detectorOpened": 1,
+      "detectorClosed": 1,
+      "recognizerAttempts": 1,
+      "recognizerOpened": 1,
+      "recognizerClosed": 1
+    },
+    "closedBeforeNextModel": true,
+    "ortOpened": 636,
+    "ortClosed": 636,
+    "ortCloseAttempts": 636,
+    "ortUncertain": false
+  },
+  "threadsRestored": true
+}

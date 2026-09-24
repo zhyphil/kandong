@@ -1,0 +1,222 @@
+[
+  {
+    "model": "ch",
+    "page": "blank",
+    "ms": 1425,
+    "expected": 0,
+    "actual": 0,
+    "missingExact": 0,
+    "duplicates": 0,
+    "extraOrError": 0,
+    "strict": true
+  },
+  {
+    "model": "ch",
+    "page": "en-normal",
+    "ms": 2802,
+    "expected": 8,
+    "actual": 8,
+    "missingExact": 0,
+    "duplicates": 0,
+    "extraOrError": 0,
+    "strict": true
+  },
+  {
+    "model": "ch",
+    "page": "en-seam-1080",
+    "ms": 2378,
+    "expected": 10,
+    "actual": 14,
+    "missingExact": 0,
+    "duplicates": 3,
+    "extraOrError": 1,
+    "strict": false
+  },
+  {
+    "model": "ch",
+    "page": "en-seam",
+    "ms": 2578,
+    "expected": 12,
+    "actual": 16,
+    "missingExact": 0,
+    "duplicates": 3,
+    "extraOrError": 1,
+    "strict": false
+  },
+  {
+    "model": "ch",
+    "page": "fr-normal",
+    "ms": 2040,
+    "expected": 10,
+    "actual": 10,
+    "missingExact": 2,
+    "duplicates": 0,
+    "extraOrError": 2,
+    "strict": false
+  },
+  {
+    "model": "ch",
+    "page": "fr-seam",
+    "ms": 2727,
+    "expected": 15,
+    "actual": 20,
+    "missingExact": 3,
+    "duplicates": 3,
+    "extraOrError": 5,
+    "strict": false
+  },
+  {
+    "model": "ch",
+    "page": "hans-normal",
+    "ms": 1881,
+    "expected": 8,
+    "actual": 9,
+    "missingExact": 0,
+    "duplicates": 0,
+    "extraOrError": 1,
+    "strict": false
+  },
+  {
+    "model": "ch",
+    "page": "hans-seam",
+    "ms": 2222,
+    "expected": 12,
+    "actual": 16,
+    "missingExact": 0,
+    "duplicates": 3,
+    "extraOrError": 1,
+    "strict": false
+  },
+  {
+    "model": "ch",
+    "page": "hant-normal",
+    "ms": 1858,
+    "expected": 8,
+    "actual": 9,
+    "missingExact": 0,
+    "duplicates": 0,
+    "extraOrError": 1,
+    "strict": false
+  },
+  {
+    "model": "ch",
+    "page": "hant-seam",
+    "ms": 2237,
+    "expected": 12,
+    "actual": 16,
+    "missingExact": 1,
+    "duplicates": 2,
+    "extraOrError": 3,
+    "strict": false
+  },
+  {
+    "model": "latin",
+    "page": "blank",
+    "ms": 1341,
+    "expected": 0,
+    "actual": 0,
+    "missingExact": 0,
+    "duplicates": 0,
+    "extraOrError": 0,
+    "strict": true
+  },
+  {
+    "model": "latin",
+    "page": "en-normal",
+    "ms": 1807,
+    "expected": 8,
+    "actual": 8,
+    "missingExact": 0,
+    "duplicates": 0,
+    "extraOrError": 0,
+    "strict": true
+  },
+  {
+    "model": "latin",
+    "page": "en-seam-1080",
+    "ms": 1802,
+    "expected": 10,
+    "actual": 14,
+    "missingExact": 0,
+    "duplicates": 3,
+    "extraOrError": 1,
+    "strict": false
+  },
+  {
+    "model": "latin",
+    "page": "en-seam",
+    "ms": 2028,
+    "expected": 12,
+    "actual": 16,
+    "missingExact": 0,
+    "duplicates": 3,
+    "extraOrError": 1,
+    "strict": false
+  },
+  {
+    "model": "latin",
+    "page": "fr-normal",
+    "ms": 1719,
+    "expected": 10,
+    "actual": 10,
+    "missingExact": 0,
+    "duplicates": 0,
+    "extraOrError": 0,
+    "strict": true
+  },
+  {
+    "model": "latin",
+    "page": "fr-seam",
+    "ms": 2088,
+    "expected": 15,
+    "actual": 20,
+    "missingExact": 0,
+    "duplicates": 4,
+    "extraOrError": 1,
+    "strict": false
+  },
+  {
+    "model": "latin",
+    "page": "hans-normal",
+    "ms": 1618,
+    "expected": 8,
+    "actual": 9,
+    "missingExact": 8,
+    "duplicates": 0,
+    "extraOrError": 9,
+    "strict": false
+  },
+  {
+    "model": "latin",
+    "page": "hans-seam",
+    "ms": 1813,
+    "expected": 12,
+    "actual": 16,
+    "missingExact": 12,
+    "duplicates": 0,
+    "extraOrError": 16,
+    "strict": false
+  },
+  {
+    "model": "latin",
+    "page": "hant-normal",
+    "ms": 1632,
+    "expected": 8,
+    "actual": 9,
+    "missingExact": 8,
+    "duplicates": 0,
+    "extraOrError": 9,
+    "strict": false
+  },
+  {
+    "model": "latin",
+    "page": "hant-seam",
+    "ms": 1835,
+    "expected": 12,
+    "actual": 16,
+    "missingExact": 12,
+    "duplicates": 0,
+    "extraOrError": 16,
+    "strict": false
+  }
+]

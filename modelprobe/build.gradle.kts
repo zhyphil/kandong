@@ -36,6 +36,7 @@ android {
     sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("polygon-offset-assets"))
     sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("box-trace-assets"))
     sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("crop-recognition-assets"))
+    sourceSets.getByName("androidTest").assets.srcDir(layout.buildDirectory.dir("full-page-ocr-assets"))
     sourceSets.getByName("test").resources {
         srcDir(rootProject.file("docs/fixtures/recognition-prep-v1"))
         srcDir("src/androidTest/assets")
@@ -49,6 +50,33 @@ dependencies {
     androidTestImplementation("org.opencv:opencv:5.0.0.1")
     // Packaged synthetic language screening only; never a main/product dependency.
     androidTestImplementation("com.google.mlkit:language-id:17.0.6")
+}
+
+// Independent full-page diagnostic: exact old PNGs, no rendering or main-APK assets.
+val fullPageOcrManifest = rootProject.file("docs/fixtures/full-page-ocr-v1/manifest.json")
+val fullPageOcrSha = "e95fa1bac48e0a32272a65cf4b85679705597b2bbe3ca69997f038fdf26345f1"
+val fullPageOcrPngs = listOf("en-checkin-24.png", "en-tickets-32.png", "fr-departure-24.png", "fr-price-32.png",
+    "hans-order-24.png", "hans-luggage-32.png", "hant-order-24.png", "hant-luggage-32.png")
+val stageFullPageOcrAssets by tasks.registering(Sync::class) {
+    from(fullPageOcrManifest) { into("full-page-ocr-v1") }
+    from(rootProject.file("docs/fixtures/trilingual-holdout-v1")) { include(fullPageOcrPngs); into("full-page-ocr-v1") }
+    into(layout.buildDirectory.dir("full-page-ocr-assets"))
+    inputs.property("frozenManifest", fullPageOcrSha)
+    doFirst {
+        val raw = fullPageOcrManifest.readBytes()
+        check(raw.size <= 32768 && detectorDigest(raw) == fullPageOcrSha)
+        val m = groovy.json.JsonSlurper().parseText(String(raw, Charsets.UTF_8)) as Map<*, *>
+        val files = m["files"] as Map<*, *>; check(files.keys == fullPageOcrPngs.toSet())
+        fullPageOcrPngs.forEach { name ->
+            val f = files[name] as Map<*, *>
+            detectorRead(DetectorAssetSpec(rootProject.file("docs/fixtures/trilingual-holdout-v1/$name"),
+                (f["bytes"] as Number).toInt(), f["sha256"] as String, 65536))
+        }
+    }
+}
+tasks.matching { it.name in setOf("mergeDebugAndroidTestAssets", "packageDebugAndroidTest",
+    "generateDebugAndroidTestLintModel", "lintAnalyzeDebugAndroidTest") }.configureEach {
+    dependsOn(stageFullPageOcrAssets)
 }
 
 // This is deliberately task-time validation, never a configuration-time download.

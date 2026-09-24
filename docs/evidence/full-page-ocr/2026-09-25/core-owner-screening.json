@@ -1,0 +1,227 @@
+{
+  "scope": "Post-inference offline baseline, keeps existing core-center flag only; no new inference, no adoption and no expected text used for filtering.",
+  "rows": [
+    {
+      "page": "en-normal",
+      "model": "ch",
+      "before": 8,
+      "after": 8,
+      "missingExact": 0,
+      "duplicates": 0,
+      "errorOrFragment": 0,
+      "lostPreviouslyExactLines": [],
+      "strict": true
+    },
+    {
+      "page": "en-seam",
+      "model": "ch",
+      "before": 16,
+      "after": 12,
+      "missingExact": 0,
+      "duplicates": 0,
+      "errorOrFragment": 0,
+      "lostPreviouslyExactLines": [],
+      "strict": true
+    },
+    {
+      "page": "fr-normal",
+      "model": "ch",
+      "before": 10,
+      "after": 10,
+      "missingExact": 2,
+      "duplicates": 0,
+      "errorOrFragment": 2,
+      "lostPreviouslyExactLines": [],
+      "strict": false
+    },
+    {
+      "page": "fr-seam",
+      "model": "ch",
+      "before": 20,
+      "after": 15,
+      "missingExact": 3,
+      "duplicates": 0,
+      "errorOrFragment": 3,
+      "lostPreviouslyExactLines": [],
+      "strict": false
+    },
+    {
+      "page": "hans-normal",
+      "model": "ch",
+      "before": 9,
+      "after": 8,
+      "missingExact": 0,
+      "duplicates": 0,
+      "errorOrFragment": 0,
+      "lostPreviouslyExactLines": [],
+      "strict": true
+    },
+    {
+      "page": "hans-seam",
+      "model": "ch",
+      "before": 16,
+      "after": 12,
+      "missingExact": 0,
+      "duplicates": 0,
+      "errorOrFragment": 0,
+      "lostPreviouslyExactLines": [],
+      "strict": true
+    },
+    {
+      "page": "hant-normal",
+      "model": "ch",
+      "before": 9,
+      "after": 8,
+      "missingExact": 0,
+      "duplicates": 0,
+      "errorOrFragment": 0,
+      "lostPreviouslyExactLines": [],
+      "strict": true
+    },
+    {
+      "page": "hant-seam",
+      "model": "ch",
+      "before": 16,
+      "after": 12,
+      "missingExact": 2,
+      "duplicates": 0,
+      "errorOrFragment": 2,
+      "lostPreviouslyExactLines": [
+        "p2/1"
+      ],
+      "strict": false
+    },
+    {
+      "page": "en-seam-1080",
+      "model": "ch",
+      "before": 14,
+      "after": 10,
+      "missingExact": 0,
+      "duplicates": 0,
+      "errorOrFragment": 0,
+      "lostPreviouslyExactLines": [],
+      "strict": true
+    },
+    {
+      "page": "blank",
+      "model": "ch",
+      "before": 0,
+      "after": 0,
+      "missingExact": 0,
+      "duplicates": 0,
+      "errorOrFragment": 0,
+      "lostPreviouslyExactLines": [],
+      "strict": true
+    },
+    {
+      "page": "en-normal",
+      "model": "latin",
+      "before": 8,
+      "after": 8,
+      "missingExact": 0,
+      "duplicates": 0,
+      "errorOrFragment": 0,
+      "lostPreviouslyExactLines": [],
+      "strict": true
+    },
+    {
+      "page": "en-seam",
+      "model": "latin",
+      "before": 16,
+      "after": 12,
+      "missingExact": 0,
+      "duplicates": 0,
+      "errorOrFragment": 0,
+      "lostPreviouslyExactLines": [],
+      "strict": true
+    },
+    {
+      "page": "fr-normal",
+      "model": "latin",
+      "before": 10,
+      "after": 10,
+      "missingExact": 0,
+      "duplicates": 0,
+      "errorOrFragment": 0,
+      "lostPreviouslyExactLines": [],
+      "strict": true
+    },
+    {
+      "page": "fr-seam",
+      "model": "latin",
+      "before": 20,
+      "after": 15,
+      "missingExact": 0,
+      "duplicates": 0,
+      "errorOrFragment": 0,
+      "lostPreviouslyExactLines": [],
+      "strict": true
+    },
+    {
+      "page": "hans-normal",
+      "model": "latin",
+      "before": 9,
+      "after": 8,
+      "missingExact": 8,
+      "duplicates": 0,
+      "errorOrFragment": 8,
+      "lostPreviouslyExactLines": [],
+      "strict": false
+    },
+    {
+      "page": "hans-seam",
+      "model": "latin",
+      "before": 16,
+      "after": 12,
+      "missingExact": 12,
+      "duplicates": 0,
+      "errorOrFragment": 12,
+      "lostPreviouslyExactLines": [],
+      "strict": false
+    },
+    {
+      "page": "hant-normal",
+      "model": "latin",
+      "before": 9,
+      "after": 8,
+      "missingExact": 8,
+      "duplicates": 0,
+      "errorOrFragment": 8,
+      "lostPreviouslyExactLines": [],
+      "strict": false
+    },
+    {
+      "page": "hant-seam",
+      "model": "latin",
+      "before": 16,
+      "after": 12,
+      "missingExact": 12,
+      "duplicates": 0,
+      "errorOrFragment": 12,
+      "lostPreviouslyExactLines": [],
+      "strict": false
+    },
+    {
+      "page": "en-seam-1080",
+      "model": "latin",
+      "before": 14,
+      "after": 10,
+      "missingExact": 0,
+      "duplicates": 0,
+      "errorOrFragment": 0,
+      "lostPreviouslyExactLines": [],
+      "strict": true
+    },
+    {
+      "page": "blank",
+      "model": "latin",
+      "before": 0,
+      "after": 0,
+      "missingExact": 0,
+      "duplicates": 0,
+      "errorOrFragment": 0,
+      "lostPreviouslyExactLines": [],
+      "strict": true
+    }
+  ]
+}

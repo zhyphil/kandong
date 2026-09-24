@@ -1,0 +1,133 @@
+{
+  "scope": "Independent checks of retained fixed-page inference reports; not current pixels, OCR quality, translation or exact glyph-quad acceptance.",
+  "runId": "13283c28-e354-4354-92d3-be3779d3a649",
+  "pages": 20,
+  "candidatesVerified": 236,
+  "coreCoverage": true,
+  "sourceOffsetOnly": true,
+  "uniqueIdsPerPage": true,
+  "outputShapes": true,
+  "imageClosedOncePerPage": true,
+  "comparison": [
+    {
+      "model": "ch",
+      "page": "en-normal",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "ch",
+      "page": "en-seam",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "ch",
+      "page": "fr-normal",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "ch",
+      "page": "fr-seam",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "ch",
+      "page": "hans-normal",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "ch",
+      "page": "hans-seam",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "ch",
+      "page": "hant-normal",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "ch",
+      "page": "hant-seam",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "ch",
+      "page": "en-seam-1080",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "ch",
+      "page": "blank",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "latin",
+      "page": "en-normal",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "latin",
+      "page": "en-seam",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "latin",
+      "page": "fr-normal",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "latin",
+      "page": "fr-seam",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "latin",
+      "page": "hans-normal",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "latin",
+      "page": "hans-seam",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "latin",
+      "page": "hant-normal",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "latin",
+      "page": "hant-seam",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "latin",
+      "page": "en-seam-1080",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    },
+    {
+      "model": "latin",
+      "page": "blank",
+      "textAndPositionAndShapeExact": true,
+      "detectorScoreBitsExact": true
+    }
+  ]
+}

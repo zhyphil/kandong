@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "date": "2026-09-25",
+  "baseCommit": "0c218e8",
+  "scope": "Fixed synthetic complete pages, no screen capture/translation/product changes.",
+  "jvm": {
+    "tests": 144,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "Error": 0,
+    "Fatal": 0,
+    "Warning": 6
+  },
+  "fixtureVersion": "full-page-ocr-v1",
+  "fixtureSha256": "e95fa1bac48e0a32272a65cf4b85679705597b2bbe3ca69997f038fdf26345f1",
+  "apks": {
+    "modelprobe/build/outputs/apk/debug/modelprobe-debug.apk": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+    "modelprobe/build/outputs/apk/androidTest/debug/modelprobe-debug-androidTest.apk": "3aec659e603c6619814033c317a49666a66e1647c0308d2e2e1e093c66b19e64"
+  },
+  "sourceSha256": {
+    "docs/fixtures/full-page-ocr-v1/manifest.json": "e95fa1bac48e0a32272a65cf4b85679705597b2bbe3ca69997f038fdf26345f1",
+    "modelprobe/build.gradle.kts": "fa1ae33a490acca7b06092fdac0053b152b6fff811a9457651c56c2b0c8e550c",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageOcrFixtures.kt": "042135d15a8082a108a714890e4d1bdfb8929b1f3fa2ab0daaa54fd3973056dd",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageOcrLifecycleProbeTest.kt": "61057104644dd79324610df3a11fa7fe629f63179233c828d14b22f482059db6",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageOcrPipeline.kt": "6396ce1c0b52f3bf0ff862f3ea810e53376c20fe64528e243c4c19632cc33454",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageOcrProbeTest.kt": "81c329a7a2cdbced51d964fb82d41eb54528ea67f6d905aa877909580f6dbd90",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/FullPageOcrContractTest.kt": "9a87570af6e710de83bf97dc8788762d88bfdc305a4763cf27ca6d34206188d7",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageOcrContract.kt": "33d7e6bc01049a56828e647ff103b5dc7959f2476398698ef50ccbbc38997282"
+  },
+  "emulator": {
+    "instrumentation": 39,
+    "passed": true,
+    "seconds": 50.161,
+    "technicalPages": 20,
+    "detectorInvocations": 78,
+    "recognitionInvocations": 236,
+    "rawStrictPages": 5,
+    "includesBlankPages": 2,
+    "repeatTextPositionShapeExactPages": 20,
+    "repeatScoreExactPages": 20
+  },
+  "huawei": {
+    "installed": true,
+    "testStatus": "RECOVERED_REPORTS_AND_PASSED_SHORT_REGRESSION",
+    "technicalPages": 20,
+    "nativePipelineReportPassed": true,
+    "lifecycleReportPassed": true,
+    "nestedSessionFailureReportPassed": true,
+    "recoveredRegressionTests": 36,
+    "recoveredRegressionSeconds": 7.584,
+    "raw39TestConsoleComplete": false,
+    "pageTextPositionShapeExactVsEmulator": 20,
+    "pageScoreExactVsEmulator": 20,
+    "fullPageGroupElapsedMillis": 100259,
+    "reason": "USB broke host console during the first run; same-run reports recovered after reconnect, then 36 shorter checks passed. No claim of a complete Huawei 39-test console."
+  },
+  "limits": [
+    "normal-named fixtures include some real strip seams; not seamless controls",
+    "glyph-box intersection is coarse location diagnosis, not tight polygon acceptance",
+    "core ownership baseline loses one previously exact Hant line; rejected as dedup rule",
+    "native checks reject between calls, not interrupt a native call",
+    "two sessions, not prior one-session RSS acceptance",
+    "no real-page freshness/privacy or translation acceptance"
+  ],
+  "review": {
+    "budget": 3,
+    "auditCompleted": true,
+    "implementationTimedOutSeconds": 600,
+    "rootCompletedBuild": true,
+    "readonlyReviewCompleted": true,
+    "findingsAddressed": "Actual native checkpoint/creation/callback regressions added; normal seam limitation documented."
+  },
+  "handoff": "User requested wrap-up and stop due to Codex quota. No further work scheduled."
+}

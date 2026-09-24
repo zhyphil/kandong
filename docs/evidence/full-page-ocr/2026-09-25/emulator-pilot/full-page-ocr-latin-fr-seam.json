@@ -1,0 +1,2296 @@
+{
+  "schema": 1,
+  "runId": "67e3fc4a-0cd4-46e5-8ace-395f19d94b0b",
+  "pageFixtureId": "fr-seam",
+  "fixtureSha256": "e95fa1bac48e0a32272a65cf4b85679705597b2bbe3ca69997f038fdf26345f1",
+  "modelId": "latin",
+  "modelSha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+  "vocabulary": 504,
+  "detectorModelSha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+  "technicalPassed": true,
+  "status": "complete",
+  "rawCandidates": [
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s0/c6-r6-f6",
+      "modelId": "latin",
+      "rawText": "Départ à 07:45, voie 6.",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 6,
+      "rawBoxIndex": 6,
+      "finalBoxIndex": 6,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          70,
+          50
+        ],
+        [
+          317,
+          50
+        ],
+        [
+          317,
+          80
+        ],
+        [
+          70,
+          80
+        ]
+      ],
+      "pageQuad": [
+        [
+          70,
+          50
+        ],
+        [
+          317,
+          50
+        ],
+        [
+          317,
+          80
+        ],
+        [
+          70,
+          80
+        ]
+      ],
+      "detectorScore": 0.8579119439051542,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        395
+      ],
+      "recognitionOutputShape": [
+        1,
+        49,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s0/c5-r5-f5",
+      "modelId": "latin",
+      "rawText": "Ne prenez pas le train de 07:15.",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 5,
+      "rawBoxIndex": 5,
+      "finalBoxIndex": 5,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          67,
+          87
+        ],
+        [
+          417,
+          85
+        ],
+        [
+          417,
+          118
+        ],
+        [
+          68,
+          120
+        ]
+      ],
+      "pageQuad": [
+        [
+          67,
+          87
+        ],
+        [
+          417,
+          85
+        ],
+        [
+          417,
+          118
+        ],
+        [
+          68,
+          120
+        ]
+      ],
+      "detectorScore": 0.8258958330492586,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        509
+      ],
+      "recognitionOutputShape": [
+        1,
+        64,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s0/c4-r4-f4",
+      "modelId": "latin",
+      "rawText": "Prix total : 82,60 €.",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 4,
+      "rawBoxIndex": 4,
+      "finalBoxIndex": 4,
+      "stripReadingOrder": 2,
+      "localQuad": [
+        [
+          69,
+          226
+        ],
+        [
+          343,
+          226
+        ],
+        [
+          343,
+          262
+        ],
+        [
+          69,
+          262
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          226
+        ],
+        [
+          343,
+          226
+        ],
+        [
+          343,
+          262
+        ],
+        [
+          69,
+          262
+        ]
+      ],
+      "detectorScore": 0.8209574130781336,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        365
+      ],
+      "recognitionOutputShape": [
+        1,
+        46,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s0/c3-r3-f3",
+      "modelId": "latin",
+      "rawText": "Aucun remboursement après",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 3,
+      "rawBoxIndex": 3,
+      "finalBoxIndex": 3,
+      "stripReadingOrder": 3,
+      "localQuad": [
+        [
+          68,
+          274
+        ],
+        [
+          488,
+          276
+        ],
+        [
+          488,
+          312
+        ],
+        [
+          67,
+          310
+        ]
+      ],
+      "pageQuad": [
+        [
+          68,
+          274
+        ],
+        [
+          488,
+          276
+        ],
+        [
+          488,
+          312
+        ],
+        [
+          67,
+          310
+        ]
+      ],
+      "detectorScore": 0.8238014483041505,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        561
+      ],
+      "recognitionOutputShape": [
+        1,
+        70,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s0/c2-r2-f2",
+      "modelId": "latin",
+      "rawText": "confirmation.",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 2,
+      "rawBoxIndex": 2,
+      "finalBoxIndex": 2,
+      "stripReadingOrder": 4,
+      "localQuad": [
+        [
+          70,
+          323
+        ],
+        [
+          258,
+          323
+        ],
+        [
+          258,
+          357
+        ],
+        [
+          70,
+          357
+        ]
+      ],
+      "pageQuad": [
+        [
+          70,
+          323
+        ],
+        [
+          258,
+          323
+        ],
+        [
+          258,
+          357
+        ],
+        [
+          70,
+          357
+        ]
+      ],
+      "detectorScore": 0.8304540713976698,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s0/c1-r1-f1",
+      "modelId": "latin",
+      "rawText": "Départ à 07:45, voie 6.",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 5,
+      "localQuad": [
+        [
+          71,
+          584
+        ],
+        [
+          317,
+          584
+        ],
+        [
+          317,
+          614
+        ],
+        [
+          71,
+          614
+        ]
+      ],
+      "pageQuad": [
+        [
+          71,
+          584
+        ],
+        [
+          317,
+          584
+        ],
+        [
+          317,
+          614
+        ],
+        [
+          71,
+          614
+        ]
+      ],
+      "detectorScore": 0.8583251339592142,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        393
+      ],
+      "recognitionOutputShape": [
+        1,
+        49,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s0/c0-r0-f0",
+      "modelId": "latin",
+      "rawText": "Ne prenez pas le train de 07:15.",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 0,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 6,
+      "localQuad": [
+        [
+          69,
+          622
+        ],
+        [
+          416,
+          620
+        ],
+        [
+          416,
+          651
+        ],
+        [
+          69,
+          652
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          622
+        ],
+        [
+          416,
+          620
+        ],
+        [
+          416,
+          651
+        ],
+        [
+          69,
+          652
+        ]
+      ],
+      "detectorScore": 0.8106288901271829,
+      "ownsCoreCenter": false,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        537
+      ],
+      "recognitionOutputShape": [
+        1,
+        67,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s1/c4-r4-f4",
+      "modelId": "latin",
+      "rawText": "Départ à 07:45, voie 6.",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "contourIndex": 4,
+      "rawBoxIndex": 4,
+      "finalBoxIndex": 4,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          70,
+          48
+        ],
+        [
+          317,
+          48
+        ],
+        [
+          317,
+          78
+        ],
+        [
+          70,
+          78
+        ]
+      ],
+      "pageQuad": [
+        [
+          70,
+          584
+        ],
+        [
+          317,
+          584
+        ],
+        [
+          317,
+          614
+        ],
+        [
+          70,
+          614
+        ]
+      ],
+      "detectorScore": 0.8620130655896758,
+      "ownsCoreCenter": false,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        395
+      ],
+      "recognitionOutputShape": [
+        1,
+        49,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s1/c3-r3-f3",
+      "modelId": "latin",
+      "rawText": "Ne prenez pas le train de 07:15.",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "contourIndex": 3,
+      "rawBoxIndex": 3,
+      "finalBoxIndex": 3,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          67,
+          85
+        ],
+        [
+          417,
+          83
+        ],
+        [
+          417,
+          116
+        ],
+        [
+          68,
+          118
+        ]
+      ],
+      "pageQuad": [
+        [
+          67,
+          621
+        ],
+        [
+          417,
+          619
+        ],
+        [
+          417,
+          652
+        ],
+        [
+          68,
+          654
+        ]
+      ],
+      "detectorScore": 0.8128610489213711,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        509
+      ],
+      "recognitionOutputShape": [
+        1,
+        64,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s1/c2-r2-f2",
+      "modelId": "latin",
+      "rawText": "Prix total : 82,60 €.",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "contourIndex": 2,
+      "rawBoxIndex": 2,
+      "finalBoxIndex": 2,
+      "stripReadingOrder": 2,
+      "localQuad": [
+        [
+          68,
+          580
+        ],
+        [
+          343,
+          582
+        ],
+        [
+          342,
+          618
+        ],
+        [
+          67,
+          616
+        ]
+      ],
+      "pageQuad": [
+        [
+          68,
+          1116
+        ],
+        [
+          343,
+          1118
+        ],
+        [
+          342,
+          1154
+        ],
+        [
+          67,
+          1152
+        ]
+      ],
+      "detectorScore": 0.8041133686104756,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        366
+      ],
+      "recognitionOutputShape": [
+        1,
+        46,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s1/c1-r1-f1",
+      "modelId": "latin",
+      "rawText": "Aucun remboursement après",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 3,
+      "localQuad": [
+        [
+          69,
+          628
+        ],
+        [
+          488,
+          630
+        ],
+        [
+          488,
+          667
+        ],
+        [
+          68,
+          665
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          1164
+        ],
+        [
+          488,
+          1166
+        ],
+        [
+          488,
+          1203
+        ],
+        [
+          68,
+          1201
+        ]
+      ],
+      "detectorScore": 0.8034252205776893,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        544
+      ],
+      "recognitionOutputShape": [
+        1,
+        68,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s1/c0-r0-f0",
+      "modelId": "latin",
+      "rawText": "confirmation.",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "contourIndex": 0,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 4,
+      "localQuad": [
+        [
+          69,
+          678
+        ],
+        [
+          257,
+          678
+        ],
+        [
+          257,
+          711
+        ],
+        [
+          69,
+          711
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          1214
+        ],
+        [
+          257,
+          1214
+        ],
+        [
+          257,
+          1247
+        ],
+        [
+          69,
+          1247
+        ]
+      ],
+      "detectorScore": 0.8698261806258448,
+      "ownsCoreCenter": false,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s2/c2-r2-f2",
+      "modelId": "latin",
+      "rawText": "Pnx totar\": oz,oo e.",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 2,
+      "read": [
+        0,
+        1136,
+        1176,
+        1864
+      ],
+      "core": [
+        0,
+        1200,
+        1176,
+        1800
+      ],
+      "contourIndex": 2,
+      "rawBoxIndex": 2,
+      "finalBoxIndex": 2,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          69,
+          0
+        ],
+        [
+          343,
+          0
+        ],
+        [
+          343,
+          19
+        ],
+        [
+          69,
+          19
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          1136
+        ],
+        [
+          343,
+          1136
+        ],
+        [
+          343,
+          1155
+        ],
+        [
+          69,
+          1155
+        ]
+      ],
+      "detectorScore": 0.577251841462157,
+      "ownsCoreCenter": false,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        692
+      ],
+      "recognitionOutputShape": [
+        1,
+        86,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s2/c1-r1-f1",
+      "modelId": "latin",
+      "rawText": "Aucun remboursement après",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 2,
+      "read": [
+        0,
+        1136,
+        1176,
+        1864
+      ],
+      "core": [
+        0,
+        1200,
+        1176,
+        1800
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          68,
+          27
+        ],
+        [
+          490,
+          29
+        ],
+        [
+          490,
+          67
+        ],
+        [
+          67,
+          65
+        ]
+      ],
+      "pageQuad": [
+        [
+          68,
+          1163
+        ],
+        [
+          490,
+          1165
+        ],
+        [
+          490,
+          1203
+        ],
+        [
+          67,
+          1201
+        ]
+      ],
+      "detectorScore": 0.8112599278497488,
+      "ownsCoreCenter": false,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        534
+      ],
+      "recognitionOutputShape": [
+        1,
+        67,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s2/c0-r0-f0",
+      "modelId": "latin",
+      "rawText": "confirmation.",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 2,
+      "read": [
+        0,
+        1136,
+        1176,
+        1864
+      ],
+      "core": [
+        0,
+        1200,
+        1176,
+        1800
+      ],
+      "contourIndex": 0,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 2,
+      "localQuad": [
+        [
+          69,
+          79
+        ],
+        [
+          258,
+          79
+        ],
+        [
+          258,
+          113
+        ],
+        [
+          69,
+          113
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          1215
+        ],
+        [
+          258,
+          1215
+        ],
+        [
+          258,
+          1249
+        ],
+        [
+          69,
+          1249
+        ]
+      ],
+      "detectorScore": 0.8442380353230838,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s3/c4-r4-f4",
+      "modelId": "latin",
+      "rawText": "Départ à 07:45, voie 6.",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 4,
+      "rawBoxIndex": 4,
+      "finalBoxIndex": 4,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          69,
+          111
+        ],
+        [
+          318,
+          111
+        ],
+        [
+          318,
+          143
+        ],
+        [
+          69,
+          143
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          1847
+        ],
+        [
+          318,
+          1847
+        ],
+        [
+          318,
+          1879
+        ],
+        [
+          69,
+          1879
+        ]
+      ],
+      "detectorScore": 0.8052195502637789,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        373
+      ],
+      "recognitionOutputShape": [
+        1,
+        47,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s3/c3-r3-f3",
+      "modelId": "latin",
+      "rawText": "Ne prenez pas le train de 07:15.",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 3,
+      "rawBoxIndex": 3,
+      "finalBoxIndex": 3,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          68,
+          149
+        ],
+        [
+          416,
+          147
+        ],
+        [
+          416,
+          180
+        ],
+        [
+          69,
+          182
+        ]
+      ],
+      "pageQuad": [
+        [
+          68,
+          1885
+        ],
+        [
+          416,
+          1883
+        ],
+        [
+          416,
+          1916
+        ],
+        [
+          69,
+          1918
+        ]
+      ],
+      "detectorScore": 0.8095524176144366,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        506
+      ],
+      "recognitionOutputShape": [
+        1,
+        63,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s3/c2-r2-f2",
+      "modelId": "latin",
+      "rawText": "Prix total : 82,60 €.",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 2,
+      "rawBoxIndex": 2,
+      "finalBoxIndex": 2,
+      "stripReadingOrder": 2,
+      "localQuad": [
+        [
+          68,
+          440
+        ],
+        [
+          341,
+          440
+        ],
+        [
+          341,
+          475
+        ],
+        [
+          68,
+          475
+        ]
+      ],
+      "pageQuad": [
+        [
+          68,
+          2176
+        ],
+        [
+          341,
+          2176
+        ],
+        [
+          341,
+          2211
+        ],
+        [
+          68,
+          2211
+        ]
+      ],
+      "detectorScore": 0.8538196194907186,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        374
+      ],
+      "recognitionOutputShape": [
+        1,
+        47,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s3/c1-r1-f1",
+      "modelId": "latin",
+      "rawText": "Aucun remboursement après",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 3,
+      "localQuad": [
+        [
+          68,
+          487
+        ],
+        [
+          488,
+          489
+        ],
+        [
+          488,
+          526
+        ],
+        [
+          67,
+          524
+        ]
+      ],
+      "pageQuad": [
+        [
+          68,
+          2223
+        ],
+        [
+          488,
+          2225
+        ],
+        [
+          488,
+          2262
+        ],
+        [
+          67,
+          2260
+        ]
+      ],
+      "detectorScore": 0.7980495401309561,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        546
+      ],
+      "recognitionOutputShape": [
+        1,
+        68,
+        504
+      ]
+    },
+    {
+      "id": "1538535-14-3-1-0-0/fr-seam/s3/c0-r0-f0",
+      "modelId": "latin",
+      "rawText": "confirmation.",
+      "version": {
+        "session": 1538535,
+        "snapshot": 14,
+        "page": 3,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "fr-seam",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 0,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 4,
+      "localQuad": [
+        [
+          67,
+          535
+        ],
+        [
+          260,
+          535
+        ],
+        [
+          260,
+          574
+        ],
+        [
+          67,
+          574
+        ]
+      ],
+      "pageQuad": [
+        [
+          67,
+          2271
+        ],
+        [
+          260,
+          2271
+        ],
+        [
+          260,
+          2310
+        ],
+        [
+          67,
+          2310
+        ]
+      ],
+      "detectorScore": 0.8119491891662823,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        504
+      ]
+    }
+  ],
+  "quality": {
+    "assessed": true,
+    "normalization": "none; exact raw text plus glyph-box intersection",
+    "lines": [
+      {
+        "lineId": "p0/0",
+        "asset": "fr-departure-24.png",
+        "pngSha256": "15f1f8013bd5843e9ea244cdb5f6f30852dab069161d1ec57a0c854069636471",
+        "placement": {
+          "asset": "fr-departure-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        "expectedRaw": "Départ à 07:45, voie 6.",
+        "pageGlyphBounds": [
+          73,
+          56,
+          313,
+          78
+        ],
+        "touchingCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s0/c6-r6-f6"
+        ],
+        "exactCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s0/c6-r6-f6"
+        ]
+      },
+      {
+        "lineId": "p0/1",
+        "asset": "fr-departure-24.png",
+        "pngSha256": "15f1f8013bd5843e9ea244cdb5f6f30852dab069161d1ec57a0c854069636471",
+        "placement": {
+          "asset": "fr-departure-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        "expectedRaw": "Ne prenez pas le train de 07:15.",
+        "pageGlyphBounds": [
+          73,
+          93,
+          412,
+          115
+        ],
+        "touchingCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s0/c5-r5-f5"
+        ],
+        "exactCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s0/c5-r5-f5"
+        ]
+      },
+      {
+        "lineId": "p1/0",
+        "asset": "fr-price-32.png",
+        "pngSha256": "9ce765c5789867771deb14086b275bfc9903008038e2b0bee4e825c94595f6fe",
+        "placement": {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        "expectedRaw": "Prix total : 82,60 €.",
+        "pageGlyphBounds": [
+          74,
+          232,
+          337,
+          260
+        ],
+        "touchingCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s0/c4-r4-f4"
+        ],
+        "exactCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s0/c4-r4-f4"
+        ]
+      },
+      {
+        "lineId": "p1/1",
+        "asset": "fr-price-32.png",
+        "pngSha256": "9ce765c5789867771deb14086b275bfc9903008038e2b0bee4e825c94595f6fe",
+        "placement": {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        "expectedRaw": "Aucun remboursement après",
+        "pageGlyphBounds": [
+          72,
+          280,
+          484,
+          309
+        ],
+        "touchingCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s0/c3-r3-f3"
+        ],
+        "exactCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s0/c3-r3-f3"
+        ]
+      },
+      {
+        "lineId": "p1/2",
+        "asset": "fr-price-32.png",
+        "pngSha256": "9ce765c5789867771deb14086b275bfc9903008038e2b0bee4e825c94595f6fe",
+        "placement": {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        "expectedRaw": "confirmation.",
+        "pageGlyphBounds": [
+          73,
+          328,
+          253,
+          351
+        ],
+        "touchingCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s0/c2-r2-f2"
+        ],
+        "exactCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s0/c2-r2-f2"
+        ]
+      },
+      {
+        "lineId": "p2/0",
+        "asset": "fr-departure-24.png",
+        "pngSha256": "15f1f8013bd5843e9ea244cdb5f6f30852dab069161d1ec57a0c854069636471",
+        "placement": {
+          "asset": "fr-departure-24.png",
+          "left": 40,
+          "top": 558,
+          "label": "core-boundary",
+          "id": "p2"
+        },
+        "expectedRaw": "Départ à 07:45, voie 6.",
+        "pageGlyphBounds": [
+          73,
+          590,
+          313,
+          612
+        ],
+        "touchingCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s0/c1-r1-f1",
+          "1538535-14-3-1-0-0/fr-seam/s1/c4-r4-f4"
+        ],
+        "exactCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s0/c1-r1-f1",
+          "1538535-14-3-1-0-0/fr-seam/s1/c4-r4-f4"
+        ]
+      },
+      {
+        "lineId": "p2/1",
+        "asset": "fr-departure-24.png",
+        "pngSha256": "15f1f8013bd5843e9ea244cdb5f6f30852dab069161d1ec57a0c854069636471",
+        "placement": {
+          "asset": "fr-departure-24.png",
+          "left": 40,
+          "top": 558,
+          "label": "core-boundary",
+          "id": "p2"
+        },
+        "expectedRaw": "Ne prenez pas le train de 07:15.",
+        "pageGlyphBounds": [
+          73,
+          627,
+          412,
+          649
+        ],
+        "touchingCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s0/c0-r0-f0",
+          "1538535-14-3-1-0-0/fr-seam/s1/c3-r3-f3"
+        ],
+        "exactCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s0/c0-r0-f0",
+          "1538535-14-3-1-0-0/fr-seam/s1/c3-r3-f3"
+        ]
+      },
+      {
+        "lineId": "p3/0",
+        "asset": "fr-price-32.png",
+        "pngSha256": "9ce765c5789867771deb14086b275bfc9903008038e2b0bee4e825c94595f6fe",
+        "placement": {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 1091,
+          "label": "read-top-boundary",
+          "id": "p3"
+        },
+        "expectedRaw": "Prix total : 82,60 €.",
+        "pageGlyphBounds": [
+          74,
+          1123,
+          337,
+          1151
+        ],
+        "touchingCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s1/c2-r2-f2",
+          "1538535-14-3-1-0-0/fr-seam/s2/c2-r2-f2"
+        ],
+        "exactCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s1/c2-r2-f2"
+        ]
+      },
+      {
+        "lineId": "p3/1",
+        "asset": "fr-price-32.png",
+        "pngSha256": "9ce765c5789867771deb14086b275bfc9903008038e2b0bee4e825c94595f6fe",
+        "placement": {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 1091,
+          "label": "read-top-boundary",
+          "id": "p3"
+        },
+        "expectedRaw": "Aucun remboursement après",
+        "pageGlyphBounds": [
+          72,
+          1171,
+          484,
+          1200
+        ],
+        "touchingCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s1/c1-r1-f1",
+          "1538535-14-3-1-0-0/fr-seam/s2/c1-r1-f1"
+        ],
+        "exactCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s1/c1-r1-f1",
+          "1538535-14-3-1-0-0/fr-seam/s2/c1-r1-f1"
+        ]
+      },
+      {
+        "lineId": "p3/2",
+        "asset": "fr-price-32.png",
+        "pngSha256": "9ce765c5789867771deb14086b275bfc9903008038e2b0bee4e825c94595f6fe",
+        "placement": {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 1091,
+          "label": "read-top-boundary",
+          "id": "p3"
+        },
+        "expectedRaw": "confirmation.",
+        "pageGlyphBounds": [
+          73,
+          1219,
+          253,
+          1242
+        ],
+        "touchingCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s1/c0-r0-f0",
+          "1538535-14-3-1-0-0/fr-seam/s2/c0-r0-f0"
+        ],
+        "exactCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s1/c0-r0-f0",
+          "1538535-14-3-1-0-0/fr-seam/s2/c0-r0-f0"
+        ]
+      },
+      {
+        "lineId": "p4/0",
+        "asset": "fr-departure-24.png",
+        "pngSha256": "15f1f8013bd5843e9ea244cdb5f6f30852dab069161d1ec57a0c854069636471",
+        "placement": {
+          "asset": "fr-departure-24.png",
+          "left": 40,
+          "top": 1822,
+          "label": "read-bottom-boundary",
+          "id": "p4"
+        },
+        "expectedRaw": "Départ à 07:45, voie 6.",
+        "pageGlyphBounds": [
+          73,
+          1854,
+          313,
+          1876
+        ],
+        "touchingCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s3/c4-r4-f4"
+        ],
+        "exactCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s3/c4-r4-f4"
+        ]
+      },
+      {
+        "lineId": "p4/1",
+        "asset": "fr-departure-24.png",
+        "pngSha256": "15f1f8013bd5843e9ea244cdb5f6f30852dab069161d1ec57a0c854069636471",
+        "placement": {
+          "asset": "fr-departure-24.png",
+          "left": 40,
+          "top": 1822,
+          "label": "read-bottom-boundary",
+          "id": "p4"
+        },
+        "expectedRaw": "Ne prenez pas le train de 07:15.",
+        "pageGlyphBounds": [
+          73,
+          1891,
+          412,
+          1913
+        ],
+        "touchingCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s3/c3-r3-f3"
+        ],
+        "exactCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s3/c3-r3-f3"
+        ]
+      },
+      {
+        "lineId": "p5/0",
+        "asset": "fr-price-32.png",
+        "pngSha256": "9ce765c5789867771deb14086b275bfc9903008038e2b0bee4e825c94595f6fe",
+        "placement": {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p5"
+        },
+        "expectedRaw": "Prix total : 82,60 €.",
+        "pageGlyphBounds": [
+          74,
+          2182,
+          337,
+          2210
+        ],
+        "touchingCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s3/c2-r2-f2"
+        ],
+        "exactCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s3/c2-r2-f2"
+        ]
+      },
+      {
+        "lineId": "p5/1",
+        "asset": "fr-price-32.png",
+        "pngSha256": "9ce765c5789867771deb14086b275bfc9903008038e2b0bee4e825c94595f6fe",
+        "placement": {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p5"
+        },
+        "expectedRaw": "Aucun remboursement après",
+        "pageGlyphBounds": [
+          72,
+          2230,
+          484,
+          2259
+        ],
+        "touchingCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s3/c1-r1-f1"
+        ],
+        "exactCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s3/c1-r1-f1"
+        ]
+      },
+      {
+        "lineId": "p5/2",
+        "asset": "fr-price-32.png",
+        "pngSha256": "9ce765c5789867771deb14086b275bfc9903008038e2b0bee4e825c94595f6fe",
+        "placement": {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p5"
+        },
+        "expectedRaw": "confirmation.",
+        "pageGlyphBounds": [
+          73,
+          2278,
+          253,
+          2301
+        ],
+        "touchingCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s3/c0-r0-f0"
+        ],
+        "exactCandidateIds": [
+          "1538535-14-3-1-0-0/fr-seam/s3/c0-r0-f0"
+        ]
+      }
+    ],
+    "expectedLines": 15,
+    "linesWithoutExactCandidate": 0,
+    "extraExactCandidates": 4,
+    "emptyCandidates": 0,
+    "fragmentOrErrorOrExtraCandidateIds": [
+      "1538535-14-3-1-0-0/fr-seam/s2/c2-r2-f2"
+    ],
+    "strictExactPage": false,
+    "interpretation": "Diagnostic only. Inspect every raw candidate, including duplicates/fragments; no translation or semantic acceptance."
+  },
+  "elapsedMillis": 2088,
+  "layout": {
+    "id": "fr-seam",
+    "language": "fr",
+    "width": 1176,
+    "height": 2400,
+    "placements": [
+      {
+        "asset": "fr-departure-24.png",
+        "left": 40,
+        "top": 24,
+        "label": "top",
+        "id": "p0"
+      },
+      {
+        "asset": "fr-price-32.png",
+        "left": 40,
+        "top": 200,
+        "label": "top-more-than-three-lines",
+        "id": "p1"
+      },
+      {
+        "asset": "fr-departure-24.png",
+        "left": 40,
+        "top": 558,
+        "label": "core-boundary",
+        "id": "p2"
+      },
+      {
+        "asset": "fr-price-32.png",
+        "left": 40,
+        "top": 1091,
+        "label": "read-top-boundary",
+        "id": "p3"
+      },
+      {
+        "asset": "fr-departure-24.png",
+        "left": 40,
+        "top": 1822,
+        "label": "read-bottom-boundary",
+        "id": "p4"
+      },
+      {
+        "asset": "fr-price-32.png",
+        "left": 40,
+        "top": 2150,
+        "label": "bottom",
+        "id": "p5"
+      }
+    ]
+  },
+  "pageComplete": true,
+  "incompleteReason": null,
+  "transportAndShapePassed": true,
+  "actualStripWithMoreThanThreeCandidates": true,
+  "transportRejection": null,
+  "frameCloseAttempts": 1,
+  "frameClosed": 1,
+  "detectorInvocations": 4,
+  "recognitionInvocations": 20,
+  "strips": [
+    {
+      "index": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "detectorShape": [
+        1,
+        1,
+        672,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 7,
+      "boxes": 7
+    },
+    {
+      "index": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "detectorShape": [
+        1,
+        1,
+        736,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 5,
+      "boxes": 5
+    },
+    {
+      "index": 2,
+      "read": [
+        0,
+        1136,
+        1176,
+        1864
+      ],
+      "core": [
+        0,
+        1200,
+        1176,
+        1800
+      ],
+      "detectorShape": [
+        1,
+        1,
+        736,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 3,
+      "boxes": 3
+    },
+    {
+      "index": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "detectorShape": [
+        1,
+        1,
+        672,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 5,
+      "boxes": 5
+    }
+  ],
+  "geometryCleanupAfterPage": {
+    "matAcquired": {
+      "fullPageResizeSource": 55,
+      "fullPageResizeDestination": 55,
+      "boxMask": 55,
+      "boxKernel": 55,
+      "boxDilated": 55,
+      "boxContourSource": 55,
+      "boxHierarchy": 55,
+      "boxContour": 178,
+      "boxProbability": 55,
+      "boxRectInput": 350,
+      "boxRectPoints": 350,
+      "boxScoreMask": 173,
+      "boxScorePolygon": 173,
+      "boxScoreRoi": 173,
+      "sourceQuad": 172,
+      "targetQuad": 172,
+      "homography": 172,
+      "cropSource": 172,
+      "warpDestination": 172,
+      "recognitionResizeSource": 172,
+      "recognitionResizeDestination": 172
+    },
+    "matReleaseAttempts": {
+      "fullPageResizeDestination": 55,
+      "fullPageResizeSource": 55,
+      "boxScoreRoi": 173,
+      "boxScorePolygon": 173,
+      "boxScoreMask": 173,
+      "boxRectPoints": 350,
+      "boxRectInput": 350,
+      "boxProbability": 55,
+      "boxContour": 178,
+      "boxHierarchy": 55,
+      "boxContourSource": 55,
+      "boxDilated": 55,
+      "boxKernel": 55,
+      "boxMask": 55,
+      "warpDestination": 172,
+      "cropSource": 172,
+      "homography": 172,
+      "targetQuad": 172,
+      "sourceQuad": 172,
+      "recognitionResizeDestination": 172,
+      "recognitionResizeSource": 172
+    },
+    "matReleased": {
+      "fullPageResizeDestination": 55,
+      "fullPageResizeSource": 55,
+      "boxScoreRoi": 173,
+      "boxScorePolygon": 173,
+      "boxScoreMask": 173,
+      "boxRectPoints": 350,
+      "boxRectInput": 350,
+      "boxProbability": 55,
+      "boxContour": 178,
+      "boxHierarchy": 55,
+      "boxContourSource": 55,
+      "boxDilated": 55,
+      "boxKernel": 55,
+      "boxMask": 55,
+      "warpDestination": 172,
+      "cropSource": 172,
+      "homography": 172,
+      "targetQuad": 172,
+      "sourceQuad": 172,
+      "recognitionResizeDestination": 172,
+      "recognitionResizeSource": 172
+    },
+    "matOpened": 3041,
+    "findContoursCalls": 55,
+    "bitmapOpened": 65,
+    "bitmapRecycleAttempts": 65,
+    "bitmapRecycled": 65,
+    "balanced": true,
+    "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+  },
+  "transportCleanupAfterPage": {
+    "readersOpened": 14,
+    "readersClosed": 14,
+    "writersOpened": 14,
+    "writersClosed": 14,
+    "writerInputs": 14,
+    "writerInputsTransferred": 14,
+    "writerInputsClosed": 0,
+    "imagesAcquired": 14,
+    "imageCloseAttempts": 14,
+    "imagesClosed": 14
+  },
+  "pageResourcesBalanced": true,
+  "modelGroupSessions": {
+    "modelId": "latin",
+    "sha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+    "vocabulary": 504,
+    "dictionarySha256": "d80d308e9759b3ea3aaf6e57fa51b39ef0a2eeb3145a9b23df819f0f0279af44",
+    "pageIds": [
+      "en-normal",
+      "en-seam",
+      "fr-normal",
+      "fr-seam",
+      "hans-normal",
+      "hans-seam",
+      "hant-normal",
+      "hant-seam",
+      "en-seam-1080",
+      "blank"
+    ],
+    "sessionsOpened": 2,
+    "sessionsClosed": 2,
+    "sessionCounts": {
+      "detectorAttempts": 1,
+      "detectorOpened": 1,
+      "detectorClosed": 1,
+      "recognizerAttempts": 1,
+      "recognizerOpened": 1,
+      "recognizerClosed": 1
+    },
+    "closedBeforeNextModel": true,
+    "ortOpened": 636,
+    "ortClosed": 636,
+    "ortCloseAttempts": 636,
+    "ortUncertain": false
+  },
+  "threadsRestored": true
+}

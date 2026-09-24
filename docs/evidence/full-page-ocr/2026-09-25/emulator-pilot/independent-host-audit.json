@@ -1,0 +1,172 @@
+{
+  "scope": "Independent host checks of retained actual inference reports; not pixel freshness, OCR quality or exact glyph-quad acceptance.",
+  "runId": "67e3fc4a-0cd4-46e5-8ace-395f19d94b0b",
+  "pages": [
+    {
+      "model": "ch",
+      "page": "en-normal",
+      "candidatesVerified": 8,
+      "stripCount": 4,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "ch",
+      "page": "en-seam",
+      "candidatesVerified": 16,
+      "stripCount": 4,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "ch",
+      "page": "fr-normal",
+      "candidatesVerified": 10,
+      "stripCount": 4,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "ch",
+      "page": "fr-seam",
+      "candidatesVerified": 20,
+      "stripCount": 4,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "ch",
+      "page": "hans-normal",
+      "candidatesVerified": 9,
+      "stripCount": 4,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "ch",
+      "page": "hans-seam",
+      "candidatesVerified": 16,
+      "stripCount": 4,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "ch",
+      "page": "hant-normal",
+      "candidatesVerified": 9,
+      "stripCount": 4,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "ch",
+      "page": "hant-seam",
+      "candidatesVerified": 16,
+      "stripCount": 4,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "ch",
+      "page": "en-seam-1080",
+      "candidatesVerified": 14,
+      "stripCount": 3,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "ch",
+      "page": "blank",
+      "candidatesVerified": 0,
+      "stripCount": 4,
+      "moreThanThreeInStrip": false,
+      "technicalPassed": true
+    },
+    {
+      "model": "latin",
+      "page": "en-normal",
+      "candidatesVerified": 8,
+      "stripCount": 4,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "latin",
+      "page": "en-seam",
+      "candidatesVerified": 16,
+      "stripCount": 4,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "latin",
+      "page": "fr-normal",
+      "candidatesVerified": 10,
+      "stripCount": 4,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "latin",
+      "page": "fr-seam",
+      "candidatesVerified": 20,
+      "stripCount": 4,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "latin",
+      "page": "hans-normal",
+      "candidatesVerified": 9,
+      "stripCount": 4,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "latin",
+      "page": "hans-seam",
+      "candidatesVerified": 16,
+      "stripCount": 4,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "latin",
+      "page": "hant-normal",
+      "candidatesVerified": 9,
+      "stripCount": 4,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "latin",
+      "page": "hant-seam",
+      "candidatesVerified": 16,
+      "stripCount": 4,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "latin",
+      "page": "en-seam-1080",
+      "candidatesVerified": 14,
+      "stripCount": 3,
+      "moreThanThreeInStrip": true,
+      "technicalPassed": true
+    },
+    {
+      "model": "latin",
+      "page": "blank",
+      "candidatesVerified": 0,
+      "stripCount": 4,
+      "moreThanThreeInStrip": false,
+      "technicalPassed": true
+    }
+  ],
+  "candidatesVerified": 236,
+  "coreCoverage": true,
+  "sourceOffsetOnly": true,
+  "uniqueIdsPerPage": true,
+  "outputShapes": true,
+  "imageClosedOncePerPage": true
+}

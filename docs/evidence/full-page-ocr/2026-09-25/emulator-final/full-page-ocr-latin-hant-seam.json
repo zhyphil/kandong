@@ -1,0 +1,1887 @@
+{
+  "schema": 1,
+  "runId": "a7c1cd0c-0464-4f87-ac2b-f8290800e106",
+  "pageFixtureId": "hant-seam",
+  "fixtureSha256": "e95fa1bac48e0a32272a65cf4b85679705597b2bbe3ca69997f038fdf26345f1",
+  "modelId": "latin",
+  "modelSha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+  "vocabulary": 504,
+  "detectorModelSha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+  "technicalPassed": true,
+  "status": "complete",
+  "rawCandidates": [
+    {
+      "id": "1919391-18-7-1-0-0/hant-seam/s0/c5-r5-f5",
+      "modelId": "latin",
+      "rawText": "268.90",
+      "version": {
+        "session": 1919391,
+        "snapshot": 18,
+        "page": 7,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hant-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 5,
+      "rawBoxIndex": 5,
+      "finalBoxIndex": 5,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          68,
+          50
+        ],
+        [
+          278,
+          52
+        ],
+        [
+          278,
+          83
+        ],
+        [
+          67,
+          81
+        ]
+      ],
+      "pageQuad": [
+        [
+          68,
+          50
+        ],
+        [
+          278,
+          52
+        ],
+        [
+          278,
+          83
+        ],
+        [
+          67,
+          81
+        ]
+      ],
+      "detectorScore": 0.7815575990894421,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        326
+      ],
+      "recognitionOutputShape": [
+        1,
+        41,
+        504
+      ]
+    },
+    {
+      "id": "1919391-18-7-1-0-0/hant-seam/s0/c4-r4-f4",
+      "modelId": "latin",
+      "rawText": ",",
+      "version": {
+        "session": 1919391,
+        "snapshot": 18,
+        "page": 7,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hant-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 4,
+      "rawBoxIndex": 4,
+      "finalBoxIndex": 4,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          69,
+          87
+        ],
+        [
+          302,
+          89
+        ],
+        [
+          302,
+          122
+        ],
+        [
+          68,
+          119
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          87
+        ],
+        [
+          302,
+          89
+        ],
+        [
+          302,
+          122
+        ],
+        [
+          68,
+          119
+        ]
+      ],
+      "detectorScore": 0.816729424025003,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        340
+      ],
+      "recognitionOutputShape": [
+        1,
+        42,
+        504
+      ]
+    },
+    {
+      "id": "1919391-18-7-1-0-0/hant-seam/s0/c3-r3-f3",
+      "modelId": "latin",
+      "rawText": "7",
+      "version": {
+        "session": 1919391,
+        "snapshot": 18,
+        "page": 7,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hant-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 3,
+      "rawBoxIndex": 3,
+      "finalBoxIndex": 3,
+      "stripReadingOrder": 2,
+      "localQuad": [
+        [
+          71,
+          229
+        ],
+        [
+          362,
+          229
+        ],
+        [
+          362,
+          266
+        ],
+        [
+          71,
+          266
+        ]
+      ],
+      "pageQuad": [
+        [
+          71,
+          229
+        ],
+        [
+          362,
+          229
+        ],
+        [
+          362,
+          266
+        ],
+        [
+          71,
+          266
+        ]
+      ],
+      "detectorScore": 0.8589270751758972,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        377
+      ],
+      "recognitionOutputShape": [
+        1,
+        47,
+        504
+      ]
+    },
+    {
+      "id": "1919391-18-7-1-0-0/hant-seam/s0/c2-r2-f2",
+      "modelId": "latin",
+      "rawText": "",
+      "version": {
+        "session": 1919391,
+        "snapshot": 18,
+        "page": 7,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hant-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 2,
+      "rawBoxIndex": 2,
+      "finalBoxIndex": 2,
+      "stripReadingOrder": 3,
+      "localQuad": [
+        [
+          70,
+          275
+        ],
+        [
+          281,
+          275
+        ],
+        [
+          281,
+          314
+        ],
+        [
+          70,
+          314
+        ]
+      ],
+      "pageQuad": [
+        [
+          70,
+          275
+        ],
+        [
+          281,
+          275
+        ],
+        [
+          281,
+          314
+        ],
+        [
+          70,
+          314
+        ]
+      ],
+      "detectorScore": 0.872147176112553,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        504
+      ]
+    },
+    {
+      "id": "1919391-18-7-1-0-0/hant-seam/s0/c1-r1-f1",
+      "modelId": "latin",
+      "rawText": "268.90",
+      "version": {
+        "session": 1919391,
+        "snapshot": 18,
+        "page": 7,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hant-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 4,
+      "localQuad": [
+        [
+          68,
+          585
+        ],
+        [
+          279,
+          588
+        ],
+        [
+          279,
+          618
+        ],
+        [
+          67,
+          614
+        ]
+      ],
+      "pageQuad": [
+        [
+          68,
+          585
+        ],
+        [
+          279,
+          588
+        ],
+        [
+          279,
+          618
+        ],
+        [
+          67,
+          614
+        ]
+      ],
+      "detectorScore": 0.8318329551987427,
+      "ownsCoreCenter": false,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        339
+      ],
+      "recognitionOutputShape": [
+        1,
+        42,
+        504
+      ]
+    },
+    {
+      "id": "1919391-18-7-1-0-0/hant-seam/s0/c0-r0-f0",
+      "modelId": "latin",
+      "rawText": "",
+      "version": {
+        "session": 1919391,
+        "snapshot": 18,
+        "page": 7,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hant-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 0,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 5,
+      "localQuad": [
+        [
+          70,
+          623
+        ],
+        [
+          303,
+          623
+        ],
+        [
+          303,
+          653
+        ],
+        [
+          70,
+          653
+        ]
+      ],
+      "pageQuad": [
+        [
+          70,
+          623
+        ],
+        [
+          303,
+          623
+        ],
+        [
+          303,
+          653
+        ],
+        [
+          70,
+          653
+        ]
+      ],
+      "detectorScore": 0.8521892276231723,
+      "ownsCoreCenter": false,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        372
+      ],
+      "recognitionOutputShape": [
+        1,
+        46,
+        504
+      ]
+    },
+    {
+      "id": "1919391-18-7-1-0-0/hant-seam/s1/c3-r3-f3",
+      "modelId": "latin",
+      "rawText": "268.90",
+      "version": {
+        "session": 1919391,
+        "snapshot": 18,
+        "page": 7,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hant-seam",
+      "stripIndex": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "contourIndex": 3,
+      "rawBoxIndex": 3,
+      "finalBoxIndex": 3,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          67,
+          47
+        ],
+        [
+          279,
+          50
+        ],
+        [
+          279,
+          82
+        ],
+        [
+          66,
+          80
+        ]
+      ],
+      "pageQuad": [
+        [
+          67,
+          583
+        ],
+        [
+          279,
+          586
+        ],
+        [
+          279,
+          618
+        ],
+        [
+          66,
+          616
+        ]
+      ],
+      "detectorScore": 0.8153661581168647,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        504
+      ]
+    },
+    {
+      "id": "1919391-18-7-1-0-0/hant-seam/s1/c2-r2-f2",
+      "modelId": "latin",
+      "rawText": ",",
+      "version": {
+        "session": 1919391,
+        "snapshot": 18,
+        "page": 7,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hant-seam",
+      "stripIndex": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "contourIndex": 2,
+      "rawBoxIndex": 2,
+      "finalBoxIndex": 2,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          68,
+          85
+        ],
+        [
+          303,
+          87
+        ],
+        [
+          303,
+          120
+        ],
+        [
+          67,
+          118
+        ]
+      ],
+      "pageQuad": [
+        [
+          68,
+          621
+        ],
+        [
+          303,
+          623
+        ],
+        [
+          303,
+          656
+        ],
+        [
+          67,
+          654
+        ]
+      ],
+      "detectorScore": 0.825822305400719,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        343
+      ],
+      "recognitionOutputShape": [
+        1,
+        43,
+        504
+      ]
+    },
+    {
+      "id": "1919391-18-7-1-0-0/hant-seam/s1/c1-r1-f1",
+      "modelId": "latin",
+      "rawText": "7",
+      "version": {
+        "session": 1919391,
+        "snapshot": 18,
+        "page": 7,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hant-seam",
+      "stripIndex": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 2,
+      "localQuad": [
+        [
+          70,
+          582
+        ],
+        [
+          363,
+          584
+        ],
+        [
+          362,
+          620
+        ],
+        [
+          69,
+          618
+        ]
+      ],
+      "pageQuad": [
+        [
+          70,
+          1118
+        ],
+        [
+          363,
+          1120
+        ],
+        [
+          362,
+          1156
+        ],
+        [
+          69,
+          1154
+        ]
+      ],
+      "detectorScore": 0.84216089033835,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        390
+      ],
+      "recognitionOutputShape": [
+        1,
+        49,
+        504
+      ]
+    },
+    {
+      "id": "1919391-18-7-1-0-0/hant-seam/s1/c0-r0-f0",
+      "modelId": "latin",
+      "rawText": "",
+      "version": {
+        "session": 1919391,
+        "snapshot": 18,
+        "page": 7,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hant-seam",
+      "stripIndex": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "contourIndex": 0,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 3,
+      "localQuad": [
+        [
+          69,
+          630
+        ],
+        [
+          280,
+          630
+        ],
+        [
+          280,
+          667
+        ],
+        [
+          69,
+          667
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          1166
+        ],
+        [
+          280,
+          1166
+        ],
+        [
+          280,
+          1203
+        ],
+        [
+          69,
+          1203
+        ]
+      ],
+      "detectorScore": 0.8940160181373358,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        504
+      ]
+    },
+    {
+      "id": "1919391-18-7-1-0-0/hant-seam/s2/c3-r1-f1",
+      "modelId": "latin",
+      "rawText": ")1J",
+      "version": {
+        "session": 1919391,
+        "snapshot": 18,
+        "page": 7,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hant-seam",
+      "stripIndex": 2,
+      "read": [
+        0,
+        1136,
+        1176,
+        1864
+      ],
+      "core": [
+        0,
+        1200,
+        1176,
+        1800
+      ],
+      "contourIndex": 3,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          66,
+          0
+        ],
+        [
+          368,
+          0
+        ],
+        [
+          368,
+          29
+        ],
+        [
+          66,
+          29
+        ]
+      ],
+      "pageQuad": [
+        [
+          66,
+          1136
+        ],
+        [
+          368,
+          1136
+        ],
+        [
+          368,
+          1165
+        ],
+        [
+          66,
+          1165
+        ]
+      ],
+      "detectorScore": 0.5957920710105851,
+      "ownsCoreCenter": false,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        499
+      ],
+      "recognitionOutputShape": [
+        1,
+        62,
+        504
+      ]
+    },
+    {
+      "id": "1919391-18-7-1-0-0/hant-seam/s2/c2-r0-f0",
+      "modelId": "latin",
+      "rawText": "",
+      "version": {
+        "session": 1919391,
+        "snapshot": 18,
+        "page": 7,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hant-seam",
+      "stripIndex": 2,
+      "read": [
+        0,
+        1136,
+        1176,
+        1864
+      ],
+      "core": [
+        0,
+        1200,
+        1176,
+        1800
+      ],
+      "contourIndex": 2,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          68,
+          29
+        ],
+        [
+          280,
+          29
+        ],
+        [
+          280,
+          68
+        ],
+        [
+          68,
+          68
+        ]
+      ],
+      "pageQuad": [
+        [
+          68,
+          1165
+        ],
+        [
+          280,
+          1165
+        ],
+        [
+          280,
+          1204
+        ],
+        [
+          68,
+          1204
+        ]
+      ],
+      "detectorScore": 0.8668913918070915,
+      "ownsCoreCenter": false,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        504
+      ]
+    },
+    {
+      "id": "1919391-18-7-1-0-0/hant-seam/s3/c3-r3-f3",
+      "modelId": "latin",
+      "rawText": "268.90",
+      "version": {
+        "session": 1919391,
+        "snapshot": 18,
+        "page": 7,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hant-seam",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 3,
+      "rawBoxIndex": 3,
+      "finalBoxIndex": 3,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          67,
+          112
+        ],
+        [
+          279,
+          114
+        ],
+        [
+          279,
+          146
+        ],
+        [
+          66,
+          144
+        ]
+      ],
+      "pageQuad": [
+        [
+          67,
+          1848
+        ],
+        [
+          279,
+          1850
+        ],
+        [
+          279,
+          1882
+        ],
+        [
+          66,
+          1880
+        ]
+      ],
+      "detectorScore": 0.8365706798570757,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        504
+      ]
+    },
+    {
+      "id": "1919391-18-7-1-0-0/hant-seam/s3/c2-r2-f2",
+      "modelId": "latin",
+      "rawText": "",
+      "version": {
+        "session": 1919391,
+        "snapshot": 18,
+        "page": 7,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hant-seam",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 2,
+      "rawBoxIndex": 2,
+      "finalBoxIndex": 2,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          70,
+          151
+        ],
+        [
+          304,
+          151
+        ],
+        [
+          304,
+          181
+        ],
+        [
+          70,
+          181
+        ]
+      ],
+      "pageQuad": [
+        [
+          70,
+          1887
+        ],
+        [
+          304,
+          1887
+        ],
+        [
+          304,
+          1917
+        ],
+        [
+          70,
+          1917
+        ]
+      ],
+      "detectorScore": 0.85611785752002,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        374
+      ],
+      "recognitionOutputShape": [
+        1,
+        47,
+        504
+      ]
+    },
+    {
+      "id": "1919391-18-7-1-0-0/hant-seam/s3/c1-r1-f1",
+      "modelId": "latin",
+      "rawText": "7",
+      "version": {
+        "session": 1919391,
+        "snapshot": 18,
+        "page": 7,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hant-seam",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 2,
+      "localQuad": [
+        [
+          71,
+          444
+        ],
+        [
+          363,
+          444
+        ],
+        [
+          363,
+          479
+        ],
+        [
+          71,
+          479
+        ]
+      ],
+      "pageQuad": [
+        [
+          71,
+          2180
+        ],
+        [
+          363,
+          2180
+        ],
+        [
+          363,
+          2215
+        ],
+        [
+          71,
+          2215
+        ]
+      ],
+      "detectorScore": 0.9216816979814071,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        400
+      ],
+      "recognitionOutputShape": [
+        1,
+        50,
+        504
+      ]
+    },
+    {
+      "id": "1919391-18-7-1-0-0/hant-seam/s3/c0-r0-f0",
+      "modelId": "latin",
+      "rawText": "",
+      "version": {
+        "session": 1919391,
+        "snapshot": 18,
+        "page": 7,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hant-seam",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 0,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 3,
+      "localQuad": [
+        [
+          69,
+          490
+        ],
+        [
+          280,
+          490
+        ],
+        [
+          280,
+          527
+        ],
+        [
+          69,
+          527
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          2226
+        ],
+        [
+          280,
+          2226
+        ],
+        [
+          280,
+          2263
+        ],
+        [
+          69,
+          2263
+        ]
+      ],
+      "detectorScore": 0.9046723347176642,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        504
+      ]
+    }
+  ],
+  "quality": {
+    "assessed": true,
+    "normalization": "none; exact raw text plus glyph-box intersection",
+    "lines": [
+      {
+        "lineId": "p0/0",
+        "asset": "hant-order-24.png",
+        "pngSha256": "a4891da48b235509a9c7493ad31560db62d43139011b0a14e37282f2a646a654",
+        "placement": {
+          "asset": "hant-order-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        "expectedRaw": "訂單合計268.90元。",
+        "pageGlyphBounds": [
+          73,
+          56,
+          274,
+          78
+        ],
+        "touchingCandidateIds": [
+          "1919391-18-7-1-0-0/hant-seam/s0/c5-r5-f5"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p0/1",
+        "asset": "hant-order-24.png",
+        "pngSha256": "a4891da48b235509a9c7493ad31560db62d43139011b0a14e37282f2a646a654",
+        "placement": {
+          "asset": "hant-order-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        "expectedRaw": "含早餐，不含城市稅。",
+        "pageGlyphBounds": [
+          72,
+          93,
+          297,
+          117
+        ],
+        "touchingCandidateIds": [
+          "1919391-18-7-1-0-0/hant-seam/s0/c4-r4-f4"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p1/0",
+        "asset": "hant-luggage-32.png",
+        "pngSha256": "0038332f6f16c5dd6a05f64c37cbefe033e141038a81d1aacde8ee485dc28de0",
+        "placement": {
+          "asset": "hant-luggage-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        "expectedRaw": "每人限帶7公斤行李。",
+        "pageGlyphBounds": [
+          74,
+          232,
+          358,
+          262
+        ],
+        "touchingCandidateIds": [
+          "1919391-18-7-1-0-0/hant-seam/s0/c3-r3-f3"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p1/1",
+        "asset": "hant-luggage-32.png",
+        "pngSha256": "0038332f6f16c5dd6a05f64c37cbefe033e141038a81d1aacde8ee485dc28de0",
+        "placement": {
+          "asset": "hant-luggage-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        "expectedRaw": "請勿重複付款。",
+        "pageGlyphBounds": [
+          73,
+          280,
+          276,
+          310
+        ],
+        "touchingCandidateIds": [
+          "1919391-18-7-1-0-0/hant-seam/s0/c2-r2-f2"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p2/0",
+        "asset": "hant-order-24.png",
+        "pngSha256": "a4891da48b235509a9c7493ad31560db62d43139011b0a14e37282f2a646a654",
+        "placement": {
+          "asset": "hant-order-24.png",
+          "left": 40,
+          "top": 558,
+          "label": "core-boundary",
+          "id": "p2"
+        },
+        "expectedRaw": "訂單合計268.90元。",
+        "pageGlyphBounds": [
+          73,
+          590,
+          274,
+          612
+        ],
+        "touchingCandidateIds": [
+          "1919391-18-7-1-0-0/hant-seam/s0/c1-r1-f1",
+          "1919391-18-7-1-0-0/hant-seam/s1/c3-r3-f3"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p2/1",
+        "asset": "hant-order-24.png",
+        "pngSha256": "a4891da48b235509a9c7493ad31560db62d43139011b0a14e37282f2a646a654",
+        "placement": {
+          "asset": "hant-order-24.png",
+          "left": 40,
+          "top": 558,
+          "label": "core-boundary",
+          "id": "p2"
+        },
+        "expectedRaw": "含早餐，不含城市稅。",
+        "pageGlyphBounds": [
+          72,
+          627,
+          297,
+          651
+        ],
+        "touchingCandidateIds": [
+          "1919391-18-7-1-0-0/hant-seam/s0/c0-r0-f0",
+          "1919391-18-7-1-0-0/hant-seam/s1/c2-r2-f2"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p3/0",
+        "asset": "hant-luggage-32.png",
+        "pngSha256": "0038332f6f16c5dd6a05f64c37cbefe033e141038a81d1aacde8ee485dc28de0",
+        "placement": {
+          "asset": "hant-luggage-32.png",
+          "left": 40,
+          "top": 1090,
+          "label": "read-top-boundary",
+          "id": "p3"
+        },
+        "expectedRaw": "每人限帶7公斤行李。",
+        "pageGlyphBounds": [
+          74,
+          1122,
+          358,
+          1152
+        ],
+        "touchingCandidateIds": [
+          "1919391-18-7-1-0-0/hant-seam/s1/c1-r1-f1",
+          "1919391-18-7-1-0-0/hant-seam/s2/c3-r1-f1"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p3/1",
+        "asset": "hant-luggage-32.png",
+        "pngSha256": "0038332f6f16c5dd6a05f64c37cbefe033e141038a81d1aacde8ee485dc28de0",
+        "placement": {
+          "asset": "hant-luggage-32.png",
+          "left": 40,
+          "top": 1090,
+          "label": "read-top-boundary",
+          "id": "p3"
+        },
+        "expectedRaw": "請勿重複付款。",
+        "pageGlyphBounds": [
+          73,
+          1170,
+          276,
+          1200
+        ],
+        "touchingCandidateIds": [
+          "1919391-18-7-1-0-0/hant-seam/s1/c0-r0-f0",
+          "1919391-18-7-1-0-0/hant-seam/s2/c2-r0-f0"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p4/0",
+        "asset": "hant-order-24.png",
+        "pngSha256": "a4891da48b235509a9c7493ad31560db62d43139011b0a14e37282f2a646a654",
+        "placement": {
+          "asset": "hant-order-24.png",
+          "left": 40,
+          "top": 1822,
+          "label": "read-bottom-boundary",
+          "id": "p4"
+        },
+        "expectedRaw": "訂單合計268.90元。",
+        "pageGlyphBounds": [
+          73,
+          1854,
+          274,
+          1876
+        ],
+        "touchingCandidateIds": [
+          "1919391-18-7-1-0-0/hant-seam/s3/c3-r3-f3"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p4/1",
+        "asset": "hant-order-24.png",
+        "pngSha256": "a4891da48b235509a9c7493ad31560db62d43139011b0a14e37282f2a646a654",
+        "placement": {
+          "asset": "hant-order-24.png",
+          "left": 40,
+          "top": 1822,
+          "label": "read-bottom-boundary",
+          "id": "p4"
+        },
+        "expectedRaw": "含早餐，不含城市稅。",
+        "pageGlyphBounds": [
+          72,
+          1891,
+          297,
+          1915
+        ],
+        "touchingCandidateIds": [
+          "1919391-18-7-1-0-0/hant-seam/s3/c2-r2-f2"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p5/0",
+        "asset": "hant-luggage-32.png",
+        "pngSha256": "0038332f6f16c5dd6a05f64c37cbefe033e141038a81d1aacde8ee485dc28de0",
+        "placement": {
+          "asset": "hant-luggage-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p5"
+        },
+        "expectedRaw": "每人限帶7公斤行李。",
+        "pageGlyphBounds": [
+          74,
+          2182,
+          358,
+          2212
+        ],
+        "touchingCandidateIds": [
+          "1919391-18-7-1-0-0/hant-seam/s3/c1-r1-f1"
+        ],
+        "exactCandidateIds": []
+      },
+      {
+        "lineId": "p5/1",
+        "asset": "hant-luggage-32.png",
+        "pngSha256": "0038332f6f16c5dd6a05f64c37cbefe033e141038a81d1aacde8ee485dc28de0",
+        "placement": {
+          "asset": "hant-luggage-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p5"
+        },
+        "expectedRaw": "請勿重複付款。",
+        "pageGlyphBounds": [
+          73,
+          2230,
+          276,
+          2260
+        ],
+        "touchingCandidateIds": [
+          "1919391-18-7-1-0-0/hant-seam/s3/c0-r0-f0"
+        ],
+        "exactCandidateIds": []
+      }
+    ],
+    "expectedLines": 12,
+    "linesWithoutExactCandidate": 12,
+    "extraExactCandidates": 0,
+    "emptyCandidates": 6,
+    "fragmentOrErrorOrExtraCandidateIds": [
+      "1919391-18-7-1-0-0/hant-seam/s0/c5-r5-f5",
+      "1919391-18-7-1-0-0/hant-seam/s0/c4-r4-f4",
+      "1919391-18-7-1-0-0/hant-seam/s0/c3-r3-f3",
+      "1919391-18-7-1-0-0/hant-seam/s0/c2-r2-f2",
+      "1919391-18-7-1-0-0/hant-seam/s0/c1-r1-f1",
+      "1919391-18-7-1-0-0/hant-seam/s0/c0-r0-f0",
+      "1919391-18-7-1-0-0/hant-seam/s1/c3-r3-f3",
+      "1919391-18-7-1-0-0/hant-seam/s1/c2-r2-f2",
+      "1919391-18-7-1-0-0/hant-seam/s1/c1-r1-f1",
+      "1919391-18-7-1-0-0/hant-seam/s1/c0-r0-f0",
+      "1919391-18-7-1-0-0/hant-seam/s2/c3-r1-f1",
+      "1919391-18-7-1-0-0/hant-seam/s2/c2-r0-f0",
+      "1919391-18-7-1-0-0/hant-seam/s3/c3-r3-f3",
+      "1919391-18-7-1-0-0/hant-seam/s3/c2-r2-f2",
+      "1919391-18-7-1-0-0/hant-seam/s3/c1-r1-f1",
+      "1919391-18-7-1-0-0/hant-seam/s3/c0-r0-f0"
+    ],
+    "strictExactPage": false,
+    "interpretation": "Diagnostic only. Inspect every raw candidate, including duplicates/fragments; no translation or semantic acceptance."
+  },
+  "elapsedMillis": 1910,
+  "layout": {
+    "id": "hant-seam",
+    "language": "zh-Hant",
+    "width": 1176,
+    "height": 2400,
+    "placements": [
+      {
+        "asset": "hant-order-24.png",
+        "left": 40,
+        "top": 24,
+        "label": "top",
+        "id": "p0"
+      },
+      {
+        "asset": "hant-luggage-32.png",
+        "left": 40,
+        "top": 200,
+        "label": "top-more-than-three-lines",
+        "id": "p1"
+      },
+      {
+        "asset": "hant-order-24.png",
+        "left": 40,
+        "top": 558,
+        "label": "core-boundary",
+        "id": "p2"
+      },
+      {
+        "asset": "hant-luggage-32.png",
+        "left": 40,
+        "top": 1090,
+        "label": "read-top-boundary",
+        "id": "p3"
+      },
+      {
+        "asset": "hant-order-24.png",
+        "left": 40,
+        "top": 1822,
+        "label": "read-bottom-boundary",
+        "id": "p4"
+      },
+      {
+        "asset": "hant-luggage-32.png",
+        "left": 40,
+        "top": 2150,
+        "label": "bottom",
+        "id": "p5"
+      }
+    ]
+  },
+  "pageComplete": true,
+  "incompleteReason": null,
+  "transportAndShapePassed": true,
+  "actualStripWithMoreThanThreeCandidates": true,
+  "transportRejection": null,
+  "frameCloseAttempts": 1,
+  "frameClosed": 1,
+  "detectorInvocations": 4,
+  "recognitionInvocations": 16,
+  "strips": [
+    {
+      "index": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "detectorShape": [
+        1,
+        1,
+        672,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 6,
+      "boxes": 6
+    },
+    {
+      "index": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "detectorShape": [
+        1,
+        1,
+        736,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 4,
+      "boxes": 4
+    },
+    {
+      "index": 2,
+      "read": [
+        0,
+        1136,
+        1176,
+        1864
+      ],
+      "core": [
+        0,
+        1200,
+        1176,
+        1800
+      ],
+      "detectorShape": [
+        1,
+        1,
+        736,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 4,
+      "boxes": 2
+    },
+    {
+      "index": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "detectorShape": [
+        1,
+        1,
+        672,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 4,
+      "boxes": 4
+    }
+  ],
+  "geometryCleanupAfterPage": {
+    "matAcquired": {
+      "fullPageResizeSource": 71,
+      "fullPageResizeDestination": 71,
+      "boxMask": 71,
+      "boxKernel": 71,
+      "boxDilated": 71,
+      "boxContourSource": 71,
+      "boxHierarchy": 71,
+      "boxContour": 234,
+      "boxProbability": 71,
+      "boxRectInput": 456,
+      "boxRectPoints": 456,
+      "boxScoreMask": 224,
+      "boxScorePolygon": 224,
+      "boxScoreRoi": 224,
+      "sourceQuad": 222,
+      "targetQuad": 222,
+      "homography": 222,
+      "cropSource": 222,
+      "warpDestination": 222,
+      "recognitionResizeSource": 222,
+      "recognitionResizeDestination": 222
+    },
+    "matReleaseAttempts": {
+      "fullPageResizeDestination": 71,
+      "fullPageResizeSource": 71,
+      "boxScoreRoi": 224,
+      "boxScorePolygon": 224,
+      "boxScoreMask": 224,
+      "boxRectPoints": 456,
+      "boxRectInput": 456,
+      "boxProbability": 71,
+      "boxContour": 234,
+      "boxHierarchy": 71,
+      "boxContourSource": 71,
+      "boxDilated": 71,
+      "boxKernel": 71,
+      "boxMask": 71,
+      "warpDestination": 222,
+      "cropSource": 222,
+      "homography": 222,
+      "targetQuad": 222,
+      "sourceQuad": 222,
+      "recognitionResizeDestination": 222,
+      "recognitionResizeSource": 222
+    },
+    "matReleased": {
+      "fullPageResizeDestination": 71,
+      "fullPageResizeSource": 71,
+      "boxScoreRoi": 224,
+      "boxScorePolygon": 224,
+      "boxScoreMask": 224,
+      "boxRectPoints": 456,
+      "boxRectInput": 456,
+      "boxProbability": 71,
+      "boxContour": 234,
+      "boxHierarchy": 71,
+      "boxContourSource": 71,
+      "boxDilated": 71,
+      "boxKernel": 71,
+      "boxMask": 71,
+      "warpDestination": 222,
+      "cropSource": 222,
+      "homography": 222,
+      "targetQuad": 222,
+      "sourceQuad": 222,
+      "recognitionResizeDestination": 222,
+      "recognitionResizeSource": 222
+    },
+    "matOpened": 3940,
+    "findContoursCalls": 71,
+    "bitmapOpened": 85,
+    "bitmapRecycleAttempts": 85,
+    "bitmapRecycled": 85,
+    "balanced": true,
+    "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+  },
+  "transportCleanupAfterPage": {
+    "readersOpened": 18,
+    "readersClosed": 18,
+    "writersOpened": 18,
+    "writersClosed": 18,
+    "writerInputs": 18,
+    "writerInputsTransferred": 18,
+    "writerInputsClosed": 0,
+    "imagesAcquired": 18,
+    "imageCloseAttempts": 18,
+    "imagesClosed": 18
+  },
+  "pageResourcesBalanced": true,
+  "modelGroupSessions": {
+    "modelId": "latin",
+    "sha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+    "vocabulary": 504,
+    "dictionarySha256": "d80d308e9759b3ea3aaf6e57fa51b39ef0a2eeb3145a9b23df819f0f0279af44",
+    "pageIds": [
+      "en-normal",
+      "en-seam",
+      "fr-normal",
+      "fr-seam",
+      "hans-normal",
+      "hans-seam",
+      "hant-normal",
+      "hant-seam",
+      "en-seam-1080",
+      "blank"
+    ],
+    "sessionsOpened": 2,
+    "sessionsClosed": 2,
+    "sessionCounts": {
+      "detectorAttempts": 1,
+      "detectorOpened": 1,
+      "detectorClosed": 1,
+      "recognizerAttempts": 1,
+      "recognizerOpened": 1,
+      "recognizerClosed": 1
+    },
+    "closedBeforeNextModel": true,
+    "ortOpened": 636,
+    "ortClosed": 636,
+    "ortCloseAttempts": 636,
+    "ortUncertain": false
+  },
+  "threadsRestored": true
+}

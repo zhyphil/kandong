@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.FullPageOcrContractTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-24T23:15:55.772Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.005">
+  <properties/>
+  <testcase name="shapeRejectsUnknownIdentityVocabularyAndWidthBeforeInference" classname="com.kandong.modelprobe.FullPageOcrContractTest" time="0.001"/>
+  <testcase name="overlapFragmentsAndEmptyStringsAreAllRetainedWithModelIdentity" classname="com.kandong.modelprobe.FullPageOcrContractTest" time="0.002"/>
+  <testcase name="budgetsAcceptExactLimitsAndRejectWithoutOverflow" classname="com.kandong.modelprobe.FullPageOcrContractTest" time="0.0"/>
+  <testcase name="auditedStrideBoundariesAndFrozenReferenceWidths" classname="com.kandong.modelprobe.FullPageOcrContractTest" time="0.001"/>
+  <testcase name="nativeCheckpointsRejectCancelRevisionExpiryAndClockReversal" classname="com.kandong.modelprobe.FullPageOcrContractTest" time="0.0"/>
+  <testcase name="sourceCoordinatesOnlyAddReadOffsetAndNeverRenumber" classname="com.kandong.modelprobe.FullPageOcrContractTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

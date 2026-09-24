@@ -1,0 +1,638 @@
+{
+  "schema": 1,
+  "fixtureVersion": "full-page-ocr-v1",
+  "parentManifestSha256": "3afed931fa6904864fe71f93f0be1de11a182f5a016fbc933fa529384cf165d9",
+  "scope": "Fixed synthetic single-language PNG pixels; no rendering, real screen, translation or freshness claim. Expected lines only grade after inference.",
+  "glyphBounds": "Nonwhite RGBA pixel bounding boxes; exclusive right/bottom. Seams cross actual first-line glyph rows, not PNG margins.",
+  "files": {
+    "en-checkin-24.png": {
+      "bytes": 8514,
+      "sha256": "ea3892a91d050c30411ef8a495584876a6c8f125b626d8ed1bb3716f9d62d966",
+      "rgbaSha256": "a63d8354ceb5f21af14d55ea6663b67344f4a6600ea650d311e4a8f078b93695",
+      "width": 640,
+      "height": 138,
+      "language": "en",
+      "lines": [
+        {
+          "text": "Check-in after 16:30.",
+          "glyph": [
+            33,
+            32,
+            253,
+            49
+          ]
+        },
+        {
+          "text": "Breakfast is not included.",
+          "glyph": [
+            33,
+            69,
+            298,
+            86
+          ]
+        }
+      ]
+    },
+    "en-tickets-32.png": {
+      "bytes": 11583,
+      "sha256": "0221b3088a74b09926446aec03e11ffd163452ab7dd6f7827960c78e751a2be0",
+      "rgbaSha256": "f440aae277aa31ff45f57f6597b89a8771dddd7b08545033d9e300948bcd9e3b",
+      "width": 640,
+      "height": 160,
+      "language": "en",
+      "lines": [
+        {
+          "text": "2 tickets: €27.40 total.",
+          "glyph": [
+            33,
+            32,
+            341,
+            55
+          ]
+        },
+        {
+          "text": "Free cancellation before Monday.",
+          "glyph": [
+            34,
+            80,
+            505,
+            109
+          ]
+        }
+      ]
+    },
+    "fr-departure-24.png": {
+      "bytes": 9169,
+      "sha256": "15f1f8013bd5843e9ea244cdb5f6f30852dab069161d1ec57a0c854069636471",
+      "rgbaSha256": "8a3e388e70632a5fba836922ac4475e49b7b9814203baa49c1f8ec7d1151cb67",
+      "width": 640,
+      "height": 138,
+      "language": "fr",
+      "lines": [
+        {
+          "text": "Départ à 07:45, voie 6.",
+          "glyph": [
+            33,
+            32,
+            273,
+            54
+          ]
+        },
+        {
+          "text": "Ne prenez pas le train de 07:15.",
+          "glyph": [
+            33,
+            69,
+            372,
+            91
+          ]
+        }
+      ]
+    },
+    "fr-price-32.png": {
+      "bytes": 14562,
+      "sha256": "9ce765c5789867771deb14086b275bfc9903008038e2b0bee4e825c94595f6fe",
+      "rgbaSha256": "7b27f722f6679e6209e391780c8de42dca83840ae7adff1ec86af7ffc96548a3",
+      "width": 640,
+      "height": 208,
+      "language": "fr",
+      "lines": [
+        {
+          "text": "Prix total : 82,60 €.",
+          "glyph": [
+            34,
+            32,
+            297,
+            60
+          ]
+        },
+        {
+          "text": "Aucun remboursement après",
+          "glyph": [
+            32,
+            80,
+            444,
+            109
+          ]
+        },
+        {
+          "text": "confirmation.",
+          "glyph": [
+            33,
+            128,
+            213,
+            151
+          ]
+        }
+      ]
+    },
+    "hans-order-24.png": {
+      "bytes": 9159,
+      "sha256": "5f489289f3040d0d68e4c427ff405326522d124abc830df5503aaaa24ad0eae5",
+      "rgbaSha256": "dba8d0f0bda59aa4f44f87df6bbda52f65ebc981e8b17f9539af5e8f3b7fcc56",
+      "width": 640,
+      "height": 138,
+      "language": "zh-Hans",
+      "lines": [
+        {
+          "text": "订单合计268.90元。",
+          "glyph": [
+            33,
+            32,
+            234,
+            55
+          ]
+        },
+        {
+          "text": "含早餐，不含城市税。",
+          "glyph": [
+            32,
+            69,
+            257,
+            93
+          ]
+        }
+      ]
+    },
+    "hans-luggage-32.png": {
+      "bytes": 11904,
+      "sha256": "ff04e22b9a33b83fe03a7bb326d7b8b2be4920dfe5d06fc80506596f43abbceb",
+      "rgbaSha256": "93f8f1dd50ab102a2ee3648b4207bd5550d23335d19c7b757f6340ec38e10fd3",
+      "width": 640,
+      "height": 160,
+      "language": "zh-Hans",
+      "lines": [
+        {
+          "text": "每人限带7公斤行李。",
+          "glyph": [
+            34,
+            32,
+            318,
+            63
+          ]
+        },
+        {
+          "text": "请勿重复付款。",
+          "glyph": [
+            33,
+            80,
+            236,
+            109
+          ]
+        }
+      ]
+    },
+    "hant-order-24.png": {
+      "bytes": 8697,
+      "sha256": "a4891da48b235509a9c7493ad31560db62d43139011b0a14e37282f2a646a654",
+      "rgbaSha256": "74771f84bb2ed420ce01f6271b084022c2feefbd68c8349d625536ce8ee55162",
+      "width": 640,
+      "height": 138,
+      "language": "zh-Hant",
+      "lines": [
+        {
+          "text": "訂單合計268.90元。",
+          "glyph": [
+            33,
+            32,
+            234,
+            54
+          ]
+        },
+        {
+          "text": "含早餐，不含城市稅。",
+          "glyph": [
+            32,
+            69,
+            257,
+            93
+          ]
+        }
+      ]
+    },
+    "hant-luggage-32.png": {
+      "bytes": 12194,
+      "sha256": "0038332f6f16c5dd6a05f64c37cbefe033e141038a81d1aacde8ee485dc28de0",
+      "rgbaSha256": "386cd9cd9872768878af3e063460d2e7c0e5dff1fa29f4de3c68e85f92249adb",
+      "width": 640,
+      "height": 160,
+      "language": "zh-Hant",
+      "lines": [
+        {
+          "text": "每人限帶7公斤行李。",
+          "glyph": [
+            34,
+            32,
+            318,
+            62
+          ]
+        },
+        {
+          "text": "請勿重複付款。",
+          "glyph": [
+            33,
+            80,
+            236,
+            110
+          ]
+        }
+      ]
+    }
+  },
+  "pages": [
+    {
+      "id": "en-normal",
+      "language": "en",
+      "width": 1176,
+      "height": 2400,
+      "placements": [
+        {
+          "asset": "en-checkin-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        {
+          "asset": "en-tickets-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        {
+          "asset": "en-checkin-24.png",
+          "left": 40,
+          "top": 1050,
+          "label": "middle",
+          "id": "p2"
+        },
+        {
+          "asset": "en-tickets-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p3"
+        }
+      ]
+    },
+    {
+      "id": "en-seam",
+      "language": "en",
+      "width": 1176,
+      "height": 2400,
+      "placements": [
+        {
+          "asset": "en-checkin-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        {
+          "asset": "en-tickets-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        {
+          "asset": "en-checkin-24.png",
+          "left": 40,
+          "top": 560,
+          "label": "core-boundary",
+          "id": "p2"
+        },
+        {
+          "asset": "en-tickets-32.png",
+          "left": 40,
+          "top": 1093,
+          "label": "read-top-boundary",
+          "id": "p3"
+        },
+        {
+          "asset": "en-checkin-24.png",
+          "left": 40,
+          "top": 1824,
+          "label": "read-bottom-boundary",
+          "id": "p4"
+        },
+        {
+          "asset": "en-tickets-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p5"
+        }
+      ]
+    },
+    {
+      "id": "fr-normal",
+      "language": "fr",
+      "width": 1176,
+      "height": 2400,
+      "placements": [
+        {
+          "asset": "fr-departure-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        {
+          "asset": "fr-departure-24.png",
+          "left": 40,
+          "top": 1050,
+          "label": "middle",
+          "id": "p2"
+        },
+        {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p3"
+        }
+      ]
+    },
+    {
+      "id": "fr-seam",
+      "language": "fr",
+      "width": 1176,
+      "height": 2400,
+      "placements": [
+        {
+          "asset": "fr-departure-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        {
+          "asset": "fr-departure-24.png",
+          "left": 40,
+          "top": 558,
+          "label": "core-boundary",
+          "id": "p2"
+        },
+        {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 1091,
+          "label": "read-top-boundary",
+          "id": "p3"
+        },
+        {
+          "asset": "fr-departure-24.png",
+          "left": 40,
+          "top": 1822,
+          "label": "read-bottom-boundary",
+          "id": "p4"
+        },
+        {
+          "asset": "fr-price-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p5"
+        }
+      ]
+    },
+    {
+      "id": "hans-normal",
+      "language": "zh-Hans",
+      "width": 1176,
+      "height": 2400,
+      "placements": [
+        {
+          "asset": "hans-order-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        {
+          "asset": "hans-luggage-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        {
+          "asset": "hans-order-24.png",
+          "left": 40,
+          "top": 1050,
+          "label": "middle",
+          "id": "p2"
+        },
+        {
+          "asset": "hans-luggage-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p3"
+        }
+      ]
+    },
+    {
+      "id": "hans-seam",
+      "language": "zh-Hans",
+      "width": 1176,
+      "height": 2400,
+      "placements": [
+        {
+          "asset": "hans-order-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        {
+          "asset": "hans-luggage-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        {
+          "asset": "hans-order-24.png",
+          "left": 40,
+          "top": 557,
+          "label": "core-boundary",
+          "id": "p2"
+        },
+        {
+          "asset": "hans-luggage-32.png",
+          "left": 40,
+          "top": 1089,
+          "label": "read-top-boundary",
+          "id": "p3"
+        },
+        {
+          "asset": "hans-order-24.png",
+          "left": 40,
+          "top": 1821,
+          "label": "read-bottom-boundary",
+          "id": "p4"
+        },
+        {
+          "asset": "hans-luggage-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p5"
+        }
+      ]
+    },
+    {
+      "id": "hant-normal",
+      "language": "zh-Hant",
+      "width": 1176,
+      "height": 2400,
+      "placements": [
+        {
+          "asset": "hant-order-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        {
+          "asset": "hant-luggage-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        {
+          "asset": "hant-order-24.png",
+          "left": 40,
+          "top": 1050,
+          "label": "middle",
+          "id": "p2"
+        },
+        {
+          "asset": "hant-luggage-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p3"
+        }
+      ]
+    },
+    {
+      "id": "hant-seam",
+      "language": "zh-Hant",
+      "width": 1176,
+      "height": 2400,
+      "placements": [
+        {
+          "asset": "hant-order-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        {
+          "asset": "hant-luggage-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        {
+          "asset": "hant-order-24.png",
+          "left": 40,
+          "top": 558,
+          "label": "core-boundary",
+          "id": "p2"
+        },
+        {
+          "asset": "hant-luggage-32.png",
+          "left": 40,
+          "top": 1090,
+          "label": "read-top-boundary",
+          "id": "p3"
+        },
+        {
+          "asset": "hant-order-24.png",
+          "left": 40,
+          "top": 1822,
+          "label": "read-bottom-boundary",
+          "id": "p4"
+        },
+        {
+          "asset": "hant-luggage-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p5"
+        }
+      ]
+    },
+    {
+      "id": "en-seam-1080",
+      "language": "en",
+      "width": 1080,
+      "height": 2400,
+      "placements": [
+        {
+          "asset": "en-checkin-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        {
+          "asset": "en-tickets-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        {
+          "asset": "en-checkin-24.png",
+          "left": 40,
+          "top": 760,
+          "label": "core-boundary",
+          "id": "p2"
+        },
+        {
+          "asset": "en-tickets-32.png",
+          "left": 40,
+          "top": 1493,
+          "label": "read-top-boundary",
+          "id": "p3"
+        },
+        {
+          "asset": "en-tickets-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p4"
+        }
+      ]
+    },
+    {
+      "id": "blank",
+      "language": "none",
+      "width": 1176,
+      "height": 2400,
+      "placements": []
+    }
+  ]
+}

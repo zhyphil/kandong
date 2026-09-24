@@ -1,0 +1,167 @@
+{
+  "basis": "Independent parent comparison against all existing frozen recognition shapes. Not a new model inference or full proof of graph behavior at untested widths.",
+  "formula": "floor((W+3)/8)",
+  "count": 26,
+  "cases": [
+    {
+      "source": "original-tensor",
+      "id": "ch/en-quality-16",
+      "width": 687,
+      "time": 86
+    },
+    {
+      "source": "original-tensor",
+      "id": "ch/fr-nonrefundable-16",
+      "width": 848,
+      "time": 106
+    },
+    {
+      "source": "original-tensor",
+      "id": "ch/zh-hans-quality-16",
+      "width": 438,
+      "time": 55
+    },
+    {
+      "source": "original-tensor",
+      "id": "ch/zh-hant-quality-16",
+      "width": 455,
+      "time": 57
+    },
+    {
+      "source": "original-tensor",
+      "id": "ch/mixed-quality-16",
+      "width": 461,
+      "time": 58
+    },
+    {
+      "source": "original-tensor",
+      "id": "latin/en-quality-16",
+      "width": 687,
+      "time": 86
+    },
+    {
+      "source": "original-tensor",
+      "id": "latin/fr-nonrefundable-16",
+      "width": 848,
+      "time": 106
+    },
+    {
+      "source": "original-tensor",
+      "id": "latin/zh-hans-quality-16",
+      "width": 438,
+      "time": 55
+    },
+    {
+      "source": "original-tensor",
+      "id": "latin/zh-hant-quality-16",
+      "width": 455,
+      "time": 57
+    },
+    {
+      "source": "original-tensor",
+      "id": "latin/mixed-quality-16",
+      "width": 461,
+      "time": 58
+    },
+    {
+      "source": "crop-recognition",
+      "id": "en-quality-16/ch",
+      "width": 605,
+      "time": 76
+    },
+    {
+      "source": "crop-recognition",
+      "id": "en-quality-16/latin",
+      "width": 605,
+      "time": 76
+    },
+    {
+      "source": "crop-recognition",
+      "id": "fr-nonrefundable-16/ch",
+      "width": 672,
+      "time": 84
+    },
+    {
+      "source": "crop-recognition",
+      "id": "fr-nonrefundable-16/latin",
+      "width": 672,
+      "time": 84
+    },
+    {
+      "source": "crop-recognition",
+      "id": "zh-hans-quality-16/ch",
+      "width": 452,
+      "time": 56
+    },
+    {
+      "source": "crop-recognition",
+      "id": "zh-hans-quality-16/latin",
+      "width": 452,
+      "time": 56
+    },
+    {
+      "source": "crop-recognition",
+      "id": "zh-hant-quality-16/ch",
+      "width": 452,
+      "time": 56
+    },
+    {
+      "source": "crop-recognition",
+      "id": "zh-hant-quality-16/latin",
+      "width": 452,
+      "time": 56
+    },
+    {
+      "source": "crop-recognition",
+      "id": "mixed-quality-16/ch",
+      "width": 434,
+      "time": 54
+    },
+    {
+      "source": "crop-recognition",
+      "id": "mixed-quality-16/latin",
+      "width": 434,
+      "time": 54
+    },
+    {
+      "source": "crop-recognition",
+      "id": "two-blocks/ch",
+      "width": 320,
+      "time": 40
+    },
+    {
+      "source": "crop-recognition",
+      "id": "two-blocks/latin",
+      "width": 320,
+      "time": 40
+    },
+    {
+      "source": "crop-recognition",
+      "id": "edge-touching/ch",
+      "width": 320,
+      "time": 40
+    },
+    {
+      "source": "crop-recognition",
+      "id": "edge-touching/latin",
+      "width": 320,
+      "time": 40
+    },
+    {
+      "source": "crop-recognition",
+      "id": "vertical/ch",
+      "width": 320,
+      "time": 40
+    },
+    {
+      "source": "crop-recognition",
+      "id": "vertical/latin",
+      "width": 320,
+      "time": 40
+    }
+  ],
+  "manifestSha256": {
+    "modelprobe/src/main/assets/probes/manifest.json": "126d8d3860d5a4ea098f0875838dbed51a55d8a321f50d409805d394a460061c",
+    "docs/fixtures/crop-recognition-v1/manifest.json": "bbbfd058777e51e4fb7769764d2b49dac7618c784b8e0ef652af84d973f64f6a"
+  }
+}
