@@ -1,0 +1,77 @@
+{
+  "reviewer": "engineering agent",
+  "qualityAccepted": false,
+  "conclusion": "Whole-page text did not resolve date/currency failures in either round. Do not split/rebind raw output.",
+  "rows": [
+    {
+      "page": "p106",
+      "round": 1,
+      "checks": {
+        "singleDay": "fail: still translated as until",
+        "amount": "pass: EUR37.80",
+        "baggage": "pass: 2 bags, max6kg each",
+        "refund": "pass: no refund after departure"
+      },
+      "translation": "您的预订\n优惠价\n总价：37.80 欧元\n有效期至 2026 年 12 月 5 日\n出发后不予退款。\n2 件行李，每件重量不超过 6 公斤。",
+      "elementBinding": false
+    },
+    {
+      "page": "p304",
+      "round": 1,
+      "checks": {
+        "untilInclusive": "pass: until9Mar2027inclusive",
+        "baggage": "pass:3bags,max5kg each",
+        "exchange": "needs-review: redemption vs ticket exchange",
+        "refund": "pass: no refund"
+      },
+      "translation": "旅行条款\n可携带3件行李，每件重量不超过5公斤。\n有效期至2027年3月9日（含）。\n不可兑换，不可退款。",
+      "elementBinding": false
+    },
+    {
+      "page": "p003",
+      "round": 1,
+      "checks": {
+        "currency": "fail: some $ values identified as USD without explicit source identity",
+        "pricesAndTax": "pass: prices/periods/tax retained in raw text",
+        "cancellationAndPayment": "pass: deadline/refund/immediate payment retained"
+      },
+      "translation": "选择房费\n2026年10月12日至14日 · 2晚\n\n灵活房价\n每晚120.00美元\n2晚共240.00美元\n含税\n2026年10月10日18:00前可免费取消。\n\n预付房费\n2晚共$210.00\n不含税\n不可退款。需立即付款。",
+      "elementBinding": false
+    },
+    {
+      "page": "p106",
+      "round": 2,
+      "checks": {
+        "singleDay": "fail: still translated as until",
+        "amount": "pass: EUR37.80",
+        "baggage": "pass: 2 bags, max6kg each",
+        "refund": "pass: no refund after departure"
+      },
+      "translation": "您的预订\n优惠价\n总价：37.80 欧元\n有效期至 2026 年 12 月 5 日\n出发后不予退款。\n2 件行李，每件不超过 6 公斤。",
+      "elementBinding": false
+    },
+    {
+      "page": "p304",
+      "round": 2,
+      "checks": {
+        "untilInclusive": "pass: until9Mar2027inclusive",
+        "baggage": "pass:3bags,max5kg each",
+        "exchange": "needs-review: redemption vs ticket exchange",
+        "refund": "pass: no refund"
+      },
+      "translation": "旅行条款\n3件行李，每件重量不超过5公斤。\n有效期至2027年3月9日（含）。\n不可兑换，不可退款。",
+      "elementBinding": false
+    },
+    {
+      "page": "p003",
+      "round": 2,
+      "checks": {
+        "currency": "fail: some $ values identified as USD without explicit source identity",
+        "pricesAndTax": "pass: prices/periods/tax retained in raw text",
+        "cancellationAndPayment": "pass: deadline/refund/immediate payment retained"
+      },
+      "translation": "选择房费\n2026年10月12日至14日 · 2晚\n\n灵活房费\n每晚120.00美元\n2晚共240.00美元\n含税\n2026年10月10日18:00前可免费取消。\n\n预付房费\n2晚共$210.00\n不含税\n不可退款。需立即付款。",
+      "elementBinding": false
+    }
+  ]
+}

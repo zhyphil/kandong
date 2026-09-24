@@ -1,0 +1,151 @@
+{
+  "reviewer": "engineering agent",
+  "scope": "14 selected regression targets, one round; not a new blind holdout",
+  "counts": {
+    "pass": 12,
+    "fail": 2
+  },
+  "qualityAccepted": false,
+  "rows": [
+    {
+      "page": "p001",
+      "target": "b005",
+      "source": "Book",
+      "jsonContext": "书籍",
+      "targetOnly": "书籍",
+      "plainContext": "预订",
+      "judgment": "pass",
+      "reason": "Ambiguous label now matches whole-page meaning."
+    },
+    {
+      "page": "p002",
+      "target": "b004",
+      "source": "Book",
+      "jsonContext": "图书",
+      "targetOnly": "书籍",
+      "plainContext": "图书",
+      "judgment": "pass",
+      "reason": "Ambiguous label now matches whole-page meaning."
+    },
+    {
+      "page": "p101",
+      "target": "b003",
+      "source": "Book",
+      "jsonContext": "图书",
+      "targetOnly": "书籍",
+      "plainContext": "图书",
+      "judgment": "pass",
+      "reason": "Ambiguous label now matches whole-page meaning."
+    },
+    {
+      "page": "p102",
+      "target": "b004",
+      "source": "Book",
+      "jsonContext": "书籍",
+      "targetOnly": "书籍",
+      "plainContext": "预订",
+      "judgment": "pass",
+      "reason": "Ambiguous label now matches whole-page meaning."
+    },
+    {
+      "page": "p004",
+      "target": "b004",
+      "source": "Vol",
+      "jsonContext": "航班",
+      "targetOnly": "盗窃",
+      "plainContext": "航班",
+      "judgment": "pass",
+      "reason": "Ambiguous label now matches whole-page meaning."
+    },
+    {
+      "page": "p005",
+      "target": "b004",
+      "source": "Vol",
+      "jsonContext": "航班",
+      "targetOnly": "盗窃",
+      "plainContext": "盗窃",
+      "judgment": "pass",
+      "reason": "Ambiguous label now matches whole-page meaning."
+    },
+    {
+      "page": "p103",
+      "target": "b003",
+      "source": "Vol",
+      "jsonContext": "飞行",
+      "targetOnly": "盗窃",
+      "plainContext": "航班",
+      "judgment": "pass",
+      "reason": "Ambiguous label now matches whole-page meaning."
+    },
+    {
+      "page": "p104",
+      "target": "b004",
+      "source": "Vol",
+      "jsonContext": "飞行",
+      "targetOnly": "盗窃",
+      "plainContext": "盗窃",
+      "judgment": "pass",
+      "reason": "Ambiguous label now matches whole-page meaning."
+    },
+    {
+      "page": "p201",
+      "target": "b004",
+      "source": "Return",
+      "jsonContext": "返回",
+      "targetOnly": "返回",
+      "plainContext": "退货",
+      "judgment": "pass",
+      "reason": "Ambiguous label now matches whole-page meaning."
+    },
+    {
+      "page": "p202",
+      "target": "b003",
+      "source": "Return",
+      "jsonContext": "返回",
+      "targetOnly": "返回",
+      "plainContext": "返回",
+      "judgment": "pass",
+      "reason": "Ambiguous label now matches whole-page meaning."
+    },
+    {
+      "page": "p203",
+      "target": "b003",
+      "source": "Note",
+      "jsonContext": "注",
+      "targetOnly": "注",
+      "plainContext": "账单",
+      "judgment": "pass",
+      "reason": "Ambiguous label now matches whole-page meaning."
+    },
+    {
+      "page": "p204",
+      "target": "b003",
+      "source": "Note",
+      "jsonContext": "注",
+      "targetOnly": "注",
+      "plainContext": "评分",
+      "judgment": "pass",
+      "reason": "Ambiguous label now matches whole-page meaning."
+    },
+    {
+      "page": "p106",
+      "target": "b004",
+      "source": "Valable le 5 décembre 2026",
+      "jsonContext": "有效期至2026年12月5日",
+      "targetOnly": "有效期至2026年12月5日",
+      "plainContext": "有效期至2026年12月5日",
+      "judgment": "fail",
+      "reason": "Single-day validity remains a deadline."
+    },
+    {
+      "page": "p003",
+      "target": "b004",
+      "source": "$120.00 per night",
+      "jsonContext": "每晚 120.00",
+      "targetOnly": "每晚 120.00 美元",
+      "plainContext": "每晚 120.00 美元",
+      "judgment": "fail",
+      "reason": "Bare $ is still interpreted as USD without explicit identity."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "scripts/translation_deepl_plain.py": "317a9e198a16c76958ddc97c7bec61304df9a782c107cd52da08518cde970106",
+  "scripts/translation_deepl.py": "aa693fd5510b277dcb1fd4387a45c8219bbd646697fd22d5b3eafa06ba7d4369",
+  "scripts/deepl_credentials.py": "4366aac84b636293ceab8f06157f9eede5499fe004cccc8b34f9a95cd986e8a4",
+  "scripts/translation_online_contract.py": "f401793eca165c66248f5aac4ad2bdafc9385009e777d732f0d5cc18d602bda1",
+  "scripts/translation_candidate_c.py": "b56179c516f476e7d0c4ed165cab7755573e3af642d3b190a8554e468f89f634",
+  "scripts/translation_candidate_v3.py": "7a935d93804c4e088d8b8ec3cab3c7b938a85646bbe59b587f1253b88a862a20",
+  "scripts/translation_probe.py": "28e7eeae39de93350a322aa3326f9ac240a1e4518a88f26ebc18ff5e8e4a2958",
+  "scripts/translation_probe_v2.py": "e4837bab2c8a76acb7656424a5b1f42a38bb13f9a19058bdb64a588c38166941",
+  "docs/fixtures/translation-pages-v1.json": "a254ec42146487825b0424ea43fda054db5560a82e54836ae5b7beef0693b608",
+  "docs/fixtures/translation-holdout-v2.json": "e3446777b269cd3fa2f8f5fe8bdc9080079b23e047b24c2d8f41a154f9229955",
+  "docs/fixtures/translation-holdout-v3.json": "6bef7db7a270c44d90cf45d72ed54cf139e5d71eb91a1d25560a74b4b4715bc6",
+  "docs/fixtures/translation-holdout-v4.json": "bb72cfda6d09d2dd44caa1b2082154d4234a444efbd9c3f6d0544fd5139f86fb"
+}

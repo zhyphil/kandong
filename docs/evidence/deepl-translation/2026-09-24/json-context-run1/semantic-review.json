@@ -1,0 +1,346 @@
+{
+  "reviewer": "engineering agent, not an independent human panel",
+  "scope": "37 completed full-context targets only; first round incomplete, target-only controls unscored here",
+  "currencyRule": "Bare $ is not automatically USD; original v1 rubric wording predates this correction.",
+  "counts": {
+    "fail": 11,
+    "pass": 24,
+    "needs-review": 2
+  },
+  "qualityAccepted": false,
+  "rows": [
+    {
+      "page": "p001",
+      "target": "b005",
+      "source": "Book",
+      "translation": "书籍",
+      "frozenCriterion": "预订房间；不能译为书籍。",
+      "judgment": "fail",
+      "reason": "Hotel booking action became a book."
+    },
+    {
+      "page": "p002",
+      "target": "b004",
+      "source": "Book",
+      "translation": "图书",
+      "frozenCriterion": "书籍；不能译为预订。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p003",
+      "target": "b004",
+      "source": "$120.00 per night",
+      "translation": "每晚 120.00",
+      "frozenCriterion": "120.00美元每晚，不能变成两晚总价。",
+      "judgment": "fail",
+      "reason": "Currency identity omitted."
+    },
+    {
+      "page": "p003",
+      "target": "b005",
+      "source": "$240.00 for 2 nights",
+      "translation": "2晚共$240.00",
+      "frozenCriterion": "240.00美元两晚总价。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p003",
+      "target": "b006",
+      "source": "Taxes included",
+      "translation": "含税",
+      "frozenCriterion": "已含税，归属g002。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p003",
+      "target": "b007",
+      "source": "Free cancellation before 18:00 on 10 October 2026.",
+      "translation": "2026年10月10日18:00前可免费取消。",
+      "frozenCriterion": "2026年10月10日18:00之前免费取消，不能改为之后；归属g002。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p003",
+      "target": "b009",
+      "source": "$210.00 for 2 nights",
+      "translation": "2晚共$210.00",
+      "frozenCriterion": "210.00美元两晚总价。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p003",
+      "target": "b010",
+      "source": "Taxes not included",
+      "translation": "不含税",
+      "frozenCriterion": "未含税，归属g003，不能套用g002的含税条件。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p003",
+      "target": "b011",
+      "source": "Non-refundable. Payment required now.",
+      "translation": "不可退款。请立即付款。",
+      "frozenCriterion": "不可退款并须现在付款；两个条件都保留，归属g003。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p004",
+      "target": "b004",
+      "source": "Vol",
+      "translation": "航班",
+      "frozenCriterion": "航班；不能译为盗窃、体积或音量。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p005",
+      "target": "b004",
+      "source": "Vol",
+      "translation": "航班",
+      "frozenCriterion": "盗窃；不能译为航班、体积或音量。",
+      "judgment": "fail",
+      "reason": "Theft became a flight."
+    },
+    {
+      "page": "p006",
+      "target": "b003",
+      "source": "Non échangeable et non remboursable.",
+      "translation": "不可兑换，不可退款。",
+      "frozenCriterion": "不可换票、不可退款两个否定完整保留，不能只翻ROI残句。",
+      "judgment": "needs-review",
+      "reason": "Ticket exchange/change became generic redemption; not accepted as equivalent."
+    },
+    {
+      "page": "p006",
+      "target": "b005",
+      "source": "1 bagage, 8 kg maximum.",
+      "translation": "1件行李，重量不超过8公斤。",
+      "frozenCriterion": "1件行李、最多8公斤，数量和上限不变。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p101",
+      "target": "b003",
+      "source": "Book",
+      "translation": "图书",
+      "frozenCriterion": "书/书籍，不能预订。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p102",
+      "target": "b004",
+      "source": "Book",
+      "translation": "书籍",
+      "frozenCriterion": "预订餐位，不是书。",
+      "judgment": "fail",
+      "reason": "Restaurant booking action became a book."
+    },
+    {
+      "page": "p103",
+      "target": "b003",
+      "source": "Vol",
+      "translation": "飞行",
+      "frozenCriterion": "航班，不是盗窃。",
+      "judgment": "needs-review",
+      "reason": "Flight service label became generic flying; precision not accepted."
+    },
+    {
+      "page": "p104",
+      "target": "b004",
+      "source": "Vol",
+      "translation": "飞行",
+      "frozenCriterion": "盗窃，不是飞行。",
+      "judgment": "fail",
+      "reason": "Theft became flying."
+    },
+    {
+      "page": "p105",
+      "target": "b003",
+      "source": "$19.50 per month",
+      "translation": "每月 $19.50",
+      "frozenCriterion": "$19.50每月。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p105",
+      "target": "b004",
+      "source": "Tax not included",
+      "translation": "不含税",
+      "frozenCriterion": "未含税，属于月付。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p105",
+      "target": "b005",
+      "source": "Cancel before 09:15 on 6 November 2026. No refund after renewal.",
+      "translation": "请于 2026 年 11 月 6 日 09:15 之前取消。续订后不予退款。",
+      "frozenCriterion": "2026年11月6日09:15之前取消；续费后不退款；不漏两条件。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p105",
+      "target": "b007",
+      "source": "$195.00 per year",
+      "translation": "每年 195.00 美元",
+      "frozenCriterion": "$195.00每年，非每月。",
+      "judgment": "fail",
+      "reason": "Bare $ identified as USD without explicit source currency."
+    },
+    {
+      "page": "p105",
+      "target": "b008",
+      "source": "Tax included",
+      "translation": "含税",
+      "frozenCriterion": "含税，属于年付。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p106",
+      "target": "b003",
+      "source": "Prix total : 37,80 €",
+      "translation": "总价：37.80 欧元",
+      "frozenCriterion": "总价37,80 €，保留小数和币种。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p106",
+      "target": "b004",
+      "source": "Valable le 5 décembre 2026",
+      "translation": "有效期至2026年12月5日",
+      "frozenCriterion": "2026年12月5日有效。",
+      "judgment": "fail",
+      "reason": "Valid on one date became valid until a date."
+    },
+    {
+      "page": "p106",
+      "target": "b005",
+      "source": "Aucun remboursement après le départ.",
+      "translation": "出发后不予退款。",
+      "frozenCriterion": "出发后不退款，不反转前后/否定。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p106",
+      "target": "b006",
+      "source": "2 bagages, 6 kg maximum chacun.",
+      "translation": "2件行李，每件最多6公斤。",
+      "frozenCriterion": "2件行李每件最多6kg，不是合计6kg。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p201",
+      "target": "b004",
+      "source": "Return",
+      "translation": "返回",
+      "frozenCriterion": "退货；不是返回上一页。",
+      "judgment": "fail",
+      "reason": "Returning goods became navigation back."
+    },
+    {
+      "page": "p202",
+      "target": "b003",
+      "source": "Return",
+      "translation": "返回",
+      "frozenCriterion": "返回；不是退货。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p203",
+      "target": "b003",
+      "source": "Note",
+      "translation": "注",
+      "frozenCriterion": "账单；不是评分或便条。",
+      "judgment": "fail",
+      "reason": "Restaurant bill became a note."
+    },
+    {
+      "page": "p204",
+      "target": "b003",
+      "source": "Note",
+      "translation": "注",
+      "frozenCriterion": "评分/分数；不是账单。",
+      "judgment": "fail",
+      "reason": "Rating became a note."
+    },
+    {
+      "page": "p205",
+      "target": "b003",
+      "source": "$48.90 total for 2 people",
+      "translation": "2人共计$48.90",
+      "frozenCriterion": "2人总价$48.90，不是每人；$原样保留。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p205",
+      "target": "b004",
+      "source": "Only valid on 21 November 2026.",
+      "translation": "仅在2026年11月21日有效。",
+      "frozenCriterion": "仅2026年11月21日当天有效；不能变成截至当天。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p205",
+      "target": "b005",
+      "source": "No changes or refunds after departure.",
+      "translation": "出发后恕不接受任何更改或退款。",
+      "frozenCriterion": "出发后不可更改且不可退款，两个否定和时间范围不能漏。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p205",
+      "target": "b007",
+      "source": "$12.45 per child",
+      "translation": "每个孩子 12.45 美元",
+      "frozenCriterion": "每名儿童$12.45，非总价。",
+      "judgment": "fail",
+      "reason": "Bare $ identified as USD without explicit source currency."
+    },
+    {
+      "page": "p205",
+      "target": "b008",
+      "source": "Free cancellation until 07:05 on 20 November 2026.",
+      "translation": "可在2026年11月20日07:05之前免费取消。",
+      "frozenCriterion": "2026年11月20日07:05前免费取消；前导零等价可接受，不可串到标准票。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p206",
+      "target": "b003",
+      "source": "1 bagage, 7 kg au maximum.",
+      "translation": "1件行李，重量不超过7公斤。",
+      "frozenCriterion": "1件行李最多7kg，不是恰好7kg或至少7kg。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    },
+    {
+      "page": "p206",
+      "target": "b005",
+      "source": "Poids minimum : 9 kg.",
+      "translation": "最低重量：9 公斤。",
+      "frozenCriterion": "最少9kg，不能变成最多9kg。",
+      "judgment": "pass",
+      "reason": "Source meaning preserved; source geometry/group remains locally bound."
+    }
+  ]
+}

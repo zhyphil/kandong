@@ -1,0 +1,27 @@
+{
+  "provider": "DeepL",
+  "syntheticOnly": true,
+  "successfulTranslationCalls": 94,
+  "failedTranslationCalls": 1,
+  "failedCode": "HTTP_429",
+  "successfulBilledCharacters": 2615,
+  "lastObservedUsage": {
+    "character_count": 2615,
+    "character_limit": 1000000
+  },
+  "credentialPrinted": false,
+  "realScreenTransferred": false,
+  "phoneUpdated": false,
+  "qualityAccepted": false,
+  "jsonFull37Counts": {
+    "fail": 11,
+    "pass": 24,
+    "needs-review": 2
+  },
+  "plainSelected14Counts": {
+    "pass": 12,
+    "fail": 2
+  },
+  "plainCallSecondsMedian": 0.2626443954941351,
+  "next": "Full plain-context regression with faithful date/currency handling; no production integration yet"
+}
