@@ -14,10 +14,10 @@ base_model:
 [![Qwen Chat](https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5)](https://chat.qwen.ai)
 
 > [!Note]
-> This repository contains model weights and configuration files for the post-trained model in the Hugging Face Transformers format. 
+> This repository contains model weights and configuration files for the post-trained model in the Hugging Face Transformers format.
 >
 > These artifacts are compatible with Hugging Face Transformers, vLLM, SGLang, KTransformers, etc.
-> 
+>
 > In light of its parameter scale, the intended use cases are prototyping, task-specific fine-tuning, and other research or development purposes.
 
 
@@ -60,7 +60,7 @@ For more details, please refer to our blog post [Qwen3.5](https://qwen.ai/blog?i
     - Feed Forward Network:
         - Intermediate Dimension: 6144
     - LM Output: 248320 (Tied to token embedding)
-    - MTP: trained with multi-steps  
+    - MTP: trained with multi-steps
 - Context Length: 262,144 natively
 
 ## Benchmark Results
@@ -583,9 +583,9 @@ For more details, please refer to our blog post [Qwen3.5](https://qwen.ai/blog?i
 
 > [!Important]
 > Qwen3.5 models support both non-thinking and thinking mode. **Qwen3.5-2B operates in non-thinking mode by default**.
-> To enable thinking, refer to the examples [here](#thinking-mode). 
+> To enable thinking, refer to the examples [here](#thinking-mode).
 
-For streamlined integration, we recommend using Qwen3.5 via APIs. Below is a guide to use Qwen3.5 via OpenAI-compatible API. 
+For streamlined integration, we recommend using Qwen3.5 via APIs. Below is a guide to use Qwen3.5 via OpenAI-compatible API.
 
 ### Serving Qwen3.5
 
@@ -593,13 +593,13 @@ Qwen3.5 can be served via APIs with popular inference frameworks.
 In the following, we show example commands to launch OpenAI-Compatible API servers for Qwen3.5 models.
 
 > [!Important]
-> Inference efficiency and throughput vary significantly across frameworks. 
+> Inference efficiency and throughput vary significantly across frameworks.
 > We recommend using the latest framework versions to ensure optimal performance and compatibility.
 > For production workloads or high-throughput scenarios, dedicated serving engines such as SGLang, KTransformers or vLLM are strongly recommended.
 
 > [!Important]
 > The model has a default context length of 262,144 tokens.
-> If you encounter out-of-memory (OOM) errors, consider reducing the context window. 
+> If you encounter out-of-memory (OOM) errors, consider reducing the context window.
 
 #### SGLang
 
@@ -613,19 +613,19 @@ See [its documentation](https://docs.sglang.ai/get_started/install.html) for mor
 The following will create API endpoints at `http://localhost:8000/v1`:
 
 - **Standard Version**: The following command can be used to create an API endpoint with maximum context length 262,144 tokens using tensor parallel on 8 GPUs.
-    
+
     ```shell
     python -m sglang.launch_server --model-path Qwen/Qwen3.5-2B --port 8000 --tp-size 1 --mem-fraction-static 0.8 --context-length 262144
     ```
 
 - **Tool Use**: To support tool use, you can use the following command.
-    
+
     ```shell
     python -m sglang.launch_server --model-path Qwen/Qwen3.5-2B --port 8000 --tp-size 1 --mem-fraction-static 0.8 --context-length 262144 --tool-call-parser qwen3_coder
     ```
 
 - **Multi-Token Prediction (MTP)**: The following command is recommended for MTP:
-    
+
     ```shell
     python -m sglang.launch_server --model-path Qwen/Qwen3.5-2B --port 8000 --tp-size 1 --mem-fraction-static 0.8 --context-length 262144 --speculative-algo NEXTN --speculative-num-steps 3 --speculative-eagle-topk 1 --speculative-num-draft-tokens 4
     ```
@@ -637,7 +637,7 @@ vLLM from the main branch of the open-source repository is required for Qwen3.5,
 ```shell
 uv pip install vllm --torch-backend=auto --extra-index-url https://wheels.vllm.ai/nightly
 ```
-See [its documentation](https://docs.vllm.ai/en/stable/getting_started/installation/index.html) for more details. 
+See [its documentation](https://docs.vllm.ai/en/stable/getting_started/installation/index.html) for more details.
 
 For detailed Qwen3.5 usage guide, see the [vLLM Qwen3.5 recipe](https://docs.vllm.ai/projects/recipes/en/latest/Qwen/Qwen3.5.html).
 
@@ -646,13 +646,13 @@ The following will create API endpoints at `http://localhost:8000/v1`:
 - **Standard Version**: The following command can be used to create an API endpoint with maximum context length 262,144 tokens using tensor parallel on 8 GPUs.
 
     ```shell
-    vllm serve Qwen/Qwen3.5-2B --port 8000 --tensor-parallel-size 1 --max-model-len 262144 
+    vllm serve Qwen/Qwen3.5-2B --port 8000 --tensor-parallel-size 1 --max-model-len 262144
     ```
 
 - **Tool Call**: To support tool use, you can use the following command.
-    
+
     ```shell
-    vllm serve Qwen/Qwen3.5-2B --port 8000 --tensor-parallel-size 1 --max-model-len 262144 --enable-auto-tool-choice --tool-call-parser qwen3_coder 
+    vllm serve Qwen/Qwen3.5-2B --port 8000 --tensor-parallel-size 1 --max-model-len 262144 --enable-auto-tool-choice --tool-call-parser qwen3_coder
     ```
 
 - **Multi-Token Prediction (MTP)**: The following command is recommended for MTP:
@@ -662,16 +662,16 @@ The following will create API endpoints at `http://localhost:8000/v1`:
     ```
 
 - **Text-Only**: The following command skips the vision encoder and multimodal profiling to free up memory for additional KV cache:
-    
+
     ```shell
     vllm serve Qwen/Qwen3.5-2B --port 8000 --tensor-parallel-size 1 --max-model-len 262144 --language-model-only
     ```
 
 #### KTransformers
- 
+
 [KTransformers](https://github.com/kvcache-ai/ktransformers) is a flexible framework for experiencing cutting-edge LLM inference optimizations with CPU-GPU heterogeneous computing.
 For running Qwen3.5 with KTransformers, see the [KTransformers Deployment Guide](https://github.com/kvcache-ai/ktransformers/blob/main/doc/en/Qwen3.5.md).
- 
+
 #### Hugging Face Transformers
 
 Hugging Face Transformers contains a _lightweight_ server which can be used for quick testing and moderate load deployment.
@@ -706,7 +706,7 @@ export OPENAI_API_KEY="EMPTY"
 > - Non-thinking mode for VL tasks: `temperature=0.7, top_p=0.80, top_k=20, min_p=0.0, presence_penalty=1.5, repetition_penalty=1.0`
 > - Thinking mode for text tasks: `temperature=1.0, top_p=0.95, top_k=20, min_p=0.0, presence_penalty=1.5, repetition_penalty=1.0`
 > - Thinking mode for VL or precise coding (e.g. WebDev) tasks : `temperature=0.6, top_p=0.95, top_k=20, min_p=0.0, presence_penalty=0.0, repetition_penalty=1.0`
-> 
+>
 > Please note that the support for sampling parameters varies according to inference frameworks.
 
 #### Text-Only Input
@@ -729,7 +729,7 @@ chat_response = client.chat.completions.create(
     presence_penalty=2.0,
     extra_body={
         "top_k": 20,
-    }, 
+    },
 )
 print("Chat response:", chat_response)
 ```
@@ -768,7 +768,7 @@ chat_response = client.chat.completions.create(
     presence_penalty=1.5,
     extra_body={
         "top_k": 20,
-    }, 
+    },
 )
 print("Chat response:", chat_response)
 ```
@@ -814,7 +814,7 @@ chat_response = client.chat.completions.create(
     extra_body={
         "top_k": 20,
         "mm_processor_kwargs": {"fps": 2, "do_sample_frames": True},
-    }, 
+    },
 )
 
 print("Chat response:", chat_response)
@@ -825,7 +825,7 @@ print("Chat response:", chat_response)
 > [!Important]
 > Qwen3.5 does not officially support the soft switch of Qwen3, i.e., `/think` and `/nothink`.
 
-You can make the model think before response by configuring the API parameters. 
+You can make the model think before response by configuring the API parameters.
 For example,
 
 ```python
@@ -847,7 +847,7 @@ chat_response = client.chat.completions.create(
     extra_body={
         "top_k": 20,
         "enable_thinking": True,
-    }, 
+    },
 )
 print("Chat response:", chat_response)
 ```
@@ -884,13 +884,13 @@ chat_response = client.chat.completions.create(
     presence_penalty=1.5,
     extra_body={
         "top_k": 20,
-    }, 
+    },
 )
 print("Chat response:", chat_response)
 ```
 
 > [!Important]
-> In thinking mode, we have observed that when using the recommended sampling parameters, Qwen3.5-2B is more prone to entering thinking loops compared to other Qwen3.5 models, which may prevent it from terminating generation properly. 
+> In thinking mode, we have observed that when using the recommended sampling parameters, Qwen3.5-2B is more prone to entering thinking loops compared to other Qwen3.5 models, which may prevent it from terminating generation properly.
 > We recommend further tuning the sampling parameters specific to your use case and utilizing the API's streaming generation mode (if supported) to enable timely detection and interruption of such anomalous generation behaviors.
 
 
@@ -900,7 +900,7 @@ Qwen3.5 excels in tool calling capabilities.
 
 ### Qwen-Agent
 
-We recommend using [Qwen-Agent](https://github.com/QwenLM/Qwen-Agent) to quickly build Agent applications with Qwen3.5. 
+We recommend using [Qwen-Agent](https://github.com/QwenLM/Qwen-Agent) to quickly build Agent applications with Qwen3.5.
 
 To define the available tools, you can use the MCP configuration file, use the integrated tool of Qwen-Agent, or integrate other tools by yourself.
 ```python
@@ -917,7 +917,7 @@ llm_cfg = {
     'api_key': 'EMPTY',
 
     'generate_cfg': {
-        'use_raw_api': True,  
+        'use_raw_api': True,
         # Pass the parameter of whether to enable thinking mode in this way
         # 'extra_body': {
         #    'chat_template_kwargs': {'enable_thinking': True}
@@ -963,17 +963,17 @@ For more information, please refer to [Qwen Code](https://qwenlm.github.io/qwen-
 
 To achieve optimal performance, we recommend the following settings:
 
-1. **Sampling Parameters**:  
-   - We suggest using the following sets of sampling parameters depending on the mode and task type:  
-     - **Non-thinking mode for text tasks**:  
+1. **Sampling Parameters**:
+   - We suggest using the following sets of sampling parameters depending on the mode and task type:
+     - **Non-thinking mode for text tasks**:
        `temperature=1.0`, `top_p=1.00`, `top_k=20`, `min_p=0.0`, `presence_penalty=2.0`, `repetition_penalty=1.0`
-     - **Non-thinking mode for VL tasks**:  
-       `temperature=0.7`, `top_p=0.80`, `top_k=20`, `min_p=0.0`, `presence_penalty=1.5`, `repetition_penalty=1.0` 
-     - **Thinking mode for text tasks**:  
-       `temperature=1.0`, `top_p=0.95`, `top_k=20`, `min_p=0.0`, `presence_penalty=1.5`, `repetition_penalty=1.0`  
-     - **Thinking mode for VL or precise coding (e.g., WebDev) tasks**:  
+     - **Non-thinking mode for VL tasks**:
+       `temperature=0.7`, `top_p=0.80`, `top_k=20`, `min_p=0.0`, `presence_penalty=1.5`, `repetition_penalty=1.0`
+     - **Thinking mode for text tasks**:
+       `temperature=1.0`, `top_p=0.95`, `top_k=20`, `min_p=0.0`, `presence_penalty=1.5`, `repetition_penalty=1.0`
+     - **Thinking mode for VL or precise coding (e.g., WebDev) tasks**:
        `temperature=0.6`, `top_p=0.95`, `top_k=20`, `min_p=0.0`, `presence_penalty=0.0`, `repetition_penalty=1.0`
-   
+
    - For supported frameworks, you can adjust the `presence_penalty` parameter between 0 and 2 to reduce endless repetitions. However, using a higher value may occasionally result in language mixing and a slight decrease in model performance.
 
 2. **Adequate Output Length**: We recommend using an output length of 32,768 tokens for most queries. For benchmarking on highly complex problems, such as those found in math and programming competitions, we suggest setting the max output length to 81,920 tokens. This provides the model with sufficient space to generate detailed and comprehensive responses, thereby enhancing its overall performance.

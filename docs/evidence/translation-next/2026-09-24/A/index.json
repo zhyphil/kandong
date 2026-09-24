@@ -1,0 +1,536 @@
+{
+  "rows": [
+    {
+      "round": 1,
+      "page": "p001",
+      "mode": "full",
+      "seconds": 2.6935268330271356,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p001",
+      "mode": "target-only",
+      "seconds": 0.3983664159895852,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p002",
+      "mode": "full",
+      "seconds": 0.4688753749942407,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p002",
+      "mode": "target-only",
+      "seconds": 0.3684492910397239,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p003",
+      "mode": "full",
+      "seconds": 2.5203765420010313,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p003",
+      "mode": "target-only",
+      "seconds": 2.3667547079967335,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p004",
+      "mode": "full",
+      "seconds": 0.5523263749782927,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p004",
+      "mode": "target-only",
+      "seconds": 0.3890575410332531,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p005",
+      "mode": "full",
+      "seconds": 0.4465087080025114,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p005",
+      "mode": "target-only",
+      "seconds": 0.3876782500301488,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p006",
+      "mode": "full",
+      "seconds": 0.8384723750059493,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p006",
+      "mode": "target-only",
+      "seconds": 0.7637348330463283,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p007",
+      "mode": "original",
+      "seconds": 0,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p008",
+      "mode": "original",
+      "seconds": 0,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p101",
+      "mode": "full",
+      "seconds": 0.4805590420146473,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p101",
+      "mode": "target-only",
+      "seconds": 0.3858498329645954,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p102",
+      "mode": "full",
+      "seconds": 0.43377258302643895,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p102",
+      "mode": "target-only",
+      "seconds": 0.36987341701751575,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p103",
+      "mode": "full",
+      "seconds": 0.444828542007599,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p103",
+      "mode": "target-only",
+      "seconds": 0.3911272910190746,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p104",
+      "mode": "full",
+      "seconds": 0.46912787499604747,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p104",
+      "mode": "target-only",
+      "seconds": 0.385374125035014,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p105",
+      "mode": "full",
+      "seconds": 1.8888798329862766,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p105",
+      "mode": "target-only",
+      "seconds": 1.7258260829839855,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p106",
+      "mode": "full",
+      "seconds": 1.555612874974031,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p106",
+      "mode": "target-only",
+      "seconds": 1.3252503330004402,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p201",
+      "mode": "full",
+      "seconds": 0.46025679202284664,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p201",
+      "mode": "target-only",
+      "seconds": 0.4096367920283228,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p202",
+      "mode": "full",
+      "seconds": 0.4222024169866927,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p202",
+      "mode": "target-only",
+      "seconds": 0.3971672499901615,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p203",
+      "mode": "full",
+      "seconds": 0.49002370797097683,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p203",
+      "mode": "target-only",
+      "seconds": 0.37844966701231897,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p204",
+      "mode": "full",
+      "seconds": 0.5001603749697097,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p204",
+      "mode": "target-only",
+      "seconds": 0.38159454200649634,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p205",
+      "mode": "full",
+      "seconds": 2.1647938750102185,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p205",
+      "mode": "target-only",
+      "seconds": 2.103289999999106,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p206",
+      "mode": "full",
+      "seconds": 1.7433429579832591,
+      "error": null
+    },
+    {
+      "round": 1,
+      "page": "p206",
+      "mode": "target-only",
+      "seconds": 1.5699980829958804,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p001",
+      "mode": "full",
+      "seconds": 2.1350569169735536,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p001",
+      "mode": "target-only",
+      "seconds": 0.41858358297031373,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p002",
+      "mode": "full",
+      "seconds": 0.5189352909801528,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p002",
+      "mode": "target-only",
+      "seconds": 0.39381195802707225,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "mode": "full",
+      "seconds": 2.625588459020946,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "mode": "target-only",
+      "seconds": 2.5708324590232223,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p004",
+      "mode": "full",
+      "seconds": 0.5199430420179851,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p004",
+      "mode": "target-only",
+      "seconds": 0.4354574169847183,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p005",
+      "mode": "full",
+      "seconds": 0.5150193750159815,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p005",
+      "mode": "target-only",
+      "seconds": 0.4288906669826247,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p006",
+      "mode": "full",
+      "seconds": 0.9663266660063528,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p006",
+      "mode": "target-only",
+      "seconds": 0.8463236669776961,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p007",
+      "mode": "original",
+      "seconds": 0,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p008",
+      "mode": "original",
+      "seconds": 0,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p101",
+      "mode": "full",
+      "seconds": 0.5408424999914132,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p101",
+      "mode": "target-only",
+      "seconds": 0.42721587501000613,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p102",
+      "mode": "full",
+      "seconds": 0.49699570902157575,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p102",
+      "mode": "target-only",
+      "seconds": 0.40452145802555606,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p103",
+      "mode": "full",
+      "seconds": 0.5006922920001671,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p103",
+      "mode": "target-only",
+      "seconds": 0.42830950004281476,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p104",
+      "mode": "full",
+      "seconds": 0.5310830420348793,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p104",
+      "mode": "target-only",
+      "seconds": 0.42367754195583984,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p105",
+      "mode": "full",
+      "seconds": 2.09824437496718,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p105",
+      "mode": "target-only",
+      "seconds": 1.8021886660135351,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p106",
+      "mode": "full",
+      "seconds": 1.6439592500100844,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p106",
+      "mode": "target-only",
+      "seconds": 1.4120705830282532,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p201",
+      "mode": "full",
+      "seconds": 0.5121069590095431,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p201",
+      "mode": "target-only",
+      "seconds": 0.432079958030954,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p202",
+      "mode": "full",
+      "seconds": 0.4576017090003006,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p202",
+      "mode": "target-only",
+      "seconds": 0.4215540000004694,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p203",
+      "mode": "full",
+      "seconds": 0.5409589580376633,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p203",
+      "mode": "target-only",
+      "seconds": 0.4020399170112796,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p204",
+      "mode": "full",
+      "seconds": 0.5296891659963876,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p204",
+      "mode": "target-only",
+      "seconds": 0.4019397500087507,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p205",
+      "mode": "full",
+      "seconds": 2.2055825410061516,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p205",
+      "mode": "target-only",
+      "seconds": 2.127963582985103,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p206",
+      "mode": "full",
+      "seconds": 1.7145873330300674,
+      "error": null
+    },
+    {
+      "round": 2,
+      "page": "p206",
+      "mode": "target-only",
+      "seconds": 1.6180253750062548,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "README.md": {
+    "rawSha256": "c0e83a849c776e6fa843d011f023132d942a0f0140d903205bf1c363adad2275",
+    "rawBytes": 62814,
+    "note": "raw bytes in gzip; readable copy normalizes CRLF/trailing whitespace only"
+  },
+  "LICENSE": {
+    "rawSha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+    "rawBytes": 11544,
+    "note": "raw bytes in gzip; readable copy normalizes CRLF/trailing whitespace only"
+  }
+}
