@@ -1,0 +1,8 @@
+{
+  "modelprobe/build.gradle.kts": "c566f4f69c0739a9e8d0c6bc882914591dd8b8c51aa482bb9c6bf7656d7b3a89",
+  "modelprobe/src/androidTest/AndroidManifest.xml": "9d0c9e9c22319ceeaf749bf78774760ce3aa6c4159f441c0b24c1ee682801ca9",
+  "modelprobe/src/androidTest/java/com/kandong/modelprobe/LanguageIdentificationProbeTest.kt": "379426f222ae84b55e3e648d99785e20069a9dc20b92721956fb2561555b45b0",
+  "modelprobe/src/contextTest/java/com/kandong/modelprobe/LanguageRouteTest.kt": "64c8d15dc6f5200ee057d4a435d6c0ad3d7af4b5495e0458d6b3a64a9af28aaf",
+  "modelprobe/src/testShared/java/com/kandong/modelprobe/LanguageRoute.kt": "33e8b267cffcd50b3c104c4b2f9d85f1e931b200243c576d205aae6f5a5c6079",
+  "scripts/run-language-emulator.py": "0a1428920219894d972021b73e8911b33d0ba2cd00d530a8f66c39a96dcbe541"
+}

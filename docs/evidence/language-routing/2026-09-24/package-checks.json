@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "tool": "zipalign",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "tool": "apksigner",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "WARNING: A restricted method in java.lang.System has been called\nWARNING: java.lang.System::loadLibrary has been called by org.conscrypt.NativeLibraryUtil in an unnamed module (file:/Users/haoyuzuo/Library/Android/sdk/build-tools/35.0.0/lib/apksigner.jar)\nWARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module\nWARNING: Restricted methods will be blocked in a future release unless native access is enabled\n\n"
+    }
+  ],
+  "languageNativeLibraries": [
+    {
+      "name": "lib/arm64-v8a/liblanguage_id_l2c_jni.so",
+      "loadSegmentAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "sha256": "4479b044bbdad9a938fea15698dfa3473e73bd6bab9f8e0468fc3cc6069c137e"
+    },
+    {
+      "name": "lib/armeabi-v7a/liblanguage_id_l2c_jni.so",
+      "loadSegmentAlignments": [
+        4096,
+        4096,
+        4096
+      ],
+      "sha256": "1c1a8baa63ecc473e611902a8aa010fa526f2a35594c302836f7279d1c73aa17"
+    },
+    {
+      "name": "lib/x86/liblanguage_id_l2c_jni.so",
+      "loadSegmentAlignments": [
+        4096,
+        4096,
+        4096
+      ],
+      "sha256": "0968db72cbab0e13899cd355162b0a21133ba7a4732b83bf5e32ff3ce43fbb6e"
+    },
+    {
+      "name": "lib/x86_64/liblanguage_id_l2c_jni.so",
+      "loadSegmentAlignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "sha256": "2d4c44ca649d27bc76600dcf31bee9312cc34e175e38214fc4dc0e85ff67a58d"
+    }
+  ]
+}

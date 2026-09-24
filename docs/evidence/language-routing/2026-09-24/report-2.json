@@ -1,0 +1,1317 @@
+{
+  "schema": 1,
+  "runId": "c26e1f9d-7649-47d7-9559-ac0dd38a24ba",
+  "status": "complete",
+  "technicalPassed": true,
+  "qualityAccepted": false,
+  "scope": "38 authored strings only; no OCR, real screen, translation, product, or Huawei acceptance",
+  "device": "sdk_gphone16k_arm64",
+  "api": 37,
+  "fingerprint": "google\/sdk_gphone16k_arm64\/emu64a16k:17\/CP31.260623.012\/16064790:user\/dev-keys",
+  "sdk": "com.google.mlkit:language-id:17.0.6",
+  "candidateThreshold": 0.01,
+  "configuration": "language-v1:min-letters8;score.90;gap.20;han-latin-review;en-fr-zh",
+  "cases": [
+    {
+      "id": "en-1",
+      "status": "complete",
+      "group": "en",
+      "raw": "The reservation cannot be cancelled after payment.",
+      "candidates": [
+        {
+          "language": "en",
+          "score": 0.9999591112136841
+        }
+      ],
+      "decision": {
+        "action": "translate",
+        "language": "en",
+        "raw": "The reservation cannot be cancelled after payment.",
+        "reason": "MODEL_EVIDENCE"
+      },
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 4.993458
+    },
+    {
+      "id": "en-2",
+      "status": "complete",
+      "group": "en",
+      "raw": "Breakfast is included for two guests only.",
+      "candidates": [
+        {
+          "language": "en",
+          "score": 0.9999071359634399
+        }
+      ],
+      "decision": {
+        "action": "translate",
+        "language": "en",
+        "raw": "Breakfast is included for two guests only.",
+        "reason": "MODEL_EVIDENCE"
+      },
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.641166
+    },
+    {
+      "id": "en-3",
+      "status": "complete",
+      "group": "en",
+      "raw": "Please bring the original passport to reception.",
+      "candidates": [
+        {
+          "language": "en",
+          "score": 0.999104917049408
+        }
+      ],
+      "decision": {
+        "action": "translate",
+        "language": "en",
+        "raw": "Please bring the original passport to reception.",
+        "reason": "MODEL_EVIDENCE"
+      },
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.436708
+    },
+    {
+      "id": "en-4",
+      "status": "complete",
+      "group": "en",
+      "raw": "The last train leaves at 21:45 from platform six.",
+      "candidates": [
+        {
+          "language": "en",
+          "score": 0.9993390440940857
+        }
+      ],
+      "decision": {
+        "action": "translate",
+        "language": "en",
+        "raw": "The last train leaves at 21:45 from platform six.",
+        "reason": "MODEL_EVIDENCE"
+      },
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.277916
+    },
+    {
+      "id": "en-5",
+      "status": "complete",
+      "group": "en",
+      "raw": "Your total is 47.80 euros, excluding the city tax.",
+      "candidates": [
+        {
+          "language": "en",
+          "score": 0.9982852339744568
+        }
+      ],
+      "decision": {
+        "action": "translate",
+        "language": "en",
+        "raw": "Your total is 47.80 euros, excluding the city tax.",
+        "reason": "MODEL_EVIDENCE"
+      },
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.110625
+    },
+    {
+      "id": "en-6",
+      "status": "complete",
+      "group": "en",
+      "raw": "Cabin baggage must not weigh more than eight kilograms.",
+      "candidates": [
+        {
+          "language": "en",
+          "score": 0.9953344464302063
+        }
+      ],
+      "decision": {
+        "action": "translate",
+        "language": "en",
+        "raw": "Cabin baggage must not weigh more than eight kilograms.",
+        "reason": "MODEL_EVIDENCE"
+      },
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.255333
+    },
+    {
+      "id": "fr-1",
+      "status": "complete",
+      "group": "fr",
+      "raw": "Cette réservation ne peut pas être annulée après le paiement.",
+      "candidates": [
+        {
+          "language": "fr",
+          "score": 0.9999613761901855
+        }
+      ],
+      "decision": {
+        "action": "translate",
+        "language": "fr",
+        "raw": "Cette réservation ne peut pas être annulée après le paiement.",
+        "reason": "MODEL_EVIDENCE"
+      },
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.455583
+    },
+    {
+      "id": "fr-2",
+      "status": "complete",
+      "group": "fr",
+      "raw": "Le petit déjeuner est inclus pour deux personnes seulement.",
+      "candidates": [
+        {
+          "language": "fr",
+          "score": 0.9998890161514282
+        }
+      ],
+      "decision": {
+        "action": "translate",
+        "language": "fr",
+        "raw": "Le petit déjeuner est inclus pour deux personnes seulement.",
+        "reason": "MODEL_EVIDENCE"
+      },
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.191208
+    },
+    {
+      "id": "fr-3",
+      "status": "complete",
+      "group": "fr",
+      "raw": "Veuillez présenter votre passeport original à la réception.",
+      "candidates": [
+        {
+          "language": "fr",
+          "score": 0.999737560749054
+        }
+      ],
+      "decision": {
+        "action": "translate",
+        "language": "fr",
+        "raw": "Veuillez présenter votre passeport original à la réception.",
+        "reason": "MODEL_EVIDENCE"
+      },
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.118292
+    },
+    {
+      "id": "fr-4",
+      "status": "complete",
+      "group": "fr",
+      "raw": "Le dernier train part à 21 h 45 depuis le quai six.",
+      "candidates": [
+        {
+          "language": "fr",
+          "score": 0.9998236298561096
+        }
+      ],
+      "decision": {
+        "action": "translate",
+        "language": "fr",
+        "raw": "Le dernier train part à 21 h 45 depuis le quai six.",
+        "reason": "MODEL_EVIDENCE"
+      },
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.409959
+    },
+    {
+      "id": "fr-5",
+      "status": "complete",
+      "group": "fr",
+      "raw": "Le montant total est de 47,80 euros, hors taxe de séjour.",
+      "candidates": [
+        {
+          "language": "fr",
+          "score": 0.9984320998191833
+        }
+      ],
+      "decision": {
+        "action": "translate",
+        "language": "fr",
+        "raw": "Le montant total est de 47,80 euros, hors taxe de séjour.",
+        "reason": "MODEL_EVIDENCE"
+      },
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.209458
+    },
+    {
+      "id": "fr-6",
+      "status": "complete",
+      "group": "fr",
+      "raw": "Le bagage à main ne doit pas dépasser huit kilogrammes.",
+      "candidates": [
+        {
+          "language": "fr",
+          "score": 0.9993374943733215
+        }
+      ],
+      "decision": {
+        "action": "translate",
+        "language": "fr",
+        "raw": "Le bagage à main ne doit pas dépasser huit kilogrammes.",
+        "reason": "MODEL_EVIDENCE"
+      },
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.201541
+    },
+    {
+      "id": "zh-1",
+      "status": "complete",
+      "group": "zh",
+      "raw": "付款完成后，这笔订单将无法取消或退款。",
+      "candidates": [
+        {
+          "language": "zh",
+          "score": 0.9992387294769287
+        }
+      ],
+      "decision": {
+        "action": "keep",
+        "language": "zh",
+        "raw": "付款完成后，这笔订单将无法取消或退款。",
+        "reason": "PRESERVE_CHINESE"
+      },
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.231459
+    },
+    {
+      "id": "zh-2",
+      "status": "complete",
+      "group": "zh",
+      "raw": "早餐仅供两位入住的客人使用。",
+      "candidates": [
+        {
+          "language": "zh",
+          "score": 0.9980745315551758
+        }
+      ],
+      "decision": {
+        "action": "keep",
+        "language": "zh",
+        "raw": "早餐仅供两位入住的客人使用。",
+        "reason": "PRESERVE_CHINESE"
+      },
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.340167
+    },
+    {
+      "id": "zh-3",
+      "status": "complete",
+      "group": "zh",
+      "raw": "请在办理入住时出示护照原件。",
+      "candidates": [
+        {
+          "language": "zh",
+          "score": 0.9977365732192993
+        }
+      ],
+      "decision": {
+        "action": "keep",
+        "language": "zh",
+        "raw": "请在办理入住时出示护照原件。",
+        "reason": "PRESERVE_CHINESE"
+      },
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.269958
+    },
+    {
+      "id": "zh-4",
+      "status": "complete",
+      "group": "zh",
+      "raw": "付款完成後，這筆訂單將無法取消或退款。",
+      "candidates": [
+        {
+          "language": "zh",
+          "score": 0.9989480376243591
+        }
+      ],
+      "decision": {
+        "action": "keep",
+        "language": "zh",
+        "raw": "付款完成後，這筆訂單將無法取消或退款。",
+        "reason": "PRESERVE_CHINESE"
+      },
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.411541
+    },
+    {
+      "id": "zh-5",
+      "status": "complete",
+      "group": "zh",
+      "raw": "早餐僅供兩位入住的客人使用。",
+      "candidates": [
+        {
+          "language": "zh",
+          "score": 0.997227132320404
+        }
+      ],
+      "decision": {
+        "action": "keep",
+        "language": "zh",
+        "raw": "早餐僅供兩位入住的客人使用。",
+        "reason": "PRESERVE_CHINESE"
+      },
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.180917
+    },
+    {
+      "id": "zh-6",
+      "status": "complete",
+      "group": "zh",
+      "raw": "請在辦理入住時出示護照原件。",
+      "candidates": [
+        {
+          "language": "zh",
+          "score": 0.9944656491279602
+        }
+      ],
+      "decision": {
+        "action": "keep",
+        "language": "zh",
+        "raw": "請在辦理入住時出示護照原件。",
+        "reason": "PRESERVE_CHINESE"
+      },
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.719917
+    },
+    {
+      "id": "short-1",
+      "status": "complete",
+      "group": "short",
+      "raw": "Book",
+      "candidates": [
+        {
+          "language": "en",
+          "score": 0.7009690999984741
+        },
+        {
+          "language": "nl",
+          "score": 0.02992013655602932
+        },
+        {
+          "language": "no",
+          "score": 0.01515269000083208
+        },
+        {
+          "language": "de",
+          "score": 0.014601723290979862
+        },
+        {
+          "language": "hi-Latn",
+          "score": 0.013166532851755619
+        },
+        {
+          "language": "jv",
+          "score": 0.013030686415731907
+        },
+        {
+          "language": "vi",
+          "score": 0.012998749502003193
+        },
+        {
+          "language": "da",
+          "score": 0.01293698325753212
+        },
+        {
+          "language": "ar-Latn",
+          "score": 0.01194541435688734
+        }
+      ],
+      "decision": {
+        "action": "review",
+        "language": null,
+        "raw": "Book",
+        "reason": "SHORT_TEXT"
+      },
+      "expected": {
+        "action": "review"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.155208
+    },
+    {
+      "id": "short-2",
+      "status": "complete",
+      "group": "short",
+      "raw": "Continue",
+      "candidates": [
+        {
+          "language": "fr",
+          "score": 0.6790662407875061
+        },
+        {
+          "language": "la",
+          "score": 0.12797407805919647
+        },
+        {
+          "language": "en",
+          "score": 0.07952326536178589
+        },
+        {
+          "language": "it",
+          "score": 0.05613956227898598
+        },
+        {
+          "language": "es",
+          "score": 0.014638323336839676
+        }
+      ],
+      "decision": {
+        "action": "review",
+        "language": null,
+        "raw": "Continue",
+        "reason": "WEAK_OR_AMBIGUOUS"
+      },
+      "expected": {
+        "action": "review"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.246083
+    },
+    {
+      "id": "short-3",
+      "status": "complete",
+      "group": "short",
+      "raw": "Annuler",
+      "candidates": [
+        {
+          "language": "fr",
+          "score": 0.893312394618988
+        },
+        {
+          "language": "da",
+          "score": 0.03614002838730812
+        },
+        {
+          "language": "en",
+          "score": 0.022885611280798912
+        }
+      ],
+      "decision": {
+        "action": "review",
+        "language": null,
+        "raw": "Annuler",
+        "reason": "SHORT_TEXT"
+      },
+      "expected": {
+        "action": "review"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.141292
+    },
+    {
+      "id": "short-4",
+      "status": "complete",
+      "group": "short",
+      "raw": "Total",
+      "candidates": [
+        {
+          "language": "en",
+          "score": 0.3880322575569153
+        },
+        {
+          "language": "es",
+          "score": 0.15463562309741974
+        },
+        {
+          "language": "pt",
+          "score": 0.11246306449174881
+        },
+        {
+          "language": "sv",
+          "score": 0.04838128387928009
+        },
+        {
+          "language": "id",
+          "score": 0.02970469929277897
+        },
+        {
+          "language": "no",
+          "score": 0.022179407998919487
+        },
+        {
+          "language": "hi-Latn",
+          "score": 0.021406253799796104
+        },
+        {
+          "language": "ca",
+          "score": 0.01630154438316822
+        },
+        {
+          "language": "da",
+          "score": 0.01382170058786869
+        },
+        {
+          "language": "hu",
+          "score": 0.01209082268178463
+        },
+        {
+          "language": "de",
+          "score": 0.010980724357068539
+        }
+      ],
+      "decision": {
+        "action": "review",
+        "language": null,
+        "raw": "Total",
+        "reason": "SHORT_TEXT"
+      },
+      "expected": {
+        "action": "review"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.147792
+    },
+    {
+      "id": "short-5",
+      "status": "complete",
+      "group": "short",
+      "raw": "OK",
+      "candidates": [
+        {
+          "language": "hu",
+          "score": 0.45435526967048645
+        },
+        {
+          "language": "no",
+          "score": 0.09453019499778748
+        },
+        {
+          "language": "sv",
+          "score": 0.06701764464378357
+        },
+        {
+          "language": "ms",
+          "score": 0.06000899150967598
+        },
+        {
+          "language": "da",
+          "score": 0.058422356843948364
+        },
+        {
+          "language": "en",
+          "score": 0.035445958375930786
+        },
+        {
+          "language": "nl",
+          "score": 0.031283944845199585
+        },
+        {
+          "language": "id",
+          "score": 0.031035292893648148
+        },
+        {
+          "language": "de",
+          "score": 0.026654694229364395
+        },
+        {
+          "language": "hr",
+          "score": 0.024216311052441597
+        },
+        {
+          "language": "tr",
+          "score": 0.017949750646948814
+        },
+        {
+          "language": "eu",
+          "score": 0.016977209597826004
+        },
+        {
+          "language": "pl",
+          "score": 0.010575910098850727
+        }
+      ],
+      "decision": {
+        "action": "review",
+        "language": null,
+        "raw": "OK",
+        "reason": "SHORT_TEXT"
+      },
+      "expected": {
+        "action": "review"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.1475
+    },
+    {
+      "id": "short-6",
+      "status": "complete",
+      "group": "short",
+      "raw": "Non",
+      "candidates": [
+        {
+          "language": "fr",
+          "score": 0.3896014988422394
+        },
+        {
+          "language": "en",
+          "score": 0.11763151735067368
+        },
+        {
+          "language": "nl",
+          "score": 0.06830849498510361
+        },
+        {
+          "language": "it",
+          "score": 0.0563400536775589
+        },
+        {
+          "language": "sv",
+          "score": 0.048961181193590164
+        },
+        {
+          "language": "hu",
+          "score": 0.047029029577970505
+        },
+        {
+          "language": "es",
+          "score": 0.0459594763815403
+        },
+        {
+          "language": "pt",
+          "score": 0.026672281324863434
+        },
+        {
+          "language": "fi",
+          "score": 0.023720111697912216
+        },
+        {
+          "language": "ro",
+          "score": 0.02111761085689068
+        },
+        {
+          "language": "da",
+          "score": 0.01755458116531372
+        },
+        {
+          "language": "id",
+          "score": 0.016164056956768036
+        },
+        {
+          "language": "de",
+          "score": 0.010385286062955856
+        }
+      ],
+      "decision": {
+        "action": "review",
+        "language": null,
+        "raw": "Non",
+        "reason": "SHORT_TEXT"
+      },
+      "expected": {
+        "action": "review"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.183708
+    },
+    {
+      "id": "short-7",
+      "status": "complete",
+      "group": "short",
+      "raw": "是",
+      "candidates": [
+        {
+          "language": "zh",
+          "score": 0.9369805455207825
+        },
+        {
+          "language": "ja",
+          "score": 0.0628022849559784
+        }
+      ],
+      "decision": {
+        "action": "review",
+        "language": null,
+        "raw": "是",
+        "reason": "SHORT_TEXT"
+      },
+      "expected": {
+        "action": "review"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.134958
+    },
+    {
+      "id": "short-8",
+      "status": "complete",
+      "group": "short",
+      "raw": "取消",
+      "candidates": [
+        {
+          "language": "zh",
+          "score": 0.8894455432891846
+        },
+        {
+          "language": "ja",
+          "score": 0.09360076487064362
+        },
+        {
+          "language": "ko",
+          "score": 0.011831567622721195
+        }
+      ],
+      "decision": {
+        "action": "review",
+        "language": null,
+        "raw": "取消",
+        "reason": "SHORT_TEXT"
+      },
+      "expected": {
+        "action": "review"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.161
+    },
+    {
+      "id": "literal-1",
+      "status": "complete",
+      "group": "literal",
+      "raw": "€27.40",
+      "candidates": [
+        {
+          "language": "am",
+          "score": 0.7127633094787598
+        },
+        {
+          "language": "my",
+          "score": 0.06698164343833923
+        },
+        {
+          "language": "km",
+          "score": 0.04392620921134949
+        },
+        {
+          "language": "pa",
+          "score": 0.01733269914984703
+        },
+        {
+          "language": "da",
+          "score": 0.016069600358605385
+        },
+        {
+          "language": "hu",
+          "score": 0.01215635146945715
+        },
+        {
+          "language": "hi",
+          "score": 0.010726162232458591
+        }
+      ],
+      "decision": {
+        "action": "keep-literal",
+        "language": null,
+        "raw": "€27.40",
+        "reason": "NO_LETTERS"
+      },
+      "expected": {
+        "action": "keep-literal"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.14575
+    },
+    {
+      "id": "literal-2",
+      "status": "complete",
+      "group": "literal",
+      "raw": "18:35",
+      "candidates": [
+        {
+          "language": "am",
+          "score": 0.5110545754432678
+        },
+        {
+          "language": "km",
+          "score": 0.169703409075737
+        },
+        {
+          "language": "my",
+          "score": 0.14239980280399323
+        },
+        {
+          "language": "hi",
+          "score": 0.017018670216202736
+        },
+        {
+          "language": "pa",
+          "score": 0.016200734302401543
+        },
+        {
+          "language": "ne",
+          "score": 0.01136665977537632
+        }
+      ],
+      "decision": {
+        "action": "keep-literal",
+        "language": null,
+        "raw": "18:35",
+        "reason": "NO_LETTERS"
+      },
+      "expected": {
+        "action": "keep-literal"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.149708
+    },
+    {
+      "id": "literal-3",
+      "status": "complete",
+      "group": "literal",
+      "raw": "1234",
+      "candidates": [
+        {
+          "language": "km",
+          "score": 0.4657973051071167
+        },
+        {
+          "language": "my",
+          "score": 0.2578023076057434
+        },
+        {
+          "language": "am",
+          "score": 0.12256041914224625
+        },
+        {
+          "language": "hi",
+          "score": 0.018920978531241417
+        },
+        {
+          "language": "pa",
+          "score": 0.018284538760781288
+        },
+        {
+          "language": "gu",
+          "score": 0.012274710461497307
+        }
+      ],
+      "decision": {
+        "action": "keep-literal",
+        "language": null,
+        "raw": "1234",
+        "reason": "NO_LETTERS"
+      },
+      "expected": {
+        "action": "keep-literal"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.136917
+    },
+    {
+      "id": "literal-4",
+      "status": "complete",
+      "group": "literal",
+      "raw": "—",
+      "candidates": [
+        {
+          "language": "te",
+          "score": 0.4049443006515503
+        },
+        {
+          "language": "km",
+          "score": 0.08405905961990356
+        },
+        {
+          "language": "my",
+          "score": 0.08132018148899078
+        },
+        {
+          "language": "pa",
+          "score": 0.047022610902786255
+        },
+        {
+          "language": "am",
+          "score": 0.044332779943943024
+        },
+        {
+          "language": "lo",
+          "score": 0.03842383623123169
+        },
+        {
+          "language": "th",
+          "score": 0.037156783044338226
+        },
+        {
+          "language": "gu",
+          "score": 0.030040644109249115
+        },
+        {
+          "language": "ta",
+          "score": 0.028284674510359764
+        },
+        {
+          "language": "ml",
+          "score": 0.025821920484304428
+        },
+        {
+          "language": "zh",
+          "score": 0.02371257171034813
+        },
+        {
+          "language": "kn",
+          "score": 0.02138993889093399
+        },
+        {
+          "language": "bn",
+          "score": 0.01851886697113514
+        },
+        {
+          "language": "si",
+          "score": 0.017526021227240562
+        },
+        {
+          "language": "hi",
+          "score": 0.01368250697851181
+        }
+      ],
+      "decision": {
+        "action": "keep-literal",
+        "language": null,
+        "raw": "—",
+        "reason": "NO_LETTERS"
+      },
+      "expected": {
+        "action": "keep-literal"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.372042
+    },
+    {
+      "id": "mixed-1",
+      "status": "complete",
+      "group": "mixed",
+      "raw": "总价 59.40 € tax included.",
+      "candidates": [
+        {
+          "language": "en",
+          "score": 0.7456697821617126
+        },
+        {
+          "language": "ro",
+          "score": 0.12116875499486923
+        },
+        {
+          "language": "zh",
+          "score": 0.04728318005800247
+        },
+        {
+          "language": "ko",
+          "score": 0.03588161990046501
+        }
+      ],
+      "decision": {
+        "action": "review",
+        "language": null,
+        "raw": "总价 59.40 € tax included.",
+        "reason": "MIXED_SCRIPTS"
+      },
+      "expected": {
+        "action": "review"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.159917
+    },
+    {
+      "id": "mixed-2",
+      "status": "complete",
+      "group": "mixed",
+      "raw": "请点击 Continue 完成预订。",
+      "candidates": [
+        {
+          "language": "zh",
+          "score": 0.9885275363922119
+        }
+      ],
+      "decision": {
+        "action": "review",
+        "language": null,
+        "raw": "请点击 Continue 完成预订。",
+        "reason": "MIXED_SCRIPTS"
+      },
+      "expected": {
+        "action": "review"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.132958
+    },
+    {
+      "id": "mixed-3",
+      "status": "complete",
+      "group": "mixed",
+      "raw": "Annuler booking now",
+      "candidates": [
+        {
+          "language": "en",
+          "score": 0.9672821164131165
+        },
+        {
+          "language": "da",
+          "score": 0.011060832999646664
+        }
+      ],
+      "decision": {
+        "action": "translate",
+        "language": "en",
+        "raw": "Annuler booking now",
+        "reason": "MODEL_EVIDENCE"
+      },
+      "expected": {
+        "action": "review"
+      },
+      "qualityCorrect": false,
+      "wrongAutomaticRoute": true,
+      "inferenceMs": 0.144833
+    },
+    {
+      "id": "mixed-4",
+      "status": "complete",
+      "group": "mixed",
+      "raw": "No refund après départ",
+      "candidates": [
+        {
+          "language": "fr",
+          "score": 0.993299126625061
+        }
+      ],
+      "decision": {
+        "action": "translate",
+        "language": "fr",
+        "raw": "No refund après départ",
+        "reason": "MODEL_EVIDENCE"
+      },
+      "expected": {
+        "action": "review"
+      },
+      "qualityCorrect": false,
+      "wrongAutomaticRoute": true,
+      "inferenceMs": 0.227833
+    },
+    {
+      "id": "unsupported-1",
+      "status": "complete",
+      "group": "unsupported",
+      "raw": "この予約はキャンセルできません。",
+      "candidates": [
+        {
+          "language": "ja",
+          "score": 0.998566210269928
+        }
+      ],
+      "decision": {
+        "action": "review",
+        "language": null,
+        "raw": "この予約はキャンセルできません。",
+        "reason": "UNSUPPORTED_OR_UNDETERMINED"
+      },
+      "expected": {
+        "action": "review"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.13025
+    },
+    {
+      "id": "unsupported-2",
+      "status": "complete",
+      "group": "unsupported",
+      "raw": "이 예약은 취소할 수 없습니다.",
+      "candidates": [
+        {
+          "language": "ko",
+          "score": 0.999748170375824
+        }
+      ],
+      "decision": {
+        "action": "review",
+        "language": null,
+        "raw": "이 예약은 취소할 수 없습니다.",
+        "reason": "UNSUPPORTED_OR_UNDETERMINED"
+      },
+      "expected": {
+        "action": "review"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.131458
+    },
+    {
+      "id": "unsupported-3",
+      "status": "complete",
+      "group": "unsupported",
+      "raw": "Это бронирование нельзя отменить после оплаты.",
+      "candidates": [
+        {
+          "language": "ru",
+          "score": 0.9998464584350586
+        }
+      ],
+      "decision": {
+        "action": "review",
+        "language": null,
+        "raw": "Это бронирование нельзя отменить после оплаты.",
+        "reason": "UNSUPPORTED_OR_UNDETERMINED"
+      },
+      "expected": {
+        "action": "review"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.166584
+    },
+    {
+      "id": "unsupported-4",
+      "status": "complete",
+      "group": "unsupported",
+      "raw": "Esta reserva no se puede cancelar después del pago.",
+      "candidates": [
+        {
+          "language": "es",
+          "score": 0.9991886019706726
+        }
+      ],
+      "decision": {
+        "action": "review",
+        "language": null,
+        "raw": "Esta reserva no se puede cancelar después del pago.",
+        "reason": "UNSUPPORTED_OR_UNDETERMINED"
+      },
+      "expected": {
+        "action": "review"
+      },
+      "qualityCorrect": true,
+      "wrongAutomaticRoute": false,
+      "inferenceMs": 0.126
+    }
+  ],
+  "errors": [],
+  "permissions": [
+    {
+      "package": "com.kandong.modelprobe.test",
+      "permission": "android.permission.INTERNET",
+      "granted": false
+    },
+    {
+      "package": "com.kandong.modelprobe.test",
+      "permission": "android.permission.ACCESS_NETWORK_STATE",
+      "granted": false
+    },
+    {
+      "package": "com.kandong.modelprobe",
+      "permission": "android.permission.INTERNET",
+      "granted": false
+    },
+    {
+      "package": "com.kandong.modelprobe",
+      "permission": "android.permission.ACCESS_NETWORK_STATE",
+      "granted": false
+    }
+  ],
+  "fixtureSha256": "733f883e4e974f110b201ceb9307d648f53bc14b2e6b46719a5a097eb33d6e7c",
+  "testPackageApplicationContextWasNull": true,
+  "sdkContextPackage": "com.kandong.modelprobe.test",
+  "qualityCorrectCount": 36,
+  "wrongAutomaticRoutes": 2,
+  "reviewCount": 14,
+  "clientsOpened": 1,
+  "clientsClosed": 1
+}

@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "runId": "ad9dea65-dfd9-4220-847a-34d28d57f07f",
+  "status": "failed",
+  "technicalPassed": false,
+  "qualityAccepted": false,
+  "scope": "38 authored strings only; no OCR, real screen, translation, product, or Huawei acceptance",
+  "device": "sdk_gphone16k_arm64",
+  "api": 37,
+  "fingerprint": "google\/sdk_gphone16k_arm64\/emu64a16k:17\/CP31.260623.012\/16064790:user\/dev-keys",
+  "sdk": "com.google.mlkit:language-id:17.0.6",
+  "candidateThreshold": 0.01,
+  "configuration": "language-v1:min-letters8;score.90;gap.20;han-latin-review;en-fr-zh",
+  "cases": [],
+  "errors": [
+    {
+      "error": "java.lang.NullPointerException: The provided context did not have an application context.\n\tat com.google.android.gms.common.internal.Preconditions.checkNotNull(com.google.android.gms:play-services-basement@@18.3.0:2)\n\tat com.google.android.gms.common.api.GoogleApi.<init>(com.google.android.gms:play-services-base@@18.4.0:8)\n\tat com.google.android.gms.common.api.GoogleApi.<init>(com.google.android.gms:play-services-base@@18.4.0:21)\n\tat com.google.android.gms.common.internal.service.zao.<init>(com.google.android.gms:play-services-base@@18.4.0:1)\n\tat com.google.android.gms.common.internal.TelemetryLogging.getClient(com.google.android.gms:play-services-base@@18.4.0:2)\n\tat com.google.android.gms.internal.mlkit_language_id_common.zzlk.<init>(com.google.mlkit:language-id-common@@16.1.0:3)\n\tat com.google.android.gms.internal.mlkit_language_id_common.zzlk.zza(com.google.mlkit:language-id-common@@16.1.0:1)\n\tat com.google.mlkit.nl.languageid.internal.LanguageIdentifierImpl.<init>(com.google.mlkit:language-id-common@@16.1.0:4)\n\tat com.google.mlkit.nl.languageid.internal.LanguageIdentifierImpl.zza(com.google.mlkit:language-id-common@@16.1.0:1)\n\tat com.google.mlkit.nl.languageid.internal.LanguageIdentifierImpl$Factory.create(com.google.mlkit:language-id-common@@16.1.0:2)\n\tat com.google.mlkit.nl.languageid.LanguageIdentification.getClient(com.google.mlkit:language-id-common@@16.1.0:5)\n\tat com.kandong.modelprobe.LanguageIdentificationProbeTest.frozenSyntheticLanguageEvidenceAndRouting(LanguageIdentificationProbeTest.kt:69)\n\tat java.lang.reflect.Method.invoke(Native Method)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)\n\tat org.junit.runners.Suite.runChild(Suite.java:128)\n\tat org.junit.runners.Suite.runChild(Suite.java:27)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:115)\n\tat androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)\n\tat androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)\n\tat androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:463)\n\tat android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2655)\n"
+    }
+  ],
+  "permissions": [
+    {
+      "package": "com.kandong.modelprobe.test",
+      "permission": "android.permission.INTERNET",
+      "granted": false
+    },
+    {
+      "package": "com.kandong.modelprobe.test",
+      "permission": "android.permission.ACCESS_NETWORK_STATE",
+      "granted": false
+    },
+    {
+      "package": "com.kandong.modelprobe",
+      "permission": "android.permission.INTERNET",
+      "granted": false
+    },
+    {
+      "package": "com.kandong.modelprobe",
+      "permission": "android.permission.ACCESS_NETWORK_STATE",
+      "granted": false
+    }
+  ],
+  "fixtureSha256": "733f883e4e974f110b201ceb9307d648f53bc14b2e6b46719a5a097eb33d6e7c",
+  "clientsOpened": 0,
+  "clientsClosed": 0
+}

@@ -81,3 +81,8 @@ modelprobe使用Microsoft ONNX Runtime Android1.30.0（MIT及其ThirdPartyNotice
 - Android完整框测试流程：`BoxPipelineContract`/`BoxPipelineOpenCv`按固定RapidOCR3.9.2的DBPostProcess与排序规则实现检测后处理，保留PaddlePaddle Authors/Apache-2.0归属；复用上述有修改记录的Boost许可polygon候选，仅测试源集。框/分数身份绑定、输入认证、预算与失败防护为本项目新增，未复制整套OCR产品。目标华为的有界合成验收见[完整框探针](BOX_PIPELINE_PROBE.md)。
 
 - 裁剪→识别参考导出器调用固定RapidOCR3.9.2的TextRecognizer.resize_norm_img与CTCLabelDecode；其PaddlePaddle/RapidOCR归属与Apache-2.0许可沿用上文。复用既有两模型/字典，不复制完整项目或引入新模型；合成图片及身份回映记录由本项目生成，见[CROP_RECOGNITION_REFERENCE](CROP_RECOGNITION_REFERENCE.md)。
+
+
+## 随包语言识别独立实验
+
+modelprobe仅androidTest使用Google `com.google.mlkit:language-id:17.0.6`（包含随包TFLite语言模型/原生引擎及传递依赖），适用[ML Kit条款](https://developers.google.com/ml-kit/terms)，不是按文档代码示例的Apache许可重新分发模型。API使用参考[官方接入](https://developers.google.com/ml-kit/language/identification/android)及[公开初始化](https://developers.google.com/android/reference/com/google/mlkit/common/MlKit)，无复制上游项目代码。38条文字、路由、测试及运行器由本项目编写；指纹/POM/依赖及质量失败保留于[语言实验记录](LANGUAGE_ROUTING.md)。尚未选为正式产品方案；SDK运行指标与文字本机处理分开披露，本轮不宣称全设备无遥测。

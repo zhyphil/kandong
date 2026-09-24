@@ -1,7 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.REORDER_TASKS" tools:node="remove" />
+    <uses-permission android:name="android.permission.INTERNET" tools:node="remove" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" tools:node="remove" />
     <application android:label="看懂缩放验证">
+        <!-- Initialize the bundled test-only SDK explicitly with the instrumentation package context. -->
+        <provider android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+            android:authorities="${applicationId}.mlkitinitprovider" tools:node="remove" />
         <!-- This test suite never starts activities or operates the device UI. -->
         <activity android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity" tools:node="remove" />
         <activity android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity" tools:node="remove" />

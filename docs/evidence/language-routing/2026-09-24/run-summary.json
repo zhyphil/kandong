@@ -1,0 +1,9 @@
+{
+  "rounds": 2,
+  "testsPerRound": 15,
+  "casesPerRound": 38,
+  "evidenceExactlyRepeatable": true,
+  "qualityAccepted": false,
+  "qualityCorrect": 36,
+  "wrongAutomaticRoutes": 2
+}

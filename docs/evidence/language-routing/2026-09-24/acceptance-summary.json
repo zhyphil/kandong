@@ -1,0 +1,14 @@
+{
+  "status": "evaluation-complete-rule-rejected",
+  "modelprobeJvmTests": 88,
+  "androidRounds": 2,
+  "technicalTestsPerRound": 15,
+  "frozenStrings": 38,
+  "matchingDecisions": 36,
+  "wrongAutomaticRoutes": 2,
+  "correctReviews": 14,
+  "exactlyRepeatable": true,
+  "oldAssetsNativeUnchanged": 292,
+  "qualityAccepted": false,
+  "formalTranslationIntegrated": false
+}

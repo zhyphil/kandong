@@ -47,6 +47,8 @@ dependencies {
     androidTestImplementation("androidx.test:runner:1.6.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("org.opencv:opencv:5.0.0.1")
+    // Packaged synthetic language screening only; never a main/product dependency.
+    androidTestImplementation("com.google.mlkit:language-id:17.0.6")
 }
 
 // This is deliberately task-time validation, never a configuration-time download.

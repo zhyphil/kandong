@@ -1,0 +1,328 @@
+{
+  "schema": 1,
+  "scope": "Authored synthetic strings frozen before inference; no real page text",
+  "cases": [
+    {
+      "id": "en-1",
+      "group": "en",
+      "text": "The reservation cannot be cancelled after payment.",
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "en-2",
+      "group": "en",
+      "text": "Breakfast is included for two guests only.",
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "en-3",
+      "group": "en",
+      "text": "Please bring the original passport to reception.",
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "en-4",
+      "group": "en",
+      "text": "The last train leaves at 21:45 from platform six.",
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "en-5",
+      "group": "en",
+      "text": "Your total is 47.80 euros, excluding the city tax.",
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "en-6",
+      "group": "en",
+      "text": "Cabin baggage must not weigh more than eight kilograms.",
+      "expected": {
+        "action": "translate",
+        "language": "en"
+      }
+    },
+    {
+      "id": "fr-1",
+      "group": "fr",
+      "text": "Cette réservation ne peut pas être annulée après le paiement.",
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "fr-2",
+      "group": "fr",
+      "text": "Le petit déjeuner est inclus pour deux personnes seulement.",
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "fr-3",
+      "group": "fr",
+      "text": "Veuillez présenter votre passeport original à la réception.",
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "fr-4",
+      "group": "fr",
+      "text": "Le dernier train part à 21 h 45 depuis le quai six.",
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "fr-5",
+      "group": "fr",
+      "text": "Le montant total est de 47,80 euros, hors taxe de séjour.",
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "fr-6",
+      "group": "fr",
+      "text": "Le bagage à main ne doit pas dépasser huit kilogrammes.",
+      "expected": {
+        "action": "translate",
+        "language": "fr"
+      }
+    },
+    {
+      "id": "zh-1",
+      "group": "zh",
+      "text": "付款完成后，这笔订单将无法取消或退款。",
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "zh-2",
+      "group": "zh",
+      "text": "早餐仅供两位入住的客人使用。",
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "zh-3",
+      "group": "zh",
+      "text": "请在办理入住时出示护照原件。",
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "zh-4",
+      "group": "zh",
+      "text": "付款完成後，這筆訂單將無法取消或退款。",
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "zh-5",
+      "group": "zh",
+      "text": "早餐僅供兩位入住的客人使用。",
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "zh-6",
+      "group": "zh",
+      "text": "請在辦理入住時出示護照原件。",
+      "expected": {
+        "action": "keep",
+        "language": "zh"
+      }
+    },
+    {
+      "id": "short-1",
+      "group": "short",
+      "text": "Book",
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "short-2",
+      "group": "short",
+      "text": "Continue",
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "short-3",
+      "group": "short",
+      "text": "Annuler",
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "short-4",
+      "group": "short",
+      "text": "Total",
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "short-5",
+      "group": "short",
+      "text": "OK",
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "short-6",
+      "group": "short",
+      "text": "Non",
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "short-7",
+      "group": "short",
+      "text": "是",
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "short-8",
+      "group": "short",
+      "text": "取消",
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "literal-1",
+      "group": "literal",
+      "text": "€27.40",
+      "expected": {
+        "action": "keep-literal"
+      }
+    },
+    {
+      "id": "literal-2",
+      "group": "literal",
+      "text": "18:35",
+      "expected": {
+        "action": "keep-literal"
+      }
+    },
+    {
+      "id": "literal-3",
+      "group": "literal",
+      "text": "1234",
+      "expected": {
+        "action": "keep-literal"
+      }
+    },
+    {
+      "id": "literal-4",
+      "group": "literal",
+      "text": "—",
+      "expected": {
+        "action": "keep-literal"
+      }
+    },
+    {
+      "id": "mixed-1",
+      "group": "mixed",
+      "text": "总价 59.40 € tax included.",
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "mixed-2",
+      "group": "mixed",
+      "text": "请点击 Continue 完成预订。",
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "mixed-3",
+      "group": "mixed",
+      "text": "Annuler booking now",
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "mixed-4",
+      "group": "mixed",
+      "text": "No refund après départ",
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "unsupported-1",
+      "group": "unsupported",
+      "text": "この予約はキャンセルできません。",
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "unsupported-2",
+      "group": "unsupported",
+      "text": "이 예약은 취소할 수 없습니다.",
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "unsupported-3",
+      "group": "unsupported",
+      "text": "Это бронирование нельзя отменить после оплаты.",
+      "expected": {
+        "action": "review"
+      }
+    },
+    {
+      "id": "unsupported-4",
+      "group": "unsupported",
+      "text": "Esta reserva no se puede cancelar después del pago.",
+      "expected": {
+        "action": "review"
+      }
+    }
+  ]
+}
