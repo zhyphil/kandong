@@ -1,0 +1,217 @@
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidImageStripProbeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+com.kandong.modelprobe.AndroidImageStripProbeTest:
+INSTRUMENTATION_STATUS: test=cropMismatchAndUnexpectedDimensionsRejectBeforeConsumer
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidImageStripProbeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: expected null, but was:<READ_FAILED>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.success(AndroidImageStripProbeTest.kt:69)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.cropMismatchAndUnexpectedDimensionsRejectBeforeConsumer(AndroidImageStripProbeTest.kt:111)
+
+INSTRUMENTATION_STATUS: stream=
+Error in cropMismatchAndUnexpectedDimensionsRejectBeforeConsumer(com.kandong.modelprobe.AndroidImageStripProbeTest):
+java.lang.AssertionError: expected null, but was:<READ_FAILED>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.success(AndroidImageStripProbeTest.kt:69)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.cropMismatchAndUnexpectedDimensionsRejectBeforeConsumer(AndroidImageStripProbeTest.kt:111)
+
+INSTRUMENTATION_STATUS: test=cropMismatchAndUnexpectedDimensionsRejectBeforeConsumer
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidImageStripProbeTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=actualImageClosesOnEarlyCancelLateCancelAndConsumerFailure
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidImageStripProbeTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: expected null, but was:<READ_FAILED>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.success(AndroidImageStripProbeTest.kt:69)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.actualImageClosesOnEarlyCancelLateCancelAndConsumerFailure(AndroidImageStripProbeTest.kt:96)
+
+INSTRUMENTATION_STATUS: stream=
+Error in actualImageClosesOnEarlyCancelLateCancelAndConsumerFailure(com.kandong.modelprobe.AndroidImageStripProbeTest):
+java.lang.AssertionError: expected null, but was:<READ_FAILED>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.success(AndroidImageStripProbeTest.kt:69)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.actualImageClosesOnEarlyCancelLateCancelAndConsumerFailure(AndroidImageStripProbeTest.kt:96)
+
+INSTRUMENTATION_STATUS: test=actualImageClosesOnEarlyCancelLateCancelAndConsumerFailure
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidImageStripProbeTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=yuvFormatIsNotSilentlyTreatedAsRgba
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidImageStripProbeTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=yuvFormatIsNotSilentlyTreatedAsRgba
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidImageStripProbeTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=oddWidthUsesActualPlanePaddingAndReaderSlotsAreReusable
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidImageStripProbeTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: expected null, but was:<READ_FAILED>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.success(AndroidImageStripProbeTest.kt:69)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.oddWidthUsesActualPlanePaddingAndReaderSlotsAreReusable(AndroidImageStripProbeTest.kt:78)
+
+INSTRUMENTATION_STATUS: stream=
+Error in oddWidthUsesActualPlanePaddingAndReaderSlotsAreReusable(com.kandong.modelprobe.AndroidImageStripProbeTest):
+java.lang.AssertionError: expected null, but was:<READ_FAILED>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.success(AndroidImageStripProbeTest.kt:69)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.oddWidthUsesActualPlanePaddingAndReaderSlotsAreReusable(AndroidImageStripProbeTest.kt:78)
+
+INSTRUMENTATION_STATUS: test=oddWidthUsesActualPlanePaddingAndReaderSlotsAreReusable
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidImageStripProbeTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=consumedLeaseCannotReadAgainAndRepeatedCloseIsSafe
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidImageStripProbeTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: expected null, but was:<READ_FAILED>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.consumedLeaseCannotReadAgainAndRepeatedCloseIsSafe(AndroidImageStripProbeTest.kt:127)
+
+INSTRUMENTATION_STATUS: stream=
+Error in consumedLeaseCannotReadAgainAndRepeatedCloseIsSafe(com.kandong.modelprobe.AndroidImageStripProbeTest):
+java.lang.AssertionError: expected null, but was:<READ_FAILED>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.consumedLeaseCannotReadAgainAndRepeatedCloseIsSafe(AndroidImageStripProbeTest.kt:127)
+
+INSTRUMENTATION_STATUS: test=consumedLeaseCannotReadAgainAndRepeatedCloseIsSafe
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidImageStripProbeTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=actualPhoneSizeImageMapsEveryPixelAcrossAllFourStrips
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.AndroidImageStripProbeTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: expected null, but was:<READ_FAILED>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.success(AndroidImageStripProbeTest.kt:69)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.actualPhoneSizeImageMapsEveryPixelAcrossAllFourStrips(AndroidImageStripProbeTest.kt:74)
+
+INSTRUMENTATION_STATUS: stream=
+Error in actualPhoneSizeImageMapsEveryPixelAcrossAllFourStrips(com.kandong.modelprobe.AndroidImageStripProbeTest):
+java.lang.AssertionError: expected null, but was:<READ_FAILED>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.success(AndroidImageStripProbeTest.kt:69)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.actualPhoneSizeImageMapsEveryPixelAcrossAllFourStrips(AndroidImageStripProbeTest.kt:74)
+
+INSTRUMENTATION_STATUS: test=actualPhoneSizeImageMapsEveryPixelAcrossAllFourStrips
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 0.206
+There were 5 failures:
+1) cropMismatchAndUnexpectedDimensionsRejectBeforeConsumer(com.kandong.modelprobe.AndroidImageStripProbeTest)
+java.lang.AssertionError: expected null, but was:<READ_FAILED>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.success(AndroidImageStripProbeTest.kt:69)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.cropMismatchAndUnexpectedDimensionsRejectBeforeConsumer(AndroidImageStripProbeTest.kt:111)
+2) actualImageClosesOnEarlyCancelLateCancelAndConsumerFailure(com.kandong.modelprobe.AndroidImageStripProbeTest)
+java.lang.AssertionError: expected null, but was:<READ_FAILED>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.success(AndroidImageStripProbeTest.kt:69)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.actualImageClosesOnEarlyCancelLateCancelAndConsumerFailure(AndroidImageStripProbeTest.kt:96)
+3) oddWidthUsesActualPlanePaddingAndReaderSlotsAreReusable(com.kandong.modelprobe.AndroidImageStripProbeTest)
+java.lang.AssertionError: expected null, but was:<READ_FAILED>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.success(AndroidImageStripProbeTest.kt:69)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.oddWidthUsesActualPlanePaddingAndReaderSlotsAreReusable(AndroidImageStripProbeTest.kt:78)
+4) consumedLeaseCannotReadAgainAndRepeatedCloseIsSafe(com.kandong.modelprobe.AndroidImageStripProbeTest)
+java.lang.AssertionError: expected null, but was:<READ_FAILED>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.consumedLeaseCannotReadAgainAndRepeatedCloseIsSafe(AndroidImageStripProbeTest.kt:127)
+5) actualPhoneSizeImageMapsEveryPixelAcrossAllFourStrips(com.kandong.modelprobe.AndroidImageStripProbeTest)
+java.lang.AssertionError: expected null, but was:<READ_FAILED>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.success(AndroidImageStripProbeTest.kt:69)
+	at com.kandong.modelprobe.AndroidImageStripProbeTest.actualPhoneSizeImageMapsEveryPixelAcrossAllFourStrips(AndroidImageStripProbeTest.kt:74)
+
+FAILURES!!!
+Tests run: 6,  Failures: 5
+
+
+INSTRUMENTATION_CODE: -1

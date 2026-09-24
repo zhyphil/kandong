@@ -1,0 +1,16 @@
+{
+  "device": "emulator-5582",
+  "avd": "KanDong_OCR_API37_16K",
+  "api": 37,
+  "pageBytes": 16384,
+  "packages": {
+    "com.kandong.modelprobe": {
+      "local": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+      "installed": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea"
+    },
+    "com.kandong.modelprobe.test": {
+      "local": "4fce304960a7aef0816fa6a3e1d6134a07f5d539844b1ddeaf2ec37171ae3f7a",
+      "installed": "4fce304960a7aef0816fa6a3e1d6134a07f5d539844b1ddeaf2ec37171ae3f7a"
+    }
+  }
+}

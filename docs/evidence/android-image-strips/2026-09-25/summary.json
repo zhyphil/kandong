@@ -1,0 +1,46 @@
+{
+  "sourceBase": "39adbf9",
+  "scope": "Real ImageWriter -> ImageReader planes with generated fixed colors, not screen capture",
+  "jvm": {
+    "tests": 138,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "Error": 0,
+    "Warning": 6
+  },
+  "tdd": {
+    "newAndroidTests": 6,
+    "initialFailures": 5,
+    "initialPassingYuvGuard": 1,
+    "finalNewPassed": 6
+  },
+  "android": {
+    "avd": "KanDong_OCR_API37_16K",
+    "api": 37,
+    "pageBytes": 16384,
+    "finalPassed": 28,
+    "previousRegression": 22,
+    "new": 6,
+    "seconds": 0.779,
+    "actualImagesClosedAndSlotsReused": 16
+  },
+  "physicalPhone": "pending; experiment main package missing at latest query, must restore and verify before instrumenting",
+  "sha256": {
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/AndroidRgbaFrameLease.kt": "8105d2c794aa8b7f5ec39278ad8c6ff558cc24b896b340a2072e7ec93d8aa65e",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/AndroidImageStripProbeTest.kt": "a88d58004e8172dcffe61d70410944100080b3ae4dd46d8a54046831f1dd5529"
+  },
+  "limitations": [
+    "No MediaProjection, protected screen, OCR, current-page proof, colorspace or privacy evidence",
+    "Caller still authenticates version and source before accepting Image",
+    "No physical Huawei Image bridge result yet",
+    "No product changes or network calls"
+  ],
+  "officialReferences": [
+    "https://developer.android.com/reference/android/media/Image",
+    "https://developer.android.com/reference/android/media/ImageWriter",
+    "https://developer.android.com/reference/android/media/ImageReader"
+  ]
+}

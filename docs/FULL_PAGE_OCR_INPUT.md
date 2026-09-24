@@ -47,3 +47,15 @@ adb -s 2KE0220109017133 shell am instrument -w -r -e class com.kandong.modelprob
 本阶段没有华为验收：安装前发现该机已不列出实验主包，原因未确定，未向手机发出安装；此前几何8项真机结果仍作为历史证据保留。日常compat包仍在。
 
 这仍是合成字节输入：真实Android Image的格式／crop／生命周期、当前帧像素见证与页面身份、实际模型和跨缝文字尚待接入。取得时间只用于寿命检查，不能证明画面新鲜，也不能证明隐私安全。下一项是实际Android Image适配及固定色块回环验证，再连接已验证的模型流程。
+
+## 实际Android Image回环（2026-09-25，本机通过）
+
+测试专用AndroidRgbaFrameLease将真实Image的RGBA plane接入已验证分段处理器；格式、实际宽高、完整crop与单plane均核对，不把局部有效像素冒充整屏。不接受YUV，也不重排未知格式。Image关闭由处理流程持有，重复close不会再次访问平台资源，已消耗lease不可重读。
+
+官方依据：[Image的有效crop与关闭](https://developer.android.com/reference/android/media/Image)、[ImageWriter的输入队列所有权](https://developer.android.com/reference/android/media/ImageWriter)、[ImageReader的缓冲获取](https://developer.android.com/reference/android/media/ImageReader)。测试关闭后只检查文档定义的Image元数据异常，不触碰已关闭Image的ByteBuffer（其行为未定义）。
+
+6项Android测试用ImageWriter生成固定RGBA色块，ImageReader取得真实缓冲：1176×2400四段逐字节比较、33像素奇数宽度和实际步长、取消／消费者异常、尺寸／crop不符、YUV拒绝、重复关闭／禁止重读。16帧逐项确认关闭并复用队列槽位。合成时间戳仅核对输入身份，不和主机时钟比较，不算当前屏幕新鲜度。
+
+初始桩6项有5项预期失败；实现后6项通过。最终138 JVM、主／测试包构建、Lint0错误6既有警告通过；专用API37／16KiB模拟器28项全部通过（前两阶段22＋本阶段6，0.779秒），最终构建和已安装包哈希匹配。[证据](evidence/android-image-strips/2026-09-25/summary.json)。
+
+目标华为此阶段待验证，需补齐实验主包和最新测试包；不把模拟器中的华为尺寸输入叫作真机结果。当前尚未将投屏帧、实际OCR或正式镜面接进来，也没有证明任意屏幕的颜色空间、隐私或页面身份。下一门槛是华为同包回环，随后将已验证的实际模型按段顺序复用并处理跨缝文本。
