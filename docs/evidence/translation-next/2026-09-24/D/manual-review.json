@@ -1,0 +1,502 @@
+{
+  "reviewer": "Codex engineering semantic review; not external human or blinded acceptance",
+  "scope": "Round 1 full context; round 2 responses identical per separate audit",
+  "targets": 48,
+  "counts": {
+    "pass": 44,
+    "fail": 2,
+    "needs-review": 2
+  },
+  "verdict": "NOT_ACCEPTED",
+  "rows": [
+    {
+      "page": "p001",
+      "id": "b005",
+      "source": "Book",
+      "translation": "预订",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p002",
+      "id": "b004",
+      "source": "Book",
+      "translation": "书籍",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p003",
+      "id": "b004",
+      "source": "$120.00 per night",
+      "translation": "每晚$120.00",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p003",
+      "id": "b005",
+      "source": "$240.00 for 2 nights",
+      "translation": "两晚$240.00",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [
+        "missing-source-number"
+      ],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p003",
+      "id": "b006",
+      "source": "Taxes included",
+      "translation": "税费已包含",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p003",
+      "id": "b007",
+      "source": "Free cancellation before 18:00 on 10 October 2026.",
+      "translation": "可在2026年10月10日18:00前免费取消。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p003",
+      "id": "b009",
+      "source": "$210.00 for 2 nights",
+      "translation": "两晚$210.00",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [
+        "missing-source-number"
+      ],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p003",
+      "id": "b010",
+      "source": "Taxes not included",
+      "translation": "税费未包含",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p003",
+      "id": "b011",
+      "source": "Non-refundable. Payment required now.",
+      "translation": "不可退款。需立即付款。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p004",
+      "id": "b004",
+      "source": "Vol",
+      "translation": "航班",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p005",
+      "id": "b004",
+      "source": "Vol",
+      "translation": "盗窃",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p006",
+      "id": "b003",
+      "source": "Non échangeable et non remboursable.",
+      "translation": "不可退换。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p006",
+      "id": "b005",
+      "source": "1 bagage, 8 kg maximum.",
+      "translation": "允许携带 1 件行李，最大重量为 8 公斤。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p101",
+      "id": "b003",
+      "source": "Book",
+      "translation": "书籍",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p102",
+      "id": "b004",
+      "source": "Book",
+      "translation": "预订",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p103",
+      "id": "b003",
+      "source": "Vol",
+      "translation": "航班",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p104",
+      "id": "b004",
+      "source": "Vol",
+      "translation": "盗窃",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p105",
+      "id": "b003",
+      "source": "$19.50 per month",
+      "translation": "每月$19.50",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p105",
+      "id": "b004",
+      "source": "Tax not included",
+      "translation": "不含税",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p105",
+      "id": "b005",
+      "source": "Cancel before 09:15 on 6 November 2026. No refund after renewal.",
+      "translation": "2026年11月6日09:15前取消。续订后不予退款。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p105",
+      "id": "b007",
+      "source": "$195.00 per year",
+      "translation": "每年$195.00",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p105",
+      "id": "b008",
+      "source": "Tax included",
+      "translation": "含税",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p106",
+      "id": "b003",
+      "source": "Prix total : 37,80 €",
+      "translation": "总价：37.80 欧元",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [
+        "missing-source-number",
+        "missing-currency-symbol"
+      ],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p106",
+      "id": "b004",
+      "source": "Valable le 5 décembre 2026",
+      "translation": "有效期至 2026 年 12 月 5 日",
+      "judgment": "fail",
+      "note": "某日有效被译为截至该日",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p106",
+      "id": "b005",
+      "source": "Aucun remboursement après le départ.",
+      "translation": "出发后不予退款。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p106",
+      "id": "b006",
+      "source": "2 bagages, 6 kg maximum chacun.",
+      "translation": "2 件行李，每件最多 6 公斤。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p201",
+      "id": "b004",
+      "source": "Return",
+      "translation": "退货",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p202",
+      "id": "b003",
+      "source": "Return",
+      "translation": "返回",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p203",
+      "id": "b003",
+      "source": "Note",
+      "translation": "备注",
+      "judgment": "fail",
+      "note": "餐厅账单误作备注",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p204",
+      "id": "b003",
+      "source": "Note",
+      "translation": "评分",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p205",
+      "id": "b003",
+      "source": "$48.90 total for 2 people",
+      "translation": "2人总价$48.90",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p205",
+      "id": "b004",
+      "source": "Only valid on 21 November 2026.",
+      "translation": "仅限2026年11月21日使用。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p205",
+      "id": "b005",
+      "source": "No changes or refunds after departure.",
+      "translation": "出发后不可更改或退款。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p205",
+      "id": "b007",
+      "source": "$12.45 per child",
+      "translation": "每儿童$12.45",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p205",
+      "id": "b008",
+      "source": "Free cancellation until 07:05 on 20 November 2026.",
+      "translation": "可在2026年11月20日07:05前免费取消。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p206",
+      "id": "b003",
+      "source": "1 bagage, 7 kg au maximum.",
+      "translation": "1 件行李，最多 7 公斤。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p206",
+      "id": "b005",
+      "source": "Poids minimum : 9 kg.",
+      "translation": "最低重量：9 公斤。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p206",
+      "id": "b006",
+      "source": "Heure limite : 06:40",
+      "translation": "截止时间：06:40",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p206",
+      "id": "b007",
+      "source": "Valable jusqu'au 3 janvier 2027 inclus.",
+      "translation": "有效期至 2027 年 1 月 3 日（含）。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p301",
+      "id": "b003",
+      "source": "Standing",
+      "translation": "站票",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p302",
+      "id": "b003",
+      "source": "Location",
+      "translation": "租赁",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p303",
+      "id": "b002",
+      "source": "£18.75 per hour",
+      "translation": "每小时18.75英镑",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [
+        "missing-currency-symbol"
+      ],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p303",
+      "id": "b003",
+      "source": "Minimum age: 18 years",
+      "translation": "最低年龄：18岁",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p303",
+      "id": "b004",
+      "source": "Valid only on 14 February 2027.",
+      "translation": "仅限2027年2月14日有效。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p303",
+      "id": "b005",
+      "source": "No refund if cancelled less than 24 hours before pickup.",
+      "translation": "若提前少于24小时取消，不予退款。",
+      "judgment": "needs-review",
+      "note": "提前少于24小时省略取车基点，需复核",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p304",
+      "id": "b002",
+      "source": "3 bagages, 5 kg maximum chacun.",
+      "translation": "3 件行李，每件最多 5 公斤。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p304",
+      "id": "b003",
+      "source": "Valable jusqu'au 9 mars 2027 inclus.",
+      "translation": "有效期至 2027 年 3 月 9 日（含）。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p304",
+      "id": "b004",
+      "source": "Ni échangeable ni remboursable.",
+      "translation": "不可兑换或退款。",
+      "judgment": "needs-review",
+      "note": "不可兑换或退款的兑换用语需复核",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    }
+  ]
+}

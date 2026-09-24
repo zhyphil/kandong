@@ -1,0 +1,53 @@
+{
+  "policy": "R1-development-replay-after-model-output; no generation or translation edits",
+  "policySha256": "67477c709accfd456c57bc2659f42ab3278e711e5907755af8688bc36bd5a380",
+  "oldFlagged": 6,
+  "newFlagged": 2,
+  "changes": [
+    {
+      "round": 1,
+      "page": "p106",
+      "mode": "full",
+      "id": "b003",
+      "previous": [
+        "missing-source-number",
+        "missing-currency-symbol"
+      ],
+      "revised": []
+    },
+    {
+      "round": 1,
+      "page": "p106",
+      "mode": "target-only",
+      "id": "b003",
+      "previous": [
+        "missing-source-number",
+        "missing-currency-symbol"
+      ],
+      "revised": []
+    },
+    {
+      "round": 2,
+      "page": "p106",
+      "mode": "full",
+      "id": "b003",
+      "previous": [
+        "missing-source-number",
+        "missing-currency-symbol"
+      ],
+      "revised": []
+    },
+    {
+      "round": 2,
+      "page": "p106",
+      "mode": "target-only",
+      "id": "b003",
+      "previous": [
+        "missing-source-number",
+        "missing-currency-symbol"
+      ],
+      "revised": []
+    }
+  ],
+  "warning": "Literal equivalence is not semantic approval; max/min/date-range and extra facts remain outside this checker"
+}

@@ -1,0 +1,173 @@
+{
+  "policy": "R1-development-replay-after-model-output; no generation or translation edits",
+  "policySha256": "67477c709accfd456c57bc2659f42ab3278e711e5907755af8688bc36bd5a380",
+  "oldFlagged": 16,
+  "newFlagged": 0,
+  "changes": [
+    {
+      "round": 1,
+      "page": "p003",
+      "mode": "full",
+      "id": "b005",
+      "previous": [
+        "missing-source-number"
+      ],
+      "revised": []
+    },
+    {
+      "round": 1,
+      "page": "p003",
+      "mode": "full",
+      "id": "b009",
+      "previous": [
+        "missing-source-number"
+      ],
+      "revised": []
+    },
+    {
+      "round": 1,
+      "page": "p003",
+      "mode": "target-only",
+      "id": "b005",
+      "previous": [
+        "missing-source-number"
+      ],
+      "revised": []
+    },
+    {
+      "round": 1,
+      "page": "p003",
+      "mode": "target-only",
+      "id": "b009",
+      "previous": [
+        "missing-source-number"
+      ],
+      "revised": []
+    },
+    {
+      "round": 1,
+      "page": "p106",
+      "mode": "full",
+      "id": "b003",
+      "previous": [
+        "missing-source-number",
+        "missing-currency-symbol"
+      ],
+      "revised": []
+    },
+    {
+      "round": 1,
+      "page": "p106",
+      "mode": "target-only",
+      "id": "b003",
+      "previous": [
+        "missing-source-number",
+        "missing-currency-symbol"
+      ],
+      "revised": []
+    },
+    {
+      "round": 1,
+      "page": "p303",
+      "mode": "full",
+      "id": "b002",
+      "previous": [
+        "missing-currency-symbol"
+      ],
+      "revised": []
+    },
+    {
+      "round": 1,
+      "page": "p303",
+      "mode": "target-only",
+      "id": "b002",
+      "previous": [
+        "missing-currency-symbol"
+      ],
+      "revised": []
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "mode": "full",
+      "id": "b005",
+      "previous": [
+        "missing-source-number"
+      ],
+      "revised": []
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "mode": "full",
+      "id": "b009",
+      "previous": [
+        "missing-source-number"
+      ],
+      "revised": []
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "mode": "target-only",
+      "id": "b005",
+      "previous": [
+        "missing-source-number"
+      ],
+      "revised": []
+    },
+    {
+      "round": 2,
+      "page": "p003",
+      "mode": "target-only",
+      "id": "b009",
+      "previous": [
+        "missing-source-number"
+      ],
+      "revised": []
+    },
+    {
+      "round": 2,
+      "page": "p106",
+      "mode": "full",
+      "id": "b003",
+      "previous": [
+        "missing-source-number",
+        "missing-currency-symbol"
+      ],
+      "revised": []
+    },
+    {
+      "round": 2,
+      "page": "p106",
+      "mode": "target-only",
+      "id": "b003",
+      "previous": [
+        "missing-source-number",
+        "missing-currency-symbol"
+      ],
+      "revised": []
+    },
+    {
+      "round": 2,
+      "page": "p303",
+      "mode": "full",
+      "id": "b002",
+      "previous": [
+        "missing-currency-symbol"
+      ],
+      "revised": []
+    },
+    {
+      "round": 2,
+      "page": "p303",
+      "mode": "target-only",
+      "id": "b002",
+      "previous": [
+        "missing-currency-symbol"
+      ],
+      "revised": []
+    }
+  ],
+  "warning": "Literal equivalence is not semantic approval; max/min/date-range and extra facts remain outside this checker"
+}

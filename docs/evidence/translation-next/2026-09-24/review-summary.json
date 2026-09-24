@@ -1,0 +1,26 @@
+{
+  "A": {
+    "targets": 39,
+    "pass": 12,
+    "fail": 27,
+    "needs-review": 0,
+    "oldFlags": 8,
+    "revisedFlags": 4
+  },
+  "C": {
+    "targets": 48,
+    "pass": 38,
+    "fail": 9,
+    "needs-review": 1,
+    "oldFlags": 6,
+    "revisedFlags": 2
+  },
+  "D": {
+    "targets": 48,
+    "pass": 44,
+    "fail": 2,
+    "needs-review": 2,
+    "oldFlags": 16,
+    "revisedFlags": 0
+  }
+}

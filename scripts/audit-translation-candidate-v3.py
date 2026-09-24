@@ -10,7 +10,13 @@ from pathlib import Path
 from translation_probe import ROOT,preserve_chinese
 from translation_candidate_v3 import MANIFEST,cases,request_body,validate
 
-def audit(folder):
+def audit(folder,protocol="v3"):
+    if protocol=="C":
+        from translation_candidate_c import MANIFEST,cases,request_body,validate
+    elif protocol=="D":
+        from translation_candidate_d import MANIFEST,cases,request_body,validate
+    else:
+        from translation_candidate_v3 import MANIFEST,cases,request_body,validate
     m=json.loads((folder/'metadata.json').read_text());thinking=m['thinking']
     for name,digest in m['sourceHashes'].items():
         assert hashlib.sha256((ROOT/'scripts'/name).read_bytes()).hexdigest()==digest, name
@@ -56,4 +62,4 @@ def audit(folder):
         semanticQuality='Not inferred from structural/number checks; see manual-review.json')
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('folder',type=Path);a=p.parse_args();print(json.dumps(audit(a.folder),indent=2))
+    p=argparse.ArgumentParser();p.add_argument('folder',type=Path);p.add_argument('--protocol',choices=['v3','C','D'],default='v3');a=p.parse_args();print(json.dumps(audit(a.folder,a.protocol),indent=2))

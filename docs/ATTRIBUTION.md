@@ -94,3 +94,7 @@ modelprobe仅androidTest使用Google `com.google.mlkit:language-id:17.0.6`（包
 ## 单语整页真实翻译宿主候选
 
 独立Mac实验调用[Qwen作者GGUF](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/tree/91cad51170dc346986eccefdc2dd33a9da36ead9) Q4_K_M，Apache-2.0、Copyright 2024 Alibaba Cloud。模型卡/许可证/文件SHA归档于[evidence](evidence/translation-model/2026-09-24/)。复用已安装的[Ollama0.33.3](https://github.com/ollama/ollama/tree/v0.33.3)本地API，MIT许可证同时归档；没有分发模型/运行时二进制，未复制上游项目代码。合成页面、请求、回绑、检查与运行器为项目内实现。模型质量未通过，未加入Android依赖；上游许可证不替代训练数据/完整供应链审核。详见[实际结果](TRANSLATION_MODEL_PROBE.md)。
+
+## Qwen3.5本地翻译候选
+
+只在独立Mac实验使用Ollama官方模型库[2B Q4_K_M](https://ollama.com/library/qwen3.5:2b-q4_K_M)与[4B Q4_K_M](https://ollama.com/library/qwen3.5:4b-q4_K_M)，源自[Qwen3.5-2B](https://huggingface.co/Qwen/Qwen3.5-2B)及[Qwen3.5-4B](https://huggingface.co/Qwen/Qwen3.5-4B)。Apache-2.0；实际模型层、许可层、配置、参数、作者版本与模型卡归档[本轮证据](evidence/translation-next/2026-09-24/)。这些是Ollama分发的转换构件，未独立复现作者权重到量化文件的转换链，不冒称作者直接发布的GGUF。运行时沿用Ollama0.33.3/MIT；二进制未入Git或APK。输入、绑定、检查和实验代码由项目内编写，未fork上游。候选均未通过完整质量验收，未加入Android依赖。

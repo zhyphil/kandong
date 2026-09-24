@@ -1,0 +1,406 @@
+{
+  "reviewer": "Codex engineering semantic review; not external human or blinded acceptance",
+  "scope": "Round 1 full context; round 2 responses identical per separate audit",
+  "targets": 39,
+  "counts": {
+    "pass": 12,
+    "fail": 27,
+    "needs-review": 0
+  },
+  "verdict": "NOT_ACCEPTED",
+  "rows": [
+    {
+      "page": "p001",
+      "id": "b005",
+      "source": "Book",
+      "translation": "预订",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p002",
+      "id": "b004",
+      "source": "Book",
+      "translation": "书",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p003",
+      "id": "b004",
+      "source": "$120.00 per night",
+      "translation": "$120.00 per night",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p003",
+      "id": "b005",
+      "source": "$240.00 for 2 nights",
+      "translation": "$240.00 for 2 nights",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p003",
+      "id": "b006",
+      "source": "Taxes included",
+      "translation": "Taxes included",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p003",
+      "id": "b007",
+      "source": "Free cancellation before 18:00 on 10 October 2026.",
+      "translation": "Free cancellation before 18:00 on 10 October 2026.",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p003",
+      "id": "b009",
+      "source": "$210.00 for 2 nights",
+      "translation": "$210.00 for 2 nights",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p003",
+      "id": "b010",
+      "source": "Taxes not included",
+      "translation": "Taxes not included",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p003",
+      "id": "b011",
+      "source": "Non-refundable. Payment required now.",
+      "translation": "Non-refundable. Payment required now.",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p004",
+      "id": "b004",
+      "source": "Vol",
+      "translation": "航班",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p005",
+      "id": "b004",
+      "source": "Vol",
+      "translation": "盗窃",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p006",
+      "id": "b003",
+      "source": "Non échangeable et non remboursable.",
+      "translation": "Non échangeable et non remboursable.",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p006",
+      "id": "b005",
+      "source": "1 bagage, 8 kg maximum.",
+      "translation": "1 bagage, 8 kg maximum.",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p101",
+      "id": "b003",
+      "source": "Book",
+      "translation": "Book",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p102",
+      "id": "b004",
+      "source": "Book",
+      "translation": "预订",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p103",
+      "id": "b003",
+      "source": "Vol",
+      "translation": "Vol",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p104",
+      "id": "b004",
+      "source": "Vol",
+      "translation": "失物招领",
+      "judgment": "fail",
+      "note": "盗窃类别被译为失物招领",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p105",
+      "id": "b003",
+      "source": "$19.50 per month",
+      "translation": "$19.50 per month",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p105",
+      "id": "b004",
+      "source": "Tax not included",
+      "translation": "Tax not included",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p105",
+      "id": "b005",
+      "source": "Cancel before 09:15 on 6 November 2026. No refund after renewal.",
+      "translation": "Cancel before 09:15 on 6 November 2026. No refund after renewal.",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p105",
+      "id": "b007",
+      "source": "$195.00 per year",
+      "translation": "$195.00 per year",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p105",
+      "id": "b008",
+      "source": "Tax included",
+      "translation": "Tax included",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p106",
+      "id": "b003",
+      "source": "Prix total : 37,80 €",
+      "translation": "总价：37.80 欧元",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [
+        "missing-source-number",
+        "missing-currency-symbol"
+      ],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p106",
+      "id": "b004",
+      "source": "Valable le 5 décembre 2026",
+      "translation": "有效期至 2026 年 12 月 5 日",
+      "judgment": "fail",
+      "note": "某日有效被译为截至该日",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p106",
+      "id": "b005",
+      "source": "Aucun remboursement après le départ.",
+      "translation": "出发后不予退款。",
+      "judgment": "fail",
+      "note": "出发被具体化为离境，源文未限定跨国",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p106",
+      "id": "b006",
+      "source": "2 bagages, 6 kg maximum chacun.",
+      "translation": "2 件行李，每件最多 6 公斤。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p201",
+      "id": "b004",
+      "source": "Return",
+      "translation": "退货",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p202",
+      "id": "b003",
+      "source": "Return",
+      "translation": "返回",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p203",
+      "id": "b003",
+      "source": "Note",
+      "translation": "Note",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p204",
+      "id": "b003",
+      "source": "Note",
+      "translation": "Note",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p205",
+      "id": "b003",
+      "source": "$48.90 total for 2 people",
+      "translation": "$48.90 total for 2 people",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p205",
+      "id": "b004",
+      "source": "Only valid on 21 November 2026.",
+      "translation": "仅于 2026 年 11 月 21 日有效。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p205",
+      "id": "b005",
+      "source": "No changes or refunds after departure.",
+      "translation": "出发后无更改或退款。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p205",
+      "id": "b007",
+      "source": "$12.45 per child",
+      "translation": "$12.45 per child",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p205",
+      "id": "b008",
+      "source": "Free cancellation until 07:05 on 20 November 2026.",
+      "translation": "免费取消，直至 2026 年 11 月 20 日 07:05。",
+      "judgment": "pass",
+      "note": "本条含义可接受，不要求唯一措辞",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p206",
+      "id": "b003",
+      "source": "1 bagage, 7 kg au maximum.",
+      "translation": "1 bagage, 7 kg au maximum.",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p206",
+      "id": "b005",
+      "source": "Poids minimum : 9 kg.",
+      "translation": "Poids minimum : 9 kg.",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p206",
+      "id": "b006",
+      "source": "Heure limite : 06:40",
+      "translation": "Heure limite : 06:40",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    },
+    {
+      "page": "p206",
+      "id": "b007",
+      "source": "Valable jusqu'au 3 janvier 2027 inclus.",
+      "translation": "Valable jusqu'au 3 janvier 2027 inclus.",
+      "judgment": "fail",
+      "note": "目标外语原文被直接照抄，没有中文翻译",
+      "originalLiteralFlags": [],
+      "revisedLiteralFlags": []
+    }
+  ]
+}
