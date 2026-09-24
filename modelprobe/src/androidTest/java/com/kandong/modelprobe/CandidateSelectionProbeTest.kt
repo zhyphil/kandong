@@ -69,6 +69,12 @@ internal class CandidateSelectionProbeTest {
                 val actual = SharedCandidates.choose(c.getString("ch"), c.getString("latin")); val expected = c.getJSONObject("expected")
                 check(actual.origin.name == expected.getString("origin") && actual.raw == nullable(expected, "raw"))
             }
+            val conflicts = listOf("。" to "o", "123" to "l23", "" to "A")
+            conflicts.forEach { (ch, latin) ->
+                val actual = SharedCandidates.choose(ch, latin)
+                check(actual.origin == SharedCandidates.Origin.REVIEW && actual.raw == null)
+            }
+            report.put("crossScriptConflictsReviewed", conflicts.size)
             check(blocks == 180 && emptyLatin == 27 && blanks == 4)
             report.put("frozenCases", 98).put("frozenBlocks", blocks).put("emptyLatinCandidatesRetained", emptyLatin)
                 .put("blankCases", blanks).put("controls", controls.size)

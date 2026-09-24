@@ -4,9 +4,8 @@ import subprocess, json, time, argparse
 # Frozen OCR baseline only. Refuse phones and unrelated AVDs before any mutation.
 p=argparse.ArgumentParser(description="Run the frozen OCR baseline on the dedicated KanDong API37 emulator")
 p.add_argument("--output", type=Path, required=True)
-p.add_argument("--targeted", action="store_true", help="Run only E2E and candidate selection, twice")
 a=p.parse_args()
-root=Path(__file__).resolve().parents[1]
+root=Path('/Users/haoyuzuo/Projects/KanDong')
 out=a.output.resolve()
 assert not out.exists(), 'use a fresh output directory; never overwrite evidence'
 assert root not in out.parents, 'reports must first be written outside the checkout'
@@ -19,7 +18,7 @@ def installed_hash(package):
  return run('shell','sha256sum',loc.removeprefix('package:')).stdout.split()[0]
 assert run('emu','avd','name').stdout.splitlines()[0]=='KanDong_OCR_API37_16K'
 assert run('shell','getconf','PAGESIZE').stdout.strip()=='16384'
-identity=json.loads((root/'docs/evidence/candidate-guard-v3/2026-09-24/apk-identity.json').read_bytes())
+identity=json.loads(Path('/private/tmp/kandong-v3-validation-20260924/apk-identity.json').read_bytes())
 assert installed_hash('com.kandong.modelprobe')==identity['mainApkSha256']
 assert installed_hash('com.kandong.modelprobe.test')==identity['testApkSha256']
 assert run('shell','getprop','ro.product.model').stdout.strip()=='sdk_gphone16k_arm64'
@@ -34,9 +33,7 @@ groups=[
  ('recognition','com.kandong.modelprobe.CropRecognitionProbeTest',1,{'recognition':'crop-recognition-probe-report.json'}),
  ('e2e','com.kandong.modelprobe.EndToEndOcrProbeTest',2,{'e2e':'end-to-end-ocr-probe-report.json'})]
 # Run the changed integration first, so a failure does not repeat expensive unchanged regressions.
-groups=[groups[-1],*groups[:-1],('selection','com.kandong.modelprobe.CandidateSelectionProbeTest',1,{'selection':'candidate-selection-probe-report.json'})]
-if a.targeted:
- groups=[g for g in groups if g[0] in ("e2e","selection")]
+groups=[groups[-1],('selection','com.kandong.modelprobe.CandidateSelectionProbeTest',1,{'selection':'candidate-selection-probe-report.json'})]
 seen=set()
 try:
  for n in [1,2]:

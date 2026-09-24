@@ -1,0 +1,92 @@
+{
+  "status": "accepted-conservative-candidate-guard-experiment",
+  "unitTests": 70,
+  "rounds": 2,
+  "targetedJUnitPerRound": 3,
+  "fullFourteenTestSuiteRerun": false,
+  "api": 37,
+  "pageSize": 16384,
+  "frozenPages": 98,
+  "frozenBlocks": 180,
+  "freshPages": 5,
+  "freshBlocks": 9,
+  "conflictControls": 3,
+  "e2eUnchangedFromV2": true,
+  "priorCandidateDecisionsUnchanged": true,
+  "twoReportsRepeat": true,
+  "replayPages": 222,
+  "replayBlocks": 423,
+  "reviewPages": 1,
+  "reviewBlocks": 1,
+  "readyCharacterRegressionsVsCh": 0,
+  "knownCorrectChPagesLost": 0,
+  "readyOutputsUnchanged": true,
+  "runIds": [
+    "a844a0d8-1d82-4f5a-b460-482a7958661a",
+    "faba0042-b006-4718-bca0-42f28995a37b",
+    "41238d49-7558-4e63-a4c5-946d0e0d7d9c",
+    "85e03db1-710a-4c00-b17e-dd9a203b9809"
+  ],
+  "excludedFields": [
+    "elapsedMs",
+    "elapsedNanos",
+    "elapsedNanosObservational",
+    "freshE2eReportSha256",
+    "freshE2eRunId",
+    "resizeNs",
+    "runId"
+  ],
+  "apk": {
+    "mainApkSha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+    "testApkSha256": "b973d033552b37ded63c83135eb2e8d7cb862a5ce8334f810b2095255a141b73",
+    "testApkBytes": 247885111,
+    "assetsAndNativeUnchanged": 292
+  },
+  "sourceSha256": {
+    "scripts/replay-candidate-guard-v3.py": "5f6248b4465d4b6d237f4f22ef23347b910f14a99358df6e9ce8f9dc7131d2ce",
+    "scripts/run-candidate-emulator.py": "485db971be616271f16754bf3ff8a15e9a1676c8e291c6ac4661cb33b25703aa",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/SharedCandidates.kt": "5c3125f92436fc252f9a3aaebff3e322e614a932c2ca98031e66d3c1f3c27579",
+    "modelprobe/src/test/java/com/kandong/modelprobe/SharedCandidatesTest.kt": "480d97e9f05944124ff0ed48ddcc04ab3a5d66a9e132b9344706a4de88ba2b1c",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/CandidateSelectionProbeTest.kt": "893cb0c5de54c7f51dfa9bd38bb28d749acfdbc2814a0ba1413bc4d504cea3b3",
+    "modelprobe/src/androidTest/assets/shared-candidates-v2.json": "1dab0781e9522504c6feab6513d7f9db3d82a313df00d79aa3551fd95983f1d3"
+  },
+  "rawReports": {
+    "e2e-1-report.json": {
+      "file": "e2e-1-report.json.gz",
+      "sha256": "666c2d1d2e2fd7ff36766d656e45f1b580b7031b9ac46008349235dc8f581325"
+    },
+    "e2e-2-report.json": {
+      "file": "e2e-2-report.json.gz",
+      "sha256": "a39de6ed5ad1fa4d8f036fdf30b4315eff5d4d4186481de0890c06f05a359ddb"
+    },
+    "installed.json": {
+      "file": "installed.json.gz",
+      "sha256": "dffe96054499561ad17ff3630ffb0d06c9737c94adb474598ba73cac023d14c7"
+    },
+    "selection-2-report.json": {
+      "file": "selection-2-report.json.gz",
+      "sha256": "b19c604b7ef85794ef7ca4212a91327faeb9b12795524e79486308991c25f9c7"
+    },
+    "selection-1-report.json": {
+      "file": "selection-1-report.json.gz",
+      "sha256": "2957b081cd92716eec494d06cddc56dc00714597eabd8882c0dc09e8969c3567"
+    },
+    "e2e-2-device-raw.json": {
+      "file": "e2e-2-device-raw.json.gz",
+      "sha256": "a79cb503b43d91412b879fbf9b42d3a59e0e8c9f0efa0fb29be262709783aba4"
+    },
+    "guard-replay.json": {
+      "file": "guard-replay.json.gz",
+      "sha256": "f62a6f5ee32182e20057b4b9cddcb8957b5d351e88b00e21c43a3f4c405d001f"
+    }
+  },
+  "qualityAccepted": false,
+  "limits": [
+    "Replay is not new inference or a blind quality test",
+    "REVIEW preserves both candidates; the period is not corrected or accepted",
+    "One review block currently withholds aggregate pageText; block records remain available",
+    "Both E2E input digests checked on device; latest raw digest additionally checked in this audit",
+    "Frozen rows are not 98 new Android inferences; five fresh pages and nine boxes only",
+    "No product, real-screen, translation integration, physical-phone testing or publication"
+  ]
+}

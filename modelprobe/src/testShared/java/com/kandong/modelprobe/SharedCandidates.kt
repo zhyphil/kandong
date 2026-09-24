@@ -2,7 +2,7 @@ package com.kandong.modelprobe
 
 /** Synthetic experiment only. Raw candidates are evidence, never a language or correctness claim. */
 internal object SharedCandidates {
-    const val CONFIG = "shared-box-v2-agreement-before-glyph"
+    const val CONFIG = "shared-box-v3-agreement-guarded-latin"
     data class Point(val x: Double, val y: Double)
     data class Candidate(val pageId: String, val boxId: String, val readingOrder: Int, val quad: List<Point>, val raw: String)
     enum class Origin { AGREED, CH, LATIN, REVIEW }
@@ -17,7 +17,8 @@ internal object SharedCandidates {
             name.startsWith("CJK UNIFIED IDEOGRAPH-") || name.startsWith("CJK COMPATIBILITY IDEOGRAPH-") ||
                 name.startsWith("CJK UNIFIED IDEOGRAPHS ") // JDK algorithmic names use block-name + hex; Android uses Unicode names.
         }) return Decision(Origin.CH, ch)
-        if (latin.codePoints().anyMatch { cp -> Character.isLetter(cp) && Character.getName(cp).orEmpty().contains("LATIN") })
+        fun hasLatin(text: String) = text.codePoints().anyMatch { cp -> Character.isLetter(cp) && Character.getName(cp).orEmpty().contains("LATIN") }
+        if (hasLatin(ch) && hasLatin(latin))
             return Decision(Origin.LATIN, latin)
         return Decision(Origin.REVIEW, null)
     }

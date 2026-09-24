@@ -9,6 +9,14 @@ class SharedCandidatesTest {
         listOf(SharedCandidates.Point(1.0, 1.0), SharedCandidates.Point(20.0, 1.0),
             SharedCandidates.Point(20.0, 12.0), SharedCandidates.Point(1.0, 12.0)), raw)
     private fun rejects(block: () -> Unit) { try { block(); fail("Expected rejection") } catch (_: IllegalArgumentException) {} }
+    @Test fun conflictingPunctuationDigitsAndBlankCannotTurnIntoLetters() {
+        for ((ch, latin) in listOf("。" to "o", "123" to "l23", "" to "A")) {
+            val joined = SharedCandidates.join(page, listOf(row(0, ch)), listOf(row(0, latin)))
+            assertEquals(SharedCandidates.Origin.REVIEW, joined.single().decision.origin)
+            assertNull(joined.single().decision.raw)
+            assertEquals(ch, joined.single().ch); assertEquals(latin, joined.single().latin)
+        }
+    }
     @Test fun agreeingTimesAndCurrencyRemainUsable() {
         for (raw in listOf("18:00.", "€27.40", "é", " ")) {
             assertEquals(SharedCandidates.Decision(SharedCandidates.Origin.AGREED, raw), SharedCandidates.choose(raw, raw))
