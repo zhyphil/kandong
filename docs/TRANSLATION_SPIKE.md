@@ -2,6 +2,18 @@
 
 核对日期：2026-09-24。初始状态：方案与合成验收材料准备。随后已完成独立随包OCR实验，见[OCR实验记录](OCR_LAB.md)；正式放大镜未接OCR/翻译SDK，未读取真实页面，翻译模型仍未接入。目标仍为用户指定的华为LIO-AN00/API31。初始方案研究为NORMAL；后续[合成上下文实验](CONTEXT_LAB.md)已完成独立实现与验证，但不构成模型翻译通过。[华为OCR运行验证](HUAWEI_OCR_VALIDATION.md)已完成，关键单位及单词错误仍待处理。
 
+## 首批语言范围与缺口
+
+用户明确首批文字识别为**英语、法语、中文（EN/FR/ZH）**，包含同屏混排。现有12条源语料为7条英语、5条法语；既有ocrlab只配置Latin识别器。中文译文/界面/人工上下文不是中文OCR输入证据，不能用现有37项结果声称三语通过。
+
+| 范围 | 当前证据 | 下一项验收 |
+| --- | --- | --- |
+| 英语、法语 | 已有合成OCR结果；目标华为仍有关键单位等错误 | 保留原始结果，按语言分类；相同像素对照并验证小字、单位、否定与法语重音 |
+| 中文 | 尚无中文识别器接入或中文源图识别结果 | 独立核查本机中文候选依赖/许可/体积，新增简体、繁体源图并分别验证目标华为 |
+| 三语混排 | 尚未做真实识别或语言归属验证 | 同屏/同块混排、短词、数字与单位、重复元素；保留块ID/位置及不确定性，不强判整页语言 |
+
+新增三语数据集独立版本管理，原12条语料和37项报告保留为历史基线。严格OCR比较与翻译语义判定分开，各语言单独出结果；中文源文字在中文模式保留原文，不做中文到中文改写。本轮范围不增加其他翻译方向。
+
 ## 已核实的候选与待验证点
 
 | 环节/候选 | 官方资料支持的事实 | 对KanDong的判断 |
@@ -9,7 +21,7 @@
 | ML Kit Latin OCR随包版 | Android支持随包模型与Play Services动态模型两条路径；随包依赖为`com.google.mlkit:text-recognition`，模型安装后可直接使用 | 可作为FR/EN合成OCR候选；不要选择依赖Play Services首次取模型的路线来假定华为可用。具体SDK依赖、遥测和机型实测仍需核对 |
 | ML Kit翻译 | 支持英语、法语、中文；翻译模型按需下载，不是官方支持的随APK打包路径 | 有首次准备/失败/删除模型的产品流程；不能称“装好立即全离线”。动态下载与Play Services管理模型不是同一概念，但也不能据此保证这台华为可用 |
 | ML Kit翻译质量 | 本机翻译适合简单内容；非英语语言之间以英语作中间语言 | FR→中文必须单独检查否定、金额、日期和限制条件，不能从EN→中文成绩推断 |
-| Tesseract OCR | 官方提供本机C/C++引擎，仓库代码Apache-2.0，依赖和语言数据需分别核查 | 作为可控制依赖的备选；Android封装、法英模型和小字识别尚未选定或测速 |
+| Tesseract OCR | 官方提供本机C/C++引擎，仓库代码Apache-2.0，依赖和语言数据需分别核查 | 作为可控制依赖的备选；Android封装、英法中文模型和小字识别尚未选定或测速 |
 | 自打包模型+ONNX Runtime Android | 官方支持Android本机推理，模型需适配格式、存储和内存 | 只是运行时路线，尚未选定有合适许可/大小/质量的翻译模型，不能把运行时可用当作翻译能力已实现 |
 
 来源：[ML Kit OCR Android](https://developers.google.com/ml-kit/vision/text-recognition/v2/android)、[模型安装路径](https://developers.google.com/ml-kit/tips/installation-paths)、[支持语言](https://developers.google.com/ml-kit/language/translation/translation-language-support)、[翻译能力与限制](https://developers.google.com/ml-kit/language/translation)、[Tesseract官方仓库](https://github.com/tesseract-ocr/tesseract)、[ONNX Runtime移动端](https://onnxruntime.ai/docs/tutorials/mobile/)。以上是候选排序与推断，不是目标机兼容结论；本轮没有检查目标机GMS安装状态或实际下载连通性。

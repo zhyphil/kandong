@@ -4,6 +4,8 @@
 
 ## 输入与边界
 
+首批产品识别目标现已明确为英语、法语、中文及同屏混排。下列37项历史实验只覆盖英法源文字；中文识别尚待独立实现和验收，预置中文译文不计入识别证据。后续语言覆盖计划见[验证计划](TRANSLATION_SPIKE.md#首批语言范围与缺口)。
+
 新应用“看懂文字实验”，包名com.kandong.ocrlab，仅依赖随包Latin OCR：com.google.mlkit:text-recognition:16.0.1。沿用项目工具链和原生View实验界面，min29、compile/target36。生产app/compat/graphics/qualitylab源码与版本未改。
 
 用户点开始才运行12句项目自写英法原文，每句绘制为16/24/32像素字号，加一张空白负例，共37项。固定640px宽、32px留白、黑字白底、sans-serif普通字形，自动换行，无截断、自动缩字或文字标签。传入Intent文字、URI、ClipData等不被读取；没有屏幕、相机、照片、文件导入或模型下载入口。
