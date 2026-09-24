@@ -1,0 +1,54 @@
+{
+  "sourceBase": "da557ce",
+  "scope": "Synthetic byte-buffer RGBA-to-BGR strip handoff only; no Android Image adapter, capture or OCR",
+  "tdd": {
+    "newTests": 14,
+    "initialFailures": 11,
+    "initialPassingInvalidInputCases": 3,
+    "finalPassed": 14
+  },
+  "jvm": {
+    "tests": 138,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "Error": 0,
+    "Warning": 6
+  },
+  "android": {
+    "avd": "KanDong_OCR_API37_16K",
+    "api": 37,
+    "pageBytes": 16384,
+    "passed": 22,
+    "new": 14,
+    "geometryRegression": 8,
+    "seconds": 0.566
+  },
+  "huawei": "Current phase not run: pre-install package query no longer listed com.kandong.modelprobe; com.kandong.compat and capturelab still listed. No install dispatched. Cause unknown; prior eight geometry tests remain valid historical evidence.",
+  "limits": {
+    "maxPlaneSpanBytes": 33554432,
+    "maxBgrStripBytes": 3145728,
+    "pixelStrideRange": [
+      4,
+      16
+    ],
+    "ttlRangeMillis": [
+      1,
+      60000
+    ]
+  },
+  "limitations": [
+    "Exclusive stable lease is a caller contract",
+    "Acquisition/checkpoint clock does not prove pixel freshness",
+    "No source privacy or consent inference",
+    "Only one non-wiped strip is exposed at a time; this is not a measured heap peak",
+    "Caller must not publish partial results or retain pixels",
+    "No model/capture/product/network changes"
+  ],
+  "sha256": {
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/SingleFrameStripInput.kt": "bc2d802c54bd043e5c6e55e54ee77755cf318ede251679d8db391f1b5b3c36fa",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/SingleFrameStripInputTest.kt": "85b8d77700e5bfddd0ce4a0df4cf3dd46845b9b4e732001310c9635a4bc8dd8d"
+  }
+}

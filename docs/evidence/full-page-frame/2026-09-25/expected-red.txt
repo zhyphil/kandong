@@ -1,0 +1,80 @@
+> Task :modelprobe:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :modelprobe:validateProbeAssets
+> Task :modelprobe:preBuild
+> Task :modelprobe:preDebugBuild
+> Task :modelprobe:checkDebugAarMetadata UP-TO-DATE
+> Task :modelprobe:processDebugNavigationResources UP-TO-DATE
+> Task :modelprobe:compileDebugNavigationResources UP-TO-DATE
+> Task :modelprobe:generateDebugResValues UP-TO-DATE
+> Task :modelprobe:mapDebugSourceSetPaths UP-TO-DATE
+> Task :modelprobe:generateDebugResources UP-TO-DATE
+> Task :modelprobe:mergeDebugResources UP-TO-DATE
+> Task :modelprobe:packageDebugResources UP-TO-DATE
+> Task :modelprobe:parseDebugLocalResources UP-TO-DATE
+> Task :modelprobe:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :modelprobe:extractDeepLinksDebug UP-TO-DATE
+> Task :modelprobe:processDebugMainManifest UP-TO-DATE
+> Task :modelprobe:processDebugManifest UP-TO-DATE
+> Task :modelprobe:processDebugManifestForPackage UP-TO-DATE
+> Task :modelprobe:processDebugResources UP-TO-DATE
+> Task :modelprobe:compileDebugKotlin UP-TO-DATE
+> Task :modelprobe:javaPreCompileDebug UP-TO-DATE
+> Task :modelprobe:compileDebugJavaWithJavac NO-SOURCE
+> Task :modelprobe:bundleDebugClassesToRuntimeJar UP-TO-DATE
+> Task :modelprobe:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :modelprobe:verifyPolygonProbeVendor
+> Task :modelprobe:preDebugUnitTestBuild
+> Task :modelprobe:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :modelprobe:processDebugJavaRes UP-TO-DATE
+> Task :modelprobe:compileDebugUnitTestKotlin
+> Task :modelprobe:compileDebugUnitTestJavaWithJavac UP-TO-DATE
+> Task :modelprobe:processDebugUnitTestJavaRes UP-TO-DATE
+
+> Task :modelprobe:testDebugUnitTest FAILED
+
+SingleFrameStripInputTest > readerOrCheckpointFailureClosesExactlyOnce FAILED
+    java.lang.AssertionError at SingleFrameStripInputTest.kt:40
+
+SingleFrameStripInputTest > cancelDuringPlaneAcquisitionDoesNotCallConsumer FAILED
+    java.lang.AssertionError at SingleFrameStripInputTest.kt:40
+
+SingleFrameStripInputTest > paddedRgbaUsesPositionLimitAndBothStridesWithoutChangingCursors FAILED
+    java.lang.AssertionError at SingleFrameStripInputTest.kt:53
+
+SingleFrameStripInputTest > everyVersionComponentInvalidatesTheWholeFrame FAILED
+    java.lang.AssertionError at SingleFrameStripInputTest.kt:40
+
+SingleFrameStripInputTest > closeFailureOrCloseTimeInvalidationDoesNotPublishSuccess FAILED
+    java.lang.IllegalStateException at SingleFrameStripInputTest.kt:187
+
+SingleFrameStripInputTest > cancellationAfterOneConsumerDropsPartialResultsAndWipesBytes FAILED
+    java.lang.AssertionError at SingleFrameStripInputTest.kt:40
+
+SingleFrameStripInputTest > expiredFutureOrReversedClockRejectsResults FAILED
+    java.lang.AssertionError at SingleFrameStripInputTest.kt:40
+
+SingleFrameStripInputTest > consumerFailureDoesNotExposePartialResultsAndStillWipesAndCloses FAILED
+    java.lang.AssertionError at SingleFrameStripInputTest.kt:40
+
+SingleFrameStripInputTest > checkpointDuringRowsStopsBeforeConsumingIncompleteStrip FAILED
+    java.lang.AssertionError at SingleFrameStripInputTest.kt:40
+
+SingleFrameStripInputTest > phoneFrameUsesOnePlaneAndOneLiveStripWithEveryOriginalPixelAndHalo FAILED
+    java.lang.AssertionError at SingleFrameStripInputTest.kt:72
+
+SingleFrameStripInputTest > inactiveTicketDoesNotReadAnyPixels FAILED
+    java.lang.AssertionError at SingleFrameStripInputTest.kt:40
+
+14 tests completed, 11 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':modelprobe:testDebugUnitTest'.
+> There were failing tests. See the report at: file:///Users/haoyuzuo/Projects/KanDong/modelprobe/build/reports/tests/testDebugUnitTest/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 956ms
+27 actionable tasks: 4 executed, 23 up-to-date
