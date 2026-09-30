@@ -1,0 +1,16 @@
+{
+  "tests": 81,
+  "classes": [
+    "FullPageTranslationOcrTest",
+    "FullPageTranslationProbeTest",
+    "SingleModelContextEvidenceTest",
+    "FullPageTranslationContextTest",
+    "OnDemandTranslationTest",
+    "TranslationRoutingTest",
+    "FullPageOcrAssociationTest",
+    "RegionOcrBridgeTest",
+    "FullPageVisualOcrProbeTest",
+    "RegionVisualOcrUiTest"
+  ],
+  "scope": "fixed page actual OCR to translation binding; no translation quality claim"
+}

@@ -69,3 +69,6 @@ python3 -B scripts/run-ocr-emulator.py --output /private/tmp/kandong-ocr-emulato
 
 
 2026-09-30后续：固定整页实际OCR接入独立可视化实验，最终配套包主214b503f…、测试b6f66c56…，本机236项、模拟器7专项＋79回归两批及独立冷启动四页／旋转再次推理通过。缺包验证后已恢复同SHA；结束停止模拟器。详见[本轮说明](OCR_REGION_REAL_LAB.md)及[证据](evidence/region-real-ocr/2026-09-30/summary.json)。
+
+
+2026-09-30按需翻译契约接线：主实验APK214b503f…不变，最终测试包004d296600b6e53dff91ed32f645be04f1cc5d706392590e13a666bfbcc6b449；安装哈希一致，81项同包通过37.382秒，含四页实际OCR到契约绑定。256＋76 JVM／构建／Lint0错误。没有翻译调用或手机操作，结束已停止专用模拟器；[运行入口与证据](OCR_TRANSLATION_BINDING.md)。

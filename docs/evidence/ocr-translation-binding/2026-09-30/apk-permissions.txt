@@ -1,0 +1,7 @@
+package: com.kandong.modelprobe
+package: com.kandong.modelprobe.test
+permission: com.kandong.modelprobe.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission: name='com.kandong.modelprobe.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
+package: com.kandong.ocrlab
+permission: com.kandong.ocrlab.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission: name='com.kandong.ocrlab.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.FullPageOcrAssociationTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2026-09-30T19:54:42.447Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.012">
+  <properties/>
+  <testcase name="case08_coreCenterDriftAndScoresNeverSelectOrDropCandidates" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.001"/>
+  <testcase name="case02_conflictsRemainExactWithoutNormalizationOrWinner" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.0"/>
+  <testcase name="case19_exactAndExcessBudgetsCountUtf16UnitsIncludingSupplementaryCharacters" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.002"/>
+  <testcase name="case20_permutationAndCallerOrOutputMutationCannotChangePublishedSnapshots" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.002"/>
+  <testcase name="case05_partialAtInternalReadEdgeIsOnlyPossibleClippedEvidence" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.0"/>
+  <testcase name="case11_sameStripStrongOverlapFlagsBothWithoutCreatingAnEdge" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.001"/>
+  <testcase name="case15_thresholdsAreInclusiveWithoutThresholdInflation" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.0"/>
+  <testcase name="case07_touchingOrDisjointBoxesNeverGetEdges" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.0"/>
+  <testcase name="case14_nonAxisAlignedAndUnorderedPositiveSpansAreUncertainButZeroSpansIsolate" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.001"/>
+  <testcase name="case04_repeatedLabelsAtDifferentHeightsOrNonadjacentStripsDoNotLink" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.0"/>
+  <testcase name="case06_lineBeyondHaloCannotProduceAgreedText" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.0"/>
+  <testcase name="case18_malformedGeometryMetadataPlanAndReceiptHistogramRejectWholePage" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.001"/>
+  <testcase name="case01_identicalNonemptyStrongPairHasOnlyExactAgreement" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.0"/>
+  <testcase name="case13_transitiveChainNeverInventsMissingDirectEvidence" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.0"/>
+  <testcase name="case12_multipleMatchesAndRepeatedStripRetainAllEdgesAndMembers" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.0"/>
+  <testcase name="case17_eachIdentityFieldAndPinnedModelTupleIsCheckedForWholePage" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.001"/>
+  <testcase name="case09_emptyAndNonemptyCandidatesArePreservedWithoutAgreement" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.0"/>
+  <testcase name="case16_upstreamReceiptAndLifecycleFailuresPublishNothingEvenWhenBlank" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.001"/>
+  <testcase name="case03_adjacentColumnsAndInsufficientHorizontalOverlapStaySeparate" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.001"/>
+  <testcase name="case10_blankRequiresEverySuccessfulZeroCountReceipt" classname="com.kandong.modelprobe.FullPageOcrAssociationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

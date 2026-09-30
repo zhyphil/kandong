@@ -9,7 +9,7 @@ data class ContextRect(val left: Double, val top: Double, val right: Double, val
     fun valid() = listOf(left, top, right, bottom).all { it.isFinite() && kotlin.math.abs(it) <= 1_000_000 } && width > 0 && height > 0
     fun contains(other: ContextRect) = left <= other.left && top <= other.top && right >= other.right && bottom >= other.bottom
 }
-enum class SourceKind { SYNTHETIC_FIXTURE, PACKAGED_SYNTHETIC_OCR }
+enum class SourceKind { SYNTHETIC_FIXTURE, PACKAGED_SYNTHETIC_OCR, PACKAGED_FULL_PAGE_SINGLE_MODEL_OCR }
 data class ContextPoint(val x: Double, val y: Double)
 data class OcrCandidate(val modelId: String, val raw: String)
 enum class OcrReviewReason { EMPTY_TEXT, CANDIDATE_CONFLICT }
@@ -106,6 +106,25 @@ internal fun ContextBlock.freeze() = copy(contextIds = frozen(contextIds), ocr =
 
 /** Structural provenance validation; selecting a model is not proof of OCR correctness. */
 internal fun ContextBlock.validOcr(snapshotId: String): Boolean {
+    if (source == SourceKind.PACKAGED_FULL_PAGE_SINGLE_MODEL_OCR) {
+        val e = ocr ?: return false
+        if (e.pageId != snapshotId || !e.pageId.matches(Regex("[0-9a-f]{64}")) ||
+            e.reviewReason != null || e.quad.size != 4 ||
+            e.quad.any { !it.x.isFinite() || !it.y.isFinite() }) return false
+        val bounds = ContextRect(e.quad.minOf { it.x }, e.quad.minOf { it.y },
+            e.quad.maxOf { it.x }, e.quad.maxOf { it.y })
+        if (bounds != original || !bounds.valid() || e.candidates.size != 1) return false
+        val turns = e.quad.indices.map { i ->
+            val a = e.quad[i]; val b = e.quad[(i + 1) % 4]; val c = e.quad[(i + 2) % 4]
+            (b.x - a.x) * (c.y - b.y) - (b.y - a.y) * (c.x - b.x)
+        }
+        if (!turns.all { it > 0 } && !turns.all { it < 0 }) return false
+        val candidate = e.candidates.single()
+        if (candidate.modelId !in setOf("ch", "latin") || candidate.raw != text || text.length > 2000) return false
+        return if (state == BlockState.KNOWN) text.isNotBlank() && e.selectedModelIds == listOf(candidate.modelId)
+        else state in setOf(BlockState.UNKNOWN, BlockState.AMBIGUOUS, BlockState.CONFLICT, BlockState.TRUNCATED) &&
+            e.selectedModelIds.isEmpty()
+    }
     if (source != SourceKind.PACKAGED_SYNTHETIC_OCR) return ocr == null
     val e = ocr ?: return false
     if (e.pageId != snapshotId || !e.pageId.matches(Regex("[0-9a-f]{64}"))) return false

@@ -1,0 +1,38 @@
+{
+  "ocrlabJvm": {
+    "tests": 76,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "ocrlabLint": {
+    "Error": 0,
+    "Warning": 30,
+    "Fatal": 0
+  },
+  "jvm": {
+    "tests": 254,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "Error": 0,
+    "Warning": 4,
+    "Fatal": 0
+  },
+  "apks": {
+    "com.kandong.modelprobe": "214b503f34ef14aa020773bd5ead66e4e51e7909c1a5dea34003f8ef1b2b3ed4",
+    "com.kandong.modelprobe.test": "e1dafe76b53347ca93ca5f2d7e9146944b3a696432edb6d00271b4c859b89347"
+  },
+  "sourceSha256": {
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageTranslationOcrTest.kt": "65bcdfa1015887f218f89e7d5bbc413ef51b929c71fbaf8f3f726823e0f9d0a9",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/FullPageTranslationProbeTest.kt": "5ee7964e8478ce22957cfec07832daf1ef1538a873a0dfe1f1a2149adabe4838",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/SingleModelContextEvidenceTest.kt": "ecabbd3bdae241d0045b4ba4247977850b645e10c11482a9cd819ee9d0367dc8",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageTranslationAdapter.kt": "46f67301d49fbd17bd8bc940aed37f010ee9a38d7a67e43bc785b6de8dd556de",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageTranslationProbe.kt": "d473258df936575484d3d71132e9b541fea88c20096c49c35ba06d39e8a7aa4f",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageVisualOcrRunner.kt": "08ce20831c68048bdf947a6946f89fbc2710e5261db85f2f39ee9cd2f1214281",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageOcrAssociation.kt": "ee0597ab3a44adea5d015f58e135bf6fbee86240be4fb7d6aa0f93be5cefc192",
+    "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt": "ea45d26b364bde9cad7fe6b0684d13402fd98921c8bfa2d17f1d76b94da948e2"
+  }
+}

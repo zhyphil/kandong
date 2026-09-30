@@ -18,6 +18,7 @@ import org.opencv.core.Core
 import java.io.File
 import java.util.Collections
 import java.util.concurrent.atomic.AtomicLong
+import java.util.concurrent.atomic.AtomicBoolean
 
 /** Fixed, authenticated fixture inference. No instrumentation, Activity, answers, or live capture.
  * Every original controller/permit/native object is worker-confined and released before delivery. */
@@ -43,15 +44,34 @@ internal class FullPageVisualOcrRunner(application: Context, private val fixture
         val display = RegionVisualSession.Evidence(metadata, page)
     }
 
-    fun run(spec: Spec, cancellation: RegionOcrBridge.Ticket): RegionOcrBridge.Evidence<Result> {
+    class PreparedCapture internal constructor(internal val owner: Any, val spec: Spec,
+        val request: Long, val version: CaptureVersion) {
+        internal val consumed = AtomicBoolean(false)
+    }
+    private val preparationOwner = Any()
+    /** Metadata only: reserves the original identity before click, decoding or native work. */
+    fun prepare(spec: Spec): PreparedCapture {
+        require(spec in PAGES)
+        val request = requests.incrementAndGet()
+        check(request > 0) { "REQUEST_OVERFLOW" }
+        return PreparedCapture(preparationOwner,spec,request,
+            CaptureVersion(Process.myPid().toLong(),request,PAGES.indexOf(spec).toLong(),request,0,0))
+    }
+    fun run(spec: Spec, cancellation: RegionOcrBridge.Ticket): RegionOcrBridge.Evidence<Result> =
+        run(prepare(spec),cancellation)
+
+    fun run(prepared: PreparedCapture, cancellation: RegionOcrBridge.Ticket): RegionOcrBridge.Evidence<Result> {
+        require(prepared.owner === preparationOwner) { "FOREIGN_PREPARATION" }
+        check(prepared.consumed.compareAndSet(false,true)) { "PREPARATION_CONSUMED" }
+        val spec = prepared.spec
+        val request = prepared.request
+        val version = prepared.version
         check(Looper.myLooper() !== Looper.getMainLooper()) { "NATIVE_ON_MAIN" }
         require(spec in PAGES)
         cancellation.checkpoint()
         val geometry = GeometryCleanup()
         val ort = Cleanup()
         var fixture: FullPageOcrFixtures? = null
-        val request = requests.incrementAndGet()
-        val version = CaptureVersion(Process.myPid().toLong(), request, PAGES.indexOf(spec).toLong(), request, 0, 0)
         var lastWorkerTime = 0L
         val controller = FullPageRegionController {
             cancellation.checkpoint()

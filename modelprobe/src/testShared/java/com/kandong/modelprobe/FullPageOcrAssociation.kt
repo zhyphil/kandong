@@ -114,6 +114,29 @@ internal object FullPageOcrAssociation {
         }
     }
 
+    /** Revalidate/copy an already published structural value. No acquisition receipts, current
+     * callback or publication capability is created here; the delivery owner must remain live.
+     * Reuses the original spatial rules so downstream adapters cannot silently diverge. */
+    fun validatedCopy(input: Result, width: Int, height: Int): Result? {
+        val identity = input.identity ?: return null
+        if (!input.published || input.rejection != null || identity.sourceBatch.isEmpty() ||
+            identity.sourceBatch.length > 160 || !pagePattern.matches(identity.pageFixtureId) ||
+            identity.model !in FullPageOcrContract.models || identity.detectorSha != DETECTOR_SHA ||
+            dictionaryShas[identity.model.id] != identity.dictionarySha) return null
+        val plan = try { FullPageStripPlanner.plan(width, height) } catch (_: IllegalArgumentException) { return null }
+        val candidates = input.rawCandidates
+        if (candidates.size > FullPageOcrContract.MAX_BOXES_PER_PAGE ||
+            candidates.sumOf { it.rawText.length.toLong() } > FullPageOcrContract.MAX_RAW_CHARS ||
+            candidates.groupingBy { it.provenance.stripIndex }.eachCount().values.any { it > FullPageOcrContract.MAX_BOXES_PER_STRIP } ||
+            candidates.map { it.provenance.id }.distinct().size != candidates.size ||
+            candidates.any { it.modelId != identity.model.id || it.provenance.version != identity.version ||
+                it.provenance.pageFixtureId != identity.pageFixtureId || !validMetadata(it, plan) || !validGeometry(it) }) return null
+        val raw = frozen(candidates.map(::snapshot).sortedBy { it.provenance.id })
+        val copy = associateSnapshots(identity.copy(version = identity.version.copy(), model = identity.model.copy()),
+            plan, raw) { /* Pure structural calculation, never a live-page authority. */ }
+        return copy.takeIf { it.edges == input.edges && it.groups == input.groups }
+    }
+
     private fun validMetadata(c: FullPageOcrContract.Candidate, plan: FullPageStripPlanner.Plan): Boolean {
         val p = c.provenance
         val strip = plan.strips.getOrNull(p.stripIndex) ?: return false

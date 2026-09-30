@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.ocrlab.multilingual.SmoothPixelsTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-30T19:50:47.610Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.001">
+  <properties/>
+  <testcase name="invalidOrOversizedInputIsRejected" classname="com.kandong.ocrlab.multilingual.SmoothPixelsTest" time="0.0"/>
+  <testcase name="threeTimesUsesExactThirdsAndPreservesEdges" classname="com.kandong.ocrlab.multilingual.SmoothPixelsTest" time="0.001"/>
+  <testcase name="channelsAreInterpolatedIndependentlyAndInputIsUnchanged" classname="com.kandong.ocrlab.multilingual.SmoothPixelsTest" time="0.0"/>
+  <testcase name="verticalInterpolationAndSinglePixelStayOpaque" classname="com.kandong.ocrlab.multilingual.SmoothPixelsTest" time="0.0"/>
+  <testcase name="twoTimesInterpolatesCentersWithClampedEdges" classname="com.kandong.ocrlab.multilingual.SmoothPixelsTest" time="0.0"/>
+  <testcase name="twoDimensionalWeightsRoundOnlyAfterBothAxes" classname="com.kandong.ocrlab.multilingual.SmoothPixelsTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

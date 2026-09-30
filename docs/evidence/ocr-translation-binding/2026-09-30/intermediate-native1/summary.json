@@ -1,0 +1,7 @@
+{
+  "tests": 2,
+  "classes": [
+    "FullPageTranslationOcrTest"
+  ],
+  "scope": "fixed page actual OCR to translation binding; no translation quality claim"
+}

@@ -1,0 +1,158 @@
+{
+  "schema": 1,
+  "date": "2026-09-30",
+  "baseCommit": "559dad4333a13db6228892afd1de2baa1f73e1ca",
+  "scope": "Fixed packaged single-language actual OCR -> provider-independent translation contract -> ROI projection",
+  "jvm": {
+    "modelprobe": 256,
+    "ocrlab": 76,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "emulator": {
+    "avd": "KanDong_OCR_API37_16K",
+    "api": 37,
+    "abi": "arm64-v8a",
+    "pageSize": 16384,
+    "tests": 81,
+    "failures": 0,
+    "seconds": 37.382,
+    "actualOcrPages": [
+      "en-normal",
+      "fr-seam",
+      "hans-normal",
+      "hant-seam"
+    ]
+  },
+  "lint": {
+    "modelprobe": {
+      "Error": 0,
+      "Warning": 4,
+      "Fatal": 0
+    },
+    "ocrlab": {
+      "Error": 0,
+      "Warning": 30,
+      "Fatal": 0
+    }
+  },
+  "apks": {
+    "com.kandong.modelprobe": "214b503f34ef14aa020773bd5ead66e4e51e7909c1a5dea34003f8ef1b2b3ed4",
+    "com.kandong.modelprobe.test": "004d296600b6e53dff91ed32f645be04f1cc5d706392590e13a666bfbcc6b449"
+  },
+  "sourceSha256": {
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageTranslationOcrTest.kt": "65bcdfa1015887f218f89e7d5bbc413ef51b929c71fbaf8f3f726823e0f9d0a9",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/FullPageTranslationProbeTest.kt": "b19b7a9217f1612228643b9b42afe5e6b20aaf51b4d2213448b4cbe21484c1c7",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/SingleModelContextEvidenceTest.kt": "ecabbd3bdae241d0045b4ba4247977850b645e10c11482a9cd819ee9d0367dc8",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageTranslationAdapter.kt": "97977568bf4a220bb74281bc0136fea3b573a6a05ed792ef33fc567fb9dda841",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageTranslationProbe.kt": "470896635af7fa98f50e88483c7214c55004c9587a05175ac23075d3be33f05d",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageVisualOcrRunner.kt": "08ce20831c68048bdf947a6946f89fbc2710e5261db85f2f39ee9cd2f1214281",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageOcrAssociation.kt": "ee0597ab3a44adea5d015f58e135bf6fbee86240be4fb7d6aa0f93be5cefc192",
+    "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt": "ea45d26b364bde9cad7fe6b0684d13402fd98921c8bfa2d17f1d76b94da948e2"
+  },
+  "review": {
+    "blockingP1": 0,
+    "p2Found": 1,
+    "p2Resolved": "Expired page first click is now accepted; reproduced one failing test then verified JVM and emulator regression",
+    "readonlyFingerprintsUnchanged": true,
+    "originalReportSha256": "7c078b5713634d58ff5e862f0bd87d1480db372a84ec67b2fac122f3864bfbc9",
+    "reportFormatting": "Trailing Markdown whitespace normalized; findings unchanged."
+  },
+  "redEvidence": {
+    "singleModel": {
+      "tests": 4,
+      "failures": 3
+    },
+    "expiryClick": {
+      "tests": 1,
+      "failures": 1
+    }
+  },
+  "formalMagnifierUnchanged": true,
+  "phoneOperatedOrUpdated": false,
+  "translationNetworkCalls": 0,
+  "credentialsRead": false,
+  "translationQualityAccepted": false,
+  "limits": [
+    "Fixed fixture language declaration, not automatic language identification",
+    "No live screen capture or privacy acceptance",
+    "Spatial association is not semantic grouping",
+    "EN/FR responses are explicit binding-test markers, not translations",
+    "Unchanged binding with semantically wrong text cannot be detected structurally",
+    "No new translation button or production integration"
+  ],
+  "next": "Connect explicit translation entry, pending/error/original states and source-linked cards in the independent fixed-page visual lab; verify provider interface and real translation quality separately.",
+  "evidenceSha256": {
+    "apk-permissions.txt": "908feacc6afb464e1503116e984355885e0a61983613ea882383ea5ec9adf321",
+    "audit-readonly.json": "885758c54985f6408472006de9dd25fac0cee35f6fd58850e444e1fbb464f00c",
+    "audit.md": "6f41be3842fcdb90fde524368356ee4c6eac7e93191928990f421a9d285d0e18",
+    "cleanup.json": "419fc940a27a4939713975b15354dcf1615ab8c6573e9fd5a87ce8ae9051413a",
+    "emulator/environment.json": "f1af5d5ae49e59ae46141305e7d90c08f42df04d0fbe23481731aa21bdf823dd",
+    "emulator/instrumentation.txt": "2b07cd37c481a72166c6211dab1de9fe6d813f18204ece12aadffd6ae75b35d2",
+    "emulator/summary.json": "ee924846c327d131fc9292073c01e86cb28fafd9f7ee1a5a1eff9f865d42b95f",
+    "expiry-red.txt": "53f9179ffbf81cdb1814ffe752c089feb0b4ac0152b51b6d8c60e31e8d229ad7",
+    "expiry-red.xml": "8a9d0324607846932f064528756129c3e3e18cae91bc3621227bb25c07fb9bdc",
+    "host-checks/gradle.txt": "453c60e79819d48d480083860b9694eca307152f5920106f13cffed521b6667f",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.BoxPipelineGuardTest.xml": "bd7155447a76b4e8ec6fac0fed9eb42948a5f7edc5b513b99fc7dd9acad805b7",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.CandidateContextTest.xml": "2c720cc184f78b075d23fe550606e1fbb639335aa894f44689105244d72b128b",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.ContextLanguageRouteTest.xml": "ecd62d16c1829ddd3831bc260d877f82c2c05435bbaa57fba323b8c84974ca57",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.CropRecognitionContractTest.xml": "be86252e2e8d830ebf84b902dceab7a65ab87e139c923fdd91bf5743f60f331a",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.CtcDecoderTest.xml": "773a5158adffb5ee12fc072eac00f34a25327fb4c9b5b15ceb7595c1b16067e6",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.DetectorPackingTest.xml": "64e13aa4a95cb31f984c4f8809de0673552b7fcbfae1db58c087ab4875c029be",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.EndToEndScoreBudgetTest.xml": "ca1544227f5090a8cce60af93b55e376acd6a148783d22331f440a1169892242",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.FullPageCandidateEvidenceTest.xml": "049f58078b0240c2d751abe9cbf5645ede2a881c6aae45ed8ecd9817e1ccccb1",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.FullPageOcrAssociationReplayTest.xml": "6544df1732aba5df548fa832e00aa20b86a5405cc101018b902d974b5e978c3f",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.FullPageOcrAssociationTest.xml": "4e67db77165abb468c2ba981ba1e06e7c76b421dac3af3a7494c9b4f8a26beae",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.FullPageOcrContractTest.xml": "93a74ef9ffc34fd02e020a6a322e228eb0abfaa83fb8c27f8550118cba1d62cb",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.FullPageOcrPublicationTest.xml": "90bd7bf6e487700135e1f72e291fda4d7f84ec928189bf12aecd6b4c48909d7a",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.FullPageRegionControllerTest.xml": "474f43f785552300f6ca4bcb7d3ca0f8db7c90fccdcb92373e77cbd59dcbb889",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.FullPageStripPlannerTest.xml": "4a7b108af8817f91fa47fbd499f207dd4921d47d747d073cc06ac03cd22f9f74",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.FullPageTranslationContextTest.xml": "de4a50a4794bcb15d167abd6b704e63ff1d196eadce37d1845a22b609e5c7358",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.FullPageTranslationProbeTest.xml": "79abb7c3b9e5a935e6f32288334eb62258fb7e8c8915db278c2a3cd8e86a9894",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.GeometryProbeGuardTest.xml": "fe8068616d28841712974c64723785102fc855f32d9031900eaafd541746486d",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.LanguageRouteTest.xml": "e749a0a12e530a9268a6b2eb4e9bd92232928b8949cc10fa6532e71f18ea84c8",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.OnDemandTranslationTest.xml": "8d1fe416e48d818eaccf2430879623dadd58b4397a695215e645f5af2bc033d5",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.PolygonOffsetGuardTest.xml": "5adb9fd7a53eb27768cebf1db3ba915e8bcb9db4884b9bc9cb4dc04657a460dd",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.ProbeGateTest.xml": "e958daeb0baab8d94051fae6247e45f61c4bf4446bab77391210c24ded80b65d",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.ProbeInputsTest.xml": "41d81dc037794cc6b9f345b5ee229dfe39f94679fa36a88dc532e5419d5b5be1",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.ProtectedDisplayTest.xml": "a7da9169b3bb869e9d852403810ac3241220b01968fac383ca379844bcdfecaf",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.RecognitionPackingTest.xml": "6a51083d5125c39a4e76ba20a79c8dab870812c4443bca1a1daf529e077ec654",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.RegionOcrBridgeTest.xml": "45ed3d9bc0b1094da5981a6f8e9f5c006089faeac3a3934db6df04c648757baa",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.RegionVisualSessionTest.xml": "d6d470c398a8455a47298ed1fdf22e3d6d8809846898869451a6ab9af926c5aa",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.SharedCandidatesTest.xml": "0d9385be1fa1756ceffb29bdaf281a7d126575fd76f4178a4a5f0b0349d842d3",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.SingleFrameStripInputTest.xml": "3b052e3ee9df12af6b375eca01f4823e68797553d6f796827a408b50a2a6419b",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.SingleModelContextEvidenceTest.xml": "918456e16b3c8ac21c65b28043159621fca12e1760c2b5052a8dd0b9d091b41c",
+    "host-checks/jvm/TEST-com.kandong.modelprobe.TranslationRoutingTest.xml": "409fa6b983c5df85675fb72f2c2082e2629c8cd79fc3b689f5c8cc1f1c33c42c",
+    "host-checks/lint-results-debug.xml": "e170672d7f41d6909aaee42dcc27a0aee5785a4cef0718c1fe9b644fb4f57863",
+    "host-checks/ocrlab-jvm/TEST-com.kandong.ocrlab.OcrComparisonTest.xml": "07d2d86a56e4b1b5e51394f3d986fa30b2270ca0f70f75e2c6fa4ea3ce28ed8a",
+    "host-checks/ocrlab-jvm/TEST-com.kandong.ocrlab.RunGateTest.xml": "3d749ca294155d48b0cc5b733dec6f96fedf0a238f42b4cb06e6594a32a834e6",
+    "host-checks/ocrlab-jvm/TEST-com.kandong.ocrlab.context.ContextEngineTest.xml": "28df32f6a040bfb2810b6904a8307b5b9bcc894614a2fcd56399654bd40551c3",
+    "host-checks/ocrlab-jvm/TEST-com.kandong.ocrlab.context.ContextGeometryTest.xml": "8db809a2b5b306b34b17df50939d1e9495b71aec96caa33a501127518b6350d6",
+    "host-checks/ocrlab-jvm/TEST-com.kandong.ocrlab.context.ContextOwnershipTest.xml": "604078824855f8ef33eedd847d65a13f83ad9764a63cbb553f6e0655d3403b9f",
+    "host-checks/ocrlab-jvm/TEST-com.kandong.ocrlab.context.OcrContextEvidenceTest.xml": "761ef56a46394401a78d45c5674b8e1eec50e9ace64a78af61a85313424c39f1",
+    "host-checks/ocrlab-jvm/TEST-com.kandong.ocrlab.context.capture.CaptureOriginTest.xml": "8fd90ce3748f7bd48071f4197a15b398e61ed3b484ac43adee6a1e0d79432321",
+    "host-checks/ocrlab-jvm/TEST-com.kandong.ocrlab.context.capture.LocalCapturePrivacyTest.xml": "c50a2098f743525d42617c7fb465fd4f48a884d10201d96ac2274ddb40ed6b5c",
+    "host-checks/ocrlab-jvm/TEST-com.kandong.ocrlab.multilingual.ComparisonPlanTest.xml": "c1853eadde8ea2dc52f21427612d95c231d54d21fe5afd138ce13636fd73ab26",
+    "host-checks/ocrlab-jvm/TEST-com.kandong.ocrlab.multilingual.SmoothPixelsTest.xml": "6b29a116743773900a0b89af160c07b0d04d3b87e06ca8daee0391537035c548",
+    "host-checks/ocrlab-lint.xml": "50edfca158ced9a96bea4e5960ca61730c52131336fb97810d153f791eedaedc",
+    "host-checks/summary.json": "b9001b53b8aba0708885403cbc751447731e840f7a78b0ad3618789e3fca3b04",
+    "implementation.md": "892b0cc482000b7ad5defb99bf15d7b41d1947d9dc03e72bbebcc54f7ab07730",
+    "install/environment.json": "f1af5d5ae49e59ae46141305e7d90c08f42df04d0fbe23481731aa21bdf823dd",
+    "intermediate-build1/gradle.txt": "835d0edf4a811a7c04449e58f6b4374c0e21c747f5d3bcfb8fedbc86ecd48038",
+    "intermediate-build1/summary.json": "9be6b4afd659d352eed005c01827eb9f4e0c4cefb76013042949056135269f4a",
+    "intermediate-build2/gradle.txt": "453c60e79819d48d480083860b9694eca307152f5920106f13cffed521b6667f",
+    "intermediate-build2/summary.json": "cef5bfae1633eb09f312ae72d2c5bb9c4b8ab3d9845f93bb935e341dfa98d670",
+    "intermediate-native1/environment.json": "03ae387585aa3a12742b21b61162422ca45abb90a3870e08207395dba34c4b85",
+    "intermediate-native1/instrumentation.txt": "f2fab17f53638f78b9b218658a4784ba4013e9a141eaaf768c159d0dccb63302",
+    "intermediate-native1/summary.json": "b641194bee7cae9b2eefdbfd5f9bf5feccda3f7a2baaf066769b1cee099d26dc",
+    "intermediate-native80/environment.json": "455e8631677800d35a9069617073cd85ac10860f7ce92db8756686af197d2604",
+    "intermediate-native80/instrumentation.txt": "556eb77e9ee41d9599a111d44de3257ddb7a2832a1b4e16a139cd9a1a73624ba",
+    "intermediate-native80/summary.json": "e406903474c92801bb3a9b8bb3afc7519516bfbb5c532d8647061f20235b3ebb",
+    "red.txt": "e7edec1245eb1b502e84b9764d296dccda2dd3ea6d2d81f982679948d994e6b1",
+    "red.xml": "635d8099669059ce44a179b31d065a98a3d47c45b34170444920764e11e9cc8e",
+    "review-readonly.json": "885758c54985f6408472006de9dd25fac0cee35f6fd58850e444e1fbb464f00c",
+    "review.md": "9e5fba2e901c1bb8e319985c500c844db8793862f1387dd59ee4c7efeb3aae72",
+    "run-checks.py": "48544a2ffa7e607c28d6f17580ec1b451394e2fd54af879fba91570e3991ff4b"
+  }
+}
