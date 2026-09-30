@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application android:label="看懂开发版" tools:replace="android:label"
+        android:networkSecurityConfig="@xml/development_network_security">
+        <activity android:name=".TranslationDemoActivity" android:exported="false" />
+    </application>
+</manifest>

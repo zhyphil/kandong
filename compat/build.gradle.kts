@@ -34,6 +34,10 @@ android {
         }
     }
     buildTypes {
+        getByName("debug") {
+            applicationIdSuffix = ".dev"
+            versionNameSuffix = "-live-translation"
+        }
         getByName("release") {
             isDebuggable = false
             if (releaseCredentialsFile.isFile) signingConfig = signingConfigs.getByName("release")
@@ -46,4 +50,8 @@ android {
     kotlinOptions { jvmTarget = "17" }
 }
 
-dependencies { implementation(project(":graphics")); testImplementation("junit:junit:4.13.2") }
+dependencies {
+    implementation(project(":graphics"))
+    debugImplementation(project(":liveocr"))
+    testImplementation("junit:junit:4.13.2")
+}

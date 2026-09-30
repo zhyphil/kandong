@@ -73,6 +73,49 @@ class ProjectionMagnifierService : Service() {
     private var panLastX = 0f
     private var panLastY = 0f
     private var panel: LinearLayout? = null
+    private var captureWitness: View? = null
+    private var controlsHidden = false
+    private val translation: TranslationFeature by lazy { TranslationFeature(object : TranslationHost {
+        override val context get() = this@ProjectionMagnifierService
+        override val active get() = !closing && running && uiState.capturing && surfaceAttached
+        override val screenWidth get() = this@ProjectionMagnifierService.screenWidth
+        override val screenHeight get() = this@ProjectionMagnifierService.screenHeight
+        override val safeBounds get() = Rect(safeArea.left,safeArea.top,safeArea.right,safeArea.bottom)
+        override fun hideControls(hidden: Boolean) {
+            controlsHidden = hidden
+            if(hidden) {
+                cancelGestures(keepScaleDetector = true)
+                listOf(panel,outline,resizeHandle).forEach(::remove)
+            } else if(active) {
+                listOf(panel to panelParams, outline to outlineParams, resizeHandle to resizeParams).forEach { (v,p) ->
+                    if(v != null && p != null && !v.isAttachedToWindow) wm.addView(v,p)
+                }
+                renderGeometry()
+            }
+        }
+        override fun witness(view: View?, x: Int, y: Int, size: Int) {
+            remove(captureWitness); captureWitness=null
+            if(view != null && active) {
+                captureWitness=view
+                wm.addView(view,params(size,size,false).apply { this.x=x; this.y=y; title="看懂采集标记" })
+            }
+        }
+        override fun obscuredRects(): List<Rect> {
+            val opaque = listOf(panel to panelParams,resizeHandle to resizeParams).mapNotNull { (v,p) ->
+                if(v?.isAttachedToWindow == true && v.visibility == View.VISIBLE && p != null)
+                    Rect(p.x-4,p.y-4,p.x+p.width+4,p.y+p.height+4) else null
+            }
+            // The red frame's interior is transparent: keep monitoring its pixels.
+            val p=outlineParams
+            if(outline?.isAttachedToWindow != true || p == null) return opaque
+            val border=dp(6)
+            return opaque + listOf(Rect(p.x-border,p.y-border,p.x+p.width+border,p.y+border),
+                Rect(p.x-border,p.y+p.height-border,p.x+p.width+border,p.y+p.height+border),
+                Rect(p.x-border,p.y-border,p.x+border,p.y+p.height+border),
+                Rect(p.x+p.width-border,p.y-border,p.x+p.width+border,p.y+p.height+border))
+        }
+        override fun refreshTranslation() { updateStatus(); translation.render(crop,viewport) }
+    }) }
     private var resizeHandle: IconView? = null
     private var outline: View? = null
     private var panelParams: WindowManager.LayoutParams? = null
@@ -247,8 +290,9 @@ class ProjectionMagnifierService : Service() {
         }
         if(view?.isAttachedToWindow == true) wm.removeViewImmediate(view)
     }
-    private fun cancelGestures() {
-        gesture?.cancel(); gesture = null; streamCancelled = false; panPointer = -1; imageStreamValid = false; scaleDetector = null
+    private fun cancelGestures(keepScaleDetector: Boolean = false) {
+        gesture?.cancel(); gesture = null; streamCancelled = false; panPointer = -1; imageStreamValid = false
+        if(!keepScaleDetector) scaleDetector = null
         longPressTask?.let(main::removeCallbacks); longPressTask = null; bubbleGesture?.cancel()
     }
     private fun removeExpanded() {
@@ -259,6 +303,7 @@ class ProjectionMagnifierService : Service() {
     private fun pauseSurfaces() {
         // The state gate is already closed before any window or surface is changed.
         generation++; cancelGestures()
+        translation.invalidate(); controlsHidden=false
         display?.surface = null; surfaceAttached = false
         clearFrame(); drain(); removeExpanded(); remove(bubble); bubble=null; remove(menu); menu=null
     }
@@ -390,6 +435,7 @@ class ProjectionMagnifierService : Service() {
             header.addView(button,LinearLayout.LayoutParams(dp(MagnifierLayout.CONTROL_DP),-1))
         }
         tool(LineIcon.MENU,"打开菜单") { transition { uiState.menu() } }
+        if(translation.enabled) tool(LineIcon.TRANSLATE,"翻译当前页","翻译") { translation.tap() }
         message=TextView(this).apply { textSize=14f; setTextColor(Color.WHITE); gravity=Gravity.CENTER; maxLines=2 }
             .also { header.addView(it,LinearLayout.LayoutParams(0,-1,1f)) }
         tool(LineIcon.COLLAPSE,"收起放大镜","收起") { transition { uiState.collapse() } }
@@ -404,14 +450,19 @@ class ProjectionMagnifierService : Service() {
                 return true
             }
         }).apply { isQuickScaleEnabled = false; isStylusScaleEnabled = false }
+        val mirror = FrameLayout(this)
+        root.addView(mirror,LinearLayout.LayoutParams(geometry.imageWidth, geometry.imageHeight))
         imageView = ImageView(this).apply {
             setBackgroundColor(Color.WHITE); scaleType = ImageView.ScaleType.MATRIX
             contentDescription = "取景框区域的原文放大画面；单指滑动查看，双指捏合缩放1到5倍"
             setOnTouchListener { _, event -> onImageTouch(event) }
         }.also {
-            root.addView(it, LinearLayout.LayoutParams(geometry.imageWidth, geometry.imageHeight))
+            mirror.addView(it, FrameLayout.LayoutParams(-1,-1))
             it.addOnLayoutChangeListener { _, _, _, _, _, _, _, _, _ -> applyViewportTransform() }
         }
+        val translationLayer = FrameLayout(this).also { mirror.addView(it,FrameLayout.LayoutParams(-1,-1)) }
+        translationLayer.setOnTouchListener { _, event -> onImageTouch(event) }
+        translation.bind(translationLayer)
         val row = LinearLayout(this).also { root.addView(it, LinearLayout.LayoutParams(-1, dp(MagnifierLayout.CONTROL_DP))) }
         zoomLabel = TextView(this).apply {
             textSize = 16f; setTextColor(Color.WHITE); gravity = Gravity.CENTER
@@ -547,6 +598,8 @@ class ProjectionMagnifierService : Service() {
         // comparing them with System.nanoTime can permanently blank an OEM's capture stream.
         // The next compositor image is cropped using the current screen-pixel geometry.
         try { reader?.acquireLatestImage()?.close() } catch (_: IllegalStateException) { }
+        // Snapshot mode has no incoming live refresh to apply the new crop.
+        if (translation.showing) applyViewportTransform()
         updateStatus()
     }
     private fun sourceOverlapsProtectedControls(): Boolean = !placementAvailable ||
@@ -611,16 +664,22 @@ class ProjectionMagnifierService : Service() {
         if (clarityEnabled && target != null) latestBytes?.let { bytes ->
             clarity?.submit(ClarityRenderer.Frame(bytes, source.width(), source.height(), target))
         }
+        translation.render(crop,viewport)
         updateStatus()
     }
     private fun updateStatus() {
         val active = gesture?.result
         val label = String.format(java.util.Locale.ROOT, "%.2f×", viewport.scale)
         message?.text = when {
+            translation.label != null -> translation.label
             !placementAvailable -> "空间不足，请移动取景框"
             active != null && (active.snapX != 0 || active.snapY != 0) -> "松手贴边"
             !frameSeen -> "等待画面"
             else -> "双指缩放 · 单指滑动"
+        }
+        (toolButtons["翻译当前页"] as? android.view.ViewGroup)?.let { button ->
+            (button.getChildAt(1) as? TextView)?.text = if(translation.showing) "原文" else if(translation.active) "取消" else "翻译"
+            button.contentDescription=if(translation.active) "清除本次快照并返回实时原文" else "翻译当前页"
         }
         zoomSlider?.progress = ((viewport.scale - 1f) * 100).roundToInt().coerceIn(0,400)
         zoomLabel?.text = label
@@ -637,6 +696,7 @@ class ProjectionMagnifierService : Service() {
         val image = try { reader.acquireLatestImage() } catch (_: IllegalStateException) { null } ?: return
         try {
             if (closing || !running || !uiState.capturing || !surfaceAttached) return
+            if (translation.frame(image) || controlsHidden) return
             frameSeen = true
             val now = SystemClock.elapsedRealtime()
             // After clearing a crop, the next compositor frame may be the last on a static page.
@@ -672,6 +732,7 @@ class ProjectionMagnifierService : Service() {
         fun box(value: Box?) = value?.let { "${it.left},${it.top},${it.width},${it.height}" } ?: "none"
         fun bounds(p: WindowManager.LayoutParams?) = p?.let { "${it.x},${it.y},${it.width},${it.height}" } ?: "none"
         writer.println("uiState=${uiState.mode} returnTo=${uiState.returnTo} session=$sessionId terminal=$closing surfaceAttached=$surfaceAttached capturing=${uiState.capturing && surfaceAttached && !closing} copyAttempts=$copyAttempts virtualDisplayCreates=$virtualDisplayCreates")
+        writer.println(translation.diagnostics())
         writer.println("bubble=${if(bubble!=null) bounds(bubbleParams) else "none"} menu=${if(menu!=null) bounds(menuParams) else "none"} menuPage=${menuPage ?: "root"}")
         writer.println("expandedWindows=${listOf(panel,resizeHandle,outline).count { it?.isAttachedToWindow == true }} safeArea=${box(safeArea)}")
         toolButtons.forEach { (label,button) ->
@@ -714,6 +775,7 @@ class ProjectionMagnifierService : Service() {
     private fun endSession() {
         if(closing) return
         closing=true; uiState.end(); running=false; surfaceAttached=false; menuPage=null; generation++
+        translation.close()
         publish(); main.removeCallbacksAndMessages(null); cancelGestures()
         fun safely(block: () -> Unit) { try { block() } catch(_: RuntimeException) { } }
         safely { reader?.setOnImageAvailableListener(null,null) }

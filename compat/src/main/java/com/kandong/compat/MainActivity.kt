@@ -44,7 +44,7 @@ class MainActivity : Activity() {
         status=CompatUi.text(this,"",16f,CompatUi.muted).also(body::addView)
         val card=LinearLayout(this).apply { orientation=LinearLayout.VERTICAL; setPadding(dp(20),dp(12),dp(20),dp(16)); background=CompatUi.shape(this@MainActivity,android.graphics.Color.WHITE) }
         card.addView(CompatUi.text(this,"只在您的手机内放大",20f))
-        card.addView(CompatUi.text(this,CompatUi.disclosure,18f))
+        card.addView(CompatUi.text(this,if(TranslationFeature.AVAILABLE) TranslationFeature.DISCLOSURE else CompatUi.disclosure,18f))
         consent=CheckBox(this).apply {
             text="我已了解，同意本次屏幕共享放大"; textSize=18f; setTextColor(CompatUi.ink)
             minimumHeight=dp(56); buttonTintList=android.content.res.ColorStateList.valueOf(CompatUi.teal)
@@ -70,6 +70,14 @@ class MainActivity : Activity() {
         end=CompatUi.button(this,"关闭放大镜") { command(ProjectionMagnifierService.ACTION_STOP) }
             .also { body.addView(it,LinearLayout.LayoutParams(-1,-2).apply { topMargin=dp(12) }) }
         body.addView(CompatUi.button(this,"使用帮助") { openMenu("使用帮助") },LinearLayout.LayoutParams(-1,-2).apply { topMargin=dp(24) })
+        if(TranslationFeature.AVAILABLE) {
+            body.addView(CompatUi.text(this,"公开文字试用页（实时采集，无预置译文）",16f,CompatUi.muted))
+            listOf("英语" to "EN","法语" to "FR","中文" to "ZH-HANS").forEach { (label,language) ->
+                body.addView(CompatUi.button(this,label) {
+                    startActivity(Intent().setClassName(this,"com.kandong.compat.TranslationDemoActivity").putExtra("language",language))
+                },LinearLayout.LayoutParams(-1,-2))
+            }
+        }
         val scroll=ScrollView(this).apply { setBackgroundColor(CompatUi.background); isFillViewport=true; addView(body) }
         scroll.setOnApplyWindowInsetsListener { view,insets ->
             if(Build.VERSION.SDK_INT>=30) {

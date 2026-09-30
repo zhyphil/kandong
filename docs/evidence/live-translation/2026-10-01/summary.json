@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-01",
+  "baseCommit": "2584bad3f9f97421c1c589379f4915ddf8665c88",
+  "scope": "real-screen-development-integration",
+  "jvm": {
+    "compat_debug": {
+      "tests": 68,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "compat_release": {
+      "tests": 63,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "liveocr_debug": {
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "pythonRelayTests": 10,
+  "realTranslationAccepted": false,
+  "coreGesturesOnNova9Accepted": false,
+  "artifacts": {
+    "debug": {
+      "bytes": 347836116,
+      "sha256": "f581c86cb16860c4062f5a373d2b6c98522b0bc20fe68a27197fed472598d221",
+      "ocrAssets": 26,
+      "liveOcrClass": true,
+      "onnxModels": 3,
+      "internet": true,
+      "telemetryInitializer": false,
+      "fixtureOrRecordedAssets": false,
+      "lint": {
+        "Error": 0,
+        "Fatal": 0,
+        "Warning": 11
+      }
+    },
+    "release": {
+      "bytes": 2343560,
+      "sha256": "6dc5d71843236b9c552122c911c948d0ea7d93a4ec1a7865f5fcb7dfba482c17",
+      "ocrAssets": 0,
+      "liveOcrClass": false,
+      "onnxModels": 0,
+      "internet": false,
+      "telemetryInitializer": false,
+      "fixtureOrRecordedAssets": false,
+      "lint": {
+        "Error": 0,
+        "Fatal": 0,
+        "Warning": 10
+      }
+    }
+  },
+  "device": {
+    "model": "NAM-LX9",
+    "api": 31,
+    "package": "com.kandong.compat.dev",
+    "installedApkSha256": "f581c86cb16860c4062f5a373d2b6c98522b0bc20fe68a27197fed472598d221",
+    "installedBytesMatch": true,
+    "observedBeforeFix": {
+      "state": "EXPANDED",
+      "liveCaptures": 4,
+      "ocrRuns": 4,
+      "sends": 0,
+      "published": 0,
+      "lastReason": "page_changed"
+    },
+    "afterFix": "snapshot APK SHA verified; projection manually restarted, no new OCR triggered at last check",
+    "oldMonitorDiagnostic": {
+      "changedSamples": 6308,
+      "comparedSamples": 6308,
+      "changedBounds": [
+        8,
+        107,
+        1064,
+        2331
+      ],
+      "reason": "page_changed_monitor",
+      "rootCauseConfirmed": false
+    }
+  },
+  "review": {
+    "readOnlyCompleted": true,
+    "findings": [
+      "P1 cancel/expiry during usage lookup could send later",
+      "P2 temporary hide cleared pinch detector"
+    ],
+    "fixes": [
+      "relay cancellation endpoint, disconnect checks and relative deadline checked after usage lookup; 4 new regression tests",
+      "preserve detector for temporary hiding; device gesture recheck pending"
+    ],
+    "implementationWorker": "timed out at600s; actual written source independently inspected and built by root"
+  },
+  "snapshotMode": {
+    "rule": "single captured visible page; later live changes do not cancel or replace it",
+    "continuousFingerprintMonitoring": false,
+    "postOcrOrSendRecapture": false,
+    "inMemoryOnly": true,
+    "ttlMillis": 60000,
+    "deviceAcceptance": "pending"
+  }
+}

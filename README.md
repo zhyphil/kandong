@@ -1,31 +1,34 @@
 # KanDong · 看懂
 
+当前开发版按“单次快照”识字/翻译：点击确认后取得当前整屏，后续变化不取消处理；镜面显示本次快照并对应文字，退出后恢复实时放大。详见 [开发版流程](docs/LIVE_TRANSLATION_DEV.md)。
+
 当前固定版本：**v0.1.0 核心放大镜**。下载入口：[GitHub Release](https://github.com/zhyphil/kandong/releases/tag/v0.1.0)。正式签名APK与之前调试版不能覆盖安装，迁移方法见[发布说明](docs/releases/v0.1.0.md)。[核心基线](docs/CORE_BASELINE.md) · [后续发布方法](docs/RELEASING.md)
 
-开发中：`0.1.1-dev` 新增“启动成功后自动返回手机桌面”，本地构建/模拟器验证通过，已安装目标华为，尚未发布到GitHub。
+开发中：**看懂开发版**（`com.kandong.compat.dev`）已接入真实整屏采集、本机OCR、逐页确认的DeepL上下文翻译和镜面显示，安装到nova 9，当前等待实际页面验收。联网需USB连接这台Mac，本机默认仅识字；尚未发布。见[开发版运行与限制](docs/LIVE_TRANSLATION_DEV.md)。
 
 **跨 App 局部屏幕放大镜 + 利用整屏上下文的放大区域翻译。** 面向老年人及视觉、语言或数字使用困难人群。产品顺序固定为：**看清 → 看懂 → 理解 → 会操作**。
 
-当前固定 **v0.1.0核心放大镜**，开发重点为单语页面的整屏上下文翻译；Phase0A机型与长辈体验扩展验证保留。不改变原 App 布局、字号或按钮位置。目标华为兼容版可自由调整取景框宽高，用独立滑杆选择1～5倍（默认2倍），显示窗随取景位置自动避让。翻译是下一阶段，AI 解释和下一步高亮随后推进；没有自动点击、输入、确认、提交、购买或支付。
+当前固定 **v0.1.0核心放大镜**，开发重点为单语页面的整屏上下文翻译；Phase0A机型与长辈体验扩展验证保留。不改变原 App 布局、字号或按钮位置。目标华为兼容版可自由调整取景框宽高，用独立滑杆选择1～5倍（默认2倍），显示窗随取景位置自动避让。真实翻译目前进入开发版试用，AI解释和下一步高亮随后推进；没有自动点击、输入、确认、提交、购买或支付。
 
-首版按用户最新要求分别支持**单一英语、单一法语或单一中文页面**，混排不作为当前验收门槛。核心是点击“翻译”后结合整屏可见上下文，准确翻译并在放大镜内显示选区对应内容；英/法→中文，中文原文保留。正式翻译尚未接入，已有合成实验不等于译文质量通过。当前优先级与验收见[单语整屏翻译](docs/SINGLE_LANGUAGE_TRANSLATION.md)，旧三语/混排结果仅保留作历史证据。
+首版按用户最新要求分别支持**单一英语、单一法语或单一中文页面**，混排不作为当前验收门槛。核心是点击“翻译”后结合整屏可见上下文，准确翻译并在放大镜内显示选区对应内容；英/法→中文，中文原文保留。release仍未接翻译；debug开发版已完成接线，真实页面体验和译文质量待验收，已有合成实验不等于译文质量通过。当前优先级与验收见[单语整屏翻译](docs/SINGLE_LANGUAGE_TRANSLATION.md)，旧三语/混排结果仅保留作历史证据。
 
-2026-09-30最新实验：实际整页OCR已接入按需翻译请求／选区显示契约，256＋76本机检查及专用模拟器81项通过；仍使用明确的绑定测试标记，没有调用真实翻译服务或更新手机。当前状态与下一步见[交接记录](docs/HANDOFF.md)及[验收说明](docs/OCR_TRANSLATION_BINDING.md)。
+2026-09-30历史实验：实际整页OCR已接入按需翻译请求／选区显示契约，256＋76本机检查及专用模拟器81项通过；仍使用明确的绑定测试标记，没有调用真实翻译服务或更新手机。当前状态与下一步见[交接记录](docs/HANDOFF.md)及[验收说明](docs/OCR_TRANSLATION_BINDING.md)。
 
 ## 两条明确区分的验证路线
 
 | 模块 | 用途 | 系统要求/权限 | 当前目标 |
 | --- | --- | --- | --- |
 | `app` | 官方 Window Magnification + MagnificationController | Android13/API33+，设备支持窗口放大；用户开启无障碍服务 | 专用 API36 模拟器；真机兼容性逐机验证 |
-| `compat` | 当前发布产品；屏幕共享 → 本机局部裁剪 → 放大显示 | Android10/API29+；悬浮窗 + 每次屏幕共享授权；无需无障碍 | 当前目标华为 LIO-AN00，Android12/API31 |
+| `compat` | release：本机放大；debug：真实页面翻译开发版 | Android10/API29+；悬浮窗/每次共享；debug另需逐页OCR和联网同意 | 当前nova 9 / NAM-LX9 / API31；LIO-AN00为历史兼容目标 |
+| `liveocr` | debug专用本机OCR库，固定模型和数值链路 | 无采集/联网权限；构建需既有固定模型缓存 | [模块说明](liveocr/README.md) |
 | `qualitylab` | 独立本机画质对照：固定中文样本，平滑/锐化与处理耗时 | API29+，无权限、无联网，不进入正式放大镜 | [实验说明与证据](docs/QUALITY_LAB.md)，真机待测 |
 | `fixture` | 独立合成页，网格/小字/点击计数/自身布局指纹 | 本地测试应用，无真实个人资料 | 验证倍率、原布局与手动点击 |
 
-此前验证的两台华为分别为 HMA-L29（Android10/API29）和 LIO-AN00（Android12/API31）；都不支持当前官方窗口控制路线。**目标机已切换为 LIO-AN00**。不能把 EMUI 版本当 Android API 版本，不能只降低 minSdk 就声称官方路线可运行。
+此前验证的两台华为分别为 HMA-L29（Android10/API29）和 LIO-AN00（Android12/API31）；都不支持当前官方窗口控制路线。**当前目标机于2026-09-30换为nova 9 / NAM-LX9 / Android12/API31**，LIO-AN00结果仅作历史兼容证据。不能把 EMUI 版本当 Android API 版本，不能只降低 minSdk 就声称官方路线可运行。
 
 兼容版的取景框与放大显示窗分开，采用自动上下避让、双指缩放及滑杆同步。可收起为贴边悬浮按钮，菜单全屏显示；这些交互已固定为v0.1.0基线，交互规则见 [UX设计](docs/UX.md)。当前实际构建和设备证据以 [VALIDATION](docs/VALIDATION.md) 为准。
 
-唯一根目录 `/Users/haoyuzuo/Projects/KanDong`，origin `git@github.com:zhyphil/kandong.git`。独立项目。首个核心版本v0.1.0按用户授权发布到GitHub；后续推送/发布仍需对应授权。
+唯一根目录 `/Users/haoyuzuo/Projects/KanDong`，origin `git@github.com:zhyphil/kandong.git`。独立项目。首个核心版本v0.1.0按用户授权发布到GitHub；用户已授权完成任务后Conventional Commit与正常push；发布仍需另行授权。
 
 ## 构建
 
@@ -39,7 +42,7 @@ cd /Users/haoyuzuo/Projects/KanDong
 脚本只为本次构建选择 JDK17，不改变系统默认 Java。输出：
 
 - 官方版：`app/build/outputs/apk/debug/app-debug.apk`
-- 华为兼容验证版：`compat/build/outputs/apk/debug/compat-debug.apk`
+- 真实翻译开发版：`compat/build/outputs/apk/debug/compat-debug.apk`（独立包名，需准备[liveocr固定模型](liveocr/README.md)）
 - 合成测试页：`fixture/build/outputs/apk/debug/fixture-debug.apk`
 
 使用 Android Studio 选择相应 module 和目标设备运行，或明确指定设备序列号安装。不要在 Android12 手机上安装最低13的 `app`。
@@ -56,7 +59,7 @@ cd /Users/haoyuzuo/Projects/KanDong
 
 小选区配合低倍率时，镜面可能留白；这是按所选倍率显示的正常结果。红框接收选区拖动；需要点击或滚动原App时，先点“收起”。右上角小角标的触摸范围大于可见图形。
 
-运行时，Android 把屏幕帧交给本机进程，应用只复制取景区域显示；**不是只采集一个区域的系统 API**。不记录、不落盘、不上传。受保护页面可能黑屏，不绕过保护；测试先用合成页。
+普通放大模式下，Android 把屏幕帧交给本机进程，应用只复制取景区域显示；**不是只采集一个区域的系统 API**。不记录、不落盘、不上传。开发版另行确认“识别本页”后会在内存临时保留一张整屏快照，用于OCR与镜面显示，退出或过期后释放。联网须另行确认全部文字，图片不上传。受保护页面可能黑屏，不绕过保护；测试先用公开页。
 
 华为若提示“纯净模式增强防护下，仅支持安装经过华为应用市场安全检测的应用”：用户需自行在 设置 → 系统和更新 → 纯净模式 暂时关闭增强防护，再继续安装并按系统提示验证。这个全局开关会放宽外部安装限制，测试后恢复；KanDong不会修改它。[华为官方安装说明](https://consumer.huawei.com/cn/support/content/zh-cn01089223/)
 

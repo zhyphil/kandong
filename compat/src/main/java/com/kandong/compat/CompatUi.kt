@@ -9,7 +9,7 @@ import android.view.*
 import android.widget.*
 import kotlin.math.roundToInt
 
-internal enum class LineIcon { MAGNIFY, MENU, COLLAPSE, END, RESIZE, CLOSE, BACK }
+internal enum class LineIcon { MAGNIFY, MENU, COLLAPSE, END, RESIZE, CLOSE, BACK, TRANSLATE }
 internal class IconView(context: Context, private val icon: LineIcon, private val ink: Int = Color.WHITE) : View(context) {
     var corner = GripSide(true, true)
         set(value) { field = value; invalidate() }
@@ -27,6 +27,10 @@ internal class IconView(context: Context, private val icon: LineIcon, private va
         canvas.save(); canvas.translate(cx - size / 2, cy - size / 2); canvas.scale(size / 24, size / 24)
         fun line(x: Float, y: Float, xx: Float, yy: Float) = canvas.drawLine(x,y,xx,yy,paint)
         when (icon) {
+            LineIcon.TRANSLATE -> {
+                line(3f,5f,14f,5f); line(8f,2f,8f,5f); line(11f,5f,5f,15f); line(5f,8f,12f,14f)
+                line(13f,21f,17f,11f); line(17f,11f,21f,21f); line(15f,17f,19f,17f)
+            }
             LineIcon.MAGNIFY -> { canvas.drawCircle(10f,10f,7f,paint); line(15.2f,15.2f,21f,21f) }
             LineIcon.MENU -> { line(4f,6f,20f,6f); line(4f,12f,20f,12f); line(4f,18f,20f,18f) }
             LineIcon.COLLAPSE -> line(5f,16f,19f,16f)
@@ -114,11 +118,13 @@ internal object CompatUi {
             body.addView(text(c,"让文字边缘更清楚 · 试用功能\n只在本机处理；若感觉卡顿或手机变热，可关闭。",16f,muted))
             row("使用帮助") { navigate("使用帮助") }
             row("隐私说明") { navigate("隐私说明") }
-            for(title in listOf("区域翻译设置","账号与订阅")) {
+            if (TranslationFeature.AVAILABLE) body.addView(text(c,"翻译开发版：展开镜面后点“翻译”。默认本机识字；联网翻译需连接 Mac 并逐页确认。",16f,muted))
+            for(title in if(TranslationFeature.AVAILABLE) listOf("账号与订阅") else listOf("区域翻译设置","账号与订阅")) {
                 body.addView(text(c,"$title · 规划中，暂不可用",16f,muted).apply { isEnabled=false; minimumHeight=dp(c,48) })
             }
             body.addView(text(c,"目前无需登录",14f,muted))
-        } else body.addView(text(c,if(page=="使用帮助") help else privacy))
+        } else body.addView(text(c,if(page=="使用帮助") help + if(TranslationFeature.AVAILABLE) "\n\n点镜面工具栏“翻译”可识别当前页。点“原文”、收起或打开菜单会清除译文；使用时请保持页面不动。" else ""
+            else if(TranslationFeature.AVAILABLE) TranslationFeature.PRIVACY else privacy))
 
         return LinearLayout(c).apply {
             orientation=LinearLayout.VERTICAL; setBackgroundColor(CompatUi.background)
