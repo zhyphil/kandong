@@ -1,0 +1,567 @@
+{
+  "schema": 1,
+  "scope": "offline authored-candidate assessment; no OCR inference or translation quality claim",
+  "corpusSha256": "4ace88c9a391cd73826ff7e369f024a4c106c9aa0dcf5e3529676f4d496c29b6",
+  "sourcePreservationPassed": true,
+  "wholeContextPassed": true,
+  "pages": [
+    {
+      "id": "en-shifted-before",
+      "language": "en",
+      "category": "ordinary",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [
+        {
+          "labels": [
+            "head",
+            "tail"
+          ],
+          "sourceText": "No refunds before confirmation."
+        }
+      ],
+      "missingCompleteGroups": [],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 1,
+      "originalCandidates": 3,
+      "rationale": "One complete negative before-confirmation condition."
+    },
+    {
+      "id": "en-bottom-positive",
+      "language": "en",
+      "category": "ordinary",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [
+        {
+          "labels": [
+            "head",
+            "tail"
+          ],
+          "sourceText": "Refunds are available after confirmation."
+        }
+      ],
+      "missingCompleteGroups": [],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 1,
+      "originalCandidates": 3,
+      "rationale": "Complete positive after-confirmation condition at bottom."
+    },
+    {
+      "id": "fr-accent-after",
+      "language": "fr",
+      "category": "ordinary",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [
+        {
+          "labels": [
+            "head",
+            "tail"
+          ],
+          "sourceText": "Aucun remboursement après confirmation."
+        }
+      ],
+      "missingCompleteGroups": [],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 1,
+      "originalCandidates": 3,
+      "rationale": "Accented French complete condition."
+    },
+    {
+      "id": "fr-right-column-before",
+      "language": "fr",
+      "category": "ordinary",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [
+        {
+          "labels": [
+            "head",
+            "tail"
+          ],
+          "sourceText": "Remboursement possible avant confirmation."
+        }
+      ],
+      "missingCompleteGroups": [],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 1,
+      "originalCandidates": 3,
+      "rationale": "Right-aligned column remains a single complete condition."
+    },
+    {
+      "id": "en-two-columns",
+      "language": "en",
+      "category": "columns",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [
+        {
+          "labels": [
+            "left-head",
+            "left-tail"
+          ],
+          "sourceText": "No refunds after confirmation."
+        },
+        {
+          "labels": [
+            "right-head",
+            "right-tail"
+          ],
+          "sourceText": "Refunds are available before confirmation."
+        }
+      ],
+      "missingCompleteGroups": [],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 1,
+      "originalCandidates": 5,
+      "rationale": "Two independent conditions; no cross-column group."
+    },
+    {
+      "id": "fr-seam-exact-duplicate",
+      "language": "fr",
+      "category": "duplicate",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [],
+      "missingCompleteGroups": [
+        [
+          "a-head",
+          "b-head",
+          "a-tail",
+          "b-tail"
+        ]
+      ],
+      "conservativelyWithheldGroups": [
+        [
+          "a-head",
+          "b-head",
+          "a-tail",
+          "b-tail"
+        ]
+      ],
+      "unrelatedTargets": 1,
+      "originalCandidates": 5,
+      "rationale": "Two observations per physical line; all four sources needed if grouped, otherwise withhold."
+    },
+    {
+      "id": "en-seam-drift-duplicate",
+      "language": "en",
+      "category": "duplicate",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [],
+      "missingCompleteGroups": [
+        [
+          "a-head",
+          "b-head",
+          "a-tail",
+          "b-tail"
+        ]
+      ],
+      "conservativelyWithheldGroups": [
+        [
+          "a-head",
+          "b-head",
+          "a-tail",
+          "b-tail"
+        ]
+      ],
+      "unrelatedTargets": 1,
+      "originalCandidates": 5,
+      "rationale": "Small coordinate/score drift does not justify selecting one source."
+    },
+    {
+      "id": "fr-seam-polarity-conflict",
+      "language": "fr",
+      "category": "conflict",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [],
+      "missingCompleteGroups": [],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 1,
+      "originalCandidates": 5,
+      "rationale": "Opposite source readings overlap; no complete trustworthy group."
+    },
+    {
+      "id": "en-duplicate-tail",
+      "language": "en",
+      "category": "duplicate",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [],
+      "missingCompleteGroups": [
+        [
+          "head",
+          "tail",
+          "tail-copy"
+        ]
+      ],
+      "conservativelyWithheldGroups": [
+        [
+          "head",
+          "tail",
+          "tail-copy"
+        ]
+      ],
+      "unrelatedTargets": 1,
+      "originalCandidates": 4,
+      "rationale": "One head and duplicate tail observations; preserve all sources."
+    },
+    {
+      "id": "en-same-strip-copy",
+      "language": "en",
+      "category": "conflict",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [],
+      "missingCompleteGroups": [],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 1,
+      "originalCandidates": 4,
+      "rationale": "Same-strip duplicate has no independent strip evidence; retain ambiguity."
+    },
+    {
+      "id": "fr-repeated-different-rows",
+      "language": "fr",
+      "category": "duplicate",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [
+        {
+          "labels": [
+            "first-head",
+            "first-tail"
+          ],
+          "sourceText": "Aucun remboursement après confirmation."
+        },
+        {
+          "labels": [
+            "second-head",
+            "second-tail"
+          ],
+          "sourceText": "Aucun remboursement après confirmation."
+        }
+      ],
+      "missingCompleteGroups": [],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 1,
+      "originalCandidates": 5,
+      "rationale": "Identical wording at different rows represents two independent occurrences."
+    },
+    {
+      "id": "en-cross-column-fragment",
+      "language": "en",
+      "category": "columns",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [],
+      "missingCompleteGroups": [],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 1,
+      "originalCandidates": 3,
+      "rationale": "Orphan lines in different columns must not be joined."
+    },
+    {
+      "id": "fr-intervening-label",
+      "language": "fr",
+      "category": "intervening",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [],
+      "missingCompleteGroups": [],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 2,
+      "originalCandidates": 4,
+      "rationale": "A separate label intervenes; ownership of tail is not unique."
+    },
+    {
+      "id": "en-spaced-complete",
+      "language": "en",
+      "category": "coverage",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [],
+      "missingCompleteGroups": [
+        [
+          "head",
+          "tail"
+        ]
+      ],
+      "conservativelyWithheldGroups": [
+        [
+          "head",
+          "tail"
+        ]
+      ],
+      "unrelatedTargets": 1,
+      "originalCandidates": 3,
+      "rationale": "Authored sentence spans a larger blank gap; conservative withholding is a coverage miss, not unsafe acceptance."
+    },
+    {
+      "id": "fr-indented-complete",
+      "language": "fr",
+      "category": "coverage",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [],
+      "missingCompleteGroups": [
+        [
+          "head",
+          "tail"
+        ]
+      ],
+      "conservativelyWithheldGroups": [
+        [
+          "head",
+          "tail"
+        ]
+      ],
+      "unrelatedTargets": 1,
+      "originalCandidates": 3,
+      "rationale": "Authored complete sentence has a modest indentation beyond current tolerance."
+    },
+    {
+      "id": "en-trailing-exception",
+      "language": "en",
+      "category": "continuation",
+      "unsafeTargets": [
+        {
+          "labels": [
+            "head",
+            "tail"
+          ],
+          "sourceText": "No refunds after confirmation."
+        },
+        {
+          "labels": [
+            "exception"
+          ],
+          "sourceText": "Except when the service is cancelled."
+        }
+      ],
+      "correctCompleteTargets": [],
+      "missingCompleteGroups": [
+        [
+          "head",
+          "tail",
+          "exception"
+        ]
+      ],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 1,
+      "originalCandidates": 4,
+      "rationale": "Following exception changes refund meaning; head and tail alone are incomplete."
+    },
+    {
+      "id": "fr-trailing-restriction",
+      "language": "fr",
+      "category": "continuation",
+      "unsafeTargets": [
+        {
+          "labels": [
+            "head",
+            "tail"
+          ],
+          "sourceText": "Remboursement possible avant confirmation."
+        },
+        {
+          "labels": [
+            "restriction"
+          ],
+          "sourceText": "Uniquement avec votre reçu."
+        }
+      ],
+      "correctCompleteTargets": [],
+      "missingCompleteGroups": [
+        [
+          "head",
+          "tail",
+          "restriction"
+        ]
+      ],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 1,
+      "originalCandidates": 4,
+      "rationale": "Receipt requirement cannot be omitted from a standalone translated condition."
+    },
+    {
+      "id": "en-leading-negated-claim",
+      "language": "en",
+      "category": "continuation",
+      "unsafeTargets": [
+        {
+          "labels": [
+            "head",
+            "tail"
+          ],
+          "sourceText": "No refunds after confirmation."
+        }
+      ],
+      "correctCompleteTargets": [],
+      "missingCompleteGroups": [
+        [
+          "negated-claim",
+          "head",
+          "tail"
+        ]
+      ],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 1,
+      "originalCandidates": 4,
+      "rationale": "Preceding sentence explicitly negates the following claim; isolated pair is misleading."
+    },
+    {
+      "id": "fr-leading-prerequisite",
+      "language": "fr",
+      "category": "continuation",
+      "unsafeTargets": [
+        {
+          "labels": [
+            "prerequisite"
+          ],
+          "sourceText": "Si le service est annulé :"
+        },
+        {
+          "labels": [
+            "head",
+            "tail"
+          ],
+          "sourceText": "Remboursement possible après confirmation."
+        }
+      ],
+      "correctCompleteTargets": [],
+      "missingCompleteGroups": [
+        [
+          "prerequisite",
+          "head",
+          "tail"
+        ]
+      ],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 1,
+      "originalCandidates": 4,
+      "rationale": "Refund only if service cancelled; prerequisite is part of the complete statement."
+    },
+    {
+      "id": "en-neutral-neighbour",
+      "language": "en",
+      "category": "ordinary",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [
+        {
+          "labels": [
+            "head",
+            "tail"
+          ],
+          "sourceText": "No refunds after confirmation."
+        }
+      ],
+      "missingCompleteGroups": [],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 2,
+      "originalCandidates": 4,
+      "rationale": "Unrelated support line is context but does not alter the refund condition."
+    },
+    {
+      "id": "fr-independent-neighbour",
+      "language": "fr",
+      "category": "columns",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [
+        {
+          "labels": [
+            "head",
+            "tail"
+          ],
+          "sourceText": "Aucun remboursement après confirmation."
+        }
+      ],
+      "missingCompleteGroups": [],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 3,
+      "originalCandidates": 5,
+      "rationale": "Separate delivery column does not change refund statement."
+    },
+    {
+      "id": "en-clipped-head-conflict",
+      "language": "en",
+      "category": "conflict",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [],
+      "missingCompleteGroups": [],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 1,
+      "originalCandidates": 4,
+      "rationale": "Partial read-edge fragment conflicts with the full head; keep provenance and withhold."
+    },
+    {
+      "id": "hans-source-only",
+      "language": "zh-Hans",
+      "category": "source-only",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [],
+      "missingCompleteGroups": [],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 0,
+      "originalCandidates": 3,
+      "rationale": "Simplified Chinese remains source; no EN/FR phrase introduced."
+    },
+    {
+      "id": "hant-source-only",
+      "language": "zh-Hant",
+      "category": "source-only",
+      "unsafeTargets": [],
+      "correctCompleteTargets": [],
+      "missingCompleteGroups": [],
+      "conservativelyWithheldGroups": [],
+      "unrelatedTargets": 0,
+      "originalCandidates": 3,
+      "rationale": "Traditional Chinese remains source; no EN/FR phrase introduced."
+    }
+  ],
+  "totals": {
+    "pages": 24,
+    "candidates": 93,
+    "unsafeTargets": 7,
+    "unsafePages": 4,
+    "correctCompleteTargets": 10,
+    "conservativelyWithheldGroups": 5
+  },
+  "semanticGatePassed": false,
+  "qualityAccepted": false,
+  "semanticVerified": false,
+  "duplicateStudy": {
+    "track": "ARCHIVED_OCR_REPLAY_NOT_NEW_INFERENCE",
+    "originalCandidates": 20,
+    "ambiguousGroup": {
+      "labels": [
+        "s2/c1-r1-f1",
+        "s1/c1-r1-f1",
+        "s1/c0-r0-f0",
+        "s2/c0-r0-f0"
+      ],
+      "eligible": false,
+      "ambiguous": true,
+      "reasons": [
+        "NON_UNIQUE_ADJACENCY"
+      ],
+      "qualification": []
+    },
+    "underlyingAssociationGroups": [
+      {
+        "labels": [
+          "s1/c0-r0-f0",
+          "s2/c0-r0-f0"
+        ],
+        "text": "IDENTICAL_NONEMPTY",
+        "geometry": "UNAMBIGUOUS_PAIR",
+        "reasons": [],
+        "agreedRaw": "confirmation."
+      },
+      {
+        "labels": [
+          "s1/c1-r1-f1",
+          "s2/c1-r1-f1"
+        ],
+        "text": "IDENTICAL_NONEMPTY",
+        "geometry": "UNCERTAIN",
+        "reasons": [
+          "NON_AXIS_ALIGNED"
+        ],
+        "agreedRaw": null
+      }
+    ],
+    "newCandidateAccepted": false,
+    "originalConflictUnchanged": true,
+    "interpretation": "Evidence supports studying joint source groups; it does not authorize deleting a duplicate or selecting a winner."
+  },
+  "observationsSha256": "a79c0abcb741f61a966265b127f4f7b420f365a36500f2c263dc75d7c8efe4c9",
+  "evaluatorSha256": "e9528762b3ce1c4638953c138ddbe6edb59b7de4e3c1dc2106e498d4fafe0828"
+}

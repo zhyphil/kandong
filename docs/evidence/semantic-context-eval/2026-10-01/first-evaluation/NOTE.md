@@ -1,0 +1,1 @@
+首次评分在定向JUnit运行后取得。其XML随后被完整回归覆盖，未保留初轮XML；不重建或伪造其字节。最终验收使用上级observations.xml与final-evaluation/report.json，二者哈希明确对应；首次报告只保留初次观测的评分结果。

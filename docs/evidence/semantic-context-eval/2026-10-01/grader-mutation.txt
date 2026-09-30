@@ -1,0 +1,32 @@
+test_corpus_bytes_must_match_frozen_identity (test_semantic_context_eval.SemanticEvaluationTests.test_corpus_bytes_must_match_frozen_identity) ... ok
+test_duplicate_source_deletion_and_chinese_requests_cannot_improve_score (test_semantic_context_eval.SemanticEvaluationTests.test_duplicate_source_deletion_and_chinese_requests_cannot_improve_score) ... FAIL
+test_full_condition_and_withholding_are_distinct_outcomes (test_semantic_context_eval.SemanticEvaluationTests.test_full_condition_and_withholding_are_distinct_outcomes) ... ok
+test_neutral_neighbour_is_not_forced_into_refund_condition (test_semantic_context_eval.SemanticEvaluationTests.test_neutral_neighbour_is_not_forced_into_refund_condition) ... ok
+test_oracle_is_not_given_to_kotlin (test_semantic_context_eval.SemanticEvaluationTests.test_oracle_is_not_given_to_kotlin) ... ok
+test_oracle_references_and_duplicate_labels_are_validated (test_semantic_context_eval.SemanticEvaluationTests.test_oracle_references_and_duplicate_labels_are_validated) ... ok
+test_partial_pair_and_separate_exception_are_unsafe_even_with_full_context (test_semantic_context_eval.SemanticEvaluationTests.test_partial_pair_and_separate_exception_are_unsafe_even_with_full_context) ... FAIL
+test_source_context_and_binding_tampering_are_rejected (test_semantic_context_eval.SemanticEvaluationTests.test_source_context_and_binding_tampering_are_rejected) ... ok
+
+======================================================================
+FAIL: test_duplicate_source_deletion_and_chinese_requests_cannot_improve_score (test_semantic_context_eval.SemanticEvaluationTests.test_duplicate_source_deletion_and_chinese_requests_cannot_improve_score)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_semantic_context_eval.py", line 45, in test_duplicate_source_deletion_and_chinese_requests_cannot_improve_score
+    self.assertEqual(1,len(m.grade_page(p,o)['unsafeTargets']))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0
+
+======================================================================
+FAIL: test_partial_pair_and_separate_exception_are_unsafe_even_with_full_context (test_semantic_context_eval.SemanticEvaluationTests.test_partial_pair_and_separate_exception_are_unsafe_even_with_full_context)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_semantic_context_eval.py", line 24, in test_partial_pair_and_separate_exception_are_unsafe_even_with_full_context
+    self.assertEqual(2,len(r['unsafeTargets']));self.assertEqual([],r['conservativelyWithheldGroups'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.010s
+
+FAILED (failures=2)
+EXPECTED_MUTANT_REJECTED: removing incomplete-target check breaks two independent assertions

@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-01",
+  "baseCommit": "119960998641a5b933c6895298797246e765e3c1",
+  "scope": "NORMAL bounded offline assessment, 24 authored single-language pages and one archived OCR replay",
+  "diagnosticComplete": true,
+  "semanticGatePassed": false,
+  "qualityAccepted": false,
+  "semanticVerified": false,
+  "totals": {
+    "pages": 24,
+    "candidates": 93,
+    "unsafeTargets": 7,
+    "unsafePages": 4,
+    "correctCompleteTargets": 10,
+    "conservativelyWithheldGroups": 5
+  },
+  "rawFieldsAndWholeContextPreserved": true,
+  "evaluationExitCode": 2,
+  "unsafePageIds": [
+    "en-trailing-exception",
+    "fr-trailing-restriction",
+    "en-leading-negated-claim",
+    "fr-leading-prerequisite"
+  ],
+  "duplicateStudy": {
+    "track": "ARCHIVED_OCR_REPLAY_NOT_NEW_INFERENCE",
+    "originalCandidates": 20,
+    "ambiguousGroup": {
+      "labels": [
+        "s2/c1-r1-f1",
+        "s1/c1-r1-f1",
+        "s1/c0-r0-f0",
+        "s2/c0-r0-f0"
+      ],
+      "eligible": false,
+      "ambiguous": true,
+      "reasons": [
+        "NON_UNIQUE_ADJACENCY"
+      ],
+      "qualification": []
+    },
+    "underlyingAssociationGroups": [
+      {
+        "labels": [
+          "s1/c0-r0-f0",
+          "s2/c0-r0-f0"
+        ],
+        "text": "IDENTICAL_NONEMPTY",
+        "geometry": "UNAMBIGUOUS_PAIR",
+        "reasons": [],
+        "agreedRaw": "confirmation."
+      },
+      {
+        "labels": [
+          "s1/c1-r1-f1",
+          "s2/c1-r1-f1"
+        ],
+        "text": "IDENTICAL_NONEMPTY",
+        "geometry": "UNCERTAIN",
+        "reasons": [
+          "NON_AXIS_ALIGNED"
+        ],
+        "agreedRaw": null
+      }
+    ],
+    "newCandidateAccepted": false,
+    "originalConflictUnchanged": true,
+    "interpretation": "Evidence supports studying joint source groups; it does not authorize deleting a duplicate or selecting a winner."
+  },
+  "checks": {
+    "hostGraderTests": 8,
+    "mutationExpectedAssertionFailures": 2,
+    "jvm": {
+      "tests": 281,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "lint": {
+      "Error": 0,
+      "Fatal": 0,
+      "Warning": 4
+    },
+    "frozenHashesUnchanged": true,
+    "generatedInputMatchesFrozenCorpus": true,
+    "savedFinalObservationAndReportRecomputedEqual": true,
+    "firstAndFinalScoresEqual": true
+  },
+  "authoritativeObservation": "observations.xml",
+  "authoritativeReport": "final-evaluation/report.json",
+  "firstRunLimitation": "Initial JUnit XML was overwritten by the full regression before archival. Initial report is retained but its original XML is unavailable; no reconstruction.",
+  "evidenceLimitations": [
+    "Authored after studying existing rules; not an external blind holdout.",
+    "No actual image recognition for the 24 authored candidate layouts; provenance values are synthetic.",
+    "Existing archived fr-seam data is historical OCR, not new model inference.",
+    "Incomplete source groups are observed; no new provider translations were requested.",
+    "JVM checks and lint do not establish Android device or translation quality acceptance."
+  ],
+  "execution": {
+    "orchestratorCalls": 0,
+    "subagents": 0,
+    "newOcrInference": 0,
+    "translationNetworkCalls": 0,
+    "credentialReads": 0,
+    "realScreenReads": 0,
+    "deviceQueriesOrOperations": 0,
+    "apkAssembly": false,
+    "productionChanges": false,
+    "existingGroupingAlgorithmChanged": false,
+    "recordedAssetChanged": false,
+    "newDependencyOrTestFramework": false,
+    "gitRemoteVerificationAndPushSeparatelyAuthorized": true
+  },
+  "nextTask": "Independent complete-statement guard for prerequisites, negation, exceptions and restrictions; keep original text when grouping is uncertain. Preserve v1 evidence, add frozen counterexamples and unrelated-neighbour controls before widening duplicate grouping.",
+  "sourcesManifest": "sha256.json"
+}

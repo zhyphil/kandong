@@ -1,0 +1,2760 @@
+{
+  "schema": 1,
+  "track": "AUTHORED_CANDIDATES_NOT_OCR",
+  "scope": "new developer-authored adversarial layouts; not blind or real capture",
+  "pages": [
+    {
+      "id": "en-shifted-before",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "category": "ordinary",
+      "items": [
+        {
+          "label": "title",
+          "text": "Booking details",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "No refunds before",
+          "strip": 0,
+          "quad": [
+            [
+              140,
+              350
+            ],
+            [
+              610,
+              350
+            ],
+            [
+              610,
+              390
+            ],
+            [
+              140,
+              390
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 0,
+          "quad": [
+            [
+              142,
+              406
+            ],
+            [
+              382,
+              406
+            ],
+            [
+              382,
+              446
+            ],
+            [
+              142,
+              446
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [
+          [
+            "head",
+            "tail"
+          ]
+        ],
+        "protectedItems": [
+          "head",
+          "tail"
+        ],
+        "rationale": "One complete negative before-confirmation condition."
+      }
+    },
+    {
+      "id": "en-bottom-positive",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "category": "ordinary",
+      "items": [
+        {
+          "label": "title",
+          "text": "Booking details",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "Refunds are available after",
+          "strip": 3,
+          "quad": [
+            [
+              170,
+              2050
+            ],
+            [
+              640,
+              2050
+            ],
+            [
+              640,
+              2090
+            ],
+            [
+              170,
+              2090
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 3,
+          "quad": [
+            [
+              172,
+              2106
+            ],
+            [
+              412,
+              2106
+            ],
+            [
+              412,
+              2146
+            ],
+            [
+              172,
+              2146
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [
+          [
+            "head",
+            "tail"
+          ]
+        ],
+        "protectedItems": [
+          "head",
+          "tail"
+        ],
+        "rationale": "Complete positive after-confirmation condition at bottom."
+      }
+    },
+    {
+      "id": "fr-accent-after",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "category": "ordinary",
+      "items": [
+        {
+          "label": "title",
+          "text": "Conditions de réservation",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "Aucun remboursement après",
+          "strip": 1,
+          "quad": [
+            [
+              110,
+              780
+            ],
+            [
+              580,
+              780
+            ],
+            [
+              580,
+              820
+            ],
+            [
+              110,
+              820
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              112,
+              836
+            ],
+            [
+              352,
+              836
+            ],
+            [
+              352,
+              876
+            ],
+            [
+              112,
+              876
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [
+          [
+            "head",
+            "tail"
+          ]
+        ],
+        "protectedItems": [
+          "head",
+          "tail"
+        ],
+        "rationale": "Accented French complete condition."
+      }
+    },
+    {
+      "id": "fr-right-column-before",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "category": "ordinary",
+      "items": [
+        {
+          "label": "title",
+          "text": "Conditions de réservation",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "Remboursement possible avant",
+          "strip": 2,
+          "quad": [
+            [
+              590,
+              1420
+            ],
+            [
+              1010,
+              1420
+            ],
+            [
+              1010,
+              1460
+            ],
+            [
+              590,
+              1460
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 2,
+          "quad": [
+            [
+              592,
+              1476
+            ],
+            [
+              832,
+              1476
+            ],
+            [
+              832,
+              1516
+            ],
+            [
+              592,
+              1516
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [
+          [
+            "head",
+            "tail"
+          ]
+        ],
+        "protectedItems": [
+          "head",
+          "tail"
+        ],
+        "rationale": "Right-aligned column remains a single complete condition."
+      }
+    },
+    {
+      "id": "en-two-columns",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "category": "columns",
+      "items": [
+        {
+          "label": "title",
+          "text": "Booking details",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "left-head",
+          "text": "No refunds after",
+          "strip": 0,
+          "quad": [
+            [
+              45,
+              320
+            ],
+            [
+              515,
+              320
+            ],
+            [
+              515,
+              360
+            ],
+            [
+              45,
+              360
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "left-tail",
+          "text": "confirmation.",
+          "strip": 0,
+          "quad": [
+            [
+              47,
+              376
+            ],
+            [
+              287,
+              376
+            ],
+            [
+              287,
+              416
+            ],
+            [
+              47,
+              416
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "right-head",
+          "text": "Refunds are available before",
+          "strip": 0,
+          "quad": [
+            [
+              590,
+              320
+            ],
+            [
+              1010,
+              320
+            ],
+            [
+              1010,
+              360
+            ],
+            [
+              590,
+              360
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "right-tail",
+          "text": "confirmation.",
+          "strip": 0,
+          "quad": [
+            [
+              592,
+              376
+            ],
+            [
+              832,
+              376
+            ],
+            [
+              832,
+              416
+            ],
+            [
+              592,
+              416
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [
+          [
+            "left-head",
+            "left-tail"
+          ],
+          [
+            "right-head",
+            "right-tail"
+          ]
+        ],
+        "protectedItems": [
+          "left-head",
+          "left-tail",
+          "right-head",
+          "right-tail"
+        ],
+        "rationale": "Two independent conditions; no cross-column group."
+      }
+    },
+    {
+      "id": "fr-seam-exact-duplicate",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "category": "duplicate",
+      "items": [
+        {
+          "label": "title",
+          "text": "Conditions de réservation",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "a-head",
+          "text": "Aucun remboursement après",
+          "strip": 1,
+          "quad": [
+            [
+              95,
+              1150
+            ],
+            [
+              565,
+              1150
+            ],
+            [
+              565,
+              1186
+            ],
+            [
+              95,
+              1186
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "a-tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              97,
+              1198
+            ],
+            [
+              337,
+              1198
+            ],
+            [
+              337,
+              1234
+            ],
+            [
+              97,
+              1234
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "b-head",
+          "text": "Aucun remboursement après",
+          "strip": 2,
+          "quad": [
+            [
+              95,
+              1150
+            ],
+            [
+              565,
+              1150
+            ],
+            [
+              565,
+              1186
+            ],
+            [
+              95,
+              1186
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "b-tail",
+          "text": "confirmation.",
+          "strip": 2,
+          "quad": [
+            [
+              97,
+              1198
+            ],
+            [
+              337,
+              1198
+            ],
+            [
+              337,
+              1234
+            ],
+            [
+              97,
+              1234
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [
+          [
+            "a-head",
+            "b-head",
+            "a-tail",
+            "b-tail"
+          ]
+        ],
+        "protectedItems": [
+          "a-head",
+          "a-tail",
+          "b-head",
+          "b-tail"
+        ],
+        "rationale": "Two observations per physical line; all four sources needed if grouped, otherwise withhold."
+      }
+    },
+    {
+      "id": "en-seam-drift-duplicate",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "category": "duplicate",
+      "items": [
+        {
+          "label": "title",
+          "text": "Booking details",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "a-head",
+          "text": "No refunds after",
+          "strip": 1,
+          "quad": [
+            [
+              100,
+              1150
+            ],
+            [
+              570,
+              1150
+            ],
+            [
+              570,
+              1186
+            ],
+            [
+              100,
+              1186
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "a-tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              102,
+              1198
+            ],
+            [
+              342,
+              1198
+            ],
+            [
+              342,
+              1234
+            ],
+            [
+              102,
+              1234
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "b-head",
+          "text": "No refunds after",
+          "strip": 2,
+          "quad": [
+            [
+              101,
+              1151
+            ],
+            [
+              571,
+              1151
+            ],
+            [
+              571,
+              1187
+            ],
+            [
+              101,
+              1187
+            ]
+          ],
+          "score": 0.4
+        },
+        {
+          "label": "b-tail",
+          "text": "confirmation.",
+          "strip": 2,
+          "quad": [
+            [
+              103,
+              1199
+            ],
+            [
+              343,
+              1199
+            ],
+            [
+              343,
+              1235
+            ],
+            [
+              103,
+              1235
+            ]
+          ],
+          "score": 0.7
+        }
+      ],
+      "oracle": {
+        "completeGroups": [
+          [
+            "a-head",
+            "b-head",
+            "a-tail",
+            "b-tail"
+          ]
+        ],
+        "protectedItems": [
+          "a-head",
+          "a-tail",
+          "b-head",
+          "b-tail"
+        ],
+        "rationale": "Small coordinate/score drift does not justify selecting one source."
+      }
+    },
+    {
+      "id": "fr-seam-polarity-conflict",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "category": "conflict",
+      "items": [
+        {
+          "label": "title",
+          "text": "Conditions de réservation",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "a-head",
+          "text": "Aucun remboursement après",
+          "strip": 1,
+          "quad": [
+            [
+              95,
+              1150
+            ],
+            [
+              565,
+              1150
+            ],
+            [
+              565,
+              1186
+            ],
+            [
+              95,
+              1186
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "a-tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              97,
+              1198
+            ],
+            [
+              337,
+              1198
+            ],
+            [
+              337,
+              1234
+            ],
+            [
+              97,
+              1234
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "b-head",
+          "text": "Remboursement possible après",
+          "strip": 2,
+          "quad": [
+            [
+              95,
+              1150
+            ],
+            [
+              565,
+              1150
+            ],
+            [
+              565,
+              1186
+            ],
+            [
+              95,
+              1186
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "b-tail",
+          "text": "confirmation.",
+          "strip": 2,
+          "quad": [
+            [
+              97,
+              1198
+            ],
+            [
+              337,
+              1198
+            ],
+            [
+              337,
+              1234
+            ],
+            [
+              97,
+              1234
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [],
+        "protectedItems": [
+          "a-head",
+          "a-tail",
+          "b-head",
+          "b-tail"
+        ],
+        "rationale": "Opposite source readings overlap; no complete trustworthy group."
+      }
+    },
+    {
+      "id": "en-duplicate-tail",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "category": "duplicate",
+      "items": [
+        {
+          "label": "title",
+          "text": "Booking details",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "No refunds after",
+          "strip": 1,
+          "quad": [
+            [
+              100,
+              1150
+            ],
+            [
+              570,
+              1150
+            ],
+            [
+              570,
+              1186
+            ],
+            [
+              100,
+              1186
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              102,
+              1198
+            ],
+            [
+              342,
+              1198
+            ],
+            [
+              342,
+              1234
+            ],
+            [
+              102,
+              1234
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail-copy",
+          "text": "confirmation.",
+          "strip": 2,
+          "quad": [
+            [
+              102,
+              1198
+            ],
+            [
+              342,
+              1198
+            ],
+            [
+              342,
+              1234
+            ],
+            [
+              102,
+              1234
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [
+          [
+            "head",
+            "tail",
+            "tail-copy"
+          ]
+        ],
+        "protectedItems": [
+          "head",
+          "tail",
+          "tail-copy"
+        ],
+        "rationale": "One head and duplicate tail observations; preserve all sources."
+      }
+    },
+    {
+      "id": "en-same-strip-copy",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "category": "conflict",
+      "items": [
+        {
+          "label": "title",
+          "text": "Booking details",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "No refunds after",
+          "strip": 0,
+          "quad": [
+            [
+              100,
+              350
+            ],
+            [
+              570,
+              350
+            ],
+            [
+              570,
+              390
+            ],
+            [
+              100,
+              390
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 0,
+          "quad": [
+            [
+              102,
+              406
+            ],
+            [
+              342,
+              406
+            ],
+            [
+              342,
+              446
+            ],
+            [
+              102,
+              446
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head-copy",
+          "text": "No refunds after",
+          "strip": 0,
+          "quad": [
+            [
+              101,
+              350
+            ],
+            [
+              571,
+              350
+            ],
+            [
+              571,
+              390
+            ],
+            [
+              101,
+              390
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [],
+        "protectedItems": [
+          "head",
+          "tail",
+          "head-copy"
+        ],
+        "rationale": "Same-strip duplicate has no independent strip evidence; retain ambiguity."
+      }
+    },
+    {
+      "id": "fr-repeated-different-rows",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "category": "duplicate",
+      "items": [
+        {
+          "label": "title",
+          "text": "Conditions de réservation",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "first-head",
+          "text": "Aucun remboursement après",
+          "strip": 0,
+          "quad": [
+            [
+              100,
+              300
+            ],
+            [
+              570,
+              300
+            ],
+            [
+              570,
+              340
+            ],
+            [
+              100,
+              340
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "first-tail",
+          "text": "confirmation.",
+          "strip": 0,
+          "quad": [
+            [
+              102,
+              356
+            ],
+            [
+              342,
+              356
+            ],
+            [
+              342,
+              396
+            ],
+            [
+              102,
+              396
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "second-head",
+          "text": "Aucun remboursement après",
+          "strip": 0,
+          "quad": [
+            [
+              100,
+              485
+            ],
+            [
+              570,
+              485
+            ],
+            [
+              570,
+              525
+            ],
+            [
+              100,
+              525
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "second-tail",
+          "text": "confirmation.",
+          "strip": 0,
+          "quad": [
+            [
+              102,
+              541
+            ],
+            [
+              342,
+              541
+            ],
+            [
+              342,
+              581
+            ],
+            [
+              102,
+              581
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [
+          [
+            "first-head",
+            "first-tail"
+          ],
+          [
+            "second-head",
+            "second-tail"
+          ]
+        ],
+        "protectedItems": [
+          "first-head",
+          "first-tail",
+          "second-head",
+          "second-tail"
+        ],
+        "rationale": "Identical wording at different rows represents two independent occurrences."
+      }
+    },
+    {
+      "id": "en-cross-column-fragment",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "category": "columns",
+      "items": [
+        {
+          "label": "title",
+          "text": "Booking details",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "No refunds after",
+          "strip": 0,
+          "quad": [
+            [
+              80,
+              300
+            ],
+            [
+              550,
+              300
+            ],
+            [
+              550,
+              340
+            ],
+            [
+              80,
+              340
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 0,
+          "quad": [
+            [
+              600,
+              356
+            ],
+            [
+              840,
+              356
+            ],
+            [
+              840,
+              396
+            ],
+            [
+              600,
+              396
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [],
+        "protectedItems": [
+          "head",
+          "tail"
+        ],
+        "rationale": "Orphan lines in different columns must not be joined."
+      }
+    },
+    {
+      "id": "fr-intervening-label",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "category": "intervening",
+      "items": [
+        {
+          "label": "title",
+          "text": "Conditions de réservation",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "Aucun remboursement après",
+          "strip": 0,
+          "quad": [
+            [
+              80,
+              300
+            ],
+            [
+              550,
+              300
+            ],
+            [
+              550,
+              340
+            ],
+            [
+              80,
+              340
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 0,
+          "quad": [
+            [
+              82,
+              365
+            ],
+            [
+              322,
+              365
+            ],
+            [
+              322,
+              405
+            ],
+            [
+              82,
+              405
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "intervening",
+          "text": "Prix : 45 €.",
+          "strip": 0,
+          "quad": [
+            [
+              82,
+              343
+            ],
+            [
+              332,
+              343
+            ],
+            [
+              332,
+              361
+            ],
+            [
+              82,
+              361
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [],
+        "protectedItems": [
+          "head",
+          "tail"
+        ],
+        "rationale": "A separate label intervenes; ownership of tail is not unique."
+      }
+    },
+    {
+      "id": "en-spaced-complete",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "category": "coverage",
+      "items": [
+        {
+          "label": "title",
+          "text": "Booking details",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "No refunds after",
+          "strip": 0,
+          "quad": [
+            [
+              100,
+              300
+            ],
+            [
+              570,
+              300
+            ],
+            [
+              570,
+              340
+            ],
+            [
+              100,
+              340
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 0,
+          "quad": [
+            [
+              102,
+              435
+            ],
+            [
+              342,
+              435
+            ],
+            [
+              342,
+              475
+            ],
+            [
+              102,
+              475
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [
+          [
+            "head",
+            "tail"
+          ]
+        ],
+        "protectedItems": [
+          "head",
+          "tail"
+        ],
+        "rationale": "Authored sentence spans a larger blank gap; conservative withholding is a coverage miss, not unsafe acceptance."
+      }
+    },
+    {
+      "id": "fr-indented-complete",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "category": "coverage",
+      "items": [
+        {
+          "label": "title",
+          "text": "Conditions de réservation",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "Aucun remboursement après",
+          "strip": 1,
+          "quad": [
+            [
+              80,
+              850
+            ],
+            [
+              550,
+              850
+            ],
+            [
+              550,
+              890
+            ],
+            [
+              80,
+              890
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              110,
+              906
+            ],
+            [
+              350,
+              906
+            ],
+            [
+              350,
+              946
+            ],
+            [
+              110,
+              946
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [
+          [
+            "head",
+            "tail"
+          ]
+        ],
+        "protectedItems": [
+          "head",
+          "tail"
+        ],
+        "rationale": "Authored complete sentence has a modest indentation beyond current tolerance."
+      }
+    },
+    {
+      "id": "en-trailing-exception",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "category": "continuation",
+      "items": [
+        {
+          "label": "title",
+          "text": "Booking details",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "No refunds after",
+          "strip": 0,
+          "quad": [
+            [
+              100,
+              300
+            ],
+            [
+              570,
+              300
+            ],
+            [
+              570,
+              340
+            ],
+            [
+              100,
+              340
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 0,
+          "quad": [
+            [
+              102,
+              356
+            ],
+            [
+              342,
+              356
+            ],
+            [
+              342,
+              396
+            ],
+            [
+              102,
+              396
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "exception",
+          "text": "Except when the service is cancelled.",
+          "strip": 0,
+          "quad": [
+            [
+              102,
+              410
+            ],
+            [
+              822,
+              410
+            ],
+            [
+              822,
+              450
+            ],
+            [
+              102,
+              450
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [
+          [
+            "head",
+            "tail",
+            "exception"
+          ]
+        ],
+        "protectedItems": [
+          "head",
+          "tail",
+          "exception"
+        ],
+        "rationale": "Following exception changes refund meaning; head and tail alone are incomplete."
+      }
+    },
+    {
+      "id": "fr-trailing-restriction",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "category": "continuation",
+      "items": [
+        {
+          "label": "title",
+          "text": "Conditions de réservation",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "Remboursement possible avant",
+          "strip": 1,
+          "quad": [
+            [
+              80,
+              700
+            ],
+            [
+              550,
+              700
+            ],
+            [
+              550,
+              740
+            ],
+            [
+              80,
+              740
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              82,
+              756
+            ],
+            [
+              322,
+              756
+            ],
+            [
+              322,
+              796
+            ],
+            [
+              82,
+              796
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "restriction",
+          "text": "Uniquement avec votre reçu.",
+          "strip": 1,
+          "quad": [
+            [
+              82,
+              810
+            ],
+            [
+              782,
+              810
+            ],
+            [
+              782,
+              850
+            ],
+            [
+              82,
+              850
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [
+          [
+            "head",
+            "tail",
+            "restriction"
+          ]
+        ],
+        "protectedItems": [
+          "head",
+          "tail",
+          "restriction"
+        ],
+        "rationale": "Receipt requirement cannot be omitted from a standalone translated condition."
+      }
+    },
+    {
+      "id": "en-leading-negated-claim",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "category": "continuation",
+      "items": [
+        {
+          "label": "title",
+          "text": "Booking details",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "negated-claim",
+          "text": "The following is NOT our refund policy:",
+          "strip": 0,
+          "quad": [
+            [
+              100,
+              240
+            ],
+            [
+              900,
+              240
+            ],
+            [
+              900,
+              280
+            ],
+            [
+              100,
+              280
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "No refunds after",
+          "strip": 0,
+          "quad": [
+            [
+              100,
+              300
+            ],
+            [
+              570,
+              300
+            ],
+            [
+              570,
+              340
+            ],
+            [
+              100,
+              340
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 0,
+          "quad": [
+            [
+              102,
+              356
+            ],
+            [
+              342,
+              356
+            ],
+            [
+              342,
+              396
+            ],
+            [
+              102,
+              396
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [
+          [
+            "negated-claim",
+            "head",
+            "tail"
+          ]
+        ],
+        "protectedItems": [
+          "negated-claim",
+          "head",
+          "tail"
+        ],
+        "rationale": "Preceding sentence explicitly negates the following claim; isolated pair is misleading."
+      }
+    },
+    {
+      "id": "fr-leading-prerequisite",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "category": "continuation",
+      "items": [
+        {
+          "label": "title",
+          "text": "Conditions de réservation",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "prerequisite",
+          "text": "Si le service est annulé :",
+          "strip": 1,
+          "quad": [
+            [
+              80,
+              640
+            ],
+            [
+              780,
+              640
+            ],
+            [
+              780,
+              680
+            ],
+            [
+              80,
+              680
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "Remboursement possible après",
+          "strip": 1,
+          "quad": [
+            [
+              80,
+              700
+            ],
+            [
+              550,
+              700
+            ],
+            [
+              550,
+              740
+            ],
+            [
+              80,
+              740
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              82,
+              756
+            ],
+            [
+              322,
+              756
+            ],
+            [
+              322,
+              796
+            ],
+            [
+              82,
+              796
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [
+          [
+            "prerequisite",
+            "head",
+            "tail"
+          ]
+        ],
+        "protectedItems": [
+          "prerequisite",
+          "head",
+          "tail"
+        ],
+        "rationale": "Refund only if service cancelled; prerequisite is part of the complete statement."
+      }
+    },
+    {
+      "id": "en-neutral-neighbour",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "category": "ordinary",
+      "items": [
+        {
+          "label": "title",
+          "text": "Booking details",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "No refunds after",
+          "strip": 0,
+          "quad": [
+            [
+              100,
+              300
+            ],
+            [
+              570,
+              300
+            ],
+            [
+              570,
+              340
+            ],
+            [
+              100,
+              340
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 0,
+          "quad": [
+            [
+              102,
+              356
+            ],
+            [
+              342,
+              356
+            ],
+            [
+              342,
+              396
+            ],
+            [
+              102,
+              396
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "support",
+          "text": "Support is available every day.",
+          "strip": 0,
+          "quad": [
+            [
+              102,
+              410
+            ],
+            [
+              822,
+              410
+            ],
+            [
+              822,
+              450
+            ],
+            [
+              102,
+              450
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [
+          [
+            "head",
+            "tail"
+          ]
+        ],
+        "protectedItems": [
+          "head",
+          "tail"
+        ],
+        "rationale": "Unrelated support line is context but does not alter the refund condition."
+      }
+    },
+    {
+      "id": "fr-independent-neighbour",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "category": "columns",
+      "items": [
+        {
+          "label": "title",
+          "text": "Conditions de réservation",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "Aucun remboursement après",
+          "strip": 0,
+          "quad": [
+            [
+              45,
+              320
+            ],
+            [
+              515,
+              320
+            ],
+            [
+              515,
+              360
+            ],
+            [
+              45,
+              360
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 0,
+          "quad": [
+            [
+              47,
+              376
+            ],
+            [
+              287,
+              376
+            ],
+            [
+              287,
+              416
+            ],
+            [
+              47,
+              416
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "delivery-title",
+          "text": "Livraison :",
+          "strip": 0,
+          "quad": [
+            [
+              590,
+              260
+            ],
+            [
+              940,
+              260
+            ],
+            [
+              940,
+              300
+            ],
+            [
+              590,
+              300
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "delivery",
+          "text": "Une adresse est nécessaire.",
+          "strip": 0,
+          "quad": [
+            [
+              590,
+              350
+            ],
+            [
+              1020,
+              350
+            ],
+            [
+              1020,
+              390
+            ],
+            [
+              590,
+              390
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [
+          [
+            "head",
+            "tail"
+          ]
+        ],
+        "protectedItems": [
+          "head",
+          "tail"
+        ],
+        "rationale": "Separate delivery column does not change refund statement."
+      }
+    },
+    {
+      "id": "en-clipped-head-conflict",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "category": "conflict",
+      "items": [
+        {
+          "label": "title",
+          "text": "Booking details",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head-clipped",
+          "text": "No refunds af",
+          "strip": 0,
+          "quad": [
+            [
+              100,
+              634
+            ],
+            [
+              570,
+              634
+            ],
+            [
+              570,
+              663
+            ],
+            [
+              100,
+              663
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head-full",
+          "text": "No refunds after",
+          "strip": 1,
+          "quad": [
+            [
+              100,
+              630
+            ],
+            [
+              570,
+              630
+            ],
+            [
+              570,
+              674
+            ],
+            [
+              100,
+              674
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              102,
+              690
+            ],
+            [
+              342,
+              690
+            ],
+            [
+              342,
+              730
+            ],
+            [
+              102,
+              730
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [],
+        "protectedItems": [
+          "head-clipped",
+          "head-full",
+          "tail"
+        ],
+        "rationale": "Partial read-edge fragment conflicts with the full head; keep provenance and withhold."
+      }
+    },
+    {
+      "id": "hans-source-only",
+      "language": "zh-Hans",
+      "width": 1200,
+      "height": 2400,
+      "category": "source-only",
+      "items": [
+        {
+          "label": "title",
+          "text": "订单说明",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "condition",
+          "text": "确认后不可退款。",
+          "strip": 0,
+          "quad": [
+            [
+              100,
+              350
+            ],
+            [
+              750,
+              350
+            ],
+            [
+              750,
+              390
+            ],
+            [
+              100,
+              390
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "context",
+          "text": "请核对订单信息。",
+          "strip": 0,
+          "quad": [
+            [
+              100,
+              430
+            ],
+            [
+              750,
+              430
+            ],
+            [
+              750,
+              470
+            ],
+            [
+              100,
+              470
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [],
+        "protectedItems": [],
+        "rationale": "Simplified Chinese remains source; no EN/FR phrase introduced."
+      }
+    },
+    {
+      "id": "hant-source-only",
+      "language": "zh-Hant",
+      "width": 1200,
+      "height": 2400,
+      "category": "source-only",
+      "items": [
+        {
+          "label": "title",
+          "text": "訂單說明",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              70
+            ],
+            [
+              700,
+              70
+            ],
+            [
+              700,
+              110
+            ],
+            [
+              50,
+              110
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "condition",
+          "text": "確認後不予退款。",
+          "strip": 0,
+          "quad": [
+            [
+              100,
+              350
+            ],
+            [
+              750,
+              350
+            ],
+            [
+              750,
+              390
+            ],
+            [
+              100,
+              390
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "context",
+          "text": "請核對訂單資料。",
+          "strip": 0,
+          "quad": [
+            [
+              100,
+              430
+            ],
+            [
+              750,
+              430
+            ],
+            [
+              750,
+              470
+            ],
+            [
+              100,
+              470
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "oracle": {
+        "completeGroups": [],
+        "protectedItems": [],
+        "rationale": "Traditional Chinese remains source; no EN/FR phrase introduced."
+      }
+    }
+  ]
+}
