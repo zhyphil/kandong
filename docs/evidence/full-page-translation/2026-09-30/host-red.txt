@@ -1,0 +1,29 @@
+...E{"schema": 1, "provider": "DeepL", "syntheticOnly": true, "qualityAccepted": false, "inputSha256": "80d273e04e60784a3f154655821b5072eee6ac2ffddd0f02e4f4df20330942d8", "rubricSha256": "8ae9c1953249b64c41f3f8cb9a68c71817449fa18a3d766fbaa7c73b6eed7a99", "calls": 23, "countsByTrack": {"AUTHORED_SOURCE": 9, "RECORDED_OCR_SOURCE": 14}, "chineseCalls": 0, "maxSourceCharacters": 700, "paceSeconds": 2, "retries": 0}
+.....F......
+======================================================================
+ERROR: test_documented_tag_metadata_does_not_replace_binding_checks (test_translation_full_page_recorded.RecordedTests.test_documented_tag_metadata_does_not_replace_binding_checks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_full_page_recorded.py", line 223, in test_documented_tag_metadata_does_not_replace_binding_checks
+    self.assertIsInstance(m.DeepLAdapter.response(row, response), dict)
+                          ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/translation_full_page_recorded.py", line 220, in response
+    require(set(item) <= {'text', 'detected_source_language', 'billed_characters', 'model_type_used'}, 'INVALID_RESPONSE_FIELDS')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/translation_full_page_recorded.py", line 53, in require
+    raise ValueError(code)
+ValueError: INVALID_RESPONSE_FIELDS
+
+======================================================================
+FAIL: test_only_individually_reviewed_ocr_rule_pass_becomes_candidate (test_translation_full_page_recorded.RecordedTests.test_only_individually_reviewed_ocr_rule_pass_becomes_candidate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_full_page_recorded.py", line 217, in test_only_individually_reviewed_ocr_rule_pass_becomes_candidate
+    self.assertTrue(all(o['kind'] == 'KEEP_ORIGINAL' for p in withheld['pages'] for o in p['outcomes']))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.444s
+
+FAILED (failures=1, errors=1)

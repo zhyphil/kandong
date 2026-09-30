@@ -24,11 +24,13 @@ import kotlin.math.roundToInt
 /** The UI is shared; default mode performs actual OCR on fixed authenticated PNG pixels only. */
 class RegionVisualLabSurface(private val activity: Activity, fixtureResources: Context) : RegionVisualLabActivity.Surface {
     companion object { const val PROTOCOL_VERSION = 2 }
-    private var realBackend: RegionVisualOcrBackend? = RegionVisualOcrBackend(activity.applicationContext,fixtureResources.assets)
+    private var realBackend: RegionVisualOcrBackend? = RegionVisualOcrBackend(activity.applicationContext,fixtureResources.assets,recorded=true)
     internal var session = RegionVisualSession(checkNotNull(realBackend)) { SystemClock.elapsedRealtime() }
         private set
     private val notice: String get() = if(session.synthetic) "合成手势回归 · 不运行 OCR、不翻译、不读取屏幕"
-        else "固定 PNG · 真实整页 OCR · 不读取屏幕\n本地绑定演示，非真实翻译"
+        else "固定 PNG · 真实整页 OCR · 不读取屏幕\n$replyNotice"
+    private val replyNotice:String get()=if(realBackend?.recorded==true) "已录制 DeepL 响应 · 本次未联网\n识别上下文含未核对内容；仅限开发实验" else "本地绑定演示，非真实翻译"
+    private val translateLabel:String get()=if(realBackend?.recorded==true) "译文回放" else "翻译演示"
     private val showLabel: String get() = if(session.synthetic) "展示样例" else "整页 OCR"
     private val handler=Handler(Looper.getMainLooper())
     private var active=false
@@ -74,14 +76,14 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
         actions.addView(button("菜单","lab_open_menu") { session.menu(); update() },LinearLayout.LayoutParams(0,dp(48),1f))
         content.addView(actions)
         val demoRow=LinearLayout(activity)
-        demoRow.addView(button("翻译演示","lab_translate") {
+        demoRow.addView(button(translateLabel,"lab_translate") {
             session.showSample(RegionVisualSession.StartMode.BINDING_DEMO); update()
         },LinearLayout.LayoutParams(dp(120),-2))
         demoRow.addView(button("取消","lab_cancel") { session.cancel(); update() },LinearLayout.LayoutParams(dp(72),-2))
         demoRow.addView(button("原文对照","lab_original") {
             realBackend?.translation?.choose(RegionVisualTranslationController.Display.ORIGINAL,SystemClock.elapsedRealtime()); update()
         },LinearLayout.LayoutParams(dp(88),-2))
-        demoRow.addView(button("演示结果","lab_demo") {
+        demoRow.addView(button(if(realBackend?.recorded==true) "录制译文" else "演示结果","lab_demo") {
             realBackend?.translation?.choose(RegionVisualTranslationController.Display.DEMO,SystemClock.elapsedRealtime()); update()
         },LinearLayout.LayoutParams(dp(88),-2))
         demoControls.addView(HorizontalScrollView(activity).apply { addView(demoRow); isFillViewport=true })
@@ -115,7 +117,7 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
         realScroll=ScrollView(activity).apply { tag="lab_page_scroll"; isFillViewport=true; addView(content) }
         realChrome=LinearLayout(activity).apply {
             orientation=LinearLayout.VERTICAL
-            addView(label("本地绑定演示，非真实翻译",14f,"lab_binding_notice"))
+            addView(label(replyNotice,14f,"lab_binding_notice"))
             addView(realScroll,LinearLayout.LayoutParams(-1,0,1f))
         }
         root.addView(realChrome,FrameLayout.LayoutParams(-1,-1))
@@ -216,18 +218,24 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
         zoom.text=String.format(Locale.ROOT,"%.2f 倍\n相对整页预览",s.scale)
         slider.progress=((s.scale-1)*100).roundToInt()
         demoControls.visibility=if(session.synthetic) View.GONE else View.VISIBLE
+        root.findViewWithTag<TextView>("lab_translate").text=translateLabel
+        root.findViewWithTag<TextView>("lab_demo").text=if(realBackend?.recorded==true) "录制译文" else "演示结果"
+        for(tag in listOf("lab_notice","lab_menu_notice","lab_collapsed_notice"))
+            root.findViewWithTag<TextView>(tag)?.text=notice
+        root.findViewWithTag<TextView>("lab_binding_notice")?.text=replyNotice
         val backend=realBackend
         val now=SystemClock.elapsedRealtime()
         val presentation=backend?.translation?.state(now)
         val isDemo=backend?.startMode==RegionVisualSession.StartMode.BINDING_DEMO
         translationStatus.text=when(presentation?.phase) {
             RegionVisualTranslationController.Phase.READING -> "正在读取固定整页 · 可取消"
-            RegionVisualTranslationController.Phase.WAITING -> "等待本地绑定演示回复 · 可取消"
-            RegionVisualTranslationController.Phase.READY -> "绑定展示就绪 · ${if(presentation.display==RegionVisualTranslationController.Display.ORIGINAL) "原文" else "演示"} · 非真实翻译"
-            RegionVisualTranslationController.Phase.ERROR -> "演示失败 · 请再次点击翻译演示"
-            RegionVisualTranslationController.Phase.EXPIRED -> "原始页面已过期 · 请再次点击翻译演示"
+            RegionVisualTranslationController.Phase.WAITING -> if(backend.recorded) "正在核对整页与录制输入 · 可取消" else "等待本地绑定演示回复 · 可取消"
+            RegionVisualTranslationController.Phase.READY -> if(backend.recorded && FullPageVisualOcrRunner.PAGES[s.pageIndex].language.startsWith("zh"))
+                "中文原文就绪 · 不请求翻译" else if(backend.recorded) "录制结果就绪 · 本次未联网 · 可对照原文" else "绑定展示就绪 · ${if(presentation.display==RegionVisualTranslationController.Display.ORIGINAL) "原文" else "演示"} · 非真实翻译"
+            RegionVisualTranslationController.Phase.ERROR -> "结果不可用或整页不匹配 · 请再次点击$translateLabel"
+            RegionVisualTranslationController.Phase.EXPIRED -> "原始页面已过期 · 请再次点击$translateLabel"
             RegionVisualTranslationController.Phase.CANCELLED -> "已取消 · 恢复不会自动读取"
-            else -> "点击翻译演示才读取固定整页"
+            else -> "点击$translateLabel 才读取固定整页"
         }
         demoRender=if(isDemo && s.frame!=null) backend?.translation?.render(s.roi,session.mirrorTransform(),now) else null
         demoSourceMap=if(isDemo && s.frame!=null) backend?.translation?.sourceMap(now) ?: emptyMap() else emptyMap()
@@ -247,7 +255,8 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
                 val ordinal=ordinals[candidate.provenance.id] ?: return@forEach
                 val raw=card.sourceText.ifEmpty { "〔空字符串候选〕" }
                 val reason=when(card.reason) {
-                    "AWAITING_HANDCRAFTED_FIXTURE", "NO_RECORDED_RESULT", null -> "尚无绑定演示结果"
+                    "CHECK_UNVERIFIED" -> "译文尚未通过核对，请先看原文"
+                    "AWAITING_HANDCRAFTED_FIXTURE", "NO_RECORDED_RESULT", null -> "尚无对应结果"
                     else -> if(card.reason?.contains("CONFLICT")==true) "候选冲突，保留原文" else "候选信息不完整，保留原文"
                 }
                 val text=when {

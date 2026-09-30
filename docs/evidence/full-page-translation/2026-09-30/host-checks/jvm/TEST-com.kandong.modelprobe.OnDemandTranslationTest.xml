@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.OnDemandTranslationTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-09-30T20:55:36.434Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.002">
+  <properties/>
+  <testcase name="originalModeAndClockFailureNeedAnotherClick" classname="com.kandong.modelprobe.OnDemandTranslationTest" time="0.001"/>
+  <testcase name="oneClickPreparesWholePageAndMovingRegionOnlyChangesDisplay" classname="com.kandong.modelprobe.OnDemandTranslationTest" time="0.0"/>
+  <testcase name="pageChangesRevokeCaptureAndDoNotAutomaticallyRecapture" classname="com.kandong.modelprobe.OnDemandTranslationTest" time="0.001"/>
+  <testcase name="observeMoveZoomAndTimeDoNotCreateCaptureOrTranslation" classname="com.kandong.modelprobe.OnDemandTranslationTest" time="0.0"/>
+  <testcase name="pauseMenuStopAndPageChangeRevokeLateResponses" classname="com.kandong.modelprobe.OnDemandTranslationTest" time="0.0"/>
+  <testcase name="captureAndResultsExpireWithoutStartingAnythingElse" classname="com.kandong.modelprobe.OnDemandTranslationTest" time="0.0"/>
+  <testcase name="wrongPageOrPreClickSnapshotCannotBeAccepted" classname="com.kandong.modelprobe.OnDemandTranslationTest" time="0.0"/>
+  <testcase name="staleCaptureCannotCancelNewClickAndCaptureIsConsumedOnce" classname="com.kandong.modelprobe.OnDemandTranslationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

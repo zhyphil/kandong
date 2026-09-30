@@ -27,7 +27,11 @@ class RegionVisualTranslationUiTest {
         activity=instrumentation.startActivitySync(Intent(instrumentation.targetContext,RegionVisualLabActivity::class.java)
             .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) as RegionVisualLabActivity
         instrumentation.waitForIdleSync()
-        main { surface=activity.labSurface as RegionVisualLabSurface }
+        main {
+            surface=activity.labSurface as RegionVisualLabSurface
+            // This class explicitly exercises the old marker scheduler; recorded outcomes have a separate suite.
+            surface.installRealBackendForProbe(RegionVisualOcrBackend(instrumentation.targetContext,instrumentation.context.assets))
+        }
         await { surface.isForeground() && surface.source.width>0 }
     }
     @After fun finish() {

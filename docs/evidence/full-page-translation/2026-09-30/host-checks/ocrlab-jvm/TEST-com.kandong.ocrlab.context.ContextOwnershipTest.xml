@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.ocrlab.context.ContextOwnershipTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-09-30T19:50:47.576Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.0">
+  <properties/>
+  <testcase name="crossCardRelationRejectsSnapshotAndRevokesPreviousResults" classname="com.kandong.ocrlab.context.ContextOwnershipTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

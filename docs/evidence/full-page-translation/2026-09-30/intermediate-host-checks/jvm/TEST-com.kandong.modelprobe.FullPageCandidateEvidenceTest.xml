@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.FullPageCandidateEvidenceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-09-30T20:55:36.258Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.0">
+  <properties/>
+  <testcase name="independentSnapshotWithSameValuesMatches" classname="com.kandong.modelprobe.FullPageCandidateEvidenceTest" time="0.0"/>
+  <testcase name="everyEvidenceFieldChangeAndScoreBitChangeIsRejected" classname="com.kandong.modelprobe.FullPageCandidateEvidenceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.LanguageRouteTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-30T20:55:36.433Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.001">
+  <properties/>
+  <testcase name="strongerUnsupportedCandidateMustNotBeFilteredBeforeChoosing" classname="com.kandong.modelprobe.LanguageRouteTest" time="0.0"/>
+  <testcase name="originalChineseAccentsAndLiteralValuesAreNeverRewritten" classname="com.kandong.modelprobe.LanguageRouteTest" time="0.001"/>
+  <testcase name="lowScoresTiesAndNarrowGapsRejectAndEvidenceOrderDoesNotMatter" classname="com.kandong.modelprobe.LanguageRouteTest" time="0.0"/>
+  <testcase name="invalidScoresDuplicatesAndOversizedInputFailClosed" classname="com.kandong.modelprobe.LanguageRouteTest" time="0.0"/>
+  <testcase name="shortMixedScriptAndOcrConflictStayUncertainEvenAtHighScore" classname="com.kandong.modelprobe.LanguageRouteTest" time="0.0"/>
+  <testcase name="noExpectedAnswerOrGlyphImpliesALanguage" classname="com.kandong.modelprobe.LanguageRouteTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

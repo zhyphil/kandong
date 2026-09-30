@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.FullPageOcrAssociationReplayTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-09-30T20:55:36.259Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.088">
+  <properties/>
+  <testcase name="archivedBothDevicesKeepEveryCandidateAndStableAssociations" classname="com.kandong.modelprobe.FullPageOcrAssociationReplayTest" time="0.088"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

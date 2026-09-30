@@ -19,15 +19,17 @@ internal object RegionVisualOcrRuntime {
 }
 
 internal class RegionVisualOcrBackend(application: Context, fixtureAssets: AssetManager,
+    val recorded:Boolean=false,
     afterInferenceForProbe: () -> Unit = {}) : RegionVisualSession.Backend, RegionVisualDemoReplies.Receiver {
     private val runner = FullPageVisualOcrRunner(application.applicationContext, fixtureAssets,afterInferenceForProbe)
     private val bridge = RegionOcrBridge<RegionOcrBridge.Evidence<FullPageVisualOcrRunner.Result>>(RegionVisualOcrRuntime.slot,
         RegionVisualOcrRuntime::worker, RegionVisualOcrRuntime::main, SystemClock::elapsedRealtime,
         { error("EXPLICIT_PAGE_REQUIRED") })
-    val translation=RegionVisualTranslationController()
+    val translation=if(recorded) RegionVisualTranslationController(RecordedFullPageTranslation.choice(RecordedRegionVisualReplies.SHA))
+        else RegionVisualTranslationController()
     var startMode=RegionVisualSession.StartMode.OCR_ONLY
         private set
-    private var scheduler: RegionVisualDemoReplies=HandlerRegionVisualDemoReplies()
+    private var scheduler: RegionVisualDemoReplies=if(recorded) RecordedRegionVisualReplies.scheduler(fixtureAssets) else HandlerRegionVisualDemoReplies()
     private var handle: RegionVisualDemoReplies.Handle?=null
     private var scheduledRun: RegionVisualTranslationController.Run?=null
     private var scheduledRequest: FullPageTranslationProbe.ProbeRequest?=null

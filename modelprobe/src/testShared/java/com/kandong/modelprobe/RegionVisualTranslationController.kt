@@ -4,12 +4,13 @@ import com.kandong.ocrlab.context.*
 import com.kandong.ocrlab.context.capture.CaptureVersion
 
 /** Presentation only. Probe remains the sole validator of source identity, bindings and TTL. */
-internal class RegionVisualTranslationController {
+internal class RegionVisualTranslationController(provider: TranslationProviderChoice = TranslationProviderChoice(TranslationMode.LOCAL,
+    "BINDING_TEST_ONLY_NO_TRANSLATION_MODEL", "fixed-page-contract-v1", configured=true)) {
     enum class Phase { IDLE, READING, WAITING, READY, ERROR, EXPIRED, CANCELLED }
     enum class Display { ORIGINAL, DEMO }
     class Run internal constructor(internal val ticket: FullPageTranslationProbe.Ticket)
     data class State(val phase: Phase, val display: Display, val revision: Long)
-    private val probe=FullPageTranslationProbe()
+    private val probe=FullPageTranslationProbe(provider)
     private var run: Run?=null
     private var request: FullPageTranslationProbe.ProbeRequest?=null
     private var phase=Phase.IDLE

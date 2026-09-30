@@ -1,0 +1,15 @@
+{
+  "tests": 57,
+  "classes": [
+    "RecordedRegionVisualUiTest#recordedCancelAndCollapseNeverKeepCardsOrAutomaticallyReadAgain",
+    "RecordedRegionVisualUiTest#recordedResultExpiresAtOriginalAcquisitionAndOneClickStartsNewOcr",
+    "RegionVisualTranslationUiTest",
+    "FullPageTranslationProbeTest",
+    "FullPageTranslationOcrTest",
+    "RegionVisualLabUiTest",
+    "RegionOcrBridgeTest",
+    "RecordedFullPageTranslationTest",
+    "RegionVisualOcrUiTest"
+  ],
+  "scope": "fixed page actual OCR and asynchronous binding demo UI; no translation quality claim"
+}

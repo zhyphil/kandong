@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.RegionOcrBridgeTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-09-30T20:55:36.505Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.002">
+  <properties/>
+  <testcase name="sharedSlotPreventsConcurrentWorkAcrossSurfaceReplacement" classname="com.kandong.modelprobe.RegionOcrBridgeTest" time="0.001"/>
+  <testcase name="alreadyExpiredDeliveryIsRejectedAndCannotRevive" classname="com.kandong.modelprobe.RegionOcrBridgeTest" time="0.0"/>
+  <testcase name="workerValidationTimeIsNotAllowedToMoveBackwardsAtDelivery" classname="com.kandong.modelprobe.RegionOcrBridgeTest" time="0.0"/>
+  <testcase name="cancellationImmediatelyClearsAndDoesNotReleaseNativeSlotUntilReturn" classname="com.kandong.modelprobe.RegionOcrBridgeTest" time="0.0"/>
+  <testcase name="queuedOldSuccessCannotReplaceOrRevokeNewerDisplay" classname="com.kandong.modelprobe.RegionOcrBridgeTest" time="0.0"/>
+  <testcase name="delayedDeliveryUsesAcquisitionDeadlineAndNeverRenews" classname="com.kandong.modelprobe.RegionOcrBridgeTest" time="0.0"/>
+  <testcase name="rejectedExecutorReleasesReservationWithoutInventingCleanupFailure" classname="com.kandong.modelprobe.RegionOcrBridgeTest" time="0.0"/>
+  <testcase name="cleanupUncertaintyPoisonsSharedSlotAcrossReplacement" classname="com.kandong.modelprobe.RegionOcrBridgeTest" time="0.0"/>
+  <testcase name="queuedOldFailureCannotChangeNewerResult" classname="com.kandong.modelprobe.RegionOcrBridgeTest" time="0.0"/>
+  <testcase name="pendingUiClockHistoryIsStickyAcrossDeliveryAndRetry" classname="com.kandong.modelprobe.RegionOcrBridgeTest" time="0.0"/>
+  <testcase name="explicitStartIsAsyncAndOneRunningWithZeroQueuedRetries" classname="com.kandong.modelprobe.RegionOcrBridgeTest" time="0.0"/>
+  <testcase name="linkageFailureIsLocalAndDoesNotPoisonAResourceFreeSlot" classname="com.kandong.modelprobe.RegionOcrBridgeTest" time="0.0"/>
+  <testcase name="evidenceAcquiredBeforeThisExplicitClickIsRejected" classname="com.kandong.modelprobe.RegionOcrBridgeTest" time="0.0"/>
+  <testcase name="cancellationClearsDisplayedValueAndLateCallbacksStayCleared" classname="com.kandong.modelprobe.RegionOcrBridgeTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

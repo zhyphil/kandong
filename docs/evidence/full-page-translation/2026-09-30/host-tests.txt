@@ -1,0 +1,9 @@
+...............................................{"completed": 1, "of": 14}
+......../opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 403: 'dummy-not-a-real-credential-123456'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+....................{"schema": 1, "provider": "DeepL", "syntheticOnly": true, "qualityAccepted": false, "inputSha256": "80d273e04e60784a3f154655821b5072eee6ac2ffddd0f02e4f4df20330942d8", "rubricSha256": "e3980f866d37b46f91cefe71dc89195c131a04c6ee24705760c1e87095a43e46", "calls": 23, "countsByTrack": {"AUTHORED_SOURCE": 9, "RECORDED_OCR_SOURCE": 14}, "chineseCalls": 0, "maxSourceCharacters": 700, "paceSeconds": 2, "retries": 0}
+..........................................
+----------------------------------------------------------------------
+Ran 117 tests in 1.164s
+
+OK

@@ -1,0 +1,40 @@
+{
+  "ocrlabJvm": {
+    "tests": 76,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "ocrlabLint": {
+    "Error": 0,
+    "Warning": 30,
+    "Fatal": 0
+  },
+  "jvm": {
+    "tests": 271,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "Error": 0,
+    "Warning": 4,
+    "Fatal": 0
+  },
+  "apks": {
+    "com.kandong.modelprobe": "214b503f34ef14aa020773bd5ead66e4e51e7909c1a5dea34003f8ef1b2b3ed4",
+    "com.kandong.modelprobe.test": "2f0e471d8b1cf264a560682706c4102ff45a6e41656115c9e871ea975cf723b3"
+  },
+  "sourceSha256": {
+    "modelprobe/src/androidTest/assets/full-page-translation-recorded-v1.json": "3ca858be7e1b99e78b4f6903b6998ad50a9ee6366e357947ff8c8c49c81e369f",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RecordedRegionVisualUiTest.kt": "10f2e27a8106d3e269f66074a56a72b7fef2ddd32d8ddc2595088ec51dd38cc3",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/RecordedFullPageTranslationTest.kt": "bca1b18b9ec04c15f59ade5446a69adfa8e788aa62c643badda0dc8c5ef5c711",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/RecordedFullPageTranslation.kt": "6e63b84f0eb9c4299ec27c17eb6f9a90cc644551aa369a82ccafc21e34334ce0",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualDemoReplies.kt": "939a323de61cee3e7a32ac73268b1cc9e9aa3d261ca86027bde0339512bebd7a",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualLabSurface.kt": "4251e54dec65a20a1c984ed68e22c5de5dffdeba0a3fb7f6db6143e1c6198775",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualOcrBackend.kt": "6f2ab8bbc25132bd6ea59e0a802923c7a625e29667d5eb9e1c19721b448a7678",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualTranslationUiTest.kt": "7cd21e4e395701d9f0c44bc03d21b6823d9d5ff47c9121dcdbedb10fbd148793",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageTranslationProbe.kt": "5dfc71e2068faf38c316605ca4155849864441097fd675cde1adc0470070d6a0",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/RegionVisualTranslationController.kt": "c34256f8d92abee4d13f1c22fc11199cd0e10717ead7807ed19ee340e35ebf70"
+  }
+}

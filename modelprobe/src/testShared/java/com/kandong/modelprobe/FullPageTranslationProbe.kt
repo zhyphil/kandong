@@ -8,14 +8,14 @@ import com.kandong.ocrlab.context.capture.CaptureVersion
  * original owner's evidence remains current. This class checks metadata, never claims resource
  * cleanup authority. The owner must observe every full version change and clear on lifecycle loss.
  */
-internal class FullPageTranslationProbe {
+internal class FullPageTranslationProbe(provider: TranslationProviderChoice = TranslationProviderChoice(TranslationMode.LOCAL,
+    "BINDING_TEST_ONLY_NO_TRANSLATION_MODEL", "fixed-page-contract-v1", configured=true)) {
     class Ticket internal constructor(internal val version: CaptureVersion, internal val capture: OnDemandTranslation.Capture)
     class ProbeRequest internal constructor(val contract: FixtureRequest,
         val evidence: FullPageTranslationAdapter.Evidence,
         val sourceMap: Map<String, FullPageOcrContract.Candidate>)
     private val owner = Thread.currentThread()
-    private val translation = OnDemandTranslation(TranslationProviderChoice(TranslationMode.LOCAL,
-        "BINDING_TEST_ONLY_NO_TRANSLATION_MODEL", "fixed-page-contract-v1", configured=true))
+    private val translation = OnDemandTranslation(provider)
     private var version: CaptureVersion? = null
     private var ticket: Ticket? = null
     private var page: FullPageTranslationAdapter.AdaptedPage? = null

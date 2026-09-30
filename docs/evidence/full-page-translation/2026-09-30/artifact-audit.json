@@ -1,0 +1,21 @@
+{
+  "offlineReexportEqual": true,
+  "recordingSha256": "3ca858be7e1b99e78b4f6903b6998ad50a9ee6366e357947ff8c8c49c81e369f",
+  "bytes": 54829,
+  "networkCalls": 0,
+  "sourceHashesCurrent": true,
+  "apks": {
+    "modelprobe-debug.apk": {
+      "sha256": "214b503f34ef14aa020773bd5ead66e4e51e7909c1a5dea34003f8ef1b2b3ed4",
+      "permissions": [],
+      "recordingPresent": false
+    },
+    "modelprobe-debug-androidTest.apk": {
+      "sha256": "2f0e471d8b1cf264a560682706c4102ff45a6e41656115c9e871ea975cf723b3",
+      "permissions": [
+        "com.kandong.modelprobe.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "recordingPresent": true
+    }
+  }
+}
