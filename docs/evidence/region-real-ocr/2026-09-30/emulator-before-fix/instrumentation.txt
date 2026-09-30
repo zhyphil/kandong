@@ -1,0 +1,559 @@
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+com.kandong.modelprobe.RegionOcrBridgeTest:
+INSTRUMENTATION_STATUS: test=sharedSlotPreventsConcurrentWorkAcrossSurfaceReplacement
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=sharedSlotPreventsConcurrentWorkAcrossSurfaceReplacement
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=alreadyExpiredDeliveryIsRejectedAndCannotRevive
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=alreadyExpiredDeliveryIsRejectedAndCannotRevive
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=workerValidationTimeIsNotAllowedToMoveBackwardsAtDelivery
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=workerValidationTimeIsNotAllowedToMoveBackwardsAtDelivery
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=cancellationImmediatelyClearsAndDoesNotReleaseNativeSlotUntilReturn
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=cancellationImmediatelyClearsAndDoesNotReleaseNativeSlotUntilReturn
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=queuedOldSuccessCannotReplaceOrRevokeNewerDisplay
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=queuedOldSuccessCannotReplaceOrRevokeNewerDisplay
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=delayedDeliveryUsesAcquisitionDeadlineAndNeverRenews
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=delayedDeliveryUsesAcquisitionDeadlineAndNeverRenews
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=rejectedExecutorReleasesReservationWithoutInventingCleanupFailure
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=rejectedExecutorReleasesReservationWithoutInventingCleanupFailure
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=cleanupUncertaintyPoisonsSharedSlotAcrossReplacement
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=cleanupUncertaintyPoisonsSharedSlotAcrossReplacement
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=queuedOldFailureCannotChangeNewerResult
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=queuedOldFailureCannotChangeNewerResult
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=pendingUiClockHistoryIsStickyAcrossDeliveryAndRetry
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=pendingUiClockHistoryIsStickyAcrossDeliveryAndRetry
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=explicitStartIsAsyncAndOneRunningWithZeroQueuedRetries
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=explicitStartIsAsyncAndOneRunningWithZeroQueuedRetries
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=linkageFailureIsLocalAndDoesNotPoisonAResourceFreeSlot
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=linkageFailureIsLocalAndDoesNotPoisonAResourceFreeSlot
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=evidenceAcquiredBeforeThisExplicitClickIsRejected
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=evidenceAcquiredBeforeThisExplicitClickIsRejected
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=cancellationClearsDisplayedValueAndLateCallbacksStayCleared
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionOcrBridgeTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=cancellationClearsDisplayedValueAndLateCallbacksStayCleared
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+com.kandong.modelprobe.RegionVisualSessionTest:
+INSTRUMENTATION_STATUS: test=blankPageIsNotAnUntriggeredOrExpiredPage
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=blankPageIsNotAnUntriggeredOrExpiredPage
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=asyncPageBoundsClampMinimumToEachActualPageWithoutStartingWork
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=asyncPageBoundsClampMinimumToEachActualPageWithoutStartingWork
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=17
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=asyncEvidenceReusesOriginalMetadataAndPageForAllGeometry
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=17
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=asyncEvidenceReusesOriginalMetadataAndPageForAllGeometry
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=18
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=narrowSelectionKeepsOffRoiConflictingMemberInContext
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=18
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=narrowSelectionKeepsOffRoiConflictingMemberInContext
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=19
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=extremeMovesAndResizesStayWithinPageAndRejectNonFiniteChanges
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=19
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=extremeMovesAndResizesStayWithinPageAndRejectNonFiniteChanges
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=20
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=originalSixtySecondDeadlineClearsAndCannotReviveOnClockRollback
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=20
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=originalSixtySecondDeadlineClearsAndCannotReviveOnClockRollback
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=21
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=moveScalePanResizeReuseSamePageAndOriginalAcquiredTime
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=21
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=moveScalePanResizeReuseSamePageAndOriginalAcquiredTime
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=22
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=menuRestoresCollapsedModeWithoutReloadingOrOldText
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=22
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=menuRestoresCollapsedModeWithoutReloadingOrOldText
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=23
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=collapsedRestorePreservesRegionScaleAndPanButRequiresAnotherClick
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=23
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=collapsedRestorePreservesRegionScaleAndPanButRequiresAnotherClick
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=24
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=independentFreeCornerAndZoomUseSourceCoordinates
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=24
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=independentFreeCornerAndZoomUseSourceCoordinates
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=25
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=everyAsyncInvalidationDropsEvidenceAndRestoreNeverStartsWork
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=25
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=everyAsyncInvalidationDropsEvidenceAndRestoreNeverStartsWork
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=26
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=backgroundAndStopClearDisplayedResultsWithoutAutoReload
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=26
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=backgroundAndStopClearDisplayedResultsWithoutAutoReload
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=27
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=viewportAndGeometryNormalizePanWithoutLoadingOrRenewing
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=27
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=viewportAndGeometryNormalizePanWithoutLoadingOrRenewing
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=28
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=clockRollbackDuringActiveDisplayClearsPermanently
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=28
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=clockRollbackDuringActiveDisplayClearsPermanently
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=29
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=onlyExplicitShowLoadsAndRetainsWholeEvidenceWithConflictAndEmpty
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=29
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=onlyExplicitShowLoadsAndRetainsWholeEvidenceWithConflictAndEmpty
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=30
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=oldRefreshAfterNewExplicitShowUsesNewDeadline
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=30
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=oldRefreshAfterNewExplicitShowUsesNewDeadline
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=31
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=fixtureUsesActualStripOverlapAndRetainsOffRoiConflictMember
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=31
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=fixtureUsesActualStripOverlapAndRetainsOffRoiConflictMember
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=32
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=stoppedExplicitRestartAndBackgroundClickBoundary
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualSessionTest
+INSTRUMENTATION_STATUS: current=32
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=stoppedExplicitRestartAndBackgroundClickBoundary
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.FullPageVisualOcrProbeTest
+INSTRUMENTATION_STATUS: current=33
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+com.kandong.modelprobe.FullPageVisualOcrProbeTest:
+INSTRUMENTATION_STATUS: test=fourExplicitInferencesRetainRawEvidenceAndCloseBeforeGeometry
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.FullPageVisualOcrProbeTest
+INSTRUMENTATION_STATUS: current=33
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Local fixed-page runner failure expected null, but was:<OCR_LOCAL_FAILURE>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at com.kandong.modelprobe.FullPageVisualOcrProbeTest.awaitResult$lambda$0(FullPageVisualOcrProbeTest.kt:94)
+	at com.kandong.modelprobe.FullPageVisualOcrProbeTest.$r8$lambda$hpfIGeS_4FoqKKXaMAsOMeFbPfA(FullPageVisualOcrProbeTest.kt:0)
+	at com.kandong.modelprobe.FullPageVisualOcrProbeTest$$ExternalSyntheticLambda7.invoke(D8$$SyntheticClass:0)
+	at com.kandong.modelprobe.FullPageVisualOcrProbeTest.main$lambda$0(FullPageVisualOcrProbeTest.kt:17)
+	at com.kandong.modelprobe.FullPageVisualOcrProbeTest.$r8$lambda$tm5iQBsNIN9TzTs-_HCh2JR8vAk(FullPageVisualOcrProbeTest.kt:0)
+	at com.kandong.modelprobe.FullPageVisualOcrProbeTest$$ExternalSyntheticLambda6.run(D8$$SyntheticClass:0)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:520)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2675)
+	at android.os.Handler.handleCallback(Handler.java:1082)
+	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+	at android.os.Handler.dispatchMessage(Handler.java:126)
+	at android.os.Looper.loopOnce(Looper.java:295)
+	at android.os.Looper.loop(Looper.java:398)
+	at android.app.ActivityThread.main(ActivityThread.java:9569)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+
+INSTRUMENTATION_STATUS: stream=
+Error in fourExplicitInferencesRetainRawEvidenceAndCloseBeforeGeometry(com.kandong.modelprobe.FullPageVisualOcrProbeTest):
+java.lang.AssertionError: Local fixed-page runner failure expected null, but was:<OCR_LOCAL_FAILURE>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at com.kandong.modelprobe.FullPageVisualOcrProbeTest.awaitResult$lambda$0(FullPageVisualOcrProbeTest.kt:94)
+	at com.kandong.modelprobe.FullPageVisualOcrProbeTest.$r8$lambda$hpfIGeS_4FoqKKXaMAsOMeFbPfA(FullPageVisualOcrProbeTest.kt:0)
+	at com.kandong.modelprobe.FullPageVisualOcrProbeTest$$ExternalSyntheticLambda7.invoke(D8$$SyntheticClass:0)
+	at com.kandong.modelprobe.FullPageVisualOcrProbeTest.main$lambda$0(FullPageVisualOcrProbeTest.kt:17)
+	at com.kandong.modelprobe.FullPageVisualOcrProbeTest.$r8$lambda$tm5iQBsNIN9TzTs-_HCh2JR8vAk(FullPageVisualOcrProbeTest.kt:0)
+	at com.kandong.modelprobe.FullPageVisualOcrProbeTest$$ExternalSyntheticLambda6.run(D8$$SyntheticClass:0)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:520)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2675)
+	at android.os.Handler.handleCallback(Handler.java:1082)
+	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+	at android.os.Handler.dispatchMessage(Handler.java:126)
+	at android.os.Looper.loopOnce(Looper.java:295)
+	at android.os.Looper.loop(Looper.java:398)
+	at android.app.ActivityThread.main(ActivityThread.java:9569)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+
+INSTRUMENTATION_STATUS: test=fourExplicitInferencesRetainRawEvidenceAndCloseBeforeGeometry
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.FullPageVisualOcrProbeTest
+INSTRUMENTATION_STATUS: current=34
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=fourPreparedPagesDeliverIdenticalRgbaRowsToActualImageWithoutAnotherDecode
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.FullPageVisualOcrProbeTest
+INSTRUMENTATION_STATUS: current=34
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=fourPreparedPagesDeliverIdenticalRgbaRowsToActualImageWithoutAnotherDecode
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualOcrUiTest
+INSTRUMENTATION_STATUS: current=35
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+com.kandong.modelprobe.RegionVisualOcrUiTest:
+INSTRUMENTATION_STATUS: test=defaultRealUiRendersFourPagesAndGeometryReusesThisInference
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualOcrUiTest
+INSTRUMENTATION_STATUS: current=35
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Fixed-fixture UI condition timed out
+	at com.kandong.modelprobe.RegionVisualOcrUiTest.waitUntil(RegionVisualOcrUiTest.kt:50)
+	at com.kandong.modelprobe.RegionVisualOcrUiTest.defaultRealUiRendersFourPagesAndGeometryReusesThisInference(RegionVisualOcrUiTest.kt:55)
+
+INSTRUMENTATION_STATUS: stream=
+Error in defaultRealUiRendersFourPagesAndGeometryReusesThisInference(com.kandong.modelprobe.RegionVisualOcrUiTest):
+java.lang.AssertionError: Fixed-fixture UI condition timed out
+	at com.kandong.modelprobe.RegionVisualOcrUiTest.waitUntil(RegionVisualOcrUiTest.kt:50)
+	at com.kandong.modelprobe.RegionVisualOcrUiTest.defaultRealUiRendersFourPagesAndGeometryReusesThisInference(RegionVisualOcrUiTest.kt:55)
+
+INSTRUMENTATION_STATUS: test=defaultRealUiRendersFourPagesAndGeometryReusesThisInference
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualOcrUiTest
+INSTRUMENTATION_STATUS: current=36
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=83
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=mainRemainsResponsiveDuringRequestAndCancellationCannotRevive
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_RESULT: shortMsg=Process crashed.
+INSTRUMENTATION_CODE: 0

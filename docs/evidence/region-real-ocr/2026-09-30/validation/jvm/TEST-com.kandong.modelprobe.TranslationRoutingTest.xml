@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.TranslationRoutingTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-09-30T19:27:10.279Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.001">
+  <properties/>
+  <testcase name="consentCannotCarryIntoAnotherSessionOrUnconfiguredProvider" classname="com.kandong.modelprobe.TranslationRoutingTest" time="0.0"/>
+  <testcase name="providerSwitchAndDisclosureChangeInvalidateOldResultsAndConsent" classname="com.kandong.modelprobe.TranslationRoutingTest" time="0.001"/>
+  <testcase name="localFailureNeverSelectsOnlineOrStartsNewWork" classname="com.kandong.modelprobe.TranslationRoutingTest" time="0.0"/>
+  <testcase name="moveZoomAndSameProviderDoNotRepeatCaptureAndWrongProvenanceIsRejected" classname="com.kandong.modelprobe.TranslationRoutingTest" time="0.0"/>
+  <testcase name="switchingDuringCaptureDiscardsLateCapture" classname="com.kandong.modelprobe.TranslationRoutingTest" time="0.0"/>
+  <testcase name="pauseMenuAndPageChangeClearTextAndRequireClickButStopAlsoRevokesSessionConsent" classname="com.kandong.modelprobe.TranslationRoutingTest" time="0.0"/>
+  <testcase name="networkLossClearsWorkAndReconnectionWaitsForNewClick" classname="com.kandong.modelprobe.TranslationRoutingTest" time="0.0"/>
+  <testcase name="unavailableLocalDoesNotFallBackAndOnlineRequiresChoiceAndConsentBeforeCapture" classname="com.kandong.modelprobe.TranslationRoutingTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,9 @@
+{
+  "tests": 7,
+  "classes": [
+    "FullPageCandidateEvidenceTest",
+    "FullPageVisualOcrProbeTest",
+    "RegionVisualOcrUiTest"
+  ],
+  "scope": "fixed synthetic page actual OCR and behavioral regression only"
+}

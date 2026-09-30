@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.FullPageStripPlannerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-09-30T19:21:54.899Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.029">
+  <properties/>
+  <testcase name="detectorEdgesAndInteriorMapBackToOriginalScreenCoordinates" classname="com.kandong.modelprobe.FullPageStripPlannerTest" time="0.0"/>
+  <testcase name="smallPageHasOneUncroppedStripAndCollectionCannotBeChanged" classname="com.kandong.modelprobe.FullPageStripPlannerTest" time="0.001"/>
+  <testcase name="rejectsUnsupportedGeometryAndWholeFrameBudgetBeforePlanning" classname="com.kandong.modelprobe.FullPageStripPlannerTest" time="0.0"/>
+  <testcase name="everySourceRowHasExactlyOneCoreOwnerAndIsReadAtFullWidth" classname="com.kandong.modelprobe.FullPageStripPlannerTest" time="0.027"/>
+  <testcase name="adaptiveDetectorThresholdsAndRoundingEdgesStayWithinBothBudgets" classname="com.kandong.modelprobe.FullPageStripPlannerTest" time="0.0"/>
+  <testcase name="targetPhoneAndEmulatorExceedOldWholeImageBudgetButFitStrips" classname="com.kandong.modelprobe.FullPageStripPlannerTest" time="0.001"/>
+  <testcase name="mappingRejectsNonfiniteOrOutsideDetectorCoordinates" classname="com.kandong.modelprobe.FullPageStripPlannerTest" time="0.0"/>
+  <testcase name="readHaloOverlapsButCoreSeamsAreUnambiguous" classname="com.kandong.modelprobe.FullPageStripPlannerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

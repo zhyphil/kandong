@@ -111,4 +111,55 @@ class RegionVisualSessionTest {
         assertEquals(setOf("visual-synthetic/tax","visual-synthetic/tax-alternate"),f.contextIds.toSet())
         assertEquals(7,f.page.rawCandidates.size); assertEquals(1,s.state().loads)
     }
+
+    private class AsyncBackend : RegionVisualSession.Backend {
+        override val pages=listOf(RegionVisualSession.Page("en-normal",1176,2400),
+            RegionVisualSession.Page("en-seam-1080",1080,2400))
+        var starts=0; var cancellations=0; var pending=false; var disposed=false
+        var display:RegionVisualSession.Evidence?=null
+        override fun start(pageIndex:Int):Boolean { if(pending) return false; starts++; pending=true; display=null; return true }
+        override fun evidence()=display
+        override fun busy()=pending
+        override fun error():String?=null
+        override fun cancel() { cancellations++; display=null; pending=false }
+        override fun dispose() { cancel(); disposed=true }
+        fun deliver() {
+            val version=com.kandong.ocrlab.context.capture.CaptureVersion(1,1,0,1,0,0)
+            val metadata=RgbaFrameMetadata(1176,2400,version,100,60000)
+            val identity=FullPageOcrAssociation.PageIdentity("async-test-only",version,"en-normal",
+                FullPageOcrContract.models.first(),"test-only","test-only")
+            // Deliberately synthetic backend seam; not an inference/cleanup receipt.
+            display=RegionVisualSession.Evidence(metadata,FullPageOcrAssociation.Result(true,null,identity,
+                emptyList(),emptyList(),emptyList())); pending=false
+        }
+    }
+    @Test fun asyncPageBoundsClampMinimumToEachActualPageWithoutStartingWork() {
+        val b=AsyncBackend(); val s=RegionVisualSession(b) { now }
+        assertFalse(s.synthetic); assertEquals(1176,s.pageWidth); assertEquals(2400,s.pageHeight)
+        s.minimumRegion(10000.0)
+        assertEquals(1176.0,s.state().roi.width,0.0); assertEquals(2400.0,s.state().roi.height,0.0)
+        s.move(10000.0,10000.0); s.resize(-10000.0,10000.0); s.scale(3.0)
+        s.nextPage(); assertEquals(1080.0,s.state().roi.width,0.0)
+        assertEquals(2400.0,s.state().roi.height,0.0); assertEquals(0,b.starts)
+    }
+    @Test fun asyncEvidenceReusesOriginalMetadataAndPageForAllGeometry() {
+        val b=AsyncBackend(); val s=RegionVisualSession(b) { now }
+        s.refresh(); assertEquals(0,b.starts); s.showSample(); assertNull(s.state().frame)
+        b.deliver(); s.refresh(); val first=s.state().frame!!
+        s.move(20.0,900.0); s.resize(-120.0,20.0); s.scale(4.0); s.pan(30.0,40.0); s.viewport(450.0,300.0)
+        val after=s.state().frame!!
+        assertSame(first.metadata,after.metadata); assertSame(first.page,after.page)
+        assertEquals(1,b.starts); assertTrue(after.roi.bottom>800); assertEquals(1,s.state().loads)
+    }
+    @Test fun everyAsyncInvalidationDropsEvidenceAndRestoreNeverStartsWork() {
+        val actions=listOf<(RegionVisualSession)->Unit>({it.nextPage()},{it.collapse()},{it.menu()},
+            {it.foreground(false)},{it.stop()},{it.dispose()})
+        for(action in actions) {
+            val b=AsyncBackend(); val s=RegionVisualSession(b) { now }
+            s.showSample(); b.deliver(); assertNotNull(s.state().frame)
+            action(s); assertNull(s.state().frame); assertNull(b.display); assertTrue(b.cancellations>0)
+            s.restore(); s.closeMenu(); s.foreground(true); s.refresh()
+            assertNull(s.state().frame); assertEquals(1,b.starts)
+        }
+    }
 }

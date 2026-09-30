@@ -1,0 +1,13 @@
+{
+  "checked": "2026-09-30",
+  "sources": [
+    {
+      "url": "https://developer.android.com/topic/performance/threads",
+      "use": "Keep model work off main and Views on main; avoid Activity references in background workers."
+    },
+    {
+      "url": "https://developer.android.com/reference/dalvik/system/PathClassLoader",
+      "use": "Constructor with explicit native library search path and parent loader."
+    }
+  ]
+}

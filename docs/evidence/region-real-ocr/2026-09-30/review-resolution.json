@@ -1,0 +1,34 @@
+{
+  "review": "one P1 fixed by full value comparison; no second AO run",
+  "rootFixes": [
+    "FullPageCandidateEvidence compares all fields, preserving raw score bits",
+    "Independent copied provenance equality red then green; 18 altered fields and signed zero rejected",
+    "Bounded actual post-inference pre-close latch verifies Activity replacement, busy slot, rejection and explicit restart",
+    "UI tests fail promptly on native errors"
+  ],
+  "unchangedReviewedSources": [
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageVisualOcrProbeTest.kt",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/RegionOcrBridgeTest.kt",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/RegionOcrBridge.kt",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageOcrFixtures.kt",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualLabUiTest.kt",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/RegionVisualSessionTest.kt",
+    "modelprobe/src/debug/java/com/kandong/modelprobe/RegionVisualLabActivity.java",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/RegionVisualSession.kt"
+  ],
+  "rootChangedSources": [
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageVisualOcrRunner.kt",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualOcrBackend.kt",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualOcrUiTest.kt",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/FullPageCandidateEvidenceTest.kt",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageCandidateEvidence.kt",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualLabSurface.kt"
+  ],
+  "evidence": [
+    "candidate-red",
+    "validation",
+    "focused",
+    "regression",
+    "standalone"
+  ]
+}

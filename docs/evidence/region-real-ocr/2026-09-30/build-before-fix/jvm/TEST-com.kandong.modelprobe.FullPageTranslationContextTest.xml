@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.FullPageTranslationContextTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-09-30T19:21:54.929Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.003">
+  <properties/>
+  <testcase name="fullPageSnapshotCannotBeChangedThroughCallerOwnedCollections" classname="com.kandong.modelprobe.FullPageTranslationContextTest" time="0.001"/>
+  <testcase name="missingGlobalEvidenceStaysExplicitInsteadOfBeingInventedOrOmitted" classname="com.kandong.modelprobe.FullPageTranslationContextTest" time="0.0"/>
+  <testcase name="wholePageIsAvailableWhileTargetConditionsStayWithTheirOwnCard" classname="com.kandong.modelprobe.FullPageTranslationContextTest" time="0.001"/>
+  <testcase name="oneClickSharesWholeContextAcrossRegionMovesAndRejectsOldPageAnswer" classname="com.kandong.modelprobe.FullPageTranslationContextTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

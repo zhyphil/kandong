@@ -34,7 +34,7 @@ class RegionVisualLabUiTest {
     }
     @Before fun start() {
         activity=launch(); instrumentation.waitForIdleSync()
-        main { surface=activity.labSurface as RegionVisualLabSurface }
+        main { surface=activity.labSurface as RegionVisualLabSurface; surface.selectSyntheticGestureMode() }
         waitForeground()
         assertNull(state().frame)
     }

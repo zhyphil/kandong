@@ -66,3 +66,6 @@ python3 -B scripts/run-ocr-emulator.py --output /private/tmp/kandong-ocr-emulato
 
 
 2026-09-30可视化实验完成：modelprobe新增debug薄宿主，主实验APK更新为55291acf66cc2bdb5d7b40ffd0bc368bcf441ce61f33f9ffa3b0f173e7b279ca，测试包7f3816273ada270057f8a58dfcab85622b98bb3733c9ff5bebecf63cce6affb7，两包均已核对安装哈希。217 JVM／构建／Lint，专用模拟器59项全过（7UI、真实60秒清理），独立冷启动／横屏菜单／旋转清空／缺包提示通过；旧58/59失败和修正保留。见[运行及截图](OCR_REGION_VISUAL_LAB.md)。专用模拟器已停止；手机未更新，不复用历史冻结runner到新包。
+
+
+2026-09-30后续：固定整页实际OCR接入独立可视化实验，最终配套包主214b503f…、测试b6f66c56…，本机236项、模拟器7专项＋79回归两批及独立冷启动四页／旋转再次推理通过。缺包验证后已恢复同SHA；结束停止模拟器。详见[本轮说明](OCR_REGION_REAL_LAB.md)及[证据](evidence/region-real-ocr/2026-09-30/summary.json)。

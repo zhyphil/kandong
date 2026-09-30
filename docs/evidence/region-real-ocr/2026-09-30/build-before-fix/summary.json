@@ -1,0 +1,31 @@
+{
+  "jvm": {
+    "tests": 234,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "Error": 0,
+    "Warning": 4,
+    "Fatal": 0
+  },
+  "apks": {
+    "com.kandong.modelprobe": "214b503f34ef14aa020773bd5ead66e4e51e7909c1a5dea34003f8ef1b2b3ed4",
+    "com.kandong.modelprobe.test": "45b4874eef463933837e305676a4a672068aa630f410ecbdb5d0c74165ae3ca2"
+  },
+  "sourceSha256": {
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageVisualOcrProbeTest.kt": "e37a4f613689d9057f1de96d96864ed2b2b6554aa2067fd072f9c6e7626d076a",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageVisualOcrRunner.kt": "0b28c3b643582828049ff8f1f21fe51d2ef7bf09b7b015ddcc1ced1a1f2b77c9",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualOcrBackend.kt": "130e49ee9b67dc45e178901e87bcbb78f3ce3dd0de99d220e35f9190708fa4d4",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualOcrUiTest.kt": "7e9ef310722151f4b1820339a1cfa184d9a8269a63ee37f8b015589351525126",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/RegionOcrBridgeTest.kt": "29d47c19646b43a815afc770103f33f2d5bfabe57b582187e48ff16af100c504",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/RegionOcrBridge.kt": "71d64dc3141e942bf9161484c630309b55fb5be81e35566abb80d3def60d7065",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageOcrFixtures.kt": "e898eba09e176f89304c81a56ac4e687ccf70bae6a1070bdbe20806013e97da0",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualLabSurface.kt": "00c6e69a92a93aa9758fedf77092234827803ce53785a909fdd1ecc3192309f0",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualLabUiTest.kt": "8dca5468def8214277ff8adacb9576a2217c161feae2f906c73ca59a699bf20e",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/RegionVisualSessionTest.kt": "1faacb595f7529288be520eef29d700dde4f9b478cdf1d2d9cbb24143c4c0e40",
+    "modelprobe/src/debug/java/com/kandong/modelprobe/RegionVisualLabActivity.java": "6a7a9688172ceaa2fb137c1ddc099c3738be4cd527911b266781deb549a4c1c0",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/RegionVisualSession.kt": "b1216158d77b683baba35e5f5da757ba71e734b76056db9c970be1e1275ddacb"
+  }
+}

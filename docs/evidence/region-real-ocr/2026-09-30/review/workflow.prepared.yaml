@@ -1,0 +1,17 @@
+name: kandong-real-visual-review
+concurrency: 1
+llm:
+  provider: codex-cli
+  timeout: 600000
+  retry: 0
+steps:
+  - id: native_and_delivery_review
+    role: engineering/engineering-code-reviewer
+    task: |
+      AO_PHASE=review; project=/Users/haoyuzuo/Projects/KanDong. You are an AO worker (AO_ORCHESTRATED=1). Never invoke AO, orchestration helpers or subagents. Stay within this task and preserve existing changes. No push, deployment, production changes or live-service tests. Missing dependencies are environment blockers, not code defects. No new test infrastructure for small changes. READ ONLY: do not edit project files, install dependencies, build, or run checks that write caches/generated files. Return evidence as text for the parent to save.
+
+      Read-only independent review of current diff against7e45a3c in /Users/haoyuzuo/Projects/KanDong only. Leaf: no AO/delegation/build/ADB/network/cache writes/edits. Budget one review step; return concise prioritized actionable defects with locations, or no blockers. Do not spend the budget narrating every file.
+      Scope docs/plans/2026-09-30-real-ocr-visual-lab.md: independent fixed four-page actual OCR and UI, no product/live capture/translation. All 12 modified/new source files listed in /private/tmp/kandong-real-visual-build-first/summary.json. Root verified 234JVM,build,lint0errors4existingwarnings. Initial10 bridge tests all actually failed before implementation; retained plus4more and3session tests. AO implement timed out at600s after leaving code; root inspected actual diff/build. Do not equate worker completion with evidence. Device checks currently run to /private/tmp/kandong-real-visual-emulator-first; do not assume passed if incomplete. Root still must cold-launch test installed sameSHA and verify OpenCV/ORT actual inference outside instrumentation.
+      Inspect async bridge shared running slot, no queued OCR, original TTL, late callback exclusion, cancellation/disposal subscriber references, cleanup uncertainty fail-closed, original worker Guard never crossed to main, immutable evidence full provenance and pixel sharing. Check dynamic geometry and existing gesture preservation. Review fixed signed package loader/native ABI/APK paths/protocol/cache, accidental permissions/main source changes. Examine actual tests for missing high-value regression or false confidence; distinguish partial synthetic tests from real inference checks. Existing pipeline/publication/controller unchanged, only FullPageOcrFixtures refactored. Check runner cleanup counters and exception paths. Tests use fixed pages only, no API/key.
+      Report must-fix defects concretely, plus bounded acceptance gaps that root can close without architectural expansion. Avoid unrequested product-ready UI or translation scope.
+agents_dir: /Users/haoyuzuo/.nvm/versions/node/v24.18.0/lib/node_modules/agency-orchestrator/agency-agents

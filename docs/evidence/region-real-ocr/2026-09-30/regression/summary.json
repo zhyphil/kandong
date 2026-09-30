@@ -1,0 +1,13 @@
+{
+  "tests": 79,
+  "classes": [
+    "RegionOcrBridgeTest",
+    "RegionVisualSessionTest",
+    "RegionVisualLabUiTest",
+    "FullPageRegionControllerTest",
+    "FullPageOcrPublicationTest",
+    "FullPageOcrLifecycleProbeTest",
+    "FullPageRegionProbeTest"
+  ],
+  "scope": "fixed synthetic page actual OCR and behavioral regression only"
+}

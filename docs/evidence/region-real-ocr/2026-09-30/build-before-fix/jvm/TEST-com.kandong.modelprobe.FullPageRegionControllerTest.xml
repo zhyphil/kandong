@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.FullPageRegionControllerTest" tests="24" skipped="0" failures="0" errors="0" timestamp="2026-09-30T19:21:54.878Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.02">
+  <properties/>
+  <testcase name="everyVersionFieldRevokesBothObservedAndSourceOnlyChanges" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.006"/>
+  <testcase name="observationDoesNotReadAndBusyClickCreatesNoSecondTicket" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.0"/>
+  <testcase name="invalidRoiAndTransformNeverReturnPreviousRendering" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.003"/>
+  <testcase name="constructingPendingFromPublishedEvidenceCannotMintRegionAuthority" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.001"/>
+  <testcase name="reentrantObservationDuringClickAndExceptionAfterReplacementPreserveIdentity" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.001"/>
+  <testcase name="pageClippingPartialIntersectionAndClampedSourcePanHaveConcreteCoordinates" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.0"/>
+  <testcase name="blankIsValidButExpiredPageIsAbsentAndCannotRevive" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.0"/>
+  <testcase name="sourceSelectionDoesNotChangeWhenOnlyMirrorScaleAndPanChange" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.0"/>
+  <testcase name="diagonalZeroAreaGeometryIsRetainedWithoutAFabricatedEnvelopeAnchor" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.0"/>
+  <testcase name="wholePageAndOffRoiSpatialMembersSurviveWithoutChoosingConflict" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.001"/>
+  <testcase name="pauseMenuStopAndOldCallbacksCannotRestoreOrClearNewerPage" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.0"/>
+  <testcase name="sourceExceptionInactiveAndClockRollbackRequireNewExplicitAuthorization" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.001"/>
+  <testcase name="envelopesMarkRotatedAndUnorderedQuadsAndRetainUnsupportedGeometry" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.0"/>
+  <testcase name="revokedGuardCannotSucceedAfterReentrantCallback" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.0"/>
+  <testcase name="futureAcquisitionCannotBeAdmittedByAnIndependentProducerClock" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.0"/>
+  <testcase name="closeBeforeAcceptAndFailureAfterMintReleaseOnlyUnclaimedPermit" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.001"/>
+  <testcase name="immutableEvidenceSurvivesCallerMutationWithoutRereadingInputOrChangingEvidence" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.001"/>
+  <testcase name="newClickAndInvalidCurrentReplacementDropOldPageBeforeValidation" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.0"/>
+  <testcase name="evidenceAcquiredBeforeClickCannotBecomeCurrent" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.0"/>
+  <testcase name="clockHistorySpansStagingHandoffAndRender" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.0"/>
+  <testcase name="finalProjectionCallbackCannotPublishAfterClearOrReplacement" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.001"/>
+  <testcase name="foreignAndFabricatedTicketsDoNotTickOrRevokeCurrentOwner" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.0"/>
+  <testcase name="permitTransfersOnceAndOldPendingCleanupCannotRevokeNewOwner" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.0"/>
+  <testcase name="failedScopeOrCleanupConsumesProofAndFinishesGuard" classname="com.kandong.modelprobe.FullPageRegionControllerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

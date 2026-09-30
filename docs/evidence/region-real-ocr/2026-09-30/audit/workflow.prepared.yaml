@@ -1,0 +1,19 @@
+name: kandong-real-visual-audit
+concurrency: 1
+llm:
+  provider: codex-cli
+  timeout: 600000
+  retry: 0
+steps:
+  - id: async_native_boundary
+    role: engineering/engineering-software-architect
+    task: |
+      AO_PHASE=audit; project=/Users/haoyuzuo/Projects/KanDong. You are an AO worker (AO_ORCHESTRATED=1). Never invoke AO, orchestration helpers or subagents. Stay within this task and preserve existing changes. No push, deployment, production changes or live-service tests. Missing dependencies are environment blockers, not code defects. No new test infrastructure for small changes. READ ONLY: do not edit project files, install dependencies, build, or run checks that write caches/generated files. Return evidence as text for the parent to save.
+
+      Read-only architecture audit and concrete implementation plan for next TASKS.md item at clean 7e45a3c.
+      Root only /Users/haoyuzuo/Projects/KanDong. AO leaf: no delegation/orchestration/builds/cache writes/devices/network.
+      Scope modelprobe testShared/androidTest plus existing debug RegionVisualLabActivity host. Next bounded phase replaces fixed candidate presentation with explicit-click actual whole-page OCR for fixed single-language EN/FR/ZH assets, followed by ROI/mirror UI reuse. No real screen capture, translation, network, product modules, phone or dependencies. Preserve existing synthetic visual tests if useful via an explicit separate mode/entrypoint rather than falsely relabel their evidence.
+      Inspect FullPageOcrPipeline, FullPageRegionProbeTest, FullPageOcrFixtures, publication/Guard/controller and RegionVisualSession/Surface/host. Propose smallest thread-safe bridge and resource ownership. Native work must not block main; pipeline/Guard/controller stay on owning thread; original acquisition TTL never resets; immediate UI invalidation on page/collapse/menu/pause/stop/dispose while inference in flight, late results rejected; explicit new requests bounded/no unlimited queue; native resources closed before publication and cleanup failures fail closed. Geometry changes reuse evidence, independent ROI and 1..5 zoom/pan.
+      Important standalone PathClassLoader currently has only test.sourceDir and host parent, no test nativeLibraryDir. Analyze OpenCV/ORT class and asset ownership, classloader failure modes under instrumentation versus cold standalone. Use fixed installed test package/signature validation. Existing fixture access should authenticate PNG bytes, model/dictionary, use same decoded image for preview/mirror as inference. Preserve raw candidates/conflicts/empties, do not choose model or fix text based on expected outputs.
+      Output exact bounded file design, testing seams for root to author failing tests (especially out-of-order delivery/cancel/new clicks/TTL/geometry), minimal 3-4 representative page IDs using existing fixture assets and model selection rules, risks and explicit acceptance commands. No modifications. Budget one audit step; implementation and review separate.
+agents_dir: /Users/haoyuzuo/.nvm/versions/node/v24.18.0/lib/node_modules/agency-orchestrator/agency-agents

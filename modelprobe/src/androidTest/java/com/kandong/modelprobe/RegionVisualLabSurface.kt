@@ -1,6 +1,7 @@
 package com.kandong.modelprobe
 
 import android.app.Activity
+import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
@@ -19,9 +20,15 @@ import java.util.Locale
 import kotlin.math.min
 import kotlin.math.roundToInt
 
-/** Resource-free surface: loadable from the same-signature test APK with host Kotlin runtime. */
-class RegionVisualLabSurface(private val activity: Activity) : RegionVisualLabActivity.Surface {
-    internal val session = RegionVisualSession { SystemClock.elapsedRealtime() }
+/** The UI is shared; default mode performs actual OCR on fixed authenticated PNG pixels only. */
+class RegionVisualLabSurface(private val activity: Activity, fixtureResources: Context) : RegionVisualLabActivity.Surface {
+    companion object { const val PROTOCOL_VERSION = 2 }
+    private var realBackend: RegionVisualOcrBackend? = RegionVisualOcrBackend(activity.applicationContext,fixtureResources.assets)
+    internal var session = RegionVisualSession(checkNotNull(realBackend)) { SystemClock.elapsedRealtime() }
+        private set
+    private val notice: String get() = if(session.synthetic) "合成手势回归 · 不运行 OCR、不翻译、不读取屏幕"
+        else "固定 PNG · 真实整页 OCR · 不读取屏幕、不翻译"
+    private val showLabel: String get() = if(session.synthetic) "展示样例" else "整页 OCR"
     private val handler=Handler(Looper.getMainLooper())
     private var active=false
     private var disposed=false
@@ -51,10 +58,10 @@ class RegionVisualLabSurface(private val activity: Activity) : RegionVisualLabAc
         root.addView(content,FrameLayout.LayoutParams(-1,-1))
         content.setPadding(dp(12),dp(4),dp(12),dp(8))
         content.addView(label("选区实验",22f,"lab_title"))
-        content.addView(label(RegionVisualFixture.NOTICE,12f,"lab_notice"))
+        content.addView(label(notice,12f,"lab_notice"))
         val actions=LinearLayout(activity)
-        actions.addView(button("展示样例","lab_show") { session.showSample(); update() },LinearLayout.LayoutParams(0,dp(48),1.5f))
-        actions.addView(button("换页","lab_page") { session.nextPage(); update() },LinearLayout.LayoutParams(0,dp(48),1f))
+        actions.addView(button(showLabel,"lab_show") { session.showSample(); update() },LinearLayout.LayoutParams(0,dp(48),1.5f))
+        actions.addView(button("换页","lab_page") { session.nextPage(); source.relayoutPage(); update() },LinearLayout.LayoutParams(0,dp(48),1f))
         actions.addView(button("收起","lab_collapse") { session.collapse(); update() },LinearLayout.LayoutParams(0,dp(48),1f))
         actions.addView(button("菜单","lab_open_menu") { session.menu(); update() },LinearLayout.LayoutParams(0,dp(48),1f))
         content.addView(actions)
@@ -65,7 +72,7 @@ class RegionVisualLabSurface(private val activity: Activity) : RegionVisualLabAc
         val body=LinearLayout(activity)
         val landscape=activity.resources.configuration.screenWidthDp > activity.resources.configuration.screenHeightDp
         body.orientation=if(landscape) LinearLayout.HORIZONTAL else LinearLayout.VERTICAL
-        val sourcePane=pane("整页样例 · 拖红框，右上角改宽高",source)
+        val sourcePane=pane("固定整页 · 拖红框，右上角改宽高",source)
         val mirrorPane=pane("原图放大与候选位置 · 双指缩放，单指平移",mirror)
         val scroll=ScrollView(activity).apply { tag="lab_candidates_scroll"; addView(cards); isFillViewport=false }
         val cardPane=pane("选区候选优先 · 整页上下文保留",scroll)
@@ -82,12 +89,12 @@ class RegionVisualLabSurface(private val activity: Activity) : RegionVisualLabAc
         }
         content.addView(body,LinearLayout.LayoutParams(-1,0,1f))
         menu.addView(label("实验菜单",24f,"lab_menu_title"))
-        menu.addView(label(RegionVisualFixture.NOTICE,14f,"lab_menu_notice"))
-        menu.addView(label("仅在本页操作固定文字与红框。\n展示保留 60 秒；离开、换页、收起或打开菜单都会清除展示。\n恢复后需要再次点击“展示样例”。",17f,"lab_help"),LinearLayout.LayoutParams(-1,0,1f))
+        menu.addView(label(notice,14f,"lab_menu_notice"))
+        menu.addView(label(helpText(),17f,"lab_help"),LinearLayout.LayoutParams(-1,0,1f))
         menu.addView(button("停止展示","lab_stop") { session.stop(); update() },LinearLayout.LayoutParams(-1,dp(48)))
         menu.addView(button("返回实验","lab_close_menu") { session.closeMenu(); update() },LinearLayout.LayoutParams(-1,dp(48)))
         root.addView(menu,FrameLayout.LayoutParams(-1,-1))
-        collapsed.addView(label(RegionVisualFixture.NOTICE,14f,"lab_collapsed_notice"))
+        collapsed.addView(label(notice,14f,"lab_collapsed_notice"))
         collapsed.addView(label("已收起，样例结果已清除",20f,"lab_collapsed_status"))
         collapsed.addView(button("恢复选区","lab_restore") { session.restore(); update() },LinearLayout.LayoutParams(-1,dp(56)))
         collapsed.addView(button("菜单","lab_collapsed_menu") { session.menu(); update() },LinearLayout.LayoutParams(-1,dp(56)))
@@ -131,15 +138,40 @@ class RegionVisualLabSurface(private val activity: Activity) : RegionVisualLabAc
     }
     override fun dispose() {
         if(disposed) return
-        active=false; handler.removeCallbacksAndMessages(null); session.stop(); update(); disposed=true
+        active=false; handler.removeCallbacksAndMessages(null); session.dispose(); update(); disposed=true
+        realBackend=null
     }
     internal fun isForeground()=active && !disposed && activity.hasWindowFocus()
+    /** Local test API only. Never read from an Intent or a setting, and never a real-mode fallback. */
+    internal fun selectSyntheticGestureMode() {
+        check(!disposed)
+        session.dispose(); realBackend=null
+        session=RegionVisualSession { SystemClock.elapsedRealtime() }
+        session.foreground(active)
+        cardKey=""
+        for(tag in listOf("lab_notice","lab_menu_notice","lab_collapsed_notice"))
+            root.findViewWithTag<TextView>(tag).text=notice
+        root.findViewWithTag<Button>("lab_show").text=showLabel
+        root.findViewWithTag<TextView>("lab_help").text=helpText()
+        source.relayoutPage(); update()
+    }
+    internal fun realResult()=realBackend?.result()
+    internal fun realError()=realBackend?.error()
+    internal fun nativeBusy()=realBackend?.busy() ?: false
+    /** Local instrumentation seam; no external Intent/config can inject a runner or callback. */
+    internal fun installRealBackendForProbe(backend: RegionVisualOcrBackend) {
+        check(!disposed && !session.synthetic && session.state().loads==0)
+        session.dispose(); realBackend=backend
+        session=RegionVisualSession(backend) { SystemClock.elapsedRealtime() }
+        session.foreground(active); source.relayoutPage(); update()
+    }
+    private fun helpText()="仅操作本页固定素材与红框。\n从取得页面起有效 60 秒；离开、换页、收起或菜单会清除结果。\n恢复后须再次点击“$showLabel”。取消会立即撤下显示，后台 JNI 返回并清理后才能再次开始。"
     private fun update() {
         val s=session.state()
         menu.visibility=if(s.mode==RegionVisualSession.Mode.MENU) View.VISIBLE else View.GONE
         collapsed.visibility=if(s.mode==RegionVisualSession.Mode.COLLAPSED) View.VISIBLE else View.GONE
         content.visibility=if(s.mode==RegionVisualSession.Mode.MENU || s.mode==RegionVisualSession.Mode.COLLAPSED) View.GONE else View.VISIBLE
-        status.text="${s.status} · 展示 ${s.loads} 次"
+        status.text="${session.pageLabel} · ${s.status} · 请求 ${s.loads} 次"
         zoom.text=String.format(Locale.ROOT,"%.2f 倍\n相对整页预览",s.scale)
         slider.progress=((s.scale-1)*100).roundToInt()
         source.invalidate(); mirror.invalidate()
@@ -147,8 +179,8 @@ class RegionVisualLabSurface(private val activity: Activity) : RegionVisualLabAc
         val key=if(f==null) "none:${s.status}" else "${f.page.identity?.sourceBatch}:${f.selectedIds}:${f.contextIds}:${f.visible.map { it.candidateId }}"
         if(key==cardKey) return
         cardKey=key; cards.removeAllViews()
-        if(f==null) { cards.addView(label("请点击“展示样例”",15f,"lab_no_result")); return }
-        if(f.page.rawCandidates.isEmpty()) { cards.addView(label("有效空白样例 · 没有文字候选",16f,"lab_blank")); return }
+        if(f==null) { cards.addView(label("请点击“$showLabel”",15f,"lab_no_result")); return }
+        if(f.page.rawCandidates.isEmpty()) { cards.addView(label(if(session.synthetic) "有效空白样例 · 没有文字候选" else "整页 OCR 完成 · 没有文字候选",16f,"lab_blank")); return }
         // Presentation priority only; original candidate IDs, numbers and whole-page evidence stay unchanged.
         val groupsById=f.page.groups.flatMap { g -> g.memberIds.map { it to g } }.toMap()
         val ordered=f.page.rawCandidates.withIndex().sortedBy { (_,c) ->
@@ -182,8 +214,13 @@ class RegionVisualLabSurface(private val activity: Activity) : RegionVisualLabAc
         session.viewport((mirror.width-dp(16))/source.factor,(mirror.height-dp(16))/source.factor)
         update()
     }
-    /** Authored original sample, distinct from all OCR candidate cards. Same drawing in both panes. */
+    /** Real mode uses the same immutable decoded tiles sent to ImageWriter. No reference glyphs. */
     private fun drawSample(canvas:Canvas, paint:Paint) {
+        if (!session.synthetic) {
+            realBackend?.result()?.raster?.draw(canvas,paint)
+            return
+        }
+        if (session.state().pageIndex != 0) return
         paint.style=Paint.Style.FILL; paint.color=ink
         for(line in RegionVisualFixture.lines) {
             if(line.text.isEmpty()) continue
@@ -198,16 +235,18 @@ class RegionVisualLabSurface(private val activity: Activity) : RegionVisualLabAc
         private val paint=Paint(Paint.ANTI_ALIAS_FLAG)
         private var lastX=0f; private var lastY=0f; private var resizing=false; private var dragging=false
         init { tag="lab_source"; contentDescription="整页样例，直接拖动红框或右上角调整选区"; setLayerType(View.LAYER_TYPE_SOFTWARE,null) }
-        override fun onSizeChanged(w:Int,h:Int,oldw:Int,oldh:Int) {
-            factor=min((w-dp(12)).coerceAtLeast(1)/1200.0,(h-dp(12)).coerceAtLeast(1)/800.0)
-            leftPad=(w-1200*factor)/2; topPad=(h-800*factor)/2
-            post { viewportChanged() }
+        override fun onSizeChanged(w:Int,h:Int,oldw:Int,oldh:Int) { relayoutPage() }
+        internal fun relayoutPage() {
+            factor=min((width-dp(12)).coerceAtLeast(1)/session.pageWidth.toDouble(),
+                (height-dp(12)).coerceAtLeast(1)/session.pageHeight.toDouble())
+            leftPad=(width-session.pageWidth*factor)/2; topPad=(height-session.pageHeight*factor)/2
+            post { viewportChanged() }; invalidate()
         }
         override fun onDraw(c:Canvas) {
             super.onDraw(c); c.drawColor(Color.WHITE)
             val state=session.state(); c.save(); c.translate(leftPad.toFloat(),topPad.toFloat()); c.scale(factor.toFloat(),factor.toFloat())
-            paint.style=Paint.Style.FILL; paint.color=Color.rgb(250,251,252); c.drawRect(0f,0f,1200f,800f,paint)
-            if(state.pageIndex==0) drawSample(c,paint)
+            paint.style=Paint.Style.FILL; paint.color=Color.rgb(250,251,252); c.drawRect(0f,0f,session.pageWidth.toFloat(),session.pageHeight.toFloat(),paint)
+            drawSample(c,paint)
             val r=state.roi; paint.color=red; paint.strokeWidth=(dp(2)/factor).toFloat(); paint.style=Paint.Style.STROKE
             c.drawRect(r.left.toFloat(),r.top.toFloat(),r.right.toFloat(),r.bottom.toFloat(),paint)
             paint.style=Paint.Style.FILL
@@ -257,13 +296,14 @@ class RegionVisualLabSurface(private val activity: Activity) : RegionVisualLabAc
         private val detector=ScaleGestureDetector(activity,object:ScaleGestureDetector.SimpleOnScaleGestureListener() {
             override fun onScale(d:ScaleGestureDetector):Boolean { session.scale(session.state().scale*d.scaleFactor); update(); return true }
         })
-        init { tag="lab_mirror"; contentDescription="镜面位置，双指缩放，单指平移"; detector.isQuickScaleEnabled=false }
+        init { tag="lab_mirror"; contentDescription="镜面位置，双指缩放，单指平移"; detector.isQuickScaleEnabled=false
+            setLayerType(View.LAYER_TYPE_SOFTWARE,null) }
         override fun onSizeChanged(w:Int,h:Int,oldw:Int,oldh:Int) { post { viewportChanged() } }
         override fun onDraw(c:Canvas) {
             super.onDraw(c); c.drawColor(Color.rgb(229,235,240)); val f=session.state().frame
-            if(f==null || f.page.rawCandidates.isEmpty()) {
+            if(f==null || (session.synthetic && f.page.rawCandidates.isEmpty())) {
                 paint.style=Paint.Style.FILL; paint.color=muted; paint.textSize=dp(14).toFloat()
-                c.drawText(if(f==null) "等待展示样例" else "有效空白样例",dp(12).toFloat(),dp(28).toFloat(),paint); return
+                c.drawText(if(f==null) "等待$showLabel" else "有效空白样例",dp(12).toFloat(),dp(28).toFloat(),paint); return
             }
             c.save(); c.translate(dp(8).toFloat(),dp(8).toFloat())
             c.clipRect(0f,0f,(width-dp(16)).coerceAtLeast(0).toFloat(),(height-dp(16)).coerceAtLeast(0).toFloat())

@@ -1,0 +1,88 @@
+
+  工作流: kandong-real-visual-implement
+  步骤数: 1 | 并发: 1 | 模型: codex-cli
+  参与者: 📲 Mobile App Builder
+──────────────────────────────────────────────────
+
+  ⏳ 📲 Mobile App Builder 执行中 ...
+  ⏳ 📲 Mobile App Builder ... 10s
+  ⏳ 📲 Mobile App Builder ... 20s
+  ⏳ 📲 Mobile App Builder ... 30s
+  ⏳ 📲 Mobile App Builder ... 40s
+  ⏳ 📲 Mobile App Builder ... 50s
+  ⏳ 📲 Mobile App Builder ... 60s
+  ⏳ 📲 Mobile App Builder ... 70s
+  ⏳ 📲 Mobile App Builder ... 80s
+  ⏳ 📲 Mobile App Builder ... 90s
+  ⏳ 📲 Mobile App Builder ... 100s
+  ⏳ 📲 Mobile App Builder ... 110s
+  ⏳ 📲 Mobile App Builder ... 120s
+  ⏳ 📲 Mobile App Builder ... 130s
+  ⏳ 📲 Mobile App Builder ... 140s
+  ⏳ 📲 Mobile App Builder ... 150s
+  ⏳ 📲 Mobile App Builder ... 160s
+  ⏳ 📲 Mobile App Builder ... 170s
+  ⏳ 📲 Mobile App Builder ... 180s
+  ⏳ 📲 Mobile App Builder ... 190s
+  ⏳ 📲 Mobile App Builder ... 200s
+  ⏳ 📲 Mobile App Builder ... 210s
+  ⏳ 📲 Mobile App Builder ... 220s
+  ⏳ 📲 Mobile App Builder ... 230s
+  ⏳ 📲 Mobile App Builder ... 240s
+  ⏳ 📲 Mobile App Builder ... 250s
+  ⏳ 📲 Mobile App Builder ... 260s
+  ⏳ 📲 Mobile App Builder ... 270s
+  ⏳ 📲 Mobile App Builder ... 280s
+  ⏳ 📲 Mobile App Builder ... 290s
+  ⏳ 📲 Mobile App Builder ... 300s
+  ⏳ 📲 Mobile App Builder ... 310s
+  ⏳ 📲 Mobile App Builder ... 320s
+  ⏳ 📲 Mobile App Builder ... 330s
+  ⏳ 📲 Mobile App Builder ... 340s
+  ⏳ 📲 Mobile App Builder ... 350s
+  ⏳ 📲 Mobile App Builder ... 360s
+  ⏳ 📲 Mobile App Builder ... 370s
+  ⏳ 📲 Mobile App Builder ... 380s
+  ⏳ 📲 Mobile App Builder ... 390s
+  ⏳ 📲 Mobile App Builder ... 400s
+  ⏳ 📲 Mobile App Builder ... 410s
+  ⏳ 📲 Mobile App Builder ... 420s
+  ⏳ 📲 Mobile App Builder ... 430s
+  ⏳ 📲 Mobile App Builder ... 440s
+  ⏳ 📲 Mobile App Builder ... 450s
+  ⏳ 📲 Mobile App Builder ... 460s
+  ⏳ 📲 Mobile App Builder ... 470s
+  ⏳ 📲 Mobile App Builder ... 480s
+  ⏳ 📲 Mobile App Builder ... 490s
+  ⏳ 📲 Mobile App Builder ... 500s
+  ⏳ 📲 Mobile App Builder ... 510s
+  ⏳ 📲 Mobile App Builder ... 520s
+  ⏳ 📲 Mobile App Builder ... 530s
+  ⏳ 📲 Mobile App Builder ... 540s
+  ⏳ 📲 Mobile App Builder ... 550s
+  ⏳ 📲 Mobile App Builder ... 560s
+  ⏳ 📲 Mobile App Builder ... 570s
+  ⏳ 📲 Mobile App Builder ... 580s
+  ⏳ 📲 Mobile App Builder ... 590s
+[K
+  ── [1/1] 📲 Mobile App Builder (wire_async_actual_ocr) ──
+  失败: 超时 (600000ms)，可用 --timeout 或 YAML llm.timeout 延长
+  💡 该步骤因超时/连接中断失败。可尝试 / On timeout, try:
+     1. 增大超时：YAML 顶层或该 step 设 timeout（如 600s），或 --timeout 0 不限时
+     2. 拆分任务：把这步拆成多个更小的 step（每步输出更短，单步更快返回）
+     3. 换更稳的 provider/model
+
+
+==================================================
+  部分失败: 0/1 步 | 600.0s | 0 tokens
+  详细输出: /private/tmp/kandong-real-visual-implement-20260930/results/kandong-real-visual-implement-2026-09-30T19-21-36
+
+  ❌ wire_async_actual_ocr: 超时 (600000ms)，可用 --timeout 或 YAML llm.timeout 延长
+  💡 该步骤因超时/连接中断失败。可尝试 / On timeout, try:
+     1. 增大超时：YAML 顶层或该 step 设 timeout（如 600s），或 --timeout 0 不限时
+     2. 拆分任务：把这步拆成多个更小的 step（每步输出更短，单步更快返回）
+     3. 换更稳的 provider/model
+
+  💡 从失败处继续:
+     ao run ../../../../private/tmp/kandong-real-visual-implement-20260930/workflow.prepared.yaml --resume last --from wire_async_actual_ocr
+==================================================

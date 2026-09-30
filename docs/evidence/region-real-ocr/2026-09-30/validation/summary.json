@@ -1,0 +1,33 @@
+{
+  "jvm": {
+    "tests": 236,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "Error": 0,
+    "Warning": 4,
+    "Fatal": 0
+  },
+  "apks": {
+    "com.kandong.modelprobe": "214b503f34ef14aa020773bd5ead66e4e51e7909c1a5dea34003f8ef1b2b3ed4",
+    "com.kandong.modelprobe.test": "b6f66c56bcaa61258498f7ee32939dd1253db903a5e9d41c0723f1db2ade3ff8"
+  },
+  "sourceSha256": {
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageVisualOcrProbeTest.kt": "e37a4f613689d9057f1de96d96864ed2b2b6554aa2067fd072f9c6e7626d076a",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageVisualOcrRunner.kt": "60a75042455cbe5962c6a47371435434838a790c3133b951662fdeb6f6520bde",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualOcrBackend.kt": "e7d6e98b9fdfdc1eec8393e27d4be7a458f2f31ab20a07d4bbdeeba102ec0860",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualOcrUiTest.kt": "4e21fdeff4a6c36c7bc1fb795574c464496392d7a8c1ba110ca4f63df22ce716",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/FullPageCandidateEvidenceTest.kt": "80efd5057435562409b8dea4fe6f37d2dc8d40d76af4d39d9b518063c01debf2",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/RegionOcrBridgeTest.kt": "29d47c19646b43a815afc770103f33f2d5bfabe57b582187e48ff16af100c504",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageCandidateEvidence.kt": "6786ddfc17c5474eb7cad94fbffb076cfbf228dbb7e7556b76ca4601cf2bd70b",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/RegionOcrBridge.kt": "71d64dc3141e942bf9161484c630309b55fb5be81e35566abb80d3def60d7065",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageOcrFixtures.kt": "e898eba09e176f89304c81a56ac4e687ccf70bae6a1070bdbe20806013e97da0",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualLabSurface.kt": "9e85175307691784b07d5df8fe0379c56fb1724b7725895fc7d8a425b7f865c4",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualLabUiTest.kt": "8dca5468def8214277ff8adacb9576a2217c161feae2f906c73ca59a699bf20e",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/RegionVisualSessionTest.kt": "1faacb595f7529288be520eef29d700dde4f9b478cdf1d2d9cbb24143c4c0e40",
+    "modelprobe/src/debug/java/com/kandong/modelprobe/RegionVisualLabActivity.java": "6a7a9688172ceaa2fb137c1ddc099c3738be4cd527911b266781deb549a4c1c0",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/RegionVisualSession.kt": "b1216158d77b683baba35e5f5da757ba71e734b76056db9c970be1e1275ddacb"
+  }
+}

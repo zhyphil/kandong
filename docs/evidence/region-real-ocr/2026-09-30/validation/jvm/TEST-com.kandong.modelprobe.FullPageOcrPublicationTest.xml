@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.FullPageOcrPublicationTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-09-30T19:27:09.957Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.008">
+  <properties/>
+  <testcase name="receiptGeometryAndInvocationCountsAreCheckedWithoutDependingOnOrder" classname="com.kandong.modelprobe.FullPageOcrPublicationTest" time="0.002"/>
+  <testcase name="malformedMetadataIsLazyStickyAndNeverSkipsFrameClose" classname="com.kandong.modelprobe.FullPageOcrPublicationTest" time="0.002"/>
+  <testcase name="missingDuplicateFailedOrFalseCountsCannotAuthenticateBlank" classname="com.kandong.modelprobe.FullPageOcrPublicationTest" time="0.0"/>
+  <testcase name="completeBlankUsesCurrentMetadataAndRealZeroReceipts" classname="com.kandong.modelprobe.FullPageOcrPublicationTest" time="0.001"/>
+  <testcase name="expiryAtBoundaryAndEveryVersionFieldAreSticky" classname="com.kandong.modelprobe.FullPageOcrPublicationTest" time="0.001"/>
+  <testcase name="balancedCleanupAloneCannotPublishFailedScope" classname="com.kandong.modelprobe.FullPageOcrPublicationTest" time="0.0"/>
+  <testcase name="invalidModelDictionaryPageOrGuardMetadataRejects" classname="com.kandong.modelprobe.FullPageOcrPublicationTest" time="0.0"/>
+  <testcase name="monotonicTimeIsContinuousFromNativeReadToAssociationAndPublish" classname="com.kandong.modelprobe.FullPageOcrPublicationTest" time="0.0"/>
+  <testcase name="publicationIsSingleUseAndExplicitDiscardClearsStagedEvidence" classname="com.kandong.modelprobe.FullPageOcrPublicationTest" time="0.001"/>
+  <testcase name="callbackFailureDuringStagingOrAfterStagingPublishesNothing" classname="com.kandong.modelprobe.FullPageOcrPublicationTest" time="0.0"/>
+  <testcase name="completedDetectionDoesNotPublishRecognitionFailureOrPartialPage" classname="com.kandong.modelprobe.FullPageOcrPublicationTest" time="0.0"/>
+  <testcase name="exceptionAtLastAssociationCheckpointStillRejectsAndDoesNotRetainCallback" classname="com.kandong.modelprobe.FullPageOcrPublicationTest" time="0.0"/>
+  <testcase name="conflictsEmptyAndNoncoreSurviveWithImmutableSnapshot" classname="com.kandong.modelprobe.FullPageOcrPublicationTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
