@@ -58,3 +58,5 @@ python3 -B scripts/run-ocr-emulator.py --output /private/tmp/kandong-ocr-emulato
 候选关联v2已完成两轮每轮14项模拟器验收，使用独立入口 `scripts/run-candidate-emulator.py`；详情及新构件身份见[候选v2](CANDIDATE_SELECTION_V2.md)。上文冻结旧包入口保持原身份检查。
 
 2026-09-30：重建的专用AVD已核对API37、arm64-v8a、16384字节页和两安装包哈希，20项跨段关联同源测试通过；[本轮记录](FULL_PAGE_OCR_ASSOCIATION.md)。主实验APK未变，测试APK已更新为 `6ed22110a0b4dd21e338287a5f7309822cae1a2269bfeda559f18241304fe51f`；上方9月24日冻结入口及旧APK身份是历史证据，不适用于新包。没有重新运行模型或采集屏幕。
+
+2026-09-30后续实际OCR→关联接线：最终测试包8eb4858bc13b035f1009d60238c8c62323a11b17d27ac0618bb706e0e3c10706，实际安装哈希一致；72项通过64.666秒，20页技术通过、9生命周期情形及原回归完成。详见[接线记录](OCR_ASSOCIATION_HANDOFF.md)。主实验包未变；以上历史冻结入口不能直接验证该新包。

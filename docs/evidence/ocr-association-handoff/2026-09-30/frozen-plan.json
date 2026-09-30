@@ -1,0 +1,7 @@
+{
+  "baseCommit": "783ffde",
+  "plan": "docs/plans/2026-09-30-ocr-association-handoff.md",
+  "sha256": "5068790372806f5639080d76e0b17157b06a0ca9cc22bde5f7db96c79bc939c0",
+  "redTests": 10,
+  "redAssertionFailures": 6
+}

@@ -1,0 +1,18 @@
+{
+  "device": "emulator-5582",
+  "api": "37",
+  "packages": {
+    "com.kandong.modelprobe": {
+      "local": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+      "installed": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea"
+    },
+    "com.kandong.modelprobe.test": {
+      "local": "8eb4858bc13b035f1009d60238c8c62323a11b17d27ac0618bb706e0e3c10706",
+      "installed": "8eb4858bc13b035f1009d60238c8c62323a11b17d27ac0618bb706e0e3c10706"
+    }
+  },
+  "fixtureSha256": "e95fa1bac48e0a32272a65cf4b85679705597b2bbe3ca69997f038fdf26345f1",
+  "model": "sdk_gphone16k_arm64",
+  "pageSize": 16384,
+  "expectedTests": 72
+}

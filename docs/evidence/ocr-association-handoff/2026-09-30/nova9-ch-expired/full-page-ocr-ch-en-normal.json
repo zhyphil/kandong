@@ -1,0 +1,307 @@
+{
+  "schema": 1,
+  "runId": "52255989-6029-414e-9b53-8fb1041699bc",
+  "pageFixtureId": "en-normal",
+  "fixtureSha256": "e95fa1bac48e0a32272a65cf4b85679705597b2bbe3ca69997f038fdf26345f1",
+  "modelId": "ch",
+  "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+  "vocabulary": 18385,
+  "detectorModelSha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+  "technicalPassed": false,
+  "status": "incomplete",
+  "rawCandidates": [],
+  "quality": {
+    "assessed": false
+  },
+  "association": {
+    "published": false,
+    "rejection": "NOT_CURRENT",
+    "identity": null,
+    "rawCandidateIds": [],
+    "candidateCount": 0,
+    "edgeCount": 0,
+    "groupCount": 0,
+    "edges": [],
+    "groups": []
+  },
+  "version": {
+    "session": 165942271,
+    "snapshot": 1,
+    "page": 0,
+    "revision": 1,
+    "window": 0,
+    "display": 0
+  },
+  "elapsedMillis": 4709,
+  "layout": {
+    "id": "en-normal",
+    "language": "en",
+    "width": 1176,
+    "height": 2400,
+    "placements": [
+      {
+        "asset": "en-checkin-24.png",
+        "left": 40,
+        "top": 24,
+        "label": "top",
+        "id": "p0"
+      },
+      {
+        "asset": "en-tickets-32.png",
+        "left": 40,
+        "top": 200,
+        "label": "top-more-than-three-lines",
+        "id": "p1"
+      },
+      {
+        "asset": "en-checkin-24.png",
+        "left": 40,
+        "top": 1050,
+        "label": "middle",
+        "id": "p2"
+      },
+      {
+        "asset": "en-tickets-32.png",
+        "left": 40,
+        "top": 2150,
+        "label": "bottom",
+        "id": "p3"
+      }
+    ]
+  },
+  "pageComplete": false,
+  "incompleteReason": "NOT_CURRENT",
+  "transportAndShapePassed": true,
+  "actualStripWithMoreThanThreeCandidates": true,
+  "transportRejection": null,
+  "frameCloseAttempts": 1,
+  "frameClosed": 1,
+  "detectorInvocations": 4,
+  "recognitionInvocations": 8,
+  "strips": [
+    {
+      "index": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "detectorShape": [
+        1,
+        1,
+        672,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 4,
+      "boxes": 4
+    },
+    {
+      "index": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "detectorShape": [
+        1,
+        1,
+        736,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 2,
+      "boxes": 2
+    },
+    {
+      "index": 2,
+      "read": [
+        0,
+        1136,
+        1176,
+        1864
+      ],
+      "core": [
+        0,
+        1200,
+        1176,
+        1800
+      ],
+      "detectorShape": [
+        1,
+        1,
+        736,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 0,
+      "boxes": 0
+    },
+    {
+      "index": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "detectorShape": [
+        1,
+        1,
+        672,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 2,
+      "boxes": 2
+    }
+  ],
+  "geometryCleanupAfterPage": {
+    "matAcquired": {
+      "fullPageResizeSource": 4,
+      "fullPageResizeDestination": 4,
+      "boxMask": 4,
+      "boxKernel": 4,
+      "boxDilated": 4,
+      "boxContourSource": 4,
+      "boxHierarchy": 4,
+      "boxContour": 8,
+      "boxProbability": 4,
+      "boxRectInput": 16,
+      "boxRectPoints": 16,
+      "boxScoreMask": 8,
+      "boxScorePolygon": 8,
+      "boxScoreRoi": 8,
+      "sourceQuad": 8,
+      "targetQuad": 8,
+      "homography": 8,
+      "cropSource": 8,
+      "warpDestination": 8,
+      "recognitionResizeSource": 8,
+      "recognitionResizeDestination": 8
+    },
+    "matReleaseAttempts": {
+      "fullPageResizeDestination": 4,
+      "fullPageResizeSource": 4,
+      "boxScoreRoi": 8,
+      "boxScorePolygon": 8,
+      "boxScoreMask": 8,
+      "boxRectPoints": 16,
+      "boxRectInput": 16,
+      "boxProbability": 4,
+      "boxContour": 8,
+      "boxHierarchy": 4,
+      "boxContourSource": 4,
+      "boxDilated": 4,
+      "boxKernel": 4,
+      "boxMask": 4,
+      "warpDestination": 8,
+      "cropSource": 8,
+      "homography": 8,
+      "targetQuad": 8,
+      "sourceQuad": 8,
+      "recognitionResizeDestination": 8,
+      "recognitionResizeSource": 8
+    },
+    "matReleased": {
+      "fullPageResizeDestination": 4,
+      "fullPageResizeSource": 4,
+      "boxScoreRoi": 8,
+      "boxScorePolygon": 8,
+      "boxScoreMask": 8,
+      "boxRectPoints": 16,
+      "boxRectInput": 16,
+      "boxProbability": 4,
+      "boxContour": 8,
+      "boxHierarchy": 4,
+      "boxContourSource": 4,
+      "boxDilated": 4,
+      "boxKernel": 4,
+      "boxMask": 4,
+      "warpDestination": 8,
+      "cropSource": 8,
+      "homography": 8,
+      "targetQuad": 8,
+      "sourceQuad": 8,
+      "recognitionResizeDestination": 8,
+      "recognitionResizeSource": 8
+    },
+    "matOpened": 152,
+    "findContoursCalls": 4,
+    "bitmapOpened": 4,
+    "bitmapRecycleAttempts": 4,
+    "bitmapRecycled": 4,
+    "balanced": true,
+    "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+  },
+  "transportCleanupAfterPage": {
+    "readersOpened": 1,
+    "readersClosed": 1,
+    "writersOpened": 1,
+    "writersClosed": 1,
+    "writerInputs": 1,
+    "writerInputsTransferred": 1,
+    "writerInputsClosed": 0,
+    "imagesAcquired": 1,
+    "imageCloseAttempts": 1,
+    "imagesClosed": 1
+  },
+  "pageResourcesBalanced": true,
+  "modelGroupSessions": {
+    "modelId": "ch",
+    "sha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+    "vocabulary": 18385,
+    "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+    "pageIds": [
+      "en-normal",
+      "en-seam",
+      "fr-normal",
+      "fr-seam",
+      "hans-normal",
+      "hans-seam",
+      "hant-normal",
+      "hant-seam",
+      "en-seam-1080",
+      "blank"
+    ],
+    "sessionsOpened": 2,
+    "sessionsClosed": 2,
+    "sessionCounts": {
+      "detectorAttempts": 1,
+      "detectorOpened": 1,
+      "detectorClosed": 1,
+      "recognizerAttempts": 1,
+      "recognizerOpened": 1,
+      "recognizerClosed": 1
+    },
+    "closedBeforeNextModel": true,
+    "scopeSucceeded": true,
+    "ortOpened": 318,
+    "ortClosed": 318,
+    "ortCloseAttempts": 318,
+    "ortUncertain": false
+  },
+  "associationFieldsPreserved": false,
+  "associationMembersComplete": false,
+  "threadsRestored": true
+}

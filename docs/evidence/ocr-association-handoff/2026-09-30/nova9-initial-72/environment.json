@@ -1,0 +1,18 @@
+{
+  "device": "2AS0221B09001601",
+  "api": "31",
+  "packages": {
+    "com.kandong.modelprobe": {
+      "local": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+      "installed": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea"
+    },
+    "com.kandong.modelprobe.test": {
+      "local": "cba6b50b1105efc8479404fd787ebb4bb447e46c699cb955412c50b5016b0c1a",
+      "installed": "cba6b50b1105efc8479404fd787ebb4bb447e46c699cb955412c50b5016b0c1a"
+    }
+  },
+  "fixtureSha256": "e95fa1bac48e0a32272a65cf4b85679705597b2bbe3ca69997f038fdf26345f1",
+  "model": "NAM-LX9",
+  "pageSize": 4096,
+  "expectedTests": 72
+}

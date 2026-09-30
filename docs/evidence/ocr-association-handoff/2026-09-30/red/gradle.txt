@@ -1,0 +1,65 @@
+> Task :modelprobe:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :modelprobe:validateProbeAssets
+> Task :modelprobe:preBuild
+> Task :modelprobe:preDebugBuild
+> Task :modelprobe:checkDebugAarMetadata UP-TO-DATE
+> Task :modelprobe:processDebugNavigationResources UP-TO-DATE
+> Task :modelprobe:compileDebugNavigationResources UP-TO-DATE
+> Task :modelprobe:generateDebugResValues UP-TO-DATE
+> Task :modelprobe:mapDebugSourceSetPaths UP-TO-DATE
+> Task :modelprobe:generateDebugResources UP-TO-DATE
+> Task :modelprobe:mergeDebugResources UP-TO-DATE
+> Task :modelprobe:packageDebugResources UP-TO-DATE
+> Task :modelprobe:parseDebugLocalResources UP-TO-DATE
+> Task :modelprobe:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :modelprobe:extractDeepLinksDebug UP-TO-DATE
+> Task :modelprobe:processDebugMainManifest UP-TO-DATE
+> Task :modelprobe:processDebugManifest UP-TO-DATE
+> Task :modelprobe:processDebugManifestForPackage UP-TO-DATE
+> Task :modelprobe:processDebugResources UP-TO-DATE
+> Task :modelprobe:compileDebugKotlin UP-TO-DATE
+> Task :modelprobe:javaPreCompileDebug UP-TO-DATE
+> Task :modelprobe:compileDebugJavaWithJavac NO-SOURCE
+> Task :modelprobe:bundleDebugClassesToRuntimeJar UP-TO-DATE
+> Task :modelprobe:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :modelprobe:verifyPolygonProbeVendor
+> Task :modelprobe:preDebugUnitTestBuild
+> Task :modelprobe:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :modelprobe:processDebugJavaRes UP-TO-DATE
+> Task :modelprobe:compileDebugUnitTestKotlin
+> Task :modelprobe:compileDebugUnitTestJavaWithJavac UP-TO-DATE
+> Task :modelprobe:processDebugUnitTestJavaRes UP-TO-DATE
+
+> Task :modelprobe:testDebugUnitTest FAILED
+
+FullPageOcrPublicationTest > completeBlankUsesCurrentMetadataAndRealZeroReceipts FAILED
+    java.lang.AssertionError at FullPageOcrPublicationTest.kt:39
+
+FullPageOcrPublicationTest > expiryAtBoundaryAndEveryVersionFieldAreSticky FAILED
+    java.lang.AssertionError at FullPageOcrPublicationTest.kt:108
+
+FullPageOcrPublicationTest > monotonicTimeIsContinuousFromNativeReadToAssociationAndPublish FAILED
+    java.lang.AssertionError at FullPageOcrPublicationTest.kt:93
+
+FullPageOcrPublicationTest > publicationIsSingleUseAndExplicitDiscardClearsStagedEvidence FAILED
+    java.lang.AssertionError at FullPageOcrPublicationTest.kt:127
+
+FullPageOcrPublicationTest > callbackFailureDuringStagingOrAfterStagingPublishesNothing FAILED
+    java.lang.AssertionError at FullPageOcrPublicationTest.kt:115
+
+FullPageOcrPublicationTest > conflictsEmptyAndNoncoreSurviveWithImmutableSnapshot FAILED
+    java.lang.AssertionError at FullPageOcrPublicationTest.kt:52
+
+10 tests completed, 6 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':modelprobe:testDebugUnitTest'.
+> There were failing tests. See the report at: file:///Users/haoyuzuo/Projects/KanDong/modelprobe/build/reports/tests/testDebugUnitTest/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 1s
+27 actionable tasks: 4 executed, 23 up-to-date

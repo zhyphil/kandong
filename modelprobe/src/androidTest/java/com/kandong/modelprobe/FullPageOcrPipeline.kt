@@ -22,10 +22,38 @@ internal class FullPageOcrPipeline(private val engine: OrtProbeEngine, private v
     data class PageResult(val complete: Boolean, val reason: String?, val candidates: List<FullPageOcrContract.Candidate>,
         val strips: List<StripDiagnostic>, val detectorInvocations: Int, val recognitionInvocations: Int,
         val frameCloseAttempts: Int, val frameClosed: Int, val transportRejection: String?)
+    class StagedPage(val page: PageResult, val metadata: RgbaFrameMetadata,
+        private val pending: FullPageOcrPublication.Pending) {
+        fun publish(scopeSucceeded: Boolean, resourcesClosed: Boolean) = pending.publish(scopeSucceeded, resourcesClosed)
+        fun discard() = pending.discard()
+    }
     private val owner = Thread.currentThread()
     init {
         FullPageOcrContract.outputShape(model.id, model.sha, model.vocabulary, 320)
         require(dictionary.size == model.vocabulary)
+    }
+
+    /** Same sessions/dictionary/model used by run(); no second, caller-supplied identity envelope.
+     * The narrow runner authenticates detector bytes with DetectorProbeInputs and recognizer and
+     * dictionary bytes with ProbeInputs BEFORE constructing this pipeline. ProbeModel is not proof.
+     */
+    fun runStaged(sourceBatch: String, pageFixtureId: String, frame: RgbaFrameLease, meta: RgbaFrameMetadata,
+        checkpoint: () -> CaptureCheckpoint): StagedPage {
+        val guard = FullPageOcrPublication.Guard(meta, checkpoint)
+        try {
+            val page = run(pageFixtureId, frame, meta, guard::checkpoint)
+            val input = FullPageOcrPublication.Input(page.complete, page.reason, page.candidates,
+                page.strips.map { FullPageOcrPublication.Strip(it.index, it.read, it.core, it.detectorWidth,
+                    it.detectorHeight, it.status, it.boxes) }, page.detectorInvocations, page.recognitionInvocations,
+                page.frameCloseAttempts, page.frameClosed, page.transportRejection)
+            val pending = FullPageOcrPublication.stage(sourceBatch, pageFixtureId, meta,
+                FullPageOcrContract.Model(model.id, model.sha, model.vocabulary), DetectorProbeInputs.MODEL_SHA,
+                model.dictionarySha, input, guard)
+            return StagedPage(page, meta, pending)
+        } catch (e: Throwable) {
+            guard.finish()
+            throw e
+        }
     }
 
     fun run(pageFixtureId: String, frame: RgbaFrameLease, meta: RgbaFrameMetadata,

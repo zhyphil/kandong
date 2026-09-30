@@ -27,6 +27,8 @@ internal class FullPageOcrProbeTest : DetectorProbeTestSupport() {
     private fun output(name: String) = AtomicFile(File(instrumentation.targetContext.filesDir, name))
     private fun rect(r: FullPageStripPlanner.Rect) = JSONArray(listOf(r.left, r.top, r.right, r.bottom))
     private fun quad(q: List<GeometryProbeContract.Point>) = JSONArray(q.map { JSONArray(listOf(it.x, it.y)) })
+    private fun versionJson(v: CaptureVersion) = JSONObject().put("session", v.session).put("snapshot", v.snapshot)
+        .put("page", v.page).put("revision", v.revision).put("window", v.window).put("display", v.display)
     private fun reason(e: Exception) = if (e is ProbeFailure) e.code else
         e.message?.takeIf { it.matches(Regex("[A-Z0-9_]{1,80}")) } ?: e.javaClass.simpleName
     private fun candidate(c: FullPageOcrContract.Candidate): JSONObject {
@@ -41,6 +43,42 @@ internal class FullPageOcrProbeTest : DetectorProbeTestSupport() {
             .put("recognitionInputShape", JSONArray(listOf(1, 3, 48, c.recognitionWidth)))
             .put("recognitionOutputShape", JSONArray(listOf(1, c.recognitionTime,
                 FullPageOcrContract.models.single { it.id == c.modelId }.vocabulary)))
+    }
+
+    private fun association(outcome: FullPageOcrPublication.Outcome): JSONObject {
+        val result = outcome.association
+        val identity = result?.identity
+        return JSONObject().put("published", outcome.published).put("rejection", outcome.reason ?: JSONObject.NULL)
+            .put("identity", identity?.let { i -> JSONObject().put("sourceBatch", i.sourceBatch)
+                .put("version", versionJson(i.version)).put("pageFixtureId", i.pageFixtureId)
+                .put("model", JSONObject().put("id", i.model.id).put("sha256", i.model.sha).put("vocabulary", i.model.vocabulary))
+                .put("detectorSha256", i.detectorSha).put("dictionarySha256", i.dictionarySha) } ?: JSONObject.NULL)
+            // Raw fields remain in the existing rawCandidates schema; these IDs reference them exactly.
+            .put("rawCandidateIds", JSONArray(result?.rawCandidates?.map { it.provenance.id }.orEmpty()))
+            .put("candidateCount", result?.rawCandidates?.size ?: 0)
+            .put("edgeCount", result?.edges?.size ?: 0).put("groupCount", result?.groups?.size ?: 0)
+            .put("edges", JSONArray(result?.edges?.map { e -> JSONObject().put("leftId", e.leftId)
+                .put("rightId", e.rightId).put("kind", e.kind.name) }.orEmpty()))
+            .put("groups", JSONArray(result?.groups?.map { g -> JSONObject().put("id", g.id)
+                .put("memberIds", JSONArray(g.memberIds)).put("text", g.text.name).put("geometry", g.geometry.name)
+                .put("reasons", JSONArray(g.reasons.map { it.name })).put("agreedRaw", g.agreedRaw ?: JSONObject.NULL) }.orEmpty()))
+    }
+
+    /** Every source field compared by value, including both quads and the unmodified raw text. */
+    private fun candidateFields(c: FullPageOcrContract.Candidate): List<Any> {
+        val p = c.provenance
+        return listOf(p.version, p.pageFixtureId, p.stripIndex, p.read, p.core, p.contourIndex, p.rawBoxIndex,
+            p.finalBoxIndex, p.stripReadingOrder, p.localQuad, p.pageQuad, p.detectorScore.toRawBits(),
+            p.ownsCoreCenter, p.id, c.modelId, c.rawText, c.recognitionWidth, c.recognitionTime)
+    }
+
+    private fun verifyAssociation(staged: FullPageOcrPipeline.StagedPage, result: FullPageOcrAssociation.Result) {
+        check(result.published && result.identity?.version == staged.metadata.version) { "ASSOCIATION_VERSION" }
+        val original = staged.page.candidates.associate { it.provenance.id to candidateFields(it) }
+        check(original.size == staged.page.candidates.size && result.rawCandidates.size == original.size &&
+            original == result.rawCandidates.associate { it.provenance.id to candidateFields(it) }) { "ASSOCIATION_FIELDS_CHANGED" }
+        val members = result.groups.flatMap { it.memberIds }
+        check(members.size == original.size && members.toSet() == original.keys) { "ASSOCIATION_MEMBERS_CHANGED" }
     }
 
     /** Exact, position-aware grading AFTER inference. Never chooses or rewrites a raw result.
@@ -81,13 +119,28 @@ internal class FullPageOcrProbeTest : DetectorProbeTestSupport() {
     }
 
     @Test fun fixedFullPagesThroughActualDetectorAndBothRecognizers() {
+        // Device validation may run each fixed model as a separate invocation. This bounds
+        // diagnostic retention without changing any page's acquisition clock or 60-second TTL.
+        val selectedModel = InstrumentationRegistry.getArguments().getString("fullPageModel")
+        require(selectedModel == null || selectedModel in setOf("ch", "latin"))
+        val expectedModels = if (selectedModel == null) 2 else 1
+        val expectedPages = expectedModels * FullPageOcrFixtures.PAGE_IDS.size
         val runId = UUID.randomUUID().toString(); val runStarted = SystemClock.elapsedRealtime()
         val reports = arrayListOf<Pair<String, JSONObject>>() // Text + bounded metadata only, <=20 x 256KiB.
+        val stagedPages = mutableMapOf<JSONObject, FullPageOcrPipeline.StagedPage>()
+        fun discard(report: JSONObject, why: String) {
+            stagedPages.remove(report)?.discard()
+            report.put("pageComplete", false).put("incompleteReason", why).put("technicalPassed", false)
+                .put("rawCandidates", JSONArray()).put("quality", JSONObject().put("assessed", false))
+                .put("association", association(FullPageOcrPublication.Outcome(false, why, null)))
+                .put("associationFieldsPreserved", false).put("associationMembersComplete", false)
+        }
         val errors = JSONArray(); val groups = JSONArray()
         val summary = JSONObject().put("schema", 1).put("runId", runId).put("status", "started")
             .put("fixtureVersion", FullPageOcrFixtures.NAMESPACE).put("fixtureSha256", FullPageOcrFixtures.MANIFEST_SHA)
+            .put("selectedModel", selectedModel ?: "both")
             .put("device", Build.MODEL).put("api", Build.VERSION.SDK_INT).put("groups", groups).put("errors", errors)
-            .put("scope", "Fixed synthetic ImageWriter -> ImageReader -> strips -> actual DB/crop/CTC. No real screens, translation, freshness, merging or deduplication.")
+            .put("scope", "Fixed synthetic ImageWriter -> ImageReader -> strips -> actual DB/crop/CTC -> diagnostic association. No real screens, translation, freshness, text merging or deduplication.")
             .put("resourceScope", "New two-session diagnostic, not the prior one-session memory acceptance. Sequential single worker; one strip and one crop; owned arrays/direct inputs wiped. Existing helpers release native buffers without proving secure erasure or RSS bounds.")
             .put("nativeCancellation", "Native calls are synchronous; version/expiry checks reject between calls, not during a native call.")
         save(output("full-page-ocr-summary.json"), summary)
@@ -97,6 +150,7 @@ internal class FullPageOcrProbeTest : DetectorProbeTestSupport() {
             "recognizerAttempts" to 0, "recognizerOpened" to 0, "recognizerClosed" to 0)
         fun countSession(key: String) { sessionCounts[key] = sessionCounts.getValue(key) + 1 }
         var detectorInvocations = 0; var recognitionInvocations = 0
+        var outerSucceeded = false
         try {
             check(OpenCVLoader.initLocal()); check(Core.VERSION == "5.0.0")
             previousThreads = Core.getNumThreads(); Core.setNumThreads(1); check(Core.getNumThreads() == 1)
@@ -125,6 +179,7 @@ internal class FullPageOcrProbeTest : DetectorProbeTestSupport() {
             }
             // BOTH models see the same immutable page list. Never select a model by expected text.
             for ((modelIndex, model) in models.withIndex()) {
+                if (selectedModel != null && model.id != selectedModel) continue
                 check(live == 0 && !ort.uncertain && ort.opened == ort.closed)
                 FullPageOcrContract.outputShape(model.id, model.sha, model.vocabulary, 320)
                 val groupReports = arrayListOf<JSONObject>(); val beforeOpen = sessionOpened; val beforeClose = sessionClosed
@@ -132,6 +187,7 @@ internal class FullPageOcrProbeTest : DetectorProbeTestSupport() {
                 val group = JSONObject().put("modelId", model.id).put("sha256", model.sha).put("vocabulary", model.vocabulary)
                     .put("dictionarySha256", model.dictionarySha).put("pageIds", JSONArray(FullPageOcrFixtures.PAGE_IDS))
                 groups.put(group)
+                var groupSucceeded = false
                 try {
                     val dictionary = inputs.dictionary(model)
                     withSession("detector", detectorInputs.model()) { detector ->
@@ -145,15 +201,20 @@ internal class FullPageOcrProbeTest : DetectorProbeTestSupport() {
                                     .put("vocabulary", model.vocabulary).put("detectorModelSha256", DetectorProbeInputs.MODEL_SHA)
                                     .put("technicalPassed", false).put("status", "started")
                                     .put("rawCandidates", JSONArray()).put("quality", JSONObject().put("assessed", false))
+                                    .put("association", association(FullPageOcrPublication.Outcome(false, "NOT_STAGED", null)))
                                 reports += filename to report; groupReports += report
                                 try {
                                     val version = CaptureVersion(runStarted, (modelIndex * 10 + pageIndex + 1).toLong(), pageIndex.toLong(), 1, 0, 0)
                                     val meta = RgbaFrameMetadata(page.getInt("width"), page.getInt("height"), version,
                                         SystemClock.elapsedRealtime(), 60000)
                                     val started = SystemClock.elapsedRealtime()
-                                    val actual = fixture.withFrame(page, meta) { frame ->
-                                        pipeline.run(id, frame, meta) { CaptureCheckpoint(version, true, SystemClock.elapsedRealtime()) }
+                                    report.put("version", versionJson(version)) // Includes blank; never inferred from another page.
+                                    val staged = fixture.withFrame(page, meta) { frame ->
+                                        pipeline.runStaged(runId, id, frame, meta) {
+                                            CaptureCheckpoint(version, true, SystemClock.elapsedRealtime())
+                                        }.also { stagedPages[report] = it }
                                     }
+                                    val actual = staged.page
                                     detectorInvocations += actual.detectorInvocations; recognitionInvocations += actual.recognitionInvocations
                                     val expectedStrips = FullPageStripPlanner.plan(meta.width, meta.height).strips.size
                                     val transportAndShape = actual.complete && actual.detectorInvocations == expectedStrips &&
@@ -177,26 +238,28 @@ internal class FullPageOcrProbeTest : DetectorProbeTestSupport() {
                                     // Fail closed before a report is retained if bounded metadata would exceed save().
                                     require(report.toString().toByteArray(Charsets.UTF_8).size <= 240 * 1024) { "REPORT_BUDGET" }
                                 } catch (e: Exception) {
-                                    report.put("pageComplete", false).put("incompleteReason", reason(e))
-                                        .put("rawCandidates", JSONArray()).put("quality", JSONObject().put("assessed", false))
+                                    discard(report, reason(e))
                                 }
                                 if (ort.uncertain || !geometry.balanced || !fixture.balanced) error("CLEANUP_UNCERTAIN")
                             }
                         }
                     }
+                    groupSucceeded = true // Both nested session callbacks AND closes returned normally.
                 } finally {
                     val good = !ort.uncertain && ort.opened == ort.closed && ort.opened == ort.closeAttempts && live == 0
                     group.put("sessionsOpened", sessionOpened - beforeOpen).put("sessionsClosed", sessionClosed - beforeClose)
                         .put("sessionCounts", JSONObject(sessionCounts.mapValues { (key, value) -> value - beforeSessions.getValue(key) }))
-                        .put("closedBeforeNextModel", good).put("ortOpened", ort.opened).put("ortClosed", ort.closed)
+                        .put("closedBeforeNextModel", good).put("scopeSucceeded", groupSucceeded)
+                        .put("ortOpened", ort.opened).put("ortClosed", ort.closed)
                         .put("ortCloseAttempts", ort.closeAttempts).put("ortUncertain", ort.uncertain)
                     groupReports.forEach { report ->
                         report.put("modelGroupSessions", group)
-                        if (!good) report.put("pageComplete", false).put("incompleteReason", "SESSION_CLEANUP_UNCERTAIN")
-                            .put("rawCandidates", JSONArray()).put("quality", JSONObject().put("assessed", false))
+                        if (!groupSucceeded || !good) discard(report,
+                            if (!groupSucceeded) "SESSION_SCOPE_FAILED" else "SESSION_CLEANUP_UNCERTAIN")
                     }
                 }
             }
+            outerSucceeded = true
         } catch (e: Exception) { errors.put(reason(e)) }
         finally {
             previousThreads?.let { prior ->
@@ -206,19 +269,48 @@ internal class FullPageOcrProbeTest : DetectorProbeTestSupport() {
             val cleanupGood = !ort.uncertain && ort.opened == ort.closed && ort.opened == ort.closeAttempts &&
                 geometry.balanced && fixtures?.balanced == true && live == 0 && restored
             var passedPages = 0
+            var associatedPages = 0; var associatedCandidates = 0; var associatedGroups = 0; var associatedEdges = 0
             reports.forEach { (name, report) ->
+                if (!outerSucceeded || !cleanupGood) discard(report,
+                    if (!outerSucceeded) "OUTER_SCOPE_FAILED" else "OUTER_CLEANUP_UNCERTAIN")
+                val staged = stagedPages.remove(report)
+                if (staged != null) {
+                    try {
+                        val outcome = staged.publish(outerSucceeded && report.getJSONObject("modelGroupSessions").getBoolean("scopeSucceeded"),
+                            cleanupGood && report.optBoolean("pageResourcesBalanced"))
+                        if (!outcome.published) discard(report, outcome.reason ?: "ASSOCIATION_REJECTED")
+                        else {
+                            verifyAssociation(staged, checkNotNull(outcome.association))
+                            report.put("association", association(outcome)).put("associationFieldsPreserved", true)
+                                .put("associationMembersComplete", true)
+                            require(report.toString().toByteArray(Charsets.UTF_8).size <= 240 * 1024) { "REPORT_BUDGET" }
+                        }
+                    } catch (e: Exception) { discard(report, reason(e)) }
+                    finally { staged.discard() }
+                }
                 val passed = cleanupGood && report.optBoolean("pageComplete") && report.optBoolean("pageResourcesBalanced") &&
-                    report.optBoolean("transportAndShapePassed")
+                    report.optBoolean("transportAndShapePassed") && report.getJSONObject("association").getBoolean("published")
                 report.put("technicalPassed", passed).put("status", if (passed) "complete" else "incomplete")
                     .put("threadsRestored", restored)
-                if (!cleanupGood) report.put("rawCandidates", JSONArray()).put("quality", JSONObject().put("assessed", false))
+                if (!passed) discard(report,
+                    if (report.isNull("incompleteReason")) "PAGE_REJECTED" else report.getString("incompleteReason"))
+                val associated = report.getJSONObject("association")
+                if (associated.getBoolean("published")) {
+                    associatedPages++; associatedCandidates += associated.getInt("candidateCount")
+                    associatedGroups += associated.getInt("groupCount"); associatedEdges += associated.getInt("edgeCount")
+                }
                 if (passed) passedPages++
                 save(output(name), report)
             }
-            val technicalPassed = passedPages == 20 && sessionOpened == 4 && sessionClosed == 4 && peak == 2 && errors.length() == 0
+            val technicalPassed = outerSucceeded && passedPages == expectedPages && associatedPages == expectedPages &&
+                sessionOpened == expectedModels * 2 && sessionClosed == expectedModels * 2 && peak == 2 && errors.length() == 0
             summary.put("status", if (technicalPassed) "complete" else "incomplete").put("technicalPassed", technicalPassed)
                 .put("qualityAcceptance", "Not a technical assertion; inspect each page quality and rawCandidates separately.")
-                .put("reports", JSONArray(reports.map { it.first })).put("expectedPages", 20).put("technicalPassedPages", passedPages)
+                .put("associationAcceptance", "Same-inference candidates preserved by value and covered once; publication requires normal scope completion, cleanup and the original guard. No OCR quality improvement claim.")
+                .put("associationPublishedPages", associatedPages).put("associationCandidateCount", associatedCandidates)
+                .put("associationGroupCount", associatedGroups).put("associationEdgeCount", associatedEdges)
+                .put("scopeSucceeded", outerSucceeded)
+                .put("reports", JSONArray(reports.map { it.first })).put("expectedPages", expectedPages).put("technicalPassedPages", passedPages)
                 .put("sessionAttempts", sessionAttempts).put("sessionsOpened", sessionOpened).put("sessionsClosed", sessionClosed)
                 .put("sessionCounts", JSONObject(sessionCounts.toMap()))
                 .put("peakSimultaneousSessions", peak).put("detectorInvocations", detectorInvocations).put("recognitionInvocations", recognitionInvocations)

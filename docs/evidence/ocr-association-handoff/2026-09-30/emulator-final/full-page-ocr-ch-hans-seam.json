@@ -1,0 +1,2117 @@
+{
+  "schema": 1,
+  "runId": "d0b6772d-f646-422e-a680-bee227073ad6",
+  "pageFixtureId": "hans-seam",
+  "fixtureSha256": "e95fa1bac48e0a32272a65cf4b85679705597b2bbe3ca69997f038fdf26345f1",
+  "modelId": "ch",
+  "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+  "vocabulary": 18385,
+  "detectorModelSha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+  "technicalPassed": true,
+  "status": "complete",
+  "rawCandidates": [
+    {
+      "id": "30493-6-5-1-0-0/hans-seam/s0/c5-r5-f5",
+      "modelId": "ch",
+      "rawText": "订单合计268.90元。",
+      "version": {
+        "session": 30493,
+        "snapshot": 6,
+        "page": 5,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 5,
+      "rawBoxIndex": 5,
+      "finalBoxIndex": 5,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          69,
+          50
+        ],
+        [
+          278,
+          52
+        ],
+        [
+          278,
+          83
+        ],
+        [
+          68,
+          81
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          50
+        ],
+        [
+          278,
+          52
+        ],
+        [
+          278,
+          83
+        ],
+        [
+          68,
+          81
+        ]
+      ],
+      "detectorScore": 0.8207945350398951,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        325
+      ],
+      "recognitionOutputShape": [
+        1,
+        41,
+        18385
+      ]
+    },
+    {
+      "id": "30493-6-5-1-0-0/hans-seam/s0/c4-r4-f4",
+      "modelId": "ch",
+      "rawText": "含早餐，不含城市税。",
+      "version": {
+        "session": 30493,
+        "snapshot": 6,
+        "page": 5,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 4,
+      "rawBoxIndex": 4,
+      "finalBoxIndex": 4,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          68,
+          87
+        ],
+        [
+          303,
+          89
+        ],
+        [
+          303,
+          122
+        ],
+        [
+          67,
+          119
+        ]
+      ],
+      "pageQuad": [
+        [
+          68,
+          87
+        ],
+        [
+          303,
+          89
+        ],
+        [
+          303,
+          122
+        ],
+        [
+          67,
+          119
+        ]
+      ],
+      "detectorScore": 0.8232070584217464,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        343
+      ],
+      "recognitionOutputShape": [
+        1,
+        43,
+        18385
+      ]
+    },
+    {
+      "id": "30493-6-5-1-0-0/hans-seam/s0/c3-r3-f3",
+      "modelId": "ch",
+      "rawText": "每人限带7公斤行李。",
+      "version": {
+        "session": 30493,
+        "snapshot": 6,
+        "page": 5,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 3,
+      "rawBoxIndex": 3,
+      "finalBoxIndex": 3,
+      "stripReadingOrder": 2,
+      "localQuad": [
+        [
+          71,
+          229
+        ],
+        [
+          362,
+          229
+        ],
+        [
+          362,
+          266
+        ],
+        [
+          71,
+          266
+        ]
+      ],
+      "pageQuad": [
+        [
+          71,
+          229
+        ],
+        [
+          362,
+          229
+        ],
+        [
+          362,
+          266
+        ],
+        [
+          71,
+          266
+        ]
+      ],
+      "detectorScore": 0.8599603735115927,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        377
+      ],
+      "recognitionOutputShape": [
+        1,
+        47,
+        18385
+      ]
+    },
+    {
+      "id": "30493-6-5-1-0-0/hans-seam/s0/c2-r2-f2",
+      "modelId": "ch",
+      "rawText": "请勿重复付款。",
+      "version": {
+        "session": 30493,
+        "snapshot": 6,
+        "page": 5,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 2,
+      "rawBoxIndex": 2,
+      "finalBoxIndex": 2,
+      "stripReadingOrder": 3,
+      "localQuad": [
+        [
+          69,
+          272
+        ],
+        [
+          281,
+          275
+        ],
+        [
+          281,
+          315
+        ],
+        [
+          68,
+          312
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          272
+        ],
+        [
+          281,
+          275
+        ],
+        [
+          281,
+          315
+        ],
+        [
+          68,
+          312
+        ]
+      ],
+      "detectorScore": 0.8405362662787621,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        18385
+      ]
+    },
+    {
+      "id": "30493-6-5-1-0-0/hans-seam/s0/c1-r1-f1",
+      "modelId": "ch",
+      "rawText": "订单合计268.90元。",
+      "version": {
+        "session": 30493,
+        "snapshot": 6,
+        "page": 5,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 4,
+      "localQuad": [
+        [
+          69,
+          584
+        ],
+        [
+          279,
+          586
+        ],
+        [
+          279,
+          617
+        ],
+        [
+          68,
+          615
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          584
+        ],
+        [
+          279,
+          586
+        ],
+        [
+          279,
+          617
+        ],
+        [
+          68,
+          615
+        ]
+      ],
+      "detectorScore": 0.8088481223615059,
+      "ownsCoreCenter": false,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        326
+      ],
+      "recognitionOutputShape": [
+        1,
+        41,
+        18385
+      ]
+    },
+    {
+      "id": "30493-6-5-1-0-0/hans-seam/s0/c0-r0-f0",
+      "modelId": "ch",
+      "rawText": "含早餐，不含城市税。",
+      "version": {
+        "session": 30493,
+        "snapshot": 6,
+        "page": 5,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-seam",
+      "stripIndex": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "contourIndex": 0,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 5,
+      "localQuad": [
+        [
+          69,
+          622
+        ],
+        [
+          303,
+          622
+        ],
+        [
+          303,
+          654
+        ],
+        [
+          69,
+          654
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          622
+        ],
+        [
+          303,
+          622
+        ],
+        [
+          303,
+          654
+        ],
+        [
+          69,
+          654
+        ]
+      ],
+      "detectorScore": 0.798176724838928,
+      "ownsCoreCenter": false,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        351
+      ],
+      "recognitionOutputShape": [
+        1,
+        44,
+        18385
+      ]
+    },
+    {
+      "id": "30493-6-5-1-0-0/hans-seam/s1/c3-r3-f3",
+      "modelId": "ch",
+      "rawText": "订单合计268.90元。",
+      "version": {
+        "session": 30493,
+        "snapshot": 6,
+        "page": 5,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-seam",
+      "stripIndex": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "contourIndex": 3,
+      "rawBoxIndex": 3,
+      "finalBoxIndex": 3,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          69,
+          48
+        ],
+        [
+          279,
+          51
+        ],
+        [
+          279,
+          81
+        ],
+        [
+          68,
+          79
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          584
+        ],
+        [
+          279,
+          587
+        ],
+        [
+          279,
+          617
+        ],
+        [
+          68,
+          615
+        ]
+      ],
+      "detectorScore": 0.8190470906614348,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        326
+      ],
+      "recognitionOutputShape": [
+        1,
+        41,
+        18385
+      ]
+    },
+    {
+      "id": "30493-6-5-1-0-0/hans-seam/s1/c2-r2-f2",
+      "modelId": "ch",
+      "rawText": "含早餐，不含城市税。",
+      "version": {
+        "session": 30493,
+        "snapshot": 6,
+        "page": 5,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-seam",
+      "stripIndex": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "contourIndex": 2,
+      "rawBoxIndex": 2,
+      "finalBoxIndex": 2,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          69,
+          85
+        ],
+        [
+          304,
+          85
+        ],
+        [
+          304,
+          118
+        ],
+        [
+          69,
+          118
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          621
+        ],
+        [
+          304,
+          621
+        ],
+        [
+          304,
+          654
+        ],
+        [
+          69,
+          654
+        ]
+      ],
+      "detectorScore": 0.8124925341569424,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        341
+      ],
+      "recognitionOutputShape": [
+        1,
+        43,
+        18385
+      ]
+    },
+    {
+      "id": "30493-6-5-1-0-0/hans-seam/s1/c1-r1-f1",
+      "modelId": "ch",
+      "rawText": "每人限带7公斤行李。",
+      "version": {
+        "session": 30493,
+        "snapshot": 6,
+        "page": 5,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-seam",
+      "stripIndex": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 2,
+      "localQuad": [
+        [
+          70,
+          581
+        ],
+        [
+          364,
+          583
+        ],
+        [
+          363,
+          620
+        ],
+        [
+          69,
+          618
+        ]
+      ],
+      "pageQuad": [
+        [
+          70,
+          1117
+        ],
+        [
+          364,
+          1119
+        ],
+        [
+          363,
+          1156
+        ],
+        [
+          69,
+          1154
+        ]
+      ],
+      "detectorScore": 0.8201416581638509,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        381
+      ],
+      "recognitionOutputShape": [
+        1,
+        48,
+        18385
+      ]
+    },
+    {
+      "id": "30493-6-5-1-0-0/hans-seam/s1/c0-r0-f0",
+      "modelId": "ch",
+      "rawText": "请勿重复付款。",
+      "version": {
+        "session": 30493,
+        "snapshot": 6,
+        "page": 5,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-seam",
+      "stripIndex": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "contourIndex": 0,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 3,
+      "localQuad": [
+        [
+          69,
+          626
+        ],
+        [
+          282,
+          628
+        ],
+        [
+          282,
+          668
+        ],
+        [
+          68,
+          666
+        ]
+      ],
+      "pageQuad": [
+        [
+          69,
+          1162
+        ],
+        [
+          282,
+          1164
+        ],
+        [
+          282,
+          1204
+        ],
+        [
+          68,
+          1202
+        ]
+      ],
+      "detectorScore": 0.8299944613136926,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        18385
+      ]
+    },
+    {
+      "id": "30493-6-5-1-0-0/hans-seam/s2/c2-r1-f1",
+      "modelId": "ch",
+      "rawText": "每入限市7公介行字。",
+      "version": {
+        "session": 30493,
+        "snapshot": 6,
+        "page": 5,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-seam",
+      "stripIndex": 2,
+      "read": [
+        0,
+        1136,
+        1176,
+        1864
+      ],
+      "core": [
+        0,
+        1200,
+        1176,
+        1800
+      ],
+      "contourIndex": 2,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          67,
+          0
+        ],
+        [
+          369,
+          0
+        ],
+        [
+          369,
+          29
+        ],
+        [
+          67,
+          29
+        ]
+      ],
+      "pageQuad": [
+        [
+          67,
+          1136
+        ],
+        [
+          369,
+          1136
+        ],
+        [
+          369,
+          1165
+        ],
+        [
+          67,
+          1165
+        ]
+      ],
+      "detectorScore": 0.5407105767600973,
+      "ownsCoreCenter": false,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        499
+      ],
+      "recognitionOutputShape": [
+        1,
+        62,
+        18385
+      ]
+    },
+    {
+      "id": "30493-6-5-1-0-0/hans-seam/s2/c1-r0-f0",
+      "modelId": "ch",
+      "rawText": "请勿重复付款。",
+      "version": {
+        "session": 30493,
+        "snapshot": 6,
+        "page": 5,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-seam",
+      "stripIndex": 2,
+      "read": [
+        0,
+        1136,
+        1176,
+        1864
+      ],
+      "core": [
+        0,
+        1200,
+        1176,
+        1800
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          68,
+          26
+        ],
+        [
+          280,
+          28
+        ],
+        [
+          280,
+          68
+        ],
+        [
+          67,
+          66
+        ]
+      ],
+      "pageQuad": [
+        [
+          68,
+          1162
+        ],
+        [
+          280,
+          1164
+        ],
+        [
+          280,
+          1204
+        ],
+        [
+          67,
+          1202
+        ]
+      ],
+      "detectorScore": 0.8232334237713737,
+      "ownsCoreCenter": false,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        18385
+      ]
+    },
+    {
+      "id": "30493-6-5-1-0-0/hans-seam/s3/c3-r3-f3",
+      "modelId": "ch",
+      "rawText": "订单合计268.90元。",
+      "version": {
+        "session": 30493,
+        "snapshot": 6,
+        "page": 5,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-seam",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 3,
+      "rawBoxIndex": 3,
+      "finalBoxIndex": 3,
+      "stripReadingOrder": 0,
+      "localQuad": [
+        [
+          68,
+          111
+        ],
+        [
+          279,
+          113
+        ],
+        [
+          279,
+          145
+        ],
+        [
+          67,
+          143
+        ]
+      ],
+      "pageQuad": [
+        [
+          68,
+          1847
+        ],
+        [
+          279,
+          1849
+        ],
+        [
+          279,
+          1881
+        ],
+        [
+          67,
+          1879
+        ]
+      ],
+      "detectorScore": 0.8286721239864574,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        18385
+      ]
+    },
+    {
+      "id": "30493-6-5-1-0-0/hans-seam/s3/c2-r2-f2",
+      "modelId": "ch",
+      "rawText": "含早餐，不含城市税。",
+      "version": {
+        "session": 30493,
+        "snapshot": 6,
+        "page": 5,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-seam",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 2,
+      "rawBoxIndex": 2,
+      "finalBoxIndex": 2,
+      "stripReadingOrder": 1,
+      "localQuad": [
+        [
+          70,
+          150
+        ],
+        [
+          302,
+          150
+        ],
+        [
+          302,
+          180
+        ],
+        [
+          70,
+          180
+        ]
+      ],
+      "pageQuad": [
+        [
+          70,
+          1886
+        ],
+        [
+          302,
+          1886
+        ],
+        [
+          302,
+          1916
+        ],
+        [
+          70,
+          1916
+        ]
+      ],
+      "detectorScore": 0.8567995774074042,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        371
+      ],
+      "recognitionOutputShape": [
+        1,
+        46,
+        18385
+      ]
+    },
+    {
+      "id": "30493-6-5-1-0-0/hans-seam/s3/c1-r1-f1",
+      "modelId": "ch",
+      "rawText": "每人限带7公斤行李。",
+      "version": {
+        "session": 30493,
+        "snapshot": 6,
+        "page": 5,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-seam",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 1,
+      "rawBoxIndex": 1,
+      "finalBoxIndex": 1,
+      "stripReadingOrder": 2,
+      "localQuad": [
+        [
+          71,
+          444
+        ],
+        [
+          363,
+          444
+        ],
+        [
+          363,
+          479
+        ],
+        [
+          71,
+          479
+        ]
+      ],
+      "pageQuad": [
+        [
+          71,
+          2180
+        ],
+        [
+          363,
+          2180
+        ],
+        [
+          363,
+          2215
+        ],
+        [
+          71,
+          2215
+        ]
+      ],
+      "detectorScore": 0.9224495424528553,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        400
+      ],
+      "recognitionOutputShape": [
+        1,
+        50,
+        18385
+      ]
+    },
+    {
+      "id": "30493-6-5-1-0-0/hans-seam/s3/c0-r0-f0",
+      "modelId": "ch",
+      "rawText": "请勿重复付款。",
+      "version": {
+        "session": 30493,
+        "snapshot": 6,
+        "page": 5,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-seam",
+      "stripIndex": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "contourIndex": 0,
+      "rawBoxIndex": 0,
+      "finalBoxIndex": 0,
+      "stripReadingOrder": 3,
+      "localQuad": [
+        [
+          70,
+          490
+        ],
+        [
+          280,
+          490
+        ],
+        [
+          280,
+          527
+        ],
+        [
+          70,
+          527
+        ]
+      ],
+      "pageQuad": [
+        [
+          70,
+          2226
+        ],
+        [
+          280,
+          2226
+        ],
+        [
+          280,
+          2263
+        ],
+        [
+          70,
+          2263
+        ]
+      ],
+      "detectorScore": 0.8902491728497269,
+      "ownsCoreCenter": true,
+      "recognitionInputShape": [
+        1,
+        3,
+        48,
+        320
+      ],
+      "recognitionOutputShape": [
+        1,
+        40,
+        18385
+      ]
+    }
+  ],
+  "quality": {
+    "assessed": true,
+    "normalization": "none; exact raw text plus glyph-box intersection",
+    "lines": [
+      {
+        "lineId": "p0/0",
+        "asset": "hans-order-24.png",
+        "pngSha256": "5f489289f3040d0d68e4c427ff405326522d124abc830df5503aaaa24ad0eae5",
+        "placement": {
+          "asset": "hans-order-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        "expectedRaw": "订单合计268.90元。",
+        "pageGlyphBounds": [
+          73,
+          56,
+          274,
+          79
+        ],
+        "touchingCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c5-r5-f5"
+        ],
+        "exactCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c5-r5-f5"
+        ]
+      },
+      {
+        "lineId": "p0/1",
+        "asset": "hans-order-24.png",
+        "pngSha256": "5f489289f3040d0d68e4c427ff405326522d124abc830df5503aaaa24ad0eae5",
+        "placement": {
+          "asset": "hans-order-24.png",
+          "left": 40,
+          "top": 24,
+          "label": "top",
+          "id": "p0"
+        },
+        "expectedRaw": "含早餐，不含城市税。",
+        "pageGlyphBounds": [
+          72,
+          93,
+          297,
+          117
+        ],
+        "touchingCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c4-r4-f4"
+        ],
+        "exactCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c4-r4-f4"
+        ]
+      },
+      {
+        "lineId": "p1/0",
+        "asset": "hans-luggage-32.png",
+        "pngSha256": "ff04e22b9a33b83fe03a7bb326d7b8b2be4920dfe5d06fc80506596f43abbceb",
+        "placement": {
+          "asset": "hans-luggage-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        "expectedRaw": "每人限带7公斤行李。",
+        "pageGlyphBounds": [
+          74,
+          232,
+          358,
+          263
+        ],
+        "touchingCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c3-r3-f3"
+        ],
+        "exactCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c3-r3-f3"
+        ]
+      },
+      {
+        "lineId": "p1/1",
+        "asset": "hans-luggage-32.png",
+        "pngSha256": "ff04e22b9a33b83fe03a7bb326d7b8b2be4920dfe5d06fc80506596f43abbceb",
+        "placement": {
+          "asset": "hans-luggage-32.png",
+          "left": 40,
+          "top": 200,
+          "label": "top-more-than-three-lines",
+          "id": "p1"
+        },
+        "expectedRaw": "请勿重复付款。",
+        "pageGlyphBounds": [
+          73,
+          280,
+          276,
+          309
+        ],
+        "touchingCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c2-r2-f2"
+        ],
+        "exactCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c2-r2-f2"
+        ]
+      },
+      {
+        "lineId": "p2/0",
+        "asset": "hans-order-24.png",
+        "pngSha256": "5f489289f3040d0d68e4c427ff405326522d124abc830df5503aaaa24ad0eae5",
+        "placement": {
+          "asset": "hans-order-24.png",
+          "left": 40,
+          "top": 557,
+          "label": "core-boundary",
+          "id": "p2"
+        },
+        "expectedRaw": "订单合计268.90元。",
+        "pageGlyphBounds": [
+          73,
+          589,
+          274,
+          612
+        ],
+        "touchingCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c1-r1-f1",
+          "30493-6-5-1-0-0/hans-seam/s1/c3-r3-f3"
+        ],
+        "exactCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c1-r1-f1",
+          "30493-6-5-1-0-0/hans-seam/s1/c3-r3-f3"
+        ]
+      },
+      {
+        "lineId": "p2/1",
+        "asset": "hans-order-24.png",
+        "pngSha256": "5f489289f3040d0d68e4c427ff405326522d124abc830df5503aaaa24ad0eae5",
+        "placement": {
+          "asset": "hans-order-24.png",
+          "left": 40,
+          "top": 557,
+          "label": "core-boundary",
+          "id": "p2"
+        },
+        "expectedRaw": "含早餐，不含城市税。",
+        "pageGlyphBounds": [
+          72,
+          626,
+          297,
+          650
+        ],
+        "touchingCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c0-r0-f0",
+          "30493-6-5-1-0-0/hans-seam/s1/c2-r2-f2"
+        ],
+        "exactCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c0-r0-f0",
+          "30493-6-5-1-0-0/hans-seam/s1/c2-r2-f2"
+        ]
+      },
+      {
+        "lineId": "p3/0",
+        "asset": "hans-luggage-32.png",
+        "pngSha256": "ff04e22b9a33b83fe03a7bb326d7b8b2be4920dfe5d06fc80506596f43abbceb",
+        "placement": {
+          "asset": "hans-luggage-32.png",
+          "left": 40,
+          "top": 1089,
+          "label": "read-top-boundary",
+          "id": "p3"
+        },
+        "expectedRaw": "每人限带7公斤行李。",
+        "pageGlyphBounds": [
+          74,
+          1121,
+          358,
+          1152
+        ],
+        "touchingCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s1/c1-r1-f1",
+          "30493-6-5-1-0-0/hans-seam/s2/c2-r1-f1"
+        ],
+        "exactCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s1/c1-r1-f1"
+        ]
+      },
+      {
+        "lineId": "p3/1",
+        "asset": "hans-luggage-32.png",
+        "pngSha256": "ff04e22b9a33b83fe03a7bb326d7b8b2be4920dfe5d06fc80506596f43abbceb",
+        "placement": {
+          "asset": "hans-luggage-32.png",
+          "left": 40,
+          "top": 1089,
+          "label": "read-top-boundary",
+          "id": "p3"
+        },
+        "expectedRaw": "请勿重复付款。",
+        "pageGlyphBounds": [
+          73,
+          1169,
+          276,
+          1198
+        ],
+        "touchingCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s1/c0-r0-f0",
+          "30493-6-5-1-0-0/hans-seam/s2/c1-r0-f0"
+        ],
+        "exactCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s1/c0-r0-f0",
+          "30493-6-5-1-0-0/hans-seam/s2/c1-r0-f0"
+        ]
+      },
+      {
+        "lineId": "p4/0",
+        "asset": "hans-order-24.png",
+        "pngSha256": "5f489289f3040d0d68e4c427ff405326522d124abc830df5503aaaa24ad0eae5",
+        "placement": {
+          "asset": "hans-order-24.png",
+          "left": 40,
+          "top": 1821,
+          "label": "read-bottom-boundary",
+          "id": "p4"
+        },
+        "expectedRaw": "订单合计268.90元。",
+        "pageGlyphBounds": [
+          73,
+          1853,
+          274,
+          1876
+        ],
+        "touchingCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s3/c3-r3-f3"
+        ],
+        "exactCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s3/c3-r3-f3"
+        ]
+      },
+      {
+        "lineId": "p4/1",
+        "asset": "hans-order-24.png",
+        "pngSha256": "5f489289f3040d0d68e4c427ff405326522d124abc830df5503aaaa24ad0eae5",
+        "placement": {
+          "asset": "hans-order-24.png",
+          "left": 40,
+          "top": 1821,
+          "label": "read-bottom-boundary",
+          "id": "p4"
+        },
+        "expectedRaw": "含早餐，不含城市税。",
+        "pageGlyphBounds": [
+          72,
+          1890,
+          297,
+          1914
+        ],
+        "touchingCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s3/c2-r2-f2"
+        ],
+        "exactCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s3/c2-r2-f2"
+        ]
+      },
+      {
+        "lineId": "p5/0",
+        "asset": "hans-luggage-32.png",
+        "pngSha256": "ff04e22b9a33b83fe03a7bb326d7b8b2be4920dfe5d06fc80506596f43abbceb",
+        "placement": {
+          "asset": "hans-luggage-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p5"
+        },
+        "expectedRaw": "每人限带7公斤行李。",
+        "pageGlyphBounds": [
+          74,
+          2182,
+          358,
+          2213
+        ],
+        "touchingCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s3/c1-r1-f1"
+        ],
+        "exactCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s3/c1-r1-f1"
+        ]
+      },
+      {
+        "lineId": "p5/1",
+        "asset": "hans-luggage-32.png",
+        "pngSha256": "ff04e22b9a33b83fe03a7bb326d7b8b2be4920dfe5d06fc80506596f43abbceb",
+        "placement": {
+          "asset": "hans-luggage-32.png",
+          "left": 40,
+          "top": 2150,
+          "label": "bottom",
+          "id": "p5"
+        },
+        "expectedRaw": "请勿重复付款。",
+        "pageGlyphBounds": [
+          73,
+          2230,
+          276,
+          2259
+        ],
+        "touchingCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s3/c0-r0-f0"
+        ],
+        "exactCandidateIds": [
+          "30493-6-5-1-0-0/hans-seam/s3/c0-r0-f0"
+        ]
+      }
+    ],
+    "expectedLines": 12,
+    "linesWithoutExactCandidate": 0,
+    "extraExactCandidates": 3,
+    "emptyCandidates": 0,
+    "fragmentOrErrorOrExtraCandidateIds": [
+      "30493-6-5-1-0-0/hans-seam/s2/c2-r1-f1"
+    ],
+    "strictExactPage": false,
+    "interpretation": "Diagnostic only. Inspect every raw candidate, including duplicates/fragments; no translation or semantic acceptance."
+  },
+  "association": {
+    "published": true,
+    "rejection": null,
+    "identity": {
+      "sourceBatch": "d0b6772d-f646-422e-a680-bee227073ad6",
+      "version": {
+        "session": 30493,
+        "snapshot": 6,
+        "page": 5,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "pageFixtureId": "hans-seam",
+      "model": {
+        "id": "ch",
+        "sha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+        "vocabulary": 18385
+      },
+      "detectorSha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+      "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af"
+    },
+    "rawCandidateIds": [
+      "30493-6-5-1-0-0/hans-seam/s0/c0-r0-f0",
+      "30493-6-5-1-0-0/hans-seam/s0/c1-r1-f1",
+      "30493-6-5-1-0-0/hans-seam/s0/c2-r2-f2",
+      "30493-6-5-1-0-0/hans-seam/s0/c3-r3-f3",
+      "30493-6-5-1-0-0/hans-seam/s0/c4-r4-f4",
+      "30493-6-5-1-0-0/hans-seam/s0/c5-r5-f5",
+      "30493-6-5-1-0-0/hans-seam/s1/c0-r0-f0",
+      "30493-6-5-1-0-0/hans-seam/s1/c1-r1-f1",
+      "30493-6-5-1-0-0/hans-seam/s1/c2-r2-f2",
+      "30493-6-5-1-0-0/hans-seam/s1/c3-r3-f3",
+      "30493-6-5-1-0-0/hans-seam/s2/c1-r0-f0",
+      "30493-6-5-1-0-0/hans-seam/s2/c2-r1-f1",
+      "30493-6-5-1-0-0/hans-seam/s3/c0-r0-f0",
+      "30493-6-5-1-0-0/hans-seam/s3/c1-r1-f1",
+      "30493-6-5-1-0-0/hans-seam/s3/c2-r2-f2",
+      "30493-6-5-1-0-0/hans-seam/s3/c3-r3-f3"
+    ],
+    "candidateCount": 16,
+    "edgeCount": 4,
+    "groupCount": 12,
+    "edges": [
+      {
+        "leftId": "30493-6-5-1-0-0/hans-seam/s0/c0-r0-f0",
+        "rightId": "30493-6-5-1-0-0/hans-seam/s1/c2-r2-f2",
+        "kind": "STRONG"
+      },
+      {
+        "leftId": "30493-6-5-1-0-0/hans-seam/s0/c1-r1-f1",
+        "rightId": "30493-6-5-1-0-0/hans-seam/s1/c3-r3-f3",
+        "kind": "STRONG"
+      },
+      {
+        "leftId": "30493-6-5-1-0-0/hans-seam/s1/c0-r0-f0",
+        "rightId": "30493-6-5-1-0-0/hans-seam/s2/c1-r0-f0",
+        "kind": "STRONG"
+      },
+      {
+        "leftId": "30493-6-5-1-0-0/hans-seam/s1/c1-r1-f1",
+        "rightId": "30493-6-5-1-0-0/hans-seam/s2/c2-r1-f1",
+        "kind": "POSSIBLE_CLIPPED"
+      }
+    ],
+    "groups": [
+      {
+        "id": "36:d0b6772d-f646-422e-a680-bee227073ad6|2:ch|37:30493-6-5-1-0-0/hans-seam/s0/c0-r0-f0",
+        "memberIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c0-r0-f0",
+          "30493-6-5-1-0-0/hans-seam/s1/c2-r2-f2"
+        ],
+        "text": "IDENTICAL_NONEMPTY",
+        "geometry": "UNAMBIGUOUS_PAIR",
+        "reasons": [],
+        "agreedRaw": "含早餐，不含城市税。"
+      },
+      {
+        "id": "36:d0b6772d-f646-422e-a680-bee227073ad6|2:ch|37:30493-6-5-1-0-0/hans-seam/s0/c1-r1-f1",
+        "memberIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c1-r1-f1",
+          "30493-6-5-1-0-0/hans-seam/s1/c3-r3-f3"
+        ],
+        "text": "IDENTICAL_NONEMPTY",
+        "geometry": "UNCERTAIN",
+        "reasons": [
+          "NON_AXIS_ALIGNED"
+        ],
+        "agreedRaw": null
+      },
+      {
+        "id": "36:d0b6772d-f646-422e-a680-bee227073ad6|2:ch|37:30493-6-5-1-0-0/hans-seam/s0/c2-r2-f2",
+        "memberIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c2-r2-f2"
+        ],
+        "text": "SINGLE",
+        "geometry": "UNCERTAIN",
+        "reasons": [
+          "NON_AXIS_ALIGNED"
+        ],
+        "agreedRaw": null
+      },
+      {
+        "id": "36:d0b6772d-f646-422e-a680-bee227073ad6|2:ch|37:30493-6-5-1-0-0/hans-seam/s0/c3-r3-f3",
+        "memberIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c3-r3-f3"
+        ],
+        "text": "SINGLE",
+        "geometry": "ISOLATED",
+        "reasons": [],
+        "agreedRaw": null
+      },
+      {
+        "id": "36:d0b6772d-f646-422e-a680-bee227073ad6|2:ch|37:30493-6-5-1-0-0/hans-seam/s0/c4-r4-f4",
+        "memberIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c4-r4-f4"
+        ],
+        "text": "SINGLE",
+        "geometry": "UNCERTAIN",
+        "reasons": [
+          "NON_AXIS_ALIGNED"
+        ],
+        "agreedRaw": null
+      },
+      {
+        "id": "36:d0b6772d-f646-422e-a680-bee227073ad6|2:ch|37:30493-6-5-1-0-0/hans-seam/s0/c5-r5-f5",
+        "memberIds": [
+          "30493-6-5-1-0-0/hans-seam/s0/c5-r5-f5"
+        ],
+        "text": "SINGLE",
+        "geometry": "UNCERTAIN",
+        "reasons": [
+          "NON_AXIS_ALIGNED"
+        ],
+        "agreedRaw": null
+      },
+      {
+        "id": "36:d0b6772d-f646-422e-a680-bee227073ad6|2:ch|37:30493-6-5-1-0-0/hans-seam/s1/c0-r0-f0",
+        "memberIds": [
+          "30493-6-5-1-0-0/hans-seam/s1/c0-r0-f0",
+          "30493-6-5-1-0-0/hans-seam/s2/c1-r0-f0"
+        ],
+        "text": "IDENTICAL_NONEMPTY",
+        "geometry": "UNCERTAIN",
+        "reasons": [
+          "NON_AXIS_ALIGNED"
+        ],
+        "agreedRaw": null
+      },
+      {
+        "id": "36:d0b6772d-f646-422e-a680-bee227073ad6|2:ch|37:30493-6-5-1-0-0/hans-seam/s1/c1-r1-f1",
+        "memberIds": [
+          "30493-6-5-1-0-0/hans-seam/s1/c1-r1-f1",
+          "30493-6-5-1-0-0/hans-seam/s2/c2-r1-f1"
+        ],
+        "text": "DIFFERENT_RAW",
+        "geometry": "UNCERTAIN",
+        "reasons": [
+          "NON_AXIS_ALIGNED",
+          "POSSIBLE_CLIP"
+        ],
+        "agreedRaw": null
+      },
+      {
+        "id": "36:d0b6772d-f646-422e-a680-bee227073ad6|2:ch|37:30493-6-5-1-0-0/hans-seam/s3/c0-r0-f0",
+        "memberIds": [
+          "30493-6-5-1-0-0/hans-seam/s3/c0-r0-f0"
+        ],
+        "text": "SINGLE",
+        "geometry": "ISOLATED",
+        "reasons": [],
+        "agreedRaw": null
+      },
+      {
+        "id": "36:d0b6772d-f646-422e-a680-bee227073ad6|2:ch|37:30493-6-5-1-0-0/hans-seam/s3/c1-r1-f1",
+        "memberIds": [
+          "30493-6-5-1-0-0/hans-seam/s3/c1-r1-f1"
+        ],
+        "text": "SINGLE",
+        "geometry": "ISOLATED",
+        "reasons": [],
+        "agreedRaw": null
+      },
+      {
+        "id": "36:d0b6772d-f646-422e-a680-bee227073ad6|2:ch|37:30493-6-5-1-0-0/hans-seam/s3/c2-r2-f2",
+        "memberIds": [
+          "30493-6-5-1-0-0/hans-seam/s3/c2-r2-f2"
+        ],
+        "text": "SINGLE",
+        "geometry": "ISOLATED",
+        "reasons": [],
+        "agreedRaw": null
+      },
+      {
+        "id": "36:d0b6772d-f646-422e-a680-bee227073ad6|2:ch|37:30493-6-5-1-0-0/hans-seam/s3/c3-r3-f3",
+        "memberIds": [
+          "30493-6-5-1-0-0/hans-seam/s3/c3-r3-f3"
+        ],
+        "text": "SINGLE",
+        "geometry": "UNCERTAIN",
+        "reasons": [
+          "NON_AXIS_ALIGNED"
+        ],
+        "agreedRaw": null
+      }
+    ]
+  },
+  "version": {
+    "session": 30493,
+    "snapshot": 6,
+    "page": 5,
+    "revision": 1,
+    "window": 0,
+    "display": 0
+  },
+  "elapsedMillis": 2685,
+  "layout": {
+    "id": "hans-seam",
+    "language": "zh-Hans",
+    "width": 1176,
+    "height": 2400,
+    "placements": [
+      {
+        "asset": "hans-order-24.png",
+        "left": 40,
+        "top": 24,
+        "label": "top",
+        "id": "p0"
+      },
+      {
+        "asset": "hans-luggage-32.png",
+        "left": 40,
+        "top": 200,
+        "label": "top-more-than-three-lines",
+        "id": "p1"
+      },
+      {
+        "asset": "hans-order-24.png",
+        "left": 40,
+        "top": 557,
+        "label": "core-boundary",
+        "id": "p2"
+      },
+      {
+        "asset": "hans-luggage-32.png",
+        "left": 40,
+        "top": 1089,
+        "label": "read-top-boundary",
+        "id": "p3"
+      },
+      {
+        "asset": "hans-order-24.png",
+        "left": 40,
+        "top": 1821,
+        "label": "read-bottom-boundary",
+        "id": "p4"
+      },
+      {
+        "asset": "hans-luggage-32.png",
+        "left": 40,
+        "top": 2150,
+        "label": "bottom",
+        "id": "p5"
+      }
+    ]
+  },
+  "pageComplete": true,
+  "incompleteReason": null,
+  "transportAndShapePassed": true,
+  "actualStripWithMoreThanThreeCandidates": true,
+  "transportRejection": null,
+  "frameCloseAttempts": 1,
+  "frameClosed": 1,
+  "detectorInvocations": 4,
+  "recognitionInvocations": 16,
+  "strips": [
+    {
+      "index": 0,
+      "read": [
+        0,
+        0,
+        1176,
+        664
+      ],
+      "core": [
+        0,
+        0,
+        1176,
+        600
+      ],
+      "detectorShape": [
+        1,
+        1,
+        672,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 6,
+      "boxes": 6
+    },
+    {
+      "index": 1,
+      "read": [
+        0,
+        536,
+        1176,
+        1264
+      ],
+      "core": [
+        0,
+        600,
+        1176,
+        1200
+      ],
+      "detectorShape": [
+        1,
+        1,
+        736,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 4,
+      "boxes": 4
+    },
+    {
+      "index": 2,
+      "read": [
+        0,
+        1136,
+        1176,
+        1864
+      ],
+      "core": [
+        0,
+        1200,
+        1176,
+        1800
+      ],
+      "detectorShape": [
+        1,
+        1,
+        736,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 3,
+      "boxes": 2
+    },
+    {
+      "index": 3,
+      "read": [
+        0,
+        1736,
+        1176,
+        2400
+      ],
+      "core": [
+        0,
+        1800,
+        1176,
+        2400
+      ],
+      "detectorShape": [
+        1,
+        1,
+        672,
+        1184
+      ],
+      "status": "COMPLETE",
+      "contours": 4,
+      "boxes": 4
+    }
+  ],
+  "geometryCleanupAfterPage": {
+    "matAcquired": {
+      "fullPageResizeSource": 24,
+      "fullPageResizeDestination": 24,
+      "boxMask": 24,
+      "boxKernel": 24,
+      "boxDilated": 24,
+      "boxContourSource": 24,
+      "boxHierarchy": 24,
+      "boxContour": 81,
+      "boxProbability": 24,
+      "boxRectInput": 160,
+      "boxRectPoints": 160,
+      "boxScoreMask": 80,
+      "boxScorePolygon": 80,
+      "boxScoreRoi": 80,
+      "sourceQuad": 79,
+      "targetQuad": 79,
+      "homography": 79,
+      "cropSource": 79,
+      "warpDestination": 79,
+      "recognitionResizeSource": 79,
+      "recognitionResizeDestination": 79
+    },
+    "matReleaseAttempts": {
+      "fullPageResizeDestination": 24,
+      "fullPageResizeSource": 24,
+      "boxScoreRoi": 80,
+      "boxScorePolygon": 80,
+      "boxScoreMask": 80,
+      "boxRectPoints": 160,
+      "boxRectInput": 160,
+      "boxProbability": 24,
+      "boxContour": 81,
+      "boxHierarchy": 24,
+      "boxContourSource": 24,
+      "boxDilated": 24,
+      "boxKernel": 24,
+      "boxMask": 24,
+      "warpDestination": 79,
+      "cropSource": 79,
+      "homography": 79,
+      "targetQuad": 79,
+      "sourceQuad": 79,
+      "recognitionResizeDestination": 79,
+      "recognitionResizeSource": 79
+    },
+    "matReleased": {
+      "fullPageResizeDestination": 24,
+      "fullPageResizeSource": 24,
+      "boxScoreRoi": 80,
+      "boxScorePolygon": 80,
+      "boxScoreMask": 80,
+      "boxRectPoints": 160,
+      "boxRectInput": 160,
+      "boxProbability": 24,
+      "boxContour": 81,
+      "boxHierarchy": 24,
+      "boxContourSource": 24,
+      "boxDilated": 24,
+      "boxKernel": 24,
+      "boxMask": 24,
+      "warpDestination": 79,
+      "cropSource": 79,
+      "homography": 79,
+      "targetQuad": 79,
+      "sourceQuad": 79,
+      "recognitionResizeDestination": 79,
+      "recognitionResizeSource": 79
+    },
+    "matOpened": 1386,
+    "findContoursCalls": 24,
+    "bitmapOpened": 30,
+    "bitmapRecycleAttempts": 30,
+    "bitmapRecycled": 30,
+    "balanced": true,
+    "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+  },
+  "transportCleanupAfterPage": {
+    "readersOpened": 6,
+    "readersClosed": 6,
+    "writersOpened": 6,
+    "writersClosed": 6,
+    "writerInputs": 6,
+    "writerInputsTransferred": 6,
+    "writerInputsClosed": 0,
+    "imagesAcquired": 6,
+    "imageCloseAttempts": 6,
+    "imagesClosed": 6
+  },
+  "pageResourcesBalanced": true,
+  "modelGroupSessions": {
+    "modelId": "ch",
+    "sha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+    "vocabulary": 18385,
+    "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+    "pageIds": [
+      "en-normal",
+      "en-seam",
+      "fr-normal",
+      "fr-seam",
+      "hans-normal",
+      "hans-seam",
+      "hant-normal",
+      "hant-seam",
+      "en-seam-1080",
+      "blank"
+    ],
+    "sessionsOpened": 2,
+    "sessionsClosed": 2,
+    "sessionCounts": {
+      "detectorAttempts": 1,
+      "detectorOpened": 1,
+      "detectorClosed": 1,
+      "recognizerAttempts": 1,
+      "recognizerOpened": 1,
+      "recognizerClosed": 1
+    },
+    "closedBeforeNextModel": true,
+    "scopeSucceeded": true,
+    "ortOpened": 318,
+    "ortClosed": 318,
+    "ortCloseAttempts": 318,
+    "ortUncertain": false
+  },
+  "associationFieldsPreserved": true,
+  "associationMembersComplete": true,
+  "threadsRestored": true
+}

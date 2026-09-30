@@ -1,0 +1,188 @@
+{
+  "runId": "ce9dbea7-ad33-44d8-a027-41275f4b8f7d",
+  "elapsedMillis": 89420,
+  "passedPages": 14,
+  "pageResults": [
+    {
+      "model": "ch",
+      "page": "en-normal",
+      "incompleteReason": "NOT_CURRENT",
+      "pageComplete": false,
+      "transportAndShapePassed": true,
+      "associationPublished": false,
+      "rawCount": 0
+    },
+    {
+      "model": "ch",
+      "page": "en-seam",
+      "incompleteReason": "NOT_CURRENT",
+      "pageComplete": false,
+      "transportAndShapePassed": true,
+      "associationPublished": false,
+      "rawCount": 0
+    },
+    {
+      "model": "ch",
+      "page": "fr-normal",
+      "incompleteReason": "NOT_CURRENT",
+      "pageComplete": false,
+      "transportAndShapePassed": true,
+      "associationPublished": false,
+      "rawCount": 0
+    },
+    {
+      "model": "ch",
+      "page": "fr-seam",
+      "incompleteReason": "NOT_CURRENT",
+      "pageComplete": false,
+      "transportAndShapePassed": true,
+      "associationPublished": false,
+      "rawCount": 0
+    },
+    {
+      "model": "ch",
+      "page": "hans-normal",
+      "incompleteReason": "NOT_CURRENT",
+      "pageComplete": false,
+      "transportAndShapePassed": true,
+      "associationPublished": false,
+      "rawCount": 0
+    },
+    {
+      "model": "ch",
+      "page": "hans-seam",
+      "incompleteReason": "NOT_CURRENT",
+      "pageComplete": false,
+      "transportAndShapePassed": true,
+      "associationPublished": false,
+      "rawCount": 0
+    },
+    {
+      "model": "ch",
+      "page": "hant-normal",
+      "incompleteReason": null,
+      "pageComplete": true,
+      "transportAndShapePassed": true,
+      "associationPublished": true,
+      "rawCount": 9
+    },
+    {
+      "model": "ch",
+      "page": "hant-seam",
+      "incompleteReason": null,
+      "pageComplete": true,
+      "transportAndShapePassed": true,
+      "associationPublished": true,
+      "rawCount": 16
+    },
+    {
+      "model": "ch",
+      "page": "en-seam-1080",
+      "incompleteReason": null,
+      "pageComplete": true,
+      "transportAndShapePassed": true,
+      "associationPublished": true,
+      "rawCount": 14
+    },
+    {
+      "model": "ch",
+      "page": "blank",
+      "incompleteReason": null,
+      "pageComplete": true,
+      "transportAndShapePassed": true,
+      "associationPublished": true,
+      "rawCount": 0
+    },
+    {
+      "model": "latin",
+      "page": "en-normal",
+      "incompleteReason": null,
+      "pageComplete": true,
+      "transportAndShapePassed": true,
+      "associationPublished": true,
+      "rawCount": 8
+    },
+    {
+      "model": "latin",
+      "page": "en-seam",
+      "incompleteReason": null,
+      "pageComplete": true,
+      "transportAndShapePassed": true,
+      "associationPublished": true,
+      "rawCount": 16
+    },
+    {
+      "model": "latin",
+      "page": "fr-normal",
+      "incompleteReason": null,
+      "pageComplete": true,
+      "transportAndShapePassed": true,
+      "associationPublished": true,
+      "rawCount": 10
+    },
+    {
+      "model": "latin",
+      "page": "fr-seam",
+      "incompleteReason": null,
+      "pageComplete": true,
+      "transportAndShapePassed": true,
+      "associationPublished": true,
+      "rawCount": 20
+    },
+    {
+      "model": "latin",
+      "page": "hans-normal",
+      "incompleteReason": null,
+      "pageComplete": true,
+      "transportAndShapePassed": true,
+      "associationPublished": true,
+      "rawCount": 9
+    },
+    {
+      "model": "latin",
+      "page": "hans-seam",
+      "incompleteReason": null,
+      "pageComplete": true,
+      "transportAndShapePassed": true,
+      "associationPublished": true,
+      "rawCount": 16
+    },
+    {
+      "model": "latin",
+      "page": "hant-normal",
+      "incompleteReason": null,
+      "pageComplete": true,
+      "transportAndShapePassed": true,
+      "associationPublished": true,
+      "rawCount": 9
+    },
+    {
+      "model": "latin",
+      "page": "hant-seam",
+      "incompleteReason": null,
+      "pageComplete": true,
+      "transportAndShapePassed": true,
+      "associationPublished": true,
+      "rawCount": 16
+    },
+    {
+      "model": "latin",
+      "page": "en-seam-1080",
+      "incompleteReason": null,
+      "pageComplete": true,
+      "transportAndShapePassed": true,
+      "associationPublished": true,
+      "rawCount": 14
+    },
+    {
+      "model": "latin",
+      "page": "blank",
+      "incompleteReason": null,
+      "pageComplete": true,
+      "transportAndShapePassed": true,
+      "associationPublished": true,
+      "rawCount": 0
+    }
+  ],
+  "scope": "Initial all-model diagnostic batch exceeded early pages fixed TTL; guards rejected expired data. No TTL/rule/model changes."
+}

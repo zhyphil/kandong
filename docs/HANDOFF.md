@@ -1,34 +1,33 @@
-# KanDong 交接记录
+# KanDong交接记录
 
-更新于2026-09-30。用户已恢复工作，本轮完成跨段关联技术验收；下一项为实际整屏OCR结果与关联器接线。没有安排后台定时运行。
+更新于2026-09-30，起点783ffde。本轮已实现实际整页OCR到空间关联器的交接，本机178项、专用模拟器72项通过；新nova 9完整亮屏复验尚未完成。没有后台任务或定时运行。
 
-设备切换补充：已识别当前测试机为华为nova 9（NAM-LX9），Android12/API31，序列2AS0221B09001601。两实验包安装哈希一致，20关联＋6实际Image合成色块检查通过。当前未安装正式放大镜，未验证新机OCR推理或共享／手势；旧华为仅保留兼容目标与历史证据。[设备详情](TEST_DEVICES.md)。
+## 当前边界
 
-## 目录与边界
+唯一目录/Users/haoyuzuo/Projects/KanDong，先读AGENTS.md、TASKS.md及[本轮说明](OCR_ASSOCIATION_HANDOFF.md)。本地开发／提交已授权；不推送、部署或发布。不读取其他项目或真实手机页面，不接DeepL／密钥／联网。app/compat/graphics未修改，v0.1.0手势保持。
 
-唯一目录 /Users/haoyuzuo/Projects/KanDong，远端 git@github.com:zhyphil/kandong.git。先读AGENTS.md和TASKS.md，不读取其他项目。仅本地开发／提交获授权，没有推送、发布、部署授权；华为安装／共享由用户确认。
+## 已完成及待验证
 
-v0.1.0交互固定，本轮未改app/compat/graphics。正式手机放大镜未接翻译；未读取真实屏幕、调用模型／DeepL、访问密钥或联网服务。
+- 本轮5份测试源码：FullPageOcrPublication及13同源行为测试、FullPageOcrPipeline.runStaged、整页与原生生命周期运行器。真实收据及模型身份、同一持续守卫、正常退出与清理成功后单次发布；拒绝清空原文／质量／关联。不是正式采集或翻译。
+- 有效红灯10项6失败，原断言保留；178 JVM全部通过，构建成功、Lint0错误4既有警告。独立只读复核无必须修复问题；随后仅加fullPageModel分批参数并重建／根任务核查。
+- 专用API37／16KiB模拟器72项全部通过64.666秒，含20组整页实际推理47.711秒、9生命周期情形。236候选／194组／42关系，空串和冲突全部保留；与历史原字段完全相同，严格整页精确仍5/20（含两空白）。
+- 新机nova 9已实际运行模型：初轮72项中71通过，20页等整批会话结束时超过有效期，早期6页正确拒绝；分批ch的10页也有4页过期，79.236秒，检查时手机Dozing。已询问用户解锁；未收到就绪答复，不擅自解锁。不能称新机完整验收通过。
+- 两轮真机失败、模拟器成功、源文件／APK哈希、有效红灯及审查均保存在[evidence/ocr-association-handoff/2026-09-30](evidence/ocr-association-handoff/2026-09-30)。summary.json为入口。旧历史证据不改写。
 
-## 完成情况
+## 下一步直接执行
 
-- 9月25日整屏Image→分段OCR：144 JVM、模拟器39项；华为USB中断后恢复20页／生命周期／故障报告，另补36项短回归，无华为39项完整控制台汇总。[历史记录](FULL_PAGE_OCR_PROBE.md)。核心中心过滤会删正确繁体候选，已拒绝。
-- 本轮测试关联器保留全部候选，按空间关联，文本与几何不确定性分开；取消／缺段／身份异常整页拒绝。20类冻结反例，165 JVM、离线构建、Lint0错误4既有警告、模拟器20项通过。
-- 两设备历史40组／472候选全部字段保留，含40空串／92非核心；388组／84关系，24组仅代表无歧义逐字相同。两轮字节一致，“稅／税”冲突不选择；不是新增华为或OCR质量通过。
-- 独立只读复核无必须修复问题。有效红灯未记录（缓存权限阻止，补跑与修改重叠），保留但不计验收；稳定源码下最终165项证据另存。
+1. 用户确认解锁后核对设备NAM-LX9、序列2AS0221B09001601、API31／4096字节页，以及两安装包哈希。保持自有模型实验页前台，两批分别运行fullPageModel=ch及latin、各10固定页；既有脚本run-model-batch.py接受--serial、--test-sha、--model、--output，全新输出目录。当前测试包已安装，哈希一致时无需重复安装；系统确认如出现仍由用户操作。
+2. 若亮屏仍因慢批次过期，缩短诊断保留批次；不放宽60秒TTL、不改取得时间／模型／答案。保存失败，再验收。运行后用audit.py检查整页身份、所有候选／组成员和历史对照；两批都通过才补勾新机20页。
+3. 随后接整页上下文和选区显示：已有CandidateContext依赖双模型共框、人工语义组，不能直接把跨条带空间组当语义组。保留整页证据／原版本／取得时间，点击才启动，同页移框只改变展示，倍率不重新读取，失效／收起／菜单／停止撤下。仍为独立合成实验。
 
-[本轮说明](FULL_PAGE_OCR_ASSOCIATION.md)；[证据／源码／APK哈希](evidence/full-page-association/2026-09-30/summary.json)。本地提交用git log核对，没有推送。
+真实第三方树／窗口归属、敏感过滤、当前帧见证、复杂翻译质量、后端凭据和正式镜面接入仍需各自验收。
 
-## 下一项
+## 设备和构建
 
-先查工作区，复用冻结规则与反例。将实际整屏OCR的条带完成记录、全部候选、模型身份与版本守卫接FullPageOcrAssociation。固定自有页验证成功、取消、过期、异常、缺段和发布前失效；不允许半页／迟到结果，不删冲突。之后才接整屏上下文与选区显示。
+当前测试机为用户新换华为nova 9／NAM-LX9，Android12/API31、EMUI13、ARM64／4KiB、1080×2340／480dpi；正式compat未安装，真实共享和手势未验收。旧华为LIO-AN00/API31保留历史兼容要求与旧证据，不能沿用其设备序列。详见[设备记录](TEST_DEVICES.md)。
 
-首版单一EN／FR／ZH，外语→中文，中文原文保留、简繁分记；点击翻译才获取当前可见整页，移框仅改同页显示。收起／菜单／停止丢弃文字与迟到结果。当前帧见证、第三方窗口／敏感过滤、联网同意／后端凭据、复杂语义质量、正式镜面仍需独立验收，不能按参考答案选OCR输出。
+主实验APK SHA：7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea。最终测试APK SHA：8eb4858bc13b035f1009d60238c8c62323a11b17d27ac0618bb706e0e3c10706，已安装新手机及专用模拟器。主包不是正式放大镜包。
 
-## 环境
+JDK17：/Users/haoyuzuo/Library/Java/JavaVirtualMachines/temurin-17.0.20.1/Contents/Home；SDK：/Users/haoyuzuo/Library/Android/sdk。设置JAVA_HOME后运行./gradlew --offline :modelprobe:testDebugUnitTest :modelprobe:assembleDebug :modelprobe:assembleDebugAndroidTest :modelprobe:lintDebug。本轮JVM证据覆盖未变的纯测试源码，不因仅换消息重复全套。
 
-- JDK17：/Users/haoyuzuo/Library/Java/JavaVirtualMachines/temurin-17.0.20.1/Contents/Home；SDK：/Users/haoyuzuo/Library/Android/sdk。
-- 专用AVD KanDong_OCR_API37_16K，emulator-5582，API37／ARM64／16KiB。临时AVD消失，同一已有revision 9镜像重建到项目忽略目录.local/avd；[启动方法](OCR_EMULATOR.md)。不使用其他项目设备。
-- 两APK已安装模拟器及新nova 9、哈希一致；主实验APK未变，测试APK为6ed22110a0b4dd21e338287a5f7309822cae1a2269bfeda559f18241304fe51f。新机API31／ARM64／4096字节页／1080×2340／480dpi，每次操作先核对序列和型号。旧华为LIO-AN00/API31、序列2KE0220109017133只作历史记录，冻结旧脚本可能限定其身份，不能跳过或冒用；新机本轮命令见设备证据。
-- JAVA_HOME设上述JDK后，./gradlew --offline :modelprobe:testDebugUnitTest :modelprobe:assembleDebug :modelprobe:assembleDebugAndroidTest :modelprobe:lintDebug。同源Android类com.kandong.modelprobe.FullPageOcrAssociationTest。40组历史数据仅在JVM资源，不入APK。
-- 旧冻结脚本可能锁旧APK哈希，不可静默当新包入口。历史audit-reports.py会写输入目录，复查先复制到新目录，不改冻结证据。
+专用AVD KanDong_OCR_API37_16K位于项目忽略目录.local/avd，emulator-5582、API37／16KiB；[启动说明](OCR_EMULATOR.md)。不得使用其他项目模拟器。旧冻结入口有旧APK／旧设备限制，不跳过身份检查；历史audit-reports.py会写输入目录，复查先复制，不修改冻结证据。
