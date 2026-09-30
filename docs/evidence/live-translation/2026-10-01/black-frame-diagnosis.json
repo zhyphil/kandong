@@ -1,0 +1,57 @@
+{
+  "baseCommit": "0f949b20b4e5725bf23c99cf47ca1b08ba8189fd",
+  "device": "NAM-LX9/API31",
+  "scope": "capture-to-OCR diagnostic; no page text/pixels persisted",
+  "observedFailure": {
+    "liveCaptures": 1,
+    "ocrRuns": 1,
+    "sends": 0,
+    "published": 0,
+    "rawCandidates": 2,
+    "recognizedBlocks": 2,
+    "eligibleBlocks": 0,
+    "sampleOrder": [
+      "total",
+      "dark",
+      "light",
+      "opaque",
+      "edges"
+    ],
+    "capturedSamples": [
+      9380,
+      9380,
+      0,
+      9380,
+      0
+    ],
+    "witnessSamples": [
+      9380,
+      9371,
+      0,
+      9380,
+      10
+    ]
+  },
+  "finding": "captured visible-page sample grid was uniformly black; witness removal alone did not prove visible underlying content",
+  "causeOfBlackPixelsConfirmed": false,
+  "candidate": "retain witness/timestamp gate and reject uniformly black sampled clean frames before copying/OCR; same 4500ms deadline",
+  "regression": {
+    "beforeFix": {
+      "tests": 1,
+      "failures": 1
+    },
+    "afterFix": {
+      "debugTests": 71,
+      "releaseTests": 63,
+      "failures": 0
+    }
+  },
+  "debugApk": {
+    "sha256": "da728f65d24023c0cd561afd72ac6a2e9edd5a8166916942476f143622fb4aa2",
+    "bytes": 347843044,
+    "installed": true
+  },
+  "candidateDeviceOutcome": "awaiting manual shared public Garden Hotel page",
+  "realOcrAccepted": false,
+  "realTranslationAccepted": false
+}

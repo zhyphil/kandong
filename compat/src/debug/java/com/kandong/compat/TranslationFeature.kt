@@ -46,6 +46,12 @@ internal class TranslationFeature(private val host: TranslationHost) {
     private var sends=0
     private var published=0
     private var reason="idle"
+    private var captureSamples="none"
+    private var witnessedSamples="none"
+    private var rawCandidates=-1
+    private var recognizedBlocks=-1
+    private var eligibleBlocks=-1
+    private var blankFrames=0
     private fun now()=SystemClock.elapsedRealtime()
     private fun current(token: Long)=!dead && state.current(token,now())
 
@@ -93,6 +99,9 @@ internal class TranslationFeature(private val host: TranslationHost) {
             if(!consent.isChecked || busy.get()) return@button
             dismissDialog()
             val token=state.begin()
+            captureSamples="none"; witnessedSamples="none"
+            rawCandidates=-1; recognizedBlocks=-1; eligibleBlocks=-1
+            blankFrames=0
             status("正在读取当前页…","capture")
             captureClean { bytes ->
                 if(!current(token)) { bytes.fill(0); return@captureClean }
@@ -149,6 +158,9 @@ internal class TranslationFeature(private val host: TranslationHost) {
             try {
                 val page=LiveOcrEngine(context).recognize(bytes,host.screenWidth,host.screenHeight,lang) { current(token) }
                 val eligible=page.blocks.filter { it.left>=safe.left && it.top>=safe.top && it.right<=safe.right && it.bottom<=safe.bottom }
+                main.post { if(current(token)) {
+                    rawCandidates=page.rawCandidateCount; recognizedBlocks=page.blocks.size; eligibleBlocks=eligible.size
+                } }
                 check(eligible.isNotEmpty()) { "NO_TEXT" }
                 check(eligible.map { it.id }.distinct().size == eligible.size) { "OCR_FAILED" }
                 check(!TranslationTextPolicy.sensitive(eligible.joinToString("\n") { it.text })) { "SENSITIVE_PAGE" }
@@ -224,7 +236,10 @@ internal class TranslationFeature(private val host: TranslationHost) {
             }
         }
         host.witness(witness,x,y,48)
-        main.postDelayed({ if(probe===p) fail("无法确认最新画面，请重新点翻译。","freshness_timeout") },4500)
+        main.postDelayed({ if(probe===p) {
+            if(blankFrames>0) fail("未取得可见页面：本次画面为黑屏，未进行识字。","capture_blank")
+            else fail("无法确认最新画面，请重新点翻译。","freshness_timeout")
+        } },4500)
     }
     fun frame(image: Image): Boolean {
         if(dead) return false
@@ -239,8 +254,22 @@ internal class TranslationFeature(private val host: TranslationHost) {
                 fun pixel(x:Int,y:Int)=rgb(b,y*plane.rowStride+x*4)
                 val matched=p.colors.indices.count { i -> distance(pixel(p.x+(i%3)*16+8,p.y+(i/3)*16+8),p.colors[i])<=6 }
                 val before=p.gate.step
-                val next=p.gate.observe(image.timestamp,matched==9,matched==0)
-                if(before==FreshFrameGate.Step.WITNESS && next==FreshFrameGate.Step.CLEAN) host.witness(null)
+                fun sample(): SnapshotSamples {
+                    val safe=host.safeBounds
+                    return SnapshotSamples.read(image.width,image.height,safe.left,safe.top,safe.right,safe.bottom) { x,y ->
+                        val offset=y*plane.rowStride+x*4
+                        ((b.get(offset+3).toInt() and 255) shl 24) or (pixel(x,y) and 0x00ffffff)
+                    }
+                }
+                val cleanSamples=if(before==FreshFrameGate.Step.CLEAN && matched==0) sample() else null
+                if(cleanSamples!=null) {
+                    captureSamples=cleanSamples.toString()
+                    if(!cleanSamples.pageVisible) blankFrames++
+                }
+                val next=p.gate.observe(image.timestamp,matched==9,matched==0,cleanSamples?.pageVisible ?: false)
+                if(before==FreshFrameGate.Step.WITNESS && next==FreshFrameGate.Step.CLEAN) {
+                    witnessedSamples=sample().toString(); host.witness(null)
+                }
                 if(next==FreshFrameGate.Step.COMPLETE) {
                     require(image.width.toLong()*image.height<=4_194_304)
                     val bytes=CropPixels.copy(b,image.width,image.height,plane.rowStride,plane.pixelStride,0,0,image.width,image.height)
@@ -323,12 +352,14 @@ internal class TranslationFeature(private val host: TranslationHost) {
             "PAGE_TOO_LARGE" -> "本页文字超过开发版处理上限。"
             else -> "本次处理未完成，请重新点翻译。不会自动重试或联网。"
         }
-        val code=if(e is com.kandong.liveocr.LiveOcrException) "ocr_"+e.code.lowercase(java.util.Locale.ROOT) else "processing_failed"
+        val code=if(e is com.kandong.liveocr.LiveOcrException) "ocr_"+e.code.lowercase(java.util.Locale.ROOT)
+            else if(e.message=="NO_TEXT") "no_text" else "processing_failed"
         fail(value,code)
     }
     private fun toast(value:String) { Toast.makeText(context,value,Toast.LENGTH_LONG).show() }
     private fun dp(n:Int)=CompatUi.dp(context,n)
-    fun diagnostics()="translation=$reason liveCaptures=$captures ocrRuns=$ocrRuns sends=$sends published=$published blockCount=${blocks.size} workerBusy=${busy.get()} snapshot=${snapshot!=null}"
+    fun diagnostics()="translation=$reason liveCaptures=$captures ocrRuns=$ocrRuns sends=$sends published=$published blockCount=${blocks.size} workerBusy=${busy.get()} snapshot=${snapshot!=null}"+
+        " samples(total/dark/light/opaque/edges)=$captureSamples witnessSamples=$witnessedSamples blankFrames=$blankFrames rawCandidates=$rawCandidates recognized=$recognizedBlocks eligible=$eligibleBlocks"
     companion object {
         const val AVAILABLE=true
         const val DISCLOSURE="放大镜临时读取整屏，仅在手机内显示选区。点“翻译”并另外同意后，才在本机识别整页文字。联网翻译需连接 Mac，并逐页确认发送给 DeepL；图片不上传，文字和图片不保存。收起暂停，关闭同时停止共享。"

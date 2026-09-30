@@ -19,17 +19,17 @@ internal class LiveTranslationState {
     companion object { const val TTL = 60_000L }
 }
 
-/** Positive compositor witness, then a later frame where the witness is absent.
+/** Positive compositor witness, then a later visible frame where the witness is absent.
  * Producer timestamps are compared only with each other, never with a host clock.
  */
 internal class FreshFrameGate {
     enum class Step { WITNESS, CLEAN, COMPLETE }
     var step = Step.WITNESS; private set
     private var witnessedAt = Long.MIN_VALUE
-    fun observe(timestamp: Long, allMatch: Boolean, noneMatch: Boolean): Step {
+    fun observe(timestamp: Long, allMatch: Boolean, noneMatch: Boolean, pageVisible: Boolean = true): Step {
         when(step) {
             Step.WITNESS -> if(allMatch) { witnessedAt=timestamp; step=Step.CLEAN }
-            Step.CLEAN -> if(timestamp > witnessedAt && noneMatch) step=Step.COMPLETE
+            Step.CLEAN -> if(timestamp > witnessedAt && noneMatch && pageVisible) step=Step.COMPLETE
             Step.COMPLETE -> Unit
         }
         return step

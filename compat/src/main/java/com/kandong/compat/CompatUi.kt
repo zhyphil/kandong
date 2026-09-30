@@ -123,7 +123,7 @@ internal object CompatUi {
                 body.addView(text(c,"$title · 规划中，暂不可用",16f,muted).apply { isEnabled=false; minimumHeight=dp(c,48) })
             }
             body.addView(text(c,"目前无需登录",14f,muted))
-        } else body.addView(text(c,if(page=="使用帮助") help + if(TranslationFeature.AVAILABLE) "\n\n点镜面工具栏“翻译”可识别当前页。点“原文”、收起或打开菜单会清除译文；使用时请保持页面不动。" else ""
+        } else body.addView(text(c,if(page=="使用帮助") help + if(TranslationFeature.AVAILABLE) "\n\n点镜面工具栏“翻译”可识别当前页。取图时保持页面不动，取图后识字和翻译始终基于本次快照。点“原文”、收起或打开菜单会清除快照和文字。" else ""
             else if(TranslationFeature.AVAILABLE) TranslationFeature.PRIVACY else privacy))
 
         return LinearLayout(c).apply {

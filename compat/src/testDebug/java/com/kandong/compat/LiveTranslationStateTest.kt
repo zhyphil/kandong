@@ -27,6 +27,13 @@ class LiveTranslationStateTest {
         assertEquals(FreshFrameGate.Step.CLEAN,gate.observe(101,false,false))
         assertEquals(FreshFrameGate.Step.COMPLETE,gate.observe(102,false,true))
     }
+    @Test fun removedWitnessOnBlackFrameMustNotPublishSnapshot() {
+        val gate=FreshFrameGate()
+        assertEquals(FreshFrameGate.Step.CLEAN,gate.observe(100,true,false))
+        assertEquals(FreshFrameGate.Step.CLEAN,gate.observe(101,false,true,pageVisible=false))
+        assertEquals(FreshFrameGate.Step.CLEAN,gate.observe(102,false,true,pageVisible=false))
+        assertEquals(FreshFrameGate.Step.COMPLETE,gate.observe(103,false,true,pageVisible=true))
+    }
     @Test fun sensitiveEnglishFrenchChineseAndAccountDataStayLocal() {
         listOf("Your password","Mot de passe","请输入验证码","a@example.com","1234 5678 9012 3456").forEach {
             assertTrue(TranslationTextPolicy.sensitive(it))
