@@ -1,0 +1,32 @@
+{
+  "baseCommit": "8ee380a",
+  "purpose": "Differentiate unresolved strip-boundary failure without recognized text or pixels",
+  "maxExampleCount": 8,
+  "recordedFields": [
+    "candidate counts",
+    "box bounds",
+    "ownership flags",
+    "clipping flags",
+    "match count",
+    "bounding-box coverage percent"
+  ],
+  "checks": {
+    "liveocr": {
+      "tests": 19,
+      "failures": 0,
+      "errors": 0
+    },
+    "compat": {
+      "tests": 71,
+      "failures": 0,
+      "errors": 0
+    }
+  },
+  "debugAssemble": true,
+  "debugLint": true,
+  "apkBytes": 347843728,
+  "apkSha256": "df2d3307ac5c0c69d13d71f668238fbee4a33d681d452f30bb3b8115753fa54e",
+  "installationResult": "Success",
+  "deviceOutcome": "pending user capture",
+  "realPageAccepted": false
+}

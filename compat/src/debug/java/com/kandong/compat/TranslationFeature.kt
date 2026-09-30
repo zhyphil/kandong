@@ -52,6 +52,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
     private var recognizedBlocks=-1
     private var eligibleBlocks=-1
     private var blankFrames=0
+    private var boundaryDiagnostics: com.kandong.liveocr.OcrBoundaryDiagnostics?=null
     private fun now()=SystemClock.elapsedRealtime()
     private fun current(token: Long)=!dead && state.current(token,now())
 
@@ -102,6 +103,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
             captureSamples="none"; witnessedSamples="none"
             rawCandidates=-1; recognizedBlocks=-1; eligibleBlocks=-1
             blankFrames=0
+            boundaryDiagnostics=null
             status("正在读取当前页…","capture")
             captureClean { bytes ->
                 if(!current(token)) { bytes.fill(0); return@captureClean }
@@ -344,6 +346,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
     private fun status(value: String, code: String) { label=value; reason=code; host.refreshTranslation() }
     private fun fail(value: String, code: String) { invalidate(); status(value,code); toast(value) }
     private fun error(e: Exception) {
+        boundaryDiagnostics=(e as? com.kandong.liveocr.LiveOcrException)?.boundaryDiagnostics
         val value=when(e.message) {
             "SENSITIVE_PAGE" -> "检测到可能的敏感信息，已清除本页，未发送。"
             "NO_TEXT" -> "没有识别到可用文字，请换清晰的单语页面。"
@@ -362,7 +365,8 @@ internal class TranslationFeature(private val host: TranslationHost) {
     private fun toast(value:String) { Toast.makeText(context,value,Toast.LENGTH_LONG).show() }
     private fun dp(n:Int)=CompatUi.dp(context,n)
     fun diagnostics()="translation=$reason liveCaptures=$captures ocrRuns=$ocrRuns sends=$sends published=$published blockCount=${blocks.size} workerBusy=${busy.get()} snapshot=${snapshot!=null}"+
-        " samples(total/dark/light/opaque/edges)=$captureSamples witnessSamples=$witnessedSamples blankFrames=$blankFrames rawCandidates=$rawCandidates recognized=$recognizedBlocks eligible=$eligibleBlocks"
+        " samples(total/dark/light/opaque/edges)=$captureSamples witnessSamples=$witnessedSamples blankFrames=$blankFrames rawCandidates=$rawCandidates recognized=$recognizedBlocks eligible=$eligibleBlocks"+
+        " boundary=$boundaryDiagnostics"
     companion object {
         const val AVAILABLE=true
         const val DISCLOSURE="放大镜临时读取整屏，仅在手机内显示选区。点“翻译”并另外同意后，才在本机识别整页文字。联网翻译需连接 Mac，并逐页确认发送给 DeepL；图片不上传，文字和图片不保存。收起暂停，关闭同时停止共享。"

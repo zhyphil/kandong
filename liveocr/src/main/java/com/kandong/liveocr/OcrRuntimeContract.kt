@@ -8,9 +8,17 @@ data class OcrBlock(val id: String, val text: String, val left: Int, val top: In
 data class OcrPage(val blocks: List<OcrBlock>, val rawCandidateCount: Int)
 
 /** Fixed codes only: native messages, pixels and recognized text never become exception messages. */
-class LiveOcrException internal constructor(reason: OcrFailure) : RuntimeException(reason.name) {
+class LiveOcrException internal constructor(reason: OcrFailure,
+    val boundaryDiagnostics: OcrBoundaryDiagnostics? = null) : RuntimeException(reason.name) {
     val code: String = reason.name
 }
+
+/** Numeric-only failure metadata. Never retains candidates, recognized text or image data. */
+data class OcrBoundaryDiagnostics(val candidates: Int, val owned: Int, val clipped: Int,
+    val unresolved: Int, val examples: List<OcrBoundaryExample>)
+data class OcrBoundaryExample(val fragmentBounds: List<Int>, val fragmentOwned: Boolean,
+    val completeMatches: Int, val bestOtherBounds: List<Int>, val bestOtherOwned: Boolean,
+    val bestOtherClipped: Boolean, val overlapPercent: Int)
 
 internal enum class OcrFailure {
     INVALID_INPUT, UNSUPPORTED_LANGUAGE, MAIN_THREAD, BUSY, CANCELLED_OR_STALE,
@@ -96,13 +104,15 @@ internal object OcrPageContract {
         // Strip halos can see the end of a line already captured in full by its owner.
         // Discard that redundant fragment only with one complete geometric counterpart
         // from a different strip. Keep rejecting orphans, ambiguity and clipped owners.
-        requireOcr(candidates.none { fragment -> fragment.clippedAtStripBoundary &&
+        val unresolved = candidates.filter { fragment -> fragment.clippedAtStripBoundary &&
             (fragment.ownsCoreCenter || owned.count { complete ->
                 !complete.clippedAtStripBoundary &&
                     complete.id.substringBefore('/') != fragment.id.substringBefore('/') &&
                     containsFragment(complete.quad,fragment.quad)
             } != 1)
-        }, OcrFailure.STRIP_BOUNDARY_AMBIGUITY)
+        }
+        if(unresolved.isNotEmpty()) throw LiveOcrException(OcrFailure.STRIP_BOUNDARY_AMBIGUITY,
+            boundaryDiagnostics(candidates,owned,unresolved))
         requireOcr(candidates.isEmpty() || owned.isNotEmpty(), OcrFailure.UNOWNED_CANDIDATES)
         requireOcr(owned.none { it.text.isBlank() }, OcrFailure.UNREADABLE_BOX)
         val blocks = owned.map { row ->
@@ -117,6 +127,27 @@ internal object OcrPageContract {
         }.sortedWith(compareBy<OcrBlock> { it.top }.thenBy { it.left }.thenBy { it.id })
         current.check()
         return OcrPage(Collections.unmodifiableList(blocks), candidates.size)
+    }
+
+    private fun boundaryDiagnostics(all: List<Candidate>, owned: List<Candidate>, unresolved: List<Candidate>): OcrBoundaryDiagnostics {
+        fun bounds(c: Candidate)=listOf(c.quad.minOf { it.x }.toInt(),c.quad.minOf { it.y }.toInt(),
+            c.quad.maxOf { it.x }.toInt(),c.quad.maxOf { it.y }.toInt())
+        fun coverage(a: Candidate,b: Candidate): Double {
+            val x=bounds(a); val y=bounds(b)
+            val intersection=(minOf(x[2],y[2])-maxOf(x[0],y[0])).coerceAtLeast(0).toDouble()*
+                (minOf(x[3],y[3])-maxOf(x[1],y[1])).coerceAtLeast(0)
+            return intersection/((x[2]-x[0]).coerceAtLeast(1).toDouble()*(x[3]-x[1]).coerceAtLeast(1))
+        }
+        val examples=unresolved.take(8).map { fragment ->
+            val others=all.filter { it.id.substringBefore('/')!=fragment.id.substringBefore('/') }
+            val best=others.maxByOrNull { coverage(fragment,it) }?.takeIf { coverage(fragment,it)>0 }
+            OcrBoundaryExample(bounds(fragment),fragment.ownsCoreCenter,
+                owned.count { !it.clippedAtStripBoundary && it.id.substringBefore('/')!=fragment.id.substringBefore('/') &&
+                    containsFragment(it.quad,fragment.quad) },best?.let(::bounds) ?: emptyList(),
+                best?.ownsCoreCenter ?: false,best?.clippedAtStripBoundary ?: false,
+                best?.let { (coverage(fragment,it)*100).toInt() } ?: 0)
+        }
+        return OcrBoundaryDiagnostics(all.size,owned.size,all.count { it.clippedAtStripBoundary },unresolved.size,examples)
     }
 
     private fun containsFragment(full: List<GeometryProbeContract.Point>, fragment: List<GeometryProbeContract.Point>): Boolean {

@@ -26,7 +26,21 @@
   "apkSha256": "4ca72524357be5b85279a5ba5ea59cece935219829388a17272f9664d3f2ac0c",
   "apkBytes": 347843464,
   "installationResult": "Success",
-  "deviceOutcome": "pending user-authorized new capture",
+  "deviceOutcome": {
+    "result": "ocr_strip_boundary_ambiguity",
+    "liveCaptures": 1,
+    "ocrRuns": 1,
+    "sends": 0,
+    "published": 0,
+    "blankFramesSkipped": 5,
+    "sampleCounts": {
+      "total": 9380,
+      "dark": 9,
+      "light": 6941,
+      "opaque": 9380,
+      "edges": 924
+    }
+  },
   "realPageAccepted": false,
   "translationAccepted": false,
   "sensitiveContentRecorded": false

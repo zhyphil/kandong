@@ -55,6 +55,11 @@ class LiveOcrEngine(private val context: android.content.Context) {
   lines are stitched and no missing words are inferred.
   A fully successful detection pipeline with no boxes can return an empty page.
 - `LiveOcrException.code` is a fixed code without native exception causes or text.
+  Strip-boundary failures may also carry `boundaryDiagnostics`: counts and at most
+  eight numeric geometry examples (bounds, ownership/clipping flags, match counts,
+  and bounding-box overlap percentages). They contain no candidate text or pixels;
+  the runtime does not log or persist them. This is diagnosis, not a completeness
+  or recognition-confidence score.
   All sessions, options, tensors, results and Mats close before publication. Uncertain
   cleanup poisons this runtime for the process lifetime. Immutable result Strings are
   not securely erasable; the engine retains no page state after the call.

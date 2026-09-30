@@ -1,6 +1,6 @@
 # 当前交接 · 2026-10-01单次快照识字开发版
 
-最新进展：nova9已越过空黑输入和长行宽度限制，目前卡在分段边缘守卫（`ocr_strip_boundary_ambiguity`）。当前候选仅允许有唯一完整异段对应行的未归属边缘片段；完整行保留文字、ID与位置，缺失/歧义/自身被裁的归属行仍拒绝。18库测试、71开发版测试及构建/Lint通过，新包已安装，等用户同一公开页重试。尚无真实页OCR成功发布或实际翻译验收。当前证据见[分段候选](evidence/live-translation/2026-10-01/seam-fragment-fix.json)。
+最新进展：唯一完整异段对应行的例外未解决当前真机页面。用户仍看到分段边缘提示，自有状态确认1采集/1识字、0发布/0发送，错误仍为`ocr_strip_boundary_ambiguity`。没有继续放宽3像素阈值；已加最多8例仅数字的失败诊断（候选数/归属/边框/异段覆盖），不含文字/像素/图片。19库/71开发版测试、构建/Lint通过，诊断包已安装待用户重试；读取结果后再决定最小修复。见[诊断证据](evidence/live-translation/2026-10-01/seam-diagnosis.json)，上一候选失败保留在[分段记录](evidence/live-translation/2026-10-01/seam-fragment-fix.json)。
 
 前两项实机观察：黑帧守卫先后跳过4/5张黑帧并取得非黑页面；2048宽度对齐后该页原生识字进入最终发布检查。仍不能证明系统黑屏根因或所有语言/宽度原生质量。故障后的前台曾是华为浏览器，不能写成自有Garden Hotel页验收；仅保留诊断计数，不读取/记录页面内容。见[黑帧诊断](evidence/live-translation/2026-10-01/black-frame-diagnosis.json)与[长行修复](evidence/live-translation/2026-10-01/wide-line-fix.json)。
 

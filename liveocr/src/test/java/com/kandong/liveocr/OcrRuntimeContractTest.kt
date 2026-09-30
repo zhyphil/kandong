@@ -250,4 +250,24 @@ class OcrRuntimeContractTest {
             assertEquals(listOf(complete.id),page.blocks.map { it.id })
         }
     }
+
+    @Test fun boundaryFailureExposesOnlyBoundedNumbersNotRecognizedContent() {
+        val complete=seamRow("s0/c0-r0-f0",720.0,766.0,true,false).copy(text="private complete words")
+        val fragment=seamRow("s1/c0-r0-f0",736.0,770.0,false,true).copy(text="private fragment words")
+        try {
+            OcrPageContract.publish(listOf(complete)+List(9) { fragment },1080,2400,OcrCurrent { true })
+            fail("Expected seam rejection")
+        } catch(e: LiveOcrException) {
+            assertEquals("STRIP_BOUNDARY_AMBIGUITY",e.code)
+            assertNull(e.cause)
+            val d=e.boundaryDiagnostics!!
+            assertEquals(10,d.candidates); assertEquals(1,d.owned)
+            assertEquals(9,d.clipped); assertEquals(9,d.unresolved)
+            assertEquals(8,d.examples.size)
+            assertEquals(listOf(10,736,300,770),d.examples.first().fragmentBounds)
+            assertEquals(listOf(10,720,300,766),d.examples.first().bestOtherBounds)
+            assertEquals(88,d.examples.first().overlapPercent)
+            assertFalse(d.toString().contains("private"))
+        }
+    }
 }
