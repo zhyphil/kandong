@@ -23,3 +23,5 @@ include(":modelprobe")
 
 // Manual-consent, owned synthetic MediaProjection experiment only.
 include(":capturelab")
+
+include(":liveocr")

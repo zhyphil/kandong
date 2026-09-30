@@ -1,0 +1,117 @@
+{
+  "schema": 1,
+  "scope": "Local test-only modified all-round candidate; NOT general Clipper adoption, full DB boxes or OCR",
+  "repository": "https://api.github.com/repos/lightbringer/clipper-java",
+  "sourceCommit": "5ef8c0a467023c495e44e582e9cbd8ca7308a590",
+  "sourceCommitUrl": "https://github.com/lightbringer/clipper-java/tree/5ef8c0a467023c495e44e582e9cbd8ca7308a590",
+  "upstreamStatus": "archived/unmaintained",
+  "maintenance": "KanDong bounded synthetic probe only; no general library or production maintenance commitment",
+  "upstreamSourceBytes": 175411,
+  "patchedSourceBytes": 175621,
+  "changedRoundCalls": {
+    "ClipperOffset.java": 29,
+    "DefaultClipper.java": 5,
+    "Edge.java": 1
+  },
+  "patch": {
+    "path": "docs/evidence/polygon-offset/2026-09-24/expanded/half-away-rounding.patch",
+    "bytes": 9745,
+    "sha256": "8c913466b38a9d7d2dc44a95bcc84d04088dc3d7c9ecc0559c2bcdf7dd5613cb"
+  },
+  "license": {
+    "path": "license.txt",
+    "url": "https://raw.githubusercontent.com/lightbringer/clipper-java/5ef8c0a467023c495e44e582e9cbd8ca7308a590/license.txt",
+    "bytes": 1338,
+    "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+  },
+  "sources": [
+    {
+      "path": "Clipper/src/de/lighti/clipper/Clipper.java",
+      "url": "https://raw.githubusercontent.com/lightbringer/clipper-java/5ef8c0a467023c495e44e582e9cbd8ca7308a590/Clipper/src/de/lighti/clipper/Clipper.java",
+      "upstreamBytes": 1301,
+      "upstreamSha256": "d463987032c73c6dcc982a90ecb768c594214f05dd800262950e9d64c98fa28f",
+      "patchedBytes": 1301,
+      "patchedSha256": "d463987032c73c6dcc982a90ecb768c594214f05dd800262950e9d64c98fa28f"
+    },
+    {
+      "path": "Clipper/src/de/lighti/clipper/ClipperBase.java",
+      "url": "https://raw.githubusercontent.com/lightbringer/clipper-java/5ef8c0a467023c495e44e582e9cbd8ca7308a590/Clipper/src/de/lighti/clipper/ClipperBase.java",
+      "upstreamBytes": 23027,
+      "upstreamSha256": "145907a66fc1438256070603877d2fdc16409bc7289b3029e24f3ef5d0eccdeb",
+      "patchedBytes": 23027,
+      "patchedSha256": "145907a66fc1438256070603877d2fdc16409bc7289b3029e24f3ef5d0eccdeb"
+    },
+    {
+      "path": "Clipper/src/de/lighti/clipper/ClipperOffset.java",
+      "url": "https://raw.githubusercontent.com/lightbringer/clipper-java/5ef8c0a467023c495e44e582e9cbd8ca7308a590/Clipper/src/de/lighti/clipper/ClipperOffset.java",
+      "upstreamBytes": 19322,
+      "upstreamSha256": "cdade5cae7ea70cfd230d9134ce4f2e4407b864359c9f9ba9d0ae6de0ef6cf0e",
+      "patchedBytes": 19358,
+      "patchedSha256": "c19ec2bc4ff28d97498d7a6ff11b7ad3beee9f52ee7e2ec7e64c30bfcbf25db8"
+    },
+    {
+      "path": "Clipper/src/de/lighti/clipper/DefaultClipper.java",
+      "url": "https://raw.githubusercontent.com/lightbringer/clipper-java/5ef8c0a467023c495e44e582e9cbd8ca7308a590/Clipper/src/de/lighti/clipper/DefaultClipper.java",
+      "upstreamBytes": 94990,
+      "upstreamSha256": "80f666bb94ecdc4b68f36b8dd5fc58d3e6bbca7791ef1d0ecf460b16bb46f2f2",
+      "patchedBytes": 95075,
+      "patchedSha256": "27c89abdbe193bfb62ca1ca2076d153f1ce4051dfb4d35e5c186f11f3e913273"
+    },
+    {
+      "path": "Clipper/src/de/lighti/clipper/Edge.java",
+      "url": "https://raw.githubusercontent.com/lightbringer/clipper-java/5ef8c0a467023c495e44e582e9cbd8ca7308a590/Clipper/src/de/lighti/clipper/Edge.java",
+      "upstreamBytes": 10070,
+      "upstreamSha256": "05c7fe06f505bed375625dcdd56f69bbdf3cbc7e3272b38c10bb29b78f56884c",
+      "patchedBytes": 10159,
+      "patchedSha256": "08b674ab34fe970f782d4c89ad6b2351b85f143e58ceadc3008e1c0b5fde7881"
+    },
+    {
+      "path": "Clipper/src/de/lighti/clipper/LongRect.java",
+      "url": "https://raw.githubusercontent.com/lightbringer/clipper-java/5ef8c0a467023c495e44e582e9cbd8ca7308a590/Clipper/src/de/lighti/clipper/LongRect.java",
+      "upstreamBytes": 457,
+      "upstreamSha256": "7ec0fa84decb6d15e525ffdc872429de031f385a409ededb10a9a4b32c790f4c",
+      "patchedBytes": 457,
+      "patchedSha256": "7ec0fa84decb6d15e525ffdc872429de031f385a409ededb10a9a4b32c790f4c"
+    },
+    {
+      "path": "Clipper/src/de/lighti/clipper/Path.java",
+      "url": "https://raw.githubusercontent.com/lightbringer/clipper-java/5ef8c0a467023c495e44e582e9cbd8ca7308a590/Clipper/src/de/lighti/clipper/Path.java",
+      "upstreamBytes": 13090,
+      "upstreamSha256": "ab5e1a63707e2a21cb8309e451048007bce730864f21bf2cf9fabf50cdd6ae7a",
+      "patchedBytes": 13090,
+      "patchedSha256": "ab5e1a63707e2a21cb8309e451048007bce730864f21bf2cf9fabf50cdd6ae7a"
+    },
+    {
+      "path": "Clipper/src/de/lighti/clipper/Paths.java",
+      "url": "https://raw.githubusercontent.com/lightbringer/clipper-java/5ef8c0a467023c495e44e582e9cbd8ca7308a590/Clipper/src/de/lighti/clipper/Paths.java",
+      "upstreamBytes": 3436,
+      "upstreamSha256": "5d4757692ea0fdd33904efc424383d0cd5d48799bf76180a9e085784d542c3c7",
+      "patchedBytes": 3436,
+      "patchedSha256": "5d4757692ea0fdd33904efc424383d0cd5d48799bf76180a9e085784d542c3c7"
+    },
+    {
+      "path": "Clipper/src/de/lighti/clipper/Point.java",
+      "url": "https://raw.githubusercontent.com/lightbringer/clipper-java/5ef8c0a467023c495e44e582e9cbd8ca7308a590/Clipper/src/de/lighti/clipper/Point.java",
+      "upstreamBytes": 6543,
+      "upstreamSha256": "4d399a9fac02d3d9403c6b8aad1b2630e6257fb176222ff950055d1f465e9c78",
+      "patchedBytes": 6543,
+      "patchedSha256": "4d399a9fac02d3d9403c6b8aad1b2630e6257fb176222ff950055d1f465e9c78"
+    },
+    {
+      "path": "Clipper/src/de/lighti/clipper/PolyNode.java",
+      "url": "https://raw.githubusercontent.com/lightbringer/clipper-java/5ef8c0a467023c495e44e582e9cbd8ca7308a590/Clipper/src/de/lighti/clipper/PolyNode.java",
+      "upstreamBytes": 2386,
+      "upstreamSha256": "f5e15da1395b5f1af4d82340b0ad9108e7b2cdbad6bc2bf69d421eb759ecfe5b",
+      "patchedBytes": 2386,
+      "patchedSha256": "f5e15da1395b5f1af4d82340b0ad9108e7b2cdbad6bc2bf69d421eb759ecfe5b"
+    },
+    {
+      "path": "Clipper/src/de/lighti/clipper/PolyTree.java",
+      "url": "https://raw.githubusercontent.com/lightbringer/clipper-java/5ef8c0a467023c495e44e582e9cbd8ca7308a590/Clipper/src/de/lighti/clipper/PolyTree.java",
+      "upstreamBytes": 789,
+      "upstreamSha256": "7c2c7af75e347acebe24afbd7e1e58d193177fba70b8939fac2d96e7e9db15a1",
+      "patchedBytes": 789,
+      "patchedSha256": "7c2c7af75e347acebe24afbd7e1e58d193177fba70b8939fac2d96e7e9db15a1"
+    }
+  ]
+}

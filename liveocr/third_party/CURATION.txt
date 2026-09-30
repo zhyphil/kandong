@@ -1,0 +1,20 @@
+KanDong liveocr local runtime curation
+
+This module reuses the already stored, unmodified PaddleOCR/RapidOCR ONNX weights,
+their exact dictionaries and the existing OpenCV/ONNX Runtime dependencies. Supplier
+licenses, notices and model provenance are staged unchanged from the enumerated local
+project paths. Their experiment-specific descriptions are preserved as historical
+provenance, not a claim that this module remains confined to an instrumentation APK.
+
+The 11 files in src/main/java/de/lighti/clipper are unchanged copies of the project's
+existing modified lightbringer/clipper-java candidate at upstream commit
+5ef8c0a467023c495e44e582e9cbd8ca7308a590, under Boost Software License 1.0. The existing
+half-away-from-zero rounding patch remains exactly as recorded. LICENSE.txt, NOTICE.txt,
+provenance.json and that patch are preserved in third_party/clipper and packaged in
+assets/liveocr/legal/clipper. No vendor source is claimed as original KanDong code.
+
+Use remains bounded to positive ROUND/CLOSED_POLYGON offsets in the curated DB OCR
+pipeline. The vendor is archived/unmaintained. Bounds do not cover every internal UNION
+allocation and do not provide hard interruption. Historical test evidence is not a
+general equivalence or maintenance promise. Existing notices are not release licensing
+clearance; this task performs no release, deployment or external service operation.
