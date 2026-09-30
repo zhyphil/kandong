@@ -4,7 +4,7 @@
 
 ## 当前边界
 
-唯一目录/Users/haoyuzuo/Projects/KanDong。先读AGENTS.md、TASKS.md及[本轮说明](OCR_TRANSLATION_VISUAL_LAB.md)。已授权本地开发与提交；不推送、部署、发布，不读取无关项目。
+唯一目录/Users/haoyuzuo/Projects/KanDong。先读AGENTS.md、TASKS.md及[本轮说明](OCR_TRANSLATION_VISUAL_LAB.md)。用户已于2026-09-30补充授权：每项任务完成并通过相应验证后，使用 Conventional Commits 提交并推送当前任务分支，无需重复询问。先核对远端，推送后确认提交一致；不强制推送或改写历史。部署、Release和上架仍需单独授权，不读取无关项目。
 
 本轮仅modelprobe测试源集：纯展示协调器、异步演示回复、原后端／界面／会话的小幅接线和测试。正式app／compat／graphics、旧main／debug宿主、ocrlab及依赖均未改。实验界面明确标注“本地绑定演示，非真实翻译”；没有真实屏幕采集、真实翻译API、密钥读取或手机更新。
 
