@@ -1,0 +1,2122 @@
+{
+  "schema": 1,
+  "track": "AUTHORED_CANDIDATES_NOT_OCR",
+  "pages": [
+    {
+      "id": "en-unless-before",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Tickets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "No refunds after",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier0",
+          "text": "Unless the carrier cancels.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              910
+            ],
+            [
+              530,
+              910
+            ],
+            [
+              530,
+              940
+            ],
+            [
+              90,
+              940
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail",
+          "modifier0"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail",
+        "modifier0"
+      ],
+      "expectedWholePageHold": true,
+      "scope": "complete refund condition"
+    },
+    {
+      "id": "en-provided-distant",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Tickets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "No refunds after",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier0",
+          "text": "Provided that the journey takes place.",
+          "strip": 2,
+          "quad": [
+            [
+              90,
+              1700
+            ],
+            [
+              530,
+              1700
+            ],
+            [
+              530,
+              1730
+            ],
+            [
+              90,
+              1730
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail",
+          "modifier0"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail",
+        "modifier0"
+      ],
+      "expectedWholePageHold": true,
+      "scope": "complete refund condition"
+    },
+    {
+      "id": "en-only-nbsp",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Tickets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "No refunds after",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier0",
+          "text": "ONLY WITH YOUR RECEIPT.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              1030
+            ],
+            [
+              530,
+              1030
+            ],
+            [
+              530,
+              1060
+            ],
+            [
+              90,
+              1060
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail",
+          "modifier0"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail",
+        "modifier0"
+      ],
+      "expectedWholePageHold": true,
+      "scope": "complete refund condition"
+    },
+    {
+      "id": "en-except-split",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Tickets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "No refunds after",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier0",
+          "text": "Except",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              1030
+            ],
+            [
+              530,
+              1030
+            ],
+            [
+              530,
+              1060
+            ],
+            [
+              90,
+              1060
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier1",
+          "text": "when the operator cancels.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              1070
+            ],
+            [
+              530,
+              1070
+            ],
+            [
+              530,
+              1100
+            ],
+            [
+              90,
+              1100
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail",
+          "modifier0",
+          "modifier1"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail",
+        "modifier0",
+        "modifier1"
+      ],
+      "expectedWholePageHold": true,
+      "scope": "complete refund condition"
+    },
+    {
+      "id": "en-negated-heading",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Tickets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "No refunds after",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier0",
+          "text": "This rule is not applicable:",
+          "strip": 0,
+          "quad": [
+            [
+              90,
+              120
+            ],
+            [
+              530,
+              120
+            ],
+            [
+              530,
+              150
+            ],
+            [
+              90,
+              150
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail",
+          "modifier0"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail",
+        "modifier0"
+      ],
+      "expectedWholePageHold": true,
+      "scope": "complete refund condition"
+    },
+    {
+      "id": "en-required-column",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Tickets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "No refunds after",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier0",
+          "text": "Membership required.",
+          "strip": 1,
+          "quad": [
+            [
+              700,
+              1030
+            ],
+            [
+              1140,
+              1030
+            ],
+            [
+              1140,
+              1060
+            ],
+            [
+              700,
+              1060
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail",
+          "modifier0"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail",
+        "modifier0"
+      ],
+      "expectedWholePageHold": true,
+      "scope": "complete refund condition"
+    },
+    {
+      "id": "fr-sauf-before",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Billets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "Aucun remboursement après",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier0",
+          "text": "Sauf annulation du service.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              910
+            ],
+            [
+              530,
+              910
+            ],
+            [
+              530,
+              940
+            ],
+            [
+              90,
+              940
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail",
+          "modifier0"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail",
+        "modifier0"
+      ],
+      "expectedWholePageHold": true,
+      "scope": "complete refund condition"
+    },
+    {
+      "id": "fr-reserve-distant",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Billets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "Aucun remboursement après",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier0",
+          "text": "Sous réserve de disponibilité.",
+          "strip": 2,
+          "quad": [
+            [
+              90,
+              1700
+            ],
+            [
+              530,
+              1700
+            ],
+            [
+              530,
+              1730
+            ],
+            [
+              90,
+              1730
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail",
+          "modifier0"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail",
+        "modifier0"
+      ],
+      "expectedWholePageHold": true,
+      "scope": "complete refund condition"
+    },
+    {
+      "id": "fr-condition-split",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Billets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "Aucun remboursement après",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier0",
+          "text": "À condition",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              1030
+            ],
+            [
+              530,
+              1030
+            ],
+            [
+              530,
+              1060
+            ],
+            [
+              90,
+              1060
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier1",
+          "text": "de présenter le reçu.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              1070
+            ],
+            [
+              530,
+              1070
+            ],
+            [
+              530,
+              1100
+            ],
+            [
+              90,
+              1100
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail",
+          "modifier0",
+          "modifier1"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail",
+        "modifier0",
+        "modifier1"
+      ],
+      "expectedWholePageHold": true,
+      "scope": "complete refund condition"
+    },
+    {
+      "id": "fr-negative-heading",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Billets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "Aucun remboursement après",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier0",
+          "text": "Cette règle n’est pas applicable :",
+          "strip": 0,
+          "quad": [
+            [
+              90,
+              120
+            ],
+            [
+              530,
+              120
+            ],
+            [
+              530,
+              150
+            ],
+            [
+              90,
+              150
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail",
+          "modifier0"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail",
+        "modifier0"
+      ],
+      "expectedWholePageHold": true,
+      "scope": "complete refund condition"
+    },
+    {
+      "id": "fr-sans-column",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Billets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "Aucun remboursement après",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier0",
+          "text": "Sans justificatif, cette règle change.",
+          "strip": 1,
+          "quad": [
+            [
+              700,
+              1030
+            ],
+            [
+              1140,
+              1030
+            ],
+            [
+              1140,
+              1060
+            ],
+            [
+              700,
+              1060
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail",
+          "modifier0"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail",
+        "modifier0"
+      ],
+      "expectedWholePageHold": true,
+      "scope": "complete refund condition"
+    },
+    {
+      "id": "fr-uniquement-after",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Billets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "Aucun remboursement après",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier0",
+          "text": "Uniquement pour le tarif flexible.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              1030
+            ],
+            [
+              530,
+              1030
+            ],
+            [
+              530,
+              1060
+            ],
+            [
+              90,
+              1060
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail",
+          "modifier0"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail",
+        "modifier0"
+      ],
+      "expectedWholePageHold": true,
+      "scope": "complete refund condition"
+    },
+    {
+      "id": "en-plain",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Tickets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "No refunds after",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail"
+      ],
+      "expectedWholePageHold": false,
+      "scope": "complete refund condition"
+    },
+    {
+      "id": "fr-plain",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Billets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "Aucun remboursement après",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail"
+      ],
+      "expectedWholePageHold": false,
+      "scope": "complete refund condition"
+    },
+    {
+      "id": "en-plain-neighbour",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Tickets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "No refunds after",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier0",
+          "text": "Contact the help desk.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              1030
+            ],
+            [
+              530,
+              1030
+            ],
+            [
+              530,
+              1060
+            ],
+            [
+              90,
+              1060
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail"
+      ],
+      "expectedWholePageHold": false,
+      "scope": "independent neighbour"
+    },
+    {
+      "id": "fr-plain-neighbour",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Billets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "Aucun remboursement après",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier0",
+          "text": "Contactez notre équipe.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              1030
+            ],
+            [
+              530,
+              1030
+            ],
+            [
+              530,
+              1060
+            ],
+            [
+              90,
+              1060
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail"
+      ],
+      "expectedWholePageHold": false,
+      "scope": "independent neighbour"
+    },
+    {
+      "id": "en-independent-if",
+      "language": "en",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Tickets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "No refunds after",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier0",
+          "text": "If you need help, contact support.",
+          "strip": 2,
+          "quad": [
+            [
+              90,
+              1700
+            ],
+            [
+              530,
+              1700
+            ],
+            [
+              530,
+              1730
+            ],
+            [
+              90,
+              1730
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail"
+      ],
+      "expectedWholePageHold": true,
+      "scope": "independent neighbour"
+    },
+    {
+      "id": "fr-independent-si",
+      "language": "fr",
+      "width": 1200,
+      "height": 2400,
+      "items": [
+        {
+          "label": "title",
+          "text": "Billets",
+          "strip": 0,
+          "quad": [
+            [
+              50,
+              40
+            ],
+            [
+              470,
+              40
+            ],
+            [
+              470,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "head",
+          "text": "Aucun remboursement après",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              950
+            ],
+            [
+              510,
+              950
+            ],
+            [
+              510,
+              980
+            ],
+            [
+              90,
+              980
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "tail",
+          "text": "confirmation.",
+          "strip": 1,
+          "quad": [
+            [
+              90,
+              990
+            ],
+            [
+              310,
+              990
+            ],
+            [
+              310,
+              1020
+            ],
+            [
+              90,
+              1020
+            ]
+          ],
+          "score": 0.9
+        },
+        {
+          "label": "modifier0",
+          "text": "Si vous avez besoin d’aide, contactez-nous.",
+          "strip": 2,
+          "quad": [
+            [
+              90,
+              1700
+            ],
+            [
+              530,
+              1700
+            ],
+            [
+              530,
+              1730
+            ],
+            [
+              90,
+              1730
+            ]
+          ],
+          "score": 0.9
+        }
+      ],
+      "completeGroups": [
+        [
+          "head",
+          "tail"
+        ]
+      ],
+      "protectedItems": [
+        "head",
+        "tail"
+      ],
+      "expectedWholePageHold": true,
+      "scope": "independent neighbour"
+    }
+  ]
+}

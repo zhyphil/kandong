@@ -36,8 +36,10 @@ internal object FullPageTranslationAdapter {
         }
         return hash.digest().joinToString("") { "%02x".format(it.toInt() and 255) }
     }
-    fun adapt(metadata: RgbaFrameMetadata, association: Result, declaredLanguage: String, grouped: Boolean = false): Outcome {
+    fun adapt(metadata: RgbaFrameMetadata, association: Result, declaredLanguage: String, grouped: Boolean = false,
+        conditionGuard: Boolean = false): Outcome {
         fun invalid() = Rejected(Rejection.INVALID)
+        if (conditionGuard && !grouped) return invalid()
         val id = association.identity ?: return invalid()
         if (!association.published || association.rejection != null || id.version != metadata.version ||
             id.sourceBatch.isEmpty() || id.sourceBatch.length > 160 ||
@@ -60,7 +62,8 @@ internal object FullPageTranslationAdapter {
             v.revision.toString(),v.window.toString(),v.display.toString(),id.pageFixtureId,id.model.id,
             id.model.sha,id.model.vocabulary.toString(),id.detectorSha,id.dictionarySha,
             metadata.width.toString(),metadata.height.toString(),metadata.acquiredAtMillis.toString(),metadata.ttlMillis.toString())
-        val pageId = digest(listOf("fixed-page-snapshot-v1") + identityFields)
+        val domain = if(conditionGuard) "fixed-page-snapshot-v1:" + FullPageConditionGuard.VERSION else "fixed-page-snapshot-v1"
+        val pageId = digest(listOf(domain) + identityFields)
         val byCandidate = expected.groups.flatMap { g -> g.memberIds.map { it to g } }.toMap()
         val map = linkedMapOf<String,FullPageOcrContract.Candidate>()
         val blocks = raw.mapIndexed { index,c ->
@@ -88,14 +91,16 @@ internal object FullPageTranslationAdapter {
         val evidence=Evidence(metadata.copy(version=v.copy()),expected)
         if(!grouped)return AdaptedPage(screen,evidence,Collections.unmodifiableMap(map),
             targetMembers=Collections.unmodifiableMap(map.keys.associateWith { frozen(listOf(it)) }))
-        val layout=FullPageSemanticLayout.derive(expected,declaredLanguage)
+        val layout=if(conditionGuard) FullPageConditionGuard.derive(expected,declaredLanguage)
+            else FullPageSemanticLayout.derive(expected,declaredLanguage)
         val blockByKey=map.entries.associate { RecordedFullPageTranslation.key(it.value) to it.key }
         val groupByKey=layout.groups.flatMap { g -> g.memberKeys.map { it to g } }.toMap()
         val groupIds=layout.groups.associate { it.key to digest(listOf("grouped-page-phrase-v1",pageId,it.key)) }
         val byId=blocks.associateBy { it.id }
         val derived=layout.orderedKeys.mapIndexed { order,key ->
             val b=byId.getValue(blockByKey.getValue(key));val g=groupByKey[key]
-            val state=if(g?.eligible==true) BlockState.KNOWN else if(key in layout.blockedKeys) BlockState.AMBIGUOUS else b.state
+            val state=if(conditionGuard && key in layout.blockedKeys && b.state!=BlockState.KNOWN) b.state
+                else if(g?.eligible==true) BlockState.KNOWN else if(key in layout.blockedKeys) BlockState.AMBIGUOUS else b.state
             b.copy(order=order,groupId=g?.let { groupIds.getValue(it.key) },
                 ocr=b.ocr?.copy(selectedModelIds=frozen(if(state==BlockState.KNOWN)listOf(map.getValue(b.id).modelId) else emptyList())),
                 // Only a qualified PHRASE can use this state; individual v1 blocks are unchanged.
@@ -107,7 +112,9 @@ internal object FullPageTranslationAdapter {
         derived.forEach { b -> members[b.groupId ?: b.id]=if(b.groupId==null) frozen(listOf(b.id))
             else phrases.single { it.id==b.groupId }.memberIds }
         val reasons=screen.coverageReasons+listOf("EXPERIMENTAL_SPATIAL_ORDER_UNVERIFIED","RAW_ASSOCIATION_DIAGNOSTICS_RETAINED")+
-            if(layout.groups.any { it.eligible })listOf(FullPageSemanticLayout.QUALIFICATION) else emptyList()
+            (if(layout.groups.any { it.eligible })listOf(FullPageSemanticLayout.QUALIFICATION) else emptyList())+
+            (if(conditionGuard)listOf(FullPageConditionGuard.VERSION) else emptyList())+
+            (if(conditionGuard && layout.blockedKeys.toSet()==layout.orderedKeys.toSet())listOf(FullPageConditionGuard.REASON) else emptyList())
         return AdaptedPage(screen.copy(blocks=frozen(derived),groups=frozen(phrases),coverageReasons=frozen(reasons)),
             evidence,Collections.unmodifiableMap(map),layout,Collections.unmodifiableMap(members))
     }

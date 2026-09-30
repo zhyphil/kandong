@@ -9,7 +9,8 @@ import com.kandong.ocrlab.context.capture.CaptureVersion
  * cleanup authority. The owner must observe every full version change and clear on lifecycle loss.
  */
 internal class FullPageTranslationProbe(provider: TranslationProviderChoice = TranslationProviderChoice(TranslationMode.LOCAL,
-    "BINDING_TEST_ONLY_NO_TRANSLATION_MODEL", "fixed-page-contract-v1", configured=true), private val grouped: Boolean = false) {
+    "BINDING_TEST_ONLY_NO_TRANSLATION_MODEL", "fixed-page-contract-v1", configured=true), private val grouped: Boolean = false,
+    private val conditionGuard: Boolean = false) {
     class Ticket internal constructor(internal val version: CaptureVersion, internal val capture: OnDemandTranslation.Capture)
     class ProbeRequest internal constructor(val contract: FixtureRequest,
         val evidence: FullPageTranslationAdapter.Evidence,
@@ -69,7 +70,7 @@ internal class FullPageTranslationProbe(provider: TranslationProviderChoice = Tr
             validatedAtMillis > now || validatedAtMillis < 0 || now >= metadata.acquiredAtMillis + metadata.ttlMillis) {
             clear(ClearReason.INVALID_SNAPSHOT); return false
         }
-        val adapted=FullPageTranslationAdapter.adapt(metadata,association,declaredLanguage,grouped)
+        val adapted=FullPageTranslationAdapter.adapt(metadata,association,declaredLanguage,grouped,conditionGuard)
         if (adapted !is FullPageTranslationAdapter.AdaptedPage ||
             !translation.captured(token.capture,adapted.snapshot,roi,now)) {
             clear(ClearReason.INVALID_SNAPSHOT); return false

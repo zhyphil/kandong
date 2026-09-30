@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.FullPageConditionGuardTest" tests="6" skipped="0" failures="1" errors="0" timestamp="2026-09-30T22:19:28.668Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.19">
+  <properties/>
+  <testcase name="complexPagesNeverSendAnyFragmentsIncludingSplitModifierContinuations" classname="com.kandong.modelprobe.FullPageConditionGuardTest" time="0.077"/>
+  <testcase name="unchangedOriginalTtlSelectionAndClearRejectLateReplies" classname="com.kandong.modelprobe.FullPageConditionGuardTest" time="0.004"/>
+  <testcase name="preservesFullEvidenceContextAndUsesSeparateImmutableLayoutDomain" classname="com.kandong.modelprobe.FullPageConditionGuardTest" time="0.051"/>
+  <testcase name="semanticAccountingKeepsCoverageAndWithholdingSeparate" classname="com.kandong.modelprobe.FullPageConditionGuardTest" time="0.038"/>
+  <testcase name="explicitOptInDoesNotChangeLegacyModeOrChineseRequests" classname="com.kandong.modelprobe.FullPageConditionGuardTest" time="0.011"/>
+  <testcase name="guardedPageCannotConsumeValidV1RecordingEvenWhenNoHoldIsNeeded" classname="com.kandong.modelprobe.FullPageConditionGuardTest" time="0.009">
+    <failure message="java.lang.AssertionError: unexpected exception type thrown; expected:&lt;java.lang.IllegalArgumentException&gt; but was:&lt;java.lang.NullPointerException&gt;" type="java.lang.AssertionError">java.lang.AssertionError: unexpected exception type thrown; expected:&lt;java.lang.IllegalArgumentException&gt; but was:&lt;java.lang.NullPointerException&gt;
+	at org.junit.Assert.assertThrows(Assert.java:1020)
+	at org.junit.Assert.assertThrows(Assert.java:981)
+	at com.kandong.modelprobe.FullPageConditionGuardTest.guardedPageCannotConsumeValidV1RecordingEvenWhenNoHoldIsNeeded(FullPageConditionGuardTest.kt:116)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+Caused by: java.lang.NullPointerException
+	at com.kandong.modelprobe.FullPageConditionGuardTest.guardedPageCannotConsumeValidV1RecordingEvenWhenNoHoldIsNeeded$request(FullPageConditionGuardTest.kt:105)
+	at com.kandong.modelprobe.FullPageConditionGuardTest.guardedPageCannotConsumeValidV1RecordingEvenWhenNoHoldIsNeeded$lambda$3(FullPageConditionGuardTest.kt:116)
+	at org.junit.Assert.assertThrows(Assert.java:1001)
+	... 45 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[KD_GUARD_CASE	regression	en-shifted-before	3	0	1	0	0	2
+KD_GUARD_CASE	regression	en-bottom-positive	3	0	1	0	0	2
+KD_GUARD_CASE	regression	fr-accent-after	3	0	1	0	0	2
+KD_GUARD_CASE	regression	fr-right-column-before	3	0	1	0	0	2
+KD_GUARD_CASE	regression	en-two-columns	5	0	2	0	0	3
+KD_GUARD_CASE	regression	fr-seam-exact-duplicate	5	0	0	1	0	1
+KD_GUARD_CASE	regression	en-seam-drift-duplicate	5	0	0	1	0	1
+KD_GUARD_CASE	regression	fr-seam-polarity-conflict	5	0	0	0	0	1
+KD_GUARD_CASE	regression	en-duplicate-tail	4	0	0	1	0	1
+KD_GUARD_CASE	regression	en-same-strip-copy	4	0	0	0	0	1
+KD_GUARD_CASE	regression	fr-repeated-different-rows	5	0	2	0	0	3
+KD_GUARD_CASE	regression	en-cross-column-fragment	3	0	0	0	0	1
+KD_GUARD_CASE	regression	fr-intervening-label	4	0	0	0	0	2
+KD_GUARD_CASE	regression	en-spaced-complete	3	0	0	1	0	1
+KD_GUARD_CASE	regression	fr-indented-complete	3	0	0	1	0	1
+KD_GUARD_CASE	regression	en-trailing-exception	4	0	0	1	1	0
+KD_GUARD_CASE	regression	fr-trailing-restriction	4	0	0	1	1	0
+KD_GUARD_CASE	regression	en-leading-negated-claim	4	0	0	1	1	0
+KD_GUARD_CASE	regression	fr-leading-prerequisite	4	0	0	1	1	0
+KD_GUARD_CASE	regression	en-neutral-neighbour	4	0	1	0	0	3
+KD_GUARD_CASE	regression	fr-independent-neighbour	5	0	1	0	0	4
+KD_GUARD_CASE	regression	en-clipped-head-conflict	4	0	0	0	1	0
+KD_GUARD_CASE	regression	hans-source-only	3	0	0	0	0	0
+KD_GUARD_CASE	regression	hant-source-only	3	0	0	0	0	0
+KD_GUARD_TOTAL	regression	24	0	10	9	5
+KD_GUARD_CASE	fresh	en-unless-before	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	en-provided-distant	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	en-only-nbsp	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	en-except-split	5	0	0	1	1	0
+KD_GUARD_CASE	fresh	en-negated-heading	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	en-required-column	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	fr-sauf-before	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	fr-reserve-distant	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	fr-condition-split	5	0	0	1	1	0
+KD_GUARD_CASE	fresh	fr-negative-heading	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	fr-sans-column	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	fr-uniquement-after	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	en-plain	3	0	1	0	0	2
+KD_GUARD_CASE	fresh	fr-plain	3	0	1	0	0	2
+KD_GUARD_CASE	fresh	en-plain-neighbour	4	0	1	0	0	3
+KD_GUARD_CASE	fresh	fr-plain-neighbour	4	0	1	0	0	3
+KD_GUARD_CASE	fresh	en-independent-if	4	0	0	1	2	0
+KD_GUARD_CASE	fresh	fr-independent-si	4	0	0	1	2	0
+KD_GUARD_TOTAL	fresh	18	0	4	14	16
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

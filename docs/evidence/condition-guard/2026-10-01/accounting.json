@@ -1,0 +1,454 @@
+{
+  "scope": "authored candidate guard behavior only; no OCR or translation quality evidence",
+  "totals": {
+    "regression": {
+      "candidates": 93,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 10,
+      "withheldCompleteGroups": 9,
+      "suppressedOrdinaryTargets": 5,
+      "remainingRequestTargets": 31,
+      "pages": 24
+    },
+    "fresh": {
+      "candidates": 72,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 4,
+      "withheldCompleteGroups": 14,
+      "suppressedOrdinaryTargets": 16,
+      "remainingRequestTargets": 10,
+      "pages": 18
+    }
+  },
+  "pages": [
+    {
+      "track": "regression",
+      "id": "en-shifted-before",
+      "candidates": 3,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 1,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 2
+    },
+    {
+      "track": "regression",
+      "id": "en-bottom-positive",
+      "candidates": 3,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 1,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 2
+    },
+    {
+      "track": "regression",
+      "id": "fr-accent-after",
+      "candidates": 3,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 1,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 2
+    },
+    {
+      "track": "regression",
+      "id": "fr-right-column-before",
+      "candidates": 3,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 1,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 2
+    },
+    {
+      "track": "regression",
+      "id": "en-two-columns",
+      "candidates": 5,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 2,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 3
+    },
+    {
+      "track": "regression",
+      "id": "fr-seam-exact-duplicate",
+      "candidates": 5,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 1
+    },
+    {
+      "track": "regression",
+      "id": "en-seam-drift-duplicate",
+      "candidates": 5,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 1
+    },
+    {
+      "track": "regression",
+      "id": "fr-seam-polarity-conflict",
+      "candidates": 5,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 1
+    },
+    {
+      "track": "regression",
+      "id": "en-duplicate-tail",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 1
+    },
+    {
+      "track": "regression",
+      "id": "en-same-strip-copy",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 1
+    },
+    {
+      "track": "regression",
+      "id": "fr-repeated-different-rows",
+      "candidates": 5,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 2,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 3
+    },
+    {
+      "track": "regression",
+      "id": "en-cross-column-fragment",
+      "candidates": 3,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 1
+    },
+    {
+      "track": "regression",
+      "id": "fr-intervening-label",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 2
+    },
+    {
+      "track": "regression",
+      "id": "en-spaced-complete",
+      "candidates": 3,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 1
+    },
+    {
+      "track": "regression",
+      "id": "fr-indented-complete",
+      "candidates": 3,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 1
+    },
+    {
+      "track": "regression",
+      "id": "en-trailing-exception",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 1,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "regression",
+      "id": "fr-trailing-restriction",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 1,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "regression",
+      "id": "en-leading-negated-claim",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 1,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "regression",
+      "id": "fr-leading-prerequisite",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 1,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "regression",
+      "id": "en-neutral-neighbour",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 1,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 3
+    },
+    {
+      "track": "regression",
+      "id": "fr-independent-neighbour",
+      "candidates": 5,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 1,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 4
+    },
+    {
+      "track": "regression",
+      "id": "en-clipped-head-conflict",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 1,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "regression",
+      "id": "hans-source-only",
+      "candidates": 3,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "regression",
+      "id": "hant-source-only",
+      "candidates": 3,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "fresh",
+      "id": "en-unless-before",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 1,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "fresh",
+      "id": "en-provided-distant",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 1,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "fresh",
+      "id": "en-only-nbsp",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 1,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "fresh",
+      "id": "en-except-split",
+      "candidates": 5,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 1,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "fresh",
+      "id": "en-negated-heading",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 1,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "fresh",
+      "id": "en-required-column",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 1,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "fresh",
+      "id": "fr-sauf-before",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 1,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "fresh",
+      "id": "fr-reserve-distant",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 1,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "fresh",
+      "id": "fr-condition-split",
+      "candidates": 5,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 1,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "fresh",
+      "id": "fr-negative-heading",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 1,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "fresh",
+      "id": "fr-sans-column",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 1,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "fresh",
+      "id": "fr-uniquement-after",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 1,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "fresh",
+      "id": "en-plain",
+      "candidates": 3,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 1,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 2
+    },
+    {
+      "track": "fresh",
+      "id": "fr-plain",
+      "candidates": 3,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 1,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 2
+    },
+    {
+      "track": "fresh",
+      "id": "en-plain-neighbour",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 1,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 3
+    },
+    {
+      "track": "fresh",
+      "id": "fr-plain-neighbour",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 1,
+      "withheldCompleteGroups": 0,
+      "suppressedOrdinaryTargets": 0,
+      "remainingRequestTargets": 3
+    },
+    {
+      "track": "fresh",
+      "id": "en-independent-if",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 2,
+      "remainingRequestTargets": 0
+    },
+    {
+      "track": "fresh",
+      "id": "fr-independent-si",
+      "candidates": 4,
+      "unsafeTargets": 0,
+      "correctCompleteTargets": 0,
+      "withheldCompleteGroups": 1,
+      "suppressedOrdinaryTargets": 2,
+      "remainingRequestTargets": 0
+    }
+  ],
+  "archivedFrSeam": {
+    "rawCandidates": 20,
+    "legacyEligiblePairs": 2,
+    "guardedEligiblePairs": 0,
+    "reason": "unrelated train negation holds entire page"
+  },
+  "qualityAccepted": false,
+  "semanticVerified": false,
+  "defaultAdoption": false
+}

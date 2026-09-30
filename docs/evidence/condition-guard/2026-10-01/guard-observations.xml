@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.FullPageConditionGuardTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-09-30T22:20:47.505Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.182">
+  <properties/>
+  <testcase name="archivedUnrelatedNegationIsReportedAsConservativeLossNotImprovedTranslation" classname="com.kandong.modelprobe.FullPageConditionGuardTest" time="0.042"/>
+  <testcase name="complexPagesNeverSendAnyFragmentsIncludingSplitModifierContinuations" classname="com.kandong.modelprobe.FullPageConditionGuardTest" time="0.031"/>
+  <testcase name="unchangedOriginalTtlSelectionAndClearRejectLateReplies" classname="com.kandong.modelprobe.FullPageConditionGuardTest" time="0.003"/>
+  <testcase name="preservesFullEvidenceContextAndUsesSeparateImmutableLayoutDomain" classname="com.kandong.modelprobe.FullPageConditionGuardTest" time="0.057"/>
+  <testcase name="semanticAccountingKeepsCoverageAndWithholdingSeparate" classname="com.kandong.modelprobe.FullPageConditionGuardTest" time="0.036"/>
+  <testcase name="explicitOptInDoesNotChangeLegacyModeOrChineseRequests" classname="com.kandong.modelprobe.FullPageConditionGuardTest" time="0.011"/>
+  <testcase name="guardedPageCannotConsumeValidV1RecordingEvenWhenNoHoldIsNeeded" classname="com.kandong.modelprobe.FullPageConditionGuardTest" time="0.002"/>
+  <system-out><![CDATA[KD_GUARD_ARCHIVE	fr-seam	20	2	0	UNRELATED_TRAIN_NEGATION_PAGE_HOLD
+KD_GUARD_CASE	regression	en-shifted-before	3	0	1	0	0	2
+KD_GUARD_CASE	regression	en-bottom-positive	3	0	1	0	0	2
+KD_GUARD_CASE	regression	fr-accent-after	3	0	1	0	0	2
+KD_GUARD_CASE	regression	fr-right-column-before	3	0	1	0	0	2
+KD_GUARD_CASE	regression	en-two-columns	5	0	2	0	0	3
+KD_GUARD_CASE	regression	fr-seam-exact-duplicate	5	0	0	1	0	1
+KD_GUARD_CASE	regression	en-seam-drift-duplicate	5	0	0	1	0	1
+KD_GUARD_CASE	regression	fr-seam-polarity-conflict	5	0	0	0	0	1
+KD_GUARD_CASE	regression	en-duplicate-tail	4	0	0	1	0	1
+KD_GUARD_CASE	regression	en-same-strip-copy	4	0	0	0	0	1
+KD_GUARD_CASE	regression	fr-repeated-different-rows	5	0	2	0	0	3
+KD_GUARD_CASE	regression	en-cross-column-fragment	3	0	0	0	0	1
+KD_GUARD_CASE	regression	fr-intervening-label	4	0	0	0	0	2
+KD_GUARD_CASE	regression	en-spaced-complete	3	0	0	1	0	1
+KD_GUARD_CASE	regression	fr-indented-complete	3	0	0	1	0	1
+KD_GUARD_CASE	regression	en-trailing-exception	4	0	0	1	1	0
+KD_GUARD_CASE	regression	fr-trailing-restriction	4	0	0	1	1	0
+KD_GUARD_CASE	regression	en-leading-negated-claim	4	0	0	1	1	0
+KD_GUARD_CASE	regression	fr-leading-prerequisite	4	0	0	1	1	0
+KD_GUARD_CASE	regression	en-neutral-neighbour	4	0	1	0	0	3
+KD_GUARD_CASE	regression	fr-independent-neighbour	5	0	1	0	0	4
+KD_GUARD_CASE	regression	en-clipped-head-conflict	4	0	0	0	1	0
+KD_GUARD_CASE	regression	hans-source-only	3	0	0	0	0	0
+KD_GUARD_CASE	regression	hant-source-only	3	0	0	0	0	0
+KD_GUARD_TOTAL	regression	24	0	10	9	5
+KD_GUARD_CASE	fresh	en-unless-before	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	en-provided-distant	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	en-only-nbsp	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	en-except-split	5	0	0	1	1	0
+KD_GUARD_CASE	fresh	en-negated-heading	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	en-required-column	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	fr-sauf-before	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	fr-reserve-distant	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	fr-condition-split	5	0	0	1	1	0
+KD_GUARD_CASE	fresh	fr-negative-heading	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	fr-sans-column	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	fr-uniquement-after	4	0	0	1	1	0
+KD_GUARD_CASE	fresh	en-plain	3	0	1	0	0	2
+KD_GUARD_CASE	fresh	fr-plain	3	0	1	0	0	2
+KD_GUARD_CASE	fresh	en-plain-neighbour	4	0	1	0	0	3
+KD_GUARD_CASE	fresh	fr-plain-neighbour	4	0	1	0	0	3
+KD_GUARD_CASE	fresh	en-independent-if	4	0	0	1	2	0
+KD_GUARD_CASE	fresh	fr-independent-si	4	0	0	1	2	0
+KD_GUARD_TOTAL	fresh	18	0	4	14	16
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

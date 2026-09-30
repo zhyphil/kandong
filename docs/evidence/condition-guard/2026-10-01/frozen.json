@@ -1,0 +1,16 @@
+{
+  "baseCommit": "701e2b9e099b22e6276266b70ff2ae3150f2f31b",
+  "frozenAtUtc": "2026-09-30T22:18:37.699195+00:00",
+  "phase": "before behavior implementation and first guard test",
+  "sha256": {
+    "docs/fixtures/semantic-context-eval-v1/corpus.json": "4ace88c9a391cd73826ff7e369f024a4c106c9aa0dcf5e3529676f4d496c29b6",
+    "docs/fixtures/semantic-context-eval-v1/PROTOCOL.md": "1bce0e93b7b0714f8ed94daf7c56b8b47cf3ff75556dd054cc9ee05fe5e08cee",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageSemanticLayout.kt": "673c870815caf6397f19fef687d6d34a02a933f7a680e2c9578295323f3858d8",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageOcrAssociation.kt": "ee0597ab3a44adea5d015f58e135bf6fbee86240be4fb7d6aa0f93be5cefc192",
+    "modelprobe/src/androidTest/assets/full-page-translation-grouped-v1.json": "26c7246a2536fc82881af84955a4f4680e418ec891812b2e89837170b8799ea6",
+    "docs/fixtures/condition-guard-v1/corpus.json": "9cb4274bd1b6d455e34182827cd7574a6575cf86fd329b123062c38347f912ab",
+    "docs/fixtures/condition-guard-v1/PROTOCOL.md": "d0083c341bce98c1b1489724b6d5742cf1e6a4744188d405fa08deda2e793d1f",
+    "modelprobe/src/test/java/com/kandong/modelprobe/ConditionGuardCorpus.kt": "e408457628bb8d229a33af4beab4b3458cea2b8851fc2450780109f148adeb14",
+    "modelprobe/src/test/java/com/kandong/modelprobe/ConditionGuardExpectations.kt": "3a182f94e14275dfccbbae774100f93d986713ce27260b0adb34fa6674564d48"
+  }
+}
