@@ -5,12 +5,12 @@ import com.kandong.ocrlab.context.capture.CaptureVersion
 
 /** Presentation only. Probe remains the sole validator of source identity, bindings and TTL. */
 internal class RegionVisualTranslationController(provider: TranslationProviderChoice = TranslationProviderChoice(TranslationMode.LOCAL,
-    "BINDING_TEST_ONLY_NO_TRANSLATION_MODEL", "fixed-page-contract-v1", configured=true)) {
+    "BINDING_TEST_ONLY_NO_TRANSLATION_MODEL", "fixed-page-contract-v1", configured=true), grouped: Boolean = false) {
     enum class Phase { IDLE, READING, WAITING, READY, ERROR, EXPIRED, CANCELLED }
     enum class Display { ORIGINAL, DEMO }
     class Run internal constructor(internal val ticket: FullPageTranslationProbe.Ticket)
     data class State(val phase: Phase, val display: Display, val revision: Long)
-    private val probe=FullPageTranslationProbe(provider)
+    private val probe=FullPageTranslationProbe(provider,grouped)
     private var run: Run?=null
     private var request: FullPageTranslationProbe.ProbeRequest?=null
     private var phase=Phase.IDLE
@@ -74,6 +74,7 @@ internal class RegionVisualTranslationController(provider: TranslationProviderCh
         tick(now); if(display!=value) { display=value; revision++ }
     }
     fun sourceMap(now: Long): Map<String,FullPageOcrContract.Candidate> { tick(now); return probe.sourceMap(now) }
+    fun targetMembers(now: Long): Map<String,List<String>> { tick(now); return probe.targetMembers(now) }
     fun evidence(now: Long): FullPageTranslationAdapter.Evidence? { tick(now); return probe.evidence(now) }
     fun render(roi: ContextRect, transform: MirrorTransform, now: Long): ContextRender {
         tick(now)

@@ -1,0 +1,165 @@
+{
+  "scope": "Manual controls for prior guard only; not supplier output or quality acceptance",
+  "rows": [
+    {
+      "language": "en",
+      "source": "No refunds before confirmation.",
+      "manualCorrectControl": "确认前不可退款。",
+      "correctResult": {
+        "version": "critical-facts-v2",
+        "status": "withheld",
+        "reasons": [
+          "refund-condition-unverified"
+        ],
+        "semanticVerified": false
+      },
+      "reversedControl": "确认后不可退款。",
+      "reversedResult": {
+        "version": "critical-facts-v2",
+        "status": "withheld",
+        "reasons": [
+          "refund-condition-unverified"
+        ],
+        "semanticVerified": false
+      }
+    },
+    {
+      "language": "en",
+      "source": "No refunds after confirmation.",
+      "manualCorrectControl": "确认后不可退款。",
+      "correctResult": {
+        "version": "critical-facts-v2",
+        "status": "withheld",
+        "reasons": [
+          "refund-condition-unverified"
+        ],
+        "semanticVerified": false
+      },
+      "reversedControl": "确认前不可退款。",
+      "reversedResult": {
+        "version": "critical-facts-v2",
+        "status": "withheld",
+        "reasons": [
+          "refund-condition-unverified"
+        ],
+        "semanticVerified": false
+      }
+    },
+    {
+      "language": "en",
+      "source": "Refunds are available before confirmation.",
+      "manualCorrectControl": "确认前可以退款。",
+      "correctResult": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      },
+      "reversedControl": "确认后可以退款。",
+      "reversedResult": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      }
+    },
+    {
+      "language": "en",
+      "source": "Refunds are available after confirmation.",
+      "manualCorrectControl": "确认后可以退款。",
+      "correctResult": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      },
+      "reversedControl": "确认前可以退款。",
+      "reversedResult": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      }
+    },
+    {
+      "language": "fr",
+      "source": "Aucun remboursement avant confirmation.",
+      "manualCorrectControl": "确认前不可退款。",
+      "correctResult": {
+        "version": "critical-facts-v2",
+        "status": "withheld",
+        "reasons": [
+          "refund-condition-unverified"
+        ],
+        "semanticVerified": false
+      },
+      "reversedControl": "确认后不可退款。",
+      "reversedResult": {
+        "version": "critical-facts-v2",
+        "status": "withheld",
+        "reasons": [
+          "refund-condition-unverified"
+        ],
+        "semanticVerified": false
+      }
+    },
+    {
+      "language": "fr",
+      "source": "Aucun remboursement après confirmation.",
+      "manualCorrectControl": "确认后不可退款。",
+      "correctResult": {
+        "version": "critical-facts-v2",
+        "status": "withheld",
+        "reasons": [
+          "refund-condition-unverified"
+        ],
+        "semanticVerified": false
+      },
+      "reversedControl": "确认前不可退款。",
+      "reversedResult": {
+        "version": "critical-facts-v2",
+        "status": "withheld",
+        "reasons": [
+          "refund-condition-unverified"
+        ],
+        "semanticVerified": false
+      }
+    },
+    {
+      "language": "fr",
+      "source": "Remboursement possible avant confirmation.",
+      "manualCorrectControl": "确认前可以退款。",
+      "correctResult": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      },
+      "reversedControl": "确认后可以退款。",
+      "reversedResult": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      }
+    },
+    {
+      "language": "fr",
+      "source": "Remboursement possible après confirmation.",
+      "manualCorrectControl": "确认后可以退款。",
+      "correctResult": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      },
+      "reversedControl": "确认前可以退款。",
+      "reversedResult": {
+        "version": "critical-facts-v2",
+        "status": "candidate-unverified",
+        "reasons": [],
+        "semanticVerified": false
+      }
+    }
+  ]
+}

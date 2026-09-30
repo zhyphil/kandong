@@ -1,0 +1,12 @@
+{
+  "baseCommit": "37eb9a7b43683b54a58cd4e3e7c5091940890832",
+  "scope": "independent synthetic grouped translation experiment",
+  "baselineSha256": {
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageOcrAssociation.kt": "ee0597ab3a44adea5d015f58e135bf6fbee86240be4fb7d6aa0f93be5cefc192",
+    "scripts/translation_full_page_recorded.py": "719c724138916726cdb9e4756ea02117159cf980731f8628bd8f88054d3eeeb3",
+    "scripts/translation_critical_checks.py": "cb90f918404520b1dcbcd26a4e469baeacf3d1f794f058ee966d4ed8f551ed28",
+    "scripts/translation_protected_facts.py": "cbd7e8b809c8e521883e14e10c820b17dd82ecf8b3f10b3b3df7ad159262593e",
+    "modelprobe/src/androidTest/assets/full-page-translation-recorded-v1.json": "3ca858be7e1b99e78b4f6903b6998ad50a9ee6366e357947ff8c8c49c81e369f",
+    "modelprobe/build/outputs/apk/debug/modelprobe-debug.apk": "214b503f34ef14aa020773bd5ead66e4e51e7909c1a5dea34003f8ef1b2b3ed4"
+  }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.FullPageSemanticLayoutTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-09-30T21:29:55.727Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.042">
+  <properties/>
+  <testcase name="exactQuadOrientationConvexityAndSlopeBoundary" classname="com.kandong.modelprobe.FullPageSemanticLayoutTest" time="0.003"/>
+  <testcase name="renamingAndPermutationNeverResolveAmbiguityOrChangeSemanticOrder" classname="com.kandong.modelprobe.FullPageSemanticLayoutTest" time="0.014"/>
+  <testcase name="incompleteAndUnsupportedHeadsNeverRequestStandaloneConfirmation" classname="com.kandong.modelprobe.FullPageSemanticLayoutTest" time="0.002"/>
+  <testcase name="actualArchiveFieldsMatchIndependentPythonAndAllRawEvidenceSurvives" classname="com.kandong.modelprobe.FullPageSemanticLayoutTest" time="0.02"/>
+  <testcase name="columnsGapInterveningOverlapDuplicateClipAndTiltDoNotBecomeEligible" classname="com.kandong.modelprobe.FullPageSemanticLayoutTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

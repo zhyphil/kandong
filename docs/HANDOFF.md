@@ -1,35 +1,31 @@
 # KanDong交接记录
 
-更新于2026-09-30，本轮起点64a367d。固定整页真实供应商返回／质量门禁／独立卡片录制回放已实现，最终3项录制UI复验82.883秒、独立启动与中文状态通过。相关回归按包/批次保留；自有进程和专用模拟器已停止。
+更新于2026-09-30，起点37eb9a7。本轮完成有限双行确认条件的分组、实际供应商合成记录和独立卡片回放；完整说明见[跨行分组](OCR_SEMANTIC_GROUPS.md)，汇总见[证据](evidence/semantic-groups/2026-09-30/summary.json)。
 
 ## 当前边界
 
-唯一目录/Users/haoyuzuo/Projects/KanDong。先读AGENTS.md、TASKS.md及[本轮说明](OCR_TRANSLATION_RECORDED_LAB.md)。用户2026-09-30已授权：每项任务完成相应验证后，以Conventional Commits提交并推送当前任务分支，无需重复询问；先核对远端，推送后核对哈希，不强推/改写历史。部署、Release和上架另行授权。
+唯一目录/Users/haoyuzuo/Projects/KanDong。先读AGENTS.md、TASKS.md。本轮仅独立modelprobe测试源集、宿主脚本和固定合成数据；正式app/compat/graphics/ocrlab、debug宿主及依赖未改，手机未查询或更新。Android无网络权限，Mac只执行已授权的固定合成DeepL调用；没有真实屏幕采集或上传。
 
-本轮只修改独立modelprobe测试源集、新增宿主工具及固定数据；正式app/compat/graphics、ocrlab、debug宿主、依赖均未改。用户授权的固定合成DeepL调用在Mac执行，Android仅读取录制包，界面显著说明“本次未联网”。无真机安装/查询、真实屏幕采集或上传、APK密钥。
+用户要求每项任务相称验证后以Conventional Commits提交、推送当前分支，不需重复确认；核对origin与远端分歧，正常push后核对哈希，不强推或改写历史。此约定不包含部署/Release/上架。当前分支main，origin为git@github.com:zhyphil/kandong.git。
 
-## 本轮事实
+## 已核实结果
 
-- 新调用23次全部完成：原稿9、OCR14，都是本次整页纯原文context；金额XML保护复用，日期无新样本。source上限700，实际响应计费合计467。usage5241→5685（差444），少23恰等于最后请求；未追加查询确认原因，不声称已对账一致。
-- 原稿8语义通过、1跨行尾部待定；其中1正确退款句被旧条件规则拒绝。OCR10通过、4个confirmation尾部待定并保留原文。选中源文字均正确，但完整53候选仍含乱码/重复/冲突；中文0调用。不把通用语义/长辈质量标通过。
-- 冻结输入/评分、请求/响应/评审/源码SHA可复查；导出同时要求源正确、逐项开发复核与规则通过。原稿不填OCR，不合并重复目标。原始完整解析JSON先存后验，不是HTTP原始字节。
-- Android整页指纹逐字段覆盖所有候选、几何/分数位、模型/字典/关联和框外context；排除历史会话/时间等必变字段后，仍使用本次真实收据/当前目标。错配整页失败，无marker回退。取消/迟到结果、原取得时间60秒、原生槽位规则保留。
-- 宿主117测试，本机271＋76、离线构建/Lint0错误（4/30既有警告）通过。首编译测试方法名错误已修；移除指纹守卫的行为测试确实失败，恢复后通过。宿主两项红绿修正：源错误不能展示、兼容公开tag_handling_version元数据。
-- AO三步完成，两只读指纹不变。独立审查无阻断P1/P2；两条测试建议已处理：按最终审核包逐stable key校验全部候选，不预设必须有译文；四页完整字段/指纹额外显式对照（中文原本不调度回复）。
-- 文案修正前同包四页对照1项12.03秒、其余57回归276.526秒及独立冷启动／横屏均通过。最终仅将中文就绪状态改为不请求翻译，最终3项录制UI复验82.883秒及独立两页冷启动/中文状态通过；源码SHA与最终构建一致，不把不同包合称一次61项。
-
-证据目录docs/evidence/full-page-translation/2026-09-30。逐项semantic-review与live原始文件不改写；开发语义复核不是外部盲测。
+- 53原始候选及位置/分数/冲突全部保留。派生顺序是坐标排序且显式不确定；只支持有限EN/FR确认前后退款双行结构。法语顶/底各一个双行组合格，中间4成员仍歧义；原始NON_AXIS_ALIGNED未抹除，独立几何资格只作用于派生组。不支持的孤立尾行不请求翻译。
+- 默认保留v1。点“启用双行分组实验”清除旧结果后，再点“译文回放”才跑固定整页OCR。尾行选区可显示完整条件；每卡展示全部来源编号。原取得时间60秒、取消/菜单/收起/旋转、原生资源独占与迟到回复规则保留。整页输入/来源/派生顺序/成员逐字段匹配，不允许错配回放。
+- 10次实际DeepL：8原稿＋2归档OCR双行组；2次用量查询，384字符对账一致，无重试。原初版规则全部拒绝；实际完整意义经逐项开发复核。新v2规则观察后开发，仅对同一原始回复离线复核10条通过，其中2条OCR进入候选。原拒绝/源码/响应保留，无追加调用，不称盲测；qualityAccepted与semanticVerified始终false。
+- 141宿主、279 JVM、离线构建和Lint0错误4既有警告。最终同包模拟器11专项80.966秒＋14回归124.836秒通过，实际60秒/四页OCR/尾行卡片/原手势均有证据。独立冷启动/旋转与原生清理另列；截图脚本的边缘手势、错误手写编号和半露卡片均保留记录并修正，不把未完成截图算完整显示通过。
+- AO预算3步：只读方案与复核成功、实现600秒超时后由根任务完成。独立复核P2空态断言已修；审查发生在实际录制及v2之前，后者只有根任务复核和正反例/实际测试证据。
 
 ## 下一步
 
-1. 先检查Git和[汇总](evidence/full-page-translation/2026-09-30/summary.json)，核对本轮最后验收/提交状态。不要重复DeepL调用消耗额度或把回放说成新调用。
-2. 语义阅读顺序与跨行条件分组：当前OCR context是候选ID顺序，未验证为阅读顺序；整页文字存在不等于逐行卡片能保留条件。下一项从confirmation与上一行关系入手，保留原始候选和冲突，冻结相反条件反例后验证完整句翻译与按组展示，不按case ID修答案。
-3. 联网会话同意/凭据、真实采集/遮挡/敏感过滤和正式镜面继续分别验收。不把开发密钥放入手机或上传真实屏幕。
+1. 从当前Git与本轮summary开始，不重跑已完成的供应商调用；验证历史导出用离线脚本即可。
+2. 先冻结未见过的单语整页布局/完整条件反例，检查规则是否仍可靠；同时评估跨段重复行的组关系。保留所有原始来源、冲突和失败，不能简单选最高分/删除重复或按样例ID补译文。
+3. 联网会话同意/后端凭据、真实采集/遮挡/敏感过滤、正式镜面及真机仍须分别验收，不把实验录制包说成手机实时翻译。
 
-## 环境
+## 环境与构件
 
-JDK17：/Users/haoyuzuo/Library/Java/JavaVirtualMachines/temurin-17.0.20.1/Contents/Home；SDK：/Users/haoyuzuo/Library/Android/sdk。保持离线构建与现有依赖。
+JDK17：/Users/haoyuzuo/Library/Java/JavaVirtualMachines/temurin-17.0.20.1/Contents/Home；SDK：/Users/haoyuzuo/Library/Android/sdk。维持现有依赖及离线构建。
 
-主APK214b503f34ef14aa020773bd5ead66e4e51e7909c1a5dea34003f8ef1b2b3ed4不变；最终测试APK 2f0e471d8b1cf264a560682706c4102ff45a6e41656115c9e871ea975cf723b3；录制asset 3ca858be7e1b99e78b4f6903b6998ad50a9ee6366e357947ff8c8c49c81e369f。无网络权限，只有测试APK包含录制包。入口com.kandong.modelprobe/.RegionVisualLabActivity。
+主实验APK：214b503f34ef14aa020773bd5ead66e4e51e7909c1a5dea34003f8ef1b2b3ed4；测试APK：2cc737a634c650ba0abf8caefe7de7bc2d64bc6d2538b369f3ef1f1fd50981d5。分组资产：26c7246a2536fc82881af84955a4f4680e418ec891812b2e89837170b8799ea6；旧v1资产：3ca858be7e1b99e78b4f6903b6998ad50a9ee6366e357947ff8c8c49c81e369f不变。入口com.kandong.modelprobe/.RegionVisualLabActivity，需同签名主/测试包。
 
-专用AVD KanDong_OCR_API37_16K，项目.local/avd，emulator-5582，API37/ARM64/16KiB。本轮完成后已停止自有进程和模拟器。只使用该模拟器；最近真机历史目标nova 9/NAM-LX9/API31，恢复前重新核对身份，系统安装/共享由用户确认，旧LIO兼容要求保留。
+专用AVD KanDong_OCR_API37_16K，项目.local/avd，emulator-5582，API37/ARM64/16KiB。结束后的进程/模拟器停止状态见本轮summary。最近真机历史目标nova 9/NAM-LX9/API31；恢复前重新核对身份，系统安装/共享由用户确认，不继承本次模拟器结论。

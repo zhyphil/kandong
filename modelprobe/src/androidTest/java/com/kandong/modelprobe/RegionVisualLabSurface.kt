@@ -29,7 +29,7 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
         private set
     private val notice: String get() = if(session.synthetic) "合成手势回归 · 不运行 OCR、不翻译、不读取屏幕"
         else "固定 PNG · 真实整页 OCR · 不读取屏幕\n$replyNotice"
-    private val replyNotice:String get()=if(realBackend?.recorded==true) "已录制 DeepL 响应 · 本次未联网\n识别上下文含未核对内容；仅限开发实验" else "本地绑定演示，非真实翻译"
+    private val replyNotice:String get()=if(realBackend?.grouped==true) "双行条件分组实验 · 已录制回复 · 本次未联网\n派生阅读顺序未验收；保留所有原始候选" else if(realBackend?.recorded==true) "已录制 DeepL 响应 · 本次未联网\n识别上下文含未核对内容；仅限开发实验" else "本地绑定演示，非真实翻译"
     private val translateLabel:String get()=if(realBackend?.recorded==true) "译文回放" else "翻译演示"
     private val showLabel: String get() = if(session.synthetic) "展示样例" else "整页 OCR"
     private val handler=Handler(Looper.getMainLooper())
@@ -47,6 +47,7 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
     private val translationStatus=label("",14f,"lab_translation_status")
     private val demoControls=LinearLayout(activity).apply { orientation=LinearLayout.VERTICAL; tag="lab_demo_controls" }
     private var demoRender: ContextRender?=null
+    private var demoMembers: Map<String,List<String>> = emptyMap()
     private var demoSourceMap: Map<String,FullPageOcrContract.Candidate> = emptyMap()
     private val zoom=label("",14f,"lab_zoom")
     private val slider=SeekBar(activity).apply { max=400; progress=100; tag="lab_slider"; contentDescription="放大倍率，1到5倍"; minimumHeight=dp(48) }
@@ -87,6 +88,7 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
             realBackend?.translation?.choose(RegionVisualTranslationController.Display.DEMO,SystemClock.elapsedRealtime()); update()
         },LinearLayout.LayoutParams(dp(88),-2))
         demoControls.addView(HorizontalScrollView(activity).apply { addView(demoRow); isFillViewport=true })
+        demoControls.addView(button("启用双行分组实验","lab_grouped") { toggleGroupedForProbe(); update() })
         demoControls.addView(translationStatus)
         content.addView(demoControls)
         val zoomRow=LinearLayout(activity).apply { gravity=android.view.Gravity.CENTER_VERTICAL }
@@ -193,6 +195,12 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
         root.findViewWithTag<TextView>("lab_help").text=helpText()
         source.relayoutPage(); update()
     }
+    internal fun toggleGroupedForProbe():Boolean {
+        val backend=realBackend ?: return false
+        if(!backend.chooseGrouped(!backend.grouped))return false
+        session.cancel();cardKey="";update();return true // fresh explicit Translate click required
+    }
+    internal fun groupedForProbe()=realBackend?.grouped==true
     internal fun realResult()=realBackend?.result()
     internal fun realError()=realBackend?.error()
     internal fun translationState(): RegionVisualTranslationController.State? {
@@ -224,6 +232,11 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
             root.findViewWithTag<TextView>(tag)?.text=notice
         root.findViewWithTag<TextView>("lab_binding_notice")?.text=replyNotice
         val backend=realBackend
+        root.findViewWithTag<Button>("lab_grouped").apply {
+            visibility=if(backend?.recorded==true)View.VISIBLE else View.GONE
+            isEnabled=backend?.busy()==false && !RegionVisualOcrRuntime.slot.busy()
+            text=if(backend?.grouped==true)"退出分组实验，返回 v1" else "启用双行分组实验"
+        }
         val now=SystemClock.elapsedRealtime()
         val presentation=backend?.translation?.state(now)
         val isDemo=backend?.startMode==RegionVisualSession.StartMode.BINDING_DEMO
@@ -235,10 +248,11 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
             RegionVisualTranslationController.Phase.ERROR -> "结果不可用或整页不匹配 · 请再次点击$translateLabel"
             RegionVisualTranslationController.Phase.EXPIRED -> "原始页面已过期 · 请再次点击$translateLabel"
             RegionVisualTranslationController.Phase.CANCELLED -> "已取消 · 恢复不会自动读取"
-            else -> "点击$translateLabel 才读取固定整页"
+            else -> if(backend?.grouped==true && !RecordedGroupedRegionVisualReplies.available()) "分组录制包待审核导出 · 点击后仍不会联网" else "点击$translateLabel 才读取固定整页"
         }
         demoRender=if(isDemo && s.frame!=null) backend?.translation?.render(s.roi,session.mirrorTransform(),now) else null
         demoSourceMap=if(isDemo && s.frame!=null) backend?.translation?.sourceMap(now) ?: emptyMap() else emptyMap()
+        demoMembers=if(isDemo && s.frame!=null) backend?.translation?.targetMembers(now) ?: emptyMap() else emptyMap()
         source.invalidate(); mirror.invalidate()
         val f=s.frame
         val key="${if(isDemo) presentation else null}:" + if(f==null) "none:${s.status}" else "${f.page.identity?.sourceBatch}:${f.selectedIds}:${f.contextIds}:${f.visible.map { it.candidateId }}"
@@ -251,8 +265,9 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
             val rendered=checkNotNull(demoRender)
             if(rendered.cards.isEmpty()) cards.addView(label("选区内没有候选 · 整页上下文仍保留",16f,"lab_empty_region"))
             rendered.cards.forEach { card ->
-                val candidate=demoSourceMap[card.targetId] ?: return@forEach
-                val ordinal=ordinals[candidate.provenance.id] ?: return@forEach
+                val members=demoMembers[card.targetId].orEmpty().mapNotNull { demoSourceMap[it] }
+                if(members.isEmpty())return@forEach
+                val ordinal=members.joinToString("+") { ordinals.getValue(it.provenance.id).toString() }
                 val raw=card.sourceText.ifEmpty { "〔空字符串候选〕" }
                 val reason=when(card.reason) {
                     "CHECK_UNVERIFIED" -> "译文尚未通过核对，请先看原文"

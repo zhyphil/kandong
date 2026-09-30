@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.RecordedGroupedFullPageTranslationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-30T21:41:49.085Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.057">
+  <properties/>
+  <testcase name="wholeCurrentPageMemberTargetsAndOrderedContextBindStrictly" classname="com.kandong.modelprobe.RecordedGroupedFullPageTranslationTest" time="0.019"/>
+  <testcase name="wrongPageSourceResultKindAndReviewCannotCreateCandidate" classname="com.kandong.modelprobe.RecordedGroupedFullPageTranslationTest" time="0.033"/>
+  <testcase name="tailRoiFullCardAnchorsAndLifecycleNeverReacquireOrExtendOriginalTtl" classname="com.kandong.modelprobe.RecordedGroupedFullPageTranslationTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

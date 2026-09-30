@@ -1,0 +1,14 @@
+{
+  "tests": 14,
+  "classes": [
+    "RecordedRegionVisualUiTest#fourFreshPagesMatchWholeRecordedInputAndShowGatedProviderCards",
+    "RegionVisualTranslationUiTest",
+    "RegionVisualLabUiTest#actualSourceDragAndCornerResizeKeepIndependentZoomAndEvidence",
+    "RegionVisualLabUiTest#cornerAtTopRightEdgeRetainsFullTouchAreaInsideView",
+    "RegionVisualLabUiTest#realSliderAndTwoPointerPinchSynchronizeAndMirrorPanDoesNotReload",
+    "RegionVisualLabUiTest#fullContentMenuAndCollapsedReturnClearTextWithoutReload",
+    "RegionVisualLabUiTest#switchingToBlankAndBackNeverKeepsOldCandidateText",
+    "RegionVisualLabUiTest#ownSecondActivityBackgroundClearsAndResumeRequiresExplicitShow"
+  ],
+  "scope": "fixed page actual OCR and asynchronous binding demo UI; no translation quality claim"
+}

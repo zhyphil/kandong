@@ -1,0 +1,9 @@
+{
+  "tests": 11,
+  "classes": [
+    "FullPageSemanticLayoutTest",
+    "RecordedGroupedFullPageTranslationTest",
+    "GroupedRegionVisualUiTest"
+  ],
+  "scope": "fixed page actual OCR and asynchronous binding demo UI; no translation quality claim"
+}

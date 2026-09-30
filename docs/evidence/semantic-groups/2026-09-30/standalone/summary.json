@@ -1,0 +1,14 @@
+{
+  "packages": {
+    "com.kandong.modelprobe": "214b503f34ef14aa020773bd5ead66e4e51e7909c1a5dea34003f8ef1b2b3ed4",
+    "com.kandong.modelprobe.test": "2cc737a634c650ba0abf8caefe7de7bc2d64bc6d2538b369f3ef1f1fd50981d5"
+  },
+  "scope": "cold launch fixed synthetic page actual OCR and recorded grouped response; no network or real screen capture",
+  "freshModeSelectionNoRead": true,
+  "groupedSourceCardVisible": true,
+  "sourceOrdinals": "4+3",
+  "chineseMatchesPinnedReply": true,
+  "rotationClears": true,
+  "nativeCleanupBalanced": true,
+  "stoppedOwnProcess": true
+}

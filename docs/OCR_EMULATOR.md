@@ -75,3 +75,6 @@ python3 -B scripts/run-ocr-emulator.py --output /private/tmp/kandong-ocr-emulato
 
 
 2026-09-30独立翻译绑定演示：主214b503f…不变，测试44ab3d4e884a90e5812dbc9520c2b166eb9999568219714c3adaa5073c3d4907；安装哈希一致。265＋76 JVM／构建／Lint0错误，初轮65回归与最终7强化UI分批通过；最终同包四页冷启动／旋转／横屏滚动检查完成。无手机更新／真实翻译；已停专用模拟器。见[运行及证据](OCR_TRANSLATION_VISUAL_LAB.md)。
+
+
+2026-09-30跨行条件分组实验：专用模拟器主包214b503f…、测试包2cc737a6…。同包11项专项＋14项回归全部通过，实际冷启动卡片及旋转清理已核对；历史runner的包身份不适用于新构件。见[分组记录](OCR_SEMANTIC_GROUPS.md)。

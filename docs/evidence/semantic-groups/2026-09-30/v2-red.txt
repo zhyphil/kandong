@@ -1,0 +1,977 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF.F
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds before\nconfirmation.', value='确认前恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds before\nconfirmation.', value='确认前 恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds before\nconfirmation.', value='确认前\n恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds before\nconfirmation.', value='确认前\r\n恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds before\nconfirmation.', value='确认前 \n\t恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds before\nconfirmation.', value='在确认前恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds before\nconfirmation.', value='在确认前 恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds before\nconfirmation.', value='在确认前\n恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds before\nconfirmation.', value='在确认前\r\n恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds before\nconfirmation.', value='在确认前 \n\t恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available before\nconfirmation.', value='确认前可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available before\nconfirmation.', value='确认前 可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available before\nconfirmation.', value='确认前\n可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available before\nconfirmation.', value='确认前\r\n可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available before\nconfirmation.', value='确认前 \n\t可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available before\nconfirmation.', value='在确认前可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available before\nconfirmation.', value='在确认前 可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available before\nconfirmation.', value='在确认前\n可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available before\nconfirmation.', value='在确认前\r\n可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available before\nconfirmation.', value='在确认前 \n\t可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds after\nconfirmation.', value='确认后恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds after\nconfirmation.', value='确认后 恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds after\nconfirmation.', value='确认后\n恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds after\nconfirmation.', value='确认后\r\n恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds after\nconfirmation.', value='确认后 \n\t恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds after\nconfirmation.', value='在确认后恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds after\nconfirmation.', value='在确认后 恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds after\nconfirmation.', value='在确认后\n恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds after\nconfirmation.', value='在确认后\r\n恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='No refunds after\nconfirmation.', value='在确认后 \n\t恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available after\nconfirmation.', value='确认后可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available after\nconfirmation.', value='确认后 可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available after\nconfirmation.', value='确认后\n可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available after\nconfirmation.', value='确认后\r\n可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available after\nconfirmation.', value='确认后 \n\t可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available after\nconfirmation.', value='在确认后可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available after\nconfirmation.', value='在确认后 可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available after\nconfirmation.', value='在确认后\n可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available after\nconfirmation.', value='在确认后\r\n可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Refunds are available after\nconfirmation.', value='在确认后 \n\t可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement avant\nconfirmation.', value='确认前恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement avant\nconfirmation.', value='确认前 恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement avant\nconfirmation.', value='确认前\n恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement avant\nconfirmation.', value='确认前\r\n恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement avant\nconfirmation.', value='确认前 \n\t恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement avant\nconfirmation.', value='在确认前恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement avant\nconfirmation.', value='在确认前 恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement avant\nconfirmation.', value='在确认前\n恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement avant\nconfirmation.', value='在确认前\r\n恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement avant\nconfirmation.', value='在确认前 \n\t恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible avant\nconfirmation.', value='确认前可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible avant\nconfirmation.', value='确认前 可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible avant\nconfirmation.', value='确认前\n可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible avant\nconfirmation.', value='确认前\r\n可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible avant\nconfirmation.', value='确认前 \n\t可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible avant\nconfirmation.', value='在确认前可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible avant\nconfirmation.', value='在确认前 可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible avant\nconfirmation.', value='在确认前\n可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible avant\nconfirmation.', value='在确认前\r\n可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible avant\nconfirmation.', value='在确认前 \n\t可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement après\nconfirmation.', value='确认后恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement après\nconfirmation.', value='确认后 恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement après\nconfirmation.', value='确认后\n恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement après\nconfirmation.', value='确认后\r\n恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement après\nconfirmation.', value='确认后 \n\t恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement après\nconfirmation.', value='在确认后恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement après\nconfirmation.', value='在确认后 恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement après\nconfirmation.', value='在确认后\n恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement après\nconfirmation.', value='在确认后\r\n恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Aucun remboursement après\nconfirmation.', value='在确认后 \n\t恕不退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible après\nconfirmation.', value='确认后可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible après\nconfirmation.', value='确认后 可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible après\nconfirmation.', value='确认后\n可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible après\nconfirmation.', value='确认后\r\n可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible après\nconfirmation.', value='确认后 \n\t可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible après\nconfirmation.', value='在确认后可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible après\nconfirmation.', value='在确认后 可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible après\nconfirmation.', value='在确认后\n可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible après\nconfirmation.', value='在确认后\r\n可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_all_eight_relations_support_one_visual_wrap_without_rewriting_response (test_translation_grouped_checks_v2.WrappedConditionTests.test_all_eight_relations_support_one_visual_wrap_without_rewriting_response) (source='Remboursement possible après\nconfirmation.', value='在确认后 \n\t可办理退款。')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 23, in test_all_eight_relations_support_one_visual_wrap_without_rewriting_response
+    self.assertEqual('candidate-unverified',result['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+======================================================================
+FAIL: test_prior_simple_forms_remain_supported (test_translation_grouped_checks_v2.WrappedConditionTests.test_prior_simple_forms_remain_supported)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_grouped_checks_v2.py", line 44, in test_prior_simple_forms_remain_supported
+    self.assertEqual('candidate-unverified',m.evaluate('Aucun remboursement après\nconfirmation.',text,'fr')['status'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'candidate-unverified' != 'withheld'
+- candidate-unverified
++ withheld
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.020s
+
+FAILED (failures=81)

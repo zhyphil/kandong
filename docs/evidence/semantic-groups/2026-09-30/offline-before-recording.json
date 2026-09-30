@@ -1,0 +1,19 @@
+{
+  "stage": "before live calls and recorded asset; not final APK acceptance",
+  "python": {
+    "tests": 133,
+    "failures": 0
+  },
+  "jvm": {
+    "tests": 279,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "Error": 0,
+    "Warning": 4,
+    "Fatal": 0
+  },
+  "mainApkSha256": "214b503f34ef14aa020773bd5ead66e4e51e7909c1a5dea34003f8ef1b2b3ed4"
+}

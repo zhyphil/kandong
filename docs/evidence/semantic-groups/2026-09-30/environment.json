@@ -1,0 +1,7 @@
+{
+  "avd": "KanDong_OCR_API37_16K",
+  "api": "37",
+  "abi": "arm64-v8a",
+  "pageSize": "16384",
+  "bootCompleted": "1"
+}

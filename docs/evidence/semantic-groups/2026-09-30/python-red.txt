@@ -1,0 +1,16 @@
+{"schema": 1, "provider": "DeepL", "syntheticOnly": true, "qualityAccepted": false, "semanticVerified": false, "inputSha256": "938198b215b5cdaa7a48eea033ba4b17f94966e7110618fb050c96f70dfe0ca3", "rubricSha256": "45809deffd4e459c0809c6b34bf9ff9e3f1c0f3b77a40bf7410acfb567575072", "protocolSha256": "88bef9d6cf9ede2d23ea093752d6079785eab2c6274481e2dcffee2226eb283d", "authoredSha256": "d67acfda67f52a30f6e682d0fbf868f7a95c9ec46ae9e36161692bd73e8fa6f7", "calls": 10, "maxUsageCalls": 2, "countsByTrack": {"AUTHORED_GROUPED_CONDITION": 8, "RECORDED_GROUPED_OCR_SOURCE": 2}, "chineseCalls": 0, "ambiguousCalls": 0, "maxSourceCharacters": 384, "paceSeconds": 2, "retries": 0}
+RECORDED_EVIDENCE_REJECTED
+...F............
+======================================================================
+FAIL: test_frozen_plan_exact_budget_and_context (test_translation_full_page_grouped.HostTests.test_frozen_plan_exact_budget_and_context)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/Projects/KanDong/scripts/test_translation_full_page_grouped.py", line 102, in test_frozen_plan_exact_budget_and_context
+    self.assertEqual('nonewlines',r['request'].get('split_sentences'))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'nonewlines' != None
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.415s
+
+FAILED (failures=1)

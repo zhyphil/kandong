@@ -1,0 +1,18 @@
+{
+  "baseExportByteIdentical": true,
+  "recheckedExportByteIdentical": true,
+  "frozenRunAndSourceHashesVerified": true,
+  "permissions": {
+    "host": [
+      "package: com.kandong.modelprobe"
+    ],
+    "test": [
+      "package: com.kandong.modelprobe.test",
+      "permission: com.kandong.modelprobe.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+      "uses-permission: name='com.kandong.modelprobe.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'"
+    ]
+  },
+  "providerCalls": 10,
+  "usageQueries": 2,
+  "additionalRecheckCalls": 0
+}

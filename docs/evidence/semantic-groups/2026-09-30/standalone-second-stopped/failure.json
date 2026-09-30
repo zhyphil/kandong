@@ -1,0 +1,8 @@
+{
+  "stage": "locate-group-card",
+  "completed": false,
+  "focusRemainedOwnApp": true,
+  "cause": "script guessed member ordinals 4+5; actual immutable association order is 4+3",
+  "nativeTestsAlreadyCalculateOrdinalsFromProvenance": true,
+  "appCodeChanged": false
+}

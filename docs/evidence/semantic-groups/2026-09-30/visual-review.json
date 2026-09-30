@@ -1,0 +1,19 @@
+{
+  "reviewer": "Codex root visual inspection",
+  "screenshots": [
+    "standalone/grouped-ready.png",
+    "standalone/grouped-card.png",
+    "standalone/rotated-cleared.png"
+  ],
+  "wholeCardReadabilityAccepted": true,
+  "visibleCard": {
+    "sourceOrdinals": "4+3",
+    "chinese": "确认后\n恕不退款。",
+    "source": "Aucun remboursement après confirmation.",
+    "bothTextsFullyVisible": true
+  },
+  "limits": [
+    "Small page overview remains dense with overlapping candidate numbers.",
+    "Fixed synthetic page only; no elderly or third-party app UX acceptance."
+  ]
+}

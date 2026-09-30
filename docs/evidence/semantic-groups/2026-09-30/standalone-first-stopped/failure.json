@@ -1,0 +1,18 @@
+{
+  "stage": "scroll-to-group-card",
+  "completed": false,
+  "focus": "system launcher",
+  "guardStopped": true,
+  "lastObservedScrollBounds": [
+    0,
+    183,
+    1080,
+    2400
+  ],
+  "gestureStart": [
+    540,
+    2320
+  ],
+  "hypothesis": "scroll began near system gesture edge; rerun from observed interior content heading",
+  "appCrashNotAsserted": true
+}

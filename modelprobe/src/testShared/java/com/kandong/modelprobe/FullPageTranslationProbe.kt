@@ -9,11 +9,12 @@ import com.kandong.ocrlab.context.capture.CaptureVersion
  * cleanup authority. The owner must observe every full version change and clear on lifecycle loss.
  */
 internal class FullPageTranslationProbe(provider: TranslationProviderChoice = TranslationProviderChoice(TranslationMode.LOCAL,
-    "BINDING_TEST_ONLY_NO_TRANSLATION_MODEL", "fixed-page-contract-v1", configured=true)) {
+    "BINDING_TEST_ONLY_NO_TRANSLATION_MODEL", "fixed-page-contract-v1", configured=true), private val grouped: Boolean = false) {
     class Ticket internal constructor(internal val version: CaptureVersion, internal val capture: OnDemandTranslation.Capture)
     class ProbeRequest internal constructor(val contract: FixtureRequest,
         val evidence: FullPageTranslationAdapter.Evidence,
-        val sourceMap: Map<String, FullPageOcrContract.Candidate>)
+        val sourceMap: Map<String, FullPageOcrContract.Candidate>,
+        val layout: FullPageSemanticLayout.Layout? = null)
     private val owner = Thread.currentThread()
     private val translation = OnDemandTranslation(provider)
     private var version: CaptureVersion? = null
@@ -68,7 +69,7 @@ internal class FullPageTranslationProbe(provider: TranslationProviderChoice = Tr
             validatedAtMillis > now || validatedAtMillis < 0 || now >= metadata.acquiredAtMillis + metadata.ttlMillis) {
             clear(ClearReason.INVALID_SNAPSHOT); return false
         }
-        val adapted=FullPageTranslationAdapter.adapt(metadata,association,declaredLanguage)
+        val adapted=FullPageTranslationAdapter.adapt(metadata,association,declaredLanguage,grouped)
         if (adapted !is FullPageTranslationAdapter.AdaptedPage ||
             !translation.captured(token.capture,adapted.snapshot,roi,now)) {
             clear(ClearReason.INVALID_SNAPSHOT); return false
@@ -79,7 +80,7 @@ internal class FullPageTranslationProbe(provider: TranslationProviderChoice = Tr
             val response=FixtureResponse(contract.id,contract.page,contract.targetLanguage,contract.model,contract.version,
                 contract.targets.map { FixtureAnswer(it,null,AnswerKind.KEEP_ORIGINAL,AnswerOrigin.SOURCE,KeepOriginalReason.ALREADY_CHINESE) })
             if (!translation.accept(response,now)) { clear(ClearReason.INVALID_SNAPSHOT); return false }
-        } else if (contract != null) request=ProbeRequest(contract,adapted.originalEvidence,adapted.sourceMap)
+        } else if (contract != null) request=ProbeRequest(contract,adapted.originalEvidence,adapted.sourceMap,adapted.layout)
         return true
     }
     fun pending(now: Long): ProbeRequest? { own(); return if(advance(now)) request else null }
@@ -90,6 +91,9 @@ internal class FullPageTranslationProbe(provider: TranslationProviderChoice = Tr
     }
     fun sourceMap(now: Long): Map<String, FullPageOcrContract.Candidate> {
         own(); return if (advance(now)) page?.sourceMap ?: emptyMap() else emptyMap()
+    }
+    fun targetMembers(now: Long): Map<String,List<String>> {
+        own(); return if(advance(now)) page?.targetMembers ?: emptyMap() else emptyMap()
     }
     fun select(roi: ContextRect, now: Long): ContextSelection? {
         own(); return if(advance(now) && page != null) translation.select(roi,now) else null

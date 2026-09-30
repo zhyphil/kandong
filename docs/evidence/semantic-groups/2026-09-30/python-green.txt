@@ -1,0 +1,11 @@
+...............................................{"completed": 1, "of": 14}
+.../opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 403: 'dummy-not-a-real-credential-123456'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+.....................{"schema": 1, "provider": "DeepL", "syntheticOnly": true, "qualityAccepted": false, "semanticVerified": false, "inputSha256": "938198b215b5cdaa7a48eea033ba4b17f94966e7110618fb050c96f70dfe0ca3", "rubricSha256": "45809deffd4e459c0809c6b34bf9ff9e3f1c0f3b77a40bf7410acfb567575072", "protocolSha256": "d7bed331ff414d03da49339d67b70ca74082b4bd5b15f7b14899b2529517a675", "authoredSha256": "d67acfda67f52a30f6e682d0fbf868f7a95c9ec46ae9e36161692bd73e8fa6f7", "calls": 10, "maxUsageCalls": 2, "countsByTrack": {"AUTHORED_GROUPED_CONDITION": 8, "RECORDED_GROUPED_OCR_SOURCE": 2}, "chineseCalls": 0, "ambiguousCalls": 0, "maxSourceCharacters": 384, "paceSeconds": 2, "retries": 0}
+RECORDED_EVIDENCE_REJECTED
+................{"schema": 1, "provider": "DeepL", "syntheticOnly": true, "qualityAccepted": false, "inputSha256": "80d273e04e60784a3f154655821b5072eee6ac2ffddd0f02e4f4df20330942d8", "rubricSha256": "e3980f866d37b46f91cefe71dc89195c131a04c6ee24705760c1e87095a43e46", "calls": 23, "countsByTrack": {"AUTHORED_SOURCE": 9, "RECORDED_OCR_SOURCE": 14}, "chineseCalls": 0, "maxSourceCharacters": 700, "paceSeconds": 2, "retries": 0}
+..............................................
+----------------------------------------------------------------------
+Ran 133 tests in 1.665s
+
+OK

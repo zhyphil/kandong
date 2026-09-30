@@ -88,3 +88,44 @@ internal object RecordedRegionVisualReplies {
             targetKeys,outcomes),SHA)
     }
 }
+
+/** Pinned synthetic host run plus explicit post-observation offline recheck. No Android networking. */
+internal object RecordedGroupedRegionVisualReplies {
+    const val ASSET="full-page-translation-grouped-v1.json"
+    const val SHA="26c7246a2536fc82881af84955a4f4680e418ec891812b2e89837170b8799ea6"
+    fun available()=SHA.any { it!='0' }
+    fun scheduler(assets:AssetManager)=HandlerRegionVisualDemoReplies { request ->
+        require(available()) { "GROUPED_RECORDING_PENDING" }
+        val bytes=assets.open(ASSET).use { ProbeInputs.bounded(it,524288) }
+        val actual=MessageDigest.getInstance("SHA-256").digest(bytes).joinToString("") { "%02x".format(it.toInt() and 255) }
+        require(actual==SHA) { "GROUPED_RECORDING_HASH" }
+        val root=JSONObject(String(bytes,Charsets.UTF_8))
+        require(root.getInt("schema")==1 && root.getBoolean("syntheticOnly") && !root.getBoolean("qualityAccepted") && !root.getBoolean("semanticVerified"))
+        require(root.getString("mode")=="RECORDED_GROUPED" && root.getString("provider")=="DeepL" &&
+            root.getString("layoutVersion")==FullPageSemanticLayout.VERSION)
+        for(key in listOf("inputSha256","rubricSha256","protocolSha256","authoredSha256","sourceHashesSha256","runSha256","reviewSha256"))
+            require(root.getString(key).matches(Regex("[0-9a-f]{64}")))
+        val recheck=root.getJSONObject("recheck")
+        require(recheck.getString("version")=="complete-confirmation-condition-v2" &&
+            recheck.getBoolean("postObservation") && recheck.getInt("newNetworkCalls")==0 &&
+            !recheck.getBoolean("qualityAccepted") && !recheck.getBoolean("semanticVerified"))
+        require(recheck.getString("baseRunSha256")==root.getString("runSha256") &&
+            recheck.getString("reviewSha256")==root.getString("reviewSha256"))
+        val list=root.getJSONArray("pages");require(list.length()==4)
+        val pages=(0 until list.length()).map { list.getJSONObject(it) }
+        require(pages.map { it.getString("id") }.toSet()==setOf("en-normal","fr-seam","hans-normal","hant-seam"))
+        val page=pages.single { it.getString("id")==request.evidence.association.identity?.pageFixtureId }
+        fun strings(v:JSONObject,key:String)=v.getJSONArray(key).let { a -> (0 until a.length()).map { a.getString(it) } }
+        fun optional(v:JSONObject,key:String)=if(v.isNull(key))null else v.getString(key)
+        val outcomes=page.getJSONArray("outcomes").let { a -> (0 until a.length()).map { i ->
+            val v=a.getJSONObject(i);require(!v.getBoolean("semanticVerified"))
+            RecordedGroupedFullPageTranslation.Outcome(v.getString("key"),strings(v,"memberKeys"),v.getString("sourceText"),optional(v,"chinese"),
+                AnswerKind.valueOf(v.getString("kind")),AnswerOrigin.valueOf(v.getString("origin")),
+                optional(v,"reason")?.let(KeepOriginalReason::valueOf),v.getString("sourceQuality"),v.getString("verdict"),
+                v.getBoolean("rulePassed"),optional(v,"rawResponseSha256"),optional(v,"requestSha256"))
+        } }
+        RecordedGroupedFullPageTranslation.reply(request,RecordedGroupedFullPageTranslation.Page(page.getString("id"),
+            page.getString("language"),page.getInt("width"),page.getInt("height"),page.getString("fingerprint"),
+            strings(page,"canonicalFields"),strings(page,"targetKeys"),outcomes),SHA)
+    }
+}

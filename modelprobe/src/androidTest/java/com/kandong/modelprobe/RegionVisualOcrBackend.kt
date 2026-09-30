@@ -21,12 +21,16 @@ internal object RegionVisualOcrRuntime {
 internal class RegionVisualOcrBackend(application: Context, fixtureAssets: AssetManager,
     val recorded:Boolean=false,
     afterInferenceForProbe: () -> Unit = {}) : RegionVisualSession.Backend, RegionVisualDemoReplies.Receiver {
+    private val fixtureAssetsForReplies=fixtureAssets
     private val runner = FullPageVisualOcrRunner(application.applicationContext, fixtureAssets,afterInferenceForProbe)
     private val bridge = RegionOcrBridge<RegionOcrBridge.Evidence<FullPageVisualOcrRunner.Result>>(RegionVisualOcrRuntime.slot,
         RegionVisualOcrRuntime::worker, RegionVisualOcrRuntime::main, SystemClock::elapsedRealtime,
         { error("EXPLICIT_PAGE_REQUIRED") })
-    val translation=if(recorded) RegionVisualTranslationController(RecordedFullPageTranslation.choice(RecordedRegionVisualReplies.SHA))
+    var grouped=false
+        private set
+    var translation=if(recorded) RegionVisualTranslationController(RecordedFullPageTranslation.choice(RecordedRegionVisualReplies.SHA))
         else RegionVisualTranslationController()
+        private set
     var startMode=RegionVisualSession.StartMode.OCR_ONLY
         private set
     private var scheduler: RegionVisualDemoReplies=if(recorded) RecordedRegionVisualReplies.scheduler(fixtureAssets) else HandlerRegionVisualDemoReplies()
@@ -44,6 +48,17 @@ internal class RegionVisualOcrBackend(application: Context, fixtureAssets: Asset
     /** Set before a start; preserves the existing trailing afterInferenceForProbe constructor. */
     fun installReplySchedulerForProbe(value: RegionVisualDemoReplies) {
         check(!busy() && !disposed); scheduler=value
+    }
+    /** Explicit UI selection only. Cancelled JNI still owns the native slot until it returns. */
+    fun chooseGrouped(value:Boolean):Boolean {
+        if(disposed || !recorded || busy() || RegionVisualOcrRuntime.slot.busy())return false
+        if(grouped==value)return true
+        cancel();grouped=value
+        translation=if(value) RegionVisualTranslationController(RecordedGroupedFullPageTranslation.choice(RecordedGroupedRegionVisualReplies.SHA),true)
+            else RegionVisualTranslationController(RecordedFullPageTranslation.choice(RecordedRegionVisualReplies.SHA))
+        scheduler=if(value) RecordedGroupedRegionVisualReplies.scheduler(fixtureAssetsForReplies) else RecordedRegionVisualReplies.scheduler(fixtureAssetsForReplies)
+        startMode=RegionVisualSession.StartMode.OCR_ONLY
+        return true
     }
     override fun start(pageIndex: Int)=start(pageIndex,RegionVisualSession.StartMode.OCR_ONLY)
     override fun start(pageIndex: Int, mode: RegionVisualSession.StartMode): Boolean {
