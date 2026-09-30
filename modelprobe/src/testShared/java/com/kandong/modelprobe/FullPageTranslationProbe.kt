@@ -85,6 +85,12 @@ internal class FullPageTranslationProbe {
     fun pending(now: Long): ProbeRequest? { own(); return if(advance(now)) request else null }
     fun evidence(now: Long): FullPageTranslationAdapter.Evidence? { own(); return if(advance(now)) page?.originalEvidence else null }
     fun hasOriginal(now: Long): Boolean = evidence(now) != null
+    fun phase(now: Long): OnDemandTranslation.Phase {
+        own(); return if(advance(now)) translation.phase else OnDemandTranslation.Phase.FAILED
+    }
+    fun sourceMap(now: Long): Map<String, FullPageOcrContract.Candidate> {
+        own(); return if (advance(now)) page?.sourceMap ?: emptyMap() else emptyMap()
+    }
     fun select(roi: ContextRect, now: Long): ContextSelection? {
         own(); return if(advance(now) && page != null) translation.select(roi,now) else null
     }

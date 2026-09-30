@@ -1,0 +1,7 @@
+Starting: Intent { cmp=com.kandong.modelprobe/.RegionVisualLabActivity }
+Status: ok
+LaunchState: COLD
+Activity: com.kandong.modelprobe/.RegionVisualLabActivity
+TotalTime: 377
+WaitTime: 378
+Complete

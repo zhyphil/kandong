@@ -1,0 +1,7 @@
+{
+  "tests": 7,
+  "classes": [
+    "RegionVisualTranslationUiTest"
+  ],
+  "scope": "fixed page actual OCR and asynchronous binding demo UI; no translation quality claim"
+}

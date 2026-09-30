@@ -72,3 +72,6 @@ python3 -B scripts/run-ocr-emulator.py --output /private/tmp/kandong-ocr-emulato
 
 
 2026-09-30按需翻译契约接线：主实验APK214b503f…不变，最终测试包004d296600b6e53dff91ed32f645be04f1cc5d706392590e13a666bfbcc6b449；安装哈希一致，81项同包通过37.382秒，含四页实际OCR到契约绑定。256＋76 JVM／构建／Lint0错误。没有翻译调用或手机操作，结束已停止专用模拟器；[运行入口与证据](OCR_TRANSLATION_BINDING.md)。
+
+
+2026-09-30独立翻译绑定演示：主214b503f…不变，测试44ab3d4e884a90e5812dbc9520c2b166eb9999568219714c3adaa5073c3d4907；安装哈希一致。265＋76 JVM／构建／Lint0错误，初轮65回归与最终7强化UI分批通过；最终同包四页冷启动／旋转／横屏滚动检查完成。无手机更新／真实翻译；已停专用模拟器。见[运行及证据](OCR_TRANSLATION_VISUAL_LAB.md)。

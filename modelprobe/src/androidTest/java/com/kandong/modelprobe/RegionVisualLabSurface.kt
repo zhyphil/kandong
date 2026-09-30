@@ -16,6 +16,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowInsets
 import android.widget.*
+import com.kandong.ocrlab.context.*
 import java.util.Locale
 import kotlin.math.min
 import kotlin.math.roundToInt
@@ -27,7 +28,7 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
     internal var session = RegionVisualSession(checkNotNull(realBackend)) { SystemClock.elapsedRealtime() }
         private set
     private val notice: String get() = if(session.synthetic) "合成手势回归 · 不运行 OCR、不翻译、不读取屏幕"
-        else "固定 PNG · 真实整页 OCR · 不读取屏幕、不翻译"
+        else "固定 PNG · 真实整页 OCR · 不读取屏幕\n本地绑定演示，非真实翻译"
     private val showLabel: String get() = if(session.synthetic) "展示样例" else "整页 OCR"
     private val handler=Handler(Looper.getMainLooper())
     private var active=false
@@ -41,12 +42,19 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
     private val menu=LinearLayout(activity).apply { orientation=LinearLayout.VERTICAL; tag="lab_menu"; setBackgroundColor(Color.WHITE); setPadding(dp(20),dp(16),dp(20),dp(16)) }
     private val collapsed=LinearLayout(activity).apply { orientation=LinearLayout.VERTICAL; gravity=android.view.Gravity.CENTER; tag="lab_collapsed" }
     private val status=label("",13f,"lab_status")
+    private val translationStatus=label("",14f,"lab_translation_status")
+    private val demoControls=LinearLayout(activity).apply { orientation=LinearLayout.VERTICAL; tag="lab_demo_controls" }
+    private var demoRender: ContextRender?=null
+    private var demoSourceMap: Map<String,FullPageOcrContract.Candidate> = emptyMap()
     private val zoom=label("",14f,"lab_zoom")
     private val slider=SeekBar(activity).apply { max=400; progress=100; tag="lab_slider"; contentDescription="放大倍率，1到5倍"; minimumHeight=dp(48) }
     internal val source=SourceView()
     internal val mirror=MirrorView()
     private val cards=LinearLayout(activity).apply { orientation=LinearLayout.VERTICAL; tag="lab_cards" }
     private var cardKey=""
+    private var realScroll: ScrollView?=null
+    private var realChrome: LinearLayout?=null
+    private var bodyView: LinearLayout?=null
     private val ticker=object:Runnable {
         override fun run() {
             if (!active || disposed) return
@@ -65,11 +73,26 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
         actions.addView(button("收起","lab_collapse") { session.collapse(); update() },LinearLayout.LayoutParams(0,dp(48),1f))
         actions.addView(button("菜单","lab_open_menu") { session.menu(); update() },LinearLayout.LayoutParams(0,dp(48),1f))
         content.addView(actions)
+        val demoRow=LinearLayout(activity)
+        demoRow.addView(button("翻译演示","lab_translate") {
+            session.showSample(RegionVisualSession.StartMode.BINDING_DEMO); update()
+        },LinearLayout.LayoutParams(dp(120),-2))
+        demoRow.addView(button("取消","lab_cancel") { session.cancel(); update() },LinearLayout.LayoutParams(dp(72),-2))
+        demoRow.addView(button("原文对照","lab_original") {
+            realBackend?.translation?.choose(RegionVisualTranslationController.Display.ORIGINAL,SystemClock.elapsedRealtime()); update()
+        },LinearLayout.LayoutParams(dp(88),-2))
+        demoRow.addView(button("演示结果","lab_demo") {
+            realBackend?.translation?.choose(RegionVisualTranslationController.Display.DEMO,SystemClock.elapsedRealtime()); update()
+        },LinearLayout.LayoutParams(dp(88),-2))
+        demoControls.addView(HorizontalScrollView(activity).apply { addView(demoRow); isFillViewport=true })
+        demoControls.addView(translationStatus)
+        content.addView(demoControls)
         val zoomRow=LinearLayout(activity).apply { gravity=android.view.Gravity.CENTER_VERTICAL }
         zoomRow.addView(zoom,LinearLayout.LayoutParams(dp(100),dp(48)))
         zoomRow.addView(slider,LinearLayout.LayoutParams(0,dp(48),1f)); content.addView(zoomRow)
         content.addView(status)
         val body=LinearLayout(activity)
+        bodyView=body
         val landscape=activity.resources.configuration.screenWidthDp > activity.resources.configuration.screenHeightDp
         body.orientation=if(landscape) LinearLayout.HORIZONTAL else LinearLayout.VERTICAL
         val sourcePane=pane("固定整页 · 拖红框，右上角改宽高",source)
@@ -87,7 +110,15 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
             body.addView(mirrorPane,LinearLayout.LayoutParams(-1,0,.70f))
             body.addView(cardPane,LinearLayout.LayoutParams(-1,0,.90f))
         }
-        content.addView(body,LinearLayout.LayoutParams(-1,0,1f))
+        content.addView(body,LinearLayout.LayoutParams(-1,dp(if(landscape) 340 else 480)))
+        root.removeView(content)
+        realScroll=ScrollView(activity).apply { tag="lab_page_scroll"; isFillViewport=true; addView(content) }
+        realChrome=LinearLayout(activity).apply {
+            orientation=LinearLayout.VERTICAL
+            addView(label("本地绑定演示，非真实翻译",14f,"lab_binding_notice"))
+            addView(realScroll,LinearLayout.LayoutParams(-1,0,1f))
+        }
+        root.addView(realChrome,FrameLayout.LayoutParams(-1,-1))
         menu.addView(label("实验菜单",24f,"lab_menu_title"))
         menu.addView(label(notice,14f,"lab_menu_notice"))
         menu.addView(label(helpText(),17f,"lab_help"),LinearLayout.LayoutParams(-1,0,1f))
@@ -149,6 +180,11 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
         session=RegionVisualSession { SystemClock.elapsedRealtime() }
         session.foreground(active)
         cardKey=""
+        realScroll?.removeView(content); realScroll=null
+        realChrome?.let { root.removeView(it) }; realChrome=null
+        root.addView(content,0,FrameLayout.LayoutParams(-1,-1))
+        bodyView?.layoutParams=LinearLayout.LayoutParams(-1,0,1f)
+        demoControls.visibility=View.GONE
         for(tag in listOf("lab_notice","lab_menu_notice","lab_collapsed_notice"))
             root.findViewWithTag<TextView>(tag).text=notice
         root.findViewWithTag<Button>("lab_show").text=showLabel
@@ -157,6 +193,10 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
     }
     internal fun realResult()=realBackend?.result()
     internal fun realError()=realBackend?.error()
+    internal fun translationState(): RegionVisualTranslationController.State? {
+        session.refresh(); return realBackend?.translation?.state(SystemClock.elapsedRealtime())
+    }
+    internal fun translationRender(): ContextRender? { update(); return demoRender }
     internal fun nativeBusy()=realBackend?.busy() ?: false
     /** Local instrumentation seam; no external Intent/config can inject a runner or callback. */
     internal fun installRealBackendForProbe(backend: RegionVisualOcrBackend) {
@@ -171,16 +211,58 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
         menu.visibility=if(s.mode==RegionVisualSession.Mode.MENU) View.VISIBLE else View.GONE
         collapsed.visibility=if(s.mode==RegionVisualSession.Mode.COLLAPSED) View.VISIBLE else View.GONE
         content.visibility=if(s.mode==RegionVisualSession.Mode.MENU || s.mode==RegionVisualSession.Mode.COLLAPSED) View.GONE else View.VISIBLE
+        realChrome?.visibility=content.visibility
         status.text="${session.pageLabel} · ${s.status} · 请求 ${s.loads} 次"
         zoom.text=String.format(Locale.ROOT,"%.2f 倍\n相对整页预览",s.scale)
         slider.progress=((s.scale-1)*100).roundToInt()
+        demoControls.visibility=if(session.synthetic) View.GONE else View.VISIBLE
+        val backend=realBackend
+        val now=SystemClock.elapsedRealtime()
+        val presentation=backend?.translation?.state(now)
+        val isDemo=backend?.startMode==RegionVisualSession.StartMode.BINDING_DEMO
+        translationStatus.text=when(presentation?.phase) {
+            RegionVisualTranslationController.Phase.READING -> "正在读取固定整页 · 可取消"
+            RegionVisualTranslationController.Phase.WAITING -> "等待本地绑定演示回复 · 可取消"
+            RegionVisualTranslationController.Phase.READY -> "绑定展示就绪 · ${if(presentation.display==RegionVisualTranslationController.Display.ORIGINAL) "原文" else "演示"} · 非真实翻译"
+            RegionVisualTranslationController.Phase.ERROR -> "演示失败 · 请再次点击翻译演示"
+            RegionVisualTranslationController.Phase.EXPIRED -> "原始页面已过期 · 请再次点击翻译演示"
+            RegionVisualTranslationController.Phase.CANCELLED -> "已取消 · 恢复不会自动读取"
+            else -> "点击翻译演示才读取固定整页"
+        }
+        demoRender=if(isDemo && s.frame!=null) backend?.translation?.render(s.roi,session.mirrorTransform(),now) else null
+        demoSourceMap=if(isDemo && s.frame!=null) backend?.translation?.sourceMap(now) ?: emptyMap() else emptyMap()
         source.invalidate(); mirror.invalidate()
         val f=s.frame
-        val key=if(f==null) "none:${s.status}" else "${f.page.identity?.sourceBatch}:${f.selectedIds}:${f.contextIds}:${f.visible.map { it.candidateId }}"
+        val key="${if(isDemo) presentation else null}:" + if(f==null) "none:${s.status}" else "${f.page.identity?.sourceBatch}:${f.selectedIds}:${f.contextIds}:${f.visible.map { it.candidateId }}"
         if(key==cardKey) return
         cardKey=key; cards.removeAllViews()
         if(f==null) { cards.addView(label("请点击“$showLabel”",15f,"lab_no_result")); return }
         if(f.page.rawCandidates.isEmpty()) { cards.addView(label(if(session.synthetic) "有效空白样例 · 没有文字候选" else "整页 OCR 完成 · 没有文字候选",16f,"lab_blank")); return }
+        if(isDemo && demoRender!=null) {
+            val ordinals=f.page.rawCandidates.withIndex().associate { it.value.provenance.id to it.index+1 }
+            val rendered=checkNotNull(demoRender)
+            if(rendered.cards.isEmpty()) cards.addView(label("选区内没有候选 · 整页上下文仍保留",16f,"lab_empty_region"))
+            rendered.cards.forEach { card ->
+                val candidate=demoSourceMap[card.targetId] ?: return@forEach
+                val ordinal=ordinals[candidate.provenance.id] ?: return@forEach
+                val raw=card.sourceText.ifEmpty { "〔空字符串候选〕" }
+                val reason=when(card.reason) {
+                    "AWAITING_HANDCRAFTED_FIXTURE", "NO_RECORDED_RESULT", null -> "尚无绑定演示结果"
+                    else -> if(card.reason?.contains("CONFLICT")==true) "候选冲突，保留原文" else "候选信息不完整，保留原文"
+                }
+                val text=when {
+                    card.reason=="ALREADY_CHINESE" -> "$ordinal  中文原文保留：$raw"
+                    presentation?.display==RegionVisualTranslationController.Display.ORIGINAL -> "$ordinal  原文：$raw"
+                    card.chinese!=null -> "$ordinal  ${card.chinese}\n原文：$raw"
+                    presentation?.phase==RegionVisualTranslationController.Phase.WAITING && card.reason in setOf("NO_RECORDED_RESULT","AWAITING_HANDCRAFTED_FIXTURE") -> "$ordinal  等待绑定演示\n原文：$raw"
+                    else -> "$ordinal  原文保留：$raw\n$reason"
+                }
+                cards.addView(label(text,18f,"lab_translation_candidate_$ordinal").apply {
+                    setBackgroundColor(Color.WHITE); setPadding(dp(10),dp(8),dp(10),dp(8))
+                },LinearLayout.LayoutParams(-1,-2).apply { bottomMargin=dp(4) })
+            }
+            return
+        }
         // Presentation priority only; original candidate IDs, numbers and whole-page evidence stay unchanged.
         val groupsById=f.page.groups.flatMap { g -> g.memberIds.map { it to g } }.toMap()
         val ordered=f.page.rawCandidates.withIndex().sortedBy { (_,c) ->
@@ -247,6 +329,13 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
             val state=session.state(); c.save(); c.translate(leftPad.toFloat(),topPad.toFloat()); c.scale(factor.toFloat(),factor.toFloat())
             paint.style=Paint.Style.FILL; paint.color=Color.rgb(250,251,252); c.drawRect(0f,0f,session.pageWidth.toFloat(),session.pageHeight.toFloat(),paint)
             drawSample(c,paint)
+            if(realBackend?.startMode==RegionVisualSession.StartMode.BINDING_DEMO) {
+                state.frame?.page?.rawCandidates?.forEachIndexed { index,candidate ->
+                    paint.color=amber; paint.textSize=(dp(13)/factor).toFloat()
+                    val q=candidate.provenance.pageQuad
+                    c.drawText((index+1).toString(),q.minOf { it.x }.toFloat(),q.minOf { it.y }.toFloat(),paint)
+                }
+            }
             val r=state.roi; paint.color=red; paint.strokeWidth=(dp(2)/factor).toFloat(); paint.style=Paint.Style.STROKE
             c.drawRect(r.left.toFloat(),r.top.toFloat(),r.right.toFloat(),r.bottom.toFloat(),paint)
             paint.style=Paint.Style.FILL
@@ -314,6 +403,19 @@ class RegionVisualLabSurface(private val activity: Activity, fixtureResources: C
             c.clipRect(f.roi.left.toFloat(),f.roi.top.toFloat(),f.roi.right.toFloat(),f.roi.bottom.toFloat())
             drawSample(c,paint)
             c.restore()
+            val anchors=demoRender?.anchors
+            if(anchors!=null) {
+                anchors.forEachIndexed { index,anchor ->
+                    val candidate=demoSourceMap[anchor.sourceId] ?: return@forEachIndexed
+                    val n=f.page.rawCandidates.indexOfFirst { it.provenance.id==candidate.provenance.id }+1
+                    val b=anchor.rect; val factor=source.factor.toFloat()
+                    paint.style=Paint.Style.STROKE; paint.strokeWidth=dp(2).toFloat(); paint.color=amber
+                    c.drawRect(RectF((b.left*factor).toFloat(),(b.top*factor).toFloat(),(b.right*factor).toFloat(),(b.bottom*factor).toFloat()),paint)
+                    paint.style=Paint.Style.FILL; paint.textSize=dp(13).toFloat()
+                    c.drawText(n.toString(),(b.left*factor+index%3*dp(18)).toFloat(),(b.top*factor+dp(16)).toFloat(),paint)
+                }
+                c.restore(); return
+            }
             f.visible.forEachIndexed { index,p ->
                 val b=p.mirrorRect; val s=source.factor.toFloat()
                 paint.style=Paint.Style.STROKE; paint.strokeWidth=dp(2).toFloat(); paint.color=amber

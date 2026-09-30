@@ -1,0 +1,15 @@
+{
+  "avd": "KanDong_OCR_API37_16K",
+  "api": 37,
+  "pageSize": 16384,
+  "packages": {
+    "com.kandong.modelprobe": {
+      "local": "214b503f34ef14aa020773bd5ead66e4e51e7909c1a5dea34003f8ef1b2b3ed4",
+      "installed": "214b503f34ef14aa020773bd5ead66e4e51e7909c1a5dea34003f8ef1b2b3ed4"
+    },
+    "com.kandong.modelprobe.test": {
+      "local": "44ab3d4e884a90e5812dbc9520c2b166eb9999568219714c3adaa5073c3d4907",
+      "installed": "44ab3d4e884a90e5812dbc9520c2b166eb9999568219714c3adaa5073c3d4907"
+    }
+  }
+}

@@ -1,0 +1,98 @@
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualTranslationUiTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.kandong.modelprobe.RegionVisualTranslationUiTest:
+INSTRUMENTATION_STATUS: test=explicitDemoEntryStartsFreshOcrAndLifecycleNeverAutoReads
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualTranslationUiTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Missing explicit UI control: lab_translate
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertNotNull(Assert.java:713)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest.button(RegionVisualTranslationUiTest.kt:45)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest.explicitDemoEntryStartsFreshOcrAndLifecycleNeverAutoReads$lambda$0(RegionVisualTranslationUiTest.kt:50)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest.$r8$lambda$gKVpaJLm_BU8Tq6p6Pbj809ZMFA(RegionVisualTranslationUiTest.kt:0)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest$$ExternalSyntheticLambda4.invoke(D8$$SyntheticClass:0)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest.main$lambda$0(RegionVisualTranslationUiTest.kt:21)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest.$r8$lambda$hHU6Py9jF_gq23Fuo-RUmwfGxik(RegionVisualTranslationUiTest.kt:0)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest$$ExternalSyntheticLambda7.run(D8$$SyntheticClass:0)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:520)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2675)
+	at android.os.Handler.handleCallback(Handler.java:1082)
+	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+	at android.os.Handler.dispatchMessage(Handler.java:126)
+	at android.os.Looper.loopOnce(Looper.java:295)
+	at android.os.Looper.loop(Looper.java:398)
+	at android.app.ActivityThread.main(ActivityThread.java:9569)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+
+INSTRUMENTATION_STATUS: stream=
+Error in explicitDemoEntryStartsFreshOcrAndLifecycleNeverAutoReads(com.kandong.modelprobe.RegionVisualTranslationUiTest):
+java.lang.AssertionError: Missing explicit UI control: lab_translate
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertNotNull(Assert.java:713)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest.button(RegionVisualTranslationUiTest.kt:45)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest.explicitDemoEntryStartsFreshOcrAndLifecycleNeverAutoReads$lambda$0(RegionVisualTranslationUiTest.kt:50)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest.$r8$lambda$gKVpaJLm_BU8Tq6p6Pbj809ZMFA(RegionVisualTranslationUiTest.kt:0)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest$$ExternalSyntheticLambda4.invoke(D8$$SyntheticClass:0)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest.main$lambda$0(RegionVisualTranslationUiTest.kt:21)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest.$r8$lambda$hHU6Py9jF_gq23Fuo-RUmwfGxik(RegionVisualTranslationUiTest.kt:0)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest$$ExternalSyntheticLambda7.run(D8$$SyntheticClass:0)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:520)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2675)
+	at android.os.Handler.handleCallback(Handler.java:1082)
+	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+	at android.os.Handler.dispatchMessage(Handler.java:126)
+	at android.os.Looper.loopOnce(Looper.java:295)
+	at android.os.Looper.loop(Looper.java:398)
+	at android.app.ActivityThread.main(ActivityThread.java:9569)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+
+INSTRUMENTATION_STATUS: test=explicitDemoEntryStartsFreshOcrAndLifecycleNeverAutoReads
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 2.028
+There was 1 failure:
+1) explicitDemoEntryStartsFreshOcrAndLifecycleNeverAutoReads(com.kandong.modelprobe.RegionVisualTranslationUiTest)
+java.lang.AssertionError: Missing explicit UI control: lab_translate
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertNotNull(Assert.java:713)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest.button(RegionVisualTranslationUiTest.kt:45)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest.explicitDemoEntryStartsFreshOcrAndLifecycleNeverAutoReads$lambda$0(RegionVisualTranslationUiTest.kt:50)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest.$r8$lambda$gKVpaJLm_BU8Tq6p6Pbj809ZMFA(RegionVisualTranslationUiTest.kt:0)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest$$ExternalSyntheticLambda4.invoke(D8$$SyntheticClass:0)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest.main$lambda$0(RegionVisualTranslationUiTest.kt:21)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest.$r8$lambda$hHU6Py9jF_gq23Fuo-RUmwfGxik(RegionVisualTranslationUiTest.kt:0)
+	at com.kandong.modelprobe.RegionVisualTranslationUiTest$$ExternalSyntheticLambda7.run(D8$$SyntheticClass:0)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:520)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2675)
+	at android.os.Handler.handleCallback(Handler.java:1082)
+	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+	at android.os.Handler.dispatchMessage(Handler.java:126)
+	at android.os.Looper.loopOnce(Looper.java:295)
+	at android.os.Looper.loop(Looper.java:398)
+	at android.app.ActivityThread.main(ActivityThread.java:9569)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

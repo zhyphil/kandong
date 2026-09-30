@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.BoxPipelineGuardTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-09-30T20:17:47.909Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.021">
+  <properties/>
+  <testcase name="halfEvenAndInclusiveMappingAreFrozen" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.001"/>
+  <testcase name="incompleteResultCannotExposePartialBoxes" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.007"/>
+  <testcase name="finalClippingAndTruncatedNormRejectThree" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.004"/>
+  <testcase name="finalPointOrderMatchesPinnedYRuleOnBothSides" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.0"/>
+  <testcase name="shapeAndValuesAreValidatedBeforeThresholdAllocation" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.001"/>
+  <testcase name="pairedStableOrderUsesAdjacentYAndTenStartsNewLine" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.001"/>
+  <testcase name="cropRowUsesActualBoxIdentityScoreAndHomography" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.006"/>
+  <testcase name="geometryLimitsCheckAllSizesBeforeCopies" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.0"/>
+  <testcase name="contourComparisonPreservesShortPathsDuplicatesAndEveryVertex" classname="com.kandong.modelprobe.BoxPipelineGuardTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

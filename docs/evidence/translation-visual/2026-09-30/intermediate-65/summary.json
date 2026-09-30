@@ -1,0 +1,13 @@
+{
+  "tests": 65,
+  "classes": [
+    "RegionVisualTranslationUiTest",
+    "RegionVisualOcrUiTest",
+    "RegionVisualLabUiTest",
+    "FullPageTranslationOcrTest",
+    "FullPageTranslationProbeTest",
+    "RegionVisualSessionTest",
+    "RegionOcrBridgeTest"
+  ],
+  "scope": "fixed page actual OCR to translation binding; no translation quality claim"
+}

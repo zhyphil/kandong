@@ -11,9 +11,11 @@ import java.util.concurrent.CancellationException
 internal class RegionVisualSession(private val backend: Backend? = null, private val now: () -> Long) {
     data class Page(val id: String, val width: Int, val height: Int)
     data class Evidence(val metadata: RgbaFrameMetadata, val page: FullPageOcrAssociation.Result)
+    enum class StartMode { OCR_ONLY, BINDING_DEMO }
     interface Backend {
         val pages: List<Page>
         fun start(pageIndex: Int): Boolean
+        fun start(pageIndex: Int, mode: StartMode): Boolean = start(pageIndex)
         fun evidence(): Evidence?
         fun busy(): Boolean
         fun error(): String?
@@ -43,13 +45,16 @@ internal class RegionVisualSession(private val backend: Backend? = null, private
     private fun own() = check(Thread.currentThread() === owner)
     init { if (backend != null) { require(backend.pages.isNotEmpty()); revalidateRegion() } }
     fun state(): State { own(); if (backend != null) render(); return value }
-    fun showSample() {
+    fun showSample() = showSample(StartMode.OCR_ONLY)
+    fun showSample(startMode: StartMode) {
         own()
         if (!foreground || value.mode == Mode.MENU || value.mode == Mode.COLLAPSED) return
         if (backend != null) {
-            val started = backend.start(value.pageIndex)
-            value = value.copy(mode=Mode.EXPANDED, frame=null, loads=value.loads+if(started) 1 else 0,
-                status=if(started) "正在处理整页 OCR" else if(backend.busy()) "上次处理尚未结束，请稍后再次点击" else "本次 OCR 未启动")
+            if (backend.busy()) return
+            val started = backend.start(value.pageIndex,startMode)
+            if (!started) { render(); return }
+            value = value.copy(mode=Mode.EXPANDED, frame=null, loads=value.loads+1,
+                status="正在处理整页 OCR")
             render(); return
         }
         value = value.copy(mode=Mode.EXPANDED,frame=null,loads=value.loads+1)
@@ -73,6 +78,11 @@ internal class RegionVisualSession(private val backend: Backend? = null, private
         val t=ContextGeometry.transform(value.roi,MirrorTransform(value.scale,mirrorWidth,mirrorHeight,value.panX,value.panY))
         value=value.copy(panX=t.panX,panY=t.panY)
     }
+    fun mirrorTransform(): MirrorTransform {
+        own(); normalize()
+        return MirrorTransform(value.scale,mirrorWidth,mirrorHeight,value.panX,value.panY)
+    }
+    fun cancel() { own(); clear(ClearReason.STOP,"已取消 · 请再次点击开始") }
     private fun render(force: Boolean = false) {
         normalize()
         if (backend != null) { renderReal(); return }

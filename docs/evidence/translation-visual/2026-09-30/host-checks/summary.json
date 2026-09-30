@@ -1,0 +1,38 @@
+{
+  "ocrlabJvm": {
+    "tests": 76,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "ocrlabLint": {
+    "Error": 0,
+    "Warning": 30,
+    "Fatal": 0
+  },
+  "jvm": {
+    "tests": 265,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "Error": 0,
+    "Warning": 4,
+    "Fatal": 0
+  },
+  "apks": {
+    "com.kandong.modelprobe": "214b503f34ef14aa020773bd5ead66e4e51e7909c1a5dea34003f8ef1b2b3ed4",
+    "com.kandong.modelprobe.test": "44ab3d4e884a90e5812dbc9520c2b166eb9999568219714c3adaa5073c3d4907"
+  },
+  "sourceSha256": {
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualDemoReplies.kt": "99f63f7cfcca31d9d42ac27f620c38466a342acecf8f0e44651abb1dfba5aab2",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualTranslationUiTest.kt": "d7cbf47debbddd665fc23bcc8337576102a19be259d5ed200a555709fd9a8682",
+    "modelprobe/src/test/java/com/kandong/modelprobe/RegionVisualTranslationControllerTest.kt": "87141be37df8b25e6206bdad13c3eb5ffa677995bc34980343c155e23ed8b9ae",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/RegionVisualTranslationController.kt": "6da828fd150a240cb03bd6fbe79ba0259d7ebd5d0f70df178e8c88b9a29974d2",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualLabSurface.kt": "f24c9952bd4d44e558410554d991b4da0699866b84b567bbc476c9bccbb7551b",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualOcrBackend.kt": "d7573485a808fe2a7566a40b95f9f681903bebab4256cf2eedc2567a1b09f05b",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageTranslationProbe.kt": "3405b48b15955bf7b01df0077412495b8d343eca7cb97d0fca7af6287a76962f",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/RegionVisualSession.kt": "d20549f0178062ec433f0060af04bda39078a364cf8d481cfaa4458682400839"
+  }
+}

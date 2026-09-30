@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.SingleFrameStripInputTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-09-30T20:17:48.387Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.162">
+  <properties/>
+  <testcase name="readerOrCheckpointFailureClosesExactlyOnce" classname="com.kandong.modelprobe.SingleFrameStripInputTest" time="0.001"/>
+  <testcase name="cancelDuringPlaneAcquisitionDoesNotCallConsumer" classname="com.kandong.modelprobe.SingleFrameStripInputTest" time="0.0"/>
+  <testcase name="paddedRgbaUsesPositionLimitAndBothStridesWithoutChangingCursors" classname="com.kandong.modelprobe.SingleFrameStripInputTest" time="0.003"/>
+  <testcase name="nonOpaquePixelsRejectTheStripInsteadOfGuessingColor" classname="com.kandong.modelprobe.SingleFrameStripInputTest" time="0.001"/>
+  <testcase name="everyVersionComponentInvalidatesTheWholeFrame" classname="com.kandong.modelprobe.SingleFrameStripInputTest" time="0.0"/>
+  <testcase name="closeFailureOrCloseTimeInvalidationDoesNotPublishSuccess" classname="com.kandong.modelprobe.SingleFrameStripInputTest" time="0.001"/>
+  <testcase name="cancellationAfterOneConsumerDropsPartialResultsAndWipesBytes" classname="com.kandong.modelprobe.SingleFrameStripInputTest" time="0.065"/>
+  <testcase name="expiredFutureOrReversedClockRejectsResults" classname="com.kandong.modelprobe.SingleFrameStripInputTest" time="0.001"/>
+  <testcase name="consumerFailureDoesNotExposePartialResultsAndStillWipesAndCloses" classname="com.kandong.modelprobe.SingleFrameStripInputTest" time="0.001"/>
+  <testcase name="badFrameGeometryOrMetadataRejectsBeforePlaneAccess" classname="com.kandong.modelprobe.SingleFrameStripInputTest" time="0.0"/>
+  <testcase name="invalidPlaneBoundsAndStrideProductsRejectWithoutConsumer" classname="com.kandong.modelprobe.SingleFrameStripInputTest" time="0.0"/>
+  <testcase name="checkpointDuringRowsStopsBeforeConsumingIncompleteStrip" classname="com.kandong.modelprobe.SingleFrameStripInputTest" time="0.0"/>
+  <testcase name="phoneFrameUsesOnePlaneAndOneLiveStripWithEveryOriginalPixelAndHalo" classname="com.kandong.modelprobe.SingleFrameStripInputTest" time="0.089"/>
+  <testcase name="inactiveTicketDoesNotReadAnyPixels" classname="com.kandong.modelprobe.SingleFrameStripInputTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

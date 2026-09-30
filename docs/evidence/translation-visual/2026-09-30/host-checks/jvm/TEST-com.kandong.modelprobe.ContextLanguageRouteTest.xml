@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.ContextLanguageRouteTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-09-30T20:17:47.954Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.019">
+  <properties/>
+  <testcase name="conflictingAnchorsOrStrongTargetEvidenceCannotBeOverridden" classname="com.kandong.modelprobe.ContextLanguageRouteTest" time="0.012"/>
+  <testcase name="windowsKeepExactUtf16OffsetsAndDoNotNormalizeAccents" classname="com.kandong.modelprobe.ContextLanguageRouteTest" time="0.001"/>
+  <testcase name="budgetsAndMalformedScoresCannotBeAccepted" classname="com.kandong.modelprobe.ContextLanguageRouteTest" time="0.002"/>
+  <testcase name="LiteralAndChineseRawRemainIntactAndOcrConflictDoesNotLeakAcrossCards" classname="com.kandong.modelprobe.ContextLanguageRouteTest" time="0.002"/>
+  <testcase name="missingDuplicateCrossPageAndAlteredRawEvidenceAreRejected" classname="com.kandong.modelprobe.ContextLanguageRouteTest" time="0.0"/>
+  <testcase name="AnAnchorWithConflictingSpansCannotPromoteAShortLabel" classname="com.kandong.modelprobe.ContextLanguageRouteTest" time="0.001"/>
+  <testcase name="anotherCardAndTheWholePageCannotSupplyAnAnchor" classname="com.kandong.modelprobe.ContextLanguageRouteTest" time="0.0"/>
+  <testcase name="sameCardCanSupportAnAmbiguousLabelWithoutChangingItsRawText" classname="com.kandong.modelprobe.ContextLanguageRouteTest" time="0.001"/>
+  <testcase name="strongForeignSpanVetoesAConfidentWholeString" classname="com.kandong.modelprobe.ContextLanguageRouteTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

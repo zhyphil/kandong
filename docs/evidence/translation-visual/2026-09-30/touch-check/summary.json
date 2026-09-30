@@ -1,0 +1,7 @@
+{
+  "tests": 1,
+  "classes": [
+    "RegionVisualTranslationUiTest#realLayoutRoutesSourceDragAndNestedCardScrollThroughActualParents"
+  ],
+  "scope": "fixed page actual OCR and asynchronous binding demo UI; no translation quality claim"
+}
