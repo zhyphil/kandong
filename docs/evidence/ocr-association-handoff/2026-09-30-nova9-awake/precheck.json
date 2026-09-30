@@ -1,0 +1,9 @@
+{
+  "device": "2AS0221B09001601",
+  "model": "NAM-LX9",
+  "api": 31,
+  "pageSize": 4096,
+  "power": [
+    "mWakefulness=Awake"
+  ]
+}

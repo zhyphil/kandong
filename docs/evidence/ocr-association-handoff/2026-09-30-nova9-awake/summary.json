@@ -1,0 +1,103 @@
+{
+  "baseCommit": "3f56783",
+  "status": "nova9-two-fixed-batches-passed",
+  "device": {
+    "device": "2AS0221B09001601",
+    "model": "NAM-LX9",
+    "api": 31,
+    "pageSize": 4096,
+    "power": [
+      "mWakefulness=Awake"
+    ]
+  },
+  "testsThisRun": 2,
+  "pagesThisRun": 20,
+  "runs": [
+    {
+      "model": "ch",
+      "runId": "ba51745a-3ccc-4dba-b40b-f5ffcb8a8c4d",
+      "tests": 1,
+      "pages": 10,
+      "elapsedMillis": 47480,
+      "sessionsOpened": 2,
+      "sessionsClosed": 2,
+      "imageClosed": 10,
+      "ortClosed": 318,
+      "threadsRestored": true
+    },
+    {
+      "model": "latin",
+      "runId": "b69afcb7-37ca-4124-bf3d-3a90dbd2cd56",
+      "tests": 1,
+      "pages": 10,
+      "elapsedMillis": 45609,
+      "sessionsOpened": 2,
+      "sessionsClosed": 2,
+      "imageClosed": 10,
+      "ortClosed": 318,
+      "threadsRestored": true
+    }
+  ],
+  "counts": {
+    "pages": 20,
+    "candidates": 236,
+    "edges": 42,
+    "groups": 194,
+    "empty": 20,
+    "noncore": 46,
+    "strictExactPages": 5,
+    "sameRawFieldsAsHistoricalBaseline": 20,
+    "agreedGroups": 12,
+    "conflictGroups": 13,
+    "hantTaxConflictGroups": 1
+  },
+  "apks": {
+    "com.kandong.modelprobe": {
+      "local": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+      "installed": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea"
+    },
+    "com.kandong.modelprobe.test": {
+      "local": "8eb4858bc13b035f1009d60238c8c62323a11b17d27ac0618bb706e0e3c10706",
+      "installed": "8eb4858bc13b035f1009d60238c8c62323a11b17d27ac0618bb706e0e3c10706"
+    }
+  },
+  "scope": "Same unchanged APK and source; two fixed model batches, not a new 72-test invocation. Prior 71 tests remain separate evidence; only original FullPageOcrProbeTest differed between the old and final test APK.",
+  "quality": "Only fixed synthetic technical data/position/cleanup acceptance. Strict exact pages remain 5/20 including two blanks; not production OCR, screen capture, privacy or translation acceptance.",
+  "runner": "../2026-09-30/run-model-batch.py",
+  "audit": "../2026-09-30/audit.py",
+  "evidenceSha256": {
+    "between-batches.json": "3bb9a68eb5e1fb487942cbe81979c16114aa861d1cb501174fec4e718037ad10",
+    "ch/environment.json": "26b2b4d05237c92189f0598aecdc9f3fb3e28e74a82ceac97f99366b3bd79a31",
+    "ch/foreground.txt": "32ced3728c13b68ecb4ad7849adc798f0cdafe01a09b4596bea55c3027cbe5d6",
+    "ch/full-page-ocr-ch-blank.json": "d8318ec87e78681ee2d09ddad8b6204818d3136c5f3f7a028a2dada89f37c20a",
+    "ch/full-page-ocr-ch-en-normal.json": "8338e1aab741362be6cc8174b146f7342cc9ef3b50c9f1e3e2bcc9c46edc30e0",
+    "ch/full-page-ocr-ch-en-seam-1080.json": "a0be50110e83813ed5b6beb43813690f44cb4c7d0a1585401d6df5d82178b34f",
+    "ch/full-page-ocr-ch-en-seam.json": "6d77d94e7bc32bfab5294b0f74b2c0b352fba4b8edc756a0ce0133451d25f7df",
+    "ch/full-page-ocr-ch-fr-normal.json": "894a1eb380eb4605f270c61690e8c82b9342d7ca63e01f0fa2a9653fa494dbda",
+    "ch/full-page-ocr-ch-fr-seam.json": "0acba8ba33f8afac31a9c0f0505edfdefcd24b3301b6ec912072524f2db6a69a",
+    "ch/full-page-ocr-ch-hans-normal.json": "46eccea2eef1c55ea73a316605c9399661a0048b2940afccc315363ed886d7c6",
+    "ch/full-page-ocr-ch-hans-seam.json": "10382e4466ce91cf30c39c9cb1852d77367bd80011c2065f256123f9e7aedcad",
+    "ch/full-page-ocr-ch-hant-normal.json": "32d8aabf398548f03c7de433b4573fbab911f6486494f0f2fdfeec94e807cd3a",
+    "ch/full-page-ocr-ch-hant-seam.json": "bd8683984631ae9a877673821b2ef40ed15b6ded553d6e8af1828db7c8ac6ea4",
+    "ch/full-page-ocr-summary.json": "0cf2d39800be65032c5f158ddf0e0c0ba20cde7a9969385a08001859281b4166",
+    "ch/instrumentation.txt": "146e6a50fdc932fab9043b0cb8a00a5e60b77a363bd2611627a0ca3bbc9c3b97",
+    "ch-audit.json": "02db11b731feb5267cbc5c646fc268675c9e4208ee2349ab56fb00ff46af0eee",
+    "latin/environment.json": "3bc0713f369f56bfe57566b73c7bac779956dd07d5fa1a48ef6eaa635d334066",
+    "latin/foreground.txt": "32ced3728c13b68ecb4ad7849adc798f0cdafe01a09b4596bea55c3027cbe5d6",
+    "latin/full-page-ocr-latin-blank.json": "16b94447fcb8fbec5188b63b41bdef8c61744b08cbb01264b13118fbc75f6076",
+    "latin/full-page-ocr-latin-en-normal.json": "6b8cb4e43091970fca0c8d630c0607829cb4277d5569a6b4812918a510fcd4f8",
+    "latin/full-page-ocr-latin-en-seam-1080.json": "988cd430ffad17b7dad6e7b875961aad97d5061c775c2cb77b35d1d3804e6012",
+    "latin/full-page-ocr-latin-en-seam.json": "899eb9fd194174afb0fa96c4a3cfab7b045675da7c61b4b41cb881183f10e808",
+    "latin/full-page-ocr-latin-fr-normal.json": "97032c49c705f4ae5e89b2102c12a460e0e5114b561ce051435bdd049fc32c98",
+    "latin/full-page-ocr-latin-fr-seam.json": "f31745131aae952b931a01ebd6343b69387abb1ca745b17025b8e1ab400d1a67",
+    "latin/full-page-ocr-latin-hans-normal.json": "e1263f8ce11c4a8feca2e57ddb70b214ea84670532bda2509067bfcf0ffa5509",
+    "latin/full-page-ocr-latin-hans-seam.json": "d2df378da34af0d5204e43b9e44cfb357fc8b6b59a74716e465d24058cb31eda",
+    "latin/full-page-ocr-latin-hant-normal.json": "563fbfb22bfa7c711b95ea678e07d79ef5e91f88f8df034a1fa31f153a269b25",
+    "latin/full-page-ocr-latin-hant-seam.json": "841b0cecd450f8b8b09054d396a46f6018fb21f05736ffa1b7e009865008e483",
+    "latin/full-page-ocr-summary.json": "db0068f48b21ded77759e68ba9b8bf782ae858157e16a964b2b4e36e2113e341",
+    "latin/instrumentation.txt": "7f41405fc888371f0c43419a402f3fda76d64bcce8e8ba17fc5d6a87b42858dd",
+    "latin-audit.json": "5c2aebd6eb9fc90da74cd1575495122f59a0cc98ab1d9033325dcf9d6cf0add8",
+    "postcheck.json": "fdc1b2811c906ce7dfd7a8f837e588b22e1d5f5a415a95bd070d8d0537d31a44",
+    "precheck.json": "5fa9ef28360af3e4d419a4f351eafac7ff6e51d416e1e5221d305fb3efc3323a"
+  }
+}

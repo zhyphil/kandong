@@ -1,0 +1,79 @@
+{
+  "runId": "ba51745a-3ccc-4dba-b40b-f5ffcb8a8c4d",
+  "counts": {
+    "pages": 10,
+    "candidates": 118,
+    "edges": 21,
+    "groups": 97,
+    "empty": 0,
+    "noncore": 23,
+    "strictExactPages": 2,
+    "sameRawFieldsAsHistoricalBaseline": 10,
+    "agreedGroups": 7,
+    "conflictGroups": 6,
+    "hantTaxConflictGroups": 1
+  },
+  "pages": [
+    {
+      "file": "full-page-ocr-ch-en-normal.json",
+      "candidates": 8,
+      "sameRawFieldsAsHistoricalBaseline": true,
+      "strictExactPage": true
+    },
+    {
+      "file": "full-page-ocr-ch-en-seam.json",
+      "candidates": 16,
+      "sameRawFieldsAsHistoricalBaseline": true,
+      "strictExactPage": false
+    },
+    {
+      "file": "full-page-ocr-ch-fr-normal.json",
+      "candidates": 10,
+      "sameRawFieldsAsHistoricalBaseline": true,
+      "strictExactPage": false
+    },
+    {
+      "file": "full-page-ocr-ch-fr-seam.json",
+      "candidates": 20,
+      "sameRawFieldsAsHistoricalBaseline": true,
+      "strictExactPage": false
+    },
+    {
+      "file": "full-page-ocr-ch-hans-normal.json",
+      "candidates": 9,
+      "sameRawFieldsAsHistoricalBaseline": true,
+      "strictExactPage": false
+    },
+    {
+      "file": "full-page-ocr-ch-hans-seam.json",
+      "candidates": 16,
+      "sameRawFieldsAsHistoricalBaseline": true,
+      "strictExactPage": false
+    },
+    {
+      "file": "full-page-ocr-ch-hant-normal.json",
+      "candidates": 9,
+      "sameRawFieldsAsHistoricalBaseline": true,
+      "strictExactPage": false
+    },
+    {
+      "file": "full-page-ocr-ch-hant-seam.json",
+      "candidates": 16,
+      "sameRawFieldsAsHistoricalBaseline": true,
+      "strictExactPage": false
+    },
+    {
+      "file": "full-page-ocr-ch-en-seam-1080.json",
+      "candidates": 14,
+      "sameRawFieldsAsHistoricalBaseline": true,
+      "strictExactPage": false
+    },
+    {
+      "file": "full-page-ocr-ch-blank.json",
+      "candidates": 0,
+      "sameRawFieldsAsHistoricalBaseline": true,
+      "strictExactPage": true
+    }
+  ],
+  "note": "Field preservation is independently asserted inside the same-inference Android test. Historical equality excludes only version/ID prefix, and is recorded without using expected OCR answers."
+}
