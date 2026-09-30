@@ -33,6 +33,8 @@
 
 完整JUnit、Lint、两轮回放、审查、源码/APK哈希见[摘要](evidence/full-page-association/2026-09-30/summary.json)。
 
+后续设备接入补充：同日更换的nova 9／NAM-LX9/API31已用同一测试APK通过20项关联反例，另6项Image色块检查通过；见[新机记录](TEST_DEVICES.md)。这是新增固定数据设备证据，不改变上述历史40组回放的来源，也不代表新机OCR推理或屏幕共享通过。
+
 ## 复验及下一项
 
 项目根目录使用现有JDK17，无需联网、密钥、屏幕或模型调用：

@@ -2,7 +2,7 @@
 
 更新于2026-09-30。用户已恢复工作，本轮完成跨段关联技术验收；下一项为实际整屏OCR结果与关联器接线。没有安排后台定时运行。
 
-设备切换补充：用户随后更换真机测试手机，当前ADB尚未发现新设备，型号／系统／序列待核验。旧华为仅保留为兼容目标与历史证据，不默认对其发起操作；新机连接后先登记身份，再选择适用测试和安装包。
+设备切换补充：已识别当前测试机为华为nova 9（NAM-LX9），Android12/API31，序列2AS0221B09001601。两实验包安装哈希一致，20关联＋6实际Image合成色块检查通过。当前未安装正式放大镜，未验证新机OCR推理或共享／手势；旧华为仅保留兼容目标与历史证据。[设备详情](TEST_DEVICES.md)。
 
 ## 目录与边界
 
@@ -29,6 +29,6 @@ v0.1.0交互固定，本轮未改app/compat/graphics。正式手机放大镜未�
 
 - JDK17：/Users/haoyuzuo/Library/Java/JavaVirtualMachines/temurin-17.0.20.1/Contents/Home；SDK：/Users/haoyuzuo/Library/Android/sdk。
 - 专用AVD KanDong_OCR_API37_16K，emulator-5582，API37／ARM64／16KiB。临时AVD消失，同一已有revision 9镜像重建到项目忽略目录.local/avd；[启动方法](OCR_EMULATOR.md)。不使用其他项目设备。
-- 两APK已安装模拟器、哈希一致；主实验APK未变，测试APK为6ed22110a0b4dd21e338287a5f7309822cae1a2269bfeda559f18241304fe51f。新测试手机尚未识别／未安装，须先核对新身份。旧华为LIO-AN00/API31和序列2KE0220109017133只作为历史记录，旧冻结脚本可能限定该序列，不能跳过检查或冒用身份。
+- 两APK已安装模拟器及新nova 9、哈希一致；主实验APK未变，测试APK为6ed22110a0b4dd21e338287a5f7309822cae1a2269bfeda559f18241304fe51f。新机API31／ARM64／4096字节页／1080×2340／480dpi，每次操作先核对序列和型号。旧华为LIO-AN00/API31、序列2KE0220109017133只作历史记录，冻结旧脚本可能限定其身份，不能跳过或冒用；新机本轮命令见设备证据。
 - JAVA_HOME设上述JDK后，./gradlew --offline :modelprobe:testDebugUnitTest :modelprobe:assembleDebug :modelprobe:assembleDebugAndroidTest :modelprobe:lintDebug。同源Android类com.kandong.modelprobe.FullPageOcrAssociationTest。40组历史数据仅在JVM资源，不入APK。
 - 旧冻结脚本可能锁旧APK哈希，不可静默当新包入口。历史audit-reports.py会写输入目录，复查先复制到新目录，不改冻结证据。

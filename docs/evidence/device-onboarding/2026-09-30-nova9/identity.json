@@ -1,0 +1,21 @@
+{
+  "ro.product.manufacturer": "HUAWEI",
+  "ro.product.model": "NAM-LX9",
+  "ro.product.name": "NAM-L29",
+  "ro.product.device": "HWNAM",
+  "ro.config.marketing_name": "HUAWEI nova 9",
+  "ro.build.version.release": "12",
+  "ro.build.version.sdk": "31",
+  "ro.build.version.emui": "EmotionUI_13.0.0",
+  "ro.build.version.security_patch": "2021-12-05",
+  "ro.product.cpu.abilist": "arm64-v8a,armeabi-v7a,armeabi",
+  "serial": "2AS0221B09001601",
+  "pageSize": "4096",
+  "screenSize": "Physical size: 1080x2340",
+  "density": "Physical density: 480",
+  "installedKanDong": {
+    "com.kandong.modelprobe": "not-installed",
+    "com.kandong.modelprobe.test": "not-installed",
+    "com.kandong.compat": "not-installed"
+  }
+}
