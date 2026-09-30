@@ -1,0 +1,754 @@
+{
+  "schema": 1,
+  "runId": "27eb7fb0-970b-49a8-99fa-613d5872c0ab",
+  "fixtureSha256": "e95fa1bac48e0a32272a65cf4b85679705597b2bbe3ca69997f038fdf26345f1",
+  "passed": true,
+  "device": "sdk_gphone16k_arm64",
+  "api": 37,
+  "pages": [
+    {
+      "pageFixtureId": "hant-seam",
+      "passed": true,
+      "fixtureSha256": "e95fa1bac48e0a32272a65cf4b85679705597b2bbe3ca69997f038fdf26345f1",
+      "modelId": "ch",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+      "sourceWidth": 1176,
+      "sourceHeight": 2400,
+      "sourceVersion": {
+        "session": 620202,
+        "snapshot": 1,
+        "page": 0,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "acquiredAtMillis": 620375,
+      "ttlMillis": 60000,
+      "sourceComplete": true,
+      "sourceReason": null,
+      "sourceCandidateCount": 16,
+      "detectorInvocations": 4,
+      "recognitionInvocations": 16,
+      "frameCloseAttempts": 1,
+      "frameClosed": 1,
+      "frameCandidateCount": 16,
+      "sourceStripCount": 4,
+      "edgeCount": 4,
+      "groupCount": 12,
+      "emptyRawCount": 0,
+      "noncoreCount": 4,
+      "allProvenanceFieldsPreserved": true,
+      "spatialMembersComplete": true,
+      "noProjectionInference": true,
+      "projection": {
+        "roi": [
+          60,
+          610,
+          320,
+          665
+        ],
+        "scale": 2,
+        "panSourcePixels": [
+          0,
+          0
+        ],
+        "mirrorSize": [
+          520,
+          110
+        ],
+        "selectedIds": [
+          "620202-1-0-1-0-0/hant-seam/s0/c0-r0-f0",
+          "620202-1-0-1-0-0/hant-seam/s0/c1-r1-f1",
+          "620202-1-0-1-0-0/hant-seam/s1/c2-r2-f2",
+          "620202-1-0-1-0-0/hant-seam/s1/c3-r3-f3"
+        ],
+        "contextIds": [
+          "620202-1-0-1-0-0/hant-seam/s0/c0-r0-f0",
+          "620202-1-0-1-0-0/hant-seam/s1/c2-r2-f2",
+          "620202-1-0-1-0-0/hant-seam/s0/c1-r1-f1",
+          "620202-1-0-1-0-0/hant-seam/s1/c3-r3-f3"
+        ],
+        "unsupportedIds": [],
+        "anchorsAreBoxEnvelopes": true,
+        "mirror": [
+          {
+            "id": "620202-1-0-1-0-0/hant-seam/s0/c0-r0-f0",
+            "groupId": "36:27eb7fb0-970b-49a8-99fa-613d5872c0ab|2:ch|38:620202-1-0-1-0-0/hant-seam/s0/c0-r0-f0",
+            "sourceEnvelope": [
+              70,
+              623,
+              303,
+              653
+            ],
+            "sourceIntersection": [
+              70,
+              623,
+              303,
+              653
+            ],
+            "mirrorRect": [
+              20,
+              26,
+              486,
+              86
+            ],
+            "conservative": false
+          },
+          {
+            "id": "620202-1-0-1-0-0/hant-seam/s0/c1-r1-f1",
+            "groupId": "36:27eb7fb0-970b-49a8-99fa-613d5872c0ab|2:ch|38:620202-1-0-1-0-0/hant-seam/s0/c1-r1-f1",
+            "sourceEnvelope": [
+              67,
+              585,
+              279,
+              618
+            ],
+            "sourceIntersection": [
+              67,
+              610,
+              279,
+              618
+            ],
+            "mirrorRect": [
+              14,
+              0,
+              438,
+              16
+            ],
+            "conservative": true
+          },
+          {
+            "id": "620202-1-0-1-0-0/hant-seam/s1/c2-r2-f2",
+            "groupId": "36:27eb7fb0-970b-49a8-99fa-613d5872c0ab|2:ch|38:620202-1-0-1-0-0/hant-seam/s0/c0-r0-f0",
+            "sourceEnvelope": [
+              67,
+              621,
+              303,
+              656
+            ],
+            "sourceIntersection": [
+              67,
+              621,
+              303,
+              656
+            ],
+            "mirrorRect": [
+              14,
+              22,
+              486,
+              92
+            ],
+            "conservative": true
+          },
+          {
+            "id": "620202-1-0-1-0-0/hant-seam/s1/c3-r3-f3",
+            "groupId": "36:27eb7fb0-970b-49a8-99fa-613d5872c0ab|2:ch|38:620202-1-0-1-0-0/hant-seam/s0/c1-r1-f1",
+            "sourceEnvelope": [
+              66,
+              583,
+              279,
+              618
+            ],
+            "sourceIntersection": [
+              66,
+              610,
+              279,
+              618
+            ],
+            "mirrorRect": [
+              12,
+              0,
+              438,
+              16
+            ],
+            "conservative": true
+          }
+        ]
+      },
+      "pannedProjection": {
+        "roi": [
+          60,
+          610,
+          320,
+          665
+        ],
+        "scale": 3,
+        "panSourcePixels": [
+          40,
+          10
+        ],
+        "mirrorSize": [
+          180,
+          90
+        ],
+        "selectedIds": [
+          "620202-1-0-1-0-0/hant-seam/s0/c0-r0-f0",
+          "620202-1-0-1-0-0/hant-seam/s0/c1-r1-f1",
+          "620202-1-0-1-0-0/hant-seam/s1/c2-r2-f2",
+          "620202-1-0-1-0-0/hant-seam/s1/c3-r3-f3"
+        ],
+        "contextIds": [
+          "620202-1-0-1-0-0/hant-seam/s0/c0-r0-f0",
+          "620202-1-0-1-0-0/hant-seam/s1/c2-r2-f2",
+          "620202-1-0-1-0-0/hant-seam/s0/c1-r1-f1",
+          "620202-1-0-1-0-0/hant-seam/s1/c3-r3-f3"
+        ],
+        "unsupportedIds": [],
+        "anchorsAreBoxEnvelopes": true,
+        "mirror": [
+          {
+            "id": "620202-1-0-1-0-0/hant-seam/s0/c0-r0-f0",
+            "groupId": "36:27eb7fb0-970b-49a8-99fa-613d5872c0ab|2:ch|38:620202-1-0-1-0-0/hant-seam/s0/c0-r0-f0",
+            "sourceEnvelope": [
+              70,
+              623,
+              303,
+              653
+            ],
+            "sourceIntersection": [
+              70,
+              623,
+              303,
+              653
+            ],
+            "mirrorRect": [
+              0,
+              9,
+              180,
+              90
+            ],
+            "conservative": false
+          },
+          {
+            "id": "620202-1-0-1-0-0/hant-seam/s1/c2-r2-f2",
+            "groupId": "36:27eb7fb0-970b-49a8-99fa-613d5872c0ab|2:ch|38:620202-1-0-1-0-0/hant-seam/s0/c0-r0-f0",
+            "sourceEnvelope": [
+              67,
+              621,
+              303,
+              656
+            ],
+            "sourceIntersection": [
+              67,
+              621,
+              303,
+              656
+            ],
+            "mirrorRect": [
+              0,
+              3,
+              180,
+              90
+            ],
+            "conservative": true
+          }
+        ]
+      },
+      "movedProjection": {
+        "roi": [
+          0,
+          0,
+          600,
+          200
+        ],
+        "scale": 1,
+        "panSourcePixels": [
+          0,
+          0
+        ],
+        "mirrorSize": [
+          600,
+          200
+        ],
+        "selectedIds": [
+          "620202-1-0-1-0-0/hant-seam/s0/c4-r4-f4",
+          "620202-1-0-1-0-0/hant-seam/s0/c5-r5-f5"
+        ],
+        "contextIds": [
+          "620202-1-0-1-0-0/hant-seam/s0/c4-r4-f4",
+          "620202-1-0-1-0-0/hant-seam/s0/c5-r5-f5"
+        ],
+        "unsupportedIds": [],
+        "anchorsAreBoxEnvelopes": true,
+        "mirror": [
+          {
+            "id": "620202-1-0-1-0-0/hant-seam/s0/c4-r4-f4",
+            "groupId": "36:27eb7fb0-970b-49a8-99fa-613d5872c0ab|2:ch|38:620202-1-0-1-0-0/hant-seam/s0/c4-r4-f4",
+            "sourceEnvelope": [
+              68,
+              87,
+              302,
+              122
+            ],
+            "sourceIntersection": [
+              68,
+              87,
+              302,
+              122
+            ],
+            "mirrorRect": [
+              68,
+              87,
+              302,
+              122
+            ],
+            "conservative": true
+          },
+          {
+            "id": "620202-1-0-1-0-0/hant-seam/s0/c5-r5-f5",
+            "groupId": "36:27eb7fb0-970b-49a8-99fa-613d5872c0ab|2:ch|38:620202-1-0-1-0-0/hant-seam/s0/c5-r5-f5",
+            "sourceEnvelope": [
+              67,
+              50,
+              278,
+              83
+            ],
+            "sourceIntersection": [
+              67,
+              50,
+              278,
+              83
+            ],
+            "mirrorRect": [
+              67,
+              50,
+              278,
+              83
+            ],
+            "conservative": true
+          }
+        ]
+      },
+      "conflictIds": [
+        "620202-1-0-1-0-0/hant-seam/s0/c0-r0-f0",
+        "620202-1-0-1-0-0/hant-seam/s1/c2-r2-f2"
+      ],
+      "rawTaxConflictRetained": true,
+      "clearRevoked": true,
+      "scopeSucceeded": true,
+      "threadsBefore": 4,
+      "threadsRestored": true,
+      "sessionsOpened": 2,
+      "sessionsClosed": 2,
+      "peakSimultaneousSessions": 2,
+      "liveSessions": 0,
+      "ortResourcesOpened": 44,
+      "ortCloseAttempts": 44,
+      "ortResourcesClosed": 44,
+      "ortCleanup": {
+        "opened": 44,
+        "closeAttempts": 44,
+        "closed": 44,
+        "uncertain": false
+      },
+      "geometryCleanup": {
+        "matAcquired": {
+          "fullPageResizeSource": 4,
+          "fullPageResizeDestination": 4,
+          "boxMask": 4,
+          "boxKernel": 4,
+          "boxDilated": 4,
+          "boxContourSource": 4,
+          "boxHierarchy": 4,
+          "boxContour": 18,
+          "boxProbability": 4,
+          "boxRectInput": 34,
+          "boxRectPoints": 34,
+          "boxScoreMask": 16,
+          "boxScorePolygon": 16,
+          "boxScoreRoi": 16,
+          "sourceQuad": 16,
+          "targetQuad": 16,
+          "homography": 16,
+          "cropSource": 16,
+          "warpDestination": 16,
+          "recognitionResizeSource": 16,
+          "recognitionResizeDestination": 16
+        },
+        "matReleaseAttempts": {
+          "fullPageResizeDestination": 4,
+          "fullPageResizeSource": 4,
+          "boxScoreRoi": 16,
+          "boxScorePolygon": 16,
+          "boxScoreMask": 16,
+          "boxRectPoints": 34,
+          "boxRectInput": 34,
+          "boxProbability": 4,
+          "boxContour": 18,
+          "boxHierarchy": 4,
+          "boxContourSource": 4,
+          "boxDilated": 4,
+          "boxKernel": 4,
+          "boxMask": 4,
+          "warpDestination": 16,
+          "cropSource": 16,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "recognitionResizeDestination": 16,
+          "recognitionResizeSource": 16
+        },
+        "matReleased": {
+          "fullPageResizeDestination": 4,
+          "fullPageResizeSource": 4,
+          "boxScoreRoi": 16,
+          "boxScorePolygon": 16,
+          "boxScoreMask": 16,
+          "boxRectPoints": 34,
+          "boxRectInput": 34,
+          "boxProbability": 4,
+          "boxContour": 18,
+          "boxHierarchy": 4,
+          "boxContourSource": 4,
+          "boxDilated": 4,
+          "boxKernel": 4,
+          "boxMask": 4,
+          "warpDestination": 16,
+          "cropSource": 16,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "recognitionResizeDestination": 16,
+          "recognitionResizeSource": 16
+        },
+        "matOpened": 278,
+        "findContoursCalls": 4,
+        "bitmapOpened": 6,
+        "bitmapRecycleAttempts": 6,
+        "bitmapRecycled": 6,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      },
+      "transportCleanup": {
+        "readersOpened": 1,
+        "readersClosed": 1,
+        "writersOpened": 1,
+        "writersClosed": 1,
+        "writerInputs": 1,
+        "writerInputsTransferred": 1,
+        "writerInputsClosed": 0,
+        "imagesAcquired": 1,
+        "imageCloseAttempts": 1,
+        "imagesClosed": 1
+      },
+      "cleanupBalanced": true,
+      "elapsedMillis": 3188
+    },
+    {
+      "pageFixtureId": "blank",
+      "passed": true,
+      "fixtureSha256": "e95fa1bac48e0a32272a65cf4b85679705597b2bbe3ca69997f038fdf26345f1",
+      "modelId": "ch",
+      "modelSha256": "5825fc7ebf84ae7a412be049820b4d86d77620f204a041697b0494669b1742c5",
+      "dictionarySha256": "72ad5c46d5bbc22921613539feaa90e2c4c4567bfb107a7e741be72e5e54a1af",
+      "sourceWidth": 1176,
+      "sourceHeight": 2400,
+      "sourceVersion": {
+        "session": 620202,
+        "snapshot": 2,
+        "page": 1,
+        "revision": 1,
+        "window": 0,
+        "display": 0
+      },
+      "acquiredAtMillis": 623544,
+      "ttlMillis": 60000,
+      "sourceComplete": true,
+      "sourceReason": null,
+      "sourceCandidateCount": 0,
+      "detectorInvocations": 4,
+      "recognitionInvocations": 0,
+      "frameCloseAttempts": 1,
+      "frameClosed": 1,
+      "frameCandidateCount": 0,
+      "sourceStripCount": 4,
+      "edgeCount": 0,
+      "groupCount": 0,
+      "emptyRawCount": 0,
+      "noncoreCount": 0,
+      "allProvenanceFieldsPreserved": true,
+      "spatialMembersComplete": true,
+      "noProjectionInference": true,
+      "projection": {
+        "roi": [
+          60,
+          610,
+          320,
+          665
+        ],
+        "scale": 2,
+        "panSourcePixels": [
+          0,
+          0
+        ],
+        "mirrorSize": [
+          520,
+          110
+        ],
+        "selectedIds": [],
+        "contextIds": [],
+        "unsupportedIds": [],
+        "anchorsAreBoxEnvelopes": true,
+        "mirror": []
+      },
+      "pannedProjection": {
+        "roi": [
+          60,
+          610,
+          320,
+          665
+        ],
+        "scale": 3,
+        "panSourcePixels": [
+          40,
+          10
+        ],
+        "mirrorSize": [
+          180,
+          90
+        ],
+        "selectedIds": [],
+        "contextIds": [],
+        "unsupportedIds": [],
+        "anchorsAreBoxEnvelopes": true,
+        "mirror": []
+      },
+      "movedProjection": {
+        "roi": [
+          0,
+          0,
+          600,
+          200
+        ],
+        "scale": 1,
+        "panSourcePixels": [
+          0,
+          0
+        ],
+        "mirrorSize": [
+          600,
+          200
+        ],
+        "selectedIds": [],
+        "contextIds": [],
+        "unsupportedIds": [],
+        "anchorsAreBoxEnvelopes": true,
+        "mirror": []
+      },
+      "blankComplete": true,
+      "expiryRevoked": true,
+      "expiredAtCheckMillis": 683549,
+      "scopeSucceeded": true,
+      "threadsBefore": 4,
+      "threadsRestored": true,
+      "sessionsOpened": 2,
+      "sessionsClosed": 2,
+      "peakSimultaneousSessions": 2,
+      "liveSessions": 0,
+      "ortResourcesOpened": 12,
+      "ortCloseAttempts": 12,
+      "ortResourcesClosed": 12,
+      "ortCleanup": {
+        "opened": 56,
+        "closeAttempts": 56,
+        "closed": 56,
+        "uncertain": false
+      },
+      "geometryCleanup": {
+        "matAcquired": {
+          "fullPageResizeSource": 8,
+          "fullPageResizeDestination": 8,
+          "boxMask": 8,
+          "boxKernel": 8,
+          "boxDilated": 8,
+          "boxContourSource": 8,
+          "boxHierarchy": 8,
+          "boxContour": 18,
+          "boxProbability": 8,
+          "boxRectInput": 34,
+          "boxRectPoints": 34,
+          "boxScoreMask": 16,
+          "boxScorePolygon": 16,
+          "boxScoreRoi": 16,
+          "sourceQuad": 16,
+          "targetQuad": 16,
+          "homography": 16,
+          "cropSource": 16,
+          "warpDestination": 16,
+          "recognitionResizeSource": 16,
+          "recognitionResizeDestination": 16
+        },
+        "matReleaseAttempts": {
+          "fullPageResizeDestination": 8,
+          "fullPageResizeSource": 8,
+          "boxScoreRoi": 16,
+          "boxScorePolygon": 16,
+          "boxScoreMask": 16,
+          "boxRectPoints": 34,
+          "boxRectInput": 34,
+          "boxProbability": 8,
+          "boxContour": 18,
+          "boxHierarchy": 8,
+          "boxContourSource": 8,
+          "boxDilated": 8,
+          "boxKernel": 8,
+          "boxMask": 8,
+          "warpDestination": 16,
+          "cropSource": 16,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "recognitionResizeDestination": 16,
+          "recognitionResizeSource": 16
+        },
+        "matReleased": {
+          "fullPageResizeDestination": 8,
+          "fullPageResizeSource": 8,
+          "boxScoreRoi": 16,
+          "boxScorePolygon": 16,
+          "boxScoreMask": 16,
+          "boxRectPoints": 34,
+          "boxRectInput": 34,
+          "boxProbability": 8,
+          "boxContour": 18,
+          "boxHierarchy": 8,
+          "boxContourSource": 8,
+          "boxDilated": 8,
+          "boxKernel": 8,
+          "boxMask": 8,
+          "warpDestination": 16,
+          "cropSource": 16,
+          "homography": 16,
+          "targetQuad": 16,
+          "sourceQuad": 16,
+          "recognitionResizeDestination": 16,
+          "recognitionResizeSource": 16
+        },
+        "matOpened": 310,
+        "findContoursCalls": 8,
+        "bitmapOpened": 6,
+        "bitmapRecycleAttempts": 6,
+        "bitmapRecycled": 6,
+        "balanced": true,
+        "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+      },
+      "transportCleanup": {
+        "readersOpened": 1,
+        "readersClosed": 1,
+        "writersOpened": 1,
+        "writersClosed": 1,
+        "writerInputs": 1,
+        "writerInputsTransferred": 1,
+        "writerInputsClosed": 0,
+        "imagesAcquired": 1,
+        "imageCloseAttempts": 1,
+        "imagesClosed": 1
+      },
+      "cleanupBalanced": true,
+      "elapsedMillis": 60135
+    }
+  ],
+  "scope": "Authenticated fixed synthetic Image -> actual detector/crop/ch recognizer -> association -> source-pixel box-envelope projection. No real capture, privacy, OCR quality or translation acceptance.",
+  "snapshotRetention": "Clear drops controller references; callers may retain immutable evidence. No heap erasure claim.",
+  "opencv": "5.0.0",
+  "ort": "1.30.0",
+  "detectorSha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+  "geometryCleanup": {
+    "matAcquired": {
+      "fullPageResizeSource": 8,
+      "fullPageResizeDestination": 8,
+      "boxMask": 8,
+      "boxKernel": 8,
+      "boxDilated": 8,
+      "boxContourSource": 8,
+      "boxHierarchy": 8,
+      "boxContour": 18,
+      "boxProbability": 8,
+      "boxRectInput": 34,
+      "boxRectPoints": 34,
+      "boxScoreMask": 16,
+      "boxScorePolygon": 16,
+      "boxScoreRoi": 16,
+      "sourceQuad": 16,
+      "targetQuad": 16,
+      "homography": 16,
+      "cropSource": 16,
+      "warpDestination": 16,
+      "recognitionResizeSource": 16,
+      "recognitionResizeDestination": 16
+    },
+    "matReleaseAttempts": {
+      "fullPageResizeDestination": 8,
+      "fullPageResizeSource": 8,
+      "boxScoreRoi": 16,
+      "boxScorePolygon": 16,
+      "boxScoreMask": 16,
+      "boxRectPoints": 34,
+      "boxRectInput": 34,
+      "boxProbability": 8,
+      "boxContour": 18,
+      "boxHierarchy": 8,
+      "boxContourSource": 8,
+      "boxDilated": 8,
+      "boxKernel": 8,
+      "boxMask": 8,
+      "warpDestination": 16,
+      "cropSource": 16,
+      "homography": 16,
+      "targetQuad": 16,
+      "sourceQuad": 16,
+      "recognitionResizeDestination": 16,
+      "recognitionResizeSource": 16
+    },
+    "matReleased": {
+      "fullPageResizeDestination": 8,
+      "fullPageResizeSource": 8,
+      "boxScoreRoi": 16,
+      "boxScorePolygon": 16,
+      "boxScoreMask": 16,
+      "boxRectPoints": 34,
+      "boxRectInput": 34,
+      "boxProbability": 8,
+      "boxContour": 18,
+      "boxHierarchy": 8,
+      "boxContourSource": 8,
+      "boxDilated": 8,
+      "boxKernel": 8,
+      "boxMask": 8,
+      "warpDestination": 16,
+      "cropSource": 16,
+      "homography": 16,
+      "targetQuad": 16,
+      "sourceQuad": 16,
+      "recognitionResizeDestination": 16,
+      "recognitionResizeSource": 16
+    },
+    "matOpened": 310,
+    "findContoursCalls": 8,
+    "bitmapOpened": 6,
+    "bitmapRecycleAttempts": 6,
+    "bitmapRecycled": 6,
+    "balanced": true,
+    "semantics": "release frees Mat buffers; native headers remain finalizer-owned"
+  },
+  "ortCleanup": {
+    "opened": 56,
+    "closeAttempts": 56,
+    "closed": 56,
+    "uncertain": false
+  },
+  "transportCleanup": {
+    "readersOpened": 2,
+    "readersClosed": 2,
+    "writersOpened": 2,
+    "writersClosed": 2,
+    "writerInputs": 2,
+    "writerInputsTransferred": 2,
+    "writerInputsClosed": 0,
+    "imagesAcquired": 2,
+    "imageCloseAttempts": 2,
+    "imagesClosed": 2
+  },
+  "elapsedMillis": 63347
+}

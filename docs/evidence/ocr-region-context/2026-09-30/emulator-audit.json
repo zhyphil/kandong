@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "runId": "27eb7fb0-970b-49a8-99fa-613d5872c0ab",
+  "projectionCoordinateChecks": [
+    {
+      "projection": "projection",
+      "selected": 4,
+      "visible": 4,
+      "spatialContextMembers": 4
+    },
+    {
+      "projection": "pannedProjection",
+      "selected": 4,
+      "visible": 2,
+      "spatialContextMembers": 4
+    },
+    {
+      "projection": "movedProjection",
+      "selected": 2,
+      "visible": 2,
+      "spatialContextMembers": 2
+    }
+  ],
+  "fixedFrames": 2,
+  "detectorInvocations": 8,
+  "recognitionInvocations": 16,
+  "originalExpiryObservedMillis": 60005,
+  "note": "Coordinate/ROI/group check uses previously accepted identical fixed geometry as independent reference. Same-inference all-field equality is asserted in native test. No real capture, UI or translation quality claim."
+}

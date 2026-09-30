@@ -60,3 +60,6 @@ python3 -B scripts/run-ocr-emulator.py --output /private/tmp/kandong-ocr-emulato
 2026-09-30：重建的专用AVD已核对API37、arm64-v8a、16384字节页和两安装包哈希，20项跨段关联同源测试通过；[本轮记录](FULL_PAGE_OCR_ASSOCIATION.md)。主实验APK未变，测试APK已更新为 `6ed22110a0b4dd21e338287a5f7309822cae1a2269bfeda559f18241304fe51f`；上方9月24日冻结入口及旧APK身份是历史证据，不适用于新包。没有重新运行模型或采集屏幕。
 
 2026-09-30后续实际OCR→关联接线：最终测试包8eb4858bc13b035f1009d60238c8c62323a11b17d27ac0618bb706e0e3c10706，实际安装哈希一致；72项通过64.666秒，20页技术通过、9生命周期情形及原回归完成。详见[接线记录](OCR_ASSOCIATION_HANDOFF.md)。主实验包未变；以上历史冻结入口不能直接验证该新包。
+
+
+2026-09-30整页证据→选区投影：当前模拟器测试APK为8b76c71d36e55bf885eaeaa6d90c581637cea53706644ead86f39f4687d78298，主实验包未变。202 JVM／构建／Lint通过后，模拟器94项通过76.218秒，含固定两页真实Image／OCR、16候选无损投影及原60秒TTL实际失效；[本轮说明](OCR_REGION_CONTEXT.md)。使用新证据目录run-emulator.py及此测试SHA、94项目标数，不复用历史冻结入口。没有读取屏幕或更新手机；实验和模拟器已停止。

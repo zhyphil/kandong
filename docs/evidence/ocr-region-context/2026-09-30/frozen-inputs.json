@@ -1,0 +1,14 @@
+{
+  "baseCommit": "9aecfd8",
+  "sha256": {
+    "modelprobe/src/main/assets/probes/manifest.json": "126d8d3860d5a4ea098f0875838dbed51a55d8a321f50d409805d394a460061c",
+    "docs/fixtures/full-page-ocr-v1/manifest.json": "e95fa1bac48e0a32272a65cf4b85679705597b2bbe3ca69997f038fdf26345f1",
+    "modelprobe/build.gradle.kts": "1349d59c50bd8d30ec7c5f84ff610bbf116afbb2bcdb9a7c8391c9cd113f4265",
+    "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextContracts.kt": "e5a68f2b8cc5d00503a9509a54e425b2d1ffdf52d1b718e8d90538b10b0906e1",
+    "ocrlab/src/contextShared/java/com/kandong/ocrlab/context/ContextGeometry.kt": "70dcc6ad5d1b8656616f001031439c81f61502d4e7084a0f9394cc3cb3f1a3b9",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageOcrAssociation.kt": "17b9d38812afff2c365a7f91a6a4cf354877563a801ecb26731289f81c277bba"
+  },
+  "allowed": "publication + region controller/projection, same-source behavior tests, additive staged forwarding, native fixed-page test only",
+  "checks": "JVM modelprobe suite, debug/test APK + lint, dedicated API37/16KiB selected native and shared tests",
+  "notIncluded": "product UI, translation calls/quality, real screens/privacy or new nova9 acceptance"
+}

@@ -1,0 +1,122 @@
+{
+  "baseCommit": "9aecfd8",
+  "status": "bounded-region-evidence-and-projection-accepted",
+  "scope": "Only modelprobe test source sets. Explicit-click API, original publication Guard transfer, full-page evidence and source-pixel box-envelope projections. No product UI or real translation.",
+  "red": {
+    "initialTests": 9,
+    "failures": 9,
+    "additionalDiagonalRegressionTests": 1,
+    "additionalFailures": 1
+  },
+  "validation": {
+    "baseCommit": "9aecfd8",
+    "jvm": {
+      "tests": 202,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "lint": {
+      "Warning": 4
+    },
+    "sourceSha256": {
+      "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageOcrPublication.kt": "41d576f8e30c6f7ed8f09207a2311887e78268f832bf013c67b59b47a7bdbd9c",
+      "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageRegionController.kt": "7d9a932af2ff5ab07c1acb2972e04a40c270754cba6dc49d8d30fb2b8f2d01e1",
+      "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageRegionProjection.kt": "f4b69fdd8e1add0d6f945ef69083ba590b15af6e90a2dd8ac2745fcc9e49f2b9",
+      "modelprobe/src/contextTest/java/com/kandong/modelprobe/FullPageRegionControllerTest.kt": "8a74716b6d45927f266d553bce038314c0cb4eee596acc9839b239e44198cd10",
+      "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageOcrPipeline.kt": "a8c5a3003143d6ec2087219ae2a7545df2e21e369c748f95786a5763d02acfee",
+      "modelprobe/src/androidTest/java/com/kandong/modelprobe/FullPageRegionProbeTest.kt": "ca302442fa2537621fd1a20a6e5c92908b576eb0c487d9e3d83cabae7da2715f"
+    },
+    "apks": {
+      "modelprobe/build/outputs/apk/debug/modelprobe-debug.apk": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+      "modelprobe/build/outputs/apk/androidTest/debug/modelprobe-debug-androidTest.apk": "8b76c71d36e55bf885eaeaa6d90c581637cea53706644ead86f39f4687d78298"
+    }
+  },
+  "emulator": {
+    "avd": "KanDong_OCR_API37_16K",
+    "api": 37,
+    "pageSize": 16384,
+    "tests": 94,
+    "passed": 94,
+    "instrumentationSeconds": 76.218,
+    "nativePages": [
+      "hant-seam",
+      "blank"
+    ],
+    "actualCandidates": 16,
+    "imageCloses": 2,
+    "sessionsClosed": 4,
+    "ortClosed": 56,
+    "originalExpiryObservedMillis": 60005,
+    "independentAudit": "emulator-audit.json"
+  },
+  "review": {
+    "mustFixFindings": 0,
+    "readOnlyUnchanged": true,
+    "sourceHashesMatch": true
+  },
+  "deviceBoundary": "No new nova9 test/install this iteration. Phone remains on previous accepted 8eb4858 test APK; only dedicated emulator updated.",
+  "limits": [
+    "synthetic input only; no real screen provenance or privacy acceptance",
+    "spatial groups are not semantic groups",
+    "rotated/unordered boxes are conservative envelopes, collinear shapes retained as unsupported",
+    "same-version observe is idempotent; real content change observation is not implemented",
+    "clear drops owned references; callers must discard previously returned snapshots",
+    "no UI, OCR quality improvement or translation acceptance"
+  ],
+  "evidenceSha256": {
+    "audit-native-report.py": "578ae205d0eab3c984d6a336ce3f920245d820cb555664fdb4eec89d67f1ac72",
+    "audit-readonly.json": "885758c54985f6408472006de9dd25fac0cee35f6fd58850e444e1fbb464f00c",
+    "audit.md": "ab483b95321ec78c385c35b6ca95ce40cd39fc9151b3633937f20a7c8d9587aa",
+    "diagonal-red.txt": "08e497cf2d6423f71fcd04fe400291d6bff8eadd926dc8d46c53283c38b6a3ac",
+    "diagonal-red.xml": "02cca7cdc65ff411c810b7e771ac9804cdb0784dbeaf319148baa65f88215eda",
+    "emulator/environment.json": "9a91444ee5fca27b69d7ed9ae8bc3caf02e5d0cf370a56c3ba5f450424111924",
+    "emulator/foreground.txt": "32ced3728c13b68ecb4ad7849adc798f0cdafe01a09b4596bea55c3027cbe5d6",
+    "emulator/full-page-ocr-lifecycle.json": "be2bdb3b8d8ca9bc9a8d41df38fa2da938364726c15d18d6c1e6eccfc2f26efa",
+    "emulator/full-page-ocr-session-failures.json": "dbe306234bc796b9eca31ad1aa5db4488948af538a2014277fb7687abecba8a4",
+    "emulator/full-page-region-probe.json": "92b3b3b4846f84fe813da7d6529d81b65ef7687a22da75f7d9cd3e6d3ce387f4",
+    "emulator/instrumentation.txt": "0f235a9a4e6ba357a2dfc540f04e85918642bb622b8d63a329a860aff7c9f5ca",
+    "emulator-audit.json": "d469855481c4ae7603f3966967ad5e31b893325d7c5da6700cf545fea6ecda63",
+    "frozen-inputs.json": "4cd684269d99e7df25f7a17a12a194b1ae0ba3a8812400b669e462385f0e44c4",
+    "red/FullPageOcrPublication.kt": "1ba7f4387af53e2b36b104962b91b2e71c46568ca5edbb9d1228a6ae024fff11",
+    "red/FullPageRegionController.kt": "18a7f2c5a60ef2fc237cea51f076cdc6925e42a17cb644f90181c0f37a3d5963",
+    "red/FullPageRegionControllerTest.kt": "48978bb8834d8de7ceb03b96be5b8ddca9137330c3ddc4f9413e22fbb55d059e",
+    "red/gradle.txt": "1ff26d6e96df0d2038d635e4d3fed9f8b96dcc6f901f857fe379e5cc6088b125",
+    "red/identity.json": "f07fa0c2cb57e14f845f29be466f24ed6643823c7525bf71978066c8f8e2fe48",
+    "red/junit.xml": "5067c7a4d10e40c4a23611983a62140a95bc26bda25fd837163dd9c0bf07c0ce",
+    "review-readonly.json": "885758c54985f6408472006de9dd25fac0cee35f6fd58850e444e1fbb464f00c",
+    "review.md": "90e1624100c78740ee00343020a21b888daddda2407809bbb3a85f5b8cb652a8",
+    "run-emulator.py": "78befdd6839295547ad613a7d3c1a2b32af1dd21b6b57bd8720e1d5933f5b54d",
+    "validation/build.txt": "9144aafe32d4d2735d9ba180782328adc5c2a32658a894d5dd2e054e49e7a7e8",
+    "validation/junit/TEST-com.kandong.modelprobe.BoxPipelineGuardTest.xml": "8341a017e74eadb4dcca4953ec0a26df536d0a38e43992d9161e8302ebe284d2",
+    "validation/junit/TEST-com.kandong.modelprobe.CandidateContextTest.xml": "910516945e881de162d0a6ec5e23e99e0ff4fa133ed936e6994db1535e59345f",
+    "validation/junit/TEST-com.kandong.modelprobe.ContextLanguageRouteTest.xml": "ffa3cd67baf3924310b97fe5f57a2e4d288385ebb7a1035859417e1950ab172e",
+    "validation/junit/TEST-com.kandong.modelprobe.CropRecognitionContractTest.xml": "e9ceeaba53a7008b459df2542a14f3dceb8182d8de6cc9395e5b3dcbd3ab4380",
+    "validation/junit/TEST-com.kandong.modelprobe.CtcDecoderTest.xml": "e7d3fe864baa28f22eee95c3fc49bc72c56baea1e0aeed6f09889b5fc7b2ef0c",
+    "validation/junit/TEST-com.kandong.modelprobe.DetectorPackingTest.xml": "bf7ce4454866bbf85f065f4e68ffb827f486f9e9f5783470d44f592e6972b2dc",
+    "validation/junit/TEST-com.kandong.modelprobe.EndToEndScoreBudgetTest.xml": "d0d7b3daedcb5f6bf4809bb3b185c5319e7a08fb4626f4d64b6b5ef270c62e38",
+    "validation/junit/TEST-com.kandong.modelprobe.FullPageOcrAssociationReplayTest.xml": "a1275fff7dafda6d25674ed18b94523c77331698c8d61ac6ba8bcd0f295b3484",
+    "validation/junit/TEST-com.kandong.modelprobe.FullPageOcrAssociationTest.xml": "1222110d3e4aea11c8d4ea142e6fce3bf5ee627a9ad0a07ef97961240f428a85",
+    "validation/junit/TEST-com.kandong.modelprobe.FullPageOcrContractTest.xml": "79c5906fa3604cd78898834e0e5a792a38a9aba472711345e0fd23fa548e25c3",
+    "validation/junit/TEST-com.kandong.modelprobe.FullPageOcrPublicationTest.xml": "f8fc7315ffee6078a4e2c205f575083cf339edbe52196dc8b5d8db25d0549673",
+    "validation/junit/TEST-com.kandong.modelprobe.FullPageRegionControllerTest.xml": "c6b7381fef7fccc8a87c7199c3b0b58f6b3adf490f0b702057c06ee0e66838cb",
+    "validation/junit/TEST-com.kandong.modelprobe.FullPageStripPlannerTest.xml": "bb148f73635448abaf7d5037ea2a66ff29066d35919c7dfde28fb44ce5011aaa",
+    "validation/junit/TEST-com.kandong.modelprobe.FullPageTranslationContextTest.xml": "db132da5031227a39f506bcb39ebe8bc7a4fb8ff9e26cb3786a9b3a8a4fcb642",
+    "validation/junit/TEST-com.kandong.modelprobe.GeometryProbeGuardTest.xml": "79cf794f56540f94857b4f122bf1bb84bf82b0ba9335090a46588ef4bd024a79",
+    "validation/junit/TEST-com.kandong.modelprobe.LanguageRouteTest.xml": "2b19fa04015f2debd6d7f3b1021a2698fce18051f72819516b18e07d870c9942",
+    "validation/junit/TEST-com.kandong.modelprobe.OnDemandTranslationTest.xml": "4673494288e2e538aa94fd7c695bd31c44f6f4b757ee3277193cc7d768279932",
+    "validation/junit/TEST-com.kandong.modelprobe.PolygonOffsetGuardTest.xml": "1ebdbc981b76f8300c37dca637f1daf3de1e33e8dbaea38f79aa47a0d7bb99a9",
+    "validation/junit/TEST-com.kandong.modelprobe.ProbeGateTest.xml": "26a04f7eb722d72783fdeddf51da2f245310306f6324fc5e8e03db924fca61a4",
+    "validation/junit/TEST-com.kandong.modelprobe.ProbeInputsTest.xml": "162c7bcec090def2a67943d842f9e6e315bb33a08b8ff9477f3a11bef08d6c20",
+    "validation/junit/TEST-com.kandong.modelprobe.ProtectedDisplayTest.xml": "519571f9369355c5a444dd608d8759b28b324f7cbc180b784fa061cdf73cdd04",
+    "validation/junit/TEST-com.kandong.modelprobe.RecognitionPackingTest.xml": "ea839f683b58489e7bcbfccdac5f2b13182200a42386cc032bae0c99368ee391",
+    "validation/junit/TEST-com.kandong.modelprobe.SharedCandidatesTest.xml": "c9baf186c756cc8b27325a098622e824edfd4bcdc2d336b97295adb32579658f",
+    "validation/junit/TEST-com.kandong.modelprobe.SingleFrameStripInputTest.xml": "442ea4f9a66fbde67e89e810f8134d2c2ff504c23abeec1e5eb15f709a119bc0",
+    "validation/junit/TEST-com.kandong.modelprobe.TranslationRoutingTest.xml": "3cac4ac51f7b19525e5e03b5c677184a4e9dcc5966821728390b25600fa0bd13",
+    "validation/junit/binary/output.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "validation/junit/binary/output.bin.idx": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+    "validation/junit/binary/results.bin": "756442199c84c51613af6bb3a6f682239d65d7c2427b2621ff3614e8654cb3e9",
+    "validation/lint.xml": "e170672d7f41d6909aaee42dcc27a0aee5785a4cef0718c1fe9b644fb4f57863",
+    "validation/summary.json": "b4c7bd0f95058a903ef502b939b054127adbef9679680ee95c1cd5b95efca63f"
+  }
+}

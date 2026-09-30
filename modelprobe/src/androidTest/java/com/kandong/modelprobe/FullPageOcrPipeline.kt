@@ -25,6 +25,7 @@ internal class FullPageOcrPipeline(private val engine: OrtProbeEngine, private v
     class StagedPage(val page: PageResult, val metadata: RgbaFrameMetadata,
         private val pending: FullPageOcrPublication.Pending) {
         fun publish(scopeSucceeded: Boolean, resourcesClosed: Boolean) = pending.publish(scopeSucceeded, resourcesClosed)
+        fun claimForRegion(scopeSucceeded: Boolean, resourcesClosed: Boolean) = pending.claimForRegion(scopeSucceeded, resourcesClosed)
         fun discard() = pending.discard()
     }
     private val owner = Thread.currentThread()

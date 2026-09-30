@@ -11,18 +11,7 @@ internal object FullPageOcrPublication {
         val strips: List<Strip>, val detectorInvocations: Int, val recognitionInvocations: Int,
         val frameCloseAttempts: Int, val frameClosed: Int, val transportRejection: String?)
     data class Outcome(val published: Boolean, val reason: String?, val association: FullPageOcrAssociation.Result?)
-    /** Only stage() can mint this one-use handoff; it is not proof of real-screen privacy. */
     sealed interface RegionPermit : AutoCloseable
-    private object RegionMint
-    internal class RegionLease(val page: FullPageOcrAssociation.Result, val metadata: RgbaFrameMetadata,
-        val guard: Guard) : AutoCloseable {
-        override fun close() = guard.finish()
-    }
-    private class Permit(private var lease: RegionLease?) : RegionPermit {
-        fun take(): RegionLease? = lease.also { lease = null }
-        override fun close() { take()?.close() }
-    }
-    internal fun takeRegion(permit: RegionPermit): RegionLease? = (permit as? Permit)?.take()
     class Guard(val metadata: RgbaFrameMetadata, source: () -> CaptureCheckpoint) {
         private var source: (() -> CaptureCheckpoint)? = source
         private var lastNow = metadata.acquiredAtMillis
@@ -42,7 +31,7 @@ internal object FullPageOcrPublication {
                     metadataChecked = true
                 }
                 val c = callback()
-                if (source !== callback || !c.active || c.version != metadata.version || c.nowMillis < lastNow ||
+                if (!c.active || c.version != metadata.version || c.nowMillis < lastNow ||
                     c.nowMillis - metadata.acquiredAtMillis >= metadata.ttlMillis)
                     throw CancellationException("CANCELLED_OR_STALE")
                 lastNow = c.nowMillis
@@ -56,35 +45,20 @@ internal object FullPageOcrPublication {
         internal fun finish() { source = null }
     }
     class Pending internal constructor(private var association: FullPageOcrAssociation.Result?,
-        private var guard: Guard?, private val rejection: String? = null, private val mint: Any? = null) {
+        private var guard: Guard?, private val rejection: String? = null) {
         private var consumed = false
-        fun claimForRegion(scopeSucceeded: Boolean, resourcesClosed: Boolean): RegionPermit? {
-            if (consumed) return null
-            consumed = true
-            return try {
-                if (validation(scopeSucceeded, resourcesClosed) != null || mint !== RegionMint) null
-                else {
-                    val originalGuard = checkNotNull(guard)
-                    val permit = Permit(RegionLease(checkNotNull(association), originalGuard.metadata, originalGuard))
-                    // The finally block must not finish a Guard that now belongs to the permit.
-                    association = null
-                    guard = null
-                    permit
-                }
-            } finally { clear() }
-        }
-        private fun validation(scopeSucceeded: Boolean, resourcesClosed: Boolean): String? = rejection ?: when {
-            !scopeSucceeded -> "SCOPE_FAILED"
-            !resourcesClosed -> "RESOURCES_NOT_CLOSED"
-            guard?.isCurrent() != true -> "NOT_CURRENT"
-            association == null -> "NO_ASSOCIATION"
-            else -> null
-        }
+        fun claimForRegion(scopeSucceeded: Boolean, resourcesClosed: Boolean): RegionPermit? = null
         fun publish(scopeSucceeded: Boolean, resourcesClosed: Boolean): Outcome {
             if (consumed) return Outcome(false, "ALREADY_CONSUMED", null)
             consumed = true
             return try {
-                val reason = validation(scopeSucceeded, resourcesClosed)
+                val reason = rejection ?: when {
+                    !scopeSucceeded -> "SCOPE_FAILED"
+                    !resourcesClosed -> "RESOURCES_NOT_CLOSED"
+                    guard?.isCurrent() != true -> "NOT_CURRENT"
+                    association == null -> "NO_ASSOCIATION"
+                    else -> null
+                }
                 if (reason != null) Outcome(false, reason, null) else Outcome(true, null, association)
             } finally { clear() }
         }
@@ -120,6 +94,6 @@ internal object FullPageOcrPublication {
             receipts, candidates, guard::isCurrent)
         if (!result.published) return reject(result.rejection?.name ?: "ASSOCIATION_REJECTED")
         if (!guard.isCurrent()) return reject("NOT_CURRENT")
-        return Pending(result, guard, mint = RegionMint)
+        return Pending(result, guard)
     }
 }
