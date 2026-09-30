@@ -1,0 +1,47 @@
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualLabUiTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.kandong.modelprobe.RegionVisualLabUiTest:
+INSTRUMENTATION_STATUS: test=cornerAtTopRightEdgeRetainsFullTouchAreaInsideView
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.kandong.modelprobe.RegionVisualLabUiTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: expected:<359.9999999999999> but was:<327.4586776859501>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at com.kandong.modelprobe.RegionVisualLabUiTest.cornerAtTopRightEdgeRetainsFullTouchAreaInsideView(RegionVisualLabUiTest.kt:117)
+
+INSTRUMENTATION_STATUS: stream=
+Error in cornerAtTopRightEdgeRetainsFullTouchAreaInsideView(com.kandong.modelprobe.RegionVisualLabUiTest):
+java.lang.AssertionError: expected:<359.9999999999999> but was:<327.4586776859501>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at com.kandong.modelprobe.RegionVisualLabUiTest.cornerAtTopRightEdgeRetainsFullTouchAreaInsideView(RegionVisualLabUiTest.kt:117)
+
+INSTRUMENTATION_STATUS: test=cornerAtTopRightEdgeRetainsFullTouchAreaInsideView
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 1.667
+There was 1 failure:
+1) cornerAtTopRightEdgeRetainsFullTouchAreaInsideView(com.kandong.modelprobe.RegionVisualLabUiTest)
+java.lang.AssertionError: expected:<359.9999999999999> but was:<327.4586776859501>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:685)
+	at com.kandong.modelprobe.RegionVisualLabUiTest.cornerAtTopRightEdgeRetainsFullTouchAreaInsideView(RegionVisualLabUiTest.kt:117)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.CropRecognitionContractTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-30T18:47:02.393Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.008">
+  <properties/>
+  <testcase name="rejectsMismatchNonfiniteAndInvalidIdentity" classname="com.kandong.modelprobe.CropRecognitionContractTest" time="0.002"/>
+  <testcase name="equalRatiosStayStable" classname="com.kandong.modelprobe.CropRecognitionContractTest" time="0.001"/>
+  <testcase name="nonidentityKeepsFullIdentityAndSortsAfterRecognition" classname="com.kandong.modelprobe.CropRecognitionContractTest" time="0.0"/>
+  <testcase name="validatesTensorAndCropBeforeAllocation" classname="com.kandong.modelprobe.CropRecognitionContractTest" time="0.003"/>
+  <testcase name="emptyAndIncompleteCannotInventOutput" classname="com.kandong.modelprobe.CropRecognitionContractTest" time="0.001"/>
+  <testcase name="rejectsDuplicateNonpermutationAndOutOfRangeMappings" classname="com.kandong.modelprobe.CropRecognitionContractTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

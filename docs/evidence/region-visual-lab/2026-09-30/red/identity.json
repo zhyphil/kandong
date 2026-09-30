@@ -1,0 +1,12 @@
+{
+  "base": "5fa799a",
+  "tests": 9,
+  "failures": 9,
+  "kind": "compiled behavior stub, no environment/compile failure",
+  "sha256": {
+    "RegionVisualSessionTest.kt": "25978786fd2b72ec58a98dc2fbde90dd32fa9783534052ad967cd0681cb6f792",
+    "RegionVisualSession.kt": "acb8de42dc1d46745ab9bba9fbe61bfd364890a8d5ea1e88f7c2389490c23780",
+    "gradle.txt": "1ac9533864a6af573c0dc9ba1d244c2da1c9a053cf34bc81c0b281e7a881102b",
+    "junit.xml": "701736c7c5410aec8132a7b5009ffbe2efb6d1332c823be9a4dee3f1c3669afb"
+  }
+}

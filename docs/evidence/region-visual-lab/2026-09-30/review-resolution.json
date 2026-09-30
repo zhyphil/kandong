@@ -1,0 +1,10 @@
+{
+  "finding": "P2 edge UI regression starts at minimum height",
+  "fix": "Grow via the same real corner gesture first, then retain unchanged boundary/width/height/scale/load assertions",
+  "changedSinceReview": [
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualLabUiTest.kt"
+  ],
+  "result": "59/59 emulator including all7UI tests passed",
+  "independentReviewNotRepeated": true,
+  "rootVerification": "Only test setup changed; seven implementation files still match reviewed hashes."
+}

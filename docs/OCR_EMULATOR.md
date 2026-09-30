@@ -63,3 +63,6 @@ python3 -B scripts/run-ocr-emulator.py --output /private/tmp/kandong-ocr-emulato
 
 
 2026-09-30整页证据→选区投影：当前模拟器测试APK为8b76c71d36e55bf885eaeaa6d90c581637cea53706644ead86f39f4687d78298，主实验包未变。202 JVM／构建／Lint通过后，模拟器94项通过76.218秒，含固定两页真实Image／OCR、16候选无损投影及原60秒TTL实际失效；[本轮说明](OCR_REGION_CONTEXT.md)。使用新证据目录run-emulator.py及此测试SHA、94项目标数，不复用历史冻结入口。没有读取屏幕或更新手机；实验和模拟器已停止。
+
+
+2026-09-30可视化实验完成：modelprobe新增debug薄宿主，主实验APK更新为55291acf66cc2bdb5d7b40ffd0bc368bcf441ce61f33f9ffa3b0f173e7b279ca，测试包7f3816273ada270057f8a58dfcab85622b98bb3733c9ff5bebecf63cce6affb7，两包均已核对安装哈希。217 JVM／构建／Lint，专用模拟器59项全过（7UI、真实60秒清理），独立冷启动／横屏菜单／旋转清空／缺包提示通过；旧58/59失败和修正保留。见[运行及截图](OCR_REGION_VISUAL_LAB.md)。专用模拟器已停止；手机未更新，不复用历史冻结runner到新包。

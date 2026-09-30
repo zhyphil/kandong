@@ -1,0 +1,12 @@
+{
+  "installed": {
+    "com.kandong.modelprobe": "55291acf66cc2bdb5d7b40ffd0bc368bcf441ce61f33f9ffa3b0f173e7b279ca",
+    "com.kandong.modelprobe.test": "7f3816273ada270057f8a58dfcab85622b98bb3733c9ff5bebecf63cce6affb7"
+  },
+  "coldLaunch": true,
+  "explicitShow": true,
+  "landscape": true,
+  "rotationClears": true,
+  "missingPackageError": true,
+  "restoredPair": true
+}

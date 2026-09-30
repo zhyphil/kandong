@@ -7,7 +7,7 @@
         <!-- Initialize the bundled test-only SDK explicitly with the instrumentation package context. -->
         <provider android:name="com.google.mlkit.common.internal.MlKitInitProvider"
             android:authorities="${applicationId}.mlkitinitprovider" tools:node="remove" />
-        <!-- This test suite never starts activities or operates the device UI. -->
+        <!-- OCR tests remain headless; RegionVisualLabUiTest operates only the debug fixture Activity. -->
         <activity android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity" tools:node="remove" />
         <activity android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity" tools:node="remove" />
         <activity android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity" tools:node="remove" />

@@ -1,0 +1,23 @@
+{
+  "base": "5fa799a",
+  "jvm": {
+    "tests": 217,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "sourceSha256": {
+    "modelprobe/src/debug/java/com/kandong/modelprobe/RegionVisualLabActivity.java": "ed6d5012ea7c0e8b2f43930404a30afe96880e69e77ecd9080acdffa53a2139d",
+    "modelprobe/src/debug/AndroidManifest.xml": "8cf29f75017c3ff2d9565dc1c05a10f8712e5e9c8ec59d9e90d501fca4f2127f",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/RegionVisualFixture.kt": "14ad54444e5953ca895cfdb4fb2b9dcb0731635547faeeba48675da3a71d6b07",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/RegionVisualSession.kt": "fa0c548647368daee3e02e408cd9a62bca8b7aa0ed0a289aaad748d9450012d0",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/RegionVisualSessionTest.kt": "eb2b2e2e479778a5830e59f5beb559cbb53810c16fbd6067cd56170c76bf2596",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualLabSurface.kt": "1870c2a433b40ddb498e7b8280985cf1dad03dea30bc28dfb2fe8f9e4fb34b3d",
+    "modelprobe/src/androidTest/java/com/kandong/modelprobe/RegionVisualLabUiTest.kt": "e305bacc08d8eba707d60611068d3ffc267aa6d8cacf0a116012d8a325cf9141",
+    "modelprobe/src/androidTest/AndroidManifest.xml": "54c1cc54986d3e752b6210e9dcf5ce444afdb7be011adf5f5f6c7237736d7b06"
+  },
+  "apks": {
+    "modelprobe/build/outputs/apk/debug/modelprobe-debug.apk": "55291acf66cc2bdb5d7b40ffd0bc368bcf441ce61f33f9ffa3b0f173e7b279ca",
+    "modelprobe/build/outputs/apk/androidTest/debug/modelprobe-debug-androidTest.apk": "7f3816273ada270057f8a58dfcab85622b98bb3733c9ff5bebecf63cce6affb7"
+  }
+}

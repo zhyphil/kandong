@@ -1,0 +1,17 @@
+{
+  "checked": "2026-09-30",
+  "sources": [
+    {
+      "url": "https://developer.android.com/reference/android/app/Instrumentation#startActivitySync(android.content.Intent)",
+      "use": "UI tests start the debug host in the instrumented target process"
+    },
+    {
+      "url": "https://developer.android.com/reference/android/view/ScaleGestureDetector",
+      "use": "Two-pointer mirror zoom gesture recognition"
+    },
+    {
+      "url": "https://developer.android.com/reference/android/app/UiAutomation",
+      "use": "Bounded instrumented test gestures and screenshots of the owned sample UI"
+    }
+  ]
+}

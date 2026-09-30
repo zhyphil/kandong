@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kandong.modelprobe.RegionVisualSessionTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-09-30T18:47:02.753Z" hostname="HAOYUs-MacBook-Pro-9.local" time="0.006">
+  <properties/>
+  <testcase name="blankPageIsNotAnUntriggeredOrExpiredPage" classname="com.kandong.modelprobe.RegionVisualSessionTest" time="0.002"/>
+  <testcase name="narrowSelectionKeepsOffRoiConflictingMemberInContext" classname="com.kandong.modelprobe.RegionVisualSessionTest" time="0.0"/>
+  <testcase name="extremeMovesAndResizesStayWithinPageAndRejectNonFiniteChanges" classname="com.kandong.modelprobe.RegionVisualSessionTest" time="0.001"/>
+  <testcase name="originalSixtySecondDeadlineClearsAndCannotReviveOnClockRollback" classname="com.kandong.modelprobe.RegionVisualSessionTest" time="0.0"/>
+  <testcase name="moveScalePanResizeReuseSamePageAndOriginalAcquiredTime" classname="com.kandong.modelprobe.RegionVisualSessionTest" time="0.0"/>
+  <testcase name="menuRestoresCollapsedModeWithoutReloadingOrOldText" classname="com.kandong.modelprobe.RegionVisualSessionTest" time="0.0"/>
+  <testcase name="collapsedRestorePreservesRegionScaleAndPanButRequiresAnotherClick" classname="com.kandong.modelprobe.RegionVisualSessionTest" time="0.001"/>
+  <testcase name="independentFreeCornerAndZoomUseSourceCoordinates" classname="com.kandong.modelprobe.RegionVisualSessionTest" time="0.0"/>
+  <testcase name="backgroundAndStopClearDisplayedResultsWithoutAutoReload" classname="com.kandong.modelprobe.RegionVisualSessionTest" time="0.0"/>
+  <testcase name="viewportAndGeometryNormalizePanWithoutLoadingOrRenewing" classname="com.kandong.modelprobe.RegionVisualSessionTest" time="0.001"/>
+  <testcase name="clockRollbackDuringActiveDisplayClearsPermanently" classname="com.kandong.modelprobe.RegionVisualSessionTest" time="0.0"/>
+  <testcase name="onlyExplicitShowLoadsAndRetainsWholeEvidenceWithConflictAndEmpty" classname="com.kandong.modelprobe.RegionVisualSessionTest" time="0.0"/>
+  <testcase name="oldRefreshAfterNewExplicitShowUsesNewDeadline" classname="com.kandong.modelprobe.RegionVisualSessionTest" time="0.001"/>
+  <testcase name="fixtureUsesActualStripOverlapAndRetainsOffRoiConflictMember" classname="com.kandong.modelprobe.RegionVisualSessionTest" time="0.0"/>
+  <testcase name="stoppedExplicitRestartAndBackgroundClickBoundary" classname="com.kandong.modelprobe.RegionVisualSessionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
