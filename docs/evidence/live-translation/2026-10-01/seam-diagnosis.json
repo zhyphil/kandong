@@ -27,6 +27,16 @@
   "apkBytes": 347843728,
   "apkSha256": "df2d3307ac5c0c69d13d71f668238fbee4a33d681d452f30bb3b8115753fa54e",
   "installationResult": "Success",
-  "deviceOutcome": "pending user capture",
+  "deviceOutcome": {
+    "userReportedStatus": "已识别25块",
+    "userReportedBlockCount": 25,
+    "adjustmentDetails": "pending user clarification",
+    "numericSuccessIndependentlyObserved": false,
+    "serviceAtFollowUp": "No services match",
+    "sourceTextOrScreenshotRead": false,
+    "visualCorrespondenceAccepted": false,
+    "translationAccepted": false,
+    "seamStabilityAccepted": false
+  },
   "realPageAccepted": false
 }
