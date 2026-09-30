@@ -1,0 +1,73 @@
+{
+  "twoReplaysByteIdentical": true,
+  "sha256": "f720241b1340e93b085585fc48d8d5466b7fc205b32bd00d40eaafae6f3cebd5",
+  "historicalDeviceAssociationParity": [
+    "ch--en-normal",
+    "ch--en-seam",
+    "ch--fr-normal",
+    "ch--fr-seam",
+    "ch--hans-normal",
+    "ch--hans-seam",
+    "ch--hant-normal",
+    "ch--hant-seam",
+    "ch--en-seam-1080",
+    "ch--blank",
+    "latin--en-normal",
+    "latin--en-seam",
+    "latin--fr-normal",
+    "latin--fr-seam",
+    "latin--hans-normal",
+    "latin--hans-seam",
+    "latin--hant-normal",
+    "latin--hant-seam",
+    "latin--en-seam-1080",
+    "latin--blank"
+  ],
+  "scope": "Archived fixed-page data processed on host; not a current Android or Huawei execution.",
+  "lintIssues": {
+    "prior": [
+      [
+        "OldTargetApi",
+        "Warning"
+      ],
+      [
+        "GradleDependency",
+        "Warning"
+      ],
+      [
+        "GradleDependency",
+        "Warning"
+      ],
+      [
+        "DataExtractionRules",
+        "Warning"
+      ],
+      [
+        "MissingApplicationIcon",
+        "Warning"
+      ],
+      [
+        "SetTextI18n",
+        "Warning"
+      ]
+    ],
+    "current": [
+      [
+        "OldTargetApi",
+        "Warning"
+      ],
+      [
+        "DataExtractionRules",
+        "Warning"
+      ],
+      [
+        "MissingApplicationIcon",
+        "Warning"
+      ],
+      [
+        "SetTextI18n",
+        "Warning"
+      ]
+    ]
+  }
+}

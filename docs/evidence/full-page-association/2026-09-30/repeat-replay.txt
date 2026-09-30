@@ -1,0 +1,35 @@
+> Task :modelprobe:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :modelprobe:validateProbeAssets
+> Task :modelprobe:preBuild
+> Task :modelprobe:preDebugBuild
+> Task :modelprobe:checkDebugAarMetadata UP-TO-DATE
+> Task :modelprobe:processDebugNavigationResources UP-TO-DATE
+> Task :modelprobe:compileDebugNavigationResources UP-TO-DATE
+> Task :modelprobe:generateDebugResValues UP-TO-DATE
+> Task :modelprobe:mapDebugSourceSetPaths UP-TO-DATE
+> Task :modelprobe:generateDebugResources UP-TO-DATE
+> Task :modelprobe:mergeDebugResources UP-TO-DATE
+> Task :modelprobe:packageDebugResources UP-TO-DATE
+> Task :modelprobe:parseDebugLocalResources UP-TO-DATE
+> Task :modelprobe:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :modelprobe:extractDeepLinksDebug UP-TO-DATE
+> Task :modelprobe:processDebugMainManifest UP-TO-DATE
+> Task :modelprobe:processDebugManifest UP-TO-DATE
+> Task :modelprobe:processDebugManifestForPackage UP-TO-DATE
+> Task :modelprobe:processDebugResources UP-TO-DATE
+> Task :modelprobe:compileDebugKotlin UP-TO-DATE
+> Task :modelprobe:javaPreCompileDebug UP-TO-DATE
+> Task :modelprobe:compileDebugJavaWithJavac NO-SOURCE
+> Task :modelprobe:bundleDebugClassesToRuntimeJar UP-TO-DATE
+> Task :modelprobe:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :modelprobe:verifyPolygonProbeVendor
+> Task :modelprobe:compileDebugUnitTestKotlin UP-TO-DATE
+> Task :modelprobe:preDebugUnitTestBuild
+> Task :modelprobe:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :modelprobe:compileDebugUnitTestJavaWithJavac UP-TO-DATE
+> Task :modelprobe:processDebugJavaRes UP-TO-DATE
+> Task :modelprobe:processDebugUnitTestJavaRes UP-TO-DATE
+> Task :modelprobe:testDebugUnitTest
+
+BUILD SUCCESSFUL in 1s
+27 actionable tasks: 3 executed, 24 up-to-date

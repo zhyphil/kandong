@@ -40,6 +40,7 @@ android {
     sourceSets.getByName("test").resources {
         srcDir(rootProject.file("docs/fixtures/recognition-prep-v1"))
         srcDir("src/androidTest/assets")
+        srcDir(rootProject.file("docs/fixtures/full-page-association-v1"))
     }
 }
 dependencies {

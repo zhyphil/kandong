@@ -4,7 +4,7 @@
 
 ## 环境与结论
 
-- AVD：`KanDong_OCR_API37_16K`，存储于 `/private/tmp/kandong-avd`，仅本项目使用；ADB `emulator-5582`。
+- AVD：`KanDong_OCR_API37_16K`，仅本项目使用；ADB `emulator-5582`。2026-09-24的临时目录 `/private/tmp/kandong-avd` 后续已不存在；2026-09-30用本机同一revision 9镜像重建于 `/Users/haoyuzuo/Projects/KanDong/.local/avd`（Git忽略），不依赖其他项目或重新下载镜像。
 - Emulator 37.1.11；本机已有镜像 `system-images;android-37.1;google_apis_playstore_ps16k;arm64-v8a` revision 9；运行时 API37/Android17，ARM64，16KiB 内存页，4核/3GiB。
 - 新镜像正常报告 CPU 能力（本轮没有 SVE/SVE2）。原 API36 环境加载 OpenCV 时的 SIGILL 未被修复；这是经验证的替代环境，不宣称已修复底层根因。旧失败记录保留。
 - OpenCV 5.0.0.1、ORT1.30、模型、固定参考和验收门槛均未变，未伪造 CPU 能力、修改库分派或降低标准。
@@ -26,7 +26,7 @@
 工作目录 `/Users/haoyuzuo/Projects/KanDong`。只启动此专用AVD；不能使用其他项目的设备。现有AVD已创建，不需要重复创建或安装系统镜像。
 
 ```sh
-ANDROID_AVD_HOME=/private/tmp/kandong-avd /Users/haoyuzuo/Library/Android/sdk/emulator/emulator -avd KanDong_OCR_API37_16K -port 5582 -no-snapshot -no-boot-anim -no-audio -no-window -gpu swiftshader -memory 3072
+ANDROID_AVD_HOME=/Users/haoyuzuo/Projects/KanDong/.local/avd /Users/haoyuzuo/Library/Android/sdk/emulator/emulator -avd KanDong_OCR_API37_16K -port 5582 -no-snapshot -no-boot-anim -no-audio -no-window -gpu swiftshader -memory 3072
 ```
 
 这是持续运行的进程，可另开终端。需要可视窗口时去掉 `-no-window`。等待启动完成后，必要时安装上述同一基线包：
@@ -56,3 +56,5 @@ python3 -B scripts/run-ocr-emulator.py --output /private/tmp/kandong-ocr-emulato
 ## 后续实验包
 
 候选关联v2已完成两轮每轮14项模拟器验收，使用独立入口 `scripts/run-candidate-emulator.py`；详情及新构件身份见[候选v2](CANDIDATE_SELECTION_V2.md)。上文冻结旧包入口保持原身份检查。
+
+2026-09-30：重建的专用AVD已核对API37、arm64-v8a、16384字节页和两安装包哈希，20项跨段关联同源测试通过；[本轮记录](FULL_PAGE_OCR_ASSOCIATION.md)。主实验APK未变，测试APK已更新为 `6ed22110a0b4dd21e338287a5f7309822cae1a2269bfeda559f18241304fe51f`；上方9月24日冻结入口及旧APK身份是历史证据，不适用于新包。没有重新运行模型或采集屏幕。

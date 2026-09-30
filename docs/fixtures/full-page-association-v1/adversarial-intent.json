@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "phase": "pre-implementation",
+  "scope": "Behavioral intent frozen before implementing association; numeric geometry and Kotlin expectations will be finalized from the independent audit, before replay. This is not an unseen OCR-quality corpus.",
+  "cases": [
+    ["aligned-repeat", "Two well-overlapping interior boxes in adjacent strips, same nonempty raw text; one association with both source IDs."],
+    ["variant-conflict", "Aligned boxes containing 城市稅 and 城市税; retain both raw strings, conflict, no selected correction."],
+    ["clipped-full-pair", "Read-edge-clipped short result overlaps a complete result; retain both and flag partial evidence."],
+    ["same-text-adjacent-columns", "Same label in separate side-by-side columns must not become one group."],
+    ["same-text-different-rows", "Identical raw text at separate page y coordinates stays separate."],
+    ["same-strip", "Two candidates from the same strip are not automatically deduplicated."],
+    ["same-strip-ambiguity", "Two candidates from one strip match one from its neighbor; ambiguous association, no agreed text."],
+    ["transitive-chain", "A-B and B-C edges without A-C agreement do not establish one confirmed element."],
+    ["tall-over-halo", "A long/tall box crossing more than the overlap extent is retained and needs review."],
+    ["rotated-envelope", "Overlapping axis-aligned envelopes of unsupported rotated quads cannot be called agreement."],
+    ["core-center-jitter", "Shifting ownership center across the core boundary never drops either original candidate."],
+    ["empty-recognition", "Empty raw text remains a candidate; cannot supply agreed text."],
+    ["nonoverlap", "Text similarity alone does not associate spatially disjoint boxes."],
+    ["blank-page", "A complete empty page yields no invented candidates/groups."],
+    ["mixed-provenance", "Capture version, page, model or planner mismatch rejects the whole request."],
+    ["bad-geometry", "Non-finite, degenerate, out-of-read or inconsistent local/page coordinates cannot enter accepted output."],
+    ["cancel-and-incomplete", "Incomplete or cancelled work publishes no groups, including late cancellation."],
+    ["order-and-immutability", "Input permutation leaves IDs/groups unchanged; caller mutation cannot alter accepted snapshots."],
+    ["budget-boundaries", "128 candidates and 8192 characters are bounded; overflow rejects the whole request."],
+    ["identity", "Duplicate source IDs cannot silently overwrite another candidate."]
+  ]
+}

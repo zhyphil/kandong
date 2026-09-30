@@ -1,0 +1,10 @@
+{
+  "frozenAt": "2026-09-30T15:13:40.261723+00:00",
+  "scope": "Rules and actual-only archived input frozen before association implementation/replay; no new OCR quality corpus.",
+  "files": {
+    "docs/plans/2026-09-30-seam-association.md": "50c1ad79a4f60ee15797129f4ba2f11006e9d0128fc598f0ff4e50ce064285d0",
+    "docs/fixtures/full-page-association-v1/adversarial-intent.json": "4ae10434250dd73e160786207b73ac323b64fef7d9c656050be50ea1c771323c",
+    "docs/fixtures/full-page-association-v1/archived.properties": "c492f2628a449b901041343a658a9cac9ffff2d31196fd51ec31854e7cd660f2",
+    "docs/fixtures/full-page-association-v1/manifest.json": "5207766e12f957782aa835b24c9c118025fba5c4c4c2c67bc5203c90587fcb3a"
+  }
+}

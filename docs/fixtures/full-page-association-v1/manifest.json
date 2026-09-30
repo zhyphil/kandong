@@ -1,0 +1,330 @@
+{
+  "schema": 1,
+  "fixtureVersion": "full-page-association-v1",
+  "scope": "Archived synthetic candidates from d56a87c. No fresh inference, real pixels, or expected text passed to association. Empty-page identity is explicitly derived from the frozen runner formula and same-run neighbor session, not directly recorded in its candidates.",
+  "caseCount": 40,
+  "candidateCount": 472,
+  "archivedSha256": "c492f2628a449b901041343a658a9cac9ffff2d31196fd51ec31854e7cd660f2",
+  "sources": [
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-ch-en-normal.json",
+      "sha256": "616ed3c8759046463c5774ab848bcd19d78e82690fe0e4202e085d4c1a34abaf",
+      "page": "en-normal",
+      "model": "ch",
+      "candidates": 8
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-ch-en-seam.json",
+      "sha256": "967c248f9b83e0973efb6cce67d9b4326da82e0291c46e14923cbf0d7ff5be5b",
+      "page": "en-seam",
+      "model": "ch",
+      "candidates": 16
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-ch-fr-normal.json",
+      "sha256": "bf29382b17ad28c606704d3ac6e3c1248cbfa3f179dd478f8ddd09d279481003",
+      "page": "fr-normal",
+      "model": "ch",
+      "candidates": 10
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-ch-fr-seam.json",
+      "sha256": "40170ab32d039099c789257549d7f5893f8d04eb3488a06103a1722a881f5f61",
+      "page": "fr-seam",
+      "model": "ch",
+      "candidates": 20
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-ch-hans-normal.json",
+      "sha256": "660c588ad05fc930e79ee548e45fcbb27b41c60db31ab49835d2ff925f33f6dc",
+      "page": "hans-normal",
+      "model": "ch",
+      "candidates": 9
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-ch-hans-seam.json",
+      "sha256": "cf3753b7bbbc7b4340730a50154c3877c5b89f75fcbd3a5f1d4003bb93d2abfb",
+      "page": "hans-seam",
+      "model": "ch",
+      "candidates": 16
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-ch-hant-normal.json",
+      "sha256": "78e06ee79fc937323652664916339b56941d4948892d4d131331dcf0bc371821",
+      "page": "hant-normal",
+      "model": "ch",
+      "candidates": 9
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-ch-hant-seam.json",
+      "sha256": "253e31c9469bb301868fa9ed4e95f4cc28c7f48e64d96a8bd64dec93ce53513e",
+      "page": "hant-seam",
+      "model": "ch",
+      "candidates": 16
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-ch-en-seam-1080.json",
+      "sha256": "7209609ed6c30a80a22bd32a761bf1339fb915d5461d75a358f052d1e9a8a38c",
+      "page": "en-seam-1080",
+      "model": "ch",
+      "candidates": 14
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-ch-blank.json",
+      "sha256": "aaeaa63dff1af28cecb1381a181ca8c4b0c34f4459e975c8951cb5138e482e2b",
+      "page": "blank",
+      "model": "ch",
+      "candidates": 0
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-latin-en-normal.json",
+      "sha256": "d1dbd055b5b7d0948e6924ee0c85f8417ec2538e7e43932f0bf7c9f5a2b1ee01",
+      "page": "en-normal",
+      "model": "latin",
+      "candidates": 8
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-latin-en-seam.json",
+      "sha256": "7d59768e1e2f7a222436f7e39083f63df0698c31d1e5e5b2e8254837271ea7ec",
+      "page": "en-seam",
+      "model": "latin",
+      "candidates": 16
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-latin-fr-normal.json",
+      "sha256": "1e2d3577f8c9646d6625e80d61198a9d458fa20d731a85f768948c24990508e6",
+      "page": "fr-normal",
+      "model": "latin",
+      "candidates": 10
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-latin-fr-seam.json",
+      "sha256": "1be27eb90ec3cac10ac1886ac94ca13550a73a5e22e6a3bfd79dea688ea3a3ff",
+      "page": "fr-seam",
+      "model": "latin",
+      "candidates": 20
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-latin-hans-normal.json",
+      "sha256": "efe1a285dc38eaf81defdec6a6ae8d08df818f013656a3a75fa0464dcfb842f1",
+      "page": "hans-normal",
+      "model": "latin",
+      "candidates": 9
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-latin-hans-seam.json",
+      "sha256": "0780b8ce82b887e003efc609e0ffcaf55887b95f71e84ff76ca9d08a266fdf62",
+      "page": "hans-seam",
+      "model": "latin",
+      "candidates": 16
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-latin-hant-normal.json",
+      "sha256": "6ff2670d17aef0d9bd95cf90eca20a65a74b79db6f69b2200ea84389929aa5b5",
+      "page": "hant-normal",
+      "model": "latin",
+      "candidates": 9
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-latin-hant-seam.json",
+      "sha256": "76df762e91afeb816f234c259c4d14bf99b66ee553c099127820512cb474f37c",
+      "page": "hant-seam",
+      "model": "latin",
+      "candidates": 16
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-latin-en-seam-1080.json",
+      "sha256": "95fed736ad1207ff50630d6b780f0777ae5d38f934b7074538b9a16079f2597e",
+      "page": "en-seam-1080",
+      "model": "latin",
+      "candidates": 14
+    },
+    {
+      "device": "emulator-final",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/emulator-final/full-page-ocr-latin-blank.json",
+      "sha256": "5cd7e6c2e58755660eec622393a36841c27a1c1e10b9fc0923abd9c903da7b12",
+      "page": "blank",
+      "model": "latin",
+      "candidates": 0
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-ch-en-normal.json",
+      "sha256": "0ce244d7859f3bc180e9314a7f7aad1e06e571bf67f8baa75a967faf628ff8d5",
+      "page": "en-normal",
+      "model": "ch",
+      "candidates": 8
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-ch-en-seam.json",
+      "sha256": "3a46063f0c76b7aa8372343a2d8712539c7e2745e69b7f4445e54ac6ba468414",
+      "page": "en-seam",
+      "model": "ch",
+      "candidates": 16
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-ch-fr-normal.json",
+      "sha256": "26cde31d7a93e8612f37a619f632a3a3b5d2d6f4a580d6db6c2ac85a386d762a",
+      "page": "fr-normal",
+      "model": "ch",
+      "candidates": 10
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-ch-fr-seam.json",
+      "sha256": "4d5a5a66a11a5499b0b741647c17b564cec2b6b9db5a38696ccfb8d6d3468b90",
+      "page": "fr-seam",
+      "model": "ch",
+      "candidates": 20
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-ch-hans-normal.json",
+      "sha256": "fc949398101714b479a0e3828a36265b76e8db9e5f417487283d2dee475e3a27",
+      "page": "hans-normal",
+      "model": "ch",
+      "candidates": 9
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-ch-hans-seam.json",
+      "sha256": "77e3d9e226d779b9d245a7af118ddc6e4c80d1e7ee388087fc2f25c31d078560",
+      "page": "hans-seam",
+      "model": "ch",
+      "candidates": 16
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-ch-hant-normal.json",
+      "sha256": "bc7cb27cdf9ab9339020280b798f470de9e43b5c299c483234f10235ee29d9b3",
+      "page": "hant-normal",
+      "model": "ch",
+      "candidates": 9
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-ch-hant-seam.json",
+      "sha256": "a58cb97fcfb79d9cc2bdd586a5aaa2b242fa576557329e9966c3d40693931de9",
+      "page": "hant-seam",
+      "model": "ch",
+      "candidates": 16
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-ch-en-seam-1080.json",
+      "sha256": "669ca77aeb387b8aa24637d179a24d71657a0a5d70c9255e9f2c7b6cba722869",
+      "page": "en-seam-1080",
+      "model": "ch",
+      "candidates": 14
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-ch-blank.json",
+      "sha256": "7e06e23210199bd385d35c870b993ebd30282863997d4007212656c081de1fc6",
+      "page": "blank",
+      "model": "ch",
+      "candidates": 0
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-latin-en-normal.json",
+      "sha256": "62faa5e5ed8ea3952d5fe4c5022dd228f72064c58d8d14ceed452b97624a5db7",
+      "page": "en-normal",
+      "model": "latin",
+      "candidates": 8
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-latin-en-seam.json",
+      "sha256": "3df24f7ca952963cca4fd9eca1da699f958a4bfc17ede577a4e29fc473e7aa83",
+      "page": "en-seam",
+      "model": "latin",
+      "candidates": 16
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-latin-fr-normal.json",
+      "sha256": "4a27811af200dda511b1ddc808360965cbca9c6f2c947cdce3a8f4b14cc4ce65",
+      "page": "fr-normal",
+      "model": "latin",
+      "candidates": 10
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-latin-fr-seam.json",
+      "sha256": "51dcde20afa3c9efd4e0a2fa685ae6e9eba30a0cb44e76e42ac151502bf7c422",
+      "page": "fr-seam",
+      "model": "latin",
+      "candidates": 20
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-latin-hans-normal.json",
+      "sha256": "9bb1b393da4a3abeffdbb0662853102f06f1def7608c4b98f7726e118cb12bd4",
+      "page": "hans-normal",
+      "model": "latin",
+      "candidates": 9
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-latin-hans-seam.json",
+      "sha256": "a25e02448bbf0d65531c070b19e3af2928cd49d34fa994a68dbc6ac981c73625",
+      "page": "hans-seam",
+      "model": "latin",
+      "candidates": 16
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-latin-hant-normal.json",
+      "sha256": "1347a48020f504b05429816522093dd946f6fad6f17c88d01414c5f3c258dd20",
+      "page": "hant-normal",
+      "model": "latin",
+      "candidates": 9
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-latin-hant-seam.json",
+      "sha256": "d462c8c47cada601f6c155b3b6497f68a91ab3efc2b1633db9a36958eb75b4ee",
+      "page": "hant-seam",
+      "model": "latin",
+      "candidates": 16
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-latin-en-seam-1080.json",
+      "sha256": "c80abfcd5673d76ca67afd62d6dcff8b1e9bd9a8a4951206d10b0136401c3de7",
+      "page": "en-seam-1080",
+      "model": "latin",
+      "candidates": 14
+    },
+    {
+      "device": "huawei-recovered",
+      "file": "docs/evidence/full-page-ocr/2026-09-25/huawei-recovered/full-page-ocr-latin-blank.json",
+      "sha256": "dad3b67763f0497f56ab69289ba10e75582e09131a4b896aa9816cce4227d58c",
+      "page": "blank",
+      "model": "latin",
+      "candidates": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "avd": "KanDong_OCR_API37_16K",
+  "serial": "emulator-5582",
+  "api": 37,
+  "pageSize": 16384,
+  "abi": "arm64-v8a",
+  "avdHome": "/Users/haoyuzuo/Projects/KanDong/.local/avd",
+  "packages": {
+    "com.kandong.modelprobe": {
+      "localPath": "modelprobe/build/outputs/apk/debug/modelprobe-debug.apk",
+      "sha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+      "installedSha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+      "installOutput": "Performing Streamed Install\nSuccess"
+    },
+    "com.kandong.modelprobe.test": {
+      "localPath": "modelprobe/build/outputs/apk/androidTest/debug/modelprobe-debug-androidTest.apk",
+      "sha256": "6ed22110a0b4dd21e338287a5f7309822cae1a2269bfeda559f18241304fe51f",
+      "installedSha256": "6ed22110a0b4dd21e338287a5f7309822cae1a2269bfeda559f18241304fe51f",
+      "installOutput": "Performing Streamed Install\nSuccess"
+    }
+  },
+  "scope": "Fixed adversarial candidate data only; no screen capture or model calls."
+}

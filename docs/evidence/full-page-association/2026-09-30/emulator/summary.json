@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "tests": 20,
+  "elapsedSeconds": 0.5742402080213651,
+  "command": [
+    "/Users/haoyuzuo/Library/Android/sdk/platform-tools/adb",
+    "-s",
+    "emulator-5582",
+    "shell",
+    "am",
+    "instrument",
+    "-w",
+    "-r",
+    "-e",
+    "class",
+    "com.kandong.modelprobe.FullPageOcrAssociationTest",
+    "com.kandong.modelprobe.test/androidx.test.runner.AndroidJUnitRunner"
+  ],
+  "scope": "Fixed adversarial candidate data only; no screen capture or model calls."
+}

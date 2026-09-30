@@ -1,0 +1,568 @@
+{
+  "jvm": 165,
+  "lint": {
+    "Error": 0,
+    "Fatal": 0,
+    "Warning": 4
+  },
+  "mainApkSha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+  "replayCases": 40,
+  "candidates": 472,
+  "groups": 388,
+  "edges": 84,
+  "agreedGroups": 24,
+  "rows": [
+    {
+      "case": "emulator-final--ch--en-normal",
+      "candidates": 8,
+      "groups": 8,
+      "edges": 0,
+      "states": {
+        "ISOLATED:SINGLE": 4,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 0
+    },
+    {
+      "case": "emulator-final--ch--en-seam",
+      "candidates": 16,
+      "groups": 12,
+      "edges": 4,
+      "states": {
+        "ISOLATED:SINGLE": 4,
+        "UNAMBIGUOUS_PAIR:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:DIFFERENT_RAW": 1,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 1
+    },
+    {
+      "case": "emulator-final--ch--fr-normal",
+      "candidates": 10,
+      "groups": 10,
+      "edges": 0,
+      "states": {
+        "ISOLATED:SINGLE": 6,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 0
+    },
+    {
+      "case": "emulator-final--ch--fr-seam",
+      "candidates": 20,
+      "groups": 15,
+      "edges": 5,
+      "states": {
+        "ISOLATED:SINGLE": 6,
+        "UNAMBIGUOUS_PAIR:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:DIFFERENT_RAW": 1,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 2
+    },
+    {
+      "case": "emulator-final--ch--hans-normal",
+      "candidates": 9,
+      "groups": 9,
+      "edges": 0,
+      "states": {
+        "ISOLATED:SINGLE": 7,
+        "UNCERTAIN:SINGLE": 2
+      },
+      "agreed": 0
+    },
+    {
+      "case": "emulator-final--ch--hans-seam",
+      "candidates": 16,
+      "groups": 12,
+      "edges": 4,
+      "states": {
+        "ISOLATED:SINGLE": 4,
+        "UNAMBIGUOUS_PAIR:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:DIFFERENT_RAW": 1,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 1
+    },
+    {
+      "case": "emulator-final--ch--hant-normal",
+      "candidates": 9,
+      "groups": 9,
+      "edges": 0,
+      "states": {
+        "ISOLATED:SINGLE": 5,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 0
+    },
+    {
+      "case": "emulator-final--ch--hant-seam",
+      "candidates": 16,
+      "groups": 12,
+      "edges": 4,
+      "states": {
+        "ISOLATED:SINGLE": 5,
+        "UNAMBIGUOUS_PAIR:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:DIFFERENT_RAW": 2,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:SINGLE": 3
+      },
+      "agreed": 1
+    },
+    {
+      "case": "emulator-final--ch--en-seam-1080",
+      "candidates": 14,
+      "groups": 10,
+      "edges": 4,
+      "states": {
+        "ISOLATED:SINGLE": 4,
+        "UNAMBIGUOUS_PAIR:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:DIFFERENT_RAW": 1,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:SINGLE": 2
+      },
+      "agreed": 2
+    },
+    {
+      "case": "emulator-final--ch--blank",
+      "candidates": 0,
+      "groups": 0,
+      "edges": 0,
+      "states": {},
+      "agreed": 0
+    },
+    {
+      "case": "emulator-final--latin--en-normal",
+      "candidates": 8,
+      "groups": 8,
+      "edges": 0,
+      "states": {
+        "ISOLATED:SINGLE": 4,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 0
+    },
+    {
+      "case": "emulator-final--latin--en-seam",
+      "candidates": 16,
+      "groups": 12,
+      "edges": 4,
+      "states": {
+        "ISOLATED:SINGLE": 4,
+        "UNAMBIGUOUS_PAIR:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:DIFFERENT_RAW": 1,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 1
+    },
+    {
+      "case": "emulator-final--latin--fr-normal",
+      "candidates": 10,
+      "groups": 10,
+      "edges": 0,
+      "states": {
+        "ISOLATED:SINGLE": 6,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 0
+    },
+    {
+      "case": "emulator-final--latin--fr-seam",
+      "candidates": 20,
+      "groups": 15,
+      "edges": 5,
+      "states": {
+        "ISOLATED:SINGLE": 6,
+        "UNAMBIGUOUS_PAIR:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:DIFFERENT_RAW": 1,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 2
+    },
+    {
+      "case": "emulator-final--latin--hans-normal",
+      "candidates": 9,
+      "groups": 9,
+      "edges": 0,
+      "states": {
+        "ISOLATED:SINGLE": 7,
+        "UNCERTAIN:SINGLE": 2
+      },
+      "agreed": 0
+    },
+    {
+      "case": "emulator-final--latin--hans-seam",
+      "candidates": 16,
+      "groups": 12,
+      "edges": 4,
+      "states": {
+        "ISOLATED:SINGLE": 4,
+        "UNAMBIGUOUS_PAIR:DIFFERENT_RAW": 1,
+        "UNCERTAIN:ALL_EMPTY": 1,
+        "UNCERTAIN:DIFFERENT_RAW": 1,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 0
+    },
+    {
+      "case": "emulator-final--latin--hant-normal",
+      "candidates": 9,
+      "groups": 9,
+      "edges": 0,
+      "states": {
+        "ISOLATED:SINGLE": 5,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 0
+    },
+    {
+      "case": "emulator-final--latin--hant-seam",
+      "candidates": 16,
+      "groups": 12,
+      "edges": 4,
+      "states": {
+        "ISOLATED:SINGLE": 5,
+        "UNAMBIGUOUS_PAIR:ALL_EMPTY": 1,
+        "UNCERTAIN:DIFFERENT_RAW": 2,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:SINGLE": 3
+      },
+      "agreed": 0
+    },
+    {
+      "case": "emulator-final--latin--en-seam-1080",
+      "candidates": 14,
+      "groups": 10,
+      "edges": 4,
+      "states": {
+        "ISOLATED:SINGLE": 4,
+        "UNAMBIGUOUS_PAIR:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:DIFFERENT_RAW": 1,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:SINGLE": 2
+      },
+      "agreed": 2
+    },
+    {
+      "case": "emulator-final--latin--blank",
+      "candidates": 0,
+      "groups": 0,
+      "edges": 0,
+      "states": {},
+      "agreed": 0
+    },
+    {
+      "case": "huawei-recovered--ch--en-normal",
+      "candidates": 8,
+      "groups": 8,
+      "edges": 0,
+      "states": {
+        "ISOLATED:SINGLE": 4,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 0
+    },
+    {
+      "case": "huawei-recovered--ch--en-seam",
+      "candidates": 16,
+      "groups": 12,
+      "edges": 4,
+      "states": {
+        "ISOLATED:SINGLE": 4,
+        "UNAMBIGUOUS_PAIR:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:DIFFERENT_RAW": 1,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 1
+    },
+    {
+      "case": "huawei-recovered--ch--fr-normal",
+      "candidates": 10,
+      "groups": 10,
+      "edges": 0,
+      "states": {
+        "ISOLATED:SINGLE": 6,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 0
+    },
+    {
+      "case": "huawei-recovered--ch--fr-seam",
+      "candidates": 20,
+      "groups": 15,
+      "edges": 5,
+      "states": {
+        "ISOLATED:SINGLE": 6,
+        "UNAMBIGUOUS_PAIR:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:DIFFERENT_RAW": 1,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 2
+    },
+    {
+      "case": "huawei-recovered--ch--hans-normal",
+      "candidates": 9,
+      "groups": 9,
+      "edges": 0,
+      "states": {
+        "ISOLATED:SINGLE": 7,
+        "UNCERTAIN:SINGLE": 2
+      },
+      "agreed": 0
+    },
+    {
+      "case": "huawei-recovered--ch--hans-seam",
+      "candidates": 16,
+      "groups": 12,
+      "edges": 4,
+      "states": {
+        "ISOLATED:SINGLE": 4,
+        "UNAMBIGUOUS_PAIR:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:DIFFERENT_RAW": 1,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 1
+    },
+    {
+      "case": "huawei-recovered--ch--hant-normal",
+      "candidates": 9,
+      "groups": 9,
+      "edges": 0,
+      "states": {
+        "ISOLATED:SINGLE": 5,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 0
+    },
+    {
+      "case": "huawei-recovered--ch--hant-seam",
+      "candidates": 16,
+      "groups": 12,
+      "edges": 4,
+      "states": {
+        "ISOLATED:SINGLE": 5,
+        "UNAMBIGUOUS_PAIR:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:DIFFERENT_RAW": 2,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:SINGLE": 3
+      },
+      "agreed": 1
+    },
+    {
+      "case": "huawei-recovered--ch--en-seam-1080",
+      "candidates": 14,
+      "groups": 10,
+      "edges": 4,
+      "states": {
+        "ISOLATED:SINGLE": 4,
+        "UNAMBIGUOUS_PAIR:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:DIFFERENT_RAW": 1,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:SINGLE": 2
+      },
+      "agreed": 2
+    },
+    {
+      "case": "huawei-recovered--ch--blank",
+      "candidates": 0,
+      "groups": 0,
+      "edges": 0,
+      "states": {},
+      "agreed": 0
+    },
+    {
+      "case": "huawei-recovered--latin--en-normal",
+      "candidates": 8,
+      "groups": 8,
+      "edges": 0,
+      "states": {
+        "ISOLATED:SINGLE": 4,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 0
+    },
+    {
+      "case": "huawei-recovered--latin--en-seam",
+      "candidates": 16,
+      "groups": 12,
+      "edges": 4,
+      "states": {
+        "ISOLATED:SINGLE": 4,
+        "UNAMBIGUOUS_PAIR:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:DIFFERENT_RAW": 1,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 1
+    },
+    {
+      "case": "huawei-recovered--latin--fr-normal",
+      "candidates": 10,
+      "groups": 10,
+      "edges": 0,
+      "states": {
+        "ISOLATED:SINGLE": 6,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 0
+    },
+    {
+      "case": "huawei-recovered--latin--fr-seam",
+      "candidates": 20,
+      "groups": 15,
+      "edges": 5,
+      "states": {
+        "ISOLATED:SINGLE": 6,
+        "UNAMBIGUOUS_PAIR:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:DIFFERENT_RAW": 1,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 2
+    },
+    {
+      "case": "huawei-recovered--latin--hans-normal",
+      "candidates": 9,
+      "groups": 9,
+      "edges": 0,
+      "states": {
+        "ISOLATED:SINGLE": 7,
+        "UNCERTAIN:SINGLE": 2
+      },
+      "agreed": 0
+    },
+    {
+      "case": "huawei-recovered--latin--hans-seam",
+      "candidates": 16,
+      "groups": 12,
+      "edges": 4,
+      "states": {
+        "ISOLATED:SINGLE": 4,
+        "UNAMBIGUOUS_PAIR:DIFFERENT_RAW": 1,
+        "UNCERTAIN:ALL_EMPTY": 1,
+        "UNCERTAIN:DIFFERENT_RAW": 1,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 0
+    },
+    {
+      "case": "huawei-recovered--latin--hant-normal",
+      "candidates": 9,
+      "groups": 9,
+      "edges": 0,
+      "states": {
+        "ISOLATED:SINGLE": 5,
+        "UNCERTAIN:SINGLE": 4
+      },
+      "agreed": 0
+    },
+    {
+      "case": "huawei-recovered--latin--hant-seam",
+      "candidates": 16,
+      "groups": 12,
+      "edges": 4,
+      "states": {
+        "ISOLATED:SINGLE": 5,
+        "UNAMBIGUOUS_PAIR:ALL_EMPTY": 1,
+        "UNCERTAIN:DIFFERENT_RAW": 2,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:SINGLE": 3
+      },
+      "agreed": 0
+    },
+    {
+      "case": "huawei-recovered--latin--en-seam-1080",
+      "candidates": 14,
+      "groups": 10,
+      "edges": 4,
+      "states": {
+        "ISOLATED:SINGLE": 4,
+        "UNAMBIGUOUS_PAIR:IDENTICAL_NONEMPTY": 2,
+        "UNCERTAIN:DIFFERENT_RAW": 1,
+        "UNCERTAIN:IDENTICAL_NONEMPTY": 1,
+        "UNCERTAIN:SINGLE": 2
+      },
+      "agreed": 2
+    },
+    {
+      "case": "huawei-recovered--latin--blank",
+      "candidates": 0,
+      "groups": 0,
+      "edges": 0,
+      "states": {},
+      "agreed": 0
+    }
+  ],
+  "baseCommit": "d56a87c",
+  "date": "2026-09-30",
+  "scope": "Test-only association and archived synthetic replay; no new OCR inference, actual-screen capture, translation or Huawei run.",
+  "emptyCandidatesPreserved": 40,
+  "noncoreCandidatesPreserved": 92,
+  "utf16UnitsPreserved": 7880,
+  "emulator": {
+    "passed": true,
+    "tests": 20,
+    "elapsedSeconds": 0.5742402080213651,
+    "command": [
+      "/Users/haoyuzuo/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5582",
+      "shell",
+      "am",
+      "instrument",
+      "-w",
+      "-r",
+      "-e",
+      "class",
+      "com.kandong.modelprobe.FullPageOcrAssociationTest",
+      "com.kandong.modelprobe.test/androidx.test.runner.AndroidJUnitRunner"
+    ],
+    "scope": "Fixed adversarial candidate data only; no screen capture or model calls."
+  },
+  "replaySha256": "f720241b1340e93b085585fc48d8d5466b7fc205b32bd00d40eaafae6f3cebd5",
+  "replaysByteIdentical": true,
+  "redBeforeImplementation": "Not established. Worker was blocked by Gradle cache permission. Root attempted run overlapped source edits; exit 0 is not valid red evidence.",
+  "independentReview": "No must-fix findings; read-only fingerprint unchanged.",
+  "jvmResults": {
+    "tests": 165,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "sourceSha256": {
+    "modelprobe/build.gradle.kts": "1349d59c50bd8d30ec7c5f84ff610bbf116afbb2bcdb9a7c8391c9cd113f4265",
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageOcrAssociation.kt": "17b9d38812afff2c365a7f91a6a4cf354877563a801ecb26731289f81c277bba",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/FullPageOcrAssociationTest.kt": "5dd5d97faa5b4feee11ec6d71338c00088fd170a231810d8a70edb8cfb955804",
+    "modelprobe/src/test/java/com/kandong/modelprobe/FullPageOcrAssociationReplayTest.kt": "0ac4f6771ff4233e287fca3ef54b54628345c2e16a4957182901abf445581f80",
+    "docs/fixtures/full-page-association-v1/archived.properties": "c492f2628a449b901041343a658a9cac9ffff2d31196fd51ec31854e7cd660f2",
+    "docs/fixtures/full-page-association-v1/manifest.json": "5207766e12f957782aa835b24c9c118025fba5c4c4c2c67bc5203c90587fcb3a",
+    "docs/fixtures/full-page-association-v1/adversarial-intent.json": "4ae10434250dd73e160786207b73ac323b64fef7d9c656050be50ea1c771323c",
+    "docs/plans/2026-09-30-seam-association.md": "50c1ad79a4f60ee15797129f4ba2f11006e9d0128fc598f0ff4e50ce064285d0"
+  },
+  "apks": {
+    "com.kandong.modelprobe": {
+      "localPath": "modelprobe/build/outputs/apk/debug/modelprobe-debug.apk",
+      "sha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+      "installedSha256": "7f9ff2550d8618a03903eaaccdb8bf98aa3e0ca631663cd1773563b4185a6aea",
+      "installOutput": "Performing Streamed Install\nSuccess",
+      "archivedJvmFixtureBundled": false
+    },
+    "com.kandong.modelprobe.test": {
+      "localPath": "modelprobe/build/outputs/apk/androidTest/debug/modelprobe-debug-androidTest.apk",
+      "sha256": "6ed22110a0b4dd21e338287a5f7309822cae1a2269bfeda559f18241304fe51f",
+      "installedSha256": "6ed22110a0b4dd21e338287a5f7309822cae1a2269bfeda559f18241304fe51f",
+      "installOutput": "Performing Streamed Install\nSuccess",
+      "archivedJvmFixtureBundled": false
+    }
+  }
+}

@@ -1,31 +1,32 @@
 # KanDong 交接记录
 
-更新时间：2026-09-25。用户因Codex配额要求整理并结束；**已停止推进，没有安排自动运行**。恢复须等待用户新的指示。
+更新于2026-09-30。用户已恢复工作，本轮完成跨段关联技术验收；下一项为实际整屏OCR结果与关联器接线。没有安排后台定时运行。
 
-## 唯一工作目录与边界
+## 目录与边界
 
-`/Users/haoyuzuo/Projects/KanDong`，远端 `git@github.com:zhyphil/kandong.git`。与SpotAva无关，不读取其他项目。先读根目录AGENTS.md和TASKS.md。仅本地开发／提交获授权，未获推送、发布或部署授权。系统安装及共享由用户确认。
+唯一目录 /Users/haoyuzuo/Projects/KanDong，远端 git@github.com:zhyphil/kandong.git。先读AGENTS.md和TASKS.md，不读取其他项目。仅本地开发／提交获授权，没有推送、发布、部署授权；华为安装／共享由用户确认。
 
-正式v0.1.0放大镜交互已冻结，app/compat/graphics本轮未改。当前是独立合成实验，正式手机放大镜尚未接翻译，不可据此宣称翻译已可用。
+v0.1.0交互固定，本轮未改app/compat/graphics。正式手机放大镜未接翻译；未读取真实屏幕、调用模型／DeepL、访问密钥或联网服务。
 
-## 本轮完成
+## 完成情况
 
-- 整页同一Image按全宽条带送入实际本机OCR，保留每个候选原始ID、文本、位置和模型身份；取消／失效／故障丢弃整页。
-- 144本机单测、构建、Lint0错误；API37/16KiB专用模拟器39项通过。
-- 华为LIO-AN00/API31已安装最终实验测试包。USB中断后恢复20页和故障报告，均通过；另36项较短回归通过。没有完整的华为39项控制台汇总，记录不可改写。20页文字／框／形状／分数与模拟器完全相同。
-- 原始OCR质量未通过；核心中心过滤基线会删掉一个本来正确的繁体候选，明确拒绝采用。
+- 9月25日整屏Image→分段OCR：144 JVM、模拟器39项；华为USB中断后恢复20页／生命周期／故障报告，另补36项短回归，无华为39项完整控制台汇总。[历史记录](FULL_PAGE_OCR_PROBE.md)。核心中心过滤会删正确繁体候选，已拒绝。
+- 本轮测试关联器保留全部候选，按空间关联，文本与几何不确定性分开；取消／缺段／身份异常整页拒绝。20类冻结反例，165 JVM、离线构建、Lint0错误4既有警告、模拟器20项通过。
+- 两设备历史40组／472候选全部字段保留，含40空串／92非核心；388组／84关系，24组仅代表无歧义逐字相同。两轮字节一致，“稅／税”冲突不选择；不是新增华为或OCR质量通过。
+- 独立只读复核无必须修复问题。有效红灯未记录（缓存权限阻止，补跑与修改重叠），保留但不计验收；稳定源码下最终165项证据另存。
 
-完整说明：[FULL_PAGE_OCR_PROBE.md](FULL_PAGE_OCR_PROBE.md)。证据与最终源码／APK指纹：[summary.json](evidence/full-page-ocr/2026-09-25/summary.json)。本轮提交为该文档所在提交，可用 `git log -1` 核对，不含推送。
+[本轮说明](FULL_PAGE_OCR_ASSOCIATION.md)；[证据／源码／APK哈希](evidence/full-page-association/2026-09-30/summary.json)。本地提交用git log核对，没有推送。
 
-## 恢复后的下一项
+## 下一项
 
-先核对Git工作区和任务板，不重复安装或重跑已验收项目。下一项是**跨段空间关联与冲突保留**，需要冻结新反例：相邻列、相同文字不同位置、核心边界漂移、超过halo的文字、截断片段。保留全部原始候选；不凭期望答案选正确文字，不简单删除非核心候选。normal命名的现有布局也有接缝，不能当无接缝对照。
+先查工作区，复用冻结规则与反例。将实际整屏OCR的条带完成记录、全部候选、模型身份与版本守卫接FullPageOcrAssociation。固定自有页验证成功、取消、过期、异常、缺段和发布前失效；不允许半页／迟到结果，不删冲突。之后才接整屏上下文与选区显示。
 
-之后再接整屏上下文和区域显示。首版单一EN／FR／ZH页面，EN/FR→中文，简繁分别记录；用户主动点翻译才采集当前可见整页，红框只决定显示区域。当前页见证、第三方窗口来源／敏感过滤、联网同意／后端凭据、复杂语义质量以及正式镜面接入仍须分别验收。不要读取或打印已配置的DeepL密钥，不进行未经授权的真实页面上传。
+首版单一EN／FR／ZH，外语→中文，中文原文保留、简繁分记；点击翻译才获取当前可见整页，移框仅改同页显示。收起／菜单／停止丢弃文字与迟到结果。当前帧见证、第三方窗口／敏感过滤、联网同意／后端凭据、复杂语义质量、正式镜面仍需独立验收，不能按参考答案选OCR输出。
 
-## 环境与复验入口
+## 环境
 
-- JDK17：`/Users/haoyuzuo/Library/Java/JavaVirtualMachines/temurin-17.0.20.1/Contents/Home`。
-- SDK：`/Users/haoyuzuo/Library/Android/sdk`。仅专用AVD `KanDong_OCR_API37_16K`（emulator-5582）；真机序列2KE0220109017133，操作前重新核对身份／连接。
-- 实验包：`com.kandong.modelprobe`（看懂模型验证）和`.test`（看懂缩放验证）；正式compat未更新。
-- 证据目录的 `run-fullpage.py` 支持两指定设备并核对本机构建与安装哈希；需要新输出目录，不会安装／点击／授权。`audit-reports.py`读取固定结果做独立坐标／形状／重复结果校验。优先复用已有证据，只在更改或发现问题时重跑相应检查。
+- JDK17：/Users/haoyuzuo/Library/Java/JavaVirtualMachines/temurin-17.0.20.1/Contents/Home；SDK：/Users/haoyuzuo/Library/Android/sdk。
+- 专用AVD KanDong_OCR_API37_16K，emulator-5582，API37／ARM64／16KiB。临时AVD消失，同一已有revision 9镜像重建到项目忽略目录.local/avd；[启动方法](OCR_EMULATOR.md)。不使用其他项目设备。
+- 两APK已安装模拟器、哈希一致；主实验APK未变，测试APK为6ed22110a0b4dd21e338287a5f7309822cae1a2269bfeda559f18241304fe51f。手机本轮未连接／未安装，将来先核对华为LIO-AN00/API31和序列2KE0220109017133。
+- JAVA_HOME设上述JDK后，./gradlew --offline :modelprobe:testDebugUnitTest :modelprobe:assembleDebug :modelprobe:assembleDebugAndroidTest :modelprobe:lintDebug。同源Android类com.kandong.modelprobe.FullPageOcrAssociationTest。40组历史数据仅在JVM资源，不入APK。
+- 旧冻结脚本可能锁旧APK哈希，不可静默当新包入口。历史audit-reports.py会写输入目录，复查先复制到新目录，不改冻结证据。

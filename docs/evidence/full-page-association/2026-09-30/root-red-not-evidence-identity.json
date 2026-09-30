@@ -1,0 +1,12 @@
+{
+  "before": {
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageOcrAssociation.kt": "3f8a2d617f10e49ad7fda87603533f124d5255447dc9598b331a2904f74f0dc0",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/FullPageOcrAssociationTest.kt": "843a145501b3a984ad0aff56b89a0d8fdf474c6b44d85ede0f00ffd071183e75"
+  },
+  "after": {
+    "modelprobe/src/testShared/java/com/kandong/modelprobe/FullPageOcrAssociation.kt": "3f8a2d617f10e49ad7fda87603533f124d5255447dc9598b331a2904f74f0dc0",
+    "modelprobe/src/contextTest/java/com/kandong/modelprobe/FullPageOcrAssociationTest.kt": "5dd5d97faa5b4feee11ec6d71338c00088fd170a231810d8a70edb8cfb955804"
+  },
+  "stable": false,
+  "exitCode": 0
+}
