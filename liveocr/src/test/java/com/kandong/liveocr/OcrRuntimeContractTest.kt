@@ -201,4 +201,53 @@ class OcrRuntimeContractTest {
         assertEquals(1f,packed[0],0f)
         assertEquals(1f,packed[2*48*width+width-1],0f)
     }
+
+    private fun seamRow(id: String, top: Double, bottom: Double, owned: Boolean, clipped: Boolean) =
+        OcrPageContract.Candidate(id,"same captured line",listOf(
+            GeometryProbeContract.Point(10.0,top), GeometryProbeContract.Point(300.0,top),
+            GeometryProbeContract.Point(300.0,bottom), GeometryProbeContract.Point(10.0,bottom)),
+            0.9,owned,clipped)
+
+    @Test fun clippedOverlapFragmentDoesNotDiscardItsCompleteOwnedLine() {
+        val complete=seamRow("s0/c0-r0-f0",720.0,770.0,true,false)
+        val fragment=seamRow("s1/c0-r0-f0",736.0,770.0,false,true).copy(text="partial")
+        val page=OcrPageContract.publish(listOf(fragment,complete),1080,2400,OcrCurrent { true })
+        assertEquals(2,page.rawCandidateCount)
+        assertEquals(1,page.blocks.size)
+        assertEquals(complete.id,page.blocks.single().id)
+        assertEquals(complete.text,page.blocks.single().text)
+        assertEquals(720,page.blocks.single().top)
+        assertEquals(771,page.blocks.single().bottom)
+    }
+
+    @Test fun unresolvedOrAmbiguousBoundaryStillCannotPublishPartialContext() {
+        val complete=seamRow("s0/c0-r0-f0",720.0,770.0,true,false)
+        val fragment=seamRow("s1/c0-r0-f0",736.0,770.0,false,true)
+        listOf(listOf(fragment),listOf(fragment.copy(ownsCoreCenter=true),complete),
+            listOf(fragment,complete.copy(clippedAtStripBoundary=true)),
+            listOf(fragment,complete,complete.copy(id="s2/c0-r0-f0")),
+            listOf(fragment,complete.copy(id="s1/c1-r1-f1")),
+            listOf(fragment.copy(quad=fragment.quad.map { it.copy(y=it.y+200) }),complete)).forEach { rows ->
+            failure("STRIP_BOUNDARY_AMBIGUITY") { OcrPageContract.publish(rows,1080,2400,OcrCurrent { true }) }
+        }
+    }
+
+    @Test fun seamCoverageUsesTheSlantedPolygonNotItsBoundingBox() {
+        val complete=seamRow("s0/c0-r0-f0",720.0,770.0,true,false).copy(quad=listOf(
+            GeometryProbeContract.Point(10.0,720.0), GeometryProbeContract.Point(300.0,750.0),
+            GeometryProbeContract.Point(300.0,770.0), GeometryProbeContract.Point(10.0,740.0)))
+        val outside=seamRow("s1/c0-r0-f0",721.0,726.0,false,true).copy(quad=listOf(
+            GeometryProbeContract.Point(270.0,721.0), GeometryProbeContract.Point(280.0,721.0),
+            GeometryProbeContract.Point(280.0,726.0), GeometryProbeContract.Point(270.0,726.0)))
+        failure("STRIP_BOUNDARY_AMBIGUITY") {
+            OcrPageContract.publish(listOf(complete,outside),1080,2400,OcrCurrent { true })
+        }
+        val contained=outside.copy(quad=listOf(
+            GeometryProbeContract.Point(100.0,732.0), GeometryProbeContract.Point(200.0,744.0),
+            GeometryProbeContract.Point(200.0,754.0), GeometryProbeContract.Point(100.0,742.0)))
+        listOf(complete,complete.copy(quad=complete.quad.reversed())).forEach { owner ->
+            val page=OcrPageContract.publish(listOf(owner,contained),1080,2400,OcrCurrent { true })
+            assertEquals(listOf(complete.id),page.blocks.map { it.id })
+        }
+    }
 }

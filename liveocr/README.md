@@ -46,9 +46,13 @@ class LiveOcrEngine(private val context: android.content.Context) {
   is the DB detector score, not a calibrated recognition confidence. IDs are local to
   one call; callers must pair them with their own page/session identity.
 - Any owned box with empty/whitespace-only decoded text rejects the entire page.
-  A candidate touching an internal strip read edge also rejects the entire page with
-  `STRIP_BOUNDARY_AMBIGUITY`, including unowned fragments. This is deliberately
-  conservative: the runtime does not merge partial lines or infer missing counterparts.
+  A candidate touching an internal strip read edge rejects the entire page with
+  `STRIP_BOUNDARY_AMBIGUITY`, except an unowned overlap fragment geometrically contained
+  in exactly one complete owned polygon from another strip (3 physical pixel edge
+  tolerance). That full line keeps its original text, ID and bounds; raw counts retain
+  both candidates. Clipped owners, orphan fragments and multiple possible owners still
+  reject publication. Polygon containment also applies to slanted text; no partial
+  lines are stitched and no missing words are inferred.
   A fully successful detection pipeline with no boxes can return an empty page.
 - `LiveOcrException.code` is a fixed code without native exception causes or text.
   All sessions, options, tensors, results and Mats close before publication. Uncertain

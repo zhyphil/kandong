@@ -1,0 +1,33 @@
+{
+  "baseCommit": "fbefd24",
+  "deviceModel": "NAM-LX9",
+  "observedFailure": "ocr_strip_boundary_ambiguity",
+  "priorDeviceCounters": {
+    "liveCaptures": 1,
+    "ocrRuns": 1,
+    "sends": 0,
+    "published": 0,
+    "blankFramesSkipped": 5
+  },
+  "policy": "An unowned clipped fragment may be discarded only when exactly one complete owned polygon from another strip contains it. Original full-line text/id/bounds and raw count remain.",
+  "edgeTolerancePhysicalPixels": 3,
+  "clippedOwnerOrOrphanOrMultipleOwnersRejected": true,
+  "preFixRegression": {
+    "tests": 1,
+    "failures": 1
+  },
+  "finalUnitTests": {
+    "liveocr": 18,
+    "compatDebug": 71,
+    "failures": 0
+  },
+  "debugAssemble": true,
+  "debugLint": true,
+  "apkSha256": "4ca72524357be5b85279a5ba5ea59cece935219829388a17272f9664d3f2ac0c",
+  "apkBytes": 347843464,
+  "installationResult": "Success",
+  "deviceOutcome": "pending user-authorized new capture",
+  "realPageAccepted": false,
+  "translationAccepted": false,
+  "sensitiveContentRecorded": false
+}

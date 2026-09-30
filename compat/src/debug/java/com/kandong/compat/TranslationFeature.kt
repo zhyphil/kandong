@@ -351,6 +351,8 @@ internal class TranslationFeature(private val host: TranslationHost) {
             "FREE_QUOTA_EXCEEDED","SESSION_LIMIT" -> "本次免费翻译额度不足，未继续请求。"
             "PAGE_TOO_LARGE" -> "本页文字超过开发版处理上限。"
             "RECOGNITION_WIDTH_BUDGET" -> "本页含过长的文字行，当前版本尚不能完整识别。"
+            "STRIP_BOUNDARY_AMBIGUITY" -> "部分文字落在识别分段边缘，本次未显示不完整结果。"
+            "UNREADABLE_BOX" -> "本次有文字块无法读清，未显示不完整结果。"
             else -> "本次处理未完成，请重新点翻译。不会自动重试或联网。"
         }
         val code=if(e is com.kandong.liveocr.LiveOcrException) "ocr_"+e.code.lowercase(java.util.Locale.ROOT)

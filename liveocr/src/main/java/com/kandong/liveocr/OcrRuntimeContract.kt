@@ -92,10 +92,17 @@ internal object OcrPageContract {
         requireOcr(candidates.size <= MAX_BOXES_PER_PAGE, OcrFailure.PAGE_BOX_BUDGET)
         var chars = 0
         candidates.forEach { chars = characterBudget(chars, it.text.length) }
-        // Even an unowned clipped fragment can hide a missing owned counterpart. Reject the
-        // whole page, conservatively, rather than claim center ownership proves completeness.
-        requireOcr(candidates.none { it.clippedAtStripBoundary }, OcrFailure.STRIP_BOUNDARY_AMBIGUITY)
         val owned = candidates.filter { it.ownsCoreCenter }
+        // Strip halos can see the end of a line already captured in full by its owner.
+        // Discard that redundant fragment only with one complete geometric counterpart
+        // from a different strip. Keep rejecting orphans, ambiguity and clipped owners.
+        requireOcr(candidates.none { fragment -> fragment.clippedAtStripBoundary &&
+            (fragment.ownsCoreCenter || owned.count { complete ->
+                !complete.clippedAtStripBoundary &&
+                    complete.id.substringBefore('/') != fragment.id.substringBefore('/') &&
+                    containsFragment(complete.quad,fragment.quad)
+            } != 1)
+        }, OcrFailure.STRIP_BOUNDARY_AMBIGUITY)
         requireOcr(candidates.isEmpty() || owned.isNotEmpty(), OcrFailure.UNOWNED_CANDIDATES)
         requireOcr(owned.none { it.text.isBlank() }, OcrFailure.UNREADABLE_BOX)
         val blocks = owned.map { row ->
@@ -110,5 +117,23 @@ internal object OcrPageContract {
         }.sortedWith(compareBy<OcrBlock> { it.top }.thenBy { it.left }.thenBy { it.id })
         current.check()
         return OcrPage(Collections.unmodifiableList(blocks), candidates.size)
+    }
+
+    private fun containsFragment(full: List<GeometryProbeContract.Point>, fragment: List<GeometryProbeContract.Point>): Boolean {
+        if(full.size!=4 || fragment.size!=4 || (full+fragment).any { !it.x.isFinite() || !it.y.isFinite() }) return false
+        val area=full.indices.sumOf { i -> val a=full[i]; val b=full[(i+1)%4]; a.x*b.y-b.x*a.y }
+        if(kotlin.math.abs(area)<1e-3) return false
+        // Three physical pixels account for independent detector rounding at the seam;
+        // compare convex polygons rather than axis-aligned boxes on slanted text.
+        return fragment.all { p ->
+            val crosses=full.indices.map { i ->
+                val a=full[i]; val b=full[(i+1)%4]
+                val dx=b.x-a.x; val dy=b.y-a.y
+                val length=kotlin.math.hypot(dx,dy)
+                if(length==0.0) return false
+                ((dx*(p.y-a.y)-dy*(p.x-a.x))/length)
+            }
+            crosses.all { it>=-3.0 } || crosses.all { it<=3.0 }
+        }
     }
 }
