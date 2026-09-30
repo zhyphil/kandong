@@ -350,6 +350,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
             "RELAY_NOT_CONFIGURED","RELAY_UNAVAILABLE" -> "Mac 翻译连接不可用，请检查 USB 和转发服务。未自动重试。"
             "FREE_QUOTA_EXCEEDED","SESSION_LIMIT" -> "本次免费翻译额度不足，未继续请求。"
             "PAGE_TOO_LARGE" -> "本页文字超过开发版处理上限。"
+            "RECOGNITION_WIDTH_BUDGET" -> "本页含过长的文字行，当前版本尚不能完整识别。"
             else -> "本次处理未完成，请重新点翻译。不会自动重试或联网。"
         }
         val code=if(e is com.kandong.liveocr.LiveOcrException) "ocr_"+e.code.lowercase(java.util.Locale.ROOT)

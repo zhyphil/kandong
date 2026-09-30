@@ -44,7 +44,8 @@ internal class FullPageOcrPipeline(private val engine: OrtRuntime, private val d
                         val values = try { current.check(); RecognitionPacking.pack(sizes, listOf(resized)) }
                             finally { resized.argb.fill(0) }
                         val input = try {
-                            require(values.size == 3 * 48 * plan.width && values.size <= 147456)
+                            require(values.size == 3 * RecognitionPacking.HEIGHT * plan.width &&
+                                values.size <= 3 * RecognitionPacking.HEIGHT * RecognitionPacking.MAX_WIDTH)
                             OrtRuntime.tensor(values, longArrayOf(1, 3, 48, plan.width.toLong()))
                         } finally { values.fill(0f) }
                         val decoded = try {

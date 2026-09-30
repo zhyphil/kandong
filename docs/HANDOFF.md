@@ -1,5 +1,7 @@
 # 当前交接 · 2026-10-01单次快照识字开发版
 
+最新进展：黑帧守卫在nova9已跳过4黑帧并取得正常页面；随后OCR因旧1024长行上限中止。当前已将resize/输入/输出与既有2048预处理上限对齐，新增推理前5M输出浮点预算与15库测试，71开发版检查通过，已更新手机待同页重试。此次手机前台观察是华为浏览器，不写成自有Garden Hotel页验收；OCR/实译仍待成功发布。
+
 最新故障：用户反馈单次快照NO_TEXT。追加数值诊断确认可见页9380采样全部为黑，OCR仅2块且均被安全区域过滤；根因定位到空黑输入，尚未证明系统为何给出黑帧。已安装“标记消失后继续等待非全黑帧”的候选包，71/63测试与构建/Lint通过，当前等用户在Garden Hotel自有公开页复验。见[本轮诊断](evidence/live-translation/2026-10-01/black-frame-diagnosis.json)。
 
 基于2584bad继续核心业务接线。已构建并安装 **看懂开发版** `com.kandong.compat.dev` 到nova 9/NAM-LX9/API31；release仍无OCR/网络。实际路径为点击翻译→另行整页本机识字同意→一张真实整屏快照→本机原文或逐页确认DeepL（完整页context）→镜面对应显示。没有预置译文。见 [LIVE_TRANSLATION_DEV](LIVE_TRANSLATION_DEV.md) 与 [证据汇总](evidence/live-translation/2026-10-01/summary.json)。

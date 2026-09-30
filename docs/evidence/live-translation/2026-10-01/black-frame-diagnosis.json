@@ -51,7 +51,30 @@
     "bytes": 347843044,
     "installed": true
   },
-  "candidateDeviceOutcome": "awaiting manual shared public Garden Hotel page",
+  "candidateDeviceOutcome": {
+    "blankFramesSkipped": 4,
+    "capturedSamples": [
+      9380,
+      6,
+      6941,
+      9380,
+      930
+    ],
+    "witnessSamples": [
+      9380,
+      9371,
+      0,
+      9380,
+      9
+    ],
+    "liveCaptures": 1,
+    "ocrRuns": 1,
+    "sends": 0,
+    "published": 0,
+    "nextFailure": "ocr_recognition_width_budget",
+    "visibleFrameAccepted": true,
+    "foregroundComponentObservedAfterFailure": "com.huawei.browser/.BrowserMainActivity"
+  },
   "realOcrAccepted": false,
   "realTranslationAccepted": false
 }

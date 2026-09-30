@@ -175,6 +175,30 @@ class OcrRuntimeContractTest {
         assertEquals("ch", OcrAssets.forLanguage("ZH-HANT").id)
         failure("UNSUPPORTED_LANGUAGE") { OcrAssets.forLanguage("auto") }
         assertArrayEquals(longArrayOf(1, 56, 504), OcrPageContract.outputShape(OcrAssets.forLanguage("FR"), 452))
-        failure("RECOGNITION_WIDTH_BUDGET") { OcrPageContract.outputShape(OcrAssets.forLanguage("EN"), 1025) }
+        failure("RECOGNITION_WIDTH_BUDGET") { OcrPageContract.outputShape(OcrAssets.forLanguage("EN"), 2049) }
+    }
+
+    @Test fun fullWidthScreenTextFitsRecognitionPackingAndOutputBudgetTogether() {
+        for(lang in listOf("EN","FR","ZH-HANS","ZH-HANT")) {
+            val model=OcrAssets.forLanguage(lang)
+            for(width in listOf(1025,1600,2048)) {
+                val plan=RecognitionPacking.plan(listOf(RecognitionPacking.Size(width,48)))
+                assertEquals(width,plan.width)
+                val shape=OcrPageContract.outputShape(model,plan.width)
+                assertEquals((width+3L)/8,shape[1])
+                assertTrue(CtcDecoder.validateShape(shape,shape,model.vocabulary)>0)
+            }
+        }
+    }
+
+    @Test fun wideRecognitionInputKeepsBothEndsInsteadOfCroppingToOldLimit() {
+        val width=1600
+        val pixels=IntArray(width*48) { -1 }
+        pixels[0]=0xff0000ff.toInt(); pixels[width-1]=0xffff0000.toInt()
+        val packed=RecognitionPacking.pack(listOf(RecognitionPacking.Size(width,48)),
+            listOf(RecognitionPacking.Resized(width,48,pixels)))
+        assertEquals(3*48*width,packed.size)
+        assertEquals(1f,packed[0],0f)
+        assertEquals(1f,packed[2*48*width+width-1],0f)
     }
 }

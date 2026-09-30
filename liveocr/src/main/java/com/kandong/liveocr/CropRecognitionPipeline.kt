@@ -10,7 +10,7 @@ internal class CropRecognitionPipeline(private val cleanup: GeometryCleanup) {
     fun resize(crop: GeometryOpenCvProbe.CropResult, width: Int, ready: () -> Unit): RecognitionPacking.Resized {
         require(crop.width in 1..4096 && crop.height in 1..2048 &&
             crop.width.toLong() * crop.height * 3 == crop.bgr.size.toLong())
-        require(crop.width.toLong() * crop.height <= GeometryProbeContract.MAX_PIXELS && width in 1..1024)
+        require(crop.width.toLong() * crop.height <= GeometryProbeContract.MAX_PIXELS && width in 1..RecognitionPacking.MAX_WIDTH)
         var pixels: IntArray? = null
         try {
             return OwnedMats(cleanup).use { mats ->

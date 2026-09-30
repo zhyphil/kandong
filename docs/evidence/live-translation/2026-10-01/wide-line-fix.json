@@ -1,0 +1,34 @@
+{
+  "baseCommit": "980b1c53ebdc141338850ed0e8244c2d9b3c46aa",
+  "observedDeviceFailure": "ocr_recognition_width_budget",
+  "oldRuntimeWidth": 1024,
+  "existingPackingWidth": 2048,
+  "alignedRuntimeWidth": 2048,
+  "maxRowInputFloats": 294912,
+  "maxOutputFloats": 5000000,
+  "maxChineseOutputFloats": 4706560,
+  "croppedInput": false,
+  "newRegressionBeforeFix": {
+    "tests": 1,
+    "failures": 1
+  },
+  "finalTests": {
+    "liveocr": 15,
+    "compatDebug": 71,
+    "failures": 0
+  },
+  "nativeAllWidthsAccepted": false,
+  "realPageAccepted": false,
+  "apkSha256": "c730efa9c2a0e47978ab06991349fcb896f8f7c51dc65a82708fed48535ba6ed",
+  "apkBytes": 347843180,
+  "installed": true,
+  "deviceOutcome": {
+    "blankFramesSkipped": 5,
+    "liveCaptures": 1,
+    "ocrRuns": 1,
+    "sends": 0,
+    "published": 0,
+    "nextFailure": "ocr_strip_boundary_ambiguity",
+    "wideRowStageCompleted": true
+  }
+}

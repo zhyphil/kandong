@@ -33,6 +33,7 @@ class LiveOcrEngine(private val context: android.content.Context) {
   Rejection is sticky; callback exceptions also cancel. Checks surround every native
   inference and final publication. Native inference/Clipper calls are synchronous
   and cannot be forcibly interrupted midway.
+- Recognition preprocessing, crop resize and output checks share a 2048-pixel line width ceiling. Full lines are resized proportionally within it; none is silently clipped. One input is at most 294,912 floats (1,179,648 bytes). Output has a 5,000,000-float ceiling (20 MB), checked before native inference; a 2048-wide Chinese line needs 4,706,560 floats. These are bounded runtime allocations, not a measured total process-memory limit.
 - All final DB boxes are recognized and retained internally until the whole page
   finishes, including empty and unowned overlap candidates. At most 64 per strip,
   128 per page and 8192 total raw UTF-16 characters are allowed. Over-budget work fails;

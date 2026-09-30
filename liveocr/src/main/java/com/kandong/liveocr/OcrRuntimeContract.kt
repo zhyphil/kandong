@@ -51,9 +51,12 @@ internal object OcrPageContract {
 
     fun outputShape(model: OcrModel, width: Int): LongArray {
         requireOcr(model in OcrAssets.MODELS, OcrFailure.ASSET_HASH)
-        requireOcr(width in 320..1024, OcrFailure.RECOGNITION_WIDTH_BUDGET)
+        requireOcr(width in 320..RecognitionPacking.MAX_WIDTH, OcrFailure.RECOGNITION_WIDTH_BUDGET)
         // Pinned graph: ceil stride-2 convolutions then floor pool; 452 -> 56, not 57.
-        return longArrayOf(1, (width + 3L) / 8, model.vocabulary.toLong())
+        return longArrayOf(1, (width + 3L) / 8, model.vocabulary.toLong()).also {
+            // Validate output allocation before resizing or entering native inference.
+            CtcDecoder.validateShape(it,it,model.vocabulary)
+        }
     }
 
     fun boxBudget(stripCount: Int, pageCount: Int) {

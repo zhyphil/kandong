@@ -5,7 +5,9 @@ import java.nio.FloatBuffer
 internal data class Decoded(val raw: List<String>, val shape: List<Long>)
 
 internal object CtcDecoder {
-    const val MAX_OUTPUT_FLOATS = 4_000_000L
+    // One 2048-wide line: 256 time steps * 18385 Chinese symbols = 4,706,560.
+    // Keep a finite 20 MB output ceiling, checked before native inference by the caller.
+    const val MAX_OUTPUT_FLOATS = 5_000_000L
     fun validateShape(shape: LongArray, pinned: LongArray, vocabulary: Int): Int {
         requireOcr(shape.size == 3 && shape.contentEquals(pinned), OcrFailure.OUTPUT_SHAPE)
         requireOcr(shape[0] in 1..3 && shape[1] > 0 && shape[2] == vocabulary.toLong() && vocabulary > 1, OcrFailure.OUTPUT_VOCABULARY)
