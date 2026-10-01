@@ -1,6 +1,6 @@
 # 手机独立联网翻译
 
-2026-10-01：代码已准备，**尚未部署、配置真机或完成拔线验收**。最新证据见 `docs/HANDOFF.md`；不能把旧 USB 路线的人工验收当作本路线的验收。
+2026-10-01：用户明确允许后，**云端已部署并通过英法合成文字的真实翻译；尚未更新、配置真机或完成拔线验收**。最新证据见 `docs/HANDOFF.md`；不能把旧 USB 路线的人工验收当作本路线的验收。
 
 ## 运行方式
 
@@ -17,7 +17,7 @@
 - 单页最多50块、每块1,500 Unicode码点、合计6,000码点；请求/响应各32KiB。整屏所有可读块组成 `context`，不先裁红框。DeepL `context`不计翻译字符，但请求大小仍计入限制；实际账户额度先通过usage核对。
 - 请求先持久化扣额、再最多发送一次；超时、崩溃和不确定结果不退款、不重发。串行租约限制此账户的并行处理；取消后不能撤回已经到达供应商的文字。
 
-只持久化设备/随机请求标识、到期/截止时间、状态、额度计数。没有文字、文字哈希、截图或译文缓存。请求记录保留至凭据到期+60秒后清理；额度保留本月和上月，按月清理。清理通过请求和Durable Object alarm执行，无需用户再次打开手机；平台调度可能延迟。每设备最多10,000条请求元数据，全局40,000条。取消先到也建立记录；服务实例重启后仍拒绝重复请求。关闭默认日志/调用日志/追踪，避免平台记录请求细节，代价是当前只有平台汇总指标与固定错误码可用于诊断。
+只持久化设备/随机请求标识、到期/截止时间、状态、额度计数。没有文字、文字哈希、截图或译文缓存。请求记录保留至凭据到期+60秒后清理；额度保留本月和上月，按月清理。清理通过请求和Durable Object alarm执行，无需用户再次打开手机；平台调度可能延迟。每设备最多10,000条请求元数据，全局40,000条。取消先到也建立记录；服务实例重启后仍拒绝重复请求。关闭默认日志/调用日志/追踪，避免平台记录请求细节，代价是当前只有平台汇总指标、固定错误码和认证响应头`X-KanDong-Upstream`可用于诊断；该头仅包含usage/translate及HTTP状态或transport，不包含供应商正文或异常。
 
 披露合同为 `deepl-cloudflare-direct-v3`，旧v2请求拒绝。按钮旁明确文字经Cloudflare中转到DeepL，含红框外；图片不上传，仅公开页面。DeepL API Free的留存条款不能当作Pro零长期留存承诺。
 
@@ -40,9 +40,13 @@ npx --no-install cf deploy --dry-run
 python3 -B -m unittest discover -s scripts -p 'test_provision_translation_cloud.py' -v
 ```
 
-## 经确认后启用
+## 本次已获授权的部署与后续配置
 
-当前仅核对了已登录Cloudflare账号可访问、订阅列表为空。尚未选择/开通付费计划；不升级套餐，不承诺任意流量均免费。启用前明确确认账号、以上资源/额度、将现有DeepL密钥作为服务端secret上传，以及后续合成/真机验证范围。AGENTS中既有commit/push许可不包含部署。
+用户对专用服务部署、服务端密钥及小量合成/手机验证已明确回复“允许”。账号认证及订阅只读核对完成，没有购买或升级套餐；不承诺任意流量均免费。此次授权覆盖下述专用路线，无需重问；其他部署或Release不在范围内。
+
+实际origin为 `https://kandong-translation-pilot.zhyphil.workers.dev`，当前版本 `69c8fdaf-61f6-4969-890a-b24f309a698a`。首次先部署空凭据关闭态并验证503，再启用secret；已验证两项绑定类型为secret_text。当前43项本机Workers/类型/production预检通过；线上英法各一页返回正确时间和否定条件，鉴权/旧披露/重复/取消通过。初次失败及修复见[启用证据](evidence/live-translation/2026-10-01/cloud-activation.json)。步骤1–4已完成，手机未连接，从步骤5继续；不要重置额度、重新生成凭据或重复合成调用。
+
+以下保留可重复执行的操作步骤：
 
 1. 确定该账号已有的workers.dev子域，记录实际目标origin。不要读/改/复用其他项目资源。
 2. 项目根目录运行下列命令；endpoint只是服务地址，不含凭据。脚本私下读取既有DeepL配置，生成忽略目录 `.local/translation/cloud/` 中0600的server-secrets.json和phone-config.json。重复prepare保留原凭据；轮换必须明确加 `--rotate`。
@@ -51,7 +55,7 @@ python3 -B -m unittest discover -s scripts -p 'test_provision_translation_cloud.
    python3 -B scripts/provision_translation_cloud.py prepare --endpoint https://kandong-translation-pilot.ACCOUNT.workers.dev
    ```
 
-3. 在 `backend/translation`，核对账号后以 `CLOUDFLARE_ACCOUNT_ID`指定它；部署已验构件并私下提供secret文件。**以下是真正部署命令，未在本轮执行**：
+3. 在 `backend/translation`，核对账号后以 `CLOUDFLARE_ACCOUNT_ID`指定它；部署已验构件并私下提供secret文件。**以下会实际部署；本轮已按授权执行，后续仅在构件或secret变更时运行**：
 
    ```sh
    npx --no-install cf deploy --prebuilt --mode production --secrets-file ../../.local/translation/cloud/server-secrets.json

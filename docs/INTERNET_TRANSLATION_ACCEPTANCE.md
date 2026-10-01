@@ -16,9 +16,11 @@
 - [x] Android debug/release 单元测试、debug及测试包构建、两变体Lint和模拟器界面检查通过。
 - [x] 独立只读审查完成，未发现可确认的P1/P2或阻断项。
 - [x] 云端配置类型检查与不上传的部署预检通过。
-- [ ] 用户确认具体服务启用；部署后验证真实服务和手机拔线使用。
+- [x] 用户明确允许专用服务部署、服务端密钥及联网/手机验证，不升级套餐。
+- [x] 服务端实际部署、secret绑定、英法合成真实翻译、鉴权/旧披露/重复/取消验证通过。
+- [ ] 手机更新、私有配置及真实页面拔线使用验收；目前未连接。
 
-准备使用当前已登录账号内独立的 `kandong-translation-pilot` Worker 和 SQLite Durable Object。2026-10-01 只读查询返回账号有权限、订阅列表为空；未购买/升级套餐。免费额度不是无限服务，仍需核对部署时账户状态与错误。参见 [Cloudflare 额度](https://developers.cloudflare.com/durable-objects/platform/pricing/)。
+已使用当前已登录账号内独立的 `kandong-translation-pilot` Worker 和 SQLite Durable Object。2026-10-01 只读查询返回账号有权限、订阅列表为空；未购买/升级套餐。免费额度不是无限服务，仍需核对部署时账户状态与错误。参见 [Cloudflare 额度](https://developers.cloudflare.com/durable-objects/platform/pricing/)。
 
 ## 云端与手机验证
 
@@ -36,4 +38,6 @@
 
 157项Android单元测试、41项Workers运行时测试、5项配置脚本测试和12项专用模拟器检查通过；两变体Lint为0错误、各10项既有警告。独立审查只读核对代码与已有日志，没有另跑测试。构件身份与验证边界见[结构化证据](evidence/live-translation/2026-10-01/internet-translation.json)。
 
-仍未部署、未读取/上传供应商密钥、未更新手机，也未调用新的真实DeepL请求。旧手机版本依赖USB，不能作为本项通过证据。
+随后译文持续阅读变更已通过162项Android单元测试与14项模拟器检查；此轮Android源码/构件未改，复用原检查。用户明确授权后已实际部署并上传服务端secret；修复实际Workers Request参数错误后，43项服务端回归/类型/production预检通过，11项线上检查通过（英法各3条合成文字，合计193码点；中文时间/否定含义由根任务逐项核对）。两次此前失败保留，未把模拟测试当成线上成功。
+
+当前版本`69c8fdaf-61f6-4969-890a-b24f309a698a`，地址`https://kandong-translation-pilot.zhyphil.workers.dev`。详见[云端证据](evidence/live-translation/2026-10-01/cloud-activation.json)。没有真实手机页面上传，手机未连接、未更新或配置；旧手机版本依赖USB，不能作为本项通过证据。

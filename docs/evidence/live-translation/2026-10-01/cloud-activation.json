@@ -1,0 +1,274 @@
+{
+  "date": "2026-10-01",
+  "baseline": "2633afb737e0f6b52002b53f9c8eff926552c1ca",
+  "authorization": {
+    "explicit_user_reply": "允许",
+    "scope": [
+      "dedicated Cloudflare Worker and SQLite authority",
+      "server-side DeepL secret",
+      "small synthetic online checks",
+      "target phone provisioning and verification"
+    ],
+    "paid_plan_upgrade": false,
+    "release_or_tags": false
+  },
+  "deployment": {
+    "origin": "https://kandong-translation-pilot.zhyphil.workers.dev",
+    "worker": "kandong-translation-pilot",
+    "authority": "deepl-api-free-pilot-v1",
+    "versions": [
+      {
+        "stage": "disabled bootstrap",
+        "id": "e511dd93-2d64-4b55-8367-2171d3ceaa21"
+      },
+      {
+        "stage": "enabled secrets, failed first request",
+        "id": "2b6fbe59-9494-40cb-b52a-cf1448712b10"
+      },
+      {
+        "stage": "fixed diagnostic metadata",
+        "id": "0697dae0-7612-4bd9-ad2f-87b2545bce23"
+      },
+      {
+        "stage": "current runtime fix",
+        "id": "69c8fdaf-61f6-4969-890a-b24f309a698a"
+      }
+    ],
+    "secret_binding_types": {
+      "DEEPL_API_KEY": "secret_text",
+      "DEVICE_CREDENTIALS": "secret_text"
+    },
+    "logs_and_traces_enabled": false,
+    "quota_reset": false,
+    "disabled_bootstrap_verified": {
+      "health": 200,
+      "translation": 503
+    }
+  },
+  "failures_preserved": {
+    "first_smoke": {
+      "at": "2026-10-01T11:14:37.672406+00:00",
+      "origin": "https://kandong-translation-pilot.zhyphil.workers.dev",
+      "synthetic_only": true,
+      "translation_attempts": 1,
+      "source_characters": 77,
+      "checks": [
+        {
+          "name": "health",
+          "status": 200,
+          "passed": true,
+          "seconds": 0.09,
+          "error": null
+        },
+        {
+          "name": "unauthenticated_rejected",
+          "status": 401,
+          "passed": true,
+          "seconds": 0.08,
+          "error": "UNAUTHORIZED"
+        },
+        {
+          "name": "old_disclosure_rejected",
+          "status": 400,
+          "passed": true,
+          "seconds": 0.077,
+          "error": "CONSENT_REQUIRED"
+        },
+        {
+          "name": "EN_real_translation",
+          "status": 502,
+          "passed": false,
+          "seconds": 0.545,
+          "error": "PROVIDER_FAILED_NO_RETRY"
+        }
+      ],
+      "passed": false,
+      "failure_type": "ValueError"
+    },
+    "diagnostic_probe": {
+      "request_id": "155b46b5-035a-4ba0-807b-b7b62a6165cf",
+      "source_characters": 4,
+      "status": 502,
+      "synthetic_only": true,
+      "upstream": "usage/transport"
+    },
+    "root_cause": "Actual Workers Request rejects redirect:error before dispatch. Existing mocked fetch did not parse runtime RequestInit.",
+    "fix": "redirect:manual and reject all non-2xx responses; no forwarding or retry",
+    "regression_red": {
+      "failed": 1,
+      "skipped": 42,
+      "message": "Invalid redirect value: Workers accepts follow or manual"
+    }
+  },
+  "verification": {
+    "workers_tests": 43,
+    "failed": 0,
+    "typecheck": "passed",
+    "production_build_preflight": "passed",
+    "online": {
+      "startedAtUtc": "2026-10-01T11:21:55Z",
+      "origin": "https://kandong-translation-pilot.zhyphil.workers.dev",
+      "syntheticOnly": true,
+      "automaticRetry": false,
+      "checks": [
+        {
+          "name": "health",
+          "httpStatus": 200,
+          "durationSeconds": 0.119,
+          "cacheControl": "no-store",
+          "passed": true
+        },
+        {
+          "name": "unauthenticated",
+          "httpStatus": 401,
+          "durationSeconds": 0.077,
+          "cacheControl": "no-store",
+          "passed": true,
+          "expectedError": "UNAUTHORIZED"
+        },
+        {
+          "name": "old_disclosure",
+          "httpStatus": 400,
+          "durationSeconds": 0.079,
+          "cacheControl": "no-store",
+          "passed": true,
+          "expectedError": "CONSENT_REQUIRED"
+        },
+        {
+          "name": "EN_translation",
+          "httpStatus": 200,
+          "durationSeconds": 0.676,
+          "cacheControl": "no-store",
+          "passed": true
+        },
+        {
+          "name": "EN_identity_order_chinese",
+          "passed": true
+        },
+        {
+          "name": "EN_duplicate",
+          "httpStatus": 409,
+          "durationSeconds": 0.107,
+          "cacheControl": "no-store",
+          "passed": true,
+          "expectedError": "DUPLICATE_NO_RETRY"
+        },
+        {
+          "name": "FR_translation",
+          "httpStatus": 200,
+          "durationSeconds": 0.625,
+          "cacheControl": "no-store",
+          "passed": true
+        },
+        {
+          "name": "FR_identity_order_chinese",
+          "passed": true
+        },
+        {
+          "name": "FR_duplicate",
+          "httpStatus": 409,
+          "durationSeconds": 0.129,
+          "cacheControl": "no-store",
+          "passed": true,
+          "expectedError": "DUPLICATE_NO_RETRY"
+        },
+        {
+          "name": "cancel_before_arrival",
+          "httpStatus": 200,
+          "durationSeconds": 0.112,
+          "cacheControl": "no-store",
+          "passed": true
+        },
+        {
+          "name": "cancelled_translation",
+          "httpStatus": 409,
+          "durationSeconds": 0.131,
+          "cacheControl": "no-store",
+          "passed": true,
+          "expectedError": "CANCELLED"
+        }
+      ],
+      "attempts": [
+        {
+          "language": "EN",
+          "requestId": "90c92777-48b4-4817-92d0-392b8e897bed",
+          "sourceCharacters": 77
+        },
+        {
+          "language": "FR",
+          "requestId": "19c037da-93fa-4a9a-aa32-0ef6b2b4916e",
+          "sourceCharacters": 116
+        }
+      ],
+      "passed": true,
+      "finishedAtUtc": "2026-10-01T11:21:57Z"
+    },
+    "synthetic_semantics": {
+      "EN": [
+        "check-in from 16:30 preserved",
+        "breakfast not included preserved",
+        "check-out before 11:00 preserved"
+      ],
+      "FR": [
+        "check-in from 16:30 preserved",
+        "breakfast not included preserved",
+        "check-out before 11:00 preserved"
+      ],
+      "assessor": "root assistant inspected actual synthetic responses; not phone/user acceptance"
+    }
+  },
+  "accounting": {
+    "cloud_admitted_attempts": 4,
+    "cloud_attempt_source_characters": 274,
+    "successful_translation_pages": 2,
+    "successful_source_characters": 193,
+    "counter_values_directly_queried": false,
+    "uncertain_attempts_refunded": false
+  },
+  "privacy": {
+    "real_screen_pages_uploaded": 0,
+    "screenshots_uploaded": 0,
+    "credentials_in_evidence": false,
+    "diagnostic_fields": [
+      "usage or translate",
+      "numeric HTTP status or transport"
+    ],
+    "raw_provider_error_or_exception_logged": false
+  },
+  "phone": {
+    "detected": false,
+    "installed_this_turn": false,
+    "configured_this_turn": false,
+    "unplugged_verified": false,
+    "system_sharing_started": false
+  },
+  "android_evidence_reused": "retained-translation.json; no Android source or APK changes this turn",
+  "remaining": [
+    "verify NAM-LX9 and update existing tested APK",
+    "provision private device credential",
+    "remove target USB relay route and verify actual phone translations",
+    "user unplugged translation and retained-result acceptance"
+  ],
+  "logs": {
+    "kandong-cloud-request-red.log": {
+      "path": "/private/tmp/kandong-cloud-request-red.log",
+      "sha256": "6132d6a5f2ee68b0937ed8f71ba2f97334628f7e6b39b072924a6e32ba60e33a"
+    },
+    "kandong-cloud-request-green.log": {
+      "path": "/private/tmp/kandong-cloud-request-green.log",
+      "sha256": "a7709f4e626f4a8a7d70c8c54f55c23d7a68d746f5ca017a512ba891e3020851"
+    },
+    "kandong-cloud-request-types.log": {
+      "path": "/private/tmp/kandong-cloud-request-types.log",
+      "sha256": "e4baac8da9f886f6e02724f7b13203c41fb54d5bc725d1b1d216257d80b157f9"
+    },
+    "kandong-cloud-request-dry-run.log": {
+      "path": "/private/tmp/kandong-cloud-request-dry-run.log",
+      "sha256": "2ac42c547c796f2bb04f35e2b8ada7c205234244c42d97b76c4ad55cc415156c"
+    },
+    "kandong-cloud-request-deploy.log": {
+      "path": "/private/tmp/kandong-cloud-request-deploy.log",
+      "sha256": "1bb0e89507c19106ba29d2498ba2bc20c1b520f026bae96facbfd089f14fca94"
+    }
+  }
+}

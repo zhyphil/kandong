@@ -3,24 +3,29 @@ import { AUTHORITY_NAME, boundedJson, exact, insist, prepare, record, Refused, r
 export { QuotaAuthority } from "./authority";
 
 const PROVIDER = "https://api-free.deepl.com";
+class UpstreamFailure extends Refused {
+  constructor(code: string, status: number, readonly diagnostic: string) { super(code,status); }
+}
 async function provider(path: "/v2/usage" | "/v2/translate", key: string, deadline: number, body?: string): Promise<unknown> {
+  const stage = path === "/v2/usage" ? "usage" : "translate";
   const wait = Math.min(30000, deadline - Date.now());
   insist(wait > 0, "PAGE_EXPIRED");
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), wait);
   try {
     const r = await fetch(PROVIDER + path, {
-      method: body === undefined ? "GET" : "POST", redirect: "error", signal: controller.signal,
+      // Workers supports manual/follow only. Reject 3xx below without forwarding the key.
+      method: body === undefined ? "GET" : "POST", redirect: "manual", signal: controller.signal,
       headers: { Authorization: `DeepL-Auth-Key ${key}`, "Content-Type": "application/json" }, body,
     });
     if (!r.ok) {
       await r.body?.cancel();
-      throw new Refused(r.status === 456 ? "FREE_QUOTA_EXCEEDED" : "PROVIDER_FAILED_NO_RETRY", 502);
+      throw new UpstreamFailure(r.status === 456 ? "FREE_QUOTA_EXCEEDED" : "PROVIDER_FAILED_NO_RETRY", 502, `${stage}/${r.status}`);
     }
     return await boundedJson(r, "INVALID_RESPONSE");
   } catch (e) {
     if (e instanceof Refused) throw e;
-    throw new Refused(Date.now() >= deadline ? "PAGE_EXPIRED" : "PROVIDER_FAILED_NO_RETRY", 502);
+    throw new UpstreamFailure(Date.now() >= deadline ? "PAGE_EXPIRED" : "PROVIDER_FAILED_NO_RETRY", 502, `${stage}/transport`);
   } finally { clearTimeout(timer); }
 }
 export default {
@@ -81,7 +86,10 @@ export default {
       }
     } catch (e) {
       // No exception/body/URL logging; only fixed contract codes leave this boundary.
-      return response({ error: e instanceof Refused ? e.code : "SERVICE_UNAVAILABLE" }, e instanceof Refused ? e.status : 503);
+      const failed = response({ error: e instanceof Refused ? e.code : "SERVICE_UNAVAILABLE" }, e instanceof Refused ? e.status : 503);
+      // Authenticated callers get only fixed stage/status metadata, never provider text or exceptions.
+      if (e instanceof UpstreamFailure) failed.headers.set("X-KanDong-Upstream",e.diagnostic);
+      return failed;
     }
   },
 } satisfies ExportedHandler<Env>;

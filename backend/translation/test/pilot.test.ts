@@ -39,7 +39,7 @@ function fakeProvider(callback?: (path: string, init: RequestInit) => Promise<Re
   fetcher.mockImplementation(async (input: RequestInfo | URL, init: RequestInit = {}) => {
     const url = String(input);
     expect(url.startsWith("https://api-free.deepl.com/v2/")).toBe(true);
-    expect(init.redirect).toBe("error");
+    expect(init.redirect).toBe("manual");
     expect(new Headers(init.headers).get("authorization")).toBe("DeepL-Auth-Key synthetic-private-key:fx");
     const result = await callback?.(url, init);
     if (result) return result;
@@ -56,6 +56,14 @@ beforeEach(async () => {
 afterEach(async () => { vi.restoreAllMocks(); await reset(); });
 
 describe("authenticated single-page contract", () => {
+  it("constructs upstream requests supported by the actual Workers runtime", async () => {
+    fakeProvider();
+    expect((await post(page())).status).toBe(200);
+    expect(fetcher).toHaveBeenCalledTimes(2);
+    for (const [input, init] of fetcher.mock.calls) {
+      expect(() => new Request(input, init)).not.toThrow();
+    }
+  });
   it.each(["EN", "FR"])("joins every block as context and preserves IDs/order for %s", async language => {
     const p = page({ language });
     fakeProvider(async (url, init) => {
@@ -239,6 +247,13 @@ describe("persistent quota and cancellation", () => {
 });
 
 describe("provider refusal and bounds", () => {
+  it("exposes only a fixed upstream stage/status, never the error body", async () => {
+    fakeProvider(async () => new Response("private provider response",{status:403}));
+    const r=await post(page());
+    expect(r.headers.get("x-kandong-upstream")).toBe("usage/403");
+    expect(await r.json()).toEqual({error:"PROVIDER_FAILED_NO_RETRY"});
+    expect(fetcher).toHaveBeenCalledTimes(1);
+  });
   it("checks API Free usage before translation", async () => {
     fakeProvider(async () => Response.json({character_count:500000,character_limit:500000}));
     expect(await error(page())).toBe("FREE_QUOTA_EXCEEDED"); expect(fetcher).toHaveBeenCalledTimes(1);
