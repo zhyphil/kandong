@@ -1,0 +1,66 @@
+{
+  "baseCommit": "8ca9e7c",
+  "device": "NAM-LX9/API31",
+  "observedFailure": "ocr_strip_boundary_ambiguity",
+  "deviceAggregateCountersBeforeUpdate": {
+    "captures": 5,
+    "ocrRuns": 5,
+    "sends": 1,
+    "published": 2
+  },
+  "sendCounterMeaning": "Phone entered send path; provider receipt and translation quality not independently checked",
+  "boundaryObservation": {
+    "candidates": 60,
+    "owned": 55,
+    "clipped": 2,
+    "unresolved": 1,
+    "fragmentBounds": [
+      392,
+      716,
+      914,
+      750
+    ],
+    "fragmentOwned": false,
+    "completeMatches": 0,
+    "bestOtherBounds": [
+      389,
+      682,
+      659,
+      748
+    ],
+    "bestOtherOwned": true,
+    "bestOtherClipped": false,
+    "overlapPercent": 48
+  },
+  "diagnosis": "An unowned halo fragment may have a different detector grouping; containment by one complete row is not a valid required condition for core publication.",
+  "policy": "After every strip completes, publish core-owned candidates; unowned clipped halo boxes cannot veto the page. Owned internally clipped boxes and incomplete processing still fail.",
+  "rawCandidateCountsPreserved": true,
+  "sourceRowsSkipped": false,
+  "preFixRegression": {
+    "tests": 1,
+    "failures": 1
+  },
+  "unitTests": {
+    "liveocr": 22,
+    "compatDebug": 71,
+    "failures": 0
+  },
+  "debugAssemble": true,
+  "debugLint": true,
+  "apkBytes": 347843728,
+  "apkSha256": "7242092286e0c99e3b4e91ab5258c8c978d59814ae84ebdeadffb864f8022f8a",
+  "installationResult": "Success",
+  "deviceOutcome": {
+    "boundaryGuardPassed": true,
+    "nextFailure": "ocr_unreadable_box",
+    "userConfirmedFailure": true,
+    "captures": 1,
+    "ocrRuns": 1,
+    "sends": 0,
+    "published": 0,
+    "blankFrames": 6,
+    "boundary": null
+  },
+  "realPageAccepted": false,
+  "translationQualityAccepted": false
+}

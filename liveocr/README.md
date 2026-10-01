@@ -10,7 +10,8 @@ Public API is in `com.kandong.liveocr`:
 ```kotlin
 data class OcrBlock(val id: String, val text: String, val left: Int, val top: Int,
     val right: Int, val bottom: Int, val score: Double)
-data class OcrPage(val blocks: List<OcrBlock>, val rawCandidateCount: Int)
+data class OcrPage(val blocks: List<OcrBlock>, val rawCandidateCount: Int,
+    val unreadable: List<OcrBlock> = emptyList())
 class LiveOcrEngine(private val context: android.content.Context) {
     fun recognize(rgba: ByteArray, width: Int, height: Int, language: String,
         isCurrent: () -> Boolean): OcrPage
@@ -45,15 +46,22 @@ class LiveOcrEngine(private val context: android.content.Context) {
   Coordinates are in the full input page, with half-open right/bottom bounds. `score`
   is the DB detector score, not a calibrated recognition confidence. IDs are local to
   one call; callers must pair them with their own page/session identity.
-- Any owned box with empty/whitespace-only decoded text rejects the entire page.
-  A candidate touching an internal strip read edge rejects the entire page with
-  `STRIP_BOUNDARY_AMBIGUITY`, except an unowned overlap fragment geometrically contained
-  in exactly one complete owned polygon from another strip (3 physical pixel edge
-  tolerance). That full line keeps its original text, ID and bounds; raw counts retain
-  both candidates. Clipped owners, orphan fragments and multiple possible owners still
-  reject publication. Polygon containment also applies to slanted text; no partial
-  lines are stitched and no missing words are inferred.
-  A fully successful detection pipeline with no boxes can return an empty page.
+- Publication occurs only after **every strip** has completed and its native resources
+  have closed. Every input row belongs to one core; the overlapping halo provides
+  context only. Publish core-owned boxes and retain all candidates in the raw count.
+  An unowned box clipped at a halo boundary does not veto the page: clipping can make
+  its detector merge/split words differently, so matching it to one complete line is
+  not a valid completeness test. This does not skip processing the neighboring core
+  or claim that OCR cannot miss text.
+- An owned box clipped by an internal strip read edge still rejects the entire page
+  with `STRIP_BOUNDARY_AMBIGUITY`. Physical input-page edges are not internal seams. No missing offscreen letters
+  are reconstructed. A failed/cancelled strip cannot yield earlier partial results;
+  a successful full detection with no boxes may return an empty page.
+- An owned empty/whitespace-only recognition is retained in `unreadable` with its
+  ID/bounds/score and an empty text field. Other readable blocks remain in `blocks`;
+  neither list silently receives invented characters. Callers must show unreadable
+  regions as original pixels and disclose that recognized context may be incomplete.
+  Only `blocks` can supply text for translation; raw counts include both lists and halos.
 - `LiveOcrException.code` is a fixed code without native exception causes or text.
   Strip-boundary failures may also carry `boundaryDiagnostics`: counts and at most
   eight numeric geometry examples (bounds, ownership/clipping flags, match counts,

@@ -1,0 +1,65 @@
+{
+  "baseCommit": "8ca9e7c",
+  "includesHaloOwnershipFix": true,
+  "deviceObservedFailure": "ocr_unreadable_box",
+  "preFixRegression": {
+    "tests": 1,
+    "failures": 1
+  },
+  "policy": {
+    "readableTextRetained": true,
+    "unreadablePositionsRetained": true,
+    "unreadableTextInTranslationPayload": false,
+    "unreadableOriginalPixelsRestored": true,
+    "orangeOutline": true,
+    "countInStatus": true,
+    "missingContextDisclosedBeforeManualOnlineConfirmation": true,
+    "localPreviewWithoutSend": true,
+    "allStripProcessingStillRequired": true,
+    "ownedInternalClippingStillRejected": true,
+    "automaticCaptureOrExternalRequestAdded": false
+  },
+  "checks": {
+    "liveocr": {
+      "tests": 23,
+      "failures": 0,
+      "errors": 0
+    },
+    "compat": {
+      "tests": 71,
+      "failures": 0,
+      "errors": 0
+    }
+  },
+  "debugAssemble": true,
+  "debugLint": true,
+  "apkBytes": 347847556,
+  "apkSha256": "15753ea8ff0a3ac5140ecbd5b56fe880dc5bd509337d88f5f9a6d2234576ab1b",
+  "installationResult": "Success",
+  "deviceOutcome": {
+    "userReported": "识别到了，然后发送过去翻译了",
+    "captures": 1,
+    "ocrRuns": 1,
+    "sends": 1,
+    "published": 1,
+    "rawCandidates": 54,
+    "recognized": 48,
+    "eligible": 38,
+    "lastUnreadableInVisibleArea": 0,
+    "blankFramesSkipped": 4,
+    "stateAtInspection": "COLLAPSED",
+    "capturing": false,
+    "snapshotRetained": false,
+    "retainedBlocks": 0,
+    "gpuOpen": false,
+    "gpuCleanupFailures": 0,
+    "currentReason": "idle",
+    "boundaryDiagnostics": null,
+    "contentOrTranslationRead": false
+  },
+  "realPageAccepted": false,
+  "translationQualityAccepted": false,
+  "realPageFlowPublished": true,
+  "visualTranslationAcceptance": "pending user confirmation",
+  "unreadableOrangeMarkerVisuallyAccepted": false
+}

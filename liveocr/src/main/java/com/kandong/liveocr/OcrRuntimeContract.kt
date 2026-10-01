@@ -5,7 +5,9 @@ import java.util.concurrent.CancellationException
 
 data class OcrBlock(val id: String, val text: String, val left: Int, val top: Int,
     val right: Int, val bottom: Int, val score: Double)
-data class OcrPage(val blocks: List<OcrBlock>, val rawCandidateCount: Int)
+data class OcrPage(val blocks: List<OcrBlock>, val rawCandidateCount: Int,
+    /** Positions whose recognizer returned no text; retain source pixels, never invent words. */
+    val unreadable: List<OcrBlock> = emptyList())
 
 /** Fixed codes only: native messages, pixels and recognized text never become exception messages. */
 class LiveOcrException internal constructor(reason: OcrFailure,
@@ -101,20 +103,16 @@ internal object OcrPageContract {
         var chars = 0
         candidates.forEach { chars = characterBudget(chars, it.text.length) }
         val owned = candidates.filter { it.ownsCoreCenter }
-        // Strip halos can see the end of a line already captured in full by its owner.
-        // Discard that redundant fragment only with one complete geometric counterpart
-        // from a different strip. Keep rejecting orphans, ambiguity and clipped owners.
-        val unresolved = candidates.filter { fragment -> fragment.clippedAtStripBoundary &&
-            (fragment.ownsCoreCenter || owned.count { complete ->
-                !complete.clippedAtStripBoundary &&
-                    complete.id.substringBefore('/') != fragment.id.substringBefore('/') &&
-                    containsFragment(complete.quad,fragment.quad)
-            } != 1)
-        }
+        // run() completes every strip before publication. Cores partition the whole
+        // frame; halos only provide neighboring context. A clipped, unowned halo box
+        // may merge/split words differently from the owner strip's detector, so its
+        // shape is not evidence that the owner's full region was missing. Keep raw
+        // counts, but never let that duplicate veto the independently processed core.
+        // An OWNED box clipped by our internal read boundary remains a real problem.
+        val unresolved = owned.filter { it.clippedAtStripBoundary }
         if(unresolved.isNotEmpty()) throw LiveOcrException(OcrFailure.STRIP_BOUNDARY_AMBIGUITY,
             boundaryDiagnostics(candidates,owned,unresolved))
         requireOcr(candidates.isEmpty() || owned.isNotEmpty(), OcrFailure.UNOWNED_CANDIDATES)
-        requireOcr(owned.none { it.text.isBlank() }, OcrFailure.UNREADABLE_BOX)
         val blocks = owned.map { row ->
             val left = kotlin.math.floor(row.quad.minOf { it.x }).toInt()
             val top = kotlin.math.floor(row.quad.minOf { it.y }).toInt()
@@ -123,10 +121,11 @@ internal object OcrPageContract {
             val bottom = (kotlin.math.ceil(row.quad.maxOf { it.y }).toInt() + 1).coerceAtMost(height)
             requireOcr(left in 0 until right && top in 0 until bottom && right <= width && bottom <= height,
                 OcrFailure.PIPELINE_FAILED)
-            OcrBlock(row.id, row.text, left, top, right, bottom, row.score)
+            OcrBlock(row.id, row.text.ifBlank { "" }, left, top, right, bottom, row.score)
         }.sortedWith(compareBy<OcrBlock> { it.top }.thenBy { it.left }.thenBy { it.id })
         current.check()
-        return OcrPage(Collections.unmodifiableList(blocks), candidates.size)
+        return OcrPage(Collections.unmodifiableList(blocks.filter { it.text.isNotEmpty() }), candidates.size,
+            Collections.unmodifiableList(blocks.filter { it.text.isEmpty() }))
     }
 
     private fun boundaryDiagnostics(all: List<Candidate>, owned: List<Candidate>, unresolved: List<Candidate>): OcrBoundaryDiagnostics {

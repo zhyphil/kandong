@@ -37,6 +37,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
     private var probe: Probe?=null
     private var snapshot: Bitmap?=null
     private var blocks=emptyList<OcrBlock>()
+    private var unreadable=emptyList<OcrBlock>()
     private var translations=emptyMap<String,String>()
     private var language="EN"
     private var online=false
@@ -51,6 +52,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
     private var rawCandidates=-1
     private var recognizedBlocks=-1
     private var eligibleBlocks=-1
+    private var lastUnreadableCount=-1
     private var blankFrames=0
     private var boundaryDiagnostics: com.kandong.liveocr.OcrBoundaryDiagnostics?=null
     private fun now()=SystemClock.elapsedRealtime()
@@ -102,6 +104,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
             val token=state.begin()
             captureSamples="none"; witnessedSamples="none"
             rawCandidates=-1; recognizedBlocks=-1; eligibleBlocks=-1
+            lastUnreadableCount=-1
             blankFrames=0
             boundaryDiagnostics=null
             status("正在读取当前页…","capture")
@@ -160,8 +163,10 @@ internal class TranslationFeature(private val host: TranslationHost) {
             try {
                 val page=LiveOcrEngine(context).recognize(bytes,host.screenWidth,host.screenHeight,lang) { current(token) }
                 val eligible=page.blocks.filter { it.left>=safe.left && it.top>=safe.top && it.right<=safe.right && it.bottom<=safe.bottom }
+                val unclear=page.unreadable.filter { it.left<safe.right && it.right>safe.left && it.top<safe.bottom && it.bottom>safe.top }
                 main.post { if(current(token)) {
                     rawCandidates=page.rawCandidateCount; recognizedBlocks=page.blocks.size; eligibleBlocks=eligible.size
+                    lastUnreadableCount=unclear.size
                 } }
                 check(eligible.isNotEmpty()) { "NO_TEXT" }
                 check(eligible.map { it.id }.distinct().size == eligible.size) { "OCR_FAILED" }
@@ -169,8 +174,9 @@ internal class TranslationFeature(private val host: TranslationHost) {
                 main.post {
                     if(!current(token)) return@post
                     blocks=eligible.toList()
+                    unreadable=unclear.toList()
                     if(online && lang in listOf("EN","FR")) preview(token)
-                    else { status("本次快照 · 已识别 ${blocks.size} 块","local"); published++; host.refreshTranslation() }
+                    else { status("本次快照 · 已识别 ${blocks.size} 块"+unreadableLabel(),"local"); published++; host.refreshTranslation() }
                 }
             } catch(e: Exception) { main.post { if(current(token)) error(e) } }
             finally { bytes.fill(0); busy.set(false) }
@@ -181,9 +187,11 @@ internal class TranslationFeature(private val host: TranslationHost) {
         body.addView(line("确认本次快照联网翻译"))
         body.addView(line(PROVIDER_DISCLOSURE))
         body.addView(line("以下是本次快照将发送的全部 ${blocks.size} 条文字（包括红框外）。请检查是否漏字、错字或含隐私。"))
+        if(unreadable.isNotEmpty()) body.addView(line("有 ${unreadable.size} 处未读清，镜面中保留原图并用橙框标记。这些位置没有文字可发送，可能影响上下文和译文；请先核对原图，不确定时暂不发送。"))
         body.addView(line(blocks.joinToString("\n\n") { it.text }))
         val consent=CheckBox(context).apply {
-            text="已检查：本页只有公开信息，无个人或保密内容；同意发送全部文字给 DeepL。"
+            text=if(unreadable.isEmpty()) "已检查：本页只有公开信息，无个人或保密内容；同意发送全部文字给 DeepL。"
+                else "已核对文字和未读清处；本页只有公开信息，无个人或保密内容。同意发送已识别文字给 DeepL，并知晓上下文可能不完整。"
             textSize=18f; minHeight=dp(56); isSaveEnabled=false
         }
         body.addView(consent)
@@ -195,6 +203,12 @@ internal class TranslationFeature(private val host: TranslationHost) {
         }.apply { isEnabled=false }
         consent.setOnCheckedChangeListener { _, checked -> send.isEnabled=checked && current(token) }
         body.addView(send)
+        body.addView(CompatUi.button(context,"先查看识字结果，不发送") {
+            if(!current(token)) return@button
+            dismissDialog(); host.hideControls(false)
+            status("本次快照 · 已识别 ${blocks.size} 块"+unreadableLabel(),"local")
+            published++; host.refreshTranslation()
+        })
         body.addView(CompatUi.button(context,"不发送，回到原文") { invalidate() })
         openDialog(body)
     }
@@ -208,7 +222,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
                 main.post {
                     if(current(token)) {
                         translations=result
-                        status("本次快照 · 机译待核对","translated"); published++; host.refreshTranslation()
+                        status("本次快照 · 机译待核对"+unreadableLabel(),"translated"); published++; host.refreshTranslation()
                     }
                 }
             } catch(e: Exception) { main.post { if(current(token)) error(e) } }
@@ -302,6 +316,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
         private val paint=TextPaint(Paint.ANTI_ALIAS_FLAG).apply { color=CompatUi.ink }
         private val fill=Paint().apply { color=Color.WHITE }
         private val imagePaint=Paint(Paint.FILTER_BITMAP_FLAG)
+        private val unclearPaint=Paint(Paint.ANTI_ALIAS_FLAG).apply { color=Color.rgb(183,98,0); style=Paint.Style.STROKE }
         override fun onDraw(canvas: Canvas) {
             canvas.drawColor(Color.WHITE)
             val captured=snapshot ?: return
@@ -311,7 +326,8 @@ internal class TranslationFeature(private val host: TranslationHost) {
             canvas.restore()
             if(reason !in listOf("local","translated")) return
             val selected=blocks.filter { it.left<crop.right && it.right>crop.left && it.top<crop.bottom && it.bottom>crop.top }
-            if(selected.isEmpty()) {
+            val unclear=unreadable.filter { it.left<crop.right && it.right>crop.left && it.top<crop.bottom && it.bottom>crop.top }
+            if(selected.isEmpty() && unclear.isEmpty()) {
                 paint.textSize=dp(18).toFloat(); canvas.drawText("红框内没有识别到文字",dp(12).toFloat(),dp(36).toFloat(),paint); return
             }
             canvas.save(); canvas.translate(tx,ty); canvas.scale(scale,scale)
@@ -329,13 +345,23 @@ internal class TranslationFeature(private val host: TranslationHost) {
                 canvas.drawRect(0f,0f,w.toFloat(),maxOf(h,layout.height).toFloat(),fill)
                 layout.draw(canvas); canvas.restore()
             }
+            // Restore source pixels even if a neighboring text layout wrapped over this area.
+            unclear.forEach { block ->
+                val left=(block.left-crop.left).toFloat(); val top=(block.top-crop.top).toFloat()
+                val right=(block.right-crop.left).toFloat(); val bottom=(block.bottom-crop.top).toFloat()
+                canvas.save(); canvas.clipRect(left,top,right,bottom)
+                canvas.drawBitmap(captured,-crop.left.toFloat(),-crop.top.toFloat(),imagePaint)
+                canvas.restore()
+                unclearPaint.strokeWidth=dp(2).toFloat()/scale
+                canvas.drawRect(left,top,right,bottom,unclearPaint)
+            }
             canvas.restore()
         }
     }
     fun invalidate() {
         state.invalidate(); relay.cancel(); probe=null
         snapshot?.recycle(); snapshot=null
-        blocks=emptyList(); translations=emptyMap(); label=null
+        blocks=emptyList(); unreadable=emptyList(); translations=emptyMap(); label=null
         main.removeCallbacksAndMessages(null)
         dismissDialog(); host.witness(null)
         layer?.visibility=View.GONE
@@ -344,6 +370,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
     }
     fun close() { dead=true; invalidate(); worker.shutdown(); layer=null; resultView=null }
     private fun status(value: String, code: String) { label=value; reason=code; host.refreshTranslation() }
+    private fun unreadableLabel()=if(unreadable.isEmpty()) "" else " · ${unreadable.size}处未读清"
     private fun fail(value: String, code: String) { invalidate(); status(value,code); toast(value) }
     private fun error(e: Exception) {
         boundaryDiagnostics=(e as? com.kandong.liveocr.LiveOcrException)?.boundaryDiagnostics
@@ -364,8 +391,8 @@ internal class TranslationFeature(private val host: TranslationHost) {
     }
     private fun toast(value:String) { Toast.makeText(context,value,Toast.LENGTH_LONG).show() }
     private fun dp(n:Int)=CompatUi.dp(context,n)
-    fun diagnostics()="translation=$reason liveCaptures=$captures ocrRuns=$ocrRuns sends=$sends published=$published blockCount=${blocks.size} workerBusy=${busy.get()} snapshot=${snapshot!=null}"+
-        " samples(total/dark/light/opaque/edges)=$captureSamples witnessSamples=$witnessedSamples blankFrames=$blankFrames rawCandidates=$rawCandidates recognized=$recognizedBlocks eligible=$eligibleBlocks"+
+    fun diagnostics()="translation=$reason liveCaptures=$captures ocrRuns=$ocrRuns sends=$sends published=$published blockCount=${blocks.size} unreadableCount=${unreadable.size} workerBusy=${busy.get()} snapshot=${snapshot!=null}"+
+        " samples(total/dark/light/opaque/edges)=$captureSamples witnessSamples=$witnessedSamples blankFrames=$blankFrames rawCandidates=$rawCandidates recognized=$recognizedBlocks eligible=$eligibleBlocks lastUnreadable=$lastUnreadableCount"+
         " boundary=$boundaryDiagnostics"
     companion object {
         const val AVAILABLE=true
