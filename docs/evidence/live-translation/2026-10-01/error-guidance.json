@@ -1,0 +1,50 @@
+{
+  "baseCommit": "0910d4f",
+  "scope": "Debug translation failure classification and recovery guidance; existing clearing and explicit retry flow retained",
+  "initialRegression": {
+    "tests": 7,
+    "failures": 6
+  },
+  "finalJvm": {
+    "compatDebug": 84,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "newFailureGuidanceCases": 7
+  },
+  "relayTests": {
+    "tests": 10,
+    "failures": 0,
+    "fakeProviderOnly": true
+  },
+  "build": {
+    "debugApk": true,
+    "lintErrors": 0,
+    "lintWarnings": 10
+  },
+  "apk": {
+    "bytes": 347869828,
+    "sha256": "a29aa1edb826fdb326de02bf16df15c32fac93de38738f8d36eb2ceb68a0b2bb"
+  },
+  "phone": {
+    "model": "NAM-LX9",
+    "api": 31,
+    "install": "Success",
+    "installedSha256": "a29aa1edb826fdb326de02bf16df15c32fac93de38738f8d36eb2ceb68a0b2bb",
+    "ownActivityOpened": true,
+    "faultInjectionPerformed": false
+  },
+  "changes": [
+    "distinguish send-path I/O, timeout, stale token, provider failure, snapshot expiry and language mismatch",
+    "separate connection budget from provider free quota",
+    "allowlist provider error codes; raw error text never shown",
+    "short status caption plus recovery toast",
+    "preserve OCR diagnostics, snapshot cleanup, consent and no automatic retry"
+  ],
+  "newProviderCallsTriggeredByAgent": 0,
+  "limitations": [
+    "JVM exception cases are not physical USB or network fault tests",
+    "New error guidance has not yet been visually accepted on phone",
+    "Earlier French translation acceptance applies to previous ca1b714 code, not a new translation run after this update"
+  ]
+}

@@ -67,9 +67,7 @@ internal class LiveRelayClient(private val context: Context) {
             check(current()) { "STALE" }
             val json=try { JSONObject(String(raw,Charsets.UTF_8)) } finally { raw.fill(0) }
             if(code != 200) {
-                val allowed=setOf("SENSITIVE_PAGE","FREE_QUOTA_EXCEEDED","PAGE_TOO_LARGE","SESSION_LIMIT","LANGUAGE_MISMATCH","RELAY_EXPIRED")
-                val error=json.optString("error")
-                throw IllegalStateException(if(error in allowed) error else "RELAY_UNAVAILABLE")
+                throw IllegalStateException(LiveTranslationError.relayCode(json.optString("error")))
             }
             require(json.getString("requestId") == id)
             val rows=json.getJSONArray("translations")

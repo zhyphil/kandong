@@ -244,7 +244,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
                         status("本次快照 · 机译待核对"+unreadableLabel(),"translated"); published++; host.refreshTranslation()
                     }
                 }
-            } catch(e: Exception) { main.post { if(current(token)) error(e) } }
+            } catch(e: Exception) { main.post { if(current(token)) error(e,sending=true) } }
             finally { busy.set(false) }
         }
     }
@@ -388,19 +388,10 @@ internal class TranslationFeature(private val host: TranslationHost) {
     fun close() { dead=true; invalidate(); worker.shutdown(); layer=null; resultView=null }
     private fun status(value: String, code: String) { label=value; reason=code; host.refreshTranslation() }
     private fun unreadableLabel()=if(unreadable.isEmpty()) "" else " · 已跳过${unreadable.size}处"
-    private fun fail(value: String, code: String) { invalidate(); status(value,code); toast(value) }
-    private fun error(e: Exception) {
-        val value=when(e.message) {
-            "SENSITIVE_PAGE" -> "检测到可能的敏感信息，已清除本页，未发送。"
-            "RELAY_NOT_CONFIGURED","RELAY_UNAVAILABLE" -> "Mac 翻译连接不可用，请检查 USB 和转发服务。未自动重试。"
-            "FREE_QUOTA_EXCEEDED","SESSION_LIMIT" -> "本次免费翻译额度不足，未继续请求。"
-            "PAGE_TOO_LARGE" -> "本页文字超过开发版处理上限。"
-            "RECOGNITION_WIDTH_BUDGET" -> "本页含过长的文字行，当前版本尚不能完整识别。"
-            else -> "本次处理未完成，请重新点翻译。不会自动重试或联网。"
-        }
-        val code=if(e is com.kandong.liveocr.LiveOcrException) "ocr_"+e.code.lowercase(java.util.Locale.ROOT)
-            else "processing_failed"
-        fail(value,code)
+    private fun fail(value: String, code: String, detail: String = value) { invalidate(); status(value,code); toast(detail) }
+    private fun error(e: Exception, sending: Boolean = false) {
+        val failure=LiveTranslationError.from(e,sending)
+        fail(failure.message.substringBefore('。'),failure.code,failure.message)
     }
     private fun toast(value:String) { Toast.makeText(context,value,Toast.LENGTH_LONG).show() }
     private fun dp(n:Int)=CompatUi.dp(context,n)
