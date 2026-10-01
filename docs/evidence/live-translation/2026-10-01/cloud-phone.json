@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-01",
+  "updated_at_utc": "2026-10-01T11:36:32.606143+00:00",
+  "source_commit": "e37a6de4c84dea689c05266e975de09fb37acc10",
+  "device": {
+    "model": "NAM-LX9",
+    "serial": "2AS0221B09001601",
+    "api": 31,
+    "usb_authorized": true
+  },
+  "install": {
+    "result": "Success",
+    "package": "com.kandong.compat.dev",
+    "bytes": 347895476,
+    "sha256": "8719940386c1f060fabf230e2324e040769e8bf781c946e5cde67eadd9ea0404",
+    "device_sha_matches_tested_apk": true,
+    "build_checks_reused": "retained-translation.json; Android code and APK unchanged"
+  },
+  "configuration": {
+    "private_staging_written": true,
+    "keystore_import_verified": true,
+    "credentials_printed_or_committed": false,
+    "provider_key_on_phone": false,
+    "encrypted_file_present_bytes": 196,
+    "private_staging_removed": true,
+    "verification": "app-created encrypted file present, plaintext staging absent; user confirmed translation"
+  },
+  "legacy_path": {
+    "target_reverse_list_empty": true,
+    "owned_relay_pid": 16136,
+    "owned_relay_stopped": true,
+    "port_18741_listener": false
+  },
+  "acceptance": {
+    "phone_real_translation_verified": true,
+    "unplugged_translation_verified": true,
+    "sustained_reading_verified": true,
+    "awaiting": null,
+    "english_user_feedback": "已显示中文译文",
+    "phone_runtime_counts_observed": false,
+    "runtime_inspection": "No active magnifier service when inspected; no inference about termination cause",
+    "french_unplugged_user_feedback": "拔线后，法语也显示中文了",
+    "device_absent_from_adb_during_trial": true,
+    "scope": "English connected without legacy relay, fresh French translation after unplug; no independent per-sentence translation grading",
+    "explicit_live_mode_verified": true,
+    "live_mode_user_feedback": "可以正常切回实时放大",
+    "sustained_reading_status": "user confirmed the requested approximately two-minute bright-screen reading check; no independent duration measurement",
+    "full_text_return_verified": true,
+    "collapse_resume_verified": true,
+    "reading_user_feedback": "一直保留，全文和恢复都正常",
+    "remaining": [
+      "real offline/weak-network errors and manual recovery",
+      "preserve last successful result during a real failed new request",
+      "broader page/translation quality and longer resource use"
+    ]
+  },
+  "content": {
+    "screenshots_saved": 0,
+    "real_screen_text_read": false,
+    "assistant_started_translation": false
+  }
+}

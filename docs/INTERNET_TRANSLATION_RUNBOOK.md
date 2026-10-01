@@ -1,6 +1,6 @@
 # 手机独立联网翻译
 
-2026-10-01：用户明确允许后，**云端已部署并通过英法合成文字的真实翻译；尚未更新、配置真机或完成拔线验收**。最新证据见 `docs/HANDOFF.md`；不能把旧 USB 路线的人工验收当作本路线的验收。
+2026-10-01：用户明确允许后，**云端已部署，nova 9已更新配置；英语页及物理拔线后新翻译法语页均获用户成功确认**。最新证据见 `docs/HANDOFF.md`；不能把旧 USB 路线的人工验收当作本路线的验收。
 
 ## 运行方式
 
@@ -44,7 +44,7 @@ python3 -B -m unittest discover -s scripts -p 'test_provision_translation_cloud.
 
 用户对专用服务部署、服务端密钥及小量合成/手机验证已明确回复“允许”。账号认证及订阅只读核对完成，没有购买或升级套餐；不承诺任意流量均免费。此次授权覆盖下述专用路线，无需重问；其他部署或Release不在范围内。
 
-实际origin为 `https://kandong-translation-pilot.zhyphil.workers.dev`，当前版本 `69c8fdaf-61f6-4969-890a-b24f309a698a`。首次先部署空凭据关闭态并验证503，再启用secret；已验证两项绑定类型为secret_text。当前43项本机Workers/类型/production预检通过；线上英法各一页返回正确时间和否定条件，鉴权/旧披露/重复/取消通过。初次失败及修复见[启用证据](evidence/live-translation/2026-10-01/cloud-activation.json)。步骤1–4已完成，手机未连接，从步骤5继续；不要重置额度、重新生成凭据或重复合成调用。
+实际origin为 `https://kandong-translation-pilot.zhyphil.workers.dev`，当前版本 `69c8fdaf-61f6-4969-890a-b24f309a698a`。首次先部署空凭据关闭态并验证503，再启用secret；已验证两项绑定类型为secret_text。当前43项本机Workers/类型/production预检通过；线上英法各一页返回正确时间和否定条件，鉴权/旧披露/重复/取消通过。初次失败及修复见[启用证据](evidence/live-translation/2026-10-01/cloud-activation.json)。步骤1–6的部署、手机更新配置与旧路线清理已完成；用户确认英语页显示中文、物理拔线后新翻译法语页成功，加密配置已核对。用户亦确认约两分钟持续阅读、全文返回、收起恢复及主动实时切换正常；当前下一项为真实断网/弱网及失败恢复。不要重置额度、重新生成凭据、重复安装或重复合成调用。
 
 以下保留可重复执行的操作步骤：
 

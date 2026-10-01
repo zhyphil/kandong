@@ -4,7 +4,7 @@
 
 当前固定版本：**v0.1.0 核心放大镜**。下载入口：[GitHub Release](https://github.com/zhyphil/kandong/releases/tag/v0.1.0)。正式签名APK与之前调试版不能覆盖安装，迁移方法见[发布说明](docs/releases/v0.1.0.md)。[核心基线](docs/CORE_BASELINE.md) · [后续发布方法](docs/RELEASING.md)
 
-开发中：**看懂开发版**（`com.kandong.compat.dev`）已接入真实整屏采集、本机OCR、DeepL上下文翻译和镜面显示，安装到nova 9。点翻译选择英语或法语，再点“开始翻译”，自动识字、翻译并显示；无识字预览或第二次发送确认。最新代码已改为手机经HTTPS直连独立服务；云端已部署并通过英法合成文字的真实DeepL验证；手机尚未更新、配置新路线或完成拔线验收。已安装的旧版仍依赖USB/Mac，不能据此声称拔线可用。见[开发版运行与限制](docs/LIVE_TRANSLATION_DEV.md)和[独立联网启用说明](docs/INTERNET_TRANSLATION_RUNBOOK.md)。
+开发中：**看懂开发版**（`com.kandong.compat.dev`）已接入真实整屏采集、本机OCR、DeepL上下文翻译和镜面显示，安装到nova 9。点翻译选择英语或法语，再点“开始翻译”，自动识字、翻译并显示；无识字预览或第二次发送确认。最新代码已改为手机经HTTPS直连独立服务；云端已部署并通过英法合成文字的真实DeepL验证；nova 9已安装配置新路线，用户确认英语页显示中文，并在拔掉USB后成功新翻译法语页。旧Mac中转已关闭、USB转发为空。见[开发版运行与限制](docs/LIVE_TRANSLATION_DEV.md)和[独立联网启用说明](docs/INTERNET_TRANSLATION_RUNBOOK.md)。
 
 **跨 App 局部屏幕放大镜 + 利用整屏上下文的放大区域翻译。** 面向老年人及视觉、语言或数字使用困难人群。产品顺序固定为：**看清 → 看懂 → 理解 → 会操作**。
 

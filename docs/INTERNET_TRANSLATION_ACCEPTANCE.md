@@ -18,7 +18,12 @@
 - [x] 云端配置类型检查与不上传的部署预检通过。
 - [x] 用户明确允许专用服务部署、服务端密钥及联网/手机验证，不升级套餐。
 - [x] 服务端实际部署、secret绑定、英法合成真实翻译、鉴权/旧披露/重复/取消验证通过。
-- [ ] 手机更新、私有配置及真实页面拔线使用验收；目前未连接。
+- [x] nova 9更新、APK哈希一致、私有配置及Keystore导入核对；旧Mac relay关闭，目标USB转发为空。
+- [x] 英语自有页真实手机云端流程：用户回复“已显示中文译文”，未独立读取逐句译文。
+- [x] 用户物理拔掉USB后重新翻译法语页，回复“拔线后，法语也显示中文了”；同时ADB列表仅有模拟器。
+- [x] 主动点“实时”回到当前页面：用户回复“可以正常切回实时放大”。
+- [x] 约两分钟亮屏阅读、全文返回/收起恢复：用户回复“一直保留，全文和恢复都正常”；属于人工试用反馈，无独立计时。
+- [ ] 真实断网/弱网提示、失败后保留旧结果及手动恢复；尚未实测。
 
 已使用当前已登录账号内独立的 `kandong-translation-pilot` Worker 和 SQLite Durable Object。2026-10-01 只读查询返回账号有权限、订阅列表为空；未购买/升级套餐。免费额度不是无限服务，仍需核对部署时账户状态与错误。参见 [Cloudflare 额度](https://developers.cloudflare.com/durable-objects/platform/pricing/)。
 
@@ -40,4 +45,4 @@
 
 随后译文持续阅读变更已通过162项Android单元测试与14项模拟器检查；此轮Android源码/构件未改，复用原检查。用户明确授权后已实际部署并上传服务端secret；修复实际Workers Request参数错误后，43项服务端回归/类型/production预检通过，11项线上检查通过（英法各3条合成文字，合计193码点；中文时间/否定含义由根任务逐项核对）。两次此前失败保留，未把模拟测试当成线上成功。
 
-当前版本`69c8fdaf-61f6-4969-890a-b24f309a698a`，地址`https://kandong-translation-pilot.zhyphil.workers.dev`。详见[云端证据](evidence/live-translation/2026-10-01/cloud-activation.json)。没有真实手机页面上传，手机未连接、未更新或配置；旧手机版本依赖USB，不能作为本项通过证据。
+当前版本`69c8fdaf-61f6-4969-890a-b24f309a698a`，地址`https://kandong-translation-pilot.zhyphil.workers.dev`。详见[云端证据](evidence/live-translation/2026-10-01/cloud-activation.json)。随后nova 9已完成安装及私有配置；用户主动翻译英语自有页并确认中文显示，本助手不读取页面/译文。新APK哈希与已验构件相同，Keystore加密文件存在且暂存删除；旧中转已关闭、USB转发为空。用户确认物理拔线后新翻译法语页成功，ADB列表亦已无手机；本轮实际独立联网流程通过。主动“实时”切换及约两分钟持续阅读/全文返回/收起恢复均获用户确认；弱网/失败恢复等尚未实测。见[手机证据](evidence/live-translation/2026-10-01/cloud-phone.json)。
