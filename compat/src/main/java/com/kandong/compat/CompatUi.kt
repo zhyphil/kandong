@@ -118,12 +118,12 @@ internal object CompatUi {
             body.addView(text(c,"让文字边缘更清楚 · 试用功能\n只在本机处理；若感觉卡顿或手机变热，可关闭。",16f,muted))
             row("使用帮助") { navigate("使用帮助") }
             row("隐私说明") { navigate("隐私说明") }
-            if (TranslationFeature.AVAILABLE) body.addView(text(c,"翻译开发版：展开镜面后点“翻译”。默认本机识字；联网翻译需连接 Mac 并逐页确认。",16f,muted))
+            if (TranslationFeature.AVAILABLE) body.addView(text(c,"翻译开发版：点“翻译”，选择英语或法语，再点“开始翻译”。识字后自动经 DeepL 翻译成中文，需连接 Mac。",16f,muted))
             for(title in if(TranslationFeature.AVAILABLE) listOf("账号与订阅") else listOf("区域翻译设置","账号与订阅")) {
                 body.addView(text(c,"$title · 规划中，暂不可用",16f,muted).apply { isEnabled=false; minimumHeight=dp(c,48) })
             }
             body.addView(text(c,"目前无需登录",14f,muted))
-        } else body.addView(text(c,if(page=="使用帮助") help + if(TranslationFeature.AVAILABLE) "\n\n点镜面工具栏“翻译”可识别当前页。取图时保持页面不动，取图后识字和翻译始终基于本次快照。点“原文”、收起或打开菜单会清除快照和文字。" else ""
+        } else body.addView(text(c,if(page=="使用帮助") help + if(TranslationFeature.AVAILABLE) "\n\n点镜面工具栏“翻译”，选择英语或法语，再点“开始翻译”，就会自动识字、翻译并显示到镜面。取图时保持页面不动，取图后识字和翻译始终基于本次快照。点“原文”、收起或打开菜单会清除快照和文字。" else ""
             else if(TranslationFeature.AVAILABLE) TranslationFeature.PRIVACY else privacy))
 
         return LinearLayout(c).apply {

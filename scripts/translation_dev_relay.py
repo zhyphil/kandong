@@ -21,7 +21,7 @@ from translation_deepl import DeepLClient, DeepLError, remaining_characters
 PORT = 18741
 MAX_BODY = 32768
 MAX_CHARS = 6000
-DISCLOSURE = "deepl-free-public-v1"
+DISCLOSURE = "deepl-free-direct-v2"
 TOKEN_FILE = Path(__file__).resolve().parents[1] / ".local/translation/relay-token"
 
 
@@ -39,8 +39,8 @@ def unique_pairs(pairs):
 
 
 def sensitive(text):
-    # Best-effort screen-text guard; NOT a guarantee. User also reviews the whole
-    # recognized page and confirms it contains no personal/confidential information.
+    # Best-effort screen-text guard; NOT a guarantee. User starts translation only after the
+    # setup screen states the whole-page scope and public-content restriction.
     return bool(re.search(
         r"(?i)(password|passcode|verification code|one.time code|mot de passe|"
         r"code de v[eé]rification|验证码|密码|银行卡|信用卡|身份证|"

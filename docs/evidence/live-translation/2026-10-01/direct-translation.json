@@ -1,0 +1,62 @@
+{
+  "baseCommit": "69a074c",
+  "scope": "Single explicit start: EN/FR, local full-page OCR, automatic DeepL, mirror result; no OCR preview or second send confirmation",
+  "disclosureVersion": "deepl-free-direct-v2",
+  "initialContractTests": {
+    "tests": 12,
+    "failures": 1,
+    "errors": 1
+  },
+  "jvm": {
+    "debug": 92,
+    "release": 63,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "relay": {
+    "tests": 12,
+    "failures": 0,
+    "fakeProviderOnly": true
+  },
+  "native": {
+    "device": "KanDong_OCR_API37_16K",
+    "tests": 10,
+    "failures": 0,
+    "seconds": 0.568,
+    "setupUi": 3,
+    "existingDrawing": 7,
+    "ownedUiPreviewsInspected": true
+  },
+  "build": {
+    "debug": true,
+    "androidTest": true,
+    "debugLintErrors": 0,
+    "releaseLintErrors": 0,
+    "debugLintWarnings": 10,
+    "releaseLintWarnings": 10
+  },
+  "apk": {
+    "bytes": 347875280,
+    "sha256": "6a19252f5f19e9c65afa34750a27d2a6d46ef225a3306c62c040104da2319fa4"
+  },
+  "testApk": {
+    "bytes": 2208362,
+    "sha256": "3283936a79924c5ebbf93cca4031e9d5a0aafc92901a3f58bcee6cfb46687c8d"
+  },
+  "phone": {
+    "model": "NAM-LX9",
+    "api": 31,
+    "serial": "2AS0221B09001601",
+    "install": "Success",
+    "installedSha256": "6a19252f5f19e9c65afa34750a27d2a6d46ef225a3306c62c040104da2319fa4",
+    "newRelayProvisioned": true,
+    "userAcceptance": "pending"
+  },
+  "agentTriggeredRealPageTranslation": false,
+  "limitations": [
+    "No actual DeepL call in automated tests",
+    "New phone workflow still awaits user confirmation",
+    "Earlier French acceptance belongs to the earlier two-step workflow"
+  ]
+}

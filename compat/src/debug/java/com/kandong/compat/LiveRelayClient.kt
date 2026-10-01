@@ -40,7 +40,7 @@ internal class LiveRelayClient(private val context: Context) {
         require(token.matches(Regex("[a-f0-9]{64}"))) { "RELAY_NOT_CONFIGURED" }
         val id = UUID.randomUUID().toString()
         val body = JSONObject().put("requestId",id).put("language",language)
-            .put("disclosure","deepl-free-public-v1").put("publicPageConfirmed",true)
+            .put("disclosure",TranslationSetupView.DISCLOSURE_VERSION).put("publicPageConfirmed",true)
             .put("remainingMillis",remainingMillis())
             .put("blocks",JSONArray().apply { blocks.forEach { put(JSONObject().put("id",it.id).put("text",it.text)) } })
             .toString().toByteArray(Charsets.UTF_8)

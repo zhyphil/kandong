@@ -39,7 +39,6 @@ internal class TranslationFeature(private val host: TranslationHost) {
     private var unreadable=emptyList<OcrBlock>()
     private var translations=emptyMap<String,String>()
     private var language="EN"
-    private var online=false
     private var dead=false
     private var captures=0
     private var ocrRuns=0
@@ -75,61 +74,30 @@ internal class TranslationFeature(private val host: TranslationHost) {
         if(busy.get()) { toast("正在结束上一项处理，请稍后再试。"); return }
         configure()
     }
-    private fun line(value: String)=CompatUi.text(context,value,17f)
-    private fun column()=LinearLayout(context).apply {
-        orientation=LinearLayout.VERTICAL; setPadding(dp(20),dp(12),dp(20),dp(24))
-        setBackgroundColor(CompatUi.background)
-    }
     private fun configure() {
-        language="EN"; online=false
-        val body=column()
-        body.addView(line("翻译当前页 · 开发版"))
-        body.addView(line("点下方按钮后，才临时读取当前整屏可见内容并在本机识字。包括红框外的文字；不保存图片或文字。请使用公开、无个人信息的单语页面，按下识别后会先隐藏本应用遮挡，再取得一张整页快照；后续页面变化不影响本次处理。"))
-        val languages=RadioGroup(context)
-        listOf("英语" to "EN","法语" to "FR","简体中文（保留原文）" to "ZH-HANS","繁体中文（保留原文）" to "ZH-HANT").forEachIndexed { index,(title,value) ->
-            languages.addView(RadioButton(context).apply {
-                id=View.generateViewId(); text=title; textSize=18f; minHeight=dp(48); isChecked=index==0
-                setOnCheckedChangeListener { _, checked -> if(checked) language=value }
-            })
+        openDialog(TranslationSetupView.body(context,language,::startTranslation,::invalidate))
+    }
+    private fun startTranslation(selectedLanguage: String) {
+        if(busy.get() || !host.active || dead) return
+        language=selectedLanguage
+        dismissDialog()
+        val token=state.begin()
+        captureSamples="none"; witnessedSamples="none"
+        rawCandidates=-1; recognizedBlocks=-1; eligibleBlocks=-1
+        lastUnreadableCount=-1; blankFrames=0
+        status("正在读取当前页…","capture")
+        captureClean { bytes ->
+            if(!current(token)) { bytes.fill(0); return@captureClean }
+            if(!state.captured(token,now())) { bytes.fill(0); return@captureClean }
+            try {
+                snapshot=Bitmap.createBitmap(host.screenWidth,host.screenHeight,Bitmap.Config.ARGB_8888).apply {
+                    density=Bitmap.DENSITY_NONE
+                    copyPixelsFromBuffer(ByteBuffer.wrap(bytes))
+                }
+            } catch(_: Exception) { bytes.fill(0); fail("本次快照未能打开，请重试。","snapshot_failed"); return@captureClean }
+            main.postDelayed({ if(state.active && state.epoch==token) fail("本页结果已过期，请重新点翻译。","expired") },LiveTranslationState.TTL)
+            recognize(token,bytes)
         }
-        body.addView(languages)
-        val providers=RadioGroup(context)
-        listOf("本机识字：显示原文（默认）","DeepL：翻译成中文（需 USB / Mac）").forEachIndexed { index,title ->
-            providers.addView(RadioButton(context).apply {
-                id=View.generateViewId(); text=title; textSize=18f; minHeight=dp(48); isChecked=index==0
-                setOnCheckedChangeListener { _, checked -> if(checked) online=index==1 }
-            })
-        }
-        body.addView(providers)
-        body.addView(line("本机英法翻译尚未提供。联网不会自动发生：识字后还需查看整页文字并确认发送。中文页仅保留原文。"))
-        val consent=CheckBox(context).apply { text="同意本次在手机内识别当前整页"; textSize=18f; minHeight=dp(56); isSaveEnabled=false }
-        body.addView(consent)
-        val start=CompatUi.button(context,"识别本页",true) {
-            if(!consent.isChecked || busy.get()) return@button
-            dismissDialog()
-            val token=state.begin()
-            captureSamples="none"; witnessedSamples="none"
-            rawCandidates=-1; recognizedBlocks=-1; eligibleBlocks=-1
-            lastUnreadableCount=-1
-            blankFrames=0
-            status("正在读取当前页…","capture")
-            captureClean { bytes ->
-                if(!current(token)) { bytes.fill(0); return@captureClean }
-                if(!state.captured(token,now())) { bytes.fill(0); return@captureClean }
-                try {
-                    snapshot=Bitmap.createBitmap(host.screenWidth,host.screenHeight,Bitmap.Config.ARGB_8888).apply {
-                        density=Bitmap.DENSITY_NONE
-                        copyPixelsFromBuffer(ByteBuffer.wrap(bytes))
-                    }
-                } catch(_: Exception) { bytes.fill(0); fail("本次快照未能打开，请重试。","snapshot_failed"); return@captureClean }
-                main.postDelayed({ if(state.active && state.epoch==token) fail("本页结果已过期，请重新点翻译。","expired") },LiveTranslationState.TTL)
-                recognize(token,bytes)
-            }
-        }.apply { isEnabled=false }
-        consent.setOnCheckedChangeListener { _, checked -> start.isEnabled=checked }
-        body.addView(start)
-        body.addView(CompatUi.button(context,"取消") { invalidate() })
-        openDialog(body)
     }
     private fun openDialog(body: View, onCancel: ()->Unit = { invalidate() }) {
         dismissDialog()
@@ -161,7 +129,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
     private fun dismissDialog() { dialog?.setOnCancelListener(null); dialog?.dismiss(); dialog=null }
     private fun showFullText() {
         val token=state.epoch
-        if(!current(token) || snapshot==null || reason !in listOf("local","translated")) return
+        if(!current(token) || snapshot==null || reason != "translated") return
         val crop=resultView?.crop ?: return
         val entries=SnapshotTextContent.select(blocks,translations,crop)
         if(entries.isEmpty()) return
@@ -179,73 +147,46 @@ internal class TranslationFeature(private val host: TranslationHost) {
         val lang=language
         val safe=Rect(host.safeBounds)
         worker.execute {
+            var sending=false
             try {
-                val page=LiveOcrEngine(context).recognize(bytes,host.screenWidth,host.screenHeight,lang) { current(token) }
-                val eligible=page.blocks.filter { it.left>=safe.left && it.top>=safe.top && it.right<=safe.right && it.bottom<=safe.bottom }
-                val unclear=page.unreadable.filter { it.left<safe.right && it.right>safe.left && it.top<safe.bottom && it.bottom>safe.top }
-                main.post { if(current(token)) {
-                    rawCandidates=page.rawCandidateCount; recognizedBlocks=page.blocks.size; eligibleBlocks=eligible.size
-                    lastUnreadableCount=unclear.size
-                } }
-                check(eligible.map { it.id }.distinct().size == eligible.size) { "OCR_FAILED" }
-                check(!TranslationTextPolicy.sensitive(eligible.joinToString("\n") { it.text })) { "SENSITIVE_PAGE" }
+                // Keep both stages on this worker. Posting a second worker job from
+                // the OCR callback would race with the OCR finally/busy reset.
+                val result=DirectPageTranslation.run(lang,
+                    recognize={
+                        try {
+                            val page=LiveOcrEngine(context).recognize(bytes,host.screenWidth,host.screenHeight,lang) { current(token) }
+                            val eligible=page.blocks.filter { it.left>=safe.left && it.top>=safe.top && it.right<=safe.right && it.bottom<=safe.bottom }
+                            val unclear=page.unreadable.filter { it.left<safe.right && it.right>safe.left && it.top<safe.bottom && it.bottom>safe.top }
+                            main.post { if(current(token)) {
+                                rawCandidates=page.rawCandidateCount; recognizedBlocks=page.blocks.size; eligibleBlocks=eligible.size
+                                lastUnreadableCount=unclear.size
+                            } }
+                            com.kandong.liveocr.OcrPage(eligible,page.rawCandidateCount,unclear)
+                        } finally { bytes.fill(0) }
+                    },
+                    translate={ selected,source ->
+                        relay.translate(selected,source,{ LiveTranslationState.TTL-(now()-state.capturedAt) }) { current(token) }
+                    },
+                    current={ current(token) },
+                    onRecognized={ page -> main.post { if(current(token)) {
+                        blocks=page.blocks.toList(); unreadable=page.unreadable.toList()
+                    } } },
+                    onSending={
+                        sending=true
+                        main.post { if(current(token)) { status("本次快照 · 正在翻译…","sending"); sends++ } }
+                    })
                 main.post {
                     if(!current(token)) return@post
-                    blocks=eligible.toList()
-                    unreadable=unclear.toList()
-                    if(blocks.isEmpty()) { status("本次快照 · 暂未读到清晰文字，已保留原图","no_text"); host.refreshTranslation() }
-                    else if(online && lang in listOf("EN","FR")) preview(token)
-                    else { status("本次快照 · 已识别 ${blocks.size} 块"+unreadableLabel(),"local"); published++; host.refreshTranslation() }
-                }
-            } catch(e: Exception) { main.post { if(current(token)) error(e) } }
-            finally { bytes.fill(0); busy.set(false) }
-        }
-    }
-    private fun preview(token: Long) {
-        val body=column()
-        body.addView(line("确认本次快照联网翻译"))
-        body.addView(line(PROVIDER_DISCLOSURE))
-        body.addView(line("以下是本次快照将发送的全部 ${blocks.size} 条文字（包括红框外）。请检查是否漏字、错字或含隐私。"))
-        if(unreadable.isNotEmpty()) body.addView(line("已跳过 ${unreadable.size} 处不完整或暂时无法识别的文字，镜面中保留原图并用橙框标记。只发送已识别的文字，上下文可能不完整；请先核对结果。"))
-        body.addView(line(blocks.joinToString("\n\n") { it.text }))
-        val consent=CheckBox(context).apply {
-            text=if(unreadable.isEmpty()) "已检查：本页只有公开信息，无个人或保密内容；同意发送全部文字给 DeepL。"
-                else "已核对识别结果和跳过的部分；本页只有公开信息，无个人或保密内容。同意发送已识别文字给 DeepL，并知晓上下文可能不完整。"
-            textSize=18f; minHeight=dp(56); isSaveEnabled=false
-        }
-        body.addView(consent)
-        val send=CompatUi.button(context,"发送本页并翻译",true) {
-            if(!consent.isChecked || !current(token)) return@button
-            dismissDialog()
-            host.hideControls(false)
-            send(token)
-        }.apply { isEnabled=false }
-        consent.setOnCheckedChangeListener { _, checked -> send.isEnabled=checked && current(token) }
-        body.addView(send)
-        body.addView(CompatUi.button(context,"先查看识字结果，不发送") {
-            if(!current(token)) return@button
-            dismissDialog(); host.hideControls(false)
-            status("本次快照 · 已识别 ${blocks.size} 块"+unreadableLabel(),"local")
-            published++; host.refreshTranslation()
-        })
-        body.addView(CompatUi.button(context,"不发送，回到原文") { invalidate() })
-        openDialog(body)
-    }
-    private fun send(token: Long) {
-        if(!current(token) || !busy.compareAndSet(false,true)) return
-        val selected=blocks.toList(); val lang=language
-        status("本次快照 · 正在翻译…","sending"); sends++
-        worker.execute {
-            try {
-                val result=relay.translate(selected,lang,{ LiveTranslationState.TTL-(now()-state.capturedAt) }) { current(token) }
-                main.post {
-                    if(current(token)) {
-                        translations=result
-                        status("本次快照 · 机译待核对"+unreadableLabel(),"translated"); published++; host.refreshTranslation()
+                    if(result.page.blocks.isEmpty()) {
+                        status("本次快照 · 暂未读到清晰文字，已保留原图","no_text")
+                    } else {
+                        translations=result.translations
+                        status("本次快照 · 机译待核对"+unreadableLabel(),"translated"); published++
                     }
+                    host.refreshTranslation()
                 }
-            } catch(e: Exception) { main.post { if(current(token)) error(e,sending=true) } }
-            finally { busy.set(false) }
+            } catch(e: Exception) { main.post { if(current(token)) error(e,sending=sending) } }
+            finally { bytes.fill(0); busy.set(false) }
         }
     }
     private inner class Probe(val x:Int,val y:Int,val colors:IntArray,val token:Long,val done:(ByteArray)->Unit) {
@@ -325,7 +266,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
     fun render(crop: Box, viewport: MagnifierViewport) {
         val visible=state.showingSnapshot(now()) && snapshot != null
         layer?.visibility=if(visible) View.VISIBLE else View.GONE
-        fullTextButton?.visibility=if(visible && reason in listOf("local","translated") &&
+        fullTextButton?.visibility=if(visible && reason == "translated" &&
             blocks.any { SnapshotTextContent.intersects(it,crop) }) View.VISIBLE else View.GONE
         resultView?.apply {
             this.crop=crop; scale=viewport.scale; tx=viewport.translateX; ty=viewport.translateY
@@ -348,7 +289,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
             canvas.clipRect(0f,0f,crop.width.toFloat(),crop.height.toFloat())
             canvas.drawBitmap(captured,-crop.left.toFloat(),-crop.top.toFloat(),imagePaint)
             canvas.restore()
-            if(reason !in listOf("local","translated","no_text")) return
+            if(reason !in listOf("translated","no_text")) return
             if(cachedBlocks!==blocks || cachedTranslations!==translations) {
                 clear(); cachedBlocks=blocks; cachedTranslations=translations
                 textPainter=SnapshotTextPainter(blocks,translations)
@@ -399,9 +340,9 @@ internal class TranslationFeature(private val host: TranslationHost) {
         " samples(total/dark/light/opaque/edges)=$captureSamples witnessSamples=$witnessedSamples blankFrames=$blankFrames rawCandidates=$rawCandidates recognized=$recognizedBlocks eligible=$eligibleBlocks lastUnreadable=$lastUnreadableCount"
     companion object {
         const val AVAILABLE=true
-        const val DISCLOSURE="放大镜临时读取整屏，仅在手机内显示选区。点“翻译”并另外同意后，才在本机识别整页文字。联网翻译需连接 Mac，并逐页确认发送给 DeepL；图片不上传，文字和图片不保存。收起暂停，关闭同时停止共享。"
+        const val DISCLOSURE="放大镜临时读取整屏，仅在手机内显示选区。点“开始翻译”后，本机会识别当前整屏文字并经 Mac 自动交给 DeepL 翻译；图片不上传，文字和图片不保存。收起暂停，关闭同时停止共享。"
         const val PROVIDER_DISCLOSURE="供应商：DeepL API Free。经 USB 和这台 Mac 发送本次整屏快照识别出的全部文字（含红框外上下文），不发送图片。DeepL 的免费服务条款允许临时保留内容用于改进服务；不能承诺零留存，请勿提交个人或保密信息。详见 deepl.com/en/privacy 第3、13节。开发版需保持 USB / Mac 连接。机器翻译可能出错，请对照原文。"
-        const val PRIVACY=DISCLOSURE+"\n\n"+PROVIDER_DISCLOSURE+"\n\n只有点“翻译”后才识字；本机是默认选项，英法离线翻译尚不可用。按下识别后先隐藏自有遮挡，再取得一张快照；本次识字、翻译和镜面显示始终使用它，底层页面变化不会取消。移动红框、缩放和平移只改变这张快照的显示。60秒过期会清除快照和文字。收起、菜单、原文、锁屏或停止会清空本次文字和待返回结果。\n\n快照在内存中短暂保留，不写入相册或文件。按下按钮和取得无遮挡画面之间有短暂间隔；请在取图完成前保持页面不动。密码、银行、聊天等敏感页面请先关闭放大镜。发送后关闭功能无法撤回已经到达供应商的文字。"
+        const val PRIVACY=DISCLOSURE+"\n\n"+PROVIDER_DISCLOSURE+"\n\n只有点“开始翻译”后才识字，并自动将整屏可读文字交给 DeepL 翻译。此按钮确认仅对当前公开页面有效，不显示识字预览或二次确认。先隐藏自有遮挡，再取得一张快照；本次识字、翻译和镜面显示始终使用它，底层页面变化不会取消。移动红框、缩放和平移只改变这张快照的显示。60秒过期会清除快照和文字。收起、菜单、原文、锁屏或停止会清空本次文字和待返回结果。\n\n快照在内存中短暂保留，不写入相册或文件。按下按钮和取得无遮挡画面之间有短暂间隔；请在取图完成前保持页面不动。密码、银行、聊天等敏感页面请先关闭放大镜。发送后关闭功能无法撤回已经到达供应商的文字。"
         private fun rgb(b:ByteArray,offset:Int)=Color.rgb(b[offset].toInt() and 255,b[offset+1].toInt() and 255,b[offset+2].toInt() and 255)
         private fun rgb(b:ByteBuffer,offset:Int)=Color.rgb(b.get(offset).toInt() and 255,b.get(offset+1).toInt() and 255,b.get(offset+2).toInt() and 255)
         private fun distance(a:Int,b:Int)=maxOf(abs(Color.red(a)-Color.red(b)),abs(Color.green(a)-Color.green(b)),abs(Color.blue(a)-Color.blue(b)))

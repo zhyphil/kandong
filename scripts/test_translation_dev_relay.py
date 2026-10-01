@@ -21,6 +21,21 @@ class FakeClient:
 
 
 class RelayTest(unittest.TestCase):
+    def test_single_start_disclosure_can_translate_without_preview_roundtrip(self):
+        client=FakeClient(); relay=Relay(client,"a"*64)
+        payload=page(); payload["disclosure"]="deepl-free-direct-v2"
+        result=relay.translate("Bearer " + "a"*64,payload)
+        self.assertEqual(len(result["translations"]),2)
+        self.assertEqual(len(client.calls),1)
+        self.assertEqual(client.calls[0][1]["context"],"\n".join(b["text"] for b in payload["blocks"]))
+
+    def test_old_preview_disclosure_does_not_authorize_new_direct_flow(self):
+        client=FakeClient(); relay=Relay(client,"a"*64)
+        payload=page(); payload["disclosure"]="deepl-free-public-v1"
+        with self.assertRaisesRegex(Refused,"CONSENT_REQUIRED"):
+            relay.translate("Bearer " + "a"*64,payload)
+        self.assertEqual(client.calls,[])
+
     def test_entire_page_context_and_stable_response_order(self):
         client=FakeClient(); relay=Relay(client,"a"*64)
         result=relay.translate("Bearer " + "a"*64,page())
