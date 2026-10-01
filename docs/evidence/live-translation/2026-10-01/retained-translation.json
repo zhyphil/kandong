@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-01",
+  "baseline": "2c72150a2c2a82593f4bc24d494d83f12af430f0",
+  "behavior": {
+    "reading_ttl": null,
+    "processing_timeout_ms": 60000,
+    "replace_only_after_success": true,
+    "keep_previous_on_failure_cancel_empty": true,
+    "menu_collapse_keep_completed": true,
+    "live_action_clears": true,
+    "session_end_clears": true,
+    "retained_complete_results": 1,
+    "pending_candidate_limit": 1,
+    "disk_history": false
+  },
+  "checks": {
+    "debug_jvm": 99,
+    "release_jvm": 63,
+    "emulator_native": 14,
+    "native_seconds": 0.47,
+    "failed": 0,
+    "skipped": 0,
+    "lint_each_variant": {
+      "errors": 0,
+      "existing_warnings": 10
+    },
+    "debug_and_test_apk_build": "passed",
+    "regression_before_fix": "snapshot reading predicate at 120 seconds: 1 test failed",
+    "root_diff_review": "completed; no independent agent review this NORMAL task"
+  },
+  "apk": {
+    "bytes": 347895476,
+    "sha256": "8719940386c1f060fabf230e2324e040769e8bf781c946e5cde67eadd9ea0404",
+    "installed_on": "KanDong_OCR_API37_16K only"
+  },
+  "not_verified": [
+    "phone sustained reading and gestures",
+    "real page full-text and return after two minutes",
+    "live Cloudflare translation path"
+  ],
+  "external": {
+    "real_ocr_calls": 0,
+    "real_deepl_calls": 0,
+    "deployment": false,
+    "phone_updated": false,
+    "screen_sharing": false
+  },
+  "logs": {
+    "red": {
+      "path": "/private/tmp/kandong-retained-snapshot-red.log",
+      "sha256": "244f839412690851f3330865ba955cd628311871c857584c25b823ef1302c644"
+    },
+    "checks": {
+      "path": "/private/tmp/kandong-retained-checks.log",
+      "sha256": "391e0deec583a65eafafa81451186f9827cf19b3165097dcf20323788f5b7d23"
+    },
+    "native": {
+      "path": "/private/tmp/kandong-retained-native.log",
+      "sha256": "2e8e3cabe362393c0e58cc0478a5bb4e97f182eda74033d8f8d87b947e4a728b"
+    }
+  }
+}

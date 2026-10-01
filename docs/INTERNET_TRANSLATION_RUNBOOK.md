@@ -4,7 +4,7 @@
 
 ## 运行方式
 
-手机本机整屏 OCR → `kandong-translation-pilot` HTTPS Worker → DeepL API Free → 同次快照镜面。每页仍由用户点“开始翻译”，只选英语或法语；不新增识字预览/二次发送。原快照、选区、手势、60秒时限、敏感过滤、跳过不清楚文字和停止清理不变。
+手机本机整屏 OCR → `kandong-translation-pilot` HTTPS Worker → DeepL API Free → 同次快照镜面。每页仍由用户点“开始翻译”，只选英语或法语；不新增识字预览/二次发送。选区、手势、敏感过滤、跳过不清楚文字和停止清理不变。60秒仅限制未完成的处理；已完成的快照译文持续可读，点“实时”退出，或等待下一次翻译成功替换。收起/菜单保留已完成结果，不自动发送请求。
 
 `compat` debug 只接受 `https://kandong-translation-pilot.<账号子域>.workers.dev`，无回环/HTTP/任意供应商/重定向/重试/离线队列。供应商密钥只在 Worker secret。安装时单独配置随机256位设备凭据，最长90天；应用将其导入 Android Keystore AES-GCM 加密的 no-backup 文件并删除明文暂存。APK/Git不含密钥或设备凭据。日常使用无需 Mac 或 USB；首次配置、到期续期和撤销仍由安装者管理，尚无公开注册/账户/订阅功能。release仍仅本机放大。
 

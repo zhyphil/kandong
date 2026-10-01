@@ -21,10 +21,20 @@ import kotlin.math.roundToInt
 internal class TranslationFeature(private val host: TranslationHost) {
     val enabled=true
     var label: String?=null; private set
-    val showing get() = snapshot != null
+    val showing get() = state.displayed != null
     val active get() = state.active
     private val context get()=host.context
-    private val state=LiveTranslationState()
+    private class Snapshot(val bitmap: Bitmap) {
+        var blocks=emptyList<OcrBlock>()
+        var unreadable=emptyList<OcrBlock>()
+        var translations=emptyMap<String,String>()
+        var translated=false
+    }
+    private val state=LiveTranslationState<Snapshot> { it.bitmap.recycle() }
+    private val snapshot get()=state.displayed
+    private val blocks get()=snapshot?.blocks.orEmpty()
+    private val unreadable get()=snapshot?.unreadable.orEmpty()
+    private val translations get()=snapshot?.translations.orEmpty()
     private val main=Handler(Looper.getMainLooper())
     private val worker=Executors.newSingleThreadExecutor()
     private val busy=AtomicBoolean(false)
@@ -34,10 +44,6 @@ internal class TranslationFeature(private val host: TranslationHost) {
     private var fullTextButton: Button?=null
     private var dialog: AlertDialog?=null
     private var probe: Probe?=null
-    private var snapshot: Bitmap?=null
-    private var blocks=emptyList<OcrBlock>()
-    private var unreadable=emptyList<OcrBlock>()
-    private var translations=emptyMap<String,String>()
     private var language="EN"
     private var dead=false
     private var captures=0
@@ -66,21 +72,24 @@ internal class TranslationFeature(private val host: TranslationHost) {
             setOnClickListener { showFullText() }
             visibility=View.GONE
         }.also { layer.addView(it,FrameLayout.LayoutParams(dp(64),dp(48),Gravity.TOP or Gravity.END)) }
+        layer.addView(SnapshotReadingControls.liveButton(context) {
+            invalidate(); toast("已切回实时放大镜。")
+        },FrameLayout.LayoutParams(dp(64),dp(48),Gravity.TOP or Gravity.START))
         layer.visibility=View.GONE
     }
     fun tap() {
         if(!host.active || dead) return
-        if(state.active) { invalidate(); toast("已回到原文；再次点翻译可读取新页面。"); return }
+        if(state.active) { cancelPending(); toast(if(showing) "已取消新翻译，保留上次结果。" else "已取消翻译。"); return }
         if(busy.get()) { toast("正在结束上一项处理，请稍后再试。"); return }
         configure()
     }
     private fun configure() {
-        openDialog(TranslationSetupView.body(context,language,::startTranslation,::invalidate))
+        openDialog(TranslationSetupView.body(context,language,::startTranslation,::cancelPending))
     }
     private fun startTranslation(selectedLanguage: String) {
         if(busy.get() || !host.active || dead) return
         val config=try { CloudTranslationConfigStore(context).load() } catch(e:Exception) {
-            invalidate(); toast(LiveTranslationError.from(e).message); return
+            cancelPending(); toast(LiveTranslationError.from(e).message); return
         }
         language=selectedLanguage
         dismissDialog()
@@ -91,18 +100,21 @@ internal class TranslationFeature(private val host: TranslationHost) {
         status("正在读取当前页…","capture")
         captureClean { bytes ->
             if(!current(token)) { bytes.fill(0); return@captureClean }
-            if(!state.captured(token,now())) { bytes.fill(0); return@captureClean }
+            var bitmap: Bitmap?=null
             try {
-                snapshot=Bitmap.createBitmap(host.screenWidth,host.screenHeight,Bitmap.Config.ARGB_8888).apply {
+                bitmap=Bitmap.createBitmap(host.screenWidth,host.screenHeight,Bitmap.Config.ARGB_8888).apply {
                     density=Bitmap.DENSITY_NONE
                     copyPixelsFromBuffer(ByteBuffer.wrap(bytes))
                 }
-            } catch(_: Exception) { bytes.fill(0); fail("本次快照未能打开，请重试。","snapshot_failed"); return@captureClean }
-            main.postDelayed({ if(state.active && state.epoch==token) fail("本页结果已过期，请重新点翻译。","expired") },LiveTranslationState.TTL)
+                if(!state.captured(token,now(),Snapshot(bitmap))) { bytes.fill(0); return@captureClean }
+            } catch(_: Exception) { bitmap?.recycle(); bytes.fill(0); fail("本次快照未能打开，请重试。","snapshot_failed"); return@captureClean }
+            main.postDelayed({ if(state.active && state.epoch==token)
+                fail("本次处理超时，请重新点翻译。","processing_timeout")
+            },LiveTranslationState.PROCESSING_TIMEOUT)
             recognize(token,bytes,config)
         }
     }
-    private fun openDialog(body: View, onCancel: ()->Unit = { invalidate() }) {
+    private fun openDialog(body: View, onCancel: ()->Unit = { cancelPending() }) {
         dismissDialog()
         host.hideControls(true)
         val wrapper=ScrollView(context).apply { isFillViewport=true; addView(body) }
@@ -131,14 +143,13 @@ internal class TranslationFeature(private val host: TranslationHost) {
     }
     private fun dismissDialog() { dialog?.setOnCancelListener(null); dialog?.dismiss(); dialog=null }
     private fun showFullText() {
-        val token=state.epoch
-        if(!current(token) || snapshot==null || reason != "translated") return
+        if(snapshot?.translated != true) return
         val crop=resultView?.crop ?: return
         val entries=SnapshotTextContent.select(blocks,translations,crop)
         if(entries.isEmpty()) return
         fun restore() {
             dismissDialog()
-            if(!current(token)) { invalidate(); return }
+            if(dead || !host.active) return
             host.hideControls(false)
             host.refreshTranslation()
         }
@@ -168,24 +179,26 @@ internal class TranslationFeature(private val host: TranslationHost) {
                         } finally { bytes.fill(0) }
                     },
                     translate={ selected,source ->
-                        relay.translate(config,selected,source,{ LiveTranslationState.TTL-(now()-state.capturedAt) }) { current(token) }
+                        relay.translate(config,selected,source,{ LiveTranslationState.PROCESSING_TIMEOUT-(now()-state.capturedAt) }) { current(token) }
                     },
                     current={ current(token) },
-                    onRecognized={ page -> main.post { if(current(token)) {
-                        blocks=page.blocks.toList(); unreadable=page.unreadable.toList()
-                    } } },
                     onSending={
                         sending=true
                         main.post { if(current(token)) { status("本次快照 · 正在翻译…","sending"); sends++ } }
                     })
                 main.post {
                     if(!current(token)) return@post
-                    if(result.page.blocks.isEmpty()) {
-                        status("本次快照 · 暂未读到清晰文字，已保留原图","no_text")
-                    } else {
-                        translations=result.translations
-                        status("本次快照 · 机译待核对"+unreadableLabel(),"translated"); published++
+                    if(result.page.blocks.isEmpty() && state.result != null) {
+                        fail("本页未读到清晰文字，仍保留上次结果。","no_text"); return@post
                     }
+                    val next=state.candidate ?: return@post
+                    next.blocks=result.page.blocks.toList(); next.unreadable=result.page.unreadable.toList()
+                    next.translations=result.translations; next.translated=result.page.blocks.isNotEmpty()
+                    if(!state.complete(token,now())) return@post
+                    main.removeCallbacksAndMessages(null)
+                    dismissDialog(); host.hideControls(false)
+                    restoredStatus()
+                    if(next.translated) published++
                     host.refreshTranslation()
                 }
             } catch(e: Exception) { main.post { if(current(token)) error(e,sending=sending) } }
@@ -225,7 +238,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
         if(dialog != null) return true
         val p=probe
         if(p != null) {
-            if(!current(p.token)) { invalidate(); return true }
+            if(!current(p.token)) { cancelPending(); return true }
             try {
                 require(image.width == host.screenWidth && image.height == host.screenHeight)
                 val plane=image.planes.single(); require(plane.pixelStride==4)
@@ -261,15 +274,12 @@ internal class TranslationFeature(private val host: TranslationHost) {
         }
         // This operation owns the captured page, never a subsequent live frame.
         // Live magnification resumes only after explicitly leaving snapshot mode.
-        if(state.active && state.capturedAt>=0 && !current(state.epoch)) {
-            fail("本次快照已过期，请重新点翻译。","expired")
-        }
-        return state.showingSnapshot(now())
+        return showing
     }
     fun render(crop: Box, viewport: MagnifierViewport) {
-        val visible=state.showingSnapshot(now()) && snapshot != null
+        val visible=showing
         layer?.visibility=if(visible) View.VISIBLE else View.GONE
-        fullTextButton?.visibility=if(visible && reason == "translated" &&
+        fullTextButton?.visibility=if(visible && snapshot?.translated == true &&
             blocks.any { SnapshotTextContent.intersects(it,crop) }) View.VISIBLE else View.GONE
         resultView?.apply {
             this.crop=crop; scale=viewport.scale; tx=viewport.translateX; ty=viewport.translateY
@@ -287,12 +297,13 @@ internal class TranslationFeature(private val host: TranslationHost) {
         private val unclearPaint=Paint(Paint.ANTI_ALIAS_FLAG).apply { color=Color.rgb(183,98,0); style=Paint.Style.STROKE }
         override fun onDraw(canvas: Canvas) {
             canvas.drawColor(Color.WHITE)
-            val captured=snapshot ?: return
+            val page=snapshot ?: return
+            val captured=page.bitmap
             canvas.save(); canvas.translate(tx,ty); canvas.scale(scale,scale)
             canvas.clipRect(0f,0f,crop.width.toFloat(),crop.height.toFloat())
             canvas.drawBitmap(captured,-crop.left.toFloat(),-crop.top.toFloat(),imagePaint)
             canvas.restore()
-            if(reason !in listOf("translated","no_text")) return
+            if(page !== state.result) return
             if(cachedBlocks!==blocks || cachedTranslations!==translations) {
                 clear(); cachedBlocks=blocks; cachedTranslations=translations
                 textPainter=SnapshotTextPainter(blocks,translations)
@@ -318,21 +329,41 @@ internal class TranslationFeature(private val host: TranslationHost) {
             canvas.restore()
         }
     }
-    fun invalidate() {
-        state.invalidate(); relay.cancel(); probe=null
-        snapshot?.recycle(); snapshot=null
-        blocks=emptyList(); unreadable=emptyList(); translations=emptyMap(); label=null
-        resultView?.clear(); fullTextButton?.visibility=View.GONE
+    private fun cancelPending() {
+        state.cancel(); relay.cancel(); probe=null
         main.removeCallbacksAndMessages(null)
         dismissDialog(); host.witness(null)
-        layer?.visibility=View.GONE
         if(host.active) host.hideControls(false)
-        reason="idle"; host.refreshTranslation()
+        restoredStatus()
+    }
+    private fun restoredStatus() {
+        val page=state.result
+        if(page==null) { label=null; reason="idle"; host.refreshTranslation() }
+        else if(page.translated) status("本次快照 · 机译待核对"+unreadableLabel(),"translated")
+        else status("本次快照 · 暂未读到清晰文字，已保留原图","no_text")
+    }
+    fun pause() {
+        cancelPending()
+        resultView?.clear(); layer?.visibility=View.GONE
+        layer=null; resultView=null; fullTextButton=null
+    }
+    fun invalidate() {
+        state.invalidate()
+        resultView?.clear(); fullTextButton?.visibility=View.GONE
+        layer?.visibility=View.GONE
+        cancelPending()
     }
     fun close() { dead=true; invalidate(); worker.shutdown(); layer=null; resultView=null }
-    private fun status(value: String, code: String) { label=value; reason=code; host.refreshTranslation() }
+    private fun status(value: String, code: String) {
+        label=if(state.result!=null && state.active) "上次快照 · 正在更新…" else value
+        reason=code; host.refreshTranslation()
+    }
     private fun unreadableLabel()=if(unreadable.isEmpty()) "" else " · 已跳过${unreadable.size}处"
-    private fun fail(value: String, code: String, detail: String = value) { invalidate(); status(value,code); toast(detail) }
+    private fun fail(value: String, code: String, detail: String = value) {
+        cancelPending()
+        if(state.result==null) status(value,code)
+        toast(detail)
+    }
     private fun error(e: Exception, sending: Boolean = false) {
         val failure=LiveTranslationError.from(e,sending)
         fail(failure.message.substringBefore('。'),failure.code,failure.message)
@@ -345,7 +376,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
         const val AVAILABLE=true
         const val DISCLOSURE="放大镜临时读取整屏，仅在手机内显示选区。点“开始翻译”后，本机会识别当前整屏文字并经 Cloudflare 中转自动交给 DeepL 翻译；图片不上传，看懂不保存页面文字和图片。收起暂停，关闭同时停止共享。"
         const val PROVIDER_DISCLOSURE="供应商：DeepL API Free。经 Cloudflare HTTPS 中转发送本次整屏快照识别出的全部文字（含红框外上下文），不发送图片。DeepL 的免费服务条款允许临时保留内容用于改进服务；不能承诺零留存，请勿提交个人或保密信息。详见 deepl.com/en/privacy 第3、13节。看懂云端只保留设备/请求标识、额度和到期时间等元数据，不保存页面文字或图片。手机需联网，无需连接电脑。机器翻译可能出错，请对照原文。"
-        const val PRIVACY=DISCLOSURE+"\n\n"+PROVIDER_DISCLOSURE+"\n\n只有点“开始翻译”后才识字，并自动将整屏可读文字交给 DeepL 翻译。此按钮确认仅对当前公开页面有效，不显示识字预览或二次确认。先隐藏自有遮挡，再取得一张快照；本次识字、翻译和镜面显示始终使用它，底层页面变化不会取消。移动红框、缩放和平移只改变这张快照的显示。60秒过期会清除快照和文字。收起、菜单、原文、锁屏或停止会清空本次文字和待返回结果。\n\n快照在内存中短暂保留，不写入相册或文件。按下按钮和取得无遮挡画面之间有短暂间隔；请在取图完成前保持页面不动。密码、银行、聊天等敏感页面请先关闭放大镜。发送后关闭功能无法撤回已经到达供应商的文字。"
+        const val PRIVACY=DISCLOSURE+"\n\n"+PROVIDER_DISCLOSURE+"\n\n只有点“开始翻译”后才识字，并自动将整屏可读文字交给 DeepL 翻译。此按钮确认仅对当前公开页面有效，不显示识字预览或二次确认。先隐藏自有遮挡，再取得一张快照；本次识字、翻译和镜面显示始终使用它，底层页面变化不会取消。移动红框、缩放和平移只改变这张快照的显示。已完成的结果不会自动过期；新的翻译成功后才替换上一份结果。点“实时”主动切回当前画面并清除结果。收起或打开菜单保留已完成的结果、取消未完成请求；恢复不会自动识字或联网。锁屏、停止、撤销共享或旋转会清空结果。单次处理仍有60秒超时，超时不会清除上次成功的结果。\n\n快照仅在本次会话的内存中保留，不写入相册或文件，不提供历史记录。按下按钮和取得无遮挡画面之间有短暂间隔；请在取图完成前保持页面不动。密码、银行、聊天等敏感页面请先关闭放大镜。发送后关闭功能无法撤回已经到达供应商的文字。"
         private fun rgb(b:ByteArray,offset:Int)=Color.rgb(b[offset].toInt() and 255,b[offset+1].toInt() and 255,b[offset+2].toInt() and 255)
         private fun rgb(b:ByteBuffer,offset:Int)=Color.rgb(b.get(offset).toInt() and 255,b.get(offset+1).toInt() and 255,b.get(offset+2).toInt() and 255)
         private fun distance(a:Int,b:Int)=maxOf(abs(Color.red(a)-Color.red(b)),abs(Color.green(a)-Color.green(b)),abs(Color.blue(a)-Color.blue(b)))

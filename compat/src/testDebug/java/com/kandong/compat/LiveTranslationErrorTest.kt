@@ -37,9 +37,9 @@ class LiveTranslationErrorTest {
         assertFalse(result.message.contains("未发送"))
     }
 
-    @Test fun expiredSnapshotAndWrongLanguageHaveSpecificRecovery() {
+    @Test fun processingTimeoutAndWrongLanguageHaveSpecificRecovery() {
         val expired=LiveTranslationError.from(IllegalStateException(LiveTranslationError.relayCode("PAGE_EXPIRED")),true)
-        assertEquals("expired",expired.code)
+        assertEquals("processing_timeout",expired.code)
         assertTrue(expired.message.contains("重新点翻译"))
         val language=LiveTranslationError.from(IllegalStateException(LiveTranslationError.relayCode("LANGUAGE_MISMATCH")),true)
         assertEquals("language_mismatch",language.code)

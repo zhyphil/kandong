@@ -1,22 +1,40 @@
 package com.kandong.compat
 
-/** Page identity is independent of region, zoom and pan. No screen text in diagnostics. */
-internal class LiveTranslationState {
+/** A bounded in-flight request and one readable result have separate lifetimes.
+ * Mutations and payload access are confined to the UI thread; workers only read current().
+ */
+internal class LiveTranslationState<T : Any>(private val dispose: (T) -> Unit = {}) {
     @Volatile var epoch = 0L; private set
     @Volatile var capturedAt = -1L; private set
     @Volatile var active = false; private set
-    fun begin(): Long { epoch++; capturedAt=-1; active=true; return epoch }
-    fun captured(token: Long, now: Long): Boolean {
-        // A click owns one immutable snapshot. Later frames cannot replace it,
-        // nor extend its lifetime while OCR or a translation request is pending.
-        if(!active || token != epoch || now < 0 || capturedAt >= 0) return false
-        capturedAt=now; return true
+    var result: T? = null; private set
+    var candidate: T? = null; private set
+    val displayed get() = result ?: candidate
+    fun begin(): Long { cancel(); active=true; return epoch }
+    // Takes ownership even when the frame is stale, so rejected frames cannot leak.
+    fun captured(token: Long, now: Long, value: T): Boolean {
+        if(!active || token != epoch || now < 0 || capturedAt >= 0) { dispose(value); return false }
+        capturedAt=now; candidate=value; return true
     }
-    fun showingSnapshot(now: Long) = capturedAt >= 0 && current(epoch, now)
     fun current(token: Long, now: Long) = active && token == epoch &&
-        (capturedAt < 0 || now >= capturedAt && now-capturedAt < TTL)
-    fun invalidate() { active=false; epoch++; capturedAt=-1 }
-    companion object { const val TTL = 60_000L }
+        (capturedAt < 0 || now >= capturedAt && now-capturedAt < PROCESSING_TIMEOUT)
+    fun complete(token: Long, now: Long): Boolean {
+        if(!current(token,now)) return false
+        val next=candidate ?: return false
+        val previous=result
+        result=next; candidate=null
+        active=false; epoch++; capturedAt=-1
+        previous?.let(dispose)
+        return true
+    }
+    // Cancel/failure/menu/collapse discard only unfinished work, preserving the last result.
+    fun cancel() {
+        active=false; epoch++; capturedAt=-1
+        candidate?.let(dispose); candidate=null
+    }
+    // Explicit live mode or session termination also removes the readable result.
+    fun invalidate() { cancel(); result?.let(dispose); result=null }
+    companion object { const val PROCESSING_TIMEOUT = 60_000L }
 }
 
 /** Positive compositor witness, then a later visible frame where the witness is absent.

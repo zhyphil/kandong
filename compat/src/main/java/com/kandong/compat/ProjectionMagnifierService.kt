@@ -279,8 +279,8 @@ class ProjectionMagnifierService : Service() {
     }
     private fun awaitFrame() {
         val current = ++generation; frameSeen = false
-        message?.text = "等待画面"
-        main.postDelayed({ if(current == generation && uiState.capturing && !closing && !frameSeen)
+        message?.text = translation.label ?: "等待画面"
+        main.postDelayed({ if(current == generation && uiState.capturing && !closing && !frameSeen && !translation.showing && !translation.active)
             message?.text = "暂无画面，请结束后重试" },4000)
     }
     private fun drain() { reader?.acquireLatestImage()?.close() }
@@ -303,7 +303,7 @@ class ProjectionMagnifierService : Service() {
     private fun pauseSurfaces() {
         // The state gate is already closed before any window or surface is changed.
         generation++; cancelGestures()
-        translation.invalidate(); controlsHidden=false
+        translation.pause(); controlsHidden=false
         display?.surface = null; surfaceAttached = false
         clearFrame(); drain(); removeExpanded(); remove(bubble); bubble=null; remove(menu); menu=null
     }
@@ -607,7 +607,7 @@ class ProjectionMagnifierService : Service() {
     private fun onImageTouch(event: MotionEvent): Boolean {
         if(closing || !uiState.capturing) return true
         if (event.actionMasked == MotionEvent.ACTION_DOWN) {
-            imageStreamValid = gesture == null && latest != null
+            imageStreamValid = gesture == null && (latest != null || translation.showing)
             imageHadMultiplePointers = false
         }
         if (event.pointerCount > 1) imageHadMultiplePointers = true
@@ -678,8 +678,8 @@ class ProjectionMagnifierService : Service() {
             else -> "双指缩放 · 单指滑动"
         }
         (toolButtons["翻译当前页"] as? android.view.ViewGroup)?.let { button ->
-            (button.getChildAt(1) as? TextView)?.text = if(translation.showing) "原文" else if(translation.active) "取消" else "翻译"
-            button.contentDescription=if(translation.active) "清除本次快照并返回实时原文" else "翻译当前页"
+            (button.getChildAt(1) as? TextView)?.text = if(translation.active) "取消" else "翻译"
+            button.contentDescription=if(translation.active) "取消本次翻译并保留上次结果" else "翻译当前页"
         }
         zoomSlider?.progress = ((viewport.scale - 1f) * 100).roundToInt().coerceIn(0,400)
         zoomLabel?.text = label

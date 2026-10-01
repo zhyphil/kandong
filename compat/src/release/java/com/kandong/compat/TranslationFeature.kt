@@ -13,6 +13,7 @@ internal class TranslationFeature(host: TranslationHost) {
     fun tap() { }
     fun frame(image: Image): Boolean = false
     fun render(crop: Box, viewport: MagnifierViewport) { }
+    fun pause() { }
     fun invalidate() { }
     fun close() { }
     fun diagnostics() = "translation=unavailable"
