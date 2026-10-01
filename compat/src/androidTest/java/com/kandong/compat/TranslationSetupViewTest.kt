@@ -40,6 +40,17 @@ class TranslationSetupViewTest {
         }
     }
 
+    @Test fun currentDisclosureNamesBothProcessorsAndHasNoComputerDependency() {
+        instrumentation.runOnMainSync {
+            val body=TranslationSetupView.body(instrumentation.targetContext,"EN",{},{})
+            val text=views(body).filterIsInstance<TextView>().joinToString("\n") { it.text }
+            assertEquals("deepl-cloudflare-direct-v3",TranslationSetupView.DISCLOSURE_VERSION)
+            assertTrue(text.contains("Cloudflare")); assertTrue(text.contains("DeepL"))
+            assertTrue(text.contains("含红框外")); assertTrue(text.contains("图片不上传"))
+            assertFalse(text.contains("Mac")); assertFalse(text.contains("USB"))
+        }
+    }
+
     @Test fun privacyAndClosingNeverStartARequest() {
         instrumentation.runOnMainSync {
             var closed=0

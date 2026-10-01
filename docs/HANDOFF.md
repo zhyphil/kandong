@@ -1,5 +1,11 @@
 # 当前交接 · 2026-10-01单次快照识字开发版
 
+## 当前：手机独立联网翻译，等待云端启用
+
+最新要求是离开Mac/USB也能翻译。代码已新增专用Cloudflare Worker/SQLite额度与取消守卫，Android debug改为HTTPS直连，设备凭据Keystore加密，合同v3；原放大手势/快照/整页上下文不变。157 Android单测、41本地Workers运行时、5配置工具、12模拟器检查已通过，类型检查及不上传的部署预检通过；最终独立只读审查未发现可确认的P1/P2或阻断项。**没有部署、没有读取或上传DeepL密钥、没有向真机安装新构件、没有新增真实DeepL请求**。手机保留90ffe4b旧版及原USB路线。接下来按[部署说明](INTERNET_TRANSLATION_RUNBOOK.md)取得具体部署授权，配置手机并执行[拔线验收](INTERNET_TRANSLATION_ACCEPTANCE.md)。不能将此前英法页面认可移作云端路线验收。构件和检查记录见[证据](evidence/live-translation/2026-10-01/internet-translation.json)。
+
+以下为历史进展，遇到冲突以本段和最新AGENTS为准。
+
 最新需求已实现：翻译入口仅英语/法语和“开始翻译”，点一次后自动整页OCR→DeepL→镜面，取消勾选/识字预览/第二次发送；按钮旁披露整屏范围、DeepL、仅公开页和留存，详情可展开。采用同一后台任务串行两阶段，取消/过期仍拒绝发送与发布，不自动重试；库内中文能力/历史实验及release本机放大保留。披露升级deepl-free-direct-v2，Mac relay已重启、短期令牌重新配置。92 debug+63 release单测、12relay检查、10模拟器界面/绘制检查和构建/Lint通过；新版已装NAM-LX9并核对哈希，正在等待用户重新共享后确认直接显示译文。系统授权需用户本人操作；不代点真实页面开始按钮。见[本轮证据](evidence/live-translation/2026-10-01/direct-translation.json)。
 
 最新安装为错误提示改进版（基于0910d4f）：区分发送时断连/超时、连接失效、服务异常与语言不符；恢复动作仍由用户重新点翻译并确认，不自动重发。84开发版JVM+10relay替身检查、构建/Lint通过，NAM-LX9安装Success且SHA匹配，已打开首页。没有新共享/翻译或真机故障注入；下一项实际失败提示/连接恢复试用，见[错误提示证据](evidence/live-translation/2026-10-01/error-guidance.json)。上一包用户已确认当前页翻译不错、法语页正常；本次仅提示映射和文案变化，不重写其验收范围。

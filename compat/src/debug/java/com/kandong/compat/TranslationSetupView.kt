@@ -11,7 +11,7 @@ import android.widget.RadioGroup
 
 /** A single explicit start covers this page's OCR and DeepL request. No preview step. */
 internal object TranslationSetupView {
-    const val DISCLOSURE_VERSION="deepl-free-direct-v2"
+    const val DISCLOSURE_VERSION="deepl-cloudflare-direct-v3"
     fun body(context: Context, initialLanguage: String, start: (String)->Unit, close: ()->Unit): LinearLayout {
         fun dp(n:Int)=CompatUi.dp(context,n)
         var selected=if(initialLanguage=="FR") "FR" else "EN"
@@ -45,9 +45,9 @@ internal object TranslationSetupView {
             if(value==selected) radio.isChecked=true
         }
         root.addView(languages)
-        root.addView(CompatUi.text(context,"DeepL 翻译 · 需连接 Mac",16f,CompatUi.muted).apply { setPadding(0,dp(20),0,dp(4)) })
+        root.addView(CompatUi.text(context,"DeepL 翻译 · 需联网",16f,CompatUi.muted).apply { setPadding(0,dp(20),0,dp(4)) })
         root.addView(CompatUi.text(context,
-            "点“开始翻译”即同意将本页整屏可读文字发送给 DeepL（含红框外）。仅用于公开页面；图片不上传。DeepL 可能保留文字用于改进服务。",15f,CompatUi.muted))
+            "点“开始翻译”即同意将本页整屏可读文字经 Cloudflare 中转发送给 DeepL（含红框外）。仅用于公开页面；图片不上传。DeepL 可能保留文字用于改进服务。",15f,CompatUi.muted))
         val button=CompatUi.button(context,"开始翻译",true) { start(selected) }
         // A fast second tap cannot create another capture or request.
         button.setOnClickListener { if(button.isEnabled) { button.isEnabled=false; start(selected) } }

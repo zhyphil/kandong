@@ -28,7 +28,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
     private val main=Handler(Looper.getMainLooper())
     private val worker=Executors.newSingleThreadExecutor()
     private val busy=AtomicBoolean(false)
-    private val relay=LiveRelayClient(context)
+    private val relay=LiveRelayClient()
     private var layer: FrameLayout?=null
     private var resultView: ResultView?=null
     private var fullTextButton: Button?=null
@@ -79,6 +79,9 @@ internal class TranslationFeature(private val host: TranslationHost) {
     }
     private fun startTranslation(selectedLanguage: String) {
         if(busy.get() || !host.active || dead) return
+        val config=try { CloudTranslationConfigStore(context).load() } catch(e:Exception) {
+            invalidate(); toast(LiveTranslationError.from(e).message); return
+        }
         language=selectedLanguage
         dismissDialog()
         val token=state.begin()
@@ -96,7 +99,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
                 }
             } catch(_: Exception) { bytes.fill(0); fail("本次快照未能打开，请重试。","snapshot_failed"); return@captureClean }
             main.postDelayed({ if(state.active && state.epoch==token) fail("本页结果已过期，请重新点翻译。","expired") },LiveTranslationState.TTL)
-            recognize(token,bytes)
+            recognize(token,bytes,config)
         }
     }
     private fun openDialog(body: View, onCancel: ()->Unit = { invalidate() }) {
@@ -141,7 +144,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
         }
         openDialog(SnapshotTextDetails.body(context,entries,::restore),::restore)
     }
-    private fun recognize(token: Long, bytes: ByteArray) {
+    private fun recognize(token: Long, bytes: ByteArray, config: CloudTranslationConfig) {
         if(!busy.compareAndSet(false,true)) { bytes.fill(0); fail("上一项处理尚未结束。","busy"); return }
         status("本次快照 · 正在识字…","ocr"); ocrRuns++
         val lang=language
@@ -165,7 +168,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
                         } finally { bytes.fill(0) }
                     },
                     translate={ selected,source ->
-                        relay.translate(selected,source,{ LiveTranslationState.TTL-(now()-state.capturedAt) }) { current(token) }
+                        relay.translate(config,selected,source,{ LiveTranslationState.TTL-(now()-state.capturedAt) }) { current(token) }
                     },
                     current={ current(token) },
                     onRecognized={ page -> main.post { if(current(token)) {
@@ -340,8 +343,8 @@ internal class TranslationFeature(private val host: TranslationHost) {
         " samples(total/dark/light/opaque/edges)=$captureSamples witnessSamples=$witnessedSamples blankFrames=$blankFrames rawCandidates=$rawCandidates recognized=$recognizedBlocks eligible=$eligibleBlocks lastUnreadable=$lastUnreadableCount"
     companion object {
         const val AVAILABLE=true
-        const val DISCLOSURE="放大镜临时读取整屏，仅在手机内显示选区。点“开始翻译”后，本机会识别当前整屏文字并经 Mac 自动交给 DeepL 翻译；图片不上传，文字和图片不保存。收起暂停，关闭同时停止共享。"
-        const val PROVIDER_DISCLOSURE="供应商：DeepL API Free。经 USB 和这台 Mac 发送本次整屏快照识别出的全部文字（含红框外上下文），不发送图片。DeepL 的免费服务条款允许临时保留内容用于改进服务；不能承诺零留存，请勿提交个人或保密信息。详见 deepl.com/en/privacy 第3、13节。开发版需保持 USB / Mac 连接。机器翻译可能出错，请对照原文。"
+        const val DISCLOSURE="放大镜临时读取整屏，仅在手机内显示选区。点“开始翻译”后，本机会识别当前整屏文字并经 Cloudflare 中转自动交给 DeepL 翻译；图片不上传，看懂不保存页面文字和图片。收起暂停，关闭同时停止共享。"
+        const val PROVIDER_DISCLOSURE="供应商：DeepL API Free。经 Cloudflare HTTPS 中转发送本次整屏快照识别出的全部文字（含红框外上下文），不发送图片。DeepL 的免费服务条款允许临时保留内容用于改进服务；不能承诺零留存，请勿提交个人或保密信息。详见 deepl.com/en/privacy 第3、13节。看懂云端只保留设备/请求标识、额度和到期时间等元数据，不保存页面文字或图片。手机需联网，无需连接电脑。机器翻译可能出错，请对照原文。"
         const val PRIVACY=DISCLOSURE+"\n\n"+PROVIDER_DISCLOSURE+"\n\n只有点“开始翻译”后才识字，并自动将整屏可读文字交给 DeepL 翻译。此按钮确认仅对当前公开页面有效，不显示识字预览或二次确认。先隐藏自有遮挡，再取得一张快照；本次识字、翻译和镜面显示始终使用它，底层页面变化不会取消。移动红框、缩放和平移只改变这张快照的显示。60秒过期会清除快照和文字。收起、菜单、原文、锁屏或停止会清空本次文字和待返回结果。\n\n快照在内存中短暂保留，不写入相册或文件。按下按钮和取得无遮挡画面之间有短暂间隔；请在取图完成前保持页面不动。密码、银行、聊天等敏感页面请先关闭放大镜。发送后关闭功能无法撤回已经到达供应商的文字。"
         private fun rgb(b:ByteArray,offset:Int)=Color.rgb(b[offset].toInt() and 255,b[offset+1].toInt() and 255,b[offset+2].toInt() and 255)
         private fun rgb(b:ByteBuffer,offset:Int)=Color.rgb(b.get(offset).toInt() and 255,b.get(offset+1).toInt() and 255,b.get(offset+2).toInt() and 255)

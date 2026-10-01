@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-01",
+  "baseline": "90ffe4b434143bd46a4da1415f549e65014d3184",
+  "scope": "debug HTTPS cloud translation preparation; not deployed or phone accepted",
+  "apk": {
+    "path": "compat/build/outputs/apk/debug/compat-debug.apk",
+    "bytes": 347889140,
+    "sha256": "4c2788dc26bffd237b166de093e4143fb8705739e629c1a872e0039592f0db09",
+    "installed_on": "KanDong_OCR_API37_16K emulator only"
+  },
+  "checks": {
+    "android_debug_unit": 94,
+    "android_release_unit": 63,
+    "workers_runtime": 41,
+    "provision_script": 5,
+    "emulator_native": 12,
+    "failed": 0,
+    "skipped": 0,
+    "lint_debug": {
+      "errors": 0,
+      "existing_warnings": 10
+    },
+    "lint_release": {
+      "errors": 0,
+      "existing_warnings": 10
+    },
+    "typecheck": "passed",
+    "debug_build": "passed",
+    "android_test_build": "passed",
+    "deployment_dry_run": "passed; no upload",
+    "cleanup_regression": "before fix 1 failed / 40 passed; after fix 41 passed",
+    "native_duration_seconds": 0.565
+  },
+  "review": {
+    "route": "AO read-only Code Reviewer",
+    "status": "completed",
+    "duration_seconds": 124.9,
+    "findings": "No confirmed P1/P2 or blocker; no review-side tests or external calls",
+    "implementation_leaf": "timed out at 600 seconds; root inspected and completed implementation"
+  },
+  "privacy": {
+    "real_deepl_calls": 0,
+    "supplier_key_read": false,
+    "supplier_key_uploaded": false,
+    "page_content_saved": false,
+    "synthetic_provider_tests_only": true
+  },
+  "pending": [
+    "deployment authorization",
+    "Cloudflare resource deployment and server-side secret provisioning",
+    "live service checks",
+    "nova 9 update and encrypted device provisioning",
+    "user screen-sharing consent",
+    "English and French real-page checks",
+    "USB removed and Mac relay stopped acceptance"
+  ],
+  "phone": {
+    "model": "NAM-LX9",
+    "os_api": 31,
+    "updated_this_task": false,
+    "installed_baseline": "90ffe4b",
+    "old_usb_route_retained": true
+  },
+  "log_evidence": {
+    "android_build": {
+      "local_path": "/private/tmp/kandong-cloud-android-checks.log",
+      "sha256": "6a1e557990eaf880a5d723d8eaecae4d95778ff128a2678b88e922fa4f3e038f"
+    },
+    "android_native": {
+      "local_path": "/private/tmp/kandong-cloud-android-native-tests.log",
+      "sha256": "462ce2c5e1f891f5b9a28929f985003c43b2ff11b4ca4157115795c920a675a5"
+    },
+    "workers": {
+      "local_path": "/private/tmp/kandong-cloud-runtime-tests.log",
+      "sha256": "3d77b6087f90ce4653a959b31641f8f12474b8e678d612303af93f29bf5512bb"
+    },
+    "typecheck": {
+      "local_path": "/private/tmp/kandong-cloud-typecheck.log",
+      "sha256": "e4baac8da9f886f6e02724f7b13203c41fb54d5bc725d1b1d216257d80b157f9"
+    },
+    "dry_run": {
+      "local_path": "/private/tmp/kandong-cloud-dry-run.log",
+      "sha256": "0ca3d3387137dc31b708bfcf4e91f06e4a1b1b93cb8d37eeb121c95187ccbeec"
+    },
+    "python": {
+      "local_path": "/private/tmp/kandong-cloud-provision-tests.log",
+      "sha256": "8ee7241c44b2e335fd5fa45c87b3646cb06718216ccae758765aab6d8064c58c"
+    },
+    "cleanup_regression_before_fix": {
+      "local_path": "/private/tmp/kandong-cloud-counter-cleanup-red.log",
+      "sha256": "58ca89294b1658d0eada76c25ad9e5c26f5652172a430cdeb2d335f3a0134a7f"
+    },
+    "review": {
+      "local_path": "/private/tmp/kandong-cloud-review/results/KanDong-cloud-translation-focused-review-2026-10-01T10-44-08/steps/1-review_standalone_translation.md",
+      "sha256": "366c7a6eea1be8b751b810d3028f015879ad70d8babb00a6dbcb328ab4ff8999"
+    }
+  }
+}

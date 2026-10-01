@@ -1,0 +1,25 @@
+{
+  "name": "translation",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cf dev",
+    "build": "cf build",
+    "deploy": "cf deploy",
+    "typecheck": "cf workers types && tsc && tsc -p test/tsconfig.json",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "2.0.0-beta.sha-ad79608dd",
+    "@cloudflare/vitest-plugin": "1.3.4",
+    "@vitest/runner": "4.1.11",
+    "@vitest/snapshot": "4.1.11",
+    "cf": "1.0.0-beta.10",
+    "typescript": "7.0.2",
+    "vite": "8.3.2",
+    "vitest": "4.1.11"
+  },
+  "overrides": {
+    "undici": "7.29.1"
+  }
+}
