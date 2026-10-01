@@ -35,8 +35,9 @@ class LiveOcrEngine(private val context: android.content.Context) {
   inference and final publication. Native inference/Clipper calls are synchronous
   and cannot be forcibly interrupted midway.
 - Recognition preprocessing, crop resize and output checks share a 2048-pixel line width ceiling. Full lines are resized proportionally within it; none is silently clipped. One input is at most 294,912 floats (1,179,648 bytes). Output has a 5,000,000-float ceiling (20 MB), checked before native inference; a 2048-wide Chinese line needs 4,706,560 floats. These are bounded runtime allocations, not a measured total process-memory limit.
-- All final DB boxes are recognized and retained internally until the whole page
-  finishes, including empty and unowned overlap candidates. At most 64 per strip,
+- All final DB box positions are retained internally until the whole page finishes.
+  Only owned, non-edge candidates with valid bounded crop plans enter recognition;
+  halo duplicates and cut/unsupported rows skip native crop/inference. At most 64 per strip,
   128 per page and 8192 total raw UTF-16 characters are allowed. Over-budget work fails;
   it never returns a truncated page. Contour/vertex/offset/recognition-width limits from
   the experiment also remain in force.
@@ -53,21 +54,20 @@ class LiveOcrEngine(private val context: android.content.Context) {
   its detector merge/split words differently, so matching it to one complete line is
   not a valid completeness test. This does not skip processing the neighboring core
   or claim that OCR cannot miss text.
-- An owned box clipped by an internal strip read edge still rejects the entire page
-  with `STRIP_BOUNDARY_AMBIGUITY`. Physical input-page edges are not internal seams. No missing offscreen letters
-  are reconstructed. A failed/cancelled strip cannot yield earlier partial results;
-  a successful full detection with no boxes may return an empty page.
-- An owned empty/whitespace-only recognition is retained in `unreadable` with its
-  ID/bounds/score and an empty text field. Other readable blocks remain in `blocks`;
-  neither list silently receives invented characters. Callers must show unreadable
-  regions as original pixels and disclose that recognized context may be incomplete.
-  Only `blocks` can supply text for translation; raw counts include both lists and halos.
+- User policy is best-effort readable content. Owned candidates touching an internal
+  read edge or physical input-page edge are placed in `unreadable` with empty text,
+  as are owned empty recognition results. Pure crop-geometry/recognition-size
+  preflight failures also skip only that candidate. Touching edges is conservative;
+  it is not proof that visible glyphs were actually cut. No offscreen letters are
+  reconstructed and no guarantee of detecting all blur is made.
+- `unreadable` retains each skipped owned box's ID/bounds/detector score; other readable
+  blocks remain in `blocks`. Hosts keep original pixels for skipped areas, disclose
+  missing context, and never send their empty strings or pixels to translation.
+  A page with no readable blocks is a valid empty result, not a runtime exception.
+- Only the pure row preflight catches `IllegalArgumentException`. Native/model/tensor
+  failures, resource cleanup failures, cancellation and page budgets still propagate.
+  All strips must complete; failed/cancelled processing does not return earlier results.
 - `LiveOcrException.code` is a fixed code without native exception causes or text.
-  Strip-boundary failures may also carry `boundaryDiagnostics`: counts and at most
-  eight numeric geometry examples (bounds, ownership/clipping flags, match counts,
-  and bounding-box overlap percentages). They contain no candidate text or pixels;
-  the runtime does not log or persist them. This is diagnosis, not a completeness
-  or recognition-confidence score.
   All sessions, options, tensors, results and Mats close before publication. Uncertain
   cleanup poisons this runtime for the process lifetime. Immutable result Strings are
   not securely erasable; the engine retains no page state after the call.
@@ -108,7 +108,7 @@ different model/notice files are an environment blocker; the task provides no su
 
 - `LiveOcrEngine.kt`, `OcrRuntimeContract.kt`, `OcrAssets.kt`, `OcrResources.kt`:
   public entry, fixed-code failure, lifecycle, authentication, and publication guards.
-- `FullPageOcrPipeline.kt`, `SingleFrameStripInput.kt`, `FullPageStripPlanner.kt`:
+- `FullPageOcrPipeline.kt`, `OcrRowProcessor.kt`, `SingleFrameStripInput.kt`, `FullPageStripPlanner.kt`:
   curated original run/detect/resize, RGBA conversion and geometry, without `runStaged`
   or synthetic capture receipts.
 - `BoxPipelineOpenCv.kt`, `BoxPipelineContract.kt`, `GeometryOpenCvProbe.kt`,

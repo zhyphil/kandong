@@ -54,7 +54,6 @@ internal class TranslationFeature(private val host: TranslationHost) {
     private var eligibleBlocks=-1
     private var lastUnreadableCount=-1
     private var blankFrames=0
-    private var boundaryDiagnostics: com.kandong.liveocr.OcrBoundaryDiagnostics?=null
     private fun now()=SystemClock.elapsedRealtime()
     private fun current(token: Long)=!dead && state.current(token,now())
 
@@ -106,7 +105,6 @@ internal class TranslationFeature(private val host: TranslationHost) {
             rawCandidates=-1; recognizedBlocks=-1; eligibleBlocks=-1
             lastUnreadableCount=-1
             blankFrames=0
-            boundaryDiagnostics=null
             status("正在读取当前页…","capture")
             captureClean { bytes ->
                 if(!current(token)) { bytes.fill(0); return@captureClean }
@@ -168,14 +166,14 @@ internal class TranslationFeature(private val host: TranslationHost) {
                     rawCandidates=page.rawCandidateCount; recognizedBlocks=page.blocks.size; eligibleBlocks=eligible.size
                     lastUnreadableCount=unclear.size
                 } }
-                check(eligible.isNotEmpty()) { "NO_TEXT" }
                 check(eligible.map { it.id }.distinct().size == eligible.size) { "OCR_FAILED" }
                 check(!TranslationTextPolicy.sensitive(eligible.joinToString("\n") { it.text })) { "SENSITIVE_PAGE" }
                 main.post {
                     if(!current(token)) return@post
                     blocks=eligible.toList()
                     unreadable=unclear.toList()
-                    if(online && lang in listOf("EN","FR")) preview(token)
+                    if(blocks.isEmpty()) { status("本次快照 · 暂未读到清晰文字，已保留原图","no_text"); host.refreshTranslation() }
+                    else if(online && lang in listOf("EN","FR")) preview(token)
                     else { status("本次快照 · 已识别 ${blocks.size} 块"+unreadableLabel(),"local"); published++; host.refreshTranslation() }
                 }
             } catch(e: Exception) { main.post { if(current(token)) error(e) } }
@@ -187,11 +185,11 @@ internal class TranslationFeature(private val host: TranslationHost) {
         body.addView(line("确认本次快照联网翻译"))
         body.addView(line(PROVIDER_DISCLOSURE))
         body.addView(line("以下是本次快照将发送的全部 ${blocks.size} 条文字（包括红框外）。请检查是否漏字、错字或含隐私。"))
-        if(unreadable.isNotEmpty()) body.addView(line("有 ${unreadable.size} 处未读清，镜面中保留原图并用橙框标记。这些位置没有文字可发送，可能影响上下文和译文；请先核对原图，不确定时暂不发送。"))
+        if(unreadable.isNotEmpty()) body.addView(line("已跳过 ${unreadable.size} 处不完整或暂时无法识别的文字，镜面中保留原图并用橙框标记。只发送已识别的文字，上下文可能不完整；请先核对结果。"))
         body.addView(line(blocks.joinToString("\n\n") { it.text }))
         val consent=CheckBox(context).apply {
             text=if(unreadable.isEmpty()) "已检查：本页只有公开信息，无个人或保密内容；同意发送全部文字给 DeepL。"
-                else "已核对文字和未读清处；本页只有公开信息，无个人或保密内容。同意发送已识别文字给 DeepL，并知晓上下文可能不完整。"
+                else "已核对识别结果和跳过的部分；本页只有公开信息，无个人或保密内容。同意发送已识别文字给 DeepL，并知晓上下文可能不完整。"
             textSize=18f; minHeight=dp(56); isSaveEnabled=false
         }
         body.addView(consent)
@@ -324,7 +322,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
             canvas.clipRect(0f,0f,crop.width.toFloat(),crop.height.toFloat())
             canvas.drawBitmap(captured,-crop.left.toFloat(),-crop.top.toFloat(),imagePaint)
             canvas.restore()
-            if(reason !in listOf("local","translated")) return
+            if(reason !in listOf("local","translated","no_text")) return
             val selected=blocks.filter { it.left<crop.right && it.right>crop.left && it.top<crop.bottom && it.bottom>crop.top }
             val unclear=unreadable.filter { it.left<crop.right && it.right>crop.left && it.top<crop.bottom && it.bottom>crop.top }
             if(selected.isEmpty() && unclear.isEmpty()) {
@@ -370,30 +368,25 @@ internal class TranslationFeature(private val host: TranslationHost) {
     }
     fun close() { dead=true; invalidate(); worker.shutdown(); layer=null; resultView=null }
     private fun status(value: String, code: String) { label=value; reason=code; host.refreshTranslation() }
-    private fun unreadableLabel()=if(unreadable.isEmpty()) "" else " · ${unreadable.size}处未读清"
+    private fun unreadableLabel()=if(unreadable.isEmpty()) "" else " · 已跳过${unreadable.size}处"
     private fun fail(value: String, code: String) { invalidate(); status(value,code); toast(value) }
     private fun error(e: Exception) {
-        boundaryDiagnostics=(e as? com.kandong.liveocr.LiveOcrException)?.boundaryDiagnostics
         val value=when(e.message) {
             "SENSITIVE_PAGE" -> "检测到可能的敏感信息，已清除本页，未发送。"
-            "NO_TEXT" -> "没有识别到可用文字，请换清晰的单语页面。"
             "RELAY_NOT_CONFIGURED","RELAY_UNAVAILABLE" -> "Mac 翻译连接不可用，请检查 USB 和转发服务。未自动重试。"
             "FREE_QUOTA_EXCEEDED","SESSION_LIMIT" -> "本次免费翻译额度不足，未继续请求。"
             "PAGE_TOO_LARGE" -> "本页文字超过开发版处理上限。"
             "RECOGNITION_WIDTH_BUDGET" -> "本页含过长的文字行，当前版本尚不能完整识别。"
-            "STRIP_BOUNDARY_AMBIGUITY" -> "部分文字落在识别分段边缘，本次未显示不完整结果。"
-            "UNREADABLE_BOX" -> "本次有文字块无法读清，未显示不完整结果。"
             else -> "本次处理未完成，请重新点翻译。不会自动重试或联网。"
         }
         val code=if(e is com.kandong.liveocr.LiveOcrException) "ocr_"+e.code.lowercase(java.util.Locale.ROOT)
-            else if(e.message=="NO_TEXT") "no_text" else "processing_failed"
+            else "processing_failed"
         fail(value,code)
     }
     private fun toast(value:String) { Toast.makeText(context,value,Toast.LENGTH_LONG).show() }
     private fun dp(n:Int)=CompatUi.dp(context,n)
     fun diagnostics()="translation=$reason liveCaptures=$captures ocrRuns=$ocrRuns sends=$sends published=$published blockCount=${blocks.size} unreadableCount=${unreadable.size} workerBusy=${busy.get()} snapshot=${snapshot!=null}"+
-        " samples(total/dark/light/opaque/edges)=$captureSamples witnessSamples=$witnessedSamples blankFrames=$blankFrames rawCandidates=$rawCandidates recognized=$recognizedBlocks eligible=$eligibleBlocks lastUnreadable=$lastUnreadableCount"+
-        " boundary=$boundaryDiagnostics"
+        " samples(total/dark/light/opaque/edges)=$captureSamples witnessSamples=$witnessedSamples blankFrames=$blankFrames rawCandidates=$rawCandidates recognized=$recognizedBlocks eligible=$eligibleBlocks lastUnreadable=$lastUnreadableCount"
     companion object {
         const val AVAILABLE=true
         const val DISCLOSURE="放大镜临时读取整屏，仅在手机内显示选区。点“翻译”并另外同意后，才在本机识别整页文字。联网翻译需连接 Mac，并逐页确认发送给 DeepL；图片不上传，文字和图片不保存。收起暂停，关闭同时停止共享。"

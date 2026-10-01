@@ -119,18 +119,17 @@ class OcrRuntimeContractTest {
         assertEquals(3, page.rawCandidateCount)
     }
 
-    @Test fun clippedInternalOwnerFailsAndAStandaloneHaloCannotBecomePageContent() {
-        val strip = FullPageStripPlanner.plan(1080, 2400).strips[1]
-        val fragment = OcrPageContract.candidate(strip, box(30.0, 0.0), "fragment", 2400)
+    @Test fun clippedInternalOwnerAndStandaloneHaloKeepOriginalPixels() {
+        val strip=FullPageStripPlanner.plan(1080,2400).strips[1]
+        val fragment=OcrPageContract.candidate(strip,box(30.0,0.0),"cut",2400)
         assertTrue(fragment.clippedAtStripBoundary)
         assertFalse(fragment.ownsCoreCenter)
-        failure("UNOWNED_CANDIDATES") {
-            OcrPageContract.publish(listOf(fragment), 1080, 2400, OcrCurrent { true })
-        }
-        failure("STRIP_BOUNDARY_AMBIGUITY") {
-            OcrPageContract.publish(listOf(fragment.copy(ownsCoreCenter=true)),1080,2400,OcrCurrent { true })
-        }
-        assertFalse(candidate(y = 0.0).clippedAtStripBoundary) // A physical page edge is not a strip seam.
+        assertTrue(OcrPageContract.publish(listOf(fragment),1080,2400,OcrCurrent { true }).blocks.isEmpty())
+        val owned=OcrPageContract.publish(listOf(fragment.copy(ownsCoreCenter=true)),1080,2400,OcrCurrent { true })
+        assertTrue(owned.blocks.isEmpty())
+        assertEquals("",owned.unreadable.single().text)
+        assertFalse(candidate(y=0.0).clippedAtStripBoundary)
+        assertTrue(candidate(y=0.0).clippedAtPageBoundary)
     }
 
     @Test fun unreadableOwnedPositionsRemainExplicitAndUnownedEmptyStaysInRawCount() {
@@ -146,9 +145,7 @@ class OcrRuntimeContractTest {
         assertEquals(2, result.rawCandidateCount)
         assertEquals(1, result.blocks.size)
         assertTrue(result.unreadable.isEmpty())
-        failure("UNOWNED_CANDIDATES") {
-            OcrPageContract.publish(listOf(unowned), 640, 480, OcrCurrent { true })
-        }
+        assertTrue(OcrPageContract.publish(listOf(unowned),640,480,OcrCurrent { true }).blocks.isEmpty())
     }
 
     @Test fun budgetsRejectOverflowInsteadOfTruncating() {
@@ -241,16 +238,13 @@ class OcrRuntimeContractTest {
         assertEquals(771,page.blocks.single().bottom)
     }
 
-    @Test fun clippedOwnerStillCannotPublishEvenWithPossibleCounterparts() {
+    @Test fun clippedOwnerIsNeverUsedAsTextEvenWhenOtherRowsOverlapIt() {
         val complete=seamRow("s0/c0-r0-f0",720.0,770.0,true,false)
-        val fragment=seamRow("s1/c0-r0-f0",736.0,770.0,true,true)
-        listOf(listOf(fragment),listOf(fragment,complete),
-            listOf(fragment,complete.copy(clippedAtStripBoundary=true)),
-            listOf(fragment,complete,complete.copy(id="s2/c0-r0-f0")),
-            listOf(fragment,complete.copy(id="s1/c1-r1-f1")),
-            listOf(fragment.copy(quad=fragment.quad.map { it.copy(y=it.y+200) }),complete)).forEach { rows ->
-            failure("STRIP_BOUNDARY_AMBIGUITY") { OcrPageContract.publish(rows,1080,2400,OcrCurrent { true }) }
-        }
+        val cut=seamRow("s1/c0-r0-f0",736.0,770.0,true,true)
+        val page=OcrPageContract.publish(listOf(cut,complete),1080,2400,OcrCurrent { true })
+        assertEquals(listOf(complete.id),page.blocks.map { it.id })
+        assertEquals(listOf(cut.id),page.unreadable.map { it.id })
+        assertEquals("",page.unreadable.single().text)
     }
 
     @Test fun haloShapeDifferencesCannotRemoveTheOwnersSlantedText() {
@@ -271,25 +265,6 @@ class OcrRuntimeContractTest {
         }
     }
 
-    @Test fun boundaryFailureExposesOnlyBoundedNumbersNotRecognizedContent() {
-        val complete=seamRow("s0/c0-r0-f0",720.0,766.0,true,false).copy(text="private complete words")
-        val fragment=seamRow("s1/c0-r0-f0",736.0,770.0,true,true).copy(text="private fragment words")
-        try {
-            OcrPageContract.publish(listOf(complete)+List(9) { fragment },1080,2400,OcrCurrent { true })
-            fail("Expected seam rejection")
-        } catch(e: LiveOcrException) {
-            assertEquals("STRIP_BOUNDARY_AMBIGUITY",e.code)
-            assertNull(e.cause)
-            val d=e.boundaryDiagnostics!!
-            assertEquals(10,d.candidates); assertEquals(10,d.owned)
-            assertEquals(9,d.clipped); assertEquals(9,d.unresolved)
-            assertEquals(8,d.examples.size)
-            assertEquals(listOf(10,736,300,770),d.examples.first().fragmentBounds)
-            assertEquals(listOf(10,720,300,766),d.examples.first().bestOtherBounds)
-            assertEquals(88,d.examples.first().overlapPercent)
-            assertFalse(d.toString().contains("private"))
-        }
-    }
 
     @Test fun failureInALaterStripCannotPublishEarlierCoreResults() {
         var visits=0
@@ -309,7 +284,9 @@ class OcrRuntimeContractTest {
         val edge=candidate("visible edge characters",y=0.0,index=0)
         val middle=candidate("fully visible line",y=80.0,index=1)
         val page=OcrPageContract.publish(listOf(edge,middle),640,480,OcrCurrent { true })
-        assertEquals(listOf(edge.text,middle.text),page.blocks.map { it.text })
+        assertEquals(listOf(middle.text),page.blocks.map { it.text })
+        assertEquals(listOf(edge.id),page.unreadable.map { it.id })
+        assertEquals("",page.unreadable.single().text)
     }
 
     @Test fun unreadableRegionDoesNotDiscardOtherRecognizedText() {
@@ -322,5 +299,22 @@ class OcrRuntimeContractTest {
         assertEquals(60,page.unreadable.single().top)
         assertEquals(69,page.unreadable.single().bottom)
         assertTrue(page.blocks.none { it.id==page.unreadable.single().id })
+    }
+
+    @Test fun clippedOwnedTextIsSkippedWithoutCancellingReadableRows() {
+        val readable=candidate("clear full text",index=0)
+        val cut=candidate("do not trust cut characters",y=60.0,index=1).copy(clippedAtStripBoundary=true)
+        val page=OcrPageContract.publish(listOf(readable,cut),640,480,OcrCurrent { true })
+        assertEquals(listOf(readable.text),page.blocks.map { it.text })
+        assertEquals(listOf(cut.id),page.unreadable.map { it.id })
+        assertEquals("",page.unreadable.single().text)
+        assertEquals(2,page.rawCandidateCount)
+    }
+
+    @Test fun onlyHaloCandidatesYieldNoReadableTextInsteadOfAnError() {
+        val page=OcrPageContract.publish(listOf(candidate().copy(ownsCoreCenter=false)),640,480,OcrCurrent { true })
+        assertTrue(page.blocks.isEmpty())
+        assertTrue(page.unreadable.isEmpty())
+        assertEquals(1,page.rawCandidateCount)
     }
 }

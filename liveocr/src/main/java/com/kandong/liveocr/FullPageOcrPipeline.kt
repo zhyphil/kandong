@@ -33,11 +33,10 @@ internal class FullPageOcrPipeline(private val engine: OrtRuntime, private val d
                 val rows = ArrayList<OcrPageContract.Candidate>()
                 for ((rank, box) in boxes.boxes.withIndex()) {
                     current.check()
-                    val row = BoxPipelineContract.cropRow("live-page", box, rank, source.width, source.height)
-                    GeometryOpenCvProbe(cleanup).crop(source, row, current::check).use { crop ->
+                    val candidate = OcrRowProcessor.recognize(strip,box,rank,height,current) { row,plan ->
+                      GeometryOpenCvProbe(cleanup).crop(source, row, current::check).use { crop ->
                         current.check()
                         val sizes = listOf(RecognitionPacking.Size(crop.width, crop.height))
-                        val plan = RecognitionPacking.plan(sizes)
                         val shape = OcrPageContract.outputShape(model, plan.width)
                         require(plan.tensorRowToInput == listOf(0))
                         val resized = CropRecognitionPipeline(cleanup).resize(crop, plan.resizedWidths.single(), current::check)
@@ -54,10 +53,12 @@ internal class FullPageOcrPipeline(private val engine: OrtRuntime, private val d
                         } finally { input.wipe() }
                         require(decoded.raw.size == 1)
                         val raw = decoded.raw.single()
-                        chars = OcrPageContract.characterBudget(chars, raw.length)
-                        // Keep empty, overlapping and unowned raw candidates until whole-page publication.
-                        rows += OcrPageContract.candidate(strip, box, raw, height)
+                        raw
+                      }
                     }
+                    chars = OcrPageContract.characterBudget(chars, candidate.text.length)
+                    // Keep every detected box's geometry/count, including skipped rows.
+                    rows += candidate
                 }
                 current.check()
                 rows.toList()

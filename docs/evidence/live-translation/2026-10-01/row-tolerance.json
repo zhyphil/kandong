@@ -1,0 +1,64 @@
+{
+  "baseCommit": "7e300b5",
+  "userPolicy": "Ignore unclear/cut text and recognize the usable portions well; do not reject the whole screenshot for one such block.",
+  "implementedScope": [
+    "skip owned and unowned edge-touching candidates before native crop/recognition",
+    "skip halo duplicates before recognition",
+    "isolate pure crop/transform/recognition-size preflight failures per row",
+    "keep readable blocks and skipped owned bounds separately",
+    "preserve original snapshot and avoid network path when no readable text remains"
+  ],
+  "notRelaxed": [
+    "cancellation",
+    "model and native runtime failures",
+    "cleanup failures",
+    "total page/contour resource budgets",
+    "full visible-page input",
+    "explicit online consent"
+  ],
+  "preFixRegression": {
+    "tests": 2,
+    "failures": 2
+  },
+  "intermediateRegression": {
+    "tests": 29,
+    "failures": 1,
+    "reason": "remaining old UNOWNED_CANDIDATES expected-failure assertion, updated to the explicit new policy"
+  },
+  "finalUnitTests": {
+    "liveocr": 29,
+    "compatDebug": 71,
+    "failures": 0
+  },
+  "nativeCallbackFailurePropagationTested": true,
+  "cancellationPropagationTested": true,
+  "debugAssemble": true,
+  "debugLint": true,
+  "apkBytes": 347846840,
+  "apkSha256": "1fcd0fde22965af0008befe8ff71f87b1becc43f1b046dc7ef75b268af2d3efb",
+  "installationResult": "Success",
+  "device": "NAM-LX9/API31",
+  "deviceOutcome": "user reports recognition almost always succeeds after this update",
+  "userFeedback": "这次识别几乎每次都成功",
+  "deviceObservation": {
+    "liveCaptures": 3,
+    "ocrRuns": 3,
+    "sends": 0,
+    "published": 2,
+    "lastRawCandidates": 49,
+    "lastRecognized": 44,
+    "lastEligible": 36,
+    "lastUnreadable": 1,
+    "stateAtRead": "idle",
+    "snapshotAtRead": false,
+    "blockCountAtRead": 0,
+    "workerBusyAtRead": false,
+    "clarityFailures": 0,
+    "gpuCleanupFailures": 0,
+    "unpublishedRunReason": "unknown; aggregate counters are not a success-rate measurement"
+  },
+  "userAcceptanceScope": "improved repeated recognition on the user's current page; not zero failures or all-page stability",
+  "generalBlurDetectionAccepted": false,
+  "ocrAccuracyAccepted": false,
+  "errorRateReductionMeasured": false
+}
