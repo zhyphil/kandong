@@ -1,7 +1,11 @@
 {
   "codeCommit": "ca1b714a7c7bce0fe488d2aca03c6ee077f06cfc",
   "scope": "Install the previously verified reading-order fix and observe user-operated live translation",
-  "device": {"model": "NAM-LX9", "api": 31, "serial": "2AS0221B09001601"},
+  "device": {
+    "model": "NAM-LX9",
+    "api": 31,
+    "serial": "2AS0221B09001601"
+  },
   "package": "com.kandong.compat.dev",
   "install": {
     "result": "Success",
@@ -9,16 +13,89 @@
     "localSha256": "932c2b4e30e9bf62ac76c97194cf80dbcb001bce2f4e0f677ab3bf5cd5f54797",
     "installedSha256": "932c2b4e30e9bf62ac76c97194cf80dbcb001bce2f4e0f677ab3bf5cd5f54797"
   },
-  "usbRelay": {"port":18741,"reverseVerified":true,"tokenPrinted":false,"agentTriggeredPageSend":false},
+  "usbRelay": {
+    "port": 18741,
+    "reverseVerified": true,
+    "tokenPrinted": false,
+    "agentTriggeredPageSend": false
+  },
   "observations": [
-    {"state":"idle","captures":0,"ocrRuns":0,"sends":0,"published":0,"snapshot":false},
-    {"state":"ocr","captures":1,"ocrRuns":1,"sends":0,"published":0,"snapshot":true,"workerBusy":true},
-    {"state":"translated","captures":2,"ocrRuns":2,"sends":1,"published":2,"snapshot":true,"workerBusy":false,"rawCandidates":48,"recognized":45,"eligible":40,"unreadable":0,"blankFrames":8,"clarityFailures":0,"gpuCleanupFailures":0}
+    {
+      "state": "idle",
+      "captures": 0,
+      "ocrRuns": 0,
+      "sends": 0,
+      "published": 0,
+      "snapshot": false
+    },
+    {
+      "state": "ocr",
+      "captures": 1,
+      "ocrRuns": 1,
+      "sends": 0,
+      "published": 0,
+      "snapshot": true,
+      "workerBusy": true
+    },
+    {
+      "state": "translated",
+      "captures": 2,
+      "ocrRuns": 2,
+      "sends": 1,
+      "published": 2,
+      "snapshot": true,
+      "workerBusy": false,
+      "rawCandidates": 48,
+      "recognized": 45,
+      "eligible": 40,
+      "unreadable": 0,
+      "blankFrames": 8,
+      "clarityFailures": 0,
+      "gpuCleanupFailures": 0
+    },
+    {
+      "state": "expired",
+      "captures": 3,
+      "ocrRuns": 3,
+      "sends": 2,
+      "published": 3,
+      "snapshot": false,
+      "workerBusy": false,
+      "blockCount": 0,
+      "unreadableCount": 0,
+      "rawCandidates": 51,
+      "recognized": 48,
+      "eligible": 40,
+      "lastUnreadable": 1,
+      "clarityFailures": 0,
+      "gpuCleanupFailures": 0,
+      "liveMagnificationResumed": true
+    }
   ],
   "pageTextOrImageReadByAgent": false,
-  "languageAndPageIdentityConfirmed": false,
-  "translationMeaningAccepted": false,
-  "translationPositionAccepted": false,
-  "status": "Updated phone reached translated state after a user-operated request; waiting for actual wording and position feedback",
-  "limitations": ["Counters are cumulative for the current session, not a success-rate measurement","No page contents or provider responses inspected","No claim that English and French critical facts passed","Previously verified build was installed unchanged; no rebuild or new code tests this turn"]
+  "languageAndPageIdentityConfirmed": true,
+  "translationPositionAccepted": true,
+  "status": "User accepted the current translation and explicitly confirmed the French hotel page facts and positions; expiry cleared snapshot/text and resumed magnification",
+  "limitations": [
+    "Counters are cumulative for the current session, not a success-rate measurement",
+    "No page contents or provider responses inspected",
+    "No claim that English and French critical facts passed",
+    "Previously verified build was installed unchanged; no rebuild or new code tests this turn"
+  ],
+  "translationQuality": {
+    "userAcceptedCurrentPage": true,
+    "userFeedback": "我看了下翻译 得不错",
+    "exactTranslationsRecorded": false,
+    "bothEnglishAndFrenchVerified": false,
+    "frenchDemoUserAccepted": {
+      "feedback": "法语页也正常",
+      "askedAbout": [
+        "check-in time",
+        "breakfast inclusion",
+        "check-out time",
+        "matching source positions"
+      ]
+    },
+    "criticalFactsIndependentlyVerified": false
+  }
 }
