@@ -1,0 +1,99 @@
+{
+  "baseCommit": "e4be28a",
+  "scope": "Bound source-anchored text drawing and full original/translation reader for the selected snapshot region",
+  "userChoice": "原位置简短显示，点全文查看完整原文和译文",
+  "regressionBeforeFix": {
+    "nativeTests": 2,
+    "failures": 2,
+    "evidence": [
+      "layout exceeded 32px source height",
+      "neighbor pixel (30,52) became white instead of remaining magenta"
+    ]
+  },
+  "sameTestsAfterFix": {
+    "nativeTests": 2,
+    "failures": 0
+  },
+  "expandedNativeRun": {
+    "tests": 7,
+    "failures": 0,
+    "device": "KanDong_OCR_API37_16K / emulator-5582",
+    "authoredTextOnly": true,
+    "screenCapture": false,
+    "ocrOrTranslationCalls": 0,
+    "coverage": [
+      "ellipsis",
+      "source pixel clipping",
+      "1x/2x/5x transforms",
+      "tiny source boxes",
+      "complete short French/Chinese",
+      "1.5 font scale full text and return callbacks",
+      "synthetic visual preview",
+      "overlapping to/enjoy neighbor glyph pixels"
+    ]
+  },
+  "jvmTests": {
+    "compatDebug": 76,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "build": {
+    "debugApk": true,
+    "instrumentationApk": true,
+    "lintErrors": 0,
+    "lintWarnings": 10
+  },
+  "syntheticVisualReview": "Both source rows remain separate; full original and translation readable in native view render",
+  "apkBytes": 347867448,
+  "apkSha256": "0aa027b8f40227d1d55f97fe1a6b18b62c80bd7731a7660c996e4ab883b1af30",
+  "phone": "NAM-LX9/API31",
+  "installationResult": "Success",
+  "phoneFullTextAndReturnAcceptance": "user confirmed overlap gone; full text and return normal",
+  "translationMeaningAccepted": false,
+  "allPageLayoutAccepted": false,
+  "userFeedback": "有问题，我来描述",
+  "phoneObservationAfterReportedProblem": {
+    "state": "expired",
+    "liveCaptures": 1,
+    "ocrRuns": 1,
+    "sends": 0,
+    "published": 1,
+    "recognized": 51,
+    "eligible": 42,
+    "snapshot": false,
+    "workerBusy": false,
+    "note": "The 60-second snapshot had expired at inspection; this does not establish the cause of the user-reported issue."
+  },
+  "firstPhoneBuild": {
+    "apkBytes": 347862716,
+    "apkSha256": "51dbf6f5a35198a0b7d5ad151b01e0b4f894a79b26ce207835d0acbda23d8422",
+    "feedback": "One or two neighboring words overlap; to white background partially hides e in enjoy."
+  },
+  "neighborRegression": {
+    "testsBeforeFix": 1,
+    "failuresBeforeFix": 1,
+    "evidence": "The next word pixel (85,58) was overwritten with white. Tiny top-coordinate difference draws right word first.",
+    "fix": "Limit left layout width at the next same-row word left edge; draw all backgrounds before all glyphs. Original OCR bounds/text unchanged."
+  },
+  "finalUserFeedback": "遮挡消失，全文和返回也正常",
+  "finalPhoneObservation": {
+    "state": "COLLAPSED",
+    "translation": "idle",
+    "liveCaptures": 1,
+    "ocrRuns": 1,
+    "sends": 0,
+    "published": 1,
+    "rawCandidates": 55,
+    "recognized": 50,
+    "eligible": 42,
+    "lastUnreadable": 0,
+    "capturing": false,
+    "snapshot": false,
+    "blockCount": 0,
+    "workerBusy": false,
+    "gpuOpen": false,
+    "gpuCleanupFailures": 0
+  },
+  "acceptanceScope": "Reported adjacent-word overlap and full-text/return behavior on the tested page; no new real translated page in this session (sends=0)."
+}

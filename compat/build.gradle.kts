@@ -19,6 +19,7 @@ android {
         targetSdk = 36
         versionCode = 7
         versionName = "0.1.1-clarity-dev"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     signingConfigs {
         if (releaseCredentialsFile.isFile) {
@@ -54,4 +55,6 @@ dependencies {
     implementation(project(":graphics"))
     debugImplementation(project(":liveocr"))
     testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test:runner:1.6.2")
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
 }

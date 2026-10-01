@@ -6,8 +6,6 @@ import android.media.Image
 import android.os.Handler
 import android.os.Looper
 import android.os.SystemClock
-import android.text.Layout
-import android.text.StaticLayout
 import android.text.TextPaint
 import android.view.*
 import android.widget.*
@@ -33,6 +31,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
     private val relay=LiveRelayClient(context)
     private var layer: FrameLayout?=null
     private var resultView: ResultView?=null
+    private var fullTextButton: Button?=null
     private var dialog: AlertDialog?=null
     private var probe: Probe?=null
     private var snapshot: Bitmap?=null
@@ -60,6 +59,14 @@ internal class TranslationFeature(private val host: TranslationHost) {
     fun bind(layer: FrameLayout) {
         this.layer=layer
         resultView=ResultView().also { layer.addView(it,FrameLayout.LayoutParams(-1,-1)) }
+        fullTextButton=Button(context).apply {
+            text="全文"; textSize=16f; isAllCaps=false
+            contentDescription="查看红框内完整原文和译文"
+            setTextColor(Color.WHITE); background=CompatUi.ripple(context,CompatUi.teal)
+            minWidth=0; minHeight=0; setPadding(0,0,0,0)
+            setOnClickListener { showFullText() }
+            visibility=View.GONE
+        }.also { layer.addView(it,FrameLayout.LayoutParams(dp(64),dp(48),Gravity.TOP or Gravity.END)) }
         layer.visibility=View.GONE
     }
     fun tap() {
@@ -124,7 +131,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
         body.addView(CompatUi.button(context,"取消") { invalidate() })
         openDialog(body)
     }
-    private fun openDialog(body: View) {
+    private fun openDialog(body: View, onCancel: ()->Unit = { invalidate() }) {
         dismissDialog()
         host.hideControls(true)
         val wrapper=ScrollView(context).apply { isFillViewport=true; addView(body) }
@@ -147,11 +154,25 @@ internal class TranslationFeature(private val host: TranslationHost) {
             setDimAmount(0f)
             attributes=attributes.apply { windowAnimations=0 }
         }
-        d.setOnCancelListener { invalidate() }
+        d.setOnCancelListener { onCancel() }
         d.show()
         d.window?.apply { setLayout(-1,-1); decorView.requestApplyInsets() }
     }
     private fun dismissDialog() { dialog?.setOnCancelListener(null); dialog?.dismiss(); dialog=null }
+    private fun showFullText() {
+        val token=state.epoch
+        if(!current(token) || snapshot==null || reason !in listOf("local","translated")) return
+        val crop=resultView?.crop ?: return
+        val entries=SnapshotTextContent.select(blocks,translations,crop)
+        if(entries.isEmpty()) return
+        fun restore() {
+            dismissDialog()
+            if(!current(token)) { invalidate(); return }
+            host.hideControls(false)
+            host.refreshTranslation()
+        }
+        openDialog(SnapshotTextDetails.body(context,entries,::restore),::restore)
+    }
     private fun recognize(token: Long, bytes: ByteArray) {
         if(!busy.compareAndSet(false,true)) { bytes.fill(0); fail("上一项处理尚未结束。","busy"); return }
         status("本次快照 · 正在识字…","ocr"); ocrRuns++
@@ -304,6 +325,8 @@ internal class TranslationFeature(private val host: TranslationHost) {
     fun render(crop: Box, viewport: MagnifierViewport) {
         val visible=state.showingSnapshot(now()) && snapshot != null
         layer?.visibility=if(visible) View.VISIBLE else View.GONE
+        fullTextButton?.visibility=if(visible && reason in listOf("local","translated") &&
+            blocks.any { SnapshotTextContent.intersects(it,crop) }) View.VISIBLE else View.GONE
         resultView?.apply {
             this.crop=crop; scale=viewport.scale; tx=viewport.translateX; ty=viewport.translateY
             invalidate()
@@ -312,7 +335,10 @@ internal class TranslationFeature(private val host: TranslationHost) {
     private inner class ResultView: View(context) {
         var crop=Box(0,0,1,1); var scale=2f; var tx=0f; var ty=0f
         private val paint=TextPaint(Paint.ANTI_ALIAS_FLAG).apply { color=CompatUi.ink }
-        private val fill=Paint().apply { color=Color.WHITE }
+        private var cachedBlocks: List<OcrBlock>?=null
+        private var cachedTranslations: Map<String,String>?=null
+        private var textPainter: SnapshotTextPainter?=null
+        fun clear() { textPainter=null; cachedBlocks=null; cachedTranslations=null }
         private val imagePaint=Paint(Paint.FILTER_BITMAP_FLAG)
         private val unclearPaint=Paint(Paint.ANTI_ALIAS_FLAG).apply { color=Color.rgb(183,98,0); style=Paint.Style.STROKE }
         override fun onDraw(canvas: Canvas) {
@@ -323,26 +349,18 @@ internal class TranslationFeature(private val host: TranslationHost) {
             canvas.drawBitmap(captured,-crop.left.toFloat(),-crop.top.toFloat(),imagePaint)
             canvas.restore()
             if(reason !in listOf("local","translated","no_text")) return
-            val selected=blocks.filter { it.left<crop.right && it.right>crop.left && it.top<crop.bottom && it.bottom>crop.top }
-            val unclear=unreadable.filter { it.left<crop.right && it.right>crop.left && it.top<crop.bottom && it.bottom>crop.top }
+            if(cachedBlocks!==blocks || cachedTranslations!==translations) {
+                clear(); cachedBlocks=blocks; cachedTranslations=translations
+                textPainter=SnapshotTextPainter(blocks,translations)
+            }
+            val selected=blocks.filter { SnapshotTextContent.intersects(it,crop) }
+            val unclear=unreadable.filter { SnapshotTextContent.intersects(it,crop) }
             if(selected.isEmpty() && unclear.isEmpty()) {
                 paint.textSize=dp(18).toFloat(); canvas.drawText("红框内没有识别到文字",dp(12).toFloat(),dp(36).toFloat(),paint); return
             }
             canvas.save(); canvas.translate(tx,ty); canvas.scale(scale,scale)
             canvas.clipRect(0f,0f,crop.width.toFloat(),crop.height.toFloat())
-            selected.forEach { block ->
-                val text=translations[block.id] ?: block.text
-                val left=(block.left-crop.left).toFloat(); val top=(block.top-crop.top).toFloat()
-                val w=(block.right-block.left).coerceAtLeast(1); val h=(block.bottom-block.top).coerceAtLeast(1)
-                paint.textSize=(h*.85f).coerceIn(12f,48f)
-                // Wrap within the identified source element. The development UI is
-                // source-anchored text, not a claim of pixel-perfect webpage replacement.
-                val layout=StaticLayout.Builder.obtain(text,0,text.length,paint,w)
-                    .setAlignment(Layout.Alignment.ALIGN_NORMAL).setIncludePad(false).build()
-                canvas.save(); canvas.translate(left,top)
-                canvas.drawRect(0f,0f,w.toFloat(),maxOf(h,layout.height).toFloat(),fill)
-                layout.draw(canvas); canvas.restore()
-            }
+            textPainter?.draw(canvas,crop)
             // Restore source pixels even if a neighboring text layout wrapped over this area.
             unclear.forEach { block ->
                 val left=(block.left-crop.left).toFloat(); val top=(block.top-crop.top).toFloat()
@@ -360,6 +378,7 @@ internal class TranslationFeature(private val host: TranslationHost) {
         state.invalidate(); relay.cancel(); probe=null
         snapshot?.recycle(); snapshot=null
         blocks=emptyList(); unreadable=emptyList(); translations=emptyMap(); label=null
+        resultView?.clear(); fullTextButton?.visibility=View.GONE
         main.removeCallbacksAndMessages(null)
         dismissDialog(); host.witness(null)
         layer?.visibility=View.GONE
