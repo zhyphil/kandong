@@ -60,6 +60,19 @@
   "realPageAccepted": false,
   "translationQualityAccepted": false,
   "realPageFlowPublished": true,
-  "visualTranslationAcceptance": "pending user confirmation",
-  "unreadableOrangeMarkerVisuallyAccepted": false
+  "visualTranslationAcceptance": {
+    "source": "user confirmation",
+    "statement": "翻译有显示到镜面",
+    "translationDisplayed": true,
+    "positionAccuracyAccepted": false,
+    "meaningAccuracyAccepted": false
+  },
+  "unreadableOrangeMarkerVisuallyAccepted": false,
+  "basicRealPageFlowAccepted": true,
+  "remainingAcceptance": [
+    "translation meaning and source correspondence",
+    "positioning and long translation layout",
+    "repeated clipped-page recognition",
+    "unreadable-region orange marker"
+  ]
 }
