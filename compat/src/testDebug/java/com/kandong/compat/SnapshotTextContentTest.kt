@@ -6,6 +6,16 @@ import org.junit.Test
 
 class SnapshotTextContentTest {
     private fun row(id: String,x: Int,y: Int,text: String=id)=OcrBlock(id,text,x,y,x+100,y+30,0.9)
+    @Test fun fullTextUsesPageLineOrderBeforeCroppingAndKeepsTranslationIdentity() {
+        val left=OcrBlock("left","Arrivée",32,362,214,423,.9)
+        val right=OcrBlock("right","après 16h30",201,359,544,426,.9)
+        val blocks=listOf(right,left)
+        val translations=mapOf("right" to "16点30分之后","left" to "入住")
+        val full=SnapshotTextContent.select(blocks,translations,Box(0,300,600,200))
+        assertEquals(listOf("left","right"),full.map { it.id })
+        assertEquals(listOf("入住","16点30分之后"),full.map { it.translation })
+        assertEquals(listOf("right"),SnapshotTextContent.select(blocks,translations,Box(215,350,100,100)).map { it.id })
+    }
     @Test fun neighboringWordKeepsItsLeftEdgeDespiteOcrOrder() {
         val left=OcrBlock("to","to",20,50,100,82,0.9)
         val right=OcrBlock("enjoy","enjoy",80,48,260,80,0.9)

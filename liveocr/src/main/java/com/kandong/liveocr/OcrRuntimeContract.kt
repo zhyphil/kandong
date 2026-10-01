@@ -1,6 +1,5 @@
 package com.kandong.liveocr
 
-import java.util.Collections
 import java.util.concurrent.CancellationException
 
 data class OcrBlock(val id: String, val text: String, val left: Int, val top: Int,
@@ -116,10 +115,10 @@ internal object OcrPageContract {
             requireOcr(left in 0 until right && top in 0 until bottom && right <= width && bottom <= height,
                 OcrFailure.PIPELINE_FAILED)
             OcrBlock(row.id, if(row.touchesReadBoundary) "" else row.text.ifBlank { "" }, left, top, right, bottom, row.score)
-        }.sortedWith(compareBy<OcrBlock> { it.top }.thenBy { it.left }.thenBy { it.id })
+        }
         current.check()
-        return OcrPage(Collections.unmodifiableList(blocks.filter { it.text.isNotEmpty() }), candidates.size,
-            Collections.unmodifiableList(blocks.filter { it.text.isEmpty() }))
+        return OcrPage(OcrReadingOrder.order(blocks.filter { it.text.isNotEmpty() }), candidates.size,
+            OcrReadingOrder.order(blocks.filter { it.text.isEmpty() }))
     }
 
 }

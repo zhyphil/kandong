@@ -68,6 +68,11 @@ class LiveOcrEngine(private val context: android.content.Context) {
   failures, resource cleanup failures, cancellation and page budgets still propagate.
   All strips must complete; failed/cancelled processing does not return earlier results.
 - `LiveOcrException.code` is a fixed code without native exception causes or text.
+  `OcrReadingOrder` preserves block identity/text/geometry while ordering compatible
+  horizontal-line boxes left-to-right; tiny top-coordinate differences cannot invert
+  adjacent words. Other rows retain top-to-bottom ordering. Every line member must
+  satisfy the height/center-overlap checks, preventing transitive line bridging.
+  This is geometric ordering, not semantic paragraphs or multi-column understanding.
   All sessions, options, tensors, results and Mats close before publication. Uncertain
   cleanup poisons this runtime for the process lifetime. Immutable result Strings are
   not securely erasable; the engine retains no page state after the call.

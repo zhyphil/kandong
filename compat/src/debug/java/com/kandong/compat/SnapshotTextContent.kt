@@ -1,6 +1,7 @@
 package com.kandong.compat
 
 import com.kandong.liveocr.OcrBlock
+import com.kandong.liveocr.OcrReadingOrder
 
 /** Mirror and full-text reading share source bounds and stable OCR identity. */
 internal object SnapshotTextContent {
@@ -18,6 +19,6 @@ internal object SnapshotTextContent {
         return Box(block.left,block.top,right-block.left,block.bottom-block.top)
     }
     fun select(blocks: List<OcrBlock>,translations: Map<String,String>,crop: Box): List<Entry> =
-        blocks.filter { intersects(it,crop) }.sortedWith(compareBy<OcrBlock> { it.top }.thenBy { it.left }.thenBy { it.id })
+        OcrReadingOrder.order(blocks).filter { intersects(it,crop) }
             .map { Entry(it.id,it.text,translations[it.id]) }
 }

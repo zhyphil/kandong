@@ -1,0 +1,37 @@
+{
+  "baseCommit": "55e90a7",
+  "scope": "Current authored EN/FR demo view rendering -> actual LiveOcrEngine -> input order and full-text selection",
+  "phoneAvailable": false,
+  "phoneUpdated": false,
+  "providerCalls": 0,
+  "otherAppCapture": false,
+  "mediaProjectionUsed": false,
+  "initialNativeRun": {"tests": 2, "failures": 1, "englishCriticalFacts": 3, "frenchCriticalFacts": 2},
+  "diagnosis": {
+    "frenchTimeWhitespaceToleranceAloneFixedFailure": false,
+    "arrivalBounds": [32,362,214,423],
+    "afterTimeBounds": [201,359,544,426],
+    "arrivalStringIndex": 46,
+    "afterStringIndex": 31,
+    "cause": "top-coordinate sort reversed adjacent boxes on the same horizontal line"
+  },
+  "fix": "Geometric same-line order shared by OCR publication and full-text selection; original strings, IDs, bounds and scores retained",
+  "jvm": {"liveocr": 34, "compatDebug": 77, "failures": 0, "errors": 0, "skipped": 0},
+  "finalNativeRun": {
+    "device": "KanDong_OCR_API37_16K / emulator-5582",
+    "tests": 9,
+    "failures": 0,
+    "seconds": 9.331,
+    "english": {"recognizedBlocks":18,"skippedBlocks":0,"matchedCriticalFacts":3},
+    "french": {"recognizedBlocks":18,"skippedBlocks":0,"matchedCriticalFacts":3},
+    "criticalInputFacts": ["check-in after 16:30","breakfast not included","check-out before 11:00"],
+    "drawingRegressionTests": 7,
+    "translationInputAndFullTextOrderMatch": true
+  },
+  "build": {"debugApk":true,"testApk":true,"lintErrors":0,"lintWarnings":10},
+  "debugApk": {"bytes":347864984,"sha256":"932c2b4e30e9bf62ac76c97194cf80dbcb001bce2f4e0f677ab3bf5cd5f54797"},
+  "testApk": {"bytes":2193402,"sha256":"aeb09f4c1d9f7c490e8ae86dcb9a71fbd2348691be7362bd19883fdae85e6902"},
+  "translationMeaningAccepted": false,
+  "generalReadingOrderAccepted": false,
+  "limitations": ["two current authored demo pages only","no semantic paragraph or multi-column inference","supplier targets remain separate blocks","no phone regression this turn"]
+}
