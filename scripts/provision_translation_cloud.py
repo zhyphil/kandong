@@ -2,7 +2,7 @@
 """Explicit operator-only preparation/provisioning. Never deploy or call a provider.
 
 No credentials on argv/stdout. `prepare --endpoint HTTPS_ORIGIN` uses ONLY this
-project's private DeepL helper. `provision` targets the recorded NAM-LX9 only.
+project's private DeepL helper. --device selects a recorded test phone only.
 """
 import argparse
 import hashlib
@@ -22,6 +22,10 @@ SERVER = "server-secrets.json"
 PHONE = "phone-config.json"
 DEVICE_ID = "nova9-nam-lx9"  # Stable across rotations: never reset its quota identity.
 SERIAL = "2AS0221B09001601"
+TARGETS = {
+    "nova9": {"id": DEVICE_ID, "serial": SERIAL, "model": "NAM-LX9", "phone": PHONE},
+    "lio": {"id": "huawei-lio-an00", "serial": "2KE0220109017133", "model": "LIO-AN00", "phone": "phone-config-lio.json"},
+}
 PACKAGE = "com.kandong.compat.dev"
 ADB = Path("/Users/haoyuzuo/Library/Android/sdk/platform-tools/adb")
 AUTHORITY_NAME = "deepl-api-free-pilot-v1"  # Documentation metadata, not client-selected.
@@ -92,35 +96,75 @@ def validate_phone(config, now=None):
     return config
 
 
-def make_bundle(key, origin, now=None):
+def target(device):
+    if device not in TARGETS:
+        raise ValueError("Unknown recorded test phone")
+    return TARGETS[device]
+
+
+def server_devices(server):
+    devices = json.loads(server["DEVICE_CREDENTIALS"])
+    if not isinstance(devices, list) or len(devices) > 16:
+        raise ValueError("Invalid device configuration")
+    ids, hashes = set(), set()
+    for item in devices:
+        if (not isinstance(item, dict) or set(item) != {"id", "sha256", "expiresAt"}
+                or not isinstance(item["id"], str) or not re.fullmatch(r"[a-z0-9_-]{1,32}", item["id"])
+                or item["id"] == "global" or item["id"] in ids
+                or not isinstance(item["sha256"], str) or not re.fullmatch(r"[a-f0-9]{64}", item["sha256"])
+                or item["sha256"] in hashes or type(item["expiresAt"]) is not int
+                or not 0 < item["expiresAt"] <= int(time.time() * 1000) + LIFETIME_MS):
+            raise ValueError("Invalid device configuration")
+        ids.add(item["id"])
+        hashes.add(item["sha256"])
+    return devices
+
+
+def make_bundle(key, origin, now=None, *, device_id=DEVICE_ID):
     """Pure preparation except randomness; used by offline tests with synthetic input."""
     now = int(time.time() * 1000) if now is None else now
     if not isinstance(key, str) or not re.fullmatch(r"[A-Za-z0-9:_-]{16,256}", key) or not key.endswith(":fx"):
         raise ValueError("An API Free key is required")
     token = secrets.token_hex(32)
     phone = {"origin": endpoint(origin), "token": token, "expiresAt": now + LIFETIME_MS}
-    device = {"id": DEVICE_ID, "sha256": hashlib.sha256(token.encode("ascii")).hexdigest(), "expiresAt": phone["expiresAt"]}
+    device = {"id": device_id, "sha256": hashlib.sha256(token.encode("ascii")).hexdigest(), "expiresAt": phone["expiresAt"]}
     return {"DEEPL_API_KEY": key, "DEVICE_CREDENTIALS": json.dumps([device], separators=(",", ":"))}, phone
 
 
-def prepare(origin, rotate=False):
+def prepare(origin, rotate=False, device="nova9"):
+    selected = target(device)
     origin = endpoint(origin)
     private_directory()
-    server_path, phone_path = DIRECTORY / SERVER, DIRECTORY / PHONE
-    if server_path.exists() and not rotate:
-        server, phone = read_private(server_path), validate_phone(read_private(phone_path))
-        devices = json.loads(server["DEVICE_CREDENTIALS"])
-        if (len(devices) != 1 or devices[0]["id"] != DEVICE_ID or phone["origin"] != origin
-                or devices[0]["expiresAt"] != phone["expiresAt"]
-                or not hmac.compare_digest(devices[0]["sha256"], hashlib.sha256(phone["token"].encode()).hexdigest())):
+    server_path, phone_path = DIRECTORY / SERVER, DIRECTORY / selected["phone"]
+    server = read_private(server_path) if server_path.exists() else None
+    devices = server_devices(server) if server is not None else []
+    previous = next((d for d in devices if d["id"] == selected["id"]), None)
+    if previous is not None and not rotate:
+        phone = validate_phone(read_private(phone_path))
+        if (phone["origin"] != origin or previous["expiresAt"] != phone["expiresAt"]
+                or not hmac.compare_digest(previous["sha256"], hashlib.sha256(phone["token"].encode()).hexdigest())):
             raise ValueError("Existing bundle differs; repair or rotate explicitly")
         print("Existing private bundle preserved; no credential rotation or deployment.")
         return
     if phone_path.exists() and not rotate:
         raise ValueError("Partial bundle exists; explicit rotation required")
-    # Import and access the provider credential ONLY after this explicit operator command.
-    from deepl_credentials import load_key
-    server, phone = make_bundle(load_key(), origin)
+    if previous is None and len(devices) >= 16:
+        raise ValueError("Device configuration is full")
+    if server is None:
+        if any((DIRECTORY / t["phone"]).exists() for t in TARGETS.values() if t != selected):
+            raise ValueError("Missing shared server bundle; preserve the other phone")
+        # Access the provider helper only for initial, explicitly requested preparation.
+        from deepl_credentials import load_key
+        key = load_key()
+    else:
+        key = server["DEEPL_API_KEY"]
+    created, phone = make_bundle(key, origin, device_id=selected["id"])
+    entry = json.loads(created["DEVICE_CREDENTIALS"])[0]
+    merged = [entry if d["id"] == selected["id"] else d for d in devices]
+    if previous is None:
+        merged.append(entry)
+    server = {**(server or created), "DEVICE_CREDENTIALS": json.dumps(merged, separators=(",", ":"))}
+    server_devices(server)  # Validate the combined service configuration before writing either file.
     write_private(phone_path, phone)
     write_private(server_path, server)
     print("Private 90-day pilot bundle prepared; server deployment and phone provisioning have not run.")
@@ -131,29 +175,34 @@ def revoke():
     server = read_private(DIRECTORY / SERVER)
     server["DEVICE_CREDENTIALS"] = "[]"
     write_private(DIRECTORY / SERVER, server)
-    if (DIRECTORY / PHONE).exists():
-        (DIRECTORY / PHONE).unlink()
+    for selected in TARGETS.values():
+        path = DIRECTORY / selected["phone"]
+        if path.exists():
+            path.unlink()
     print("Private revocation bundle prepared. It must be applied to the Worker; no remote change made.")
 
 
-def adb(*args, data=None):
-    result = subprocess.run([str(ADB), "-s", SERIAL, *args], input=data, stdout=subprocess.PIPE,
+def adb(*args, data=None, serial=SERIAL):
+    result = subprocess.run([str(ADB), "-s", serial, *args], input=data, stdout=subprocess.PIPE,
                             stderr=subprocess.PIPE, timeout=15)
     if result.returncode:
         raise ValueError("Phone provisioning failed; no private output displayed")
     return result.stdout
 
 
-def provision():
-    phone = validate_phone(read_private(DIRECTORY / PHONE))
-    if adb("get-state").strip() != b"device" or adb("shell", "getprop", "ro.product.model").strip() != b"NAM-LX9":
-        raise ValueError("Expected connected NAM-LX9 phone")
+def provision(device="nova9"):
+    selected = target(device)
+    phone = validate_phone(read_private(DIRECTORY / selected["phone"]))
+    serial = selected["serial"]
+    if (adb("get-state", serial=serial).strip() != b"device"
+            or adb("shell", "getprop", "ro.product.model", serial=serial).strip().decode() != selected["model"]):
+        raise ValueError("Expected recorded phone identity")
     body = json.dumps(phone, separators=(",", ":")).encode("ascii")
     # stdin, app-private no-backup directory, restrictive mode and same-directory atomic rename.
     # No adb reverse, install, permission changes, app launch or capture.
     adb("shell", "run-as", PACKAGE, "sh", "-c",
-        "'umask 077; mkdir -p no_backup && cat > no_backup/cloud-config.tmp && chmod 600 no_backup/cloud-config.tmp && mv no_backup/cloud-config.tmp no_backup/cloud-config.pending'", data=body)
-    size = adb("shell", "run-as", PACKAGE, "stat", "-c", "%s", "no_backup/cloud-config.pending").strip()
+        "'umask 077; mkdir -p no_backup && cat > no_backup/cloud-config.tmp && chmod 600 no_backup/cloud-config.tmp && mv no_backup/cloud-config.tmp no_backup/cloud-config.pending'", data=body, serial=serial)
+    size = adb("shell", "run-as", PACKAGE, "stat", "-c", "%s", "no_backup/cloud-config.pending", serial=serial).strip()
     if size != str(len(body)).encode():
         raise ValueError("Private staging verification failed")
     print("Phone private staging installed; app imports into Keystore on next translation start. No page sent.")
@@ -165,16 +214,18 @@ def main():
     prep = sub.add_parser("prepare")
     prep.add_argument("--endpoint", required=True)
     prep.add_argument("--rotate", action="store_true")
+    prep.add_argument("--device", choices=TARGETS, default="nova9")
     sub.add_parser("revoke")
-    sub.add_parser("provision")
+    provision_parser = sub.add_parser("provision")
+    provision_parser.add_argument("--device", choices=TARGETS, default="nova9")
     args = parser.parse_args()
     try:
         if args.command == "prepare":
-            prepare(args.endpoint, args.rotate)
+            prepare(args.endpoint, args.rotate, args.device)
         elif args.command == "revoke":
             revoke()
         else:
-            provision()
+            provision(args.device)
     except Exception:
         # Never print exceptions: provider helpers, OS or subprocess messages may contain secrets.
         raise SystemExit("Operation failed; private artifacts were not displayed. Check the runbook and local permissions.") from None

@@ -12,7 +12,7 @@
 
 - 独立 Worker：`kandong-translation-pilot`；仅 `/translate`、`/cancel` 和 `/health`。`/health`只表示程序可响应，不检查鉴权/额度或证明DeepL可用。
 - SQLite Durable Object：`QuotaAuthority`，固定对象名 `deepl-api-free-pilot-v1`。这是一个共享 DeepL 账户的额度协调器；升级/轮换不得换名或删库来重置额度。
-- Secret：`DEEPL_API_KEY`，只接受现有 API Free `:fx` 密钥；`DEVICE_CREDENTIALS`，只存设备ID、凭据SHA256校验值和到期时间。至多16条；当前配置工具只管理这一台 nova 9。
+- Secret：`DEEPL_API_KEY`，只接受现有 API Free `:fx` 密钥；`DEVICE_CREDENTIALS`，只存设备ID、凭据SHA256校验值和到期时间。至多16条；配置工具仅允许已登记的nova9/NAM-LX9与lio/LIO-AN00，各自独立凭据和固定设备ID。
 - 全局：20,000字符/日、100,000字符/月、100请求/日、2,000请求/月；每设备10,000字符/日、60,000字符/月、60请求/日、1,200请求/月。均为 UTC 日历窗口，按申请时间计数；额度为本试用服务的上限，不等同于 DeepL 账户的实际剩余额度。
 - 单页最多50块、每块1,500 Unicode码点、合计6,000码点；请求/响应各32KiB。整屏所有可读块组成 `context`，不先裁红框。DeepL `context`不计翻译字符，但请求大小仍计入限制；实际账户额度先通过usage核对。
 - 请求先持久化扣额、再最多发送一次；超时、崩溃和不确定结果不退款、不重发。串行租约限制此账户的并行处理；取消后不能撤回已经到达供应商的文字。
@@ -44,7 +44,7 @@ python3 -B -m unittest discover -s scripts -p 'test_provision_translation_cloud.
 
 用户对专用服务部署、服务端密钥及小量合成/手机验证已明确回复“允许”。账号认证及订阅只读核对完成，没有购买或升级套餐；不承诺任意流量均免费。此次授权覆盖下述专用路线，无需重问；其他部署或Release不在范围内。
 
-实际origin为 `https://kandong-translation-pilot.zhyphil.workers.dev`，当前版本 `69c8fdaf-61f6-4969-890a-b24f309a698a`。首次先部署空凭据关闭态并验证503，再启用secret；已验证两项绑定类型为secret_text。当前43项本机Workers/类型/production预检通过；线上英法各一页返回正确时间和否定条件，鉴权/旧披露/重复/取消通过。初次失败及修复见[启用证据](evidence/live-translation/2026-10-01/cloud-activation.json)。步骤1–6的部署、手机更新配置与旧路线清理已完成；用户确认英语页显示中文、物理拔线后新翻译法语页成功，加密配置已核对。用户亦确认约两分钟持续阅读、全文返回、收起恢复及主动实时切换正常；当前下一项为真实断网/弱网及失败恢复。不要重置额度、重新生成凭据、重复安装或重复合成调用。
+实际origin为 `https://kandong-translation-pilot.zhyphil.workers.dev`，当前版本 `306dcc9a-cc42-4876-826f-da5561e8c84a`（2026-10-02仅更新设备凭据；代码仍是10月1日已验版本）。首次先部署空凭据关闭态并验证503，再启用secret；已验证两项绑定类型为secret_text。当前43项本机Workers/类型/production预检通过；线上英法各一页返回正确时间和否定条件，鉴权/旧披露/重复/取消通过。初次失败及修复见[启用证据](evidence/live-translation/2026-10-01/cloud-activation.json)。步骤1–6的部署、手机更新配置与旧路线清理已完成；用户确认英语页显示中文、物理拔线后新翻译法语页成功，加密配置已核对。用户亦确认约两分钟持续阅读、全文返回、收起恢复及主动实时切换正常；当前下一项为真实断网/弱网及失败恢复。不要重置额度、重新生成凭据、重复安装或重复合成调用。
 
 以下保留可重复执行的操作步骤：
 
@@ -66,9 +66,32 @@ python3 -B -m unittest discover -s scripts -p 'test_provision_translation_cloud.
 5. 更新已核验的NAM-LX9/2AS0221B09001601开发版，再执行 `python3 -B scripts/provision_translation_cloud.py provision`。只通过stdin写入应用no_backup暂存；不开启权限、不创建USB转发、不自动发送页面。用户第一次开始翻译时完成Keystore导入。
 6. 删除该手机 `tcp:18741` 旧反向转发并关闭本次KanDong relay；按[拔线验收](INTERNET_TRANSLATION_ACCEPTANCE.md)执行。系统安装/共享确认仍由用户操作。
 
+## 增加已登记的LIO测试机
+
+2026-10-02用户指定重新接入LIO-AN00/2KE0220109017133。已安装已验APK，已增加独立huawei-lio-an00凭据；nova9清单项与私有文件保持不变，两个凭据均在旧披露拒绝检查中鉴权成功，不调用DeepL。配置写入手机时USB中断，重连后只需执行下述provision并打开App，详见[手机接入证据](evidence/device-onboarding/2026-10-02-lio-cloud/summary.json)。
+
+```sh
+python3 -B scripts/provision_translation_cloud.py prepare --device lio --endpoint https://kandong-translation-pilot.zhyphil.workers.dev
+python3 -B scripts/provision_translation_cloud.py provision --device lio
+```
+
+`prepare`只准备本机私有文件，不部署；重复调用幂等，`--rotate`只替换所选设备的凭据，不改其ID或其他设备。默认`--device nova9`兼容原操作。不得把nova9的phone-config.json复制给LIO；后者独立文件为phone-config-lio.json。只有准备内容变更时才更新云端secret；本次已经更新，不重复操作。
+
+若后续仅设备清单变动，可从项目根目录私下生成补丁：
+
+```python
+from scripts.provision_translation_cloud import DIRECTORY, SERVER, read_private, write_private
+server = read_private(DIRECTORY / SERVER)
+write_private(DIRECTORY / "device-secrets-patch.json", {"secrets": {
+    "DEVICE_CREDENTIALS": {"name": "DEVICE_CREDENTIALS", "type": "secret_text", "text": server["DEVICE_CREDENTIALS"]}
+}})
+```
+
+在已核对的账号和`backend/translation`执行`cf workers secrets bulk --worker kandong-translation-pilot --file ../../.local/translation/cloud/device-secrets-patch.json`，标准输出/错误仅保存到0600私有日志、不打印原始内容。此[官方补丁接口](https://developers.cloudflare.com/api/resources/workers/subresources/scripts/subresources/secrets/methods/bulk_update/)保留未列出的secret；补丁不包含DeepL密钥，不改Worker代码或额度对象。记录活动部署版本，再用旧披露的无内容请求验证新旧凭据；不要用真实页面做自动探针。
+
 ## 撤销与回滚
 
-`python3 -B scripts/provision_translation_cloud.py revoke`仅准备本地禁用secret文件（设备清单为空）；随后用明确批准的部署命令应用它，才算远端撤销。此操作不删除/重置额度库。轮换保持设备ID与authority名，凭据值会改变，需要重新配置手机。
+`python3 -B scripts/provision_translation_cloud.py revoke`仅准备本地禁用secret文件（设备清单为空，清理两台手机的本机私有配置文件）；随后用明确批准的部署命令应用它，才算远端撤销。此操作不删除/重置额度库。轮换保持设备ID与authority名，凭据值会改变，需要重新配置手机。
 
 失败时先禁用新请求，再部署已知兼容的Worker构件；不回滚/删除持久化额度与请求记录，不降级HTTP或自动改回Mac中转。新的云端App没有USB回退。初次上线前手机旧版仍可保留；需要恢复旧版必须明确操作，不能把旧路线称为独立联网。撤销生效前已经发送到DeepL的内容不能撤回。
 

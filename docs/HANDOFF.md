@@ -1,4 +1,14 @@
-# 当前交接 · 2026-10-01手机独立联网翻译
+# 当前交接 · 2026-10-02测试手机接入
+
+## LIO-AN00已安装，等待重连完成私有配置
+
+用户要求把程序装到本次连接手机。实际为历史华为LIO-AN00/2KE0220109017133、Android12/API31、ARM64/4096字节页，1176×2400，物理密度480、已有override534（未更改）。已安装`com.kandong.compat.dev`，Success；手机实际APK SHA256为`8719940386c1f060fabf230e2324e040769e8bf781c946e5cde67eadd9ea0404`，与81563b6已验构件完全一致，无Android源码或APK变化。
+
+配置工具现可显式`--device lio`，默认仍nova9；新机独立90天随机凭据、固定ID`huawei-lio-an00`，不会复制旧机凭据或重置配额。10项离线检查通过（新增4项先失败），覆盖新增/重复/轮换保留旧机、拒绝不一致/非法清单、目标型号校验、私下stdin及全局撤销清理。已用cf仅更新DEVICE_CREDENTIALS secret，DeepL密钥/Worker代码/SQLite额度均未动。活动版本`306dcc9a-cc42-4876-826f-da5561e8c84a`，100%流量；新旧凭据均经故意旧披露请求验证为400 CONSENT_REQUIRED，未调用DeepL。
+
+最后写入手机配置时USB断开，provision失败，随后打开首页也因device not found失败；当前ADB没有设备。**安装已完成，手机翻译配置和新机实际使用尚未完成。** 已请用户重新连接并解锁，不重复安装、不重新生成令牌。重连后先核对型号/序列，再执行`python3 -B scripts/provision_translation_cloud.py provision --device lio`，打开MainActivity；系统安装/共享确认仍由用户完成。证据见[新机记录](evidence/device-onboarding/2026-10-02-lio-cloud/summary.json)。
+
+以下nova9的既有验收保留，不能套用为LIO本次验收；其手机凭据与已完成能力不变。
 
 ## nova 9独立联网与持续阅读通过本轮试用
 

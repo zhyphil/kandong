@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-02",
+  "updated_at_utc": "2026-10-02T09:23:37.746811+00:00",
+  "baseline": "1c2d73bff5d71b78f817382af2a38e27e76ae1f5",
+  "device": {
+    "model": "LIO-AN00",
+    "serial": "2KE0220109017133",
+    "android": "12",
+    "api": 31,
+    "abi": "arm64-v8a",
+    "page_size": 4096,
+    "screen": "1176x2400",
+    "physical_density": 480,
+    "existing_override_density": 534,
+    "density_changed": false
+  },
+  "apk": {
+    "package": "com.kandong.compat.dev",
+    "bytes": 347895476,
+    "sha256": "8719940386c1f060fabf230e2324e040769e8bf781c946e5cde67eadd9ea0404",
+    "adb_install": "Success",
+    "device_hash_verified": true,
+    "build_reused": "81563b6 APK and retained-translation.json evidence; no Android source changes"
+  },
+  "operator_tool": {
+    "target": "lio",
+    "device_identity": "huawei-lio-an00",
+    "offline_tests": 10,
+    "failed": 0,
+    "initial_regression_failures": 4,
+    "first_phone_preserved": true,
+    "rotation_keeps_device_identity": true,
+    "new_token_copied_from_old_phone": false
+  },
+  "cloud": {
+    "action": "secret-only patch for DEVICE_CREDENTIALS",
+    "deployment": "ef60ecd2-8464-4ad3-bc3a-7c74634b5470",
+    "version": "306dcc9a-cc42-4876-826f-da5561e8c84a",
+    "traffic_percentage": 100,
+    "provider_key_changed": false,
+    "worker_code_changed": false,
+    "quota_reset": false,
+    "paid_upgrade": false,
+    "auth_checks": {
+      "date": "2026-10-02",
+      "atUtc": "2026-10-02T09:20:40.067394+00:00",
+      "checks": [
+        {
+          "device": "nova9",
+          "status": 400,
+          "consentRejectedAfterValidAuthentication": true
+        },
+        {
+          "device": "lio",
+          "status": 400,
+          "consentRejectedAfterValidAuthentication": true
+        }
+      ],
+      "translationSent": false,
+      "purpose": "validate both credentials with obsolete disclosure; rejected before quota or provider dispatch"
+    },
+    "phone_configs_in_git": false
+  },
+  "phone_setup": {
+    "private_config_staged": null,
+    "staging_attempt": "failed when USB disappeared; inspect before retry on reconnect",
+    "keystore_import_verified": false,
+    "app_opened": false,
+    "connected_at_last_check": false,
+    "screen_sharing_started": false,
+    "real_translation_tested": false,
+    "next": "reconnect exact LIO-AN00; provision --device lio; open MainActivity; user handles system permissions"
+  },
+  "logs": {
+    "kandong-lio-provision-red.log": {
+      "path": "/private/tmp/kandong-lio-provision-red.log",
+      "sha256": "7c9d4cc1fe100fb53a50fa0e945bc3fd2b4b1a87b82e8489d759fc3cead0f21e"
+    },
+    "kandong-lio-provision-green.log": {
+      "path": "/private/tmp/kandong-lio-provision-green.log",
+      "sha256": "e87441d94300026e981ee1a4ae837599ef168daff3fea4d65545dbb72a7ff281"
+    }
+  }
+}
