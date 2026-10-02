@@ -6,7 +6,7 @@
 
 用户本次明确指定已连接手机，核对为历史LIO-AN00/2KE0220109017133、Android12/API31、arm64-v8a/4096字节页；1176×2400，物理480dpi、已有534dpi override，未修改任何密度。云端看懂开发版已安装Success，实际SHA256为8719940386c1f060fabf230e2324e040769e8bf781c946e5cde67eadd9ea0404（347895476字节），复用已验APK。
 
-独立云端ID为huawei-lio-an00，nova9凭据保留；服务端授权已通过无内容验证。手机写入配置时USB中断，私有配置/首次共享/实际翻译尚待重连完成，不重复安装。见[本轮记录](evidence/device-onboarding/2026-10-02-lio-cloud/summary.json)。
+独立云端ID为huawei-lio-an00，nova9凭据保留；服务端授权已通过无内容验证。首次配置时USB中断；用户切换传输文件后恢复，独立配置已写入应用私有暂存（167字节），首页已打开且位于前台，USB反向转发为空。当前首次共享/实际翻译及Keystore导入待用户试用；本轮没有重装。见[本轮记录](evidence/device-onboarding/2026-10-02-lio-cloud/summary.json)。
 
 ## 2026-09-30接入的nova9记录（保留）
 

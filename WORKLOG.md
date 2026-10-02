@@ -1168,3 +1168,10 @@
 私下prepare新机文件并逐字段核对旧nova9条目/手机文件及DeepL密钥不变；通过cf secrets bulk仅更新DEVICE_CREDENTIALS。实际活动版本306dcc9a-cc42-4876-826f-da5561e8c84a/100%，部署IDef60ecd2-8464-4ad3-bc3a-7c74634b5470。新旧凭据均用旧披露请求返回400 CONSENT_REQUIRED，确认鉴权通过但在额度/DeepL调用前拒绝；未上传真实页面、未更新Worker代码或配额库、未升级套餐。公开API参数依据见运行说明，私有补丁文件及原始返回不入Git。
 
 写入手机配置时连接中断，provision报告失败，am start也报告device not found；再次ADB列表为空。已请用户重连，只补配置、不重复安装，当前不称新机翻译可用或验收通过。证据为docs/evidence/device-onboarding/2026-10-02-lio-cloud/summary.json。
+
+
+### 2026-10-02 · LIO重连后完成配置与打开
+
+用户切换USB为传输文件后，ADB恢复2KE0220109017133；再次核对LIO-AN00/API31。沿用NORMAL原三步预算和已测配置脚本，provision --device lio成功，仅从私有文件经stdin写入该应用no_backup；核对暂存167字节、加密文件尚不存在。MainActivity启动成功且确认前台，USB反向转发为空。首次开始翻译才会导入Keystore，当前没有代点共享/开始翻译或读取页面。安装与私有配置完成，新机真实共享/翻译待用户试用。
+
+本轮无源码/APK/服务端变更，不重装、不换令牌、不部署；沿用原构建与10项配置工具检查，补实际写入/启动/文件元数据核验，检查证据JSON和文档差异后按既有授权提交推送。nova9记录保持独立。

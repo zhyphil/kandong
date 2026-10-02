@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "updated_at_utc": "2026-10-02T09:23:37.746811+00:00",
+  "updated_at_utc": "2026-10-02T09:38:39.931371+00:00",
   "baseline": "1c2d73bff5d71b78f817382af2a38e27e76ae1f5",
   "device": {
     "model": "LIO-AN00",
@@ -62,14 +62,20 @@
     "phone_configs_in_git": false
   },
   "phone_setup": {
-    "private_config_staged": null,
-    "staging_attempt": "failed when USB disappeared; inspect before retry on reconnect",
+    "private_config_staged": true,
+    "staging_attempt": "first attempt failed after USB disconnect; retry succeeded after user selected file transfer",
     "keystore_import_verified": false,
-    "app_opened": false,
-    "connected_at_last_check": false,
+    "app_opened": true,
+    "connected_at_last_check": true,
     "screen_sharing_started": false,
     "real_translation_tested": false,
-    "next": "reconnect exact LIO-AN00; provision --device lio; open MainActivity; user handles system permissions"
+    "next": "user enables overlay and screen sharing; starts English public-page translation; verify result and Keystore import",
+    "pending_config_bytes": 167,
+    "encrypted_config_exists": false,
+    "app_resumed_verified": true,
+    "adb_reverse_empty": true,
+    "reinstalled_on_reconnect": false,
+    "credentials_regenerated_on_reconnect": false
   },
   "logs": {
     "kandong-lio-provision-red.log": {

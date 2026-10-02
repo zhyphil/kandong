@@ -68,7 +68,7 @@ python3 -B -m unittest discover -s scripts -p 'test_provision_translation_cloud.
 
 ## 增加已登记的LIO测试机
 
-2026-10-02用户指定重新接入LIO-AN00/2KE0220109017133。已安装已验APK，已增加独立huawei-lio-an00凭据；nova9清单项与私有文件保持不变，两个凭据均在旧披露拒绝检查中鉴权成功，不调用DeepL。配置写入手机时USB中断，重连后只需执行下述provision并打开App，详见[手机接入证据](evidence/device-onboarding/2026-10-02-lio-cloud/summary.json)。
+2026-10-02用户指定重新接入LIO-AN00/2KE0220109017133。已安装已验APK，已增加独立huawei-lio-an00凭据；nova9清单项与私有文件保持不变，两个凭据均在旧披露拒绝检查中鉴权成功，不调用DeepL。首次配置时USB中断；用户切换传输文件后已重连、成功provision并打开App，核对私有暂存167字节、首页前台、reverse为空。首次翻译时才导入Keystore，真实试用仍待用户启动；当前不再重复prepare/provision/安装。下述为通用命令，详见[手机接入证据](evidence/device-onboarding/2026-10-02-lio-cloud/summary.json)。
 
 ```sh
 python3 -B scripts/provision_translation_cloud.py prepare --device lio --endpoint https://kandong-translation-pilot.zhyphil.workers.dev
